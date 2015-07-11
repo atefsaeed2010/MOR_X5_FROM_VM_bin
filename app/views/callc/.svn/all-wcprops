@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/50122/mor/gui/branches/x5/app/views/callc
+END
+_quick_stat.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/41715/mor/gui/branches/x5/app/views/callc/_quick_stat.html.erb
+END
+_address_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/41715/mor/gui/branches/x5/app/views/callc/_address_form.html.erb
+END
+login.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/50122/mor/gui/branches/x5/app/views/callc/login.html.erb
+END
+reconfigure_globals.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/app/views/callc/reconfigure_globals.html.erb
+END
+show_ranks.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/app/views/callc/show_ranks.html.erb
+END
+main_for_pda.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/41942/mor/gui/branches/x5/app/views/callc/main_for_pda.html.erb
+END
+ranks.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/44132/mor/gui/branches/x5/app/views/callc/ranks.html.erb
+END
+global_settings.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/44963/mor/gui/branches/x5/app/views/callc/global_settings.html.erb
+END
+realtime_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/app/views/callc/realtime_stats.html.erb
+END
+login.wml.builder
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/app/views/callc/login.wml.builder
+END
+signup_start.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/48329/mor/gui/branches/x5/app/views/callc/signup_start.html.erb
+END
+daily_actions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/callc/daily_actions.html.erb
+END
+forgot_password.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/41905/mor/gui/branches/x5/app/views/callc/forgot_password.html.erb
+END
+main.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/44789/mor/gui/branches/x5/app/views/callc/main.html.erb
+END
+show_quick_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/42152/mor/gui/branches/x5/app/views/callc/show_quick_stats.html.erb
+END
+signup_end.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/app/views/callc/signup_end.html.erb
+END
+main.wml.builder
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/41942/mor/gui/branches/x5/app/views/callc/main.wml.builder
+END
+user_settings.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/callc/user_settings.html.erb
+END
+main_info.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/44132/mor/gui/branches/x5/app/views/callc/main_info.html.erb
+END
+additional_modules.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/44789/mor/gui/branches/x5/app/views/callc/additional_modules.html.erb
+END
+hourly_actions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/app/views/callc/hourly_actions.html.erb
+END
+main_1.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/app/views/callc/main_1.html.erb
+END

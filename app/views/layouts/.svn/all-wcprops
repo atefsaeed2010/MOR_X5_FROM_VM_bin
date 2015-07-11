@@ -1,0 +1,221 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/51484/mor/gui/branches/x5/app/views/layouts
+END
+mobile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/43442/mor/gui/branches/x5/app/views/layouts/mobile.html.erb
+END
+_provider_buttons.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/48771/mor/gui/branches/x5/app/views/layouts/_provider_buttons.html.erb
+END
+cardgroups.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/cardgroups.html.erb
+END
+callcenter.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/callcenter.html.erb
+END
+providers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/providers.html.erb
+END
+_statistics_menu.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/50128/mor/gui/branches/x5/app/views/layouts/_statistics_menu.html.erb
+END
+groups.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/groups.html.erb
+END
+realtime_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/realtime_stats.html.erb
+END
+_accountant_menu.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/44792/mor/gui/branches/x5/app/views/layouts/_accountant_menu.html.erb
+END
+dids.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/dids.html.erb
+END
+_settings_menu.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/50213/mor/gui/branches/x5/app/views/layouts/_settings_menu.html.erb
+END
+_addons_menu.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/50126/mor/gui/branches/x5/app/views/layouts/_addons_menu.html.erb
+END
+mor_min.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/mor_min.html.erb
+END
+_reseller_menu.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/50126/mor/gui/branches/x5/app/views/layouts/_reseller_menu.html.erb
+END
+_csv_import_confirm.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/42797/mor/gui/branches/x5/app/views/layouts/_csv_import_confirm.html.erb
+END
+directions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/directions.html.erb
+END
+lcrs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/lcrs.html.erb
+END
+menu.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/50109/mor/gui/branches/x5/app/views/layouts/menu.html.erb
+END
+callshop.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/callshop.html.erb
+END
+ccpanel.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/43442/mor/gui/branches/x5/app/views/layouts/ccpanel.html.erb
+END
+_personal_menu.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/51127/mor/gui/branches/x5/app/views/layouts/_personal_menu.html.erb
+END
+phonebooks.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/phonebooks.html.erb
+END
+_reseller_statistics_menu.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/43880/mor/gui/branches/x5/app/views/layouts/_reseller_statistics_menu.html.erb
+END
+callc.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/50307/mor/gui/branches/x5/app/views/layouts/callc.html.erb
+END
+iphone.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/43442/mor/gui/branches/x5/app/views/layouts/iphone.html.erb
+END
+services.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/services.html.erb
+END
+_hgc_end_select.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/_hgc_end_select.html.erb
+END
+_personal_menu2.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/51131/mor/gui/branches/x5/app/views/layouts/_personal_menu2.html.erb
+END
+_user_buttons.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/51484/mor/gui/branches/x5/app/views/layouts/_user_buttons.html.erb
+END
+framed_layout.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/50109/mor/gui/branches/x5/app/views/layouts/framed_layout.html.erb
+END
+cards.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/cards.html.erb
+END
+play_rec.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/play_rec.html.erb
+END
+tariffs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/tariffs.html.erb
+END
+payments.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/payments.html.erb
+END
+users.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/users.html.erb
+END
+application.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/layouts/application.html.erb
+END

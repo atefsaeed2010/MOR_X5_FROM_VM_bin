@@ -1,0 +1,5 @@
+# turn off addon for test tests/webphone.case
+# ----
+# turn off calling cards addon
+/settings/addons/wp_deactivate.sql
+# bundle loaded

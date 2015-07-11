@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/49381/mor/gui/branches/x5/selenium/sqls/server/asterisk_4302
+END
+create.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/49295/mor/gui/branches/x5/selenium/sqls/server/asterisk_4302/create.sql
+END
+assign_to_reseller_3.sql
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/49381/mor/gui/branches/x5/selenium/sqls/server/asterisk_4302/assign_to_reseller_3.sql
+END
+assign_providers_devices_to_server.sql
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/!svn/ver/49375/mor/gui/branches/x5/selenium/sqls/server/asterisk_4302/assign_providers_devices_to_server.sql
+END

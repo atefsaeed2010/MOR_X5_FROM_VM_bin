@@ -1,0 +1,11 @@
+# ----
+# invoice  settings
+# prepaid "number type" INV000000001
+settings/invoices/prepaid_number_type_1.sql
+# Show user_billsec for Users instead of billsec:
+settings/visual/show_user_billsec_instead_billsec_0.sql
+# reseller ->> invoice number type INV000000001
+settings/reseller/invoice_number_type_1.sql
+# REseller ->> Show user_billsec for Users instead of billsec:
+settings/visual/show_user_billsec_instead_billse_3.sql
+# bundle loaded

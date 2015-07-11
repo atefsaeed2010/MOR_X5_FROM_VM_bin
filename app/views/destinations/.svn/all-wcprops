@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/48771/mor/gui/branches/x5/app/views/destinations
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/42776/mor/gui/branches/x5/app/views/destinations/edit.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/42776/mor/gui/branches/x5/app/views/destinations/new.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/43794/mor/gui/branches/x5/app/views/destinations/list.html.erb
+END
+stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/43428/mor/gui/branches/x5/app/views/destinations/stats.html.erb
+END
+bulk_rename_confirm.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/app/views/destinations/bulk_rename_confirm.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/42776/mor/gui/branches/x5/app/views/destinations/_form.html.erb
+END
+_page_select_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/43384/mor/gui/branches/x5/app/views/destinations/_page_select_header.html.erb
+END

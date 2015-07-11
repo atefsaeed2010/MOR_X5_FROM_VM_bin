@@ -1,0 +1,47 @@
+<%= render 'timezone_notice' %>
+<%= form_tag :action => 'invoices_recalculation_status' do %>
+    <%= _('Please_select_period_to_recalculate_invoices') %>:
+    <br/>
+    <br/>
+    <%= _('From') %>: <%= select_date(Time.mktime(session[:year_from], session[:month_from], session[:day_from]), :end_year => Date.today.year+1, :prefix => "date_from") %>
+    &nbsp;&nbsp;<%= _('To') %>: <%= select_date(Time.mktime(session[:year_till], session[:month_till], session[:day_till]), :end_year => Date.today.year+1, :prefix => "date_till") %>
+    <br/>
+    <br/>
+    <table>
+      <tr>
+        <td onclick="hideSubmitButton()"><%= radio_button "invoice", "type", "postpaid", {:checked => true} %></td>
+        <td><%= _('Postpaid') %></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td onclick="hideSubmitButton()"><%= radio_button "invoice", "type", "prepaid" %></td>
+        <td><%= _('Prepaid') %></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td onclick="hideSubmitButton()"><%= radio_button "invoice", "type", "user" %></td>
+        <td><%= _("User") %></td>
+        <td><%= render 'shared/live_search_field', object: @username, object_id: @user_id, object_name: 'User', action_url: {controller: :users, action: :get_users_map, options: {show_admin: true} } %></td>
+        <td id="user_not_selected_info" style="display: none">
+          <%= b_exclamation + _('Please_select_User') %>
+        </td>
+      </tr>
+    </table>
+    <br/>
+    <%= submit_tag _('Recalculate'), :onclick => "return confirm('#{_('Are_you_sure')}');", :confirm => _('Are_you_sure'), :method => :post, :disable_with => _('Processing..'), id: 'submit' %>
+<% end %>
+
+<script type="text/javascript">
+  new Form.Element.EventObserver('s_user', hideSubmitButton);
+
+  function hideSubmitButton(){
+    var user_id = $("s_user_id");
+    if(user_id.value === '-2' && $('invoice_type_user').checked){
+      $('submit').disabled = true;
+      $('user_not_selected_info').show();
+    } else {
+      $('submit').disabled = false;
+      $('user_not_selected_info').hide();
+    }
+  }
+</script>

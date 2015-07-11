@@ -1,0 +1,187 @@
+<% unless calling_cards_active? %>
+  <%= raw b_info + _('calling_cards_restriction').html_safe %>
+  <br/><br/>
+<% end %>
+
+<div id="card_group"><b><%= _('Card_group') %></b>: <%= link_to @cg.name, :controller => "cardgroups", :action => "show", :id => @cg %></div>
+<br/>
+<div id="cards"><b><%= _('Cards') %></b>: <%= @cards_all %></div>
+<br/>
+<div id="first_use"><b><%= _('First_use') %></b>: <%= @cards_first_used.to_i %></div>
+<br/>
+<div id="valid_from"><b><%= b_date + _('Valid_from') %></b>: <%= nice_date @cg.valid_from %></div>
+<br/>
+<div id="valid_till"><b><%= b_date + _('Valid_till') %></b>: <%= nice_date @cg.valid_till %></div>
+<br/><br/>
+
+<%= form_tag :action => params[:action], :cg => @cg.id do %>
+  <table id="search_details" class="simple bordered">
+    <tr>
+      <td>
+        <%= _('Number') %>:
+      </td>
+      <td>
+        <%= text_field_tag 's_number', @options[:s_number], :size => "15", :maxlength => @cg.number_length %>
+      </td>
+      <td>
+        <%= _('Name') %>:
+      </td>
+      <td>
+        <%= text_field_tag 's_name', @options[:s_name], :size => "15" %>
+      </td>
+      <td style='min-width: 100px'>
+        <% if @search %>
+          <%= link_to b_cross + _('Clear_search'), :action => 'list', :clean => 1, :cg => @cg.id %>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <% if @show_pin == true %>
+        <td>
+          <%= _('PIN') %>:
+        </td>
+        <td>
+          <%= text_field_tag 's_pin', @options[:s_pin], :size => "15", :maxlength => @cg.pin_length %>
+        </td>
+      <% end %>
+      <td>
+        <%= _('batch_number')%>:
+      </td>
+      <td>
+        <%= text_field_tag 's_batch_number', @options[:s_batch_number], :size => '15', :maxlength => '255' %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= _('CallerID') %>:
+      </td>
+      <td>
+        <%= text_field_tag 's_callerid', @options[:s_callerid], :size => "15" %>
+      </td>
+      <td>
+        <%= _('Balance_between') %>:
+      </td>
+      <td>
+        <%= text_field_tag 's_balance_min', @options[:s_balance_min], :size => "7", :maxlength => "10" %> -
+        <%= text_field_tag 's_balance_max', @options[:s_balance_max], :size => "7", :maxlength => "10" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= _('Sold') %> ?:
+      </td>
+      <td>
+        <select name="s_sold">
+          <option value="all" selected> <%= _('All') %> </option>
+          <option value="yes" <%= "selected" if @options[:s_sold] == "yes" %>> <%= _('_Yes') %> </option>
+          <option value="no" <%= "selected" if @options[:s_sold] == "no" %>> <%= _('_No') %> </option>
+        </select>
+      </td>
+      <td>
+        <%= _('Language') %>:
+      </td>
+      <td>
+        <%= text_field_tag 's_language', @options[:s_language], :size => "15", :maxlength => "10" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= _('Distributor') %>:
+      </td>
+       <td>
+        <%= render 'shared/live_search_field', object: @options[:s_user],
+                                               object_id: @options[:s_user_id],
+                                               object_name: 'User',
+                                               action_url: {
+                                                 controller: :users,
+                                                 action: :get_users_map,
+                                                 options: {
+                                                   show_users_only: true,
+                                                   show_owned_users_only: true
+                                                 }
+                                               } %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan=2>
+        <%= submit_tag _('Search'), :disable_with => _('Processing..') %>
+      </td>
+      <td></td>
+    </tr>
+  </table>
+<% end %>
+<br/>
+<table width="100%" class="simple">
+  <tr>
+    <td>
+      <% if @allow_manage == true %>
+        <% if allow_add_new_card? %>
+          <%= link_to b_add + _('Add_cards'), :action => 'new', :cg => @cg %>&nbsp;&nbsp;
+        <% end %>
+          <%= link_to b_groups + _('Bulk_management'), :action => 'act', :cg => @cg %>
+      <% end %>
+    </td>
+  </tr>
+</table>
+<br/>
+<%= page_select_header(@options[:page], @total_pages, ({:cg => @cg.id}), @options.merge({:cg => @cg.id})) %>
+<table class="maintable" width="100%">
+  <tr>
+    <th align="left"><%= _('Number') %></th>
+    <th align="left"><%= _('Name') %></th>
+    <% if @show_pin == true %>
+        <th align="left"><%= _('PIN') %></th>
+    <% end %>
+    <th align="left"><%= _('batch_number') %></th>
+    <th align="left"><%= _('CallerID_for_pinless_dialing') %></th>
+    <% if can_see_finances? %>
+        <th align="right"><%= _('Balance') + " (#{_('Without_VAT')}) " %><%= current_user.currency.name %></th>
+    <% end -%>
+    <th align="center"><%= _('First_use') %></th>
+    <th align="center"><%= _('Daily_charge_paid_till') %></th>
+    <th align="center"><%= "#{_('Sold')}?" %></th>
+    <th align="center"><%= _('Language') %></th>
+    <th align="left"><%= _('Distributor') %></th>
+    <th></th>
+    <% if @allow_manage == true %>
+        <th></th>
+        <th></th>
+        <th align="center"><%= _('Details') %></th>
+        <th></th>
+    <% end %>
+    <th></th>
+  </tr>
+
+  <% @cards.each_with_index { |card, i| %>
+      <tr class="row<%= (i % 2 + 1).to_s %>">
+
+        <td id="number_<%= card.id %>" align="left"><%= link_to card.number, {:action => 'edit', :id => card.id} %></td>
+        <td id="name_<%= card.id %>" align="left"><%= card.name %></td>
+        <% if @show_pin == true %>
+            <td id="pin_<%= card.id %>" align="left"><%= card.pin %></td>
+        <% end %>
+        <td id="batch_<%= card.id %>" align="left"><%= card.batch_number %></td>
+        <td id="callerid_<%= card.id %>" align="left"><%= card.callerid.to_s %></td>
+        <% if can_see_finances? -%>
+            <td id="balance_<%= card.id %>" align="right"><%= nice_number card.balance %></td>
+        <% end -%>
+        <td id="first_use_<%= card.id %>" align="center"><%= nice_date card.first_use %></td>
+        <td id="daily_charge_<%= card.id %>" align="center"><%= nice_date card.daily_charge_paid_till %></td>
+        <td id="sold_<%= card.id %>" align="center"><%= card.sold == 1 ? b_check : b_cross %></td>
+        <td id="lang_<%= card.id %>" align="center"><%= card.language %></td>
+        <td id="user_<%= card.id %>" align="left"><%= link_nice_user(card.user) if card.user_id != -1 and card.user %></td>
+        <td id="payments_<%= card.id %>" align="center"><%= link_to(b_payments, {:controller => 'cards', :action => 'payments', :id => card.id}, {:id => "payments_link_"+ card.id.to_s}) %></td>
+        <td id="calls_<%= card.id %>" align="center"><%= link_to(b_call, {:controller => 'stats', :action => 'last_calls_stats', :s_card_id => card.id}, {:id => "calls_link_"+ card.id.to_s}) %>
+          (<%= card.call_count %>)
+        </td>
+        <% if @allow_manage == true %>
+            <td id="pay_<%= card.id %>" align="center"><%= link_to b_money, {:action => 'card_pay', :cg => @cg.id, :id => card.id}, {:id => "pay_link_"+ card.id.to_s} %></td>
+            <td id="show_<%= card.id %>" align="center"><%= link_to b_details + _('Details'), {:action => 'show', :id => card.id}, {:id => "details_link_"+ card.id.to_s} %></td>
+            <td id="edit_<%= card.id %>" align="center"><%= link_to b_edit, {:action => 'edit', :id => card.id}, {:id => "edit_link_"+ card.id.to_s} %></td>
+            <td id="destroy_<%= card.id %>" align="center"><%= link_to b_delete, {:action => 'destroy', :id => card.id}, {:confirm => _('Are_you_sure'), :method => :post, :id => "delete_link_"+ card.id.to_s} %></td>
+        <% end %>
+      </tr>
+  <% } %>
+</table>
+<br/>
+<%= page_select_header(@options[:page], @total_pages, ({:cg => @cg.id}), @options.merge({:cg => @cg.id})) %>

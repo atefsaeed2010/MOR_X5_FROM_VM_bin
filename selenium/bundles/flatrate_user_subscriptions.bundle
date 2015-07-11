@@ -1,0 +1,15 @@
+# flatrate servisas testui flatrate_user_subscription.case
+# ----
+# admin useris su fiksuota kurimo data 2013-07-28
+user/user_1004/create.sql
+# admin flatrate
+services/flatrate_13001/create.sql
+# Acc group
+/permissions/accountant/create.sql
+# Services permission set as read
+/permissions/accountant/services_write.sql
+# Subscriptions permission set as write
+/permissions/accountant/ssubscriptions_write.sql
+# Assign permissions group to accountant
+user/accountant_4/assign_permissions.sql
+# bundle loaded

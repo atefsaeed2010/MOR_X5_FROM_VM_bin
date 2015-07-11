@@ -1,0 +1,5 @@
+# turn off all addons
+# ----
+# turn off calling cards addon
+/settings/addons/deactivate_addons.sql
+# bundle loaded

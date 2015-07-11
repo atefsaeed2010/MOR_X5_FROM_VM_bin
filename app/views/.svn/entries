@@ -1,0 +1,214 @@
+10
+
+dir
+52326
+http://svn.kolmisoft.com/mor/gui/branches/x5/app/views
+http://svn.kolmisoft.com
+
+
+
+2014-09-16T09:36:00.520449Z
+52313
+vaidas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19941b1f-7a74-413c-ab52-0de3e92e9a87
+
+pbx_functions
+dir
+
+devices
+dir
+
+services
+dir
+
+erp
+dir
+
+autodialer
+dir
+
+accounting
+dir
+
+alerts
+dir
+
+quickforwards_rules
+dir
+
+vouchers
+dir
+
+credit_note
+dir
+
+recordings
+dir
+
+ringgroups
+dir
+
+ivr
+dir
+
+layouts
+dir
+
+resellers
+dir
+
+users
+dir
+
+ivr_time_periods
+dir
+
+number_pools
+dir
+
+destinations
+dir
+
+shared
+dir
+
+dialplans
+dir
+
+monitorings
+dir
+
+ivrvoices
+dir
+
+cardgroups
+dir
+
+active_processor
+dir
+
+providers
+dir
+
+callc
+dir
+
+test
+dir
+
+groups
+dir
+
+destination_groups
+dir
+
+cron_actions
+dir
+
+payment_gateways
+dir
+
+dids
+dir
+
+backups
+dir
+
+servers
+dir
+
+ivr_sound_files
+dir
+
+locations
+dir
+
+cards
+dir
+
+did_rates
+dir
+
+calls
+dir
+
+stats
+dir
+
+tariffs
+dir
+
+payments
+dir
+
+common_use_providers
+dir
+
+currencies
+dir
+
+sms
+dir
+
+directions
+dir
+
+lcrs
+dir
+
+callshop
+dir
+
+ccpanel
+dir
+
+phonebooks
+dir
+
+terminators
+dir
+
+functions
+dir
+
+cdr
+dir
+
+device_rules
+dir
+
+aggregates
+dir
+
+api
+dir
+
+emails
+dir
+
+blanks
+dir
+
+permissions
+dir
+
+smsautodialer
+dir
+
+ast_queues
+dir
+

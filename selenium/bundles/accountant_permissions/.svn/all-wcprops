@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/46888/mor/gui/branches/x5/selenium/bundles/accountant_permissions
+END
+acc_groups_permissions_disabled.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/!svn/ver/46888/mor/gui/branches/x5/selenium/bundles/accountant_permissions/acc_groups_permissions_disabled.bundle
+END
+create_and_assign.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/41383/mor/gui/branches/x5/selenium/bundles/accountant_permissions/create_and_assign.bundle
+END
+acc_groups_permissions_write.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/!svn/ver/46888/mor/gui/branches/x5/selenium/bundles/accountant_permissions/acc_groups_permissions_write.bundle
+END
+acc_groups_permissions_read.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/!svn/ver/46888/mor/gui/branches/x5/selenium/bundles/accountant_permissions/acc_groups_permissions_read.bundle
+END
+calling_cards_disabled.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/41344/mor/gui/branches/x5/selenium/bundles/accountant_permissions/calling_cards_disabled.bundle
+END
+call_tracing_read.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/41731/mor/gui/branches/x5/selenium/bundles/accountant_permissions/call_tracing_read.bundle
+END
+calling_cards_write.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/41344/mor/gui/branches/x5/selenium/bundles/accountant_permissions/calling_cards_write.bundle
+END
+calling_cards_read.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/41344/mor/gui/branches/x5/selenium/bundles/accountant_permissions/calling_cards_read.bundle
+END
+see_financial_data_disabled.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/!svn/ver/41345/mor/gui/branches/x5/selenium/bundles/accountant_permissions/see_financial_data_disabled.bundle
+END
+see_financial_data_write.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/!svn/ver/41345/mor/gui/branches/x5/selenium/bundles/accountant_permissions/see_financial_data_write.bundle
+END
+see_financial_data_read.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/!svn/ver/41345/mor/gui/branches/x5/selenium/bundles/accountant_permissions/see_financial_data_read.bundle
+END

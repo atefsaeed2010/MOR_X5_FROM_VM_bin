@@ -1,0 +1,11 @@
+# email settings for admin and reseller and also emails in personal details for admin, user_admin, reseller and user_reseller
+# ----
+# enable emails in admin
+/settings/email/enable_sending.sql
+# email configuration
+/settings/email/email_config2.sql
+# email batch size 50
+/settings/email/50_email_batch_size.sql
+# email port
+/settings/email/email_port.sql
+# bundle loaded

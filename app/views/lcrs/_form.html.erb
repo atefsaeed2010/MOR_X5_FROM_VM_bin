@@ -1,0 +1,111 @@
+
+<%= %>
+<!--[form:lcr]-->
+<p><label for="lcr_name"><%= _('Name') %></label><br/>
+  <%= text_field 'lcr', 'name', "class" => "input", "size" => "27", "maxlength" => "255" %></p>
+
+<p><label for="lcr_order"><%= _('Order') %></label><br/>
+  <select name="lcr[order]">
+    <option value="price" <%= 'selected' if lcr.order == "price" %> ><%= _('Price') %></option>
+    <option value="priority" <%= 'selected' if lcr.order == "priority" %>><%= _('Priority') %></option>
+    <option value="percent" <%= 'selected' if lcr.order == "percent" %>><%= _('Percent') %></option>
+  </select>
+
+  <% if params[:action] == "edit" and lcr.order == "price" %>
+
+    <p <%= raw tooltip(_('First_provider_percent_limit'), h(_('First_provider_percent_limit_explained'))).html_safe %> >
+      <label for="lcr_first_provider_percent_limit"><%= _('First_provider_percent_limit') %></label> <%= b_info %><br>
+      <%= text_field 'lcr', 'first_provider_percent_limit', "class" => "input", :size => "5", :maxlength => "5" %>%</p>
+
+<% end %>
+<% if lcr.id %>
+	<br /><br />
+        <%= _('Lcr_time_periods') %>:
+	<br /><br />
+	<table class="maintable" width="100%">
+	  <tr align="center">
+            <th rowspan=2><%= _('Active?') %></th>
+	    <th rowspan=2><%= _('Name') %></th>
+	    <th colspan=2><%= _('Date') %></th>
+	    <th colspan=2><%= _('Weekday') %></th>
+	    <th colspan=2><%= _('Hour_Minute') %></th>
+	    <th rowspan=2><%= _('Change_To_Lcr') %></th>
+	  </tr>
+	  <tr>
+	    <th align='center'><%= _('Start_Time') %></th>
+	    <th align='center'><%= _('End_Time') %></th>
+	    <th align='center'><%= _('Start_Time') %></th>
+	    <th align='center'><%= _('End_Time') %></th>
+	    <th align='center'><%= _('Start_Time') %></th>
+	    <th align='center'><%= _('End_Time') %></th>
+	  </tr>
+	  <% lcr.lcr_timeperiods(true).each_with_index do |period,i| %>
+	    <%= fields_for "periods[]", period do |p| %>
+              <%
+		cache = options['periods']["#{period.id}"] if options['periods'] and options['periods']["#{period.id}"]
+                cache = Hash.new if cache.blank?
+               %>
+	      <tr align="center" class="row<%= i % 2 + 1 %>">
+                <td>
+		  <%= p.check_box :active, {:checked => cache[:active] ? cache[:active].to_i.equal?(1) : period.active.to_i.equal?(1)} %>
+                </td>
+		<td>
+		  <%= p.text_field :name, class: 'input', :value => cache[:name] ? cache[:name] : period.name %>
+		</td>
+		<td>
+		  <%= p.select :start_month, options_for_select(months_for_select, cache[:start_month] ? cache[:start_month] : period.start_month), {},
+				{:onchange => "get_days('periods_#{period.id}_start_day', this.value);"} -%>
+		  <%= p.select :start_day, options_for_select([""]+(1..31).to_a, cache[:start_day] ? cache[:start_day] : period.start_day) %>
+		</td>
+		<td>
+		  <%= p.select :end_month, options_for_select(months_for_select, cache[:end_month] ? cache[:end_month] : period.end_month), {},
+				{:onchange => "get_days('periods_#{period.id}_end_day', this.value);"} -%>
+		  <%= p.select :end_day, options_for_select([""]+(1..31).to_a, cache[:end_day] ? cache[:end_day] : period.end_day) %>
+		</td>
+		<td>
+		  <%= p.select :start_weekday, options_for_select(weekdays_for_select, cache[:start_weekday] ? cache[:start_weekday] : period.start_weekday) %>
+		</td>
+		<td>
+		  <%= p.select :end_weekday, options_for_select(weekdays_for_select, cache[:end_weekday] ? cache[:end_weekday] : period.end_weekday) %>
+		</td>
+		<td>
+		  <%= p.select :start_hour, options_for_select(('00'..'23').to_a, "%02d" % (cache[:start_hour] ? cache[:start_hour].to_i : period.start_hour.to_i)) %> :
+		  <%= p.select :start_minute, options_for_select(('00'..'59').to_a, "%02d" % (cache[:start_minute] ? cache[:start_minute].to_i : period.start_minute.to_i)) %></td>
+		<td>
+		  <%= p.select :end_hour, options_for_select(('00'..'23').to_a, (period.end_hour ? "%02d" % (cache[:end_hour] ? cache[:end_hour].to_i : period.end_hour.to_i) : '23')) %> :
+		  <%= p.select :end_minute, options_for_select(('00'..'59').to_a, (period.end_minute ? "%02d" % (cache[:end_minute] ? cache[:end_minute].to_i : period.end_minute.to_i) : '59')) %>
+		</td>
+		<td>
+		  <%= p.select :lcr_id, options_from_collection_for_select(lcrs_for_select, :id, :name, {selected: cache[:lcr_id] ? cache[:lcr_id] : period.lcr_id}), include_blank: true %>
+		</td>
+	      </tr>
+	    <% end %>
+	  <% end %>
+
+	      <script type="text/javascript">
+		function get_days(id, month) {
+		  var box = this.document.getElementById(id);
+		  var selected = box.value;
+		  box.options.length = 0;
+		  var year = new Date().getFullYear();
+		  var days = new Date(year, month, 0).getDate();
+		  var day_arr = new Array(days);
+		  var i = 0;
+		  while(i<=days) {
+		    var new_option = this.document.createElement("OPTION");
+		    if (i != 0) {
+		      new_option.value = i;
+		      new_option.innerHTML = i;
+		    }
+		    box.options.add(new_option);
+		    i++;
+		  }
+		  box.selectedIndex = selected;
+		}
+	      </script>
+
+	</table>
+<% end %>
+<br/><br/>
+<br/><br/>
+<% session.delete(:lcr_edit_options) %>

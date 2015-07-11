@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/44044/mor/gui/branches/x5/config/initializers
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/config/initializers/inflections.rb
+END
+session_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/40037/mor/gui/branches/x5/config/initializers/session_store.rb
+END
+secret_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/config/initializers/secret_token.rb
+END
+backtrace_silencers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/config/initializers/backtrace_silencers.rb
+END
+class_overrides.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/41796/mor/gui/branches/x5/config/initializers/class_overrides.rb
+END
+nil_class.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/39906/mor/gui/branches/x5/config/initializers/nil_class.rb
+END
+i18n_wrap.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/44044/mor/gui/branches/x5/config/initializers/i18n_wrap.rb
+END
+recaptcha.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/39906/mor/gui/branches/x5/config/initializers/recaptcha.rb
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/config/initializers/mime_types.rb
+END
+wrap_parameters.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/40037/mor/gui/branches/x5/config/initializers/wrap_parameters.rb
+END

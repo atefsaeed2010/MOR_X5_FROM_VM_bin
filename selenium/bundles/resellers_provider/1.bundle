@@ -1,0 +1,19 @@
+# creating simple provider rule, adding providers
+# ----
+# create permission group
+permissions/reseller/create.sql
+# enable payment gateways permission
+permissions/reseller/payment_gateways_write.sql
+# assign permission to reseller
+user/reseller_3/assign_permissions.sql
+#provider rule
+provider/iax2_1/create_rule_cut_8_add_370.sql
+# create SIP provider for admin
+/provider/sip_3002/create.sql
+# create simple terminator
+terminator/8002/create.sql
+# create simple terminator once more
+terminator/8003/create.sql
+# assign provider to terminator
+terminator/8002/assign_prov_3002.sql
+# bundle loaded

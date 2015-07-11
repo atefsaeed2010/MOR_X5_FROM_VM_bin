@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/51508/mor/gui/branches/x5/app/views/accounting
+END
+generate_invoices_status_for_prepaid_users.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/!svn/ver/39906/mor/gui/branches/x5/app/views/accounting/generate_invoices_status_for_prepaid_users.html.erb
+END
+invoices_recalculation_status.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/43672/mor/gui/branches/x5/app/views/accounting/invoices_recalculation_status.html.erb
+END
+generate_invoices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/51501/mor/gui/branches/x5/app/views/accounting/generate_invoices.html.erb
+END
+_timezone_notice.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/app/views/accounting/_timezone_notice.html.erb
+END
+financial_statements.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/51508/mor/gui/branches/x5/app/views/accounting/financial_statements.html.erb
+END
+generate_invoices_status.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/39906/mor/gui/branches/x5/app/views/accounting/generate_invoices_status.html.erb
+END
+user_invoices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/42910/mor/gui/branches/x5/app/views/accounting/user_invoices.html.erb
+END
+_tax_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/51151/mor/gui/branches/x5/app/views/accounting/_tax_form.html.erb
+END
+invoices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/43672/mor/gui/branches/x5/app/views/accounting/invoices.html.erb
+END
+user_invoice_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/50863/mor/gui/branches/x5/app/views/accounting/user_invoice_details.html.erb
+END
+generate_invoices_to_prepaid_users.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/39906/mor/gui/branches/x5/app/views/accounting/generate_invoices_to_prepaid_users.html.erb
+END
+invoice_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/50863/mor/gui/branches/x5/app/views/accounting/invoice_details.html.erb
+END
+invoices_recalculation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/51501/mor/gui/branches/x5/app/views/accounting/invoices_recalculation.html.erb
+END

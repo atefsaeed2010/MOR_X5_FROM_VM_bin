@@ -1,0 +1,17 @@
+<% if @user and @user.is_reseller? %>
+      <%= render('shared/live_search_field',
+ 		               object: params[:s_user_resellers].to_s,
+ 		               object_id: -2,
+ 		               object_name: 'User_resellers',
+ 		               action_url: {controller: :users, action: :get_users_map, options: {user_owner: @user.id}}
+ 		        )
+ 		    %>
+    <script type="text/javascript">
+        $j("#reseller_users_header").removeClass("invisible");
+    </script>
+<% else %>
+    &nbsp;
+    <script type="text/javascript">
+        $j("#reseller_users_header").addClass("invisible");
+    </script>
+<% end %>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/49377/mor/gui/branches/x5/selenium/sqls/provider/sip_3304
+END
+create.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/48549/mor/gui/branches/x5/selenium/sqls/provider/sip_3304/create.sql
+END
+add_to_server4302.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/49377/mor/gui/branches/x5/selenium/sqls/provider/sip_3304/add_to_server4302.sql
+END
+assign_to_user5.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/41599/mor/gui/branches/x5/selenium/sqls/provider/sip_3304/assign_to_user5.sql
+END

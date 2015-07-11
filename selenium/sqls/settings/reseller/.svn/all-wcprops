@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/50827/mor/gui/branches/x5/selenium/sqls/settings/reseller
+END
+main_invoices_settings.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/49240/mor/gui/branches/x5/selenium/sqls/settings/reseller/main_invoices_settings.sql
+END
+set_date_format_7_reseller.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/50827/mor/gui/branches/x5/selenium/sqls/settings/reseller/set_date_format_7_reseller.sql
+END
+invoice_number_type_1.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/49117/mor/gui/branches/x5/selenium/sqls/settings/reseller/invoice_number_type_1.sql
+END
+resellers_server_to_server4302.sql
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/41731/mor/gui/branches/x5/selenium/sqls/settings/reseller/resellers_server_to_server4302.sql
+END
+use_short_file_name.sql
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/49198/mor/gui/branches/x5/selenium/sqls/settings/reseller/use_short_file_name.sql
+END
+invoices_number_length_5.sql
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/49106/mor/gui/branches/x5/selenium/sqls/settings/reseller/invoices_number_length_5.sql
+END
+show_balance_line.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/49099/mor/gui/branches/x5/selenium/sqls/settings/reseller/show_balance_line.sql
+END
+invoices_show_calls_in_detailed.sql
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/49106/mor/gui/branches/x5/selenium/sqls/settings/reseller/invoices_show_calls_in_detailed.sql
+END

@@ -1,0 +1,33 @@
+<table class="maintable" width="100%">
+  <tr align="left">
+    <th><%= nice_list_order('id', _('ID'), @options) %></th>
+    <th align="center"><%= nice_list_order('status', _('Status'), @options) %></th>
+    <th><%= nice_list_order('name', _('schedule_name'), @options) %></th>
+    <th align="center"><%= _('day_of_week') %></th>
+    <th><%= nice_list_order('comment', _('Comment'), @options) %></th>
+    <th colspan=2></th>
+  </tr>
+  <% @schedules.each_with_index do |schedule, i| %>
+    <% periods = schedule.alert_schedule_periods.where('day_type != ""').order(periods_order) %>
+
+    <tr align="left" class="row<%= i%2+1%>">
+      <td id="<%= schedule.id %>_id"><%= schedule.id %></td>
+      <td id="<%= schedule.id %>_status" align="center"><%= link_to (schedule.status == 'enabled' ? b_check : b_cross), { action: 'schedule_toggle', id: schedule.id } %></td>
+      <td id="<%= schedule.id %>_name"><%= schedule.name %></td>
+      <td id="<%= schedule.id %>_periods" align="center"><%= fetch_periods(periods) %></td>
+      <td id="<%= schedule.id %>_comment"><%= schedule.comment %></td>
+      <td id="<%= schedule.id %>_edit" align="center"><%= link_to b_edit, { action: 'schedule_edit', id: schedule.id }, { id: "edit_link_#{schedule.id}" } %></td>
+      <td id="<%= schedule.id %>_delete" align="center"><%= link_to b_delete, {action: 'schedule_destroy', id: schedule.id}, {confirm: _('are_you_sure'), method: 'post', id: "delete_link_#{schedule.id}"} %></td>
+    </tr>
+  <% end %>
+    <%= form_for :new_schedule, url: { action: 'schedule_add', params: @options } do |f| %>
+      <tr align="center">
+        <th></th>
+        <th><%= f.check_box :status, {}, 'enabled', 'disabled' %></th>
+        <th align="left"><%= f.text_field :name, class: 'input'  %></th>
+        <th></th>
+        <th align="left"><%= f.text_field :comment, class: 'input' %></th>
+        <th colspan=2 align="center"><%= f.submit type: 'image', src: Web_Dir+'/images/icons/add.png', title:  _('Add') %></th>
+      </tr>
+    <% end %>
+</table>

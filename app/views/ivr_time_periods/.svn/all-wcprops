@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/42971/mor/gui/branches/x5/app/views/ivr_time_periods
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/42971/mor/gui/branches/x5/app/views/ivr_time_periods/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/42971/mor/gui/branches/x5/app/views/ivr_time_periods/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/42971/mor/gui/branches/x5/app/views/ivr_time_periods/new.html.erb
+END
+_timeperiod.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/42360/mor/gui/branches/x5/app/views/ivr_time_periods/_timeperiod.html.erb
+END
+_page_select_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/42360/mor/gui/branches/x5/app/views/ivr_time_periods/_page_select_header.html.erb
+END

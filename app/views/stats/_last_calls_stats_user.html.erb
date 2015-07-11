@@ -1,0 +1,148 @@
+<%= form_tag :action => params[:action] do %>
+    <%= hidden_field_tag 'search_on', 1 %>
+    <%= hidden_field_tag 'page', 1 %>
+    <table class="bordered">
+      <tr>
+        <td>
+          <table id="search_details" class="simple">
+            <tr>
+              <td><%= _('From') %>:</td>
+              <td nowrap="true" colspan=5><%= select_datetime(Time.mktime(session[:year_from], session[:month_from], session[:day_from], session[:hour_from], session[:minute_from]), :end_year => Date.today.year+1, :prefix => "date_from", :use_month_numbers => false) %></td>
+              <td>
+                <span style="text-align: right;FLOAT: right; ">
+                  <%= link_to(b_cross + _('Clear_search'), :action => params[:action], :clear => 1) if options[:search_on].to_i == 1 %>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><%= _('Till') %>:</td>
+              <td nowrap="true" colspan=5><%= select_datetime(Time.mktime(session[:year_till], session[:month_till], session[:day_till], session[:hour_till], session[:minute_till]), :end_year => Date.today.year+1, :prefix => "date_till", :use_month_numbers => false) %></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><%= _('Device') %>:</td>
+              <% device_options = devices.map{|dev| [nice_device(dev, {:image => false}) ,dev.id.to_s ]} %>
+              <% device_options.insert(0, [_('All'), "all"]) if devices.size > 0 %>
+              <td nowrap="true">
+                <span id="s_device_span">
+                  <%= select_tag("s_device", options_for_select(device_options, options[:s_device].to_s), :disabled => devices.empty?, :style => "width:100px") %>
+                </span>
+              </td>
+              <% unless hide_non_answered_calls_for_user %>
+              <td><%= _('Status') %>:</td>
+              <% call_types = [[_('All'), "all"], [_('Answered'), "answered"], [_('No_Answer'), "no answer"], [_('Failed'), "failed"], [_('Busy'), "busy"]] %>
+              <td nowrap="true"><%= select_tag("s_call_type", options_for_select(call_types, options[:s_call_type].to_s), :style => "width:100px") %></td>
+              <% end %>
+            </tr>
+            <tr>
+              <td><%= _('Source') %>:</td>
+              <td nowrap="true"><%= text_field_tag("s_source", h(options[:source].to_s)) %></td>
+              <td><%= _("Destination") %>:</td>
+              <td nowrap="true" colspan=2><%= text_field_tag("s_destination", h(options[:s_destination].to_s)) %></td>
+            </tr>
+            <% if cc_active? and distributor? %>
+              <tr>
+                <td><%= _('Card_number') %>:</td>
+                <td><%= text_field_tag("s_card_number", h(options[:s_card_number].to_s)) %></td>
+                <% if Confline.get_value('CCShop_hide_pins_for_distributors').to_i.zero? %>
+                  <td><%= _('Card_pin') %>:</td>
+                  <td colspan=2><%= text_field_tag("s_card_pin", h(options[:s_card_pin].to_s)) %></td>
+                <% end %>
+                <td nowrap="true"><%= _('Card_id') %>:</td>
+                <td><%= text_field_tag("s_card_id", h(options[:s_card_id].to_s)) %></td>
+              </tr>
+            <% end %>
+            <tr>
+              <td><%= submit_tag _('Search'), :disable_with => _('Processing..') %></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+<% end %>
+<% unless searching %>
+  <%= b_info + _('press_search_button_to_show_data') %>
+<% end %>
+<br/>
+<% if searching %>
+     <% if calls and calls.size > 0 and params[:action] != 'old_calls_stats' %>
+         <%= link_to b_csv + _('Export_to_CSV'), :action => :last_calls_stats, :id => user.id, :csv => 1 %>&nbsp;&nbsp;
+         <%= link_to b_pdf + _('Export_to_PDF'), :action => :last_calls_stats, :id => user.id, :pdf => 1 %>
+     <% elsif calls and calls.size > 0 and params[:action] == 'old_calls_stats' %>
+         <%= link_to b_csv + _('Export_to_CSV'), :action => :old_calls_stats, :id => user.id, :csv => 1 %>
+     <% end %>
+  <br/>
+  <br/>
+  <%= page_select_header(options[:page], total_pages, nil, options) %>
+
+  <% if calls and calls.size > 0 %>
+    <table width="100%" class="maintable">
+      <tr>
+        <th align="center"><%= nice_list_order('time', _('Time'), options, :search_on => params[:search_on]) %></th>
+        <th align="left"><%= nice_list_order('src', _('called_from'), options, :search_on => params[:search_on]) %></th>
+        <th align="left"><%= nice_list_order('dst', _('called_to'), options, :search_on => params[:search_on]) %></th>
+        <% if distributor? %>
+          <th align="left"><%= nice_list_order('card', _('Card_used'), options, :search_on => params[:search_on]) %></th>
+        <% end %>
+        <th align="right"><%= nice_list_order('prefix', _('Prefix_used'), options, :search_on => params[:search_on]) %></th>
+        <th align="center"><%= nice_list_order('nice_billsec', _('Duration'), options, :search_on => params[:search_on]) %></th>
+        <th align="left"><%= nice_list_order('hgc', _('hangup_cause'), options, :search_on => params[:search_on]) %></th>
+        <% if options[:show_device_and_cid].to_i == 1 %>
+          <th align="left"><%= raw nice_list_order('nice_src_device', _('device_cid'), options, search_on: params[:search_on]) %></th>
+        <% end %>
+        <% if user.show_billing_info == 1 and can_see_finances? %>
+          <th align="right">           <%= _('Price') %>        </th>
+        <% end %>
+      </tr>
+    <% calls.each_with_index do |call, i| %>
+      <% call.processed == 0 ? text_class="n" : text_class="n_disabled" -%>
+      <tr class="row<%= (i % 2 + 1).to_s %>">
+        <td id="calldate_<%= call.id %>" class="<%= text_class %>" align="center"><%= nice_date_time call.calldate %></td>
+        <td id="src_<%= call.id %>" class="<%= text_class %>"><%= h(nice_src(call)) %></td>
+
+        <% if show_destination %>
+          <%= show_call_dst(call, text_class) %>
+        <% end %>
+        <% card = call.card_id.to_i > 0 ? call.card : nil %>
+        <% if distributor? %>
+          <td id="card_<%= call.id %>" align="left"><%= card.number if card %></td>
+        <% end %>
+        <td id="prefix_<%= call.id %>" align="right"><%= call.prefix.to_s %></td>
+        <%= call_duration(call, text_class, '', show_user_billsec?) %>
+        <td id="disposition_<%= call.id %>"><%= call.disposition %></td>
+        <% if options[:show_device_and_cid].to_i == 1 %>
+          <td align="left" id="user_device_cid_<%= call.id %>"><%= call.nice_src_device %></td>
+        <% end %>
+        <% if user.show_billing_info == 1 %>
+          <%# price =  call.user_price_exrate.to_f + call.did_price_exrate.to_f + call.did_inc_price_exrate.to_f %>
+          <td id="rate_<%= call.id %>" align="right"><%= nice_number(call.user_price_exrate.to_f) %></td>
+        <% end %>
+      </tr>
+    <% end %>
+    <tr>
+      <th id="total" align="left" colspan="2"><%= _("Total") %>:</th>
+
+      <% if show_destination %>
+          <th></th>
+      <% end %>
+      <th></th>
+      <% if distributor? %>
+        <th></th>
+      <% end %>
+      <th id="total_billsec" align="center"><%= nice_time(total_calls_stats.total_duration) %></th>
+      <th></th>
+      <% if options[:show_device_and_cid].to_i == 1 %>
+        <th></th>
+      <% end %>
+      <% if user.show_billing_info == 1 and can_see_finances? %>
+        <th id="total_user_price" align="right"><%= nice_number(total_calls_stats.total_user_price_with_dids) %></th>
+      <% end %>
+    </tr>
+  </table>
+  <br/>
+  <%= page_select_header(options[:page], total_pages, nil, options) %>
+  <% else %>
+    <br/>
+    <%= _('No_calls') %>...
+  <% end %>
+<% end %>

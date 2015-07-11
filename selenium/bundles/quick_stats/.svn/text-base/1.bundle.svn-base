@@ -1,0 +1,5 @@
+# set servers.load_ok > 0 that means it's overloaded
+# ----
+# set servers.load_ok > 0
+/server/default_server_1/make_overloaded.sql
+# bundle loaded

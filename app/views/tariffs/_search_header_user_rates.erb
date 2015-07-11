@@ -1,0 +1,15 @@
+<br/>
+<%= form_tag action: 'user_rates', id: tariff.id do %>
+  <table>
+    <tr>
+      <% if no_shift %>
+        <td><%= _('Prefix') %>: </td>
+      <% else %>
+        <td width="47px" align="right"><%= _('Prefix') %>: </td>
+      <% end %>
+      <td><%= text_field_tag 's_prefix', s_prefix, "class" => "input", :size => "10", :maxlength => "30" %></td>
+      <td><%= submit_tag _('Search'), :disable_with => _('Processing..') %></td>
+    </tr>
+  </table>
+<% end %>
+<br/>

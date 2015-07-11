@@ -1,0 +1,11 @@
+#  simple settings for testing api and server enable
+# ----
+# enable api in admin + secret key
+settings/api/enable_0.sql
+# GET 
+settings/api/allow_get.sql
+# enable api in reseller + secret key
+settings/api/enable_3.sql
+# activate server
+server/default_server_1/make_active.sql
+# bundle loaded

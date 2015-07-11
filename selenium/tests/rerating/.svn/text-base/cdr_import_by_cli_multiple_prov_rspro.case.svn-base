@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>cdr_import_by_cli_multiple_prov_rspro</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">cdr_import_by_cli_multiple_prov_rspro</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=cdr/for_import_by_cli_with_prov_rspro</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=tariff_name_3305</td>
+	<td>prov_tariff_rs_2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=tariff_name_3304</td>
+	<td>prov_tariff_rs</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/cdr/import_csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=file</td>
+	<td>/home/mor/selenium/files/csv/cdr_by_cli_assigned_provs.csv</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=use_suggestion_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=decn2</td>
+	<td>.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Total file lines: 73</td>
+	<td></td>
+</tr>
+<!--Select Just Neccessary  Fields-->
+<tr>
+	<td>select</td>
+	<td>name=calldate_id</td>
+	<td>label=Date</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=clid_id</td>
+	<td>label=Clid</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=dst_id</td>
+	<td>label=Destination</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=billsec_id</td>
+	<td>label=Billsec</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=provider_id</td>
+	<td>label=Provider ID</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=imp_calldate_3</td>
+	<td>2014-01-02 16:16:02</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_clid_3</td>
+	<td>886546</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_dst_3</td>
+	<td>886234567</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_billsec_3</td>
+	<td>55</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=conf</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Columns assigned</td>
+</tr>
+<!--Nekursim naujų cli-->
+<tr>
+	<td>click</td>
+	<td>id=import_type_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Analysis completed</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=file_lines_number</td>
+	<td>73</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=cdr_in_csv_file_number</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=bad_cdrs</td>
+	<td>66 bad CDRs(Press here to get the list)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=error_msg_46</td>
+	<td>Provider ID was not found in DB</td>
+</tr>
+<!--Ar last calls atsirado?-->
+<tr>
+	<td>open</td>
+	<td>/billing/stats/last_calls_stats</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_year</td>
+	<td>label=2014</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_month</td>
+	<td>label=January</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_day</td>
+	<td>label=1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_year</td>
+	<td>label=2014</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_month</td>
+	<td>label=January</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_day</td>
+	<td>label=31</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_call_type</td>
+	<td>label=Answered</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Total calls: 5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=src_34</td>
+	<td>11447788</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=dst_34</td>
+	<td>1234567</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_34</td>
+	<td>exact:00:01:11</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_34</td>
+	<td>res_prov_sip</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_rate_34</td>
+	<td>0.1521</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_price_34</td>
+	<td>0.1799</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_rate_34</td>
+	<td>0.1300</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_price_34</td>
+	<td>0.1538</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=profit_34</td>
+	<td>-0.0261</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=src_32</td>
+	<td>2233221144</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=dst_32</td>
+	<td>2234567</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_32</td>
+	<td>exact:00:01:26</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_32</td>
+	<td>res_prov_iax2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_rate_32</td>
+	<td>0.5478</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_price_32</td>
+	<td>0.7852</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_rate_32</td>
+	<td>0.2233</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_price_32</td>
+	<td>0.3201</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=profit_32</td>
+	<td>-0.4651</td>
+</tr>
+</tbody></table>
+</body>
+</html>

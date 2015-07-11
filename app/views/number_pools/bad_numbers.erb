@@ -1,0 +1,24 @@
+<table class="maintable" width="100%">
+  <% i =0 %>
+
+  <% if @rows %>
+
+
+      <% @rows.each{|row| %>
+          <tr class="row<%= (i % 2 + 1).to_s %>">
+            <td>
+              <%= row %>
+            </td>
+            <td>
+              <b>
+                <%= _("Number_is_invalid") %>
+              </b>
+            </td>
+          </tr>
+      <% } %>
+  <%end%>
+
+</table>
+
+<br />
+<%= link_to b_back + _('Back_to_Numbers'), :action=>:number_list, :id=>@number_pool.id %>

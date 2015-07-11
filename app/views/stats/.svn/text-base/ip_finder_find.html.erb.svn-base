@@ -1,0 +1,29 @@
+<table>
+  <% if @devices.present? %>
+    <tr>
+      <td valign=top><b><%= _('Devices') %>:</b></td>
+      <td>
+        <% @devices.each do |device| %>
+          <%= @users_scope.include?(device.user_id) ? link_nice_device(device) : device_with_owner(device) %><br/>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+  <br/>
+  <br/>
+  <% if @providers.present? %>
+    <tr>
+      <td valign=top><b><%= _('Providers') %>:</b></td>
+      <td>
+        <% @providers.each do |provider| %>
+          <% if @users_scope.include?(provider.user_id) %>
+            <%= link_nice_provider(provider) %>
+          <% else %>
+            <%= nice_provider(provider) %> (<%= provider_owner(provider) %>)
+          <% end %>
+          <br/>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>

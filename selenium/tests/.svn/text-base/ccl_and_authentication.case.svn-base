@@ -1,0 +1,4805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<!--jeigu CCL OFF, device authentikacijos tipas username/pass, opcijos by default off, keisti jas leidzia, Integrity check raso jeigu randa ijungtu-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/new?return_to_action=list&amp;return_to_controller=users&amp;user_id=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=device_description</td>
+	<td>test device</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<!--dynamic devaisas-->
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--išsaugau dynamic device-->
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--pakeičiu į ip auth-->
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_add_value_ip</td>
+	<td>127.0.0.3</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--nužymiu port/invite ip auth devaise, išsaugau-->
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<!--pakeičiu į dynamic-->
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=device_secret</td>
+	<td>longerpassword</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/integrity_check</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>xpath=(//td[@id='pospaid_and_loss_calls_size'])[2]</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Fix</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=device_id_8</td>
+	<td>SIP/1003</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--dynamic device, nužymiu-->
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--Vėl pakeičiu į ip authenticated - port/invite turi būti pažymėta-->
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<!--tolesniam testavimui padarau dynamic-->
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=device_secret</td>
+	<td>longerpassword</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<!--PROVIDER-->
+<tr>
+	<td>open</td>
+	<td>/billing/providers/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_name</td>
+	<td>sip provider</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=add_to_servers_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--dabar yra ip authenticated-->
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=hostname_ip_ip</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<!--nužymiu port/inivite, turi išsugoti-->
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=hostname_ip_ip</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<!--pakeičiu į dynamic su opcijom, išsaugau-->
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_login</td>
+	<td>username</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=hostname_ip_dynamic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/integrity_check</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>xpath=(//td[@id='pospaid_and_loss_calls_size'])[2]</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Fix</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=device_id_9</td>
+	<td>SIP/username</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>link=Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--pakeiciu prova i ip auth, turi išsaugoti su port,invite. -->
+<tr>
+	<td>click</td>
+	<td>id=hostname_ip_ip</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_server_ip</td>
+	<td>127.0.0.5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_add_value_ip</td>
+	<td>127.0.0.5</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--reikia vieno ip auth devaiso ccl testavimui-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/new?return_to_action=list&amp;return_to_controller=users&amp;user_id=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=device_description</td>
+	<td>ip auth</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_add_value_ip</td>
+	<td>127.0.0.6</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<!--reikia vieno dynamic prov ccl testavimui-->
+<tr>
+	<td>open</td>
+	<td>/billing/providers/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_name</td>
+	<td>dynamic prov</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=add_to_servers_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=hostname_ip_dynamic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<!--DTMF mode-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>name=device[dtmfmode]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectOptions</td>
+	<td>name=device[dtmfmode]</td>
+	<td>inband,info,rfc2833,auto</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=device[dtmfmode]</td>
+	<td>rfc2833</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=device[dtmfmode]</td>
+	<td>label=auto</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>name=device[dtmfmode]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectOptions</td>
+	<td>name=device[dtmfmode]</td>
+	<td>inband,info,rfc2833,auto</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=device[dtmfmode]</td>
+	<td>auto</td>
+</tr>
+<!-- jeigu CCL ON, nepriklausomai nuo device authentikacijos tipo, Insecure opcijos ijungiamos ir ju neleidzia keisti, Itegrity checkas nieko nerodo;-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/additional_modules</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=CCL_Active</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_address</td>
+	<td>127.0.0.5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=host</td>
+	<td>127.0.0.5</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--DTMF mode-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>name=device[dtmfmode]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[9]/td[2]</td>
+	<td>rfc2833</td>
+</tr>
+<!--DEVICE-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/new?return_to_action=list&amp;return_to_controller=users&amp;user_id=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=device_description</td>
+	<td>test device 2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/13</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_add_value_ip</td>
+	<td>127.0.0.6</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<!--senas dynamic devaisas, kurtas iki ccl įjungimo-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_add_value_ip</td>
+	<td>127.0.0.6</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--senas ip auth devaisas, kurtas iki ccl įjungimo-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=device_secret</td>
+	<td>longerpassword</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--PROVIDER-->
+<tr>
+	<td>open</td>
+	<td>/billing/providers/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_name</td>
+	<td>test provider 2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=add_to_servers_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--ip auth prova pakeiciu i dynamic-->
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_login</td>
+	<td>username2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=hostname_ip_dynamic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--senas ip auth provas-->
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--pakeiciu i dynamic-->
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_login</td>
+	<td>username</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=hostname_ip_dynamic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--senas dynamic provas-->
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--pakeiciu i ip auth-->
+<tr>
+	<td>click</td>
+	<td>id=hostname_ip_ip</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_server_ip</td>
+	<td>127.0.0.9</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_add_value_ip</td>
+	<td>127.0.0.9</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--Išjungiu CCL - dynamic devaisai nucheckinami, ip auth lieka checked-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/additional_modules</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=CCL_Active</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--device-->
+<!--ip auth device-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=device_secret</td>
+	<td>passwordlonger</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--dynamic device-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/10</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--provider-->
+<!--ip auth provider-->
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_login</td>
+	<td>username</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=hostname_ip_dynamic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--dynamic provider-->
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=hostname_ip_ip</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_server_ip</td>
+	<td>127.0.0.3</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_add_value_ip</td>
+	<td>127.0.0.3</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=universal_bundles/make_rspro</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<!--jeigu CCL OFF, device authentikacijos tipas username/pass, opcijos by default on, keisti jas leidzia, Integrity check raso jeigu randa ijungtu-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/new?return_to_action=list&amp;return_to_controller=users&amp;user_id=5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=device_description</td>
+	<td>test device</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<!--dynamic devaisas-->
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--išsaugau dynamic device-->
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--pakeičiu į ip auth-->
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_add_value_ip</td>
+	<td>127.0.0.4</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--nužymiu port/invite ip auth devaise, išsaugau-->
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<!--pakeičiu į dynamic-->
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=device_secret</td>
+	<td>longerpassword</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/integrity_check</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>xpath=(//td[@id='pospaid_and_loss_calls_size'])[2]</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Fix</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=device_id_15</td>
+	<td>SIP/1006</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=device_user_15</td>
+	<td>User Resellers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=device_user_owner_15</td>
+	<td>Test Reseller</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--dynamic device, nužymiu-->
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--Vėl pakeičiu į ip authenticated - port/invite turi būti pažymėta-->
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<!--tolesniam testavimui padarau dynamic-->
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=device_secret</td>
+	<td>longerpassword</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<!--PROVIDER-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=tariff_name</td>
+	<td>for prov</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tariff_purpose_provider</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_name</td>
+	<td>res sip provider</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--dabar yra ip authenticated-->
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=hostname_ip_ip</td>
+	<td>on</td>
+</tr>
+<!--nužymiu port/inivite, turi išsugoti-->
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=hostname_ip_ip</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<!--pakeičiu į dynamic su opcijom, išsaugau-->
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_login</td>
+	<td>usernamers</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=hostname_ip_dynamic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/integrity_check</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>xpath=(//td[@id='pospaid_and_loss_calls_size'])[2]</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Fix</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=device_id_16</td>
+	<td>SIP/usernamers</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>link=Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--pakeiciu prova i ip auth, turi išsaugoti su port,invite. -->
+<tr>
+	<td>click</td>
+	<td>id=hostname_ip_ip</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_server_ip</td>
+	<td>127.0.0.5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_add_value_ip</td>
+	<td>127.0.0.5</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<!--reikia vieno ip auth devaiso ccl testavimui-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/new?return_to_action=list&amp;return_to_controller=users&amp;user_id=5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=device_description</td>
+	<td>ip auth rs</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_add_value_ip</td>
+	<td>127.0.0.10</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<!--reikia vieno dynamic prov ccl testavimui-->
+<tr>
+	<td>open</td>
+	<td>/billing/providers/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_name</td>
+	<td>dynamic prov rs</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=hostname_ip_dynamic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<!-- jeigu CCL ON, nepriklausomai nuo device authentikacijos tipo, Insecure opcijos ijungiamos ir ju neleidzia keisti, Itegrity checkas nieko nerodo;-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/additional_modules</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=CCL_Active</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_address</td>
+	<td>127.0.0.5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=host</td>
+	<td>127.0.0.5</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--DEVICE-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/new?return_to_action=list&amp;return_to_controller=users&amp;user_id=5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=device_description</td>
+	<td>test device 2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/20</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_add_value_ip</td>
+	<td>127.0.0.8</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<!--senas dynamic devaisas, kurtas iki ccl įjungimo-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_add_value_ip</td>
+	<td>127.0.0.8</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--senas ip auth devaisas, kurtas iki ccl įjungimo-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/17</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=device_secret</td>
+	<td>longerpassword</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Some of system configuration needs your attention. Please click here to see it.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/17</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--PROVIDER-->
+<tr>
+	<td>open</td>
+	<td>/billing/providers/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_name</td>
+	<td>test provider rs 2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/7</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--ip auth prova pakeiciu i dynamic-->
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_login</td>
+	<td>username2rs</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=hostname_ip_dynamic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/7</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--senas ip auth provas-->
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_server_ip</td>
+	<td>127.0.0.2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_add_value_ip</td>
+	<td>127.0.0.2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--pakeiciu i dynamic-->
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_login</td>
+	<td>usernamers</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=hostname_ip_dynamic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--senas dynamic provas-->
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--pakeiciu i ip auth-->
+<tr>
+	<td>click</td>
+	<td>id=hostname_ip_ip</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_server_ip</td>
+	<td>127.0.0.9</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_add_value_ip</td>
+	<td>127.0.0.9</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Provider successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--Išjungiu CCL - dynamic devaisai nucheckinami, ip auth lieka checked-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/additional_modules</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=CCL_Active</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--DTMF mode-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>name=device[dtmfmode]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectOptions</td>
+	<td>name=device[dtmfmode]</td>
+	<td>inband,info,rfc2833,auto</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=device[dtmfmode]</td>
+	<td>rfc2833</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=device[dtmfmode]</td>
+	<td>label=auto</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Device's settings updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>name=device[dtmfmode]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectOptions</td>
+	<td>name=device[dtmfmode]</td>
+	<td>inband,info,rfc2833,auto</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=device[dtmfmode]</td>
+	<td>auto</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--device-->
+<!--ip auth device-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=device_secret</td>
+	<td>passwordlonger</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/15</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--dynamic device-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/17</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication_dynamic_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/17</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--provider-->
+<!--ip auth provider-->
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=ip_authentication</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_login</td>
+	<td>usernamers</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=hostname_ip_dynamic</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<!--dynamic provider-->
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=hostname_ip_ip</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ip_authentication</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=provider_server_ip</td>
+	<td>127.0.0.33</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ip_add_value_ip</td>
+	<td>127.0.0.33</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/providers/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_port</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=insecure_invite</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_port</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=insecure_invite</td>
+	<td>off</td>
+</tr>
+</tbody></table>
+</body>
+</html>

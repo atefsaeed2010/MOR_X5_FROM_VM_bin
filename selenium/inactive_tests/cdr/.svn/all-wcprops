@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/52071/mor/gui/branches/x5/selenium/inactive_tests/cdr
+END
+cdr_import_by_cli_basics.case
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/49741/mor/gui/branches/x5/selenium/inactive_tests/cdr/cdr_import_by_cli_basics.case
+END
+cdr_import_re_by_cli.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/49746/mor/gui/branches/x5/selenium/inactive_tests/cdr/cdr_import_re_by_cli.case
+END
+cdr_import_by_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/52071/mor/gui/branches/x5/selenium/inactive_tests/cdr/cdr_import_by_user.case
+END
+cdr_import_re_by_cli2.case
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/49746/mor/gui/branches/x5/selenium/inactive_tests/cdr/cdr_import_re_by_cli2.case
+END
+cdr_import_by_user2.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/49741/mor/gui/branches/x5/selenium/inactive_tests/cdr/cdr_import_by_user2.case
+END
+cdr_import_rerating.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/49741/mor/gui/branches/x5/selenium/inactive_tests/cdr/cdr_import_rerating.case
+END
+cdr_import_by_cli_with_currencies.case
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/49741/mor/gui/branches/x5/selenium/inactive_tests/cdr/cdr_import_by_cli_with_currencies.case
+END
+cdr_import_re_by_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/49741/mor/gui/branches/x5/selenium/inactive_tests/cdr/cdr_import_re_by_user.case
+END
+cdr_import_re_by_user2.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/49741/mor/gui/branches/x5/selenium/inactive_tests/cdr/cdr_import_re_by_user2.case
+END
+cdr_import_by_cli_multiple_prov.case
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/49741/mor/gui/branches/x5/selenium/inactive_tests/cdr/cdr_import_by_cli_multiple_prov.case
+END

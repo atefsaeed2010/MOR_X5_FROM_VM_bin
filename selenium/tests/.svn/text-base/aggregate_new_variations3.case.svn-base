@@ -1,0 +1,1807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>aggregate_new_variations3</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">aggregate_new_variations3</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/calls/aggregates</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/settings/visual/one_item_per_page</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/aggregates/list</td>
+	<td></td>
+</tr>
+<!--// i = 10 aggregate by terminator and direction and destination-->
+<tr>
+	<td>select</td>
+	<td>id=date_from_month</td>
+	<td>label=October</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_year</td>
+	<td>label=2013</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_day</td>
+	<td>label=1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_hour</td>
+	<td>label=00</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_originator</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_originator_id').value='none'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=terminator</td>
+	<td>label=Any</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prefix</td>
+	<td>%3%</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<!--i aggregates ieina tik agregates id=17 ir id=18 (dėl timeperiods lentos)-->
+<tr>
+	<td>assertText</td>
+	<td>id=dir_name_0</td>
+	<td>Cameroon MOB</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_0</td>
+	<td>2379</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_term_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_term_0</td>
+	<td>915.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billed_term</td>
+	<td>915.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_term_0</td>
+	<td>558:40:15</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billsec_term</td>
+	<td>558:40:15</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_0</td>
+	<td>558:40:15</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_duration</td>
+	<td>558:40:15</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=answered_calls_0</td>
+	<td>11666</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_answ_calls</td>
+	<td>11666</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_calls_0</td>
+	<td>111121</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_total_calls</td>
+	<td>111121</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=asr_0</td>
+	<td>10.5000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_ast</td>
+	<td>10.5000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=acd_0</td>
+	<td>00:02:52</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_acd</td>
+	<td>00:02:52</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_orig_0</td>
+	<td>2538.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billed_orig</td>
+	<td>2538.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_billed_with_tax0</td>
+	<td>2538.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_orig_amount_with_vat</td>
+	<td>2538.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_orig_0</td>
+	<td>558:40:15</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billsec_orig</td>
+	<td>558:40:15</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=customer_term_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=customer_orig_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=price_term_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=price_orig_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=user_billed_with_tax0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=billed_time_orig_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=billed_time_term_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=dir_name_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Originator</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#billed_orig &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Originator Price with Tax</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#billsec_orig &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Terminator</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#billed_term &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#billsec_term &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Destination</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/aggregates/list?csv=1&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Destination&quot;:&quot;Cameroon MOB&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>&quot;Customer Originator&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Customer Terminator&quot;:&quot;&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Billed Originator&quot;:&quot;2538.0000&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Billed Originator Price with Tax&quot;:&quot;2538.0000&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Billed Terminator&quot;:&quot;915.0000&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Billed Duration Originator&quot;:&quot;558:40:15&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Billed Duration Terminator&quot;:&quot;558:40:15&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Duration&quot;:&quot;558:40:15&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Answered Calls&quot;:&quot;11666&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Total Calls&quot;:&quot;111121&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;ASR&quot;:&quot;0.1050&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;ACD&quot;:&quot;172.3997&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Test Accountant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/aggregates/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=use_real_billsec_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_0</td>
+	<td>287:03:46</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_duration</td>
+	<td>287:03:46</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=from_user_perspective_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_calls_0</td>
+	<td>64819</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_total_calls</td>
+	<td>64819</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=asr_0</td>
+	<td>18.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_ast</td>
+	<td>18.0000</td>
+</tr>
+<!--pasirinkus 10 variaciją ne nuo mėnesio pirmos dienos-->
+<tr>
+	<td>click</td>
+	<td>id=use_real_billsec_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=from_user_perspective_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_month</td>
+	<td>label=November</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_day</td>
+	<td>label=3</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=dir_name_0</td>
+	<td>Cameroon MOB</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_0</td>
+	<td>2379</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_term_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_term_0</td>
+	<td>52099.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_term_0</td>
+	<td>276:11:56</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_0</td>
+	<td>276:11:56</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=answered_calls_0</td>
+	<td>8384</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_calls_0</td>
+	<td>76159</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=asr_0</td>
+	<td>11.0100</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=acd_0</td>
+	<td>00:01:58</td>
+</tr>
+<!--pasirinkus 10 variaciją ne nuo pradinės valandos-->
+<tr>
+	<td>select</td>
+	<td>id=date_from_day</td>
+	<td>label=15</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_hour</td>
+	<td>label=03</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=dir_name_0</td>
+	<td>Cameroon MOB</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_0</td>
+	<td>2379</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_term_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_term_0</td>
+	<td>9.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_term_0</td>
+	<td>exact:06:07:45</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_0</td>
+	<td>exact:06:07:45</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=answered_calls_0</td>
+	<td>89</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_calls_0</td>
+	<td>474</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=asr_0</td>
+	<td>18.7800</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=acd_0</td>
+	<td>00:04:07</td>
+</tr>
+<!--// i = 11 aggregate by originator and terminator and direction and destination (all)-->
+<tr>
+	<td>type</td>
+	<td>id=s_originator</td>
+	<td>Any</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_originator_id').value='any'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=country</td>
+	<td>label=Any</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_month</td>
+	<td>label=October</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_day</td>
+	<td>label=1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_hour</td>
+	<td>label=00</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<!--i aggregates ieina tik agregates id=1 ir id=2 (dėl timeperiods lentos)-->
+<tr>
+	<td>assertText</td>
+	<td>id=dir_name_0</td>
+	<td>Cameroon MOB</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_0</td>
+	<td>2379</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_orig_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_term_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_orig_0</td>
+	<td>149.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_billed_with_tax0</td>
+	<td>149.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_term_0</td>
+	<td>72.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_orig_0</td>
+	<td>32:35:03</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_term_0</td>
+	<td>32:35:03</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_0</td>
+	<td>32:35:03</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=answered_calls_0</td>
+	<td>838</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_calls_0</td>
+	<td>3093</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=asr_0</td>
+	<td>27.0900</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=acd_0</td>
+	<td>00:02:19</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_1</td>
+	<td>1 2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billed_orig</td>
+	<td>2536.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_orig_amount_with_vat</td>
+	<td>2536.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billed_term</td>
+	<td>842580.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billsec_orig</td>
+	<td>558:05:32</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billsec_term</td>
+	<td>558:05:32</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_duration</td>
+	<td>558:05:32</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_answ_calls</td>
+	<td>11648</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_total_calls</td>
+	<td>106288</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_ast</td>
+	<td>10.9600</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_acd</td>
+	<td>00:02:52</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=dir_name_0</td>
+	<td>Liechtenstein FIX</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_0</td>
+	<td>423</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_orig_0</td>
+	<td>Test Accountant</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_orig_0</td>
+	<td>2387.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_billed_with_tax0</td>
+	<td>2387.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_term_0</td>
+	<td>842508.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_orig_0</td>
+	<td>525:30:29</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_term_0</td>
+	<td>525:30:29</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_0</td>
+	<td>525:30:29</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=answered_calls_0</td>
+	<td>10810</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_calls_0</td>
+	<td>103195</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=asr_0</td>
+	<td>10.4800</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=acd_0</td>
+	<td>00:02:55</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billed_orig</td>
+	<td>2536.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_orig_amount_with_vat</td>
+	<td>2536.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billed_term</td>
+	<td>842580.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billsec_orig</td>
+	<td>558:05:32</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billsec_term</td>
+	<td>558:05:32</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_duration</td>
+	<td>558:05:32</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_answ_calls</td>
+	<td>11648</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_total_calls</td>
+	<td>106288</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_ast</td>
+	<td>10.9600</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_acd</td>
+	<td>00:02:52</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=customer_term_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=customer_orig_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=price_term_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=price_orig_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=user_billed_with_tax0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=billed_time_orig_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=billed_time_term_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=dir_name_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Originator</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#billed_orig &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Originator Price with Tax</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#billsec_orig &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Terminator</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#billed_term &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#billsec_term &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Destination</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/aggregates/list?csv=1&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Destination&quot;:&quot;Cameroon MOB&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Customer Originator&quot;:&quot;&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Customer Terminator&quot;:&quot;&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Billed Originator&quot;:&quot;149.0000&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Billed Originator Price with Tax&quot;:&quot;149.0000&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Billed Terminator&quot;:&quot;72.0000&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Billed Duration Originator&quot;:&quot;32:35:03&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Billed Duration Terminator&quot;:&quot;32:35:03&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Duration&quot;:&quot;32:35:03&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Answered Calls&quot;:&quot;838&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Total Calls&quot;:&quot;3093&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;ASR&quot;:&quot;0.2709&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;ACD&quot;:&quot;139.9797&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Destination&quot;:&quot;Liechtenstein FIX&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Customer Originator&quot;:&quot;Test Accountant&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Customer Terminator&quot;:&quot;&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Billed Originator&quot;:&quot;2387.0000&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Billed Originator Price with Tax&quot;:&quot;2387.0000&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Billed Terminator&quot;:&quot;842508.0000&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Billed Duration Originator&quot;:&quot;525:30:29&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Billed Duration Terminator&quot;:&quot;525:30:29&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Duration&quot;:&quot;525:30:29&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Answered Calls&quot;:&quot;10810&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;Total Calls&quot;:&quot;103195&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;ASR&quot;:&quot;0.1048&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>&quot;ACD&quot;:&quot;175.0073&quot;</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/aggregates/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=use_real_billsec_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_0</td>
+	<td>1441:01:47</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_duration</td>
+	<td>1473:30:05</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=from_user_perspective_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_calls_0</td>
+	<td>60107</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_total_calls</td>
+	<td>62718</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=asr_0</td>
+	<td>17.9800</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_ast</td>
+	<td>18.5700</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_0</td>
+	<td>32:28:18</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_duration</td>
+	<td>1473:30:05</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_calls_0</td>
+	<td>2611</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_total_calls</td>
+	<td>62718</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=asr_0</td>
+	<td>32.0900</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_ast</td>
+	<td>18.5700</td>
+</tr>
+<!--gali būti ir be šalies-->
+<tr>
+	<td>click</td>
+	<td>id=use_real_billsec_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=from_user_perspective_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=country</td>
+	<td>label=None</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=dir_name_0</td>
+	<td>Cameroon MOB</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_0</td>
+	<td>2379</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_orig_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_term_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_orig_0</td>
+	<td>149.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_billed_with_tax0</td>
+	<td>149.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_term_0</td>
+	<td>72.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_orig_0</td>
+	<td>32:35:03</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_term_0</td>
+	<td>32:35:03</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_0</td>
+	<td>32:35:03</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=answered_calls_0</td>
+	<td>838</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_calls_0</td>
+	<td>3093</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=asr_0</td>
+	<td>27.0900</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=acd_0</td>
+	<td>00:02:19</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_1</td>
+	<td>1 2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billed_orig</td>
+	<td>2536.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_orig_amount_with_vat</td>
+	<td>2536.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billed_term</td>
+	<td>842580.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billsec_orig</td>
+	<td>558:05:32</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billsec_term</td>
+	<td>558:05:32</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_duration</td>
+	<td>558:05:32</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_answ_calls</td>
+	<td>11648</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_total_calls</td>
+	<td>106288</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_ast</td>
+	<td>10.9600</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_acd</td>
+	<td>00:02:52</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=dir_name_0</td>
+	<td>Liechtenstein FIX</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_0</td>
+	<td>423</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_orig_0</td>
+	<td>Test Accountant</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_orig_0</td>
+	<td>2387.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_billed_with_tax0</td>
+	<td>2387.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_term_0</td>
+	<td>842508.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_orig_0</td>
+	<td>525:30:29</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_term_0</td>
+	<td>525:30:29</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_0</td>
+	<td>525:30:29</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=answered_calls_0</td>
+	<td>10810</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_calls_0</td>
+	<td>103195</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=asr_0</td>
+	<td>10.4800</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=acd_0</td>
+	<td>00:02:55</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billed_orig</td>
+	<td>2536.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_orig_amount_with_vat</td>
+	<td>2536.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billed_term</td>
+	<td>842580.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billsec_orig</td>
+	<td>558:05:32</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_billsec_term</td>
+	<td>558:05:32</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_duration</td>
+	<td>558:05:32</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_answ_calls</td>
+	<td>11648</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_total_calls</td>
+	<td>106288</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_ast</td>
+	<td>10.9600</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_acd</td>
+	<td>00:02:52</td>
+</tr>
+<!--pasirinkus 11 variaciją ne nuo mėnesio pirmos dienos-->
+<tr>
+	<td>select</td>
+	<td>id=date_from_month</td>
+	<td>label=November</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_day</td>
+	<td>label=3</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=dir_name_0</td>
+	<td>Cameroon MOB</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_0</td>
+	<td>2379</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_orig_0</td>
+	<td>Test Accountant</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_term_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_orig_0</td>
+	<td>167030.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_billed_with_tax0</td>
+	<td>167030.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_term_0</td>
+	<td>52099.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_orig_0</td>
+	<td>276:05:02</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_term_0</td>
+	<td>276:05:02</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_0</td>
+	<td>276:05:02</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=answered_calls_0</td>
+	<td>8379</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_calls_0</td>
+	<td>75532</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=asr_0</td>
+	<td>11.0900</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=acd_0</td>
+	<td>00:01:58</td>
+</tr>
+<!--gali būti ir su šalimi-->
+<tr>
+	<td>select</td>
+	<td>name=country</td>
+	<td>label=Any</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_month</td>
+	<td>label=November</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_day</td>
+	<td>label=3</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=dir_name_0</td>
+	<td>Cameroon MOB</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_0</td>
+	<td>2379</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_orig_0</td>
+	<td>Test Accountant</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_term_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_orig_0</td>
+	<td>167030.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_billed_with_tax0</td>
+	<td>167030.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_term_0</td>
+	<td>52099.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_orig_0</td>
+	<td>276:05:02</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_term_0</td>
+	<td>276:05:02</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_0</td>
+	<td>276:05:02</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=answered_calls_0</td>
+	<td>8379</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_calls_0</td>
+	<td>75532</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=asr_0</td>
+	<td>11.0900</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=acd_0</td>
+	<td>00:01:58</td>
+</tr>
+<!--pasirinkus 11 variaciją ne nuo pradinės valandos-->
+<tr>
+	<td>select</td>
+	<td>id=date_from_day</td>
+	<td>label=15</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_hour</td>
+	<td>label=03</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=dir_name_0</td>
+	<td>Cameroon MOB</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_0</td>
+	<td>2379</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_orig_0</td>
+	<td>Test Accountant</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_term_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_orig_0</td>
+	<td>9288.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_billed_with_tax0</td>
+	<td>9288.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_term_0</td>
+	<td>9.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_orig_0</td>
+	<td>exact:06:07:45</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_term_0</td>
+	<td>exact:06:07:45</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_0</td>
+	<td>exact:06:07:45</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=answered_calls_0</td>
+	<td>89</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_calls_0</td>
+	<td>473</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=asr_0</td>
+	<td>18.8200</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=acd_0</td>
+	<td>00:04:07</td>
+</tr>
+<!--gali būti ir be šalies-->
+<tr>
+	<td>select</td>
+	<td>name=country</td>
+	<td>label=None</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_day</td>
+	<td>label=15</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_hour</td>
+	<td>label=03</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=dir_name_0</td>
+	<td>Cameroon MOB</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_0</td>
+	<td>2379</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_orig_0</td>
+	<td>Test Accountant</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=customer_term_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_orig_0</td>
+	<td>9288.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_billed_with_tax0</td>
+	<td>9288.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=price_term_0</td>
+	<td>9.0000 USD</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_orig_0</td>
+	<td>exact:06:07:45</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billed_time_term_0</td>
+	<td>exact:06:07:45</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_0</td>
+	<td>exact:06:07:45</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=answered_calls_0</td>
+	<td>89</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_calls_0</td>
+	<td>473</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=asr_0</td>
+	<td>18.8200</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=acd_0</td>
+	<td>00:04:07</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

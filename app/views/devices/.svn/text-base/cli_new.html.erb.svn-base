@@ -1,0 +1,102 @@
+<div id="cli_new">
+  <%= form_tag :action => 'cli_add' do %>
+    <table id='cli_table' class='maintable' width='100%'>
+      <tr>
+          <th id='cli_header' align='left'><%= _('CLI') %></th>
+          <th id='description_header' align='left'><%= _('Description') %></th>
+          <th id='comment_header' align='left'><%= _('Comment') %> </th>
+          <th id='banned_header' align='center'><%= _('Banned') %></th>
+          <% if allow_manage_providers? or current_user.usertype != 'reseller' %>
+            <th id='ivr_header' align='center'>
+              <%= _('IVR') %>
+            </th>
+          <% end %>
+          <th id='device_header' align='left'><%= _('User') %></th>
+          <th id='device_header' align='center'><%= _('Device') %></th>
+      </tr>
+      <tr>
+        <td align='left'>
+          <%= text_field_tag 'cli', @selected[:cli], "class" => "input", :size => "20", :maxlength => "20" %>
+        </td>
+        <td align='left'>
+          <%= text_field_tag 'description', @selected[:description], "class" => "input", :size => "30", :maxlength => "30" %>
+        </td>
+        <td align='left'>
+          <%= text_field_tag 'comment', @selected[:comment], "class" => "input", :size => "30" %>
+        </td>
+        <td align='center'>
+          <select id="banned" name="banned" style='width: 120px;'>
+            <option value="0" <%= "selected" if @selected[:banned] == 0%>>
+              <%= _('Not_banned') %>
+            </option>
+            <option value="1" <%= "selected" if @selected[:banned] == 1%>>
+              <%= _('Banned') %>
+            </option>
+          </select>
+        </td>
+        <% if allow_manage_providers? or current_user.usertype != 'reseller' %>
+          <td align='center'>
+            <select id="ivr" name="ivr" style='width: 120px;'>
+              <option value="0" <%= "selected" %>>
+                <%= _('Not_assigned') %>
+              </option>
+              <% for iv in @all_ivrs.sort_by{ |ivrs| ivrs.name.downcase} %>
+                <option value="<%= iv.id %>" <%= "selected" if iv.id.to_i == Confline.get_value("Banned_CLIs_default_IVR_id", 0).to_i or iv.id == @selected[:ivr].to_i %>>
+                  <%= iv.name %>
+                </option>
+              <% end %>
+            </select>
+          </td>
+        <% end %>
+        <td>
+          <% nice_user_name = nice_user(User.where(id: params[:user]).first) %>
+          <%= render('shared/live_search_field',
+                     object: (params[:user] && nice_user_name) || params[:s_user].to_s,
+                     object_id: params[:user] || @selected[:user] || -2,
+                     object_name: 'User',
+                     action_url: {controller: :users, action: :get_users_map, options: {show_admin: true}}
+              )
+          %>
+        </td>
+        <td align='center'>
+          <span id="user_not_selected_info">
+             <%= b_exclamation + _('Please_select_User') %>
+          </span>
+          <div id = 'user_devices'>
+          </div>
+        </td>
+      </tr>
+      <br/>
+    </table>
+    <br/>
+    <%= submit_tag _('Create'), :disable_with => _('Processing..') %>
+  <% end %>
+</div>
+<script>
+   Event.observe(window, 'load',  function() {
+    update();
+      Event.observe($('s_user'), 'change', function(){
+        update();
+      });
+   });
+
+   function update() {
+       if ($('s_user_id').value >= 0){
+           new Ajax.Updater('user_devices',
+                   '<%= Web_Dir %>/devices/cli_user_devices?add=1' + '&id=' + $('s_user_id').value + '&dev_id=' + '<%= params[:device_id] || @selected[:device_id] %>' + '&only_dropdown=true',
+                   {
+                       evalScripts:true,
+                       onComplete:function(request){Element.hide('spinner');},
+                       onLoading:function(request){Element.show('spinner');}
+                   }
+           )
+       }
+       if ($('s_user_id').value < 0) {
+           document.getElementById('user_devices').style.display = 'none';
+           $('user_not_selected_info').show();
+       } else {
+           document.getElementById('user_devices').style.display = '';
+           $('user_not_selected_info').hide();
+       }
+   }
+</script>

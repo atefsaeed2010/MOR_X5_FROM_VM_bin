@@ -1,0 +1,8 @@
+INSERT INTO `calls` (`id`, `calldate`, `clid`, `src`, `dst`, `channel`, `duration`, `billsec`, `disposition`, `accountcode`, `uniqueid`, `src_device_id`, `dst_device_id`, `processed`, `did_price`, `card_id`, `provider_id`, `provider_rate`, `provider_billsec`, `provider_price`, `user_id`, `user_rate`, `user_billsec`, `user_price`, `reseller_id`, `reseller_rate`, `reseller_billsec`, `reseller_price`, `partner_id`, `partner_rate`, `partner_billsec`, `partner_price`, `prefix`, `server_id`, `hangupcause`, `callertype`, `did_inc_price`, `did_prov_price`, `localized_dst`, `did_provider_id`, `did_id`, `originator_ip`, `terminator_ip`, `real_duration`, `real_billsec`, `did_billsec`, `dst_user_id`) VALUES
+(200,'2010-06-06 00:00:02','','101','123123','',20,30,'ANSWERED','2','1232113371.3',6,0,0,5,0,1,0,0,1,2,0,1,3,0,0,0,0,0,0,0,0,'1231',1,16,'Local',10,0,'123123',0,0,'','',0,0,0,NULL),
+(201,'2011-01-05 00:00:01','','101','123123','',10,20,'ANSWERED','2','1232113370.3',113,0,0,0,0,1,0,0,1,3,0,1,2,3,0,0,0,0,0,0,0,'1231',1,16,'Local',0,0,'123123',0,0,'','',0,0,0,NULL),
+(202,'2011-01-21 00:00:01','','101','123123','',10,20,'ANSWERED','2','1232113370.3',113,0,0,0,0,3,0,0,1,3,0,1,2,3,0,0,0,0,0,0,0,'1231',1,16,'Local',0,0,'123123',0,0,'','',0,0,0,NULL),
+(203,'2011-02-01 00:00:01','','101','123123','',10,20,'ANSWERED','2','1232113370.3',113,0,0,0,0,4,0,0,1,3,0,1,2,3,0,0,0,0,0,0,0,'1231',1,16,'Local',0,0,'123123',0,0,'','',0,0,0,NULL),
+(204,'2011-02-28 00:00:01','','101','123123','',10,20,'ANSWERED','2','1232113370.3',113,0,0,0,0,5,0,0,1,3,0,1,2,3,0,0,0,0,0,0,0,'1231',1,16,'Local',0,0,'123123',0,0,'','',0,0,0,NULL);
+UPDATE `providers` SET `device_id`=11;
+

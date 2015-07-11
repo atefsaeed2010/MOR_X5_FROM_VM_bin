@@ -1,0 +1,9 @@
+# enables sms for reseler 
+# ----
+#creates resseler permision 
+permissions/reseller/create.sql
+#sms enables
+permissions/reseller/sms_enable.sql
+#assign permision
+user/reseller_3/assign_permisions.sql
+#bundle loaded

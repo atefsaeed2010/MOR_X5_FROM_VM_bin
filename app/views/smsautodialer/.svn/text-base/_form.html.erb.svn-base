@@ -1,0 +1,44 @@
+<table class="simple">
+  <tr>
+    <td id="name"> <%= _('Name') %>:</td>
+    <td id="name_input"> <%= text_field 'campaign', 'name', "class" => "input" %></td>
+  </tr>
+
+  <tr>
+    <td id="type"> <%= _('Type') %>:</td>
+    <td id="type_value">
+      <select name="campaign[campaign_type]">
+        <% for type in ctypes %>
+            <option value=<%= type %>> <%= type %> </option>
+        <% end %>
+      </select>
+    </td>
+  </tr>
+
+  <tr>
+    <td id="start_time"> <%= _('Start_time') %>:</td>
+    <td id="start_time_value"> <%= select_time(campaign.start_time ? Time.parse(campaign.start_time.to_s) : Time.mktime(Time.now.year, Time.now.month, Time.now.day, '00', '00'), :prefix => "time_from") %></td>
+  </tr>
+
+  <tr>
+    <td id="stop_time"> <%= _('Stop_time') %>:</td>
+    <td id="stop_time_value"> <%= select_time(campaign.stop_time ? Time.parse(campaign.stop_time.to_s) : Time.mktime(Time.now.year, Time.now.month, Time.now.day, '23', '59'), :prefix => "time_till") %></td>
+  </tr>
+
+  <tr>
+    <td id="device"> <%= _('Device') %>:</td>
+    <td id="device_type">
+      <select name="campaign[device_id]">
+        <% for dev in devices %>
+            <option value='<%= dev.id %>' <%= 'selected' if dev.id == campaign.device_id %>> <%= nice_device(dev) %> </option>
+        <% end %>
+      </select>
+    </td>
+  </tr>
+
+  <tr>
+    <td id="caller_id"> <%= _('CallerID') %>:</td>
+    <td id="caller_id_value"> <%= text_field 'campaign', 'callerid', "class" => "input" %></td>
+  </tr>
+
+</table>

@@ -1,0 +1,11 @@
+# 1 item per page, comma as separator, different date format, 7 number digits
+# ----
+# 7 digits
+/settings/visual/set_7_digits.sql
+# 1 item per page
+/settings/visual/one_item_per_page.sql
+# , decimal
+/settings/visual/set_comma_as_decimal.sql
+# %d/%m/%Y %H:%M:%S date format
+/settings/visual/set_date_format_d_m_y.sql
+# bundle loaded

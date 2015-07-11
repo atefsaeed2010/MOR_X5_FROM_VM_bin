@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/51485/mor/gui/branches/x5/app/views/servers
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/49286/mor/gui/branches/x5/app/views/servers/edit.html.erb
+END
+server_test.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/41942/mor/gui/branches/x5/app/views/servers/server_test.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/50154/mor/gui/branches/x5/app/views/servers/list.html.erb
+END
+server_devices_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/51485/mor/gui/branches/x5/app/views/servers/server_devices_list.html.erb
+END
+server_providers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/app/views/servers/server_providers.html.erb
+END

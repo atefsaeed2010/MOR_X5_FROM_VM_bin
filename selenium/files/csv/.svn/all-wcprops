@@ -1,0 +1,623 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/52167/mor/gui/branches/x5/selenium/files/csv
+END
+cdr_by_cli_with_pro2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/cdr_by_cli_with_pro2.csv
+END
+bad_destination.csv
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/bad_destination.csv
+END
+tariff_with_multiprefix_lines.csv
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/tariff_with_multiprefix_lines.csv
+END
+russian_text.csv
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/russian_text.csv
+END
+autodailer_same_numbers.csv
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/autodailer_same_numbers.csv
+END
+bad_usa_tariff.csv
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/bad_usa_tariff.csv
+END
+cli_import_no_errors.csv
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/cli_import_no_errors.csv
+END
+tariff_with_a_dollar_sign.xls
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/tariff_with_a_dollar_sign.xls
+END
+effective_rates.csv
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/42202/mor/gui/branches/x5/selenium/files/csv/effective_rates.csv
+END
+cdr_by_cli_assigned_provs.csv
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/48730/mor/gui/branches/x5/selenium/files/csv/cdr_by_cli_assigned_provs.csv
+END
+destination_group_update.csv
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/destination_group_update.csv
+END
+effective_rates_same_rate2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/42335/mor/gui/branches/x5/selenium/files/csv/effective_rates_same_rate2.csv
+END
+dids_import_re.csv
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/dids_import_re.csv
+END
+example_cdr2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/example_cdr2.csv
+END
+users_with_same_email.csv
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/users_with_same_email.csv
+END
+cc_import_duplicate_pin_and_number.csv
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/cc_import_duplicate_pin_and_number.csv
+END
+cdr_one.csv
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/cdr_one.csv
+END
+usa_tariff_with_other_tariff.csv
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/usa_tariff_with_other_tariff.csv
+END
+Data_usage_calculation.csv
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/48393/mor/gui/branches/x5/selenium/files/csv/Data_usage_calculation.csv
+END
+lithuania_rates.csv
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/48309/mor/gui/branches/x5/selenium/files/csv/lithuania_rates.csv
+END
+dids_import.csv
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/dids_import.csv
+END
+effective_rates2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/42202/mor/gui/branches/x5/selenium/files/csv/effective_rates2.csv
+END
+tariff_algeria_2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/tariff_algeria_2.csv
+END
+invalid_numbers.csv
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/invalid_numbers.csv
+END
+tariff_algeria_3.csv
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/tariff_algeria_3.csv
+END
+devices.csv
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/44588/mor/gui/branches/x5/selenium/files/csv/devices.csv
+END
+tariff_algeria_4.csv
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/tariff_algeria_4.csv
+END
+tariff_algeria_5.csv
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/tariff_algeria_5.csv
+END
+tariff_with_a_dollar_sign.csv
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/tariff_with_a_dollar_sign.csv
+END
+networking.csv
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/networking.csv
+END
+numbers_with_zeros.csv
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/41963/mor/gui/branches/x5/selenium/files/csv/numbers_with_zeros.csv
+END
+rulang.csv
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/rulang.csv
+END
+user_data2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/user_data2.csv
+END
+dids_import_re_qf.csv
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/dids_import_re_qf.csv
+END
+last_calls_big_cdr.csv
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/last_calls_big_cdr.csv
+END
+8204.csv
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/39942/mor/gui/branches/x5/selenium/files/csv/8204.csv
+END
+dst_import_dst_prefix_price.csv
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/42709/mor/gui/branches/x5/selenium/files/csv/dst_import_dst_prefix_price.csv
+END
+f_various.csv
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/50721/mor/gui/branches/x5/selenium/files/csv/f_various.csv
+END
+Cards-Test_cardgroup_accountant.csv
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/Cards-Test_cardgroup_accountant.csv
+END
+f_new.csv
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/50721/mor/gui/branches/x5/selenium/files/csv/f_new.csv
+END
+tariff_algeria.csv
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/tariff_algeria.csv
+END
+rssssssssss.csv
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/rssssssssss.csv
+END
+users.csv
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/users.csv
+END
+cli_import.csv
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/cli_import.csv
+END
+cc_cards.csv
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/cc_cards.csv
+END
+big.csv
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/big.csv
+END
+cdr_by_cli_with_pro.csv
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/cdr_by_cli_with_pro.csv
+END
+f_short.csv
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/50721/mor/gui/branches/x5/selenium/files/csv/f_short.csv
+END
+very_big.csv
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/very_big.csv
+END
+cdr_file_for_import.csv
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/cdr_file_for_import.csv
+END
+usa_tariff_with_other_tariff_and_subcode_for_update.csv
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/usa_tariff_with_other_tariff_and_subcode_for_update.csv
+END
+device_data2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/device_data2.csv
+END
+various_destination_names.csv
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/42386/mor/gui/branches/x5/selenium/files/csv/various_destination_names.csv
+END
+one_voucher.csv
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/one_voucher.csv
+END
+all_tariff_info.csv
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/all_tariff_info.csv
+END
+Cards-Test_cardgroup.csv
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/Cards-Test_cardgroup.csv
+END
+dids.csv
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/dids.csv
+END
+dst_import_prefix_price.csv
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/42709/mor/gui/branches/x5/selenium/files/csv/dst_import_prefix_price.csv
+END
+effective_rates_another_date_format.csv
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/42284/mor/gui/branches/x5/selenium/files/csv/effective_rates_another_date_format.csv
+END
+autodailer_numbers.csv
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/autodailer_numbers.csv
+END
+valid_numbers.csv
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/valid_numbers.csv
+END
+Windows.csv
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/49142/mor/gui/branches/x5/selenium/files/csv/Windows.csv
+END
+empty_file.csv
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/empty_file.csv
+END
+many_numbers.csv
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/many_numbers.csv
+END
+dst_import_dst_prefix_price_subcode.csv
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/42709/mor/gui/branches/x5/selenium/files/csv/dst_import_dst_prefix_price_subcode.csv
+END
+cli_import_slash_sep.csv
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/cli_import_slash_sep.csv
+END
+tariff_import_with_gmp.csv
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/tariff_import_with_gmp.csv
+END
+cards_custom_separator.csv
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/cards_custom_separator.csv
+END
+rates_small_with_header.csv
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/rates_small_with_header.csv
+END
+rates_unclosed.csv
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/rates_unclosed.csv
+END
+cdr_by_cli2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/cdr_by_cli2.csv
+END
+effective_rates_time.csv
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/52167/mor/gui/branches/x5/selenium/files/csv/effective_rates_time.csv
+END
+2527_short.csv
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/2527_short.csv
+END
+example_cdr.csv
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/example_cdr.csv
+END
+dids_import_acc.csv
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/dids_import_acc.csv
+END
+file_with_unique_symbol.csv
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/file_with_unique_symbol.csv
+END
+0700.csv
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/0700.csv
+END
+dst_import_prefix_price_subcode.csv
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/42709/mor/gui/branches/x5/selenium/files/csv/dst_import_prefix_price_subcode.csv
+END
+tariff_import2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/tariff_import2.csv
+END
+device_data.csv
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/device_data.csv
+END
+cards_custom_separator2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/cards_custom_separator2.csv
+END
+tariff_import3.csv
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/tariff_import3.csv
+END
+cards_custom_separator3.csv
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/cards_custom_separator3.csv
+END
+cdr_by_cli.csv
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/cdr_by_cli.csv
+END
+tariff_import4.csv
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/46263/mor/gui/branches/x5/selenium/files/csv/tariff_import4.csv
+END
+data_club_tariffs.csv
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/data_club_tariffs.csv
+END
+f_simple.csv
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/50721/mor/gui/branches/x5/selenium/files/csv/f_simple.csv
+END
+tariff_file_with_semicolons.csv
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/tariff_file_with_semicolons.csv
+END
+usa_tariff_with_other_tariff_and_subcode.csv
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/usa_tariff_with_other_tariff_and_subcode.csv
+END
+2603_without_destinations.csv
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/2603_without_destinations.csv
+END
+dids_import_rspro.csv
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/dids_import_rspro.csv
+END
+same_prefix.csv
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/same_prefix.csv
+END
+dids_import_qf.csv
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/dids_import_qf.csv
+END
+effective_rates_another_date_format2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/42293/mor/gui/branches/x5/selenium/files/csv/effective_rates_another_date_format2.csv
+END
+Rates-USD.csv
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/Rates-USD.csv
+END
+user_data.csv
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/user_data.csv
+END
+autodailer_same_numbers2.csv
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/autodailer_same_numbers2.csv
+END
+Cards-Test_cardgroup_reseller.csv
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/Cards-Test_cardgroup_reseller.csv
+END
+effective_rates_same_rate.csv
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/42335/mor/gui/branches/x5/selenium/files/csv/effective_rates_same_rate.csv
+END
+cdr_by_cli_full_params.csv
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/48555/mor/gui/branches/x5/selenium/files/csv/cdr_by_cli_full_params.csv
+END
+cli_import_dot_sep.csv
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/cli_import_dot_sep.csv
+END
+usa_tariff_with_all_info.csv
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/usa_tariff_with_all_info.csv
+END
+usa_tariff.csv
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/csv/usa_tariff.csv
+END

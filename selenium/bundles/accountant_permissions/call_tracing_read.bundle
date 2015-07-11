@@ -1,0 +1,5 @@
+# Acc call tracing permission
+# ----
+# Call tracing permission set as read
+permissions/accountant/call_tracing_read.sql
+# bundle loaded

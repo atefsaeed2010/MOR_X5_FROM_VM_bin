@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/52276/mor/gui/branches/x5/selenium/tests/users
+END
+user_edit2.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/44191/mor/gui/branches/x5/selenium/tests/users/user_edit2.case
+END
+admin_password_admin.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/users/admin_password_admin.sql
+END
+users_finances.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/51589/mor/gui/branches/x5/selenium/tests/users/users_finances.case
+END
+reseler_delete.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/users/reseler_delete.sql
+END
+def_currency.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/51573/mor/gui/branches/x5/selenium/tests/users/def_currency.case
+END
+manage_user2.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/51498/mor/gui/branches/x5/selenium/tests/users/manage_user2.case
+END
+users_personal_details.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/43951/mor/gui/branches/x5/selenium/tests/users/users_personal_details.case
+END
+user_without_owner.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/42047/mor/gui/branches/x5/selenium/tests/users/user_without_owner.case
+END
+min_username_psw_length.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/48895/mor/gui/branches/x5/selenium/tests/users/min_username_psw_length.case
+END
+user_main_page.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/42047/mor/gui/branches/x5/selenium/tests/users/user_main_page.case
+END
+user_reseller_phonebook.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/41605/mor/gui/branches/x5/selenium/tests/users/user_reseller_phonebook.case
+END
+hebrews_users.case
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/51432/mor/gui/branches/x5/selenium/tests/users/hebrews_users.case
+END
+change_user_to_admin.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/users/change_user_to_admin.sql
+END
+wholesale_user_type.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/44809/mor/gui/branches/x5/selenium/tests/users/wholesale_user_type.case
+END
+calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/users/calls.sql
+END
+create_users.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/47866/mor/gui/branches/x5/selenium/tests/users/create_users.case
+END
+check_grouping_by_in_userslist.case
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/52071/mor/gui/branches/x5/selenium/tests/users/check_grouping_by_in_userslist.case
+END
+users.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/43348/mor/gui/branches/x5/selenium/tests/users/users.sql
+END
+manage_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/47495/mor/gui/branches/x5/selenium/tests/users/manage_user.case
+END
+logout_link.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/43229/mor/gui/branches/x5/selenium/tests/users/logout_link.case
+END
+option_own_providers.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/48174/mor/gui/branches/x5/selenium/tests/users/option_own_providers.case
+END
+admin_new_psw.case
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/42047/mor/gui/branches/x5/selenium/tests/users/admin_new_psw.case
+END
+import_users.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/52276/mor/gui/branches/x5/selenium/tests/users/import_users.case
+END
+check_translation.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/44097/mor/gui/branches/x5/selenium/tests/users/check_translation.case
+END
+show_user_stats.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/45496/mor/gui/branches/x5/selenium/tests/users/show_user_stats.case
+END
+users_list.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/44577/mor/gui/branches/x5/selenium/tests/users/users_list.case
+END
+imports.case
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/52071/mor/gui/branches/x5/selenium/tests/users/imports.case
+END
+admin_delete.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/users/admin_delete.sql
+END
+user_bad_owner_id.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/users/user_bad_owner_id.sql
+END
+user_without_notice.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/42047/mor/gui/branches/x5/selenium/tests/users/user_without_notice.case
+END

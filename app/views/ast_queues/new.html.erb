@@ -1,0 +1,9 @@
+<%= form_tag(:action => 'create') do %>
+    <p><label for="queue_name"><%= _('Queue_Name') %>:</label>
+      <%= text_field 'queue', 'name', "class" => "input", "size" => "20", "maxlength" => "128" %></p>
+
+    <p><label for="queue_extension"><%= _('Extension') %>:</label>
+      <%= text_field 'queue', 'extension', "class" => "input", "size" => "20", "maxlength" => "30" %></p>
+
+    <%= submit_tag _('Create'), :disable_with => _('Processing..') %>
+<% end %>

@@ -1,0 +1,1 @@
+DELETE FROM activecalls WHERE owner_id = 3;

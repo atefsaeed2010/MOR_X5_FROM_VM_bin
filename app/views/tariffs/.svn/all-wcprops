@@ -1,0 +1,293 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/52071/mor/gui/branches/x5/app/views/tariffs
+END
+_letter_select_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/51119/mor/gui/branches/x5/app/views/tariffs/_letter_select_header.html.erb
+END
+analysis2.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/43794/mor/gui/branches/x5/app/views/tariffs/analysis2.html.erb
+END
+import_csv2.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/47497/mor/gui/branches/x5/app/views/tariffs/import_csv2.html.erb
+END
+_user_rates_retail_detailed_items.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/43193/mor/gui/branches/x5/app/views/tariffs/_user_rates_retail_detailed_items.html.erb
+END
+change_tariff_for_users.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/41942/mor/gui/branches/x5/app/views/tariffs/change_tariff_for_users.html.erb
+END
+user_rates_detailed.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/49546/mor/gui/branches/x5/app/views/tariffs/user_rates_detailed.html.erb
+END
+make_user_tariff_status.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/41942/mor/gui/branches/x5/app/views/tariffs/make_user_tariff_status.html.erb
+END
+ghost_percent_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/app/views/tariffs/ghost_percent_edit.html.erb
+END
+_import_csv_analysis2.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/47497/mor/gui/branches/x5/app/views/tariffs/_import_csv_analysis2.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/51762/mor/gui/branches/x5/app/views/tariffs/list.html.erb
+END
+make_user_tariff_status_wholesale.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/43940/mor/gui/branches/x5/app/views/tariffs/make_user_tariff_status_wholesale.html.erb
+END
+dst_to_create_from_csv.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/app/views/tariffs/dst_to_create_from_csv.html.erb
+END
+user_arates.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/tariffs/user_arates.html.erb
+END
+rate_import_status_view.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/app/views/tariffs/rate_import_status_view.html.erb
+END
+analysis.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/43794/mor/gui/branches/x5/app/views/tariffs/analysis.html.erb
+END
+ratedetail_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/43473/mor/gui/branches/x5/app/views/tariffs/ratedetail_edit.html.erb
+END
+subcode_to_update_from_csv.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/app/views/tariffs/subcode_to_update_from_csv.erb
+END
+check_prefix_availability.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/app/views/tariffs/check_prefix_availability.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/42972/mor/gui/branches/x5/app/views/tariffs/edit.html.erb
+END
+check_tariff_time.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/app/views/tariffs/check_tariff_time.html.erb
+END
+ratedetail_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/43473/mor/gui/branches/x5/app/views/tariffs/ratedetail_new.html.erb
+END
+_import_csv_analysis.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/app/views/tariffs/_import_csv_analysis.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/42972/mor/gui/branches/x5/app/views/tariffs/new.html.erb
+END
+rate_new_by_direction.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/42785/mor/gui/branches/x5/app/views/tariffs/rate_new_by_direction.html.erb
+END
+user_arates_full.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/43485/mor/gui/branches/x5/app/views/tariffs/user_arates_full.html.erb
+END
+_import_csv_step_2_select.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/43193/mor/gui/branches/x5/app/views/tariffs/_import_csv_step_2_select.html.erb
+END
+rate_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/43485/mor/gui/branches/x5/app/views/tariffs/rate_details.html.erb
+END
+import_xls.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/app/views/tariffs/import_xls.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/51419/mor/gui/branches/x5/app/views/tariffs/_form.html.erb
+END
+rate_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/43728/mor/gui/branches/x5/app/views/tariffs/rate_new.html.erb
+END
+_search_header_user_rates.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/50226/mor/gui/branches/x5/app/views/tariffs/_search_header_user_rates.erb
+END
+make_user_tariff.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/43636/mor/gui/branches/x5/app/views/tariffs/make_user_tariff.html.erb
+END
+_user_rates_retail_detailed.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/52071/mor/gui/branches/x5/app/views/tariffs/_user_rates_retail_detailed.html.erb
+END
+user_advrates.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/43485/mor/gui/branches/x5/app/views/tariffs/user_advrates.html.erb
+END
+user_rates_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/43636/mor/gui/branches/x5/app/views/tariffs/user_rates_list.html.erb
+END
+make_user_tariff_wholesale.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/43636/mor/gui/branches/x5/app/views/tariffs/make_user_tariff_wholesale.html.erb
+END
+rates_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/48659/mor/gui/branches/x5/app/views/tariffs/rates_list.html.erb
+END
+_user_rates_retail.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/51124/mor/gui/branches/x5/app/views/tariffs/_user_rates_retail.html.erb
+END
+user_rates.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/51124/mor/gui/branches/x5/app/views/tariffs/user_rates.html.erb
+END
+dir_to_update_from_csv.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/app/views/tariffs/dir_to_update_from_csv.html.erb
+END
+day_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/app/views/tariffs/day_edit.html.erb
+END
+rate_import_status.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/41942/mor/gui/branches/x5/app/views/tariffs/rate_import_status.html.erb
+END
+tariffs_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/app/views/tariffs/tariffs_list.html.erb
+END
+dst_to_update_from_csv.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/app/views/tariffs/dst_to_update_from_csv.html.erb
+END
+day_setup.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/app/views/tariffs/day_setup.html.erb
+END
+bad_rows_from_csv.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/42271/mor/gui/branches/x5/app/views/tariffs/bad_rows_from_csv.html.erb
+END
+_import_csv_step_2.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/50717/mor/gui/branches/x5/app/views/tariffs/_import_csv_step_2.html.erb
+END
+_ratedetail_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/43473/mor/gui/branches/x5/app/views/tariffs/_ratedetail_form.html.erb
+END

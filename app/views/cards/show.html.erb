@@ -1,0 +1,115 @@
+<table>
+  <tr height='20'>
+    <td>
+      <b><%= _('Card_group') %></b>:
+    </td>
+    <td>
+      <%= link_to @cg.name, :controller => "cardgroups", :action => "show", :id => @cg %>
+    </td>
+  </tr>
+  <tr><td></td></tr>
+  <tr height='20'>
+    <td id='number_label_<%= @card.id%>'>
+      <b><%= _('Number') %>:</b>
+    </td>
+    <td id='number_<%= @card.id%>'>
+      <%= @card.number %>
+    </td>
+  </tr>
+  <% if @show_pin == true %>
+    <tr height='20'>
+      <td id='pin_label_<%= @card.id%>'>
+        <b><%= _('PIN') %>:</b>
+      </td>
+      <td id='pin_<%= @card.id%>'>
+        <%= @card.pin %>
+      </td>
+    </tr>
+  <% end %>
+  <tr height='20'>
+    <td id='batch_label_<%= @card.id%>'>
+      <b><%= _('batch_number')%>:</b>
+    </td>
+    <td id='batch_<%= @card.id%>'>
+      <%= @card.batch_number %>
+    </td>
+  </tr>
+  <tr height='20'>
+    <td id='balance_label_<%= @card.id%>'>
+      <b><%= _('Balance') %> (<%= _('Without_VAT') %>):</b>
+    </td>
+    <td id='balance_<%= @card.id%>'>
+      <%= nice_number @card.balance %>
+    </td>
+  </tr>
+  <tr height='20'>
+    <td id='min_balance_label_<%= @card.id%>'>
+      <b><%= _('Minimal_balance') %>:</b>
+    </td>
+    <td id='min_balance_<%= @card.id%>'>
+      <%= nice_number @card.min_balance %>
+    </td>
+  </tr>
+  <tr height='20'>
+    <td id='first_use_label_<%= @card.id%>'>
+      <b><%= _('First_use') %>:</b>
+    </td>
+    <td id='first_use_<%= @card.id%>'>
+      <%= nice_date @card.first_use %>
+    </td>
+  </tr>
+  <tr height='20'>
+    <td id='daily_charge_paid_till_label_<%= @card.id%>'>
+      <b><%= _('Daily_charge_paid_till') %>:</b>
+    </td>
+    <td id='daily_charge_paid_till_<%= @card.id%>'>
+      <%= nice_date @card.daily_charge_paid_till %>
+    </td>
+  </tr>
+  <tr height='20'>
+    <td id='sold_label_<%= @card.id%>'>
+      <b><%= _('Sold') %>:</b>
+    </td>
+    <td id='sold_<%= @card.id%>'>
+      <% if @card.sold == 1 %>
+        <%= b_check %>
+      <% else %>
+        <%= b_cross %>
+      <% end %>
+    </td>
+  </tr>
+  <tr height='20'>
+    <td id='callerid_label_<%= @card.id%>'>
+      <b><%= _('CallerID') %>:</b>
+    </td>
+    <td id='callerid_<%= @card.id%>'>
+      <%= @card.callerid.to_s %>
+    </td>
+  </tr>
+  <tr height='20'>
+    <td id='language_label_<%= @card.id%>'>
+      <b><%= _('Language') %>:</b>
+    </td>
+    <td id='language_<%= @card.id%>'>
+      <%= @card.language.to_s %>
+    </td>
+  </tr>
+  <tr height='20'>
+    <td id='distributor_label_<%= @card.id%>'>
+      <b><%= _('Distributor') %>:</b>
+    </td>
+    <td id='distributor_<%= @card.id%>'>
+      <%= link_nice_user_if_own(@card.user) if @card.user %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    <br/>
+    </td>
+  </tr>
+  <tr height='20'>
+    <td>
+      <%= link_to b_edit + _('Edit'), :action => 'edit', :id => @card %>
+    </td>
+  </tr>
+</table>

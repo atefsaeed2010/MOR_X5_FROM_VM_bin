@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/39906/mor/gui/branches/x5/app/views/backups
+END
+backups_hourly_cronjob.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/app/views/backups/backups_hourly_cronjob.html.erb
+END
+backup_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/app/views/backups/backup_new.html.erb
+END
+backup_manager.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/app/views/backups/backup_manager.html.erb
+END

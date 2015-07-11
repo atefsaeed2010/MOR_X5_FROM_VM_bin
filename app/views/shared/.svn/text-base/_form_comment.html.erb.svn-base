@@ -1,0 +1,18 @@
+<tr>
+  <td colspan="2" height="10"></td>
+</tr>
+<tr>
+  <td colspan="2" class="bottom_border"><b><%= _('Comment') %></b></td>
+</tr>
+<tr>
+  <td colspan="2" height="10"></td>
+</tr>
+<tr>
+  <td valign="top" colspan="2">
+    <table>
+      <tr>
+        <td><%= text_area_tag "#{object_name}[comment]", object.comment, cols: 60, rows: 10 %></td>
+      </tr>
+    </table>
+  </td>
+</tr>

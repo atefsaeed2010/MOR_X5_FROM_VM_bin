@@ -1,0 +1,1 @@
+<%= render '/destination_groups/bulk_form', saved: @saved %>

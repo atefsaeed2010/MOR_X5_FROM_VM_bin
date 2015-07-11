@@ -1,0 +1,34 @@
+<div class="nb"><%= b_user + _('Group') %>: <%= @group_name %> </div>
+<br/>
+<%= form_for :group, url: { action: 'group_update', id: @group.id } do |f| %>
+<table class="maintable" width="100%">
+  <tr>
+    <th align='left'><%= _('ID') %></th>
+    <th align='center'><%= _('Active') %></th>
+    <th align='left'><%= _('group_name') %></th>
+    <th align='center'><%= _('Contacts') %></th>
+    <th align='left'><%= _('email_schedule') %></th>
+    <th align='right'><%= _('max_emails_month') %></th>
+    <th align='right'><%= _('emails_this_month') %></th>
+    <th align='left'><%= _('sms_schedule') %></th>
+    <th align='right'><%= _('max_sms_month') %></th>
+    <th align='right'><%= _('sms_this_month') %></th>
+    <th align='left'><%= _('Comment') %></th>
+  </tr>
+  <tr align="left">
+    <td align='left' id="id_<%= @group.id %>"><%= @group.id %></td>
+    <td align="center" id='status_<%= @group.id %>'><%= f.check_box :status, {}, 'enabled', 'disabled' %></td>
+    <td align='left' id='name_<%= @group.id %>'><%= f.text_field :name, class: 'input', size: 20 %></td>
+    <td align='center' id="contacts_<%= @group.id %>" align='center'><%= link_to image_tag('http://www.kolmisoft.com/packets/icons/silk_complete/images/vcard.png') + " (#{count_group_contacts(@group.id)})", {action: 'group_contacts', id: @group.id}, {} %></td>
+    <td align="left" id='email_schedule_<%= @group.id %>'><%= f.collection_select :email_schedule_id, @schedules, :id, :name, {include_blank: (@schedules.size == 0 ? _('no_schedules_available') : _('select_schedule'))} %></td>
+    <td align="right" id='max_emails_<%= @group.id %>'><%= f.text_field :max_emails_per_month, class: 'input', size: 8 %></td>
+    <td align='right' id="emails_this_month_<%= @group.id %>" align="right"><%= @group.emails_this_month %></td>
+    <td align="left" id='sms_schedule_<%= @group.id %>'><%= f.collection_select :sms_schedule_id, @schedules, :id, :name, {include_blank: (@schedules.size == 0 ? _('no_schedules_available') : _('select_schedule'))} %></td>
+    <td align="right" id='max_sms_<%= @group.id %>'><%= f.text_field :max_sms_per_month, class: 'input', size: 8 %></td>
+    <td align='right'id="sms_this_month_<%= @group.id %>"><%= @group.sms_this_month %></td>
+    <td align='left' id='comment_<%= @group.id %>'><%= f.text_field :comment, class: 'input', size: 30 %></td>
+  </tr>
+</table>
+<br />
+<%= f.submit _('Save_changes'), disable_with: _('Processing...') %>
+<% end %>

@@ -1,0 +1,1 @@
+INSERT INTO `tariffs` (`id`,`currency`, `name`, `owner_id`, `purpose`) VALUES (12002,'EUR', 'provider_tariff_for_admin_2', 0, 'provider')

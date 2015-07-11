@@ -1,0 +1,5 @@
+# turn off addon for test tests/recordings.case
+# ----
+# turn off calling cards addon
+/settings/addons/rec_deactivate.sql
+# bundle loaded

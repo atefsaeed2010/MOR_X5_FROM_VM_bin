@@ -1,0 +1,377 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/52071/mor/gui/branches/x5/app/views/stats
+END
+search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/47065/mor/gui/branches/x5/app/views/stats/search.html.erb
+END
+call_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/43193/mor/gui/branches/x5/app/views/stats/call_list.html.erb
+END
+_last_calls_stats_admin.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/51843/mor/gui/branches/x5/app/views/stats/_last_calls_stats_admin.html.erb
+END
+active_calls_graph.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/42011/mor/gui/branches/x5/app/views/stats/active_calls_graph.erb
+END
+new_calls.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/51484/mor/gui/branches/x5/app/views/stats/new_calls.html.erb
+END
+prefix_finder_find_country.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/43384/mor/gui/branches/x5/app/views/stats/prefix_finder_find_country.html.erb
+END
+users_finances.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/42333/mor/gui/branches/x5/app/views/stats/users_finances.html.erb
+END
+providers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/42333/mor/gui/branches/x5/app/views/stats/providers.html.erb
+END
+new_call_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39907/mor/gui/branches/x5/app/views/stats/new_call_list.html.erb
+END
+country_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/51322/mor/gui/branches/x5/app/views/stats/country_stats.html.erb
+END
+reseller_all_user_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/42987/mor/gui/branches/x5/app/views/stats/reseller_all_user_stats.html.erb
+END
+rate_finder_find.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/51127/mor/gui/branches/x5/app/views/stats/rate_finder_find.html.erb
+END
+dids.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/51411/mor/gui/branches/x5/app/views/stats/dids.html.erb
+END
+_prv_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/42987/mor/gui/branches/x5/app/views/stats/_prv_stats.html.erb
+END
+loss_making_calls.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/52071/mor/gui/branches/x5/app/views/stats/loss_making_calls.html.erb
+END
+subscriptions_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/43193/mor/gui/branches/x5/app/views/stats/subscriptions_stats.html.erb
+END
+user_logins.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/43193/mor/gui/branches/x5/app/views/stats/user_logins.html.erb
+END
+google_active.rjs
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/49286/mor/gui/branches/x5/app/views/stats/google_active.rjs
+END
+_providers_calls.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/43384/mor/gui/branches/x5/app/views/stats/_providers_calls.html.erb
+END
+_list_calls_per_day.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/42971/mor/gui/branches/x5/app/views/stats/_list_calls_per_day.html.erb
+END
+_last_calls_stats_reseller.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/51843/mor/gui/branches/x5/app/views/stats/_last_calls_stats_reseller.html.erb
+END
+google_maps.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/42152/mor/gui/branches/x5/app/views/stats/google_maps.html.erb
+END
+_last_calls_stats_user.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/44554/mor/gui/branches/x5/app/views/stats/_last_calls_stats_user.html.erb
+END
+load_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/52071/mor/gui/branches/x5/app/views/stats/load_stats.html.erb
+END
+hangup_cause_codes_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/51612/mor/gui/branches/x5/app/views/stats/hangup_cause_codes_stats.html.erb
+END
+last_calls_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/42881/mor/gui/branches/x5/app/views/stats/last_calls_stats.html.erb
+END
+_hangup_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/51484/mor/gui/branches/x5/app/views/stats/_hangup_stats.html.erb
+END
+calls_by_scr.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/42971/mor/gui/branches/x5/app/views/stats/calls_by_scr.html.erb
+END
+resellers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/45378/mor/gui/branches/x5/app/views/stats/resellers.html.erb
+END
+hangup_calls.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/43384/mor/gui/branches/x5/app/views/stats/hangup_calls.html.erb
+END
+calls_per_day.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/51305/mor/gui/branches/x5/app/views/stats/calls_per_day.html.erb
+END
+faxes_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/43392/mor/gui/branches/x5/app/views/stats/faxes_list.html.erb
+END
+_scr_calls.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/42971/mor/gui/branches/x5/app/views/stats/_scr_calls.html.erb
+END
+faxes.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/39906/mor/gui/branches/x5/app/views/stats/faxes.html.erb
+END
+call_list_from_link.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/app/views/stats/call_list_from_link.html.erb
+END
+dids_usage.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/42333/mor/gui/branches/x5/app/views/stats/dids_usage.html.erb
+END
+_std_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/44220/mor/gui/branches/x5/app/views/stats/_std_stats.html.erb
+END
+active_calls_longer_error.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/app/views/stats/active_calls_longer_error.html.erb
+END
+old_calls_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/42926/mor/gui/branches/x5/app/views/stats/old_calls_stats.html.erb
+END
+subscriptions_first_day.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/43193/mor/gui/branches/x5/app/views/stats/subscriptions_first_day.html.erb
+END
+action_log.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/51656/mor/gui/branches/x5/app/views/stats/action_log.html.erb
+END
+all_users_detailed.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/42987/mor/gui/branches/x5/app/views/stats/all_users_detailed.html.erb
+END
+prefix_finder_find.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/51032/mor/gui/branches/x5/app/views/stats/prefix_finder_find.html.erb
+END
+_page_select_header_dids.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/43384/mor/gui/branches/x5/app/views/stats/_page_select_header_dids.html.erb
+END
+_list_calls_user.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/42971/mor/gui/branches/x5/app/views/stats/_list_calls_user.html.erb
+END
+active_calls_longer_error_send_email.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/39906/mor/gui/branches/x5/app/views/stats/active_calls_longer_error_send_email.html.erb
+END
+_active_calls_show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/52039/mor/gui/branches/x5/app/views/stats/_active_calls_show.html.erb
+END
+_list_calls.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/42971/mor/gui/branches/x5/app/views/stats/_list_calls.html.erb
+END
+_list_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/51484/mor/gui/branches/x5/app/views/stats/_list_stats.html.erb
+END
+active_calls.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/44379/mor/gui/branches/x5/app/views/stats/active_calls.html.erb
+END
+providers_calls.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/42971/mor/gui/branches/x5/app/views/stats/providers_calls.html.erb
+END
+providers_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/42987/mor/gui/branches/x5/app/views/stats/providers_stats.html.erb
+END
+show_user_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/45044/mor/gui/branches/x5/app/views/stats/show_user_stats.html.erb
+END
+user_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/42987/mor/gui/branches/x5/app/views/stats/user_stats.html.erb
+END
+ip_finder_find.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/43948/mor/gui/branches/x5/app/views/stats/ip_finder_find.html.erb
+END
+call_list_to_pdf.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/app/views/stats/call_list_to_pdf.html.erb
+END
+active_calls_count.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/app/views/stats/active_calls_count.html.erb
+END
+server_load.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/42670/mor/gui/branches/x5/app/views/stats/server_load.erb
+END
+system_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/app/views/stats/system_stats.html.erb
+END
+first_activity.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/app/views/stats/first_activity.html.erb
+END
+profit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/51832/mor/gui/branches/x5/app/views/stats/profit.html.erb
+END
+_google_maps_active_calls.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39927/mor/gui/branches/x5/app/views/stats/_google_maps_active_calls.html.erb
+END

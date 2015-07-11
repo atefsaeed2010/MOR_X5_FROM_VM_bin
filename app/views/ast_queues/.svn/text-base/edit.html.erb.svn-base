@@ -1,0 +1,41 @@
+<%= form_tag(:action => 'update', :id => @queue.id) do %>
+    <table class="simple" width="100%">
+      <tr>
+        <td class="nb">
+          <%= b_members + " " + @queue.name.to_s %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table>
+            <tr>
+              <td valign="top">
+                <table class="simple">
+                  <%= render 'queue_options', local_variables_for_partial(self) %>
+                  <%= render 'queue_agent_options', local_variables_for_partial(self) %>
+                  <%= render 'queue_static_agents', local_variables_for_partial(self) %>
+                </table>
+              </td>
+
+              <td valign="top">
+                <table class="simple">
+                  <%= render 'queue_caller_options', local_variables_for_partial(self) %>
+                  <%= render 'queue_caller_announcements', local_variables_for_partial(self) %>
+                  <%= render 'queue_periodic_announcements', local_variables_for_partial(self) %>
+                </table>
+              </td>
+
+              <td valign="top">
+                <table class="simple">
+                  <%= render 'queue_visualization', local_variables_for_partial(self) %>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <br/>
+    <br/>
+    <%= submit_tag _('update'), :disable_with => _('Processing..'), id: 'submit' %>
+<% end %>

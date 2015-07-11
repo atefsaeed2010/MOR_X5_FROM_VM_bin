@@ -1,0 +1,209 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing
+END
+ct_with_device_location.case
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/ct_with_device_location.case
+END
+call_tracing_re.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/call_tracing_re.case
+END
+ct_admin_and_lcr_grouping.case
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/ct_admin_and_lcr_grouping.case
+END
+call_tracing_custom_rates.case
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/call_tracing_custom_rates.case
+END
+thirddevice.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/call_tracing/thirddevice.sql
+END
+quick_admins_ct_to_re_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/quick_admins_ct_to_re_user.case
+END
+call_tracing_rspro2.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/51707/mor/gui/branches/x5/selenium/tests/call_tracing/call_tracing_rspro2.case
+END
+call_tracing_admin.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/call_tracing_admin.case
+END
+call_tracing_re2.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/call_tracing_re2.case
+END
+call_tracing_with_effective_rates.case
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/call_tracing_with_effective_rates.case
+END
+call_tracing_by_pro.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/call_tracing_by_pro.case
+END
+update_location.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/call_tracing/update_location.sql
+END
+call_tracing_accountant.case
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/call_tracing_accountant.case
+END
+call_tracing_with_destinations.case
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/call_tracing_with_destinations.case
+END
+delete_lcr_partial.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/call_tracing/delete_lcr_partial.sql
+END
+change_tariff_id_for_users.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/call_tracing/change_tariff_id_for_users.sql
+END
+call_tracing_re_retail.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/call_tracing_re_retail.case
+END
+delete_files.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/call_tracing/delete_files.sql
+END
+call_tracing_rspro_cmu_awg.case
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/call_tracing_rspro_cmu_awg.case
+END
+ct_sort_by_price_and_ct_with_empty_lcr.case
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/ct_sort_by_price_and_ct_with_empty_lcr.case
+END
+reseller_users_lcrs_cleanup.sql
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/call_tracing/reseller_users_lcrs_cleanup.sql
+END
+ct_admin_to_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/ct_admin_to_user.case
+END
+ct_split_rates.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/ct_split_rates.case
+END
+seconddevice.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/call_tracing/seconddevice.sql
+END
+call_tracing.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/call_tracing.case
+END
+device.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/call_tracing/device.sql
+END
+delete_providers_devices.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/42808/mor/gui/branches/x5/selenium/tests/call_tracing/delete_providers_devices.sql
+END
+bad_lcr_id.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/call_tracing/bad_lcr_id.sql
+END
+call_tracing_admin_awg.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/call_tracing_admin_awg.case
+END
+call_tracing_rspro3.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/51644/mor/gui/branches/x5/selenium/tests/call_tracing/call_tracing_rspro3.case
+END
+change_tariff_id_in_common_use.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/call_tracing/change_tariff_id_in_common_use.sql
+END
+ct_admin_to_rspro_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/ct_admin_to_rspro_user.case
+END
+ct_admin_to_re_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/ct_admin_to_re_user.case
+END
+call_tracing_with_effective_rates_for_wholesale.case
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/!svn/ver/51929/mor/gui/branches/x5/selenium/tests/call_tracing/call_tracing_with_effective_rates_for_wholesale.case
+END

@@ -1,0 +1,4 @@
+<%= form_tag :action => 'campaign_create' do %>
+    <%= render 'form', ctypes: @ctypes, campaign: @campaign, devices: @devices %>
+    <%= submit_tag _('Create'), :disable_with => _('Processing..') %>
+<% end %>

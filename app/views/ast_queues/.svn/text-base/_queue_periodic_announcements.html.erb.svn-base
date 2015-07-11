@@ -1,0 +1,105 @@
+<tr>
+  <td height="20"></td>
+</tr>
+<tr>
+  <td class="bottom_border">
+    <b><%= _('Periodic_Announcements') %></b>
+  </td>
+</tr>
+<tr>
+  <td height="10"></td>
+</tr>
+<tr>
+  <td valign="top">
+    <table class="simple">
+      <tr>
+        <td id="periodic_repeat_frequency"><%= _('Repeat_Frequency') %>:</td>
+        <td id="periodic_repeat_frequency_value">
+          <select name="queue[periodic_announce_frequency]" id="periodic_repeat_frequency_select">
+            <% 11.times do |i| %>
+              <% if i == 0 %>
+                <option value="0" <%= "selected" if queue.periodic_announce_frequency.to_i == 0 %>><%= _('_OFF') %></option>
+              <% else %>
+                <option value=<%= i*30 %> <%= "selected" if queue.periodic_announce_frequency.to_i == i*30 %>>
+                  <%= (i*30).to_s %>
+                </option>
+              <% end %>
+            <% end %>
+          </select>
+          <%= " " + _('seconds') %>
+        </td>
+      </tr>
+      <tr id="periodic_row_to_hide_1">
+        <td id="random"><%= _('Random') %>:</td>
+        <td id="random_value">
+          <%= radio_button_tag('queue[random_periodic_announce]', 'no', queue.random_periodic_announce == 'no') %> <%= _('_No') %>
+          <%= radio_button_tag('queue[random_periodic_announce]', 'yes', queue.random_periodic_announce == 'yes') %> <%= _('_Yes') %>
+        </td>
+      </tr>
+      <tr id="periodic_row_to_hide_2">
+        <td id="relative"><%= _('Relative') %>:</td>
+        <td id="relative_value">
+          <%= radio_button_tag('queue[relative_periodic_announce]', 'no', queue.relative_periodic_announce == 'no') %> <%= _('_No') %>
+          <%= radio_button_tag('queue[relative_periodic_announce]', 'yes', queue.relative_periodic_announce == 'yes') %> <%= _('_Yes') %>
+        </td>
+      </tr>
+      <tr id="periodic_announcement_table">
+        <td id="sortable_table2" colspan="2">
+          <%= raw priority_table(periodic_announcements, queue, "queue_announcements") if !periodic_announcements.blank? %>
+        </td>
+      </tr>
+      <tr id="new_periodic_announcement_link">
+        <td colspan="2">
+          <%= link_to_function(b_add + _('Add_new_Periodic_Announcement'), "Element.toggle('add_new_periodic_announcement')") %>
+        </td>
+      </tr>
+      <tr id="add_new_periodic_announcement" style="display:none; margin-top:2px;padding-left:4px;" nowrap>
+        <td>
+          <% options = announcements.map{|u| [u.path, u.id.to_s]} %>
+          <%= select_tag("new_periodic_announcement", options_for_select(options)) %>
+          <span id="submit_new_periodic_announcement"><%= b_add %></span>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+<% content_for :scripts do %>
+    <script type="text/javascript">
+        function observe_periodic_repeat_frequency() {
+            if ($('periodic_repeat_frequency_select').value == 0) {
+                $('periodic_row_to_hide_1').hide();
+                $('periodic_row_to_hide_2').hide();
+                $('periodic_announcement_table').hide();
+                $('add_new_periodic_announcement').hide();
+                $('new_periodic_announcement_link').hide();
+            } else {
+                $('periodic_row_to_hide_1').show();
+                $('periodic_row_to_hide_2').show();
+                $('periodic_announcement_table').show();
+                $('new_periodic_announcement_link').show();
+            }
+        }
+
+        function Delete_queue_announcement(id) {
+            if (confirm('<%= _('are_you_sure')%>')){
+                new Ajax.Updater('sortable_table2', '<%=Web_Dir %>/ast_queues/delete_queue_announcement?id=' + id + '&queue_id=' + <%= queue.id %>, {method: 'post', asynchronous: true, onComplete:function(request){Element.hide('spinner');}, onLoading:function(request){Element.show('spinner');}});
+            }
+        }
+
+        $j('#submit_new_periodic_announcement').click(function (e) {
+                    e.preventDefault();
+                    new Ajax.Updater('sortable_table2', '<%=Web_Dir %>/ast_queues/create_new_announcement?ivr_sound_file_id=' + $('new_periodic_announcement').options[$('new_periodic_announcement').selectedIndex].value + '&queue_id=' + <%= queue.id.to_s %>, {method: 'post', asynchronous: true, onComplete:function(request){Element.hide('spinner');}, onLoading:function(request){Element.show('spinner');}});
+                    Element.toggle('add_new_periodic_announcement');
+                }
+        )
+
+        Event.observe(window, 'load', function () {
+            observe_periodic_repeat_frequency();
+            Event.observe($('periodic_repeat_frequency_select'), 'change', function () {
+                observe_periodic_repeat_frequency();
+            })
+        })
+    </script>
+<% end %>
+

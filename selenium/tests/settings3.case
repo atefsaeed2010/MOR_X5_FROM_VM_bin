@@ -1,0 +1,1585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>settings3</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">settings3</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=version</td>
+	<td>MOR X5</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=admin_browser_title</td>
+	<td>MOR X5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=company</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=company_email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=version</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=copyright_title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=admin_browser_title</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=show_logo_on_register_page</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<!--problema buvo tame, kad negalima buvo palikti tu62io company name - numesdavo i start page-->
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Settings saved</td>
+</tr>
+<!--nuo cia tikrina tik invoice nustatymus -->
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView1_2 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView2_1 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView4_1 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=prepaid_invoice_address_format_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=prepaid_invoice_address_format_2</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=prepaid_invoice_address_format_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_address1</td>
+	<td>Very looooooooooooooooooooooooong Street Address</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_address2</td>
+	<td>Very loooooooooooooooooooooooooong City, Country</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_address3</td>
+	<td>Very looooooooooooooooooooooooooooong Phone, fax</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_address4</td>
+	<td>Very looooooooooooooooooooooooooooong Web, email</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_bank_details_line1</td>
+	<td>Loong Please make payments to:</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_bank_details_line2</td>
+	<td>Loooooooooooooong Company name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_bank_details_line3</td>
+	<td>Looooooooooooooooong Bank name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_bank_details_line4</td>
+	<td>Looooooong Bank account number</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_bank_details_line5</td>
+	<td>Very loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong Add. info</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=invoice_balance_line</td>
+	<td>Very looooooooooooooooooooooooooooooooooooooooooooooooong Your balance</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=invoice_to_pay_line</td>
+	<td>Loooooooooooong</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=invoice_end_title</td>
+	<td>Very looooooooooooooooooooooooooooooooong Thank you for your business!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView1_2 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView2_1 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView4_1 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=prepaid_invoice_address_format_1</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=prepaid_invoice_address_format_2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_address1</td>
+	<td>Very looooooooooooooooooooooooong Street Address</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_address2</td>
+	<td>Very loooooooooooooooooooooooooong City, Country</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_address3</td>
+	<td>Very looooooooooooooooooooooooooooong Phone, fax</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_address4</td>
+	<td>Very looooooooooooooooooooooooooooong Web, email</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_bank_details_line1</td>
+	<td>Loong Please make payments to:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_bank_details_line2</td>
+	<td>Loooooooooooooong Company name</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_bank_details_line3</td>
+	<td>Looooooooooooooooong Bank name</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_bank_details_line4</td>
+	<td>Looooooong Bank account number</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_bank_details_line5</td>
+	<td>Very loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong Add. info</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=invoice_balance_line</td>
+	<td>Very looooooooooooooooooooooooooooooooooooooooooooooooong Your balance</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=invoice_to_pay_line</td>
+	<td>Loooooooooooong</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=invoice_end_title</td>
+	<td>Very looooooooooooooooooooooooooooooooong Thank you for your business!</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prepaid_invoice_address1</td>
+	<td>Very looooooooooooooooooooooooong Street Address</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prepaid_invoice_address2</td>
+	<td>Very loooooooooooooooooooooooooong City, Country</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prepaid_invoice_address3</td>
+	<td>Very looooooooooooooooooooooooooooong Phone, fax</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prepaid_invoice_address4</td>
+	<td>Very looooooooooooooooooooooooooooong Web, email</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prepaid_invoice_bank_details_line1</td>
+	<td>Loong Please make payments to:</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prepaid_invoice_bank_details_line2</td>
+	<td>Loooooooooooooong Company name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prepaid_invoice_bank_details_line3</td>
+	<td>Looooooooooooooooong Bank name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prepaid_invoice_bank_details_line4</td>
+	<td>Looooooong Bank account number</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prepaid_invoice_bank_details_line5</td>
+	<td>Very loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong Add. info</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=prepaid_invoice_balance_line</td>
+	<td>Very looooooooooooooooooooooooooooooooooooooooooooooooong Your balance</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=prepaid_invoice_to_pay_line</td>
+	<td>Loooooooooooong</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=prepaid_invoice_end_title</td>
+	<td>Very looooooooooooooooooooooooooooooooong Thank you for your business!</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=prepaid_invoice_address1</td>
+	<td>Very looooooooooooooooooooooooong Street Address</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=prepaid_invoice_address2</td>
+	<td>Very loooooooooooooooooooooooooong City, Country</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=prepaid_invoice_address3</td>
+	<td>Very looooooooooooooooooooooooooooong Phone, fax</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=prepaid_invoice_address4</td>
+	<td>Very looooooooooooooooooooooooooooong Web, email</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=prepaid_invoice_bank_details_line1</td>
+	<td>Loong Please make payments to:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=prepaid_invoice_bank_details_line2</td>
+	<td>Loooooooooooooong Company name</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=prepaid_invoice_bank_details_line3</td>
+	<td>Looooooooooooooooong Bank name</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=prepaid_invoice_bank_details_line4</td>
+	<td>Looooooong Bank account number</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=prepaid_invoice_bank_details_line5</td>
+	<td>Very loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong Add. info</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=prepaid_invoice_balance_line</td>
+	<td>Very looooooooooooooooooooooooooooooooooooooooooooooooong Your balance</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=prepaid_invoice_to_pay_line</td>
+	<td>Loooooooooooong</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=prepaid_invoice_end_title</td>
+	<td>Very looooooooooooooooooooooooooooooooong Thank you for your business!</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView1_2 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView3_1 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Show Time in Minutes:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_add_average_rate</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_show_time_in_minutes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Add Average rate in detailed invoice:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView2_1 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView4_1 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Show Time in Minutes:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_add_average_rate</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_show_time_in_minutes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Add Average rate in detailed invoice:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView1_8 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Show DIDs in Active Calls:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView1_2 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Instead billsec show user_billsec</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView2_1 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Instead billsec show user_billsec</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView1_10 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Show user_billsec for Users instead of billsec:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotChecked</td>
+	<td>invoice_user_billsec_show</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView1_2 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_page_limit</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=invoice_page_limit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_page_limit</td>
+	<td>rtfgh</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Settings saved</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView1_2 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_page_limit</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=invoice_page_limit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_page_limit</td>
+	<td>-ėįėšįų</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=tabTabdhtmlgoodies_tabView1_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_page_limit</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_page_limit</td>
+	<td>-2345</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView1_2 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_page_limit</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_page_limit</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_page_limit</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Invoice page limit cannot be higher than 100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prepaid_invoice_page_limit</td>
+	<td>1000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Invoice page limit cannot be higher than 100</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/invoices/change_hard_limit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_page_limit</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Invoice page limit cannot be higher than 86</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prepaid_invoice_page_limit</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Invoice page limit cannot be higher than 86</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_page_limit</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prepaid_invoice_page_limit</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Invoice page limit cannot be higher than 86</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_page_limit</td>
+	<td>86</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prepaid_invoice_page_limit</td>
+	<td>86</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Settings saved</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=prepaid_invoice_page_limit</td>
+	<td>86</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=invoice_page_limit</td>
+	<td>86</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/invoices/delete_hard_limit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=invoice_page_limit</td>
+	<td>256</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Invoice page limit cannot be higher than 100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prepaid_invoice_page_limit</td>
+	<td>546546</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Invoice page limit cannot be higher than 100</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<!--......Greater than 20-->
+<tr>
+	<td>type</td>
+	<td>invoice_number_length</td>
+	<td>21</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>prepaid_invoice_number_length</td>
+	<td>21</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>invoice_number_length</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>prepaid_invoice_number_length</td>
+	<td>20</td>
+</tr>
+<!--......Less than 0-->
+<tr>
+	<td>type</td>
+	<td>invoice_number_length</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>prepaid_invoice_number_length</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>invoice_number_length</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>prepaid_invoice_number_length</td>
+	<td>5</td>
+</tr>
+<!--invoice additional settings-->
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='tabTabdhtmlgoodies_tabView1_2']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='tabTabdhtmlgoodies_tabView3_2']/span</td>
+	<td>Additional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='tabTabdhtmlgoodies_tabView3_2']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Show additional details on separate page:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Additional details:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>show_additional_details_on_separate_page_check</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>show_additional_details_on_separate_page_check</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>show_additional_details_on_separate_page_details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>show_additional_details_on_separate_page_check</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>show_additional_details_on_separate_page_details</td>
+	<td>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss<br />gljrnkgh<br />bhglerjhktjnhktljhnetjhnperjhttljn<br />hketnhgjthnbothntjbmktjn['wth<br />thrthkjrtkjh<br />h<br /><br />t<br /><br />t<br />t<br />t<br />t<br /><br />gh<br />th<br />rth<br />rt<br />jnrt<br />jn<br />tn<br />t<br />hn<br />t<br />t<br /><br />tt<br /><br />t<br />t</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Settings saved</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='tabTabdhtmlgoodies_tabView1_2']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='tabTabdhtmlgoodies_tabView3_2']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>show_additional_details_on_separate_page_check</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/accounting/generate_invoices</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_year</td>
+	<td>label=2012</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_year</td>
+	<td>label=2014</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Invoices generated: 1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/accounting/generate_invoice_pdf/1?&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>INTERNAL ERROR</td>
+	<td></td>
+</tr>
+<!--Allow to create User and Device with matching Username and Password:-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/default_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Default User saved</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='tabTabdhtmlgoodies_tabView1_1']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Allow to create User and Device with matching Username and Password:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>allow_registration_username_passwords_in_devices</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>allow_registration_username_passwords_in_devices</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_short_passwords_in_devices</td>
+	<td>off</td>
+</tr>
+<!--OFF allow_registration_username_passwords_in_devices-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=here</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>Merlinas</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>abrakadabra</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password2</td>
+	<td>abrakadabra</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=first_name</td>
+	<td>Merlinas</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=last_name</td>
+	<td>Merlinas</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>merlin@s.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=device_type_IAX2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Registration successful</td>
+	<td></td>
+</tr>
+<!--device username ir pasword sukuriami tik ne tokie patys, kaip userio-->
+<tr>
+	<td>assertText</td>
+	<td>id=device_type</td>
+	<td>IAX2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=username</td>
+	<td>1003</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Merlinas</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>abrakadabra</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--OFF Allow short passwords in devices-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=device_secret</td>
+	<td>ozas</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Password is too short</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>allow_registration_username_passwords_in_devices</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_short_passwords_in_devices</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>allow_registration_username_passwords_in_devices</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=allow_short_passwords_in_devices</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>allow_registration_username_passwords_in_devices</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_short_passwords_in_devices</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--Kai  ON allow_registration_username_passwords_in_devices-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=here</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=username</td>
+	<td>Neptunas</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password</td>
+	<td>valdovas</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password2</td>
+	<td>valdovas</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=first_name</td>
+	<td>Neptunas</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=last_name</td>
+	<td>Neptunas</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email</td>
+	<td>neptun@s.com</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=device_type_IAX2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Registration successful</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Password must be longer than 7 characters</td>
+	<td></td>
+</tr>
+<!--device username ir pasword sukuriami  tokie patys, kaip userio-->
+<tr>
+	<td>assertText</td>
+	<td>id=device_type</td>
+	<td>IAX2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=username</td>
+	<td>Neptunas</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=secret</td>
+	<td>valdovas</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>100</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/devices_all</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Merlinas Merlinas</td>
+	<td>Merlinas Merlinas</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_8</td>
+	<td>1003</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>abrakadabra</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Neptunas Neptunas</td>
+	<td>Neptunas Neptunas</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_9</td>
+	<td>Neptunas</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=secret_9</td>
+	<td>valdovas</td>
+</tr>
+<!--ON Allow short passwords in devices-->
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=device_secret</td>
+	<td>ozas</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device's settings updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Device was not updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Password is too short</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='tabTabdhtmlgoodies_tabView1_4']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Do not allow duplicate device user names:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=disalow_duplicate_device_usernames</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=disalow_duplicate_device_usernames</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=disalow_duplicate_device_usernames</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=disalow_duplicate_device_usernames</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Settings saved</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView1_4 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=disalow_duplicate_device_usernames</td>
+	<td>off</td>
+</tr>
+<!-- 	Delete outdated Rates after:-->
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=delete_not_actual_rates_after</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Settings saved</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=delete_not_actual_rates_after</td>
+	<td>asxdcddvgh</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Delete outdated Rates after must be integer</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=delete_not_actual_rates_after</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=delete_not_actual_rates_after</td>
+	<td>-5</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Delete outdated Rates after must be greater or equal to 0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView1_8 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=delete_not_actual_rates_after</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=delete_not_actual_rates_after</td>
+	<td>25</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Settings saved</td>
+</tr>
+<!--...As reseller-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/reseller_settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='tabTabdhtmlgoodies_tabView1_3']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='tabTabdhtmlgoodies_tabView2_1']/span</td>
+	<td>Additional</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='tabTabdhtmlgoodies_tabView2_1']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Show additional details on separate page:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Additional details:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>show_additional_details_on_separate_page_check</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>show_additional_details_on_separate_page_check</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>show_additional_details_on_separate_page_details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>show_additional_details_on_separate_page_check</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>show_additional_details_on_separate_page_details</td>
+	<td>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaassssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss<br />gljrnkgh<br />bhglerjhktjnhktljhnetjhnperjhttljn<br />hketnhgjthnbothntjbmktjn['wth<br />thrthkjrtkjh<br />h<br /><br />t<br /><br />t<br />t<br />t<br />t<br /><br />gh<br />th<br />rth<br />rt<br />jnrt<br />jn<br />tn<br />t<br />hn<br />t<br />t<br /><br />tt<br /><br />t<br />t</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Settings saved</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='tabTabdhtmlgoodies_tabView1_3']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='tabTabdhtmlgoodies_tabView2_1']/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>show_additional_details_on_separate_page_check</td>
+	<td>on</td>
+</tr>
+</tbody></table>
+</body>
+</html>

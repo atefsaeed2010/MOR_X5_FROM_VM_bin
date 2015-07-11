@@ -1,0 +1,131 @@
+<div class="nb"><%= b_user + _('user') %>: <%= link_nice_user(@user) %></div>
+<br>
+<%= form_tag :action => 'subscription_create', :id => @user.id, :added => Time.now do %>
+    <table class="simple">
+      <tr>
+        <td> <%= _('Service') %>:</td>
+        <td>
+          <select name="subscription[service_id]" id="subscription_service_id" onchange="change_date_selector(this.value);">
+            <% @services.each do |serv| %>
+                <option type="<%= serv.servicetype.to_s %>" value=<%= serv.id %>> <%= serv.name %>, <%= _('Price') %>: <%= serv.price %> </option>
+            <% end %>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><%= _('Memo') %>:</td>
+        <td><%= text_field_tag 'subscription[memo]', @sub.memo, "class" => "input", :size => "50", :maxlength => "150", :id => 'subscription_memo' %></td>
+      </tr>
+      <tr>
+        <td> <%= _('Date') %>:</td>
+        <td> <%= nice_date_time Time.now.to_s(:db) %> </td>
+      </tr>
+      <tr>
+      <td colspan= "2"> <%= b_info %> <%= _('Activation_start') + " and " + _('Activation_end') + " " + _('values_in_system_time_zone') %>: <%= nice_system_time_string %> </td>
+      </tr>
+      <tr>
+        <td> <%= _('Activation_start') %>:</td>
+        <td>
+          <%= select_datetime(@sub.activation_start, :end_year => Time.zone.now.year+10, :prefix => "activation_start", :use_month_numbers => false) %>
+        </td>
+      </tr>
+      <tr id="activation_end">
+        <td> <%= _('Activation_end') %>:</td>
+        <td>
+          <%= select_datetime(@sub.activation_end, :end_year => Time.zone.now.year+10, :prefix => "activation_end", :use_month_numbers => false) %>
+          <%= check_box_tag 'until_canceled',1 ,@sub.activation_end.blank?, onchange: 'no_end(this)' %> <%= _('until_canceled') %>?
+        </td>
+      </tr>
+      <tr id="no_expire_checkbox">
+        <td> <%= _('subscription_no_expire') %>:</td>
+        <td><%= check_box_tag 'no_expire', 1, @sub.no_expire == 1 %></td>
+      </tr>
+      <%= hidden_field_tag 'subscription[added]', Time.now, {:id => 'subscription_added'} %>
+    </table>
+    <br/>
+    <%= submit_tag _('Create'), :disable_with => _('Processing..') %>
+<% end %>
+
+<script type="text/javascript">
+
+
+    function no_end(checkbox) {
+      var service = $('subscription_service_id');
+      var a = service.options[service.selectedIndex];
+      if (checkbox.checked) {
+        $('activation_end_year').disabled = true;
+        $('activation_end_month').disabled = true;
+        $('activation_end_day').disabled = true;
+        $('activation_end_hour').disabled = true;
+        $('activation_end_minute').disabled = true;
+      }
+        else if ( a.getAttribute("type") == 'flat_rate')
+      {
+        $('activation_end_year').disabled = false;
+        $('activation_end_month').disabled = false;
+      }
+        else
+      {
+        $('activation_end_year').disabled = false;
+        $('activation_end_month').disabled = false;
+        $('activation_end_day').disabled = false;
+        $('activation_end_hour').disabled = false;
+        $('activation_end_minute').disabled = false;
+      }
+    }
+
+    function change_date_selector(val) {
+        var one_time_fees = new Array(<%= @services.collect{|s| s.id if s.servicetype == "one_time_fee"}.compact.join(",")%>);
+        if (one_time_fees.indexOf(val) == -1) {
+            $('activation_end').style.display = '';
+        }
+        else {
+            $('activation_end').style.display = 'none';
+        }
+    }
+    change_date_selector(<%= @services[0].id if @services.size > 0 %>);
+</script>
+
+<script type="text/javascript">
+    function disable() {
+        $('activation_start_day').disabled = true;
+        $('activation_start_hour').disabled = true;
+        $('activation_start_minute').disabled = true;
+
+        $('activation_end_day').disabled = true;
+        $('activation_end_hour').disabled = true;
+        $('activation_end_minute').disabled = true;
+
+        $('no_expire_checkbox').style.visibility = 'visible';
+    }
+
+    function enable() {
+        $('activation_start_day').disabled = false;
+        $('activation_start_hour').disabled = false;
+        $('activation_start_minute').disabled = false;
+
+        $('activation_end_day').disabled = false;
+        $('activation_end_hour').disabled = false;
+        $('activation_end_minute').disabled = false;
+
+        $('no_expire_checkbox').style.visibility = 'hidden';
+    }
+
+    Event.observe(window, 'load', function () {
+        var service = $('subscription_service_id')
+        var a = service.options[service.selectedIndex]
+        if ( a.getAttribute("type") == 'flat_rate'){
+            disable();
+        } else {
+            enable();
+        }
+        Event.observe(service, 'change', function () {
+            var a = service.options[service.selectedIndex]
+            if ( a.getAttribute("type") == 'flat_rate'){
+                disable();
+            } else {
+                enable();
+            }
+        });
+    })
+</script>

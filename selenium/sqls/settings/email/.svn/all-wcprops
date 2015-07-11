@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/49579/mor/gui/branches/x5/selenium/sqls/settings/email
+END
+25_email_port.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/49579/mor/gui/branches/x5/selenium/sqls/settings/email/25_email_port.sql
+END
+email_batch_size.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/49246/mor/gui/branches/x5/selenium/sqls/settings/email/email_batch_size.sql
+END
+email_config_admin.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/47310/mor/gui/branches/x5/selenium/sqls/settings/email/email_config_admin.sql
+END
+50_email_batch_size.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/49579/mor/gui/branches/x5/selenium/sqls/settings/email/50_email_batch_size.sql
+END
+disable_send_email_to_admin_after_registration.sql
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/!svn/ver/48593/mor/gui/branches/x5/selenium/sqls/settings/email/disable_send_email_to_admin_after_registration.sql
+END
+disable_sending.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/49530/mor/gui/branches/x5/selenium/sqls/settings/email/disable_sending.sql
+END
+email_port.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/49542/mor/gui/branches/x5/selenium/sqls/settings/email/email_port.sql
+END
+50_email_batch.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/49542/mor/gui/branches/x5/selenium/sqls/settings/email/50_email_batch.sql
+END
+enable_sending.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/48887/mor/gui/branches/x5/selenium/sqls/settings/email/enable_sending.sql
+END
+disable_send_email_to_user_after_registration.sql
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/!svn/ver/48593/mor/gui/branches/x5/selenium/sqls/settings/email/disable_send_email_to_user_after_registration.sql
+END
+email_config2.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/49542/mor/gui/branches/x5/selenium/sqls/settings/email/email_config2.sql
+END

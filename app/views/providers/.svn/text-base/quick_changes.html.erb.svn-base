@@ -1,0 +1,72 @@
+<div id="search_details">
+  <%= form_tag :action => 'quick_changes', :s_hidden => 1 do %>
+    <table width="500px" class="bordered">
+      <tr>
+        <td width="23%"><%= _('Name') -%>:</td>
+         <td>
+          <%= text_field_tag 's_name', @options[:s_name], "class" => "input", :size => "15", :maxlength => "30" %>
+          &nbsp;
+        </td>
+        <td width="5%"><%= _('Type') -%>:</td>
+        <td>
+          <select name="s_tech">
+            <option value="" selected> <%= _('All') %></option>
+            <% @provtypes.each do |ps| %>
+                <option value=<%= ps %> <%= "selected" if ps == @options[:s_tech] %>> <%= ps %> </option>
+            <% end %>
+          </select>
+        <td align="right" width="20%">
+          <% unless @options[:s_hidden].blank? %>
+              <%= link_to b_cross + _('Clear_search'), {:action => 'quick_changes', :s_hidden => nil }, {:id => "clear_search"} %>
+          <% end %>
+        </td>
+        </td>
+      </tr>
+      <tr>
+        <td nowrap><%= _('server_ip') -%>:</td>
+        <td>
+          <%= text_field_tag 's_server_ip', @options[:s_server_ip], "class" => "input", :size => "15", :maxlength => "30" %>
+          &nbsp;&nbsp;
+        </td>
+      </tr>
+      <tr>
+        <td><%= submit_tag _('Search'), :disable_with => _('Processing..') %></td>
+      </tr>
+    </table>
+  <% end %>
+</div>
+
+<br /> <br />
+<%= page_select_header(@options[:page], @total_pages) if @total_pages > 1 %>
+
+<table width="100%" class="maintable">
+  <tr align="left">
+    <th><%= nice_list_order('name',_('Provider'), @options) %></th>
+    <th><%= nice_list_order('tariff_id',_('Tariff'), @options) %></th>
+    <th><%= nice_list_order('call_limit',_('Call_limit'), @options) %></th>
+    <th><%= nice_list_order('max_timeout',_('Call_Timeout'), @options) %></th>
+    <th><%= nice_list_order('timeout',_('Ringing_Timeout'), @options) %></th>
+    <th><%= nice_list_order('time_limit_per_day',_('Time_limit_per_day'), @options) %></th>
+  </tr>
+<%= form_tag :method => :put, :page => @options[:page] do %>
+  <% @providers.each_with_index do |provider, i| %>
+    <%= fields_for "providers[]", provider do |p| %>
+    <% coloring = (@err["#{provider.id}"].nil? ? "row#{(i%2)+1}" : 'notice') %>
+      <tr class='<%= coloring %>'>
+        <td><%= provider.name %></td>
+        <td><%= p.collection_select :tariff_id, @tariffs, :id, :name, { selected: provider.tariff.id } %> </td>
+        <td><%= p.text_field :call_limit, value: provider.call_limit, class: 'input' %></td>
+        <td><%= p.text_field :max_timeout, value: provider.max_timeout, class: 'input' %></td>
+        <td><%= p.text_field :timeout, value: provider.timeout, class: 'input' %></td>
+        <td><%= p.text_field :time_limit_per_day, value: provider.device.time_limit_per_day, class: 'input' %></td>
+      </tr>
+    <% end %>
+  <% end %>
+  <tr>
+    <th colspan='6' align='right'><%= submit_tag "Update this page" %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+
+<%= page_select_header(@options[:page], @total_pages) if @total_pages > 1 %>

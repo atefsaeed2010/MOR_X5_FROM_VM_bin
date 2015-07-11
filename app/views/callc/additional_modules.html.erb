@@ -1,0 +1,96 @@
+<%= form_tag :action => 'additional_modules_save' do %>
+    <br/>
+    <br/>
+    <table class="simpletable">
+      <tr>
+        <td width="200px"><%= ('CCL_Active') %>:</td>
+        <td width="200px" align="right"><%= check_box_tag 'CCL_Active', value = "1", Confline.get_value('CCL_Active').to_i == 1, onclick: "toggle_dep(this, 'server_and_host');" %></td>
+      </tr>
+      <tr id="server_and_host" class="row1">
+        <td align="center" colspan=2 height=50><%= _('Server_IP') %>: <%= text_field_tag 'ip_address', "", "class" => "input", :size => "12", :maxlength => "30" %>
+        <%= _('Host') %>: <%= text_field_tag 'host', "", "class" => "input", :size => "12", :maxlength => "30" %></td>
+      </tr>
+      <tr>
+        <td><%= _('CC_Active') %>:</td>
+        <td align="right"><%= check_box_tag 'CC_Active', value = "1", Confline.get_value('CC_Active').to_i == 1, onclick: "toggle_dep(this, 'cc_login');" %></td>
+      </tr>
+      <tr id="cc_login" class="row1">
+        <td><%= _('CC_Single_Login') %>:</td>
+        <td align="right"><%= check_box_tag 'CC_Single_Login', value = "1", Confline.get_value('CC_Single_Login').to_i == 1 %></td>
+      </tr>
+      <tr>
+        <td><%= _('AD_Active') %>:</td>
+        <td align="right"><%= check_box_tag 'AD_Active', value = "1", Confline.get_value('AD_Active').to_i == 1 %></td>
+      </tr>
+      <tr>
+        <td><%= _('AD_sounds_path') %>:</td>
+        <td align="right"><%= text_field_tag 'AD_sounds_path', Confline.get_value('AD_sounds_path'), class: 'input', size: 50 %></td>
+      </tr>
+      <tr>
+        <td><%= _('RS_Active') %>:</td>
+        <td align="right"><%= check_box_tag 'RS_Active', value = "1", Confline.get_value('RS_Active').to_i == 1, onclick: "toggle_dep(this, 'rspro');" %></td>
+      </tr>
+      <tr id="rspro" class="row1">
+        <td><%= _('RSPRO_Active') %>:</td>
+        <td align="right"><%= check_box_tag 'RSPRO_Active', value = "1", Confline.get_value('RSPRO_Active').to_i == 1 %></td>
+      </tr>
+      <tr>
+        <td><%= _('SMS_Active') %>:</td>
+        <td align="right"><%= check_box_tag 'SMS_Active', value = "1", Confline.get_value('SMS_Active').to_i == 1 %></td>
+      </tr>
+      <tr>
+        <td><%= _('REC_Active') %>:</td>
+        <td align="right"><%= check_box_tag 'REC_Active', value = "1", Confline.get_value('REC_Active').to_i == 1 %></td>
+      </tr>
+      <tr>
+        <td><%= _('PG_Active') %>:</td>
+        <td align="right"><%= check_box_tag 'PG_Active', value = "1", Confline.get_value('PG_Active').to_i == 1 %></td>
+      </tr>
+      <tr>
+        <td><%= _('CS_Active') %>:</td>
+        <td align="right"><%= check_box_tag 'CS_Active', value = "1", Confline.get_value('CS_Active').to_i == 1 %></td>
+      </tr>
+      <tr>
+        <td><%= _('MA_Active') %>:</td>
+        <td align="right"><%= check_box_tag 'MA_Active', value = "1", Confline.get_value('MA_Active').to_i == 1 %></td>
+      </tr>
+      <tr>
+        <td><%= _('AST_18') %>:</td>
+        <td align="right"><%= check_box_tag 'AST_18', value = "1", Confline.get_value('AST_18').to_i == 1 %></td>
+      </tr>
+      <tr>
+        <td><%= _('PROVB_Active') %>:</td>
+        <td align="right"><%= check_box_tag 'PROVB_Active', value = "1", Confline.get_value('PROVB_Active').to_i == 1 %></td>
+      </tr>
+      <tr>
+        <td><%= _('PBX_Active') %>:</td>
+        <td align="right"><%= check_box_tag 'PBX_Active', value = "1", Confline.get_value('PBX_Active').to_i == 1 %></td>
+      </tr>
+      <tr>
+        <td><%= _('CALLB_Active') %>:</td>
+        <td align="right"><%= check_box_tag 'CALLB_Active', value = "1", Confline.get_value('CALLB_Active').to_i == 1 %></td>
+      </tr>
+    </table>
+    <%= hidden_field_tag('indirect', 1) %>
+    <br/>
+    <br/>
+    <%= submit_tag _('Save_changes'), :disable_with => _('Processing..') %>
+<% end %>
+
+
+<script type="text/javascript">
+
+    function toggle_dep(main, dep) {
+	($(main).checked) ? $(dep).hidden = false : $(dep).hidden = true;
+    }
+
+    Event.observe(window, 'load', function () {
+        $('server_and_host').hidden = true; // never open on load
+
+        // addons to check for submenu onload
+        toggle_dep($('RS_Active'), 'rspro');
+        toggle_dep($('CC_Active'), 'cc_login');
+
+    })
+
+</script>

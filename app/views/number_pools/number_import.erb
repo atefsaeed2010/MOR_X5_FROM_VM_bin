@@ -1,0 +1,23 @@
+<b><%= _('Number_Pool') %>:</b> <%= @number_pool.name %>
+
+<br/>
+<% if @step == 1 %>
+  <br/>
+  <%= form_tag({:action => 'number_import', :step => "2"}, {:multipart => "true", :id => "files"}) do %>
+    <%= _('Upload') %>: <%= file_field_tag "file", onchange: "$('upload_button').disabled = false;"  %>
+    <%= submit_tag(_('Upload_file'), :disable_with => _('Processing..'), id: 'upload_button', disabled: true) %>
+  <% end %>
+<% elsif @step == 2 %>
+  <br />
+  <b><%= _('File_size') %>:</b> <%= session[:file_size].to_i %> <%= " " + _("bytes") %>
+  <br/>
+  <b><%= _('Numbers_imported') %>:</b> <%= @imported_numbers %>
+  <% if @total_numbers.to_i != @imported_numbers.to_i %>
+    <br/>
+    <b><%= _('Total_numbers') %>:</b> <%= @total_numbers %>
+    <br />
+    <%= link_to _('Click_here_to_see_bad_numbers') + " (#{@bad_numbers_quantity})", :action=>:bad_numbers, :id=>@number_pool.id %>
+  <% end %>
+  <br /><br />
+  <%= link_to b_back + _('Back_to_Numbers'), :action=>:number_list, :id=>@number_pool.id %>
+<% end %>

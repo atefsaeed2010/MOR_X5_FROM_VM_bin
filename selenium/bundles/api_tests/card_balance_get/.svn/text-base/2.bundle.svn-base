@@ -1,0 +1,9 @@
+#  disable hash
+# for admin
+settings/api/disable_hash_0.sql
+# for reseller
+settings/api/disable_hash_3.sql
+# cc group for reseller
+calling_cards/ccgroup_14301/create.sql
+calling_cards/ccgroup_14301/create_cards.sql
+# bundle loaded

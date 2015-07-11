@@ -1,0 +1,67 @@
+<p><label for="group_name"><%= _('Name') %></label><br/>
+
+<%= text_field 'group', 'name', :class => "input" %></p>
+
+<p><label for="group_language"><%= _('Callshop_manager_interface_language') %></label><br/>
+
+<%= select_tag 'group[translation_id]', options_for_translations(group) %>
+
+
+<p><label for="simple_session"> <%= _('Simplified_session') %></label>
+<%= check_box_tag 'group[simple_session]', '1', params[:group].try(:[],:simple_session).present? ? (params[:group][:simple_session].to_i == 1) : (group.simple_session.to_i == 1), id: 'simple_session' %></p>
+
+<table id='simple_session_details'>
+  <tr>
+    <td style='width:30px'></td>
+    <td colspan="2" ><%= _('Postpaid') %>:<%= radio_button_tag("group[postpaid]", '1', postpaid?(group,params[:group]), {id: 'simple_session_postpaid' }) %>
+    </td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td colspan="2"><%= _('Prepaid') %>: <%= radio_button_tag("group[postpaid]", '0', !postpaid?(group,params[:group]), {id: 'simple_session_prepaid' }) %>
+    </td>
+  </tr>
+
+  <tr id='simple_session_balance' >
+    <td></td>
+    <td style='width:30px' ></td>
+    <td><%= _('Balance') %>: <%= text_field_tag('group[balance]', params[:group].try(:[],:balance).present? ? params[:group][:balance].to_s : (group.balance.present? ? nice_number(group.balance) : 0), class: 'input', size: '5', maxlength: '15') %><span <%= tooltip(_('Balance'), _('Call_shop_balance_tooltip')) %>> <%= session[:default_currency] %></span>
+  </td>
+</table>
+
+<p><label for="group_description"><%= _('Invoice_Details') %></label><br/>
+
+<%= text_area 'group', 'description', :rows => 10, :class => "input" %></p><br>
+<script type="text/javascript">
+    function toggleSimpleSessionVisibility(hidden){
+      if(typeof(hidden)==='undefined'){
+        $('simple_session_details').toggle();
+      }
+    }
+
+    function hideBeforeLoad(){
+      if (!simple_session_box.checked){
+        $('simple_session_details').hide();
+      }
+      if (!$('simple_session_prepaid').checked){
+        $('simple_session_balance').hide();
+      }
+    }
+
+    Event.observe(window, 'load', function () {
+        simple_session_box = $('simple_session');
+
+        hideBeforeLoad();
+        Event.observe(simple_session_box, 'click', function () {
+          toggleSimpleSessionVisibility();
+        });
+        Event.observe($('simple_session_prepaid'), 'click', function () {
+          $('simple_session_balance').show();
+        });
+        Event.observe($('simple_session_postpaid'), 'click', function () {
+          $('simple_session_balance').hide();
+        });
+    });
+    //]]>
+</script>

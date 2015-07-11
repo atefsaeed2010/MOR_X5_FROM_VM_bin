@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/50109/mor/gui/branches/x5/app/views/emails
+END
+show_emails.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/app/views/emails/show_emails.html.erb
+END
+emeils_callcenter.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/app/views/emails/emeils_callcenter.html.erb
+END
+send_emails_from_cc.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/43480/mor/gui/branches/x5/app/views/emails/send_emails_from_cc.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/46194/mor/gui/branches/x5/app/views/emails/list.html.erb
+END
+_page_select_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/43480/mor/gui/branches/x5/app/views/emails/_page_select_header.html.erb
+END
+send_emails.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/43480/mor/gui/branches/x5/app/views/emails/send_emails.html.erb
+END
+users_for_send_email.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/43480/mor/gui/branches/x5/app/views/emails/users_for_send_email.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/43480/mor/gui/branches/x5/app/views/emails/edit.html.erb
+END
+_email_calling_cards_purchase.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/39906/mor/gui/branches/x5/app/views/emails/_email_calling_cards_purchase.html.erb
+END
+send.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/39906/mor/gui/branches/x5/app/views/emails/send.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/43480/mor/gui/branches/x5/app/views/emails/new.html.erb
+END
+_send_emails_users_list.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/50109/mor/gui/branches/x5/app/views/emails/_send_emails_users_list.erb
+END
+list_users.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/43500/mor/gui/branches/x5/app/views/emails/list_users.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/45917/mor/gui/branches/x5/app/views/emails/_form.html.erb
+END
+email_callback.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/39906/mor/gui/branches/x5/app/views/emails/email_callback.html.erb
+END

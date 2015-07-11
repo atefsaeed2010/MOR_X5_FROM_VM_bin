@@ -1,0 +1,5 @@
+# create simple device for admin user
+# ----
+# 
+user/user_2/create_sip_2004.sql
+# bundle loaded

@@ -1,0 +1,87 @@
+<tr>
+  <td class="bottom_border">
+    <b><%= _('Visualization') %></b>
+  </td>
+</tr>
+<tr>
+  <td height="10"></td>
+</tr>
+<tr>
+  <td valign="top">
+    <table class="simple">
+      <tr>
+        <td>
+          <div class="ringgroup_items" style="font-weight: bold;text-align:center;width:375px;">
+            <br/>
+
+            <p class='ringgroup_class' style="width:300px;"><%= b_call %> <%= _('Incoming_Call') %></p>
+
+            <p class='ringgroup_class' style="width:300px;"><%= b_down %></p>
+
+            <p class='ringgroup_class' style="width:300px;"><%= _('Dids') %>:
+              <span>
+                <% if assigned_dids.size < 21 %>
+                    <% assigned_dids.each_with_index{|d,i| %>
+                        <% if accountant? and session[:acc_manage_dids_opt_1].to_i != 2 %>
+                            <%= d.did.to_s %><%= "," if i < assigned_dids.size - 1 %>
+                        <% else %>
+                            <%= raw link_to d.did, {:controller => "dids", :action => "edit", :id => d.id}, {:style => 'font-size: 10px; font-weight: normal'}  %><%= "," if i < assigned_dids.size - 1 %>
+                        <% end %>
+                    <% } %>
+                <% else %>
+                    <%= raw link_to (assigned_dids.size.to_s + " " + _('DID_s')), :controller => "dids", :action => "list", :s_dialplan => dialplan.id %>
+                <% end %>
+              </span>
+
+            </p>
+
+            <p class='ringgroup_class' style="width:300px;"><%= b_down %></p>
+
+            <p class='ringgroup_class' style="width:300px;"><%= _('Extension') %>:
+              <span class="ringgroup_items2"><%= queue.extension.to_s %></span></p>
+
+            <p class='ringgroup_class' style="width:300px;"><%= b_down %></p>
+
+            <p class='ringgroup_class' style="width:300px;"><%= b_members + _('Queue') %>:
+              <span class="ringgroup_items2"><%= queue.name.to_s %></span></p>
+
+            <p class='ringgroup_class' style="width:300px;"><%= b_down %></p>
+
+            <p class='ringgroup_class' style="width:300px;"><%= b_music + _('Join_Announcement') %>:
+              <span class="ringgroup_items2"><%= vis_join_ann %></span></p>
+
+            <p class='ringgroup_class' style="width:300px;"><%= b_down %></p>
+
+            <p class='ringgroup_class' style="width:300px;"><%= b_music + _('MOH') %>:
+              <span class="ringgroup_items2"><%= vis_moh %></span></p>
+            <p class='ringgroup_class' style="width:300px;"><%= b_down %></p>
+
+            <p class='ringgroup_class' style="width:300px;"><%= _('Strategy') %>:
+              <span class="ringgroup_items2"><%= queue.strategy.to_s %></span></p>
+
+            <div style="float: left;text-align:right;width:85px;">&nbsp;&nbsp;</div>
+            <div class="ringgroup_items2" id="show_devices" style="float: left;text-align:left;font-weight:normal;">
+              <ul style="list-style-type: none;margin:2px;padding-left: 0px;font-size:10px;">
+                <% if static_agents.size.to_i > 0 %>
+                    <% for dev in static_agents %>
+                        <li style="height: 17px;"><%= nice_device(Device.where(:id => dev.device_id).first) %></li>
+                    <% end %>
+                <% end %>
+              </ul>
+            </div>
+            <div style="float: left;text-align:center;width:60px;padding-top: <%=17*static_agents.size.to_i/2%>px;"><%= b_forward %></div>
+            <div style="float: left;text-align:center;padding-top: <%=17*static_agents.size.to_i/2%>px;"><span class='ringgroup_class'><%= _('IVR_Brake_Out_Menu') %>:</span><br /><span class="ringgroup_items2"><%= vis_ivr %></span></div>
+            <div style="clear: both;margin-bottom:4px;"></div>
+
+            <p class='ringgroup_class' style="width:300px;"><%= b_down %></p>
+
+            <p class='ringgroup_class' style="width:300px;" id="show_did2"><%= _('Failover_Action') %>:
+              <span class="ringgroup_items2"><%= vis_fail_over %></span>
+            </p>
+            <br/>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>

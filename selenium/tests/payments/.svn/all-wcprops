@@ -1,0 +1,209 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/51946/mor/gui/branches/x5/selenium/tests/payments
+END
+pg_hsbc.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/48709/mor/gui/branches/x5/selenium/tests/payments/pg_hsbc.case
+END
+paypal_return_url.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/43161/mor/gui/branches/x5/selenium/tests/payments/paypal_return_url.case
+END
+payments_confirm.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/payments/payments_confirm.case
+END
+delete_tax_excluded.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/payments/delete_tax_excluded.sql
+END
+payment_description.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/51946/mor/gui/branches/x5/selenium/tests/payments/payment_description.case
+END
+payments.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/payments/payments.sql
+END
+payments_tax_changed.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/payments/payments_tax_changed.case
+END
+payments3_paypal_reseller.case
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/41932/mor/gui/branches/x5/selenium/tests/payments/payments3_paypal_reseller.case
+END
+payment_ouroboros.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/46908/mor/gui/branches/x5/selenium/tests/payments/payment_ouroboros.case
+END
+manual_payments.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/51946/mor/gui/branches/x5/selenium/tests/payments/manual_payments.case
+END
+paypal_user_info.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/44704/mor/gui/branches/x5/selenium/tests/payments/paypal_user_info.case
+END
+g_checkout.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/payments/g_checkout.sql
+END
+payments.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/51946/mor/gui/branches/x5/selenium/tests/payments/payments.case
+END
+paypal_payments_list.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/43436/mor/gui/branches/x5/selenium/tests/payments/paypal_payments_list.case
+END
+payments_confirm.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/payments/payments_confirm.sql
+END
+payment_gateways_logo.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/42387/mor/gui/branches/x5/selenium/tests/payments/payment_gateways_logo.case
+END
+payment_gateways2.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/43076/mor/gui/branches/x5/selenium/tests/payments/payment_gateways2.case
+END
+cc_card_manual_payment.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/41372/mor/gui/branches/x5/selenium/tests/payments/cc_card_manual_payment.case
+END
+payment_gateways_tax_excluded.case
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/42387/mor/gui/branches/x5/selenium/tests/payments/payment_gateways_tax_excluded.case
+END
+payment_osmp.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/50853/mor/gui/branches/x5/selenium/tests/payments/payment_osmp.case
+END
+payment_ideal.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/43551/mor/gui/branches/x5/selenium/tests/payments/payment_ideal.case
+END
+auto_fill.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/43374/mor/gui/branches/x5/selenium/tests/payments/auto_fill.case
+END
+payment_gateways.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/43341/mor/gui/branches/x5/selenium/tests/payments/payment_gateways.case
+END
+payments_blocked_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/42781/mor/gui/branches/x5/selenium/tests/payments/payments_blocked_user.case
+END
+webmoney_payment.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/43014/mor/gui/branches/x5/selenium/tests/payments/webmoney_payment.case
+END
+balance_check.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/payments/balance_check.case
+END
+payments2.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/51579/mor/gui/branches/x5/selenium/tests/payments/payments2.case
+END
+payment_confirmation.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/43305/mor/gui/branches/x5/selenium/tests/payments/payment_confirmation.case
+END
+authorize_net_user_info.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/43374/mor/gui/branches/x5/selenium/tests/payments/authorize_net_user_info.case
+END
+payments_card.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/payments/payments_card.case
+END
+payments_view.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/51946/mor/gui/branches/x5/selenium/tests/payments/payments_view.case
+END
+payments_manual.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/51741/mor/gui/branches/x5/selenium/tests/payments/payments_manual.case
+END
+payment_gateways_resellers.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/42781/mor/gui/branches/x5/selenium/tests/payments/payment_gateways_resellers.case
+END
+personal_payments.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/51579/mor/gui/branches/x5/selenium/tests/payments/personal_payments.case
+END

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/51894/mor/gui/branches/x5/selenium/tests/localization
+END
+localization.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/51894/mor/gui/branches/x5/selenium/tests/localization/localization.case
+END
+update_devices.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/localization/update_devices.sql
+END
+location_rules_by_callerid.case
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/40107/mor/gui/branches/x5/selenium/tests/localization/location_rules_by_callerid.case
+END
+destination_with_no_direction.sql
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/localization/destination_with_no_direction.sql
+END
+dst_group_update.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/localization/dst_group_update.sql
+END
+localizations_for_reseller.case
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/51827/mor/gui/branches/x5/selenium/tests/localization/localizations_for_reseller.case
+END
+delete_locations.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/localization/delete_locations.sql
+END
+default_location_re.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/51581/mor/gui/branches/x5/selenium/tests/localization/default_location_re.case
+END
+delete_all_destinations.sql
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/localization/delete_all_destinations.sql
+END
+destinations.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/43470/mor/gui/branches/x5/selenium/tests/localization/destinations.case
+END

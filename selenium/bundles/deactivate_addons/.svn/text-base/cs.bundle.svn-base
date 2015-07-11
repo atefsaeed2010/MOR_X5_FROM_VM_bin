@@ -1,0 +1,5 @@
+# turn off addon for test callshop/callshop.case
+# ----
+# turn off calling cards addon
+/settings/addons/cs_deactivate.sql
+# bundle loaded

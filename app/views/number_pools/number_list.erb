@@ -1,0 +1,39 @@
+<table>
+  <tr>
+    <td>
+      <%= link_to( b_add + _('Import_new_numbers'), :action => 'number_import', :id => @number_pool.id) %>
+    </td>
+    <% if @total_numbers_size > 0 %>
+      <td>
+        <%= link_to( b_cross + _('Delete_all_Numbers'), :action => 'destroy_all_numbers', :id => @number_pool.id) %>
+      </td>
+    <% end %>
+  </tr>
+</table>
+<br />
+<% if @total_pages > 1 %>
+  <br>
+  <%= page_select_header(@options[:page], @total_pages, nil, @options) %>
+  <br>
+<% end %>
+
+<% if @total_numbers_size > 0 %>
+  <table class="maintable">
+    <tr align="left">
+      <th width='30px'><%= nice_list_order('id', _('ID'), @options) %></th>
+      <th style="min-width: 250px;max-width: 500px;"><%= nice_list_order('number', _('Number'), @options) %></th>
+      <th colspan=2></th>
+    </tr>
+    <% @numbers.each_with_index do |num, i| %>
+      <tr align="left" class="row<%= (i % 2 + 1).to_s %>">
+        <td id="id_<%= num.id %>"><%= num.id %></td>
+        <td id="number_<%= num.id %>">
+          <%= num.number %>
+        </td>
+        <td width='20px'  id="delete_<%= num.id %>" align="center"><%= link_to b_delete, {:action => 'number_destroy', :id => num.id}, {:confirm => _('are_you_sure'), :method => :post, :id => "delete_link_#{num.id}"} %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+<br />
+<%= page_select_header(@options[:page], @total_pages, nil, @options) %>

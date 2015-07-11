@@ -1,0 +1,23 @@
+# testing webmoney settings in test resellers_payment_option
+# ----
+# Create group for reseller_permissions
+permissions/reseller/create.sql
+#
+# Makes reseller_3 a rspro
+user/reseller_3/make_rspro.sql
+#
+# Enables recording for reseller
+user/reseller_3/enable_recording.sql
+#
+# Enable WebMoney for admin
+settings/payments/enable_webmoney_0.sql
+#
+# enable payment gateways permission
+permissions/reseller/payment_gateways_write.sql
+#
+# Creates new reseller 
+user/reseller_1002/create.sql
+#
+# assign permission to reseller
+user/reseller_3/assign_permissions.sql
+# bundle loaded 

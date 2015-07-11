@@ -1,0 +1,10 @@
+<%= link_nice_tariff(@tariff).html_safe %>
+<%= form_tag(:action => 'update', :id => @tariff) do %>
+    <%= render 'form', :user_wholesale_enabled => @user_wholesale_enabled,
+        :currs => @currs, :tariff => @tariff, :no_edit_purpose => @no_edit_purpose %>
+    <br><br>
+    <%= submit_tag _('Edit'), :disable_with => _('Processing..') %>
+<% end %>
+
+<br><br>
+

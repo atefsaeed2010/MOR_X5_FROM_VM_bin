@@ -1,0 +1,36 @@
+<div align="center">
+  <table class='page_title2' width="100%">
+    <tr>
+      <td align = "center">
+        <table>
+          <tr>
+            <% ('A'..'Z').each do |letter| %>
+              <% if not defined?(directions_first_letters) or directions_first_letters.include?(letter)%>
+                <% parameters = {action: params[:action], id: letter_select_header_id, st: letter}; style = {} %>
+              <% elsif defined?(directions_defined) and not directions_defined.include?(letter) %>
+                <% parameters = {}; style = {} %>
+              <% else %>
+                <% parameters = {action: params[:action], id: letter_select_header_id, st: letter}; style = {style: "color:grey"} %>
+              <% end %>
+
+              <% if !(defined?(letters_to_bold) && letters_to_bold.try(:include?, letter)) %>
+                <% style = {style: "color:grey;"}; letter_marked = 'not_marked' %>
+              <% else %>
+                <% letter_marked = 'marked' %>
+              <% end %>
+
+              <% letter_bold = (letter == st) ? '_bolded' : '' %>
+
+              <td id="letter_<%= letter %>_<%= letter_marked %><%= letter_bold %>">
+                <%= "<b>".html_safe if letter == st%>
+                <%= link_to letter, parameters, style %>
+                <%= "</b>".html_safe if letter == st%>
+              </td>
+
+              <% end %>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>

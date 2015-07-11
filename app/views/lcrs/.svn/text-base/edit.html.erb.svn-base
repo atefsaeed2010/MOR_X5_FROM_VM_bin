@@ -1,0 +1,7 @@
+<%= form_tag(:action => 'update', :id => @lcr) do %>
+    <%= render 'form', lcr: @lcr, options: @options, months_for_select: @months_for_select, weekdays_for_select: @weekdays_for_select, lcrs_for_select: @lcrs_for_select %>
+    <br/>
+    <%= submit_tag _('Save_changes'), :disable_with => _('Processing..') %>
+<% end %>
+
+<br/><br/>

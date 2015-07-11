@@ -1,0 +1,2 @@
+INSERT INTO `sms_providers` (`id`, `name`, `login`, `password`, `api_id`, `priority`, `sms_tariff_id`, `provider_type`, `sms_provider_domain`, `use_subject`, `sms_subject`, `sms_email_wait_time`, `wait_for_good_email`, `email_good_keywords`, `wait_for_bad_email`, `email_bad_keywords`, `time_out_charge_user`, `nan_keywords_charge_user`, `pay_sms_receiver`, `sms_from`) VALUES
+(1, 'sms_prov', '', '', NULL, 1, 3, 'sms_email', '@333.lt', NULL, NULL, '0', 0, '', 0, '', 0, 0, 0, '');

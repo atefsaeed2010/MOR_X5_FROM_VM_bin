@@ -1,0 +1,4 @@
+# enable payments
+# ----
+settings/api/allow_payments.sql
+# bundle loaded

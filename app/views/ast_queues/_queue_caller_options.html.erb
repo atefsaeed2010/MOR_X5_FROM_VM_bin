@@ -1,0 +1,132 @@
+<tr>
+  <td class="bottom_border">
+    <b><%= _('Caller_options') %></b>
+  </td>
+</tr>
+<tr>
+  <td height="10"></td>
+</tr>
+<tr>
+  <td valign="top">
+    <table class="simple">
+      <tr>
+        <td id="max_callers"><%= _('Max_Callers') %>:</td>
+        <td id="max_callers_value"><%= text_field 'queue', 'maxlen', "class" => "input", :size => 5 %></td>
+      </tr>
+      <tr>
+        <td id="join_announcement"><%= _('Join_Announcement') %>:</td>
+        <td id="join_announcement_value">
+          <select name="queue[join_announcement]">
+            <option value="-1" <%= "selected" if queue.join_announcement.to_i == 0 %>><%= _('none') %></option>
+            <% for a in announcements %>
+                <option value=<%= a.id %> <%= "selected" if queue.join_announcement.to_i == a.id.to_i %>>
+                  <%= a.path.to_s %>
+                </option>
+            <% end %>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td id="ringing_instead_of_moh"><%= _('Ringing_instead_of_MOH') %>:</td>
+        <td id="ringing_instead_of_moh_value">
+          <%= radio_button_tag('queue[ringing_instead_of_moh]', 'no', queue.ringing_instead_of_moh == 'no', :class => "ringing") %> <%= _('_No') %>
+          <%= radio_button_tag('queue[ringing_instead_of_moh]', 'yes', queue.ringing_instead_of_moh == 'yes', :class => "ringing") %> <%= _('_Yes') %>
+        </td>
+      </tr>
+      <tr id="music_on_hold_class_line">
+        <td id="music_on_hold_class"><%= _('Music_On_Hold_Class') %>:</td>
+        <td id="music_on_hold_class_value">
+          <select name="queue[moh_id]">
+            <option value="-1" <%= "selected" if queue.moh_id.to_i == 0 %>><%= _('default') %></option>
+            <% for a in mohs %>
+                <option value=<%= a.id %> <%= "selected" if queue.moh_id.to_i == a.id.to_i %>>
+                  <%= a.moh_name.to_s %>
+                </option>
+            <% end %>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td id="ring_when_agent_is_ringing"><%= _('Ring_when_Agent_is_ringing') %>:</td>
+        <td id="ring_when_agent_is_ringing_value">
+          <%= radio_button_tag('queue[ring_at_once]', 'no', queue.ring_at_once == 'no') %> <%= _('_No') %>
+          <%= radio_button_tag('queue[ring_at_once]', 'yes', queue.ring_at_once == 'yes') %> <%= _('_Yes') %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table style="border:1px solid #cccccc;width:100px;"  cellspacing="0">
+            <tr>
+              <td colspan="2"><%= _('Join_Empty') %>:</td>
+            </tr>
+            <% for a in join_leave_empty %>
+              <tr>
+                <td>
+                  <%= check_box_tag 'join_empty[]', a, queue.joinempty.include?(a.to_s), :style => "margin: 0; padding 0;  height:13" %>
+                </td>
+                <td><%= a.to_s %></td>
+              </tr>
+            <% end %>
+          </table>
+        </td>
+        <td>
+          <table style="border:1px solid #cccccc;width:100px;"  cellspacing="0">
+            <tr>
+              <td colspan="2"><%= _('Leave_When_Empty') %>:</td>
+            </tr>
+            <% for a in join_leave_empty %>
+                <tr>
+                  <td>
+                    <%= check_box_tag 'leave_empty[]', a, queue.leavewhenempty.include?(a.to_s), :style => "margin: 0; padding 0;  height:13" %>
+                  </td>
+                  <td><%= a.to_s %></td>
+                </tr>
+            <% end %>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td id="allow_hangup_by_ast"><%= _('Allow_hangup_by_ast') %>:</td>
+        <td id="allow_hangup_by_ast_value">
+          <%= radio_button_tag('queue[allow_caller_hangup]', 'no', queue.allow_caller_hangup == 'no') %> <%= _('_No') %>
+          <%= radio_button_tag('queue[allow_caller_hangup]', 'yes', queue.allow_caller_hangup == 'yes') %> <%= _('_Yes') %>
+        </td>
+      </tr>
+      <tr>
+        <td id="ivr_brake_out"><%= _('IVR_Brake_Out_Menu') %>:</td>
+        <td id="ivr_brake_out_value">
+          <select name="queue[context]">
+            <option value="-1" <%= "selected" if queue.context.to_i == 0 %>><%= _('none') %></option>
+            <% for a in ivrs %>
+                <option value=<%= a.id %> <%= "selected" if queue.context.to_i == a.id.to_i %>>
+                  <%= a.name.to_s %>
+                </option>
+            <% end %>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td id="max_wait_time"><%= _('Max_Wait_Time') %>:</td>
+        <td id="max_wait_time_value"><%= text_field 'queue', 'max_wait_time', "class" => "input", :size => 5 %><%= " " + _('seconds') %></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+<script type="text/javascript">
+
+    function show_hide_music_on_hold(){
+        if ($('queue_ringing_instead_of_moh_no').checked) {
+            $('music_on_hold_class_line').show();
+        } else {
+            $('music_on_hold_class_line').hide();
+        }
+    }
+
+    Event.observe(window, 'load', function () {
+        show_hide_music_on_hold();
+        $('ringing_instead_of_moh_value').on('change', '.ringing', function(event) {
+            show_hide_music_on_hold();
+        });
+    })
+</script>

@@ -1,0 +1,44 @@
+<%= form_for :schedule, url: { action: 'schedule_update', id: @schedule.id } do |f| %>
+
+  <%= _('schedule_name') %>: <br />
+  <%= f.text_field :name, class: 'input', size: 30 %> <br /> <br />
+
+  <%= _('Active?') %>:
+  <%= f.check_box :status, {}, 'enabled', 'disabled' %> <br /> <br />
+
+  <%= _('Comment') %>: <br />
+  <%= f.text_field :comment, class: 'input', size: 30 %> <br /> <br />
+  <br />
+  <%= b_info + _('schedule_periods_explained') %>
+  <br /><br />
+  <table class="maintable" width="100%">
+    <tr align="center">
+      <th><%= _('Any') + " " + _('day_of_week') %></th>
+      <% Date::DAYNAMES.dup.rotate(1).each do |day| %>
+        <th><%= _(day) %></th>
+      <% end %>
+    </tr>
+    <tr align="center">
+      <% (["all days"] + Date::DAYNAMES.dup.rotate(1)).each do |day| %>
+        <td id="<%= "#{day.gsub(' ','_')}" %>" align="center" style="vertical-align: text-top;">
+          <span id="<%= day.to_s + '_list'%>">
+            <%= render 'schedule_periods', day: day, js_new: false, schedule: @schedule %>
+          </span>
+          <br />
+          <div style="width: 230px;">
+            <%= select_hour(nil, { prefix: day + '_new_start', include_blank: true }) %>:
+            <%= select_minute(nil, { prefix: day + '_new_start', include_blank: true }) %> -
+            <%= select_hour(nil, { prefix: day + '_new_end', include_blank: true }) %>:
+            <%= select_minute(nil, { prefix: day + '_new_end', include_blank: true }) %>
+            <%= link_to b_add, 'javascript:void(0)', onclick: "add_period('#{day}')" -%>
+          </div>
+          <br /><br />
+        </td>
+      <% end %>
+    </tr>
+  </table>
+  <br /><br />
+  <%= f.submit _('Save_changes'), disable_with: _('Processing...') %>
+<% end %>
+
+<%= render 'schedule_edit_js' %>

@@ -1,0 +1,18 @@
+# Bundle for cdr import by cli with common use providers
+#
+/user/reseller_3/make_rspro.sql
+# reseller become rpsro
+# make 3002 provider common use
+/provider/sip_3002/make_common_use.sql
+# make 3006 provider common use
+/provider/sip_3006/make_common_use.sql
+# create rates for wholesale tariff
+/tariff/wholesale_2/create_rates_for_mali.sql
+/tariff/wholesale_2/create_rates_for_us.sql
+# create rates for retail tariff
+/tariff/retail_3/create_rates_for_mali.sql
+/tariff/retail_3/create_rates_for_us.sql
+# assign tariffs for commonusepro
+/provider/sip_3002/assign_common_use_tariff_4.sql
+/provider/sip_3006/assign_common_use_tariff_2.sql
+# bundle loaded

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/50243/mor/gui/branches/x5/selenium/tests/vouchers
+END
+vouchers.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/50243/mor/gui/branches/x5/selenium/tests/vouchers/vouchers.case
+END
+vouchers2.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/42047/mor/gui/branches/x5/selenium/tests/vouchers/vouchers2.case
+END
+vouchers.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/vouchers/vouchers.sql
+END

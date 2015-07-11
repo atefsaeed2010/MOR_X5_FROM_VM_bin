@@ -1,0 +1,36 @@
+<%= form_tag(:action => 'update', :id => @cardgroup) do %>
+    <%= render 'form',
+            cardgroup: @cardgroup, price_with_vat: @price_with_vat,
+            currencies: @currencies, lcrs: @lcrs, tariffs: @tariffs,
+            locations: @locations,
+            year_from: @year_from, month_from: @month_from, day_from: @day_from,
+            year_till: @year_till, month_till: @month_till, day_till: @day_till
+    %>
+    <br>
+    <%= submit_tag _('Edit'), :disable_with => _('Processing..') %>
+<% end %>
+
+<br>
+<%= form_tag({:action => 'upload_card_image', :id => @cardgroup}, :multipart => true) do %>
+    <table width="70%" class="simple">
+      <tr>
+        <th align="left"><%= _('Card_image') %></th>
+      </tr>
+      <tr>
+        <td><%= file_field_tag "Card_image" %></td>
+      </tr>
+      <tr>
+        <td><%= submit_tag _('Upload'), :disable_with => _('Processing..') %></td>
+      </tr>
+    </table>
+<% end %>
+<br>
+<br>
+<% if @c_image %>
+    <b><%= @c_image %></b>
+    <br>
+    <br>
+    <%= image_tag @c_image, :alt => 'Card_iamge' %>
+<% end %>
+<br>
+

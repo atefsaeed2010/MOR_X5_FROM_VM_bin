@@ -1,0 +1,2 @@
+<% options = @static_agent_users.map{|u| [nice_user(u), u.id.to_s]} %>
+<%= select_tag("user_agent", options_for_select(options), :style => "max-width: 270px;") %>

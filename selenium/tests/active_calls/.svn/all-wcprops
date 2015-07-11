@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/50172/mor/gui/branches/x5/selenium/tests/active_calls
+END
+active_calls.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/48647/mor/gui/branches/x5/selenium/tests/active_calls/active_calls.case
+END
+active_call.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/43915/mor/gui/branches/x5/selenium/tests/active_calls/active_call.sql
+END
+active_calls_with_prov.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/44613/mor/gui/branches/x5/selenium/tests/active_calls/active_calls_with_prov.case
+END
+active_calls_graphs.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/50172/mor/gui/branches/x5/selenium/tests/active_calls/active_calls_graphs.case
+END
+active_calls_filter.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/46998/mor/gui/branches/x5/selenium/tests/active_calls/active_calls_filter.case
+END
+active_calls_more.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/41022/mor/gui/branches/x5/selenium/tests/active_calls/active_calls_more.sql
+END
+active_calls_pop_up.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/active_calls/active_calls_pop_up.sql
+END
+active_calls_accountant_permission.case
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/44613/mor/gui/branches/x5/selenium/tests/active_calls/active_calls_accountant_permission.case
+END
+update_activecalls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/active_calls/update_activecalls.sql
+END
+ac_and_dst.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/active_calls/ac_and_dst.sql
+END
+delete_from_activecalls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/active_calls/delete_from_activecalls.sql
+END
+update_prefix.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/active_calls/update_prefix.sql
+END
+active_call_provider.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/active_calls/active_call_provider.sql
+END

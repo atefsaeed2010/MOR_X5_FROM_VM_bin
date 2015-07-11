@@ -1,0 +1,39 @@
+<b><%= _('pbx_pool') %>: <%= link_to @pbx_pool.name, {action: 'pbx_pool_edit', id: @pbx_pool.id} %></b>
+</br>
+</br>
+<table>
+  <tr>
+    <td><%= link_to_function b_add + " #{_('assign_user')}:", 'toggleUserSelect();'  %></td>
+    <td>
+      <%= form_tag(action: 'pbx_pool_user_update', id: @pbx_pool.id, operation: 'assign') do %>
+        <div id="user_select" style="display: none; float:left">
+          <%= select_tag 'user_id', options_for_select(@users.blank? ? [[_('None'), -1]] : @users.map {|user| [nice_user(user), user.id]}) %>
+          <%= submit_tag _('Assign'), :disable_with => _('Processing..') %>
+        </div>
+      <% end %>
+     </td>
+   </tr>
+</table>
+</br>
+<table class="maintable" style="min-width:275px">
+  <tr>
+    <th align="left"><%= _('User') %></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% @pbx_pool.users.each_with_index do |user, i| %>
+    <tr class="row<%= (i % 2 + 1).to_s %>">
+      <td id="user_<%= user.id %>" align="left"><%= link_to nice_user(user), {:controller => 'users', :action => 'edit', :id => user.id} %></td>
+      <td align="center" id="edit_<%= user.id %>"><%= link_to b_edit, {:controller => 'users', :action => 'edit', :id => user.id} %></td>
+      <td align="center" id="destroy_<%= user.id %>"><%= link_to b_unassign(:title => _('unassign')), {:action => 'pbx_pool_user_update', :id => @pbx_pool.id, :user_id => user.id, :operation => 'unassign'}, :confirm => _('Are_you_sure') %></td>
+    </tr>
+  <% end %>
+</table>
+
+<% content_for :scripts do %>
+  <script>
+    function toggleUserSelect() {
+      $j('#user_select').toggle();
+    }
+  </script>
+<% end %>

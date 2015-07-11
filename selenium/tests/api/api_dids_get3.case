@@ -1,0 +1,1451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/dids_get/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/dids_get/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=admin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--#PAPRASTAS USERIS-->
+<!--visi userio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699203</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=language</td>
+	<td>en</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Active</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=owner</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=comment</td>
+	<td>comment</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>br</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=simultaneous_call_limit</td>
+	<td>Unlimited</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>cc dp (callingcard)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37093042422</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Test User</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>System Admin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>User Reseller</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Test Reseller</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699210</td>
+	<td></td>
+</tr>
+<!--paprastas useris admino-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=0&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>System Admin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699202</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699201</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699203</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699202</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699201</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699203</td>
+	<td></td>
+</tr>
+<!--paprastas useris reselerio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=3&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Test Reseller</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37066265209</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37066564210</td>
+	<td></td>
+</tr>
+<!--paprastas useris accauntanto-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>System Admin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Test Reseller</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Test User</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699202</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699201</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699203</td>
+	<td></td>
+</tr>
+<!--reselerio userio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_did_number=37062699208&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<!--neegzistuojantis-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_did_number=45662699208&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<!--savo-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_did_number=37062699203&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699203</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=language</td>
+	<td>en</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Active</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=owner</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=simultaneous_call_limit</td>
+	<td>Unlimited</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=comment</td>
+	<td>comment</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=tone_zone</td>
+	<td>br</td>
+</tr>
+<!--antrasis did po šito neseka-->
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//did[2]/did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_did_number=37062699203&amp;search_language=lt&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_did_number=37062699203&amp;search_language=en&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699203</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=language</td>
+	<td>en</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//did[2]/did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_provider=3006&amp;search_language=en&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699203</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/did</td>
+	<td>37062699205</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[3]/did</td>
+	<td>37093042422</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_provider=3305&amp;search_language=en&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699203</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/did</td>
+	<td>37062699205</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[3]/did</td>
+	<td>37093042422</td>
+</tr>
+<!--neegzistuojantis provaideris-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_provider=3307&amp;search_language=en&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699203</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/did</td>
+	<td>37062699205</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[3]/did</td>
+	<td>37093042422</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_provider=3307&amp;search_language=en&amp;search_device=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699203</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=language</td>
+	<td>en</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=owner</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//did[2]/did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_provider=3307&amp;search_language=en&amp;search_device=4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_provider=3307&amp;search_language=en&amp;search_device=7&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_provider=3307&amp;search_language=en&amp;search_device=5&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<!--sitam useriui priskirtas dp-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_provider=3307&amp;search_language=en&amp;search_dialplan=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699203</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/did</td>
+	<td>37062699205</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[3]/did</td>
+	<td>37093042422</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//did[4]/did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>cc dp (callingcard)</td>
+	<td></td>
+</tr>
+<!--userio didams nepriskirtas dp-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_provider=3307&amp;search_language=en&amp;search_dialplan=3&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699203</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/did</td>
+	<td>37062699205</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[3]/did</td>
+	<td>37093042422</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//did[4]/did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>cc dp (callingcard)</td>
+	<td></td>
+</tr>
+<!--joks dp-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_provider=3307&amp;search_language=en&amp;search_dialplan=sdfsdf&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699203</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/did</td>
+	<td>37062699205</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[3]/did</td>
+	<td>37093042422</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//did[4]/did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>cc dp (callingcard)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_provider=3307&amp;search_language=en&amp;search_status=sdfsdf&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_provider=3307&amp;search_language=en&amp;search_status=Active&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699203</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Active</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=owner</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/did</td>
+	<td>37062699205</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/status</td>
+	<td>Active</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/owner</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_provider=3307&amp;search_language=en&amp;search_status=free&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=html</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_provider=3307&amp;search_language=en&amp;search_status=reserved&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37093042422</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Reserved</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=owner</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_user=2&amp;search_provider=3307&amp;search_language=en&amp;search_did_owner=System%20Admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_did_owner=System%20Admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_did_owner=Test%20User%20%231&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699203</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=owner</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/did</td>
+	<td>37062699205</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/owner</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[3]/did</td>
+	<td>37093042422</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[3]/owner</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//did[4]/owner</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_did_owner=Test Reseller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_did_owner=User Reseller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_admin&amp;search_did_owner=Test Accountant&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<!--# RESELERIO USERIS-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699201</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=language</td>
+	<td>ru</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Reserved</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=owner</td>
+	<td>User Resellers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=simultaneous_call_limit</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=comment</td>
+	<td>reseller user's did</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=tone_zone</td>
+	<td>de</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/device</td>
+	<td>IAX2/105</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>br</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[7]/simultaneous_call_limit</td>
+	<td>Unlimited</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>cc dp (callingcard)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[4]/did</td>
+	<td>37066265209</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[7]/did</td>
+	<td>39064614625</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[5]/did</td>
+	<td>39064614617</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Test User</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>System Admin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Test Reseller</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699203</td>
+	<td></td>
+</tr>
+<!--paprastas useris admino-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=0&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>System Admin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699202</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699201</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699203</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699202</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699201</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699203</td>
+	<td></td>
+</tr>
+<!--paprastas useris reselerio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=3&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37066265209</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=reseller</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/did</td>
+	<td>39064614617</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[3]/did</td>
+	<td>39064614618</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[4]/did</td>
+	<td>39064614625</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//did[5]/did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Test Reseller</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699210</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699203</td>
+	<td></td>
+</tr>
+<!--paprastas useris accauntanto-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>System Admin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Test Reseller</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Test User</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699202</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699201</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37062699203</td>
+	<td></td>
+</tr>
+<!--ADMINO userio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_did_number=37062699205&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<!--neegzistuojantis-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_did_number=45662699208&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<!--savo-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_did_number=39064614618&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>39064614618</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=language</td>
+	<td>au</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Active</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=reseller</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=owner</td>
+	<td>User Resellers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/105</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=simultaneous_call_limit</td>
+	<td>Unlimited</td>
+</tr>
+<!--antrasis did po šito neseka-->
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//did[2]/did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_did_number=39064614618&amp;search_language=lt&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_did_number=39064614618&amp;search_language=au&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>39064614618</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=language</td>
+	<td>au</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//did[2]/did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_provider=3006&amp;search_language=en&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699208</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=owner</td>
+	<td>User Resellers</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//did[2]/did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_provider=3305&amp;search_language=en&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699208</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=owner</td>
+	<td>User Resellers</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//did[2]/did</td>
+	<td></td>
+</tr>
+<!--neegzistuojantis provaideris-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_provider=3307&amp;search_language=en&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699208</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=owner</td>
+	<td>User Resellers</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//did[2]/did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_provider=3307&amp;search_language=en&amp;search_device=7&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699208</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=owner</td>
+	<td>User Resellers</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//did[2]/did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_provider=3307&amp;search_language=en&amp;search_device=4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_provider=3307&amp;search_language=en&amp;search_device=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_provider=3307&amp;search_language=en&amp;search_device=5&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<!--sitam useriui priskirtas dp-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_provider=3307&amp;search_dialplan=3&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699201</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/did</td>
+	<td>37062699208</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[3]/did</td>
+	<td>37062699210</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[7]/did</td>
+	<td>39064614625</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>auth by pin (authbypin)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>cc dp (callingcard)</td>
+	<td></td>
+</tr>
+<!--userio didams nepriskirtas dp-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_provider=3307&amp;search_dialplan=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699201</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/did</td>
+	<td>37062699208</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[3]/did</td>
+	<td>37062699210</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[7]/did</td>
+	<td>39064614625</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>auth by pin (authbypin)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>cc dp (callingcard)</td>
+	<td></td>
+</tr>
+<!--joks dp-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_provider=3307&amp;search_dialplan=sdfsdf&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699201</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/did</td>
+	<td>37062699208</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[3]/did</td>
+	<td>37062699210</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[7]/did</td>
+	<td>39064614625</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>auth by pin (authbypin)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>cc dp (callingcard)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_provider=3307&amp;search_status=sdfsdf&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_provider=3307&amp;search_status=Active&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699208</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Active</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/did</td>
+	<td>37062699210</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/status</td>
+	<td>Active</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Reserved</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Free</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_provider=3307&amp;search_status=free&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=html</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_provider=3307&amp;search_status=reserved&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699201</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Reserved</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_user=5&amp;search_provider=3307&amp;search_did_owner=System%20Admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_did_owner=System%20Admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_did_owner=Test%20Reseller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_did_owner=Test%20User%20%231&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_did_owner=User Resellers&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did &gt; did</td>
+	<td>37062699201</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/did</td>
+	<td>37062699208</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=owner</td>
+	<td>User Resellers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//did[2]/owner</td>
+	<td>User Resellers</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/dids_get?u=user_reseller&amp;search_did_owner=Test Accountant&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>No DIDs found</td>
+</tr>
+</tbody></table>
+</body>
+</html>

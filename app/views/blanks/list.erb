@@ -1,0 +1,93 @@
+<table class="bordered">
+  <tr>
+    <td>
+      <%= form_tag :action => 'list', :search_on => 1, :search_pressed => true do %>
+        <table width="500px" class="simple">
+          <tr>
+            <td><%= _('From') %>:</td>
+            <td nowrap="true" colspan=5><%= select_datetime(Time.mktime(session[:year_from], session[:month_from], session[:day_from], session[:hour_from], session[:minute_from]), :end_year => Date.today.year+1, :prefix => "date_from", :use_month_numbers => false) %></td>
+            <td align="right" width="20%">
+              <% if @options[:clear] %>
+                  <%= link_to b_cross + _('Clear_search'), {:action => 'list', :clear => 1}, {:id => "clear_search"} %>
+              <% end %>
+            </td>
+          </tr>
+          <tr>
+            <td><%= _('Till') %>:</td>
+            <td nowrap="true" colspan=5><%= select_datetime(Time.mktime(session[:year_till], session[:month_till], session[:day_till], session[:hour_till], session[:minute_till]), :end_year => Date.today.year+1, :prefix => "date_till", :use_month_numbers => false) %></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><%= _('Name') %>:</td>
+            <td><%= text_field_tag("s_name", @options[:s_name], "class" => "input", :size => "12", :maxlength => "50") %></td>
+          </tr>
+          <tr>
+            <td width="100px"><%= _('value2_between') %>:</td>
+            <td>
+              <%= text_field_tag('s_min_value2', @options[:s_min_value2], "class" => "input", :size => "12", :maxlength => "50") %>
+              &nbsp;-
+              &nbsp;<%= text_field_tag('s_max_value2', @options[:s_max_value2], "class" => "input", :size => "12", :maxlength => "50") %>
+            </td>
+          </tr>
+          <tr>
+            <td><%= submit_tag _('Search'), :disable_with => _('Processing..') %></td>
+          </tr>
+        </table>
+      <% end %>
+    </td>
+  </tr>
+</table>
+
+<br/><br/>
+
+<table width="100%">
+  <tr>
+    <td align="left"><%= link_to b_add + _('Blank_add'), :action => 'new' %></td>
+    <td align="right"><%= link_to b_csv + _('Export_to_csv'), :action => 'list', :csv => 1 %></td>
+  </tr>
+</table>
+
+<br/>
+
+<% unless @blanks.count.zero? %>
+  <% if @total_pages > 1 %>
+      <%= page_select_header(@options[:page], @total_pages, nil, @options) %>
+  <% end %>
+
+  <table class="maintable" width="100%">
+    <tr>
+      <th align="left" width="3%"><%= sortable_list_header("id", _('ID'), @options) %></th>
+      <th align="left"><%= sortable_list_header("name", _('Name'), @options) %></th>
+      <th align="center"><%= sortable_list_header("date", _('Date'), @options) %></th>
+      <th align="left"><%= sortable_list_header("description", _('Description'), @options) %></th>
+      <th align="right"><%= sortable_list_header("value1", _('Value1'), @options) %></th>
+      <th align="right"><%= sortable_list_header("value2", _('Value2'), @options) %></th>
+      <th align="center"><%= sortable_list_header("value3", _('Value3'), @options) %></th>
+      <th align="right"><%= sortable_list_header("balance", _('Balance'), @options) + " (#{session[:show_currency]})"%></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <% @blanks.each_with_index do |blank, i| %>
+        <tr class="row<%= (i % 2 + 1).to_s %>">
+          <td id="id_<%= blank.id %>" align="left"><%= blank.id.to_i %></td>
+          <td id="name_<%= blank.id %>" align="left"><%= blank.name.to_s %></td>
+          <td id="date_<%= blank.id %>" align="center"><%= blank.date.nil? ? '' : nice_user_timezone(blank.date) %></td>
+          <td id="desc_<%= blank.id %>" align="left"><%= blank.description.to_s %></td>
+          <td id="value1_<%= blank.id %>" align="right"><%= blank.value1.nil? ? '' : blank.value1.to_i %></td>
+          <td id="value2_<%= blank.id %>" align="right"><%= blank.value2.nil? ? '' : nice_number(blank.value2.to_d) %></td>
+          <td id="value3_<%= blank.id %>" align="center">
+            <%= link_to(b_check(:title => _('Disable')), :action => 'value3_change_status', :id => blank.id) if blank.value3 == 'yes' %>
+            <%= link_to(b_cross(:title => _('Enable')), :action => 'value3_change_status', :id => blank.id) if ((blank.value3 == 'no') or (blank.value3.nil?)) %>
+          </td>
+          <td id="balance_<%= blank.id %>" align="right"><%= blank.balance.nil? ? '' : nice_number(blank.balance.to_d * @options[:exchange_rate]) %></td>
+          <td align="center" id="edit_<%= blank.id %>"><%= link_to b_edit, {:action => 'edit', :id => blank.id} %></td>
+          <td align="center" id="destroy_<%= blank.id %>"><%= link_to b_delete, {:action => 'destroy', :id => blank.id}, {:confirm => _('Are_you_sure'), :method => :post, :id => "delete_link_"+ blank.id.to_s} %></td>
+        </tr>
+    <% end %>
+  </table>
+
+  <% if @total_pages > 1 %>
+      </br>
+      <%= page_select_header(@options[:page], @total_pages, nil, @options) %>
+  <% end %>
+<% end %>

@@ -1,0 +1,7 @@
+# create fax and sip devices for user_reseller, reseller dids setting
+# ----
+# create fax device
+user/user_5/create_fax_2502.sql
+# create sip device
+user/user_5/create_sip_2503.sql
+# bundle loaded

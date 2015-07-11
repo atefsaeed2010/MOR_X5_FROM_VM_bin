@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/52302/mor/gui/branches/x5/selenium/tests/permissions
+END
+permissions_reseller.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/permissions/permissions_reseller.case
+END
+permissions_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/45679/mor/gui/branches/x5/selenium/tests/permissions/permissions_user.case
+END
+permissions_user2.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/48146/mor/gui/branches/x5/selenium/tests/permissions/permissions_user2.case
+END
+permissions_user3.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/52302/mor/gui/branches/x5/selenium/tests/permissions/permissions_user3.case
+END
+permissions_user4.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/49048/mor/gui/branches/x5/selenium/tests/permissions/permissions_user4.case
+END
+permissions_user5.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/52166/mor/gui/branches/x5/selenium/tests/permissions/permissions_user5.case
+END
+permissions_user6.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/49048/mor/gui/branches/x5/selenium/tests/permissions/permissions_user6.case
+END
+permissions_rspro.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/permissions/permissions_rspro.case
+END
+permissions_user7.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/permissions/permissions_user7.case
+END
+permissions_user8.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/49042/mor/gui/branches/x5/selenium/tests/permissions/permissions_user8.case
+END
+check_links_for_101.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/permissions/check_links_for_101.case
+END

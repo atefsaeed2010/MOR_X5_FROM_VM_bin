@@ -1,0 +1,161 @@
+<iframe style="height:0px;width:0px;visibility:hidden" src="about:blank"></iframe>
+
+<div style="position: relative">
+ <table width="400px" class="bordered simple" style="position:relative">
+   <tr>
+     <td><%= _('User') + ':' if admin? or reseller? or accountant? %></td>
+     <td>
+      <%= select_tag("s_user", options_for_select([[_('All'), ""]] + @users.map { |u| [h(nice_user(u)), u.id.to_s] }), :style => "max-width:100px" ) if admin? or reseller? or accountant? %>
+    </td>
+    <td colspan="2" align="right">
+        <%= link_to(b_cross + _('Clear_search'), 'javascript:; killRequest(); clean(); reloadActiveCalls(true);', :id=>"clean_button", :hidden=>true)%>
+    </td>
+  </tr>
+  <tr>
+    <td><%= _('Status') + ':' %></td>
+    <td>
+      <select id="s_status" name="s_status" style="max-width: 80px">
+        <option id="s_status_all" value=""> <%= _('All') %> </option>
+        <option id="s_status_answered" value="1"> <%= _('Answered') %> </option>
+        <option id="s_status_ringing" value="0" > <%= _('Ringing') %> </option>
+      </select>
+    </td>
+    <td><%= _('Country') + ':' %></td>
+    <td>
+      <%= select_tag("s_country", options_for_select([[_('All'), ""]] + @countries.map { |country|  country.name}), :style => "max-width:100px" )%>
+    </td>
+  </tr>
+  <% if admin? or current_user.reseller_allow_providers_tariff? or accountant? %>
+    <tr>
+      <td><%= _('Provider') + ':' %></td>
+      <td>
+        <select id="s_provider" name="s_provider" style="max-width: 100px" >
+          <option value="" selected> <%= _('All') %></option>
+          <% @providers.each do |provider| %>
+            <option value='<%= provider.id %>'> <%= h(provider.name) %> </option>
+          <% end %>
+        </select>
+      </td>
+    </tr>
+  <% end %>
+  <tr>
+    <td><%= _('Source') %>:</td>
+    <td nowrap="true"><%= text_field_tag("s_source", session[:active_calls_search][:s_source]) %></td>
+    <td><%= _("Destination") %>:</td>
+    <td nowrap="true" colspan=2><%= text_field_tag("s_destination", session[:active_calls_search][:s_destination]) %></td>
+  </tr>
+  <tr>
+    <td colspan=2><%= submit_tag _('Search'), :disable_with => _('Processing..'), :onclick=>'killRequest(); reloadActiveCalls(true); stripInputs();'%></td>
+  </tr>
+</table>
+</div>
+
+<br style="clear:left"><br/>
+
+<div align="center" id="active_calls">
+  <%= render 'active_calls_show', active_calls: @active_calls, options: @options,
+                                  show_did: @show_did, ma_active: @ma_active,
+                                  chanspy_disabled: @chanspy_disabled,
+                                  spy_device: @spy_device, user_id: @user_id,
+                                  show_did: @show_did, refresh_period: @refresh_period
+  %>
+</div>
+
+<br/>
+<% if admin? %>
+    <%= form_tag(:action => 'truncate_active_calls') do %>
+        <%= submit_tag _('Delete_active_calls_information'), :disable_with => _('Processing..') %>
+        <%= b_info + _('This_action_would_only_delete_temporary_information_it_does_not_affect_any_calls') %>.
+    <% end %>
+<% end %>
+
+<%= javascript_include_tag "jquery-1.4.2.min.js" %>
+<script type="text/javascript">
+
+    $(document).ready(function(){reloadActiveCalls(true);});
+
+    $p = jQuery.noConflict();
+    var active = 1;
+
+    $p(document).ready(function () {
+      $p(document).focusin(
+      function () {
+          //Your logic when the page gets active
+          console.log('page active');
+          active = 1;
+      }).focusout(function () {
+          //Your logic when the page gets inactive
+          console.log('page inactive');
+          active = 0;
+      });
+    });
+
+    new PeriodicalExecuter(function () {reloadActiveCalls(false);}, <%= @refresh_period %>);
+
+    var requestNumber = 0;
+    var pendingRequest;
+
+    function reloadActiveCalls(on_click){
+
+      var maxRequestsNumber = 1;
+
+      if (active == 1 && requestNumber < maxRequestsNumber) {
+        requestNumber++;
+          pendingRequest = new Ajax.Request('<%= Web_Dir %>/stats/active_calls_show', {asynchronous:true, evalScripts:true, onComplete:function(request) {
+              requestNumber--;
+              Element.hide('spinner');
+              if (200 == request.status) {
+                $('active_calls').innerHTML = request.responseText;
+              }
+              if(search_on() && on_click){
+                $('clean_button').hidden = false;
+              } else if(!search_on() && on_click){
+                $('clean_button').hidden = true;
+              }
+          }, onLoading:function(request) {
+             Element.show('spinner');
+          }, parameters: 's_user=' + $('s_user').value + '&s_status=' + $('s_status').value
+            + '&s_country='+ $('s_country').value
+            <% if admin? || accountant? || reseller_pro? %>
+              + '&s_provider=' + $('s_provider').value
+            <% end %>
+            + '&s_source=' + encodeURIComponent($('s_source').value)
+            + '&s_destination=' + encodeURIComponent($('s_destination').value) + '&search_on='
+            + on_click,
+          });
+      }
+    };
+
+    function clean(){
+      var search_elements = ['s_user', 's_status', 's_country', 's_source', 's_destination'];
+      <% if admin? || accountant? || reseller_pro? %>
+        search_elements.push('s_provider');
+      <% end %>
+      for(var i=0; i<search_elements.length;i++){
+        var element = search_elements[i];
+        $(element).value = '';
+      }
+      $('clean_button').hidden = true;
+    };
+
+    function search_on(){
+      return  ($('s_user').selectedIndex !== 0 || $('s_status').selectedIndex !== 0
+        || $('s_country').selectedIndex !== 0
+        <% if admin? || accountant? || reseller_pro? %>
+          || $('s_provider').selectedIndex !== 0
+        <% end %>
+        || $('s_source').value !== '' || $('s_destination').value !== '');
+    };
+
+    function killRequest(){
+      if(pendingRequest){
+        pendingRequest.transport.abort();
+      }
+    }
+
+    function stripInputs(){
+      $('s_source').value = $('s_source').value.replace(/(^\s+|\s+$)/g, '');
+      $('s_destination').value = $('s_destination').value.replace(/(^\s+|\s+$)/g, '');
+    }
+
+</script>

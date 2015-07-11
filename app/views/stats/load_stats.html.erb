@@ -1,0 +1,186 @@
+<%= javascript_include_tag 'swfobject' %>
+
+<div align="left" class="nb">
+  <%= form_tag :action => 'load_stats' do %>
+    <%= hidden_field_tag 'search_on', 1 %>
+      <table>
+        <tr>
+          <td>
+            <%= _('Date') %>:
+          </td>
+          <td>
+            <%= select_date(Time.mktime(session[:year_from], session[:month_from], session[:day_from]), :end_year => Date.today.year+1, :prefix => "date_from") %>
+          </td>
+        </tr>
+      </table>
+      <br/>
+      <table>
+        <tr>
+          <td>
+            <%= _('Direction') %>:
+          </td>
+          <td>
+            <select name="s_direction">
+              <option value="-1" <%= "selected" if @options[:s_direction].to_i == -1 %>> <%= _('All') %> </option>
+              <option value="outgoing" <%= "selected" if @options[:s_direction] == "outgoing" %>> <%= _('Outgoing') %> </option>
+              <option value="incoming" <%= "selected" if @options[:s_direction] == "incoming" %>> <%= _('Incoming') %> </option>
+              <option value="mixed" <%= "selected" if @options[:s_direction] == "mixed" %>> <%= _('Mixed') %> </option>
+            </select>
+          </td>
+          <td>
+            <% if current_user.usertype != 'reseller' %>
+                &nbsp;&nbsp;<%= _('Server') %>: <select name="s_server">
+            <option value="-1" <%= "selected" if @options[:s_server].to_i == -1 %>><%= _('All') %></option>
+            <% for serv in @servers %>
+                <option value="<%= serv.id %>" <%= "selected" if @options[:s_server].to_i == serv.id %>><%= serv.hostname %></option>
+            <% end %>
+          </select>
+            <% end %>
+
+          </td>
+          <td>
+            <%= _('Provider') %>:
+          </td>
+          <td>
+            <select name="s_provider">
+              <option value="-1" <%= "selected" if @options[:s_provider].to_i == -1 %>><%= _('All') %></option>
+              <% for prov in @providers %>
+                  <option value="<%= prov.id %>" <%= "selected" if @options[:s_provider].to_i == prov.id %>><%= prov.name %></option>
+              <% end %>
+            </select>
+          </td>
+        </tr>
+      </table>
+      <br/>
+      <table>
+        <tr>
+          <% if current_user.usertype != 'reseller' %>
+              <td>
+                <%= _('DID') %>:
+              </td>
+              <td>
+                <input title="DID live search" type="text" size="20" id="s_did"
+                       name="s_did" autocomplete="off" value="<%=raw @options[:s_did].to_s %>" />
+                <table id="did_list" style='margin-left:1px;margin-top:0px;position:absolute;width:130px;border-width: 1px;border-image: initial;-webkit-box-shadow: rgba(0, 0, 0, 0.398438) 0px 2px 4px;box-shadow: rgba(0, 0, 0, 0.398438) 0px 2px 4px;background-clip: initial;background-color: rgb(255, 255, 255);background-position: initial initial;background-repeat: initial initial;'></table>
+              </td>
+          <% end %>
+          <td>
+            <%= _('User') %>:
+          </td>
+          <td>
+            <%= render('shared/live_search_field',
+                       object: params[:s_user].to_s,
+                       object_id: @options[:s_user] || -2,
+                       object_name: 'User',
+                       action_url: {controller: :users, action: :get_users_map, options: {show_admin: true}}
+                )
+            %>
+          </td>
+          <td style="white-space: nowrap;">
+            <span id='user_devices'>
+              <% if @devices.present? %>
+                <div id="device_name" style="display: inline;"> Device: </div>
+                <div id='device_select' style="display: inline;">
+                  <%= select_tag('device_id', options_for_select([[_('All'), -1]] + @devices.map{ |device| [nice_device_no_pic(device), device.id]}, @options[:s_device])) %>
+                </div>
+              <% end %>
+            </span>
+          </td>
+        </tr>
+      </table>
+
+      <script type="text/javascript">
+          new Form.Element.EventObserver('s_user',
+                  function(element, value) {
+                      if ($('s_user_id').value >= 0){
+                        new Ajax.Updater('user_devices',
+                                '<%= Web_Dir %>/devices/cli_user_devices',
+                                {
+                                    evalScripts: true,
+                                    onComplete: function(request){Element.hide('spinner');},
+                                    onLoading: function(request){Element.show('spinner');},
+                                    parameters:'id=' + encodeURIComponent($('s_user_id').value)
+                                }
+                        );
+                      }
+                      if ($('s_user_id').value < 0) {
+                          document.getElementById('device_select').style.display = 'none';
+
+                      } else {
+                          document.getElementById('device_select').style.display = 'display: inline;';
+                      }
+                  }
+          )
+      </script>
+      <% if current_user == 'admin' %>
+          &nbsp;&nbsp;<%= _('Reseller') %>:
+          <select name="s_reseller" id="s_reseller">
+            <option value="-1" <%= "selected" if @options[:s_reseller] == nil or (@options[:s_reseller].to_i == -1) %>><%= _('All') %> </option>
+            <% for reseller in @resellers %>
+                <option value="<%= reseller.id %>" <%= "selected" if @options[:s_reseller].to_i == reseller.id.to_i %>><%= nice_user(reseller) %> </option>
+            <% end %>
+          </select>
+      <% end %>
+      <%= hidden_field_tag 'searched', true %>
+      <br/><%= submit_tag _('Change'), :disable_with => _('Processing..') %>
+  <% end %>
+</div>
+<% unless @searching %>
+    <br/><%= b_info + _('press_search_button_to_show_data') %>
+<% end %>
+
+<% if @calls_answered or @calls_all %>
+<!-- amline script-->
+<br/>
+<br/>
+<table>
+  <tr>
+    <td>
+      <div id="flashcontent7"><strong>You need to upgrade your Flash Player</strong></div>
+      <script type="text/javascript">
+          // <![CDATA[
+          var so = new SWFObject("<%= Web_Dir %>/swf/amline.swf", "amline", "800", "400", "6", "#FFFFFF");
+          so.addVariable("path", "<%= Web_Dir %>/swf/");
+          so.addVariable("settings_file", escape("<%= Web_Dir %>/swf/amline7.xml"));
+          so.addParam("wmode", "transparent");
+          so.addVariable("chart_data", escape("<%=   @Call_answered_graph %>"));
+          so.addVariable("additional_chart_settings", encodeURI("<settings><labels><label><x>0</x><y>20</y><rotate>false</rotate><align>center</align><text_size>15</text_size><text><![CDATA[<b><%= _('Load_stats') %></b>]]></text></label></labels></settings>"));
+          so.write("flashcontent7");
+          // ]]>
+      </script>
+      <!-- end of amline script -->
+    </td>
+  </tr>
+</table>
+<% end %>
+<script type='text/javascript'>
+    Event.observe(window, 'load',  function() {
+        Event.observe($('s_did'), 'click', function(){
+            if ($('s_did').value == "") {
+                $('did_list').innerHTML = "";
+                <%=raw remote_function(:update => 'did_list',:url => {:controller => :locations, :action => :get_did_map }, :with => "'empty_click=true'") %>
+            }
+            Event.observe($('s_did'), 'keyup', function(){
+                $('did_list').innerHTML = "";
+                <%=raw remote_function(:update => 'did_list',:url => {:controller => :locations, :action => :get_did_map }, :with => "'did_livesearch='+$('s_did').value") %>
+            });
+            Event.observe($('did_list'), 'mouseover', function(){
+                var el = document.getElementById('did_list').getElementsByTagName('td');
+                for(var i=0;i<el.length;i++){
+                    el[i].onclick=function(){
+                        if (this.id != -2) {
+                            document.getElementById('s_did').value = this.innerHTML
+                            <%= raw remote_function(:update => 'did_list',:url => {:controller => :locations, :action => :get_did_map }, :with => "'did_livesearch='") %>
+                        }
+                    }
+                    el[i].onmouseover=function(){
+                        this.style.backgroundColor="#BBBBBB";
+                    }
+                    el[i].onmouseout=function(){
+                        this.style.backgroundColor="rgb(255, 255, 255)";
+                    }
+                }
+            });
+        });
+    });
+</script>

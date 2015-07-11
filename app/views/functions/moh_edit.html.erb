@@ -1,0 +1,5 @@
+<%= form_tag(:action => 'moh_update') do %>
+    <%= render 'form', mohs: @mohs, ivrs: @ivrs %>
+    <%= submit_tag _('Save'), :disable_with => _('Processing..') %>
+<% end %>
+

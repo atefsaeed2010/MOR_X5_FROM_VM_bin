@@ -1,0 +1,42 @@
+<% view = b_view %>
+<%= render 'search_header_user_rates', local_variables_for_partial(self).merge({tariff: tariff, s_prefix: s_prefix, no_shift: true}) %>
+<%= link_to b_pdf + _('Export_to_PDF'), :action => "generate_personal_rates_pdf", :id => tariff.id %>
+&nbsp;
+<%= link_to b_csv + _('Export_to_CSV'), :action => "generate_personal_rates_csv", :id => tariff.id %>
+<br>
+<br>
+<%= render 'letter_select_header', local_variables_for_partial(self).merge(letters_to_bold: letters_to_bold) %>
+
+<br/>
+<% if total_pages > 1 %>
+    <%= page_select_header(page, total_pages, {:st => st}) %>
+<% end %>
+
+<table width="100%" class="maintable">
+  <tr>
+    <th align="left"><%= _('Name') %></th>
+    <th align="left"><%= _('Type') %></th>
+    <th align="center"><%= _('Destinations') %></th>
+    <th align="center"><%= _('Rate') %>s (<%= session[:show_currency] %>)</th>
+  </tr>
+  <% dgroups.each_with_index { |dg, i| %>
+      <tr class="row<%= (i % 2 + 1).to_s %>">
+        <% arates_size = dg.rates_size(current_user,tariff.id)
+          if arates_size == 1 && common_use_provider.present?
+            label = nice_number(exchange_rate * current_user.get_tax.apply_tax(dg.rates_price(current_user, tariff.id)))
+          else
+            label = _('Details')
+          end
+           %>
+        <td><%= draw_flag_by_code(dg.flag) %>&nbsp;<%= h(dg.name) %></td>
+        <td><%= h(dg.desttype) %></td>
+        <td id="view_img_<%= dg.id.to_s %>" align="center"><%= link_to(view + _('View'), {:controller => :destination_groups, :action => :dg_list_user_destinations, :id => dg.id}, {:onclick => "window.open(this.href,'new_window','height=400,width=600,resizable=yes,scrollbars=yes,menubar=yes');return false;"}) %></td>
+        <td id="details_img_<%= dg.id.to_s %>" align="center"><%= link_to(view + label, {:action => 'user_rates_detailed', :id => dg.id, params: { common_use_provider: common_use_provider}}) if arates_size > 0 %></td>
+      </tr>
+  <% } %>
+</table>
+<br/>
+<% if total_pages > 1 %>
+  <%= page_select_header(page, total_pages, {:st => st}) %>
+<% end %>
+<%= render 'letter_select_header', local_variables_for_partial(self).merge(letters_to_bold: letters_to_bold) %>

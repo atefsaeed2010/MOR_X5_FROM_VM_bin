@@ -1,0 +1,13 @@
+# enable pbx permission for pbx_functions.case
+# ----
+# enable queues permission
+permissions/accountant/queues_write.sql
+# enable dids for queues permission
+permissions/accountant/dids_write.sql
+# enable manage users
+permissions/accountant/manage_users_write.sql
+# enable manage devices
+permissions/accountant/manage_devices_write.sql
+# assign permission to acc
+user/accountant_4/assign_permissions.sql
+# bundle loaded

@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<!--enable billing address for admin users-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/configuration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Default currency</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Tax in amount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Minimum amount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Maximum amount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Payment confirmation by you</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Notify by email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Billing address enabled?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Logo</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Test mode</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_enabled</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_password</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=gateways_authorize_net_tax_in_amount</td>
+	<td>Included Excluded</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_min_amount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_max_amount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=gateways_authorize_net_payment_confirmation</td>
+	<td>Not required Required for all payments</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_payment_notification</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_billing_address_enabled</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_test</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>gateways_authorize_net_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_authorize_net_login</td>
+	<td>3Dacu3L6v</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_authorize_net_password</td>
+	<td>436vr9FYam95YsC8</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=gateways_authorize_net_tax_in_amount</td>
+	<td>label=Excluded</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_authorize_net_min_amount</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_authorize_net_max_amount</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=gateways_authorize_net_payment_confirmation</td>
+	<td>label=Required for all payments</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>gateways_authorize_net_payment_notification</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>gateways_authorize_net_billing_address_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=gateways_authorize_net_test</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_authorize_net_logo_image</td>
+	<td>/home/mor/selenium/files/pics/admin_logo.png</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Settings saved</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_enabled</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_login</td>
+	<td>3Dacu3L6v</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_password</td>
+	<td>436vr9FYam95YsC8</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=gateways_authorize_net_tax_in_amount</td>
+	<td>Excluded</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_min_amount</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_max_amount</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=gateways_authorize_net_payment_confirmation</td>
+	<td>Required for all payments</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_test</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_billing_address_enabled</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_payment_notification</td>
+	<td>on</td>
+</tr>
+<!--auto fill-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_authorize_net_number</td>
+	<td>1234567890</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_authorize_net_amount</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>exact: * Card number - is not a valid credit card number<br /> * CVV2 number - is required<br /> * Amount - must be positive and higher or equal to the minimum amount (if any)<br /> * Name - cannot be empty<br /> * Address1 - cannot be empty<br /> * City - cannot be empty<br /> * Zip Code or Post Code - cannot be empty<br /> * Phone - cannot be empty</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_authorize_net_number</td>
+	<td>1234</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>1234567890</td>
+	<td></td>
+</tr>
+<!--assert-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_first_name</td>
+	<td>System</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_last_name</td>
+	<td>Admin</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_company</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_address</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_city</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_state</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_zip</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_country</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_phone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_fax</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_email</td>
+	<td></td>
+</tr>
+<!--permission and addresses-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=payments/authorize_net/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<!--assert information-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_first_name</td>
+	<td>System</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_last_name</td>
+	<td>Admin</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_company</td>
+	<td>liux kompanija</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_address</td>
+	<td>Karl Johansgate 25 B</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_city</td>
+	<td>Oslo</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_state</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_zip</td>
+	<td>0025</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_country</td>
+	<td>Norway</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_phone</td>
+	<td>(+47) 23 14 80 36</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_fax</td>
+	<td>(+47) 22 42 68 87</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_email</td>
+	<td>test_admin@email.test</td>
+</tr>
+<!--assert accountant info-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>accountant</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>accountant1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_first_name</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_last_name</td>
+	<td>Accountant</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_company</td>
+	<td>kompanija</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_address</td>
+	<td>Ul. Bosmanska 1</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_city</td>
+	<td>Gdynia</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_state</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_zip</td>
+	<td>81-116</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_country</td>
+	<td>Poland</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_phone</td>
+	<td>(+48) 24 13 22 68</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_fax</td>
+	<td>(+48) 24 13 22 69</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_email</td>
+	<td>test_accountant@email.test</td>
+</tr>
+<!--assert 101 info-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_last_name</td>
+	<td>#1</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_company</td>
+	<td>uab kompanija</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_address</td>
+	<td>Prinses Beatrixlaan 23</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_city</td>
+	<td>S-Gravenhage</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_state</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_zip</td>
+	<td>2595 AK</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_country</td>
+	<td>Netherlands</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_phone</td>
+	<td>(+31) 26 6456896</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_fax</td>
+	<td>(+31) 26 6456897</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_email</td>
+	<td>test_user_admin@email.test</td>
+</tr>
+<!--assert reseller info-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_first_name</td>
+	<td>Test</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_last_name</td>
+	<td>Reseller</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_company</td>
+	<td>kompanija cha</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_address</td>
+	<td>Piedras No 623</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_city</td>
+	<td>Capital Federal</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_state</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_zip</td>
+	<td>C1070AAM</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_country</td>
+	<td>Argentina</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_phone</td>
+	<td>11 659 234-5678</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_fax</td>
+	<td>11 658 234-5678</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_email</td>
+	<td>test_reseller@gmail.test</td>
+</tr>
+<!--enable billing address for reseller users-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/configuration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>gateways_authorize_net_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_authorize_net_login</td>
+	<td>3Dacu3L6v</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_authorize_net_password</td>
+	<td>436vr9FYam95YsC8</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_authorize_net_min_amount</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_authorize_net_max_amount</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>gateways_authorize_net_payment_notification</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>gateways_authorize_net_billing_address_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--assert user_reseller-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_first_name</td>
+	<td>User</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_last_name</td>
+	<td>Resellers</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_company</td>
+	<td>kompanija yes</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_address</td>
+	<td>Fiktiv utca 82., IV. em./28.</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_city</td>
+	<td>Budapest</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_state</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_zip</td>
+	<td>2806</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_country</td>
+	<td>Hungary</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_phone</td>
+	<td>+36 -1-7866658</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_fax</td>
+	<td>+36 -1-7866659</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_email</td>
+	<td>test_user_reseller@email.test</td>
+</tr>
+<!--login admin-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<!--set address for admin with various symbols-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=payments/authorize_net/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<!--assert information-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_first_name</td>
+	<td>System</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=gateways_authorize_net_last_name</td>
+	<td>Admin</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_company</td>
+	<td>*Y$#$*^(@#^_)@!</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_address</td>
+	<td>*Y$#$*^(@#^_)@!</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_city</td>
+	<td>*Y$#$*^(@#^_)@!</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_state</td>
+	<td>*Y$#$*^(@#^_)@!</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_zip</td>
+	<td>*Y$#$*^(@#^_)@!</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_country</td>
+	<td>Andorra</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_phone</td>
+	<td>*Y$#$*^(@#^_)@!</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_phone</td>
+	<td>*Y$#$*^(@#^_)@!</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_fax</td>
+	<td>*Y$#$*^(@#^_)@!</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_email</td>
+	<td>*Y$#$*^(@#^_)@!@*Y$#$*^(@#^_)@!.com</td>
+</tr>
+<!--disable authorize net-->
+<!--disable-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/configuration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_enabled</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>gateways_authorize_net_billing_address_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>gateways_authorize_net_billing_address_enabled</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>commit</td>
+	<td>Save changes</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Application error</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Settings saved</td>
+	<td></td>
+</tr>
+<!--assert information-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=gateways_authorize_net_first_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=gateways_authorize_net_last_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>gateways_authorize_net_billing_address_company</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>gateways_authorize_net_billing_address_address</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>gateways_authorize_net_billing_address_city</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>gateways_authorize_net_billing_address_state</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>gateways_authorize_net_billing_address_zip</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>gateways_authorize_net_billing_address_country</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>gateways_authorize_net_billing_address_phone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>gateways_authorize_net_billing_address_phone</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>gateways_authorize_net_billing_address_fax</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>gateways_authorize_net_billing_address_email</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

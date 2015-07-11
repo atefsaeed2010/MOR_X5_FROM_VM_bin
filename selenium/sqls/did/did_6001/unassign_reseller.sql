@@ -1,0 +1,1 @@
+UPDATE `dids` SET reseller_id='0' WHERE id='6001';

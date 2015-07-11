@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/!svn/ver/52326/mor/gui/branches/x5
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/40618/mor/gui/branches/x5/Rakefile
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/39906/mor/gui/branches/x5/README.rdoc
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/47936/mor/gui/branches/x5/.project
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/39906/mor/gui/branches/x5/.gitignore
+END
+Gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/!svn/ver/50299/mor/gui/branches/x5/Gemfile
+END
+config.ru
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/!svn/ver/39906/mor/gui/branches/x5/config.ru
+END

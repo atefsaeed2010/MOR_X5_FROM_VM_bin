@@ -1,0 +1,7 @@
+# email settings for admin and reseller and also emails in personal details for admin, user_admin, reseller and user_reseller
+# ----
+# active calls interval 500
+/settings/functionality/500_active_calls_interval.sql
+# infinity for hide active calls
+/settings/conflines/set_infinity_for_hide_active_calls.sql
+# bundle loaded

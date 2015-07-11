@@ -1,0 +1,7 @@
+# Acc calling cards usage and PIN permissions
+# ----
+# CC usage permission set as write
+/permissions/accountant/calling_cards_write.sql
+# CC PIN permission set as write
+/permissions/accountant/calling_cards_pin_write.sql
+# bundle loaded

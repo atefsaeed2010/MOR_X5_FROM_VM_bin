@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/43384/mor/gui/branches/x5/app/views/ccpanel
+END
+_letter_select_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/43384/mor/gui/branches/x5/app/views/ccpanel/_letter_select_header.html.erb
+END
+checkout.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ccpanel/checkout.html.erb
+END
+call_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/43384/mor/gui/branches/x5/app/views/ccpanel/call_list.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ccpanel/list.html.erb
+END
+speeddials.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ccpanel/speeddials.html.erb
+END
+card_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ccpanel/card_details.html.erb
+END
+display_cart.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ccpanel/display_cart.html.erb
+END
+paypal_complete.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/41942/mor/gui/branches/x5/app/views/ccpanel/paypal_complete.html.erb
+END
+rates.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/43384/mor/gui/branches/x5/app/views/ccpanel/rates.html.erb
+END
+tx_status.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ccpanel/tx_status.html.erb
+END
+speeddial_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ccpanel/speeddial_edit.html.erb
+END
+_rate_select_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/43384/mor/gui/branches/x5/app/views/ccpanel/_rate_select_header.html.erb
+END
+_page_select_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/43384/mor/gui/branches/x5/app/views/ccpanel/_page_select_header.html.erb
+END

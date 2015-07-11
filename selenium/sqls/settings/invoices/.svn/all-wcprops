@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/49307/mor/gui/branches/x5/selenium/sqls/settings/invoices
+END
+prepaid_page_limit14.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/49259/mor/gui/branches/x5/selenium/sqls/settings/invoices/prepaid_page_limit14.sql
+END
+postpaig_page_limit14.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/49307/mor/gui/branches/x5/selenium/sqls/settings/invoices/postpaig_page_limit14.sql
+END
+prepaid_invoice_number_start.sql
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/49139/mor/gui/branches/x5/selenium/sqls/settings/invoices/prepaid_invoice_number_start.sql
+END
+postpaid_invoice_number_type_1.sql
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/49139/mor/gui/branches/x5/selenium/sqls/settings/invoices/postpaid_invoice_number_type_1.sql
+END
+prepaid_postpaid_details.sql
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/49203/mor/gui/branches/x5/selenium/sqls/settings/invoices/prepaid_postpaid_details.sql
+END
+postpaid_number_length.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/49180/mor/gui/branches/x5/selenium/sqls/settings/invoices/postpaid_number_length.sql
+END
+prepaid_number_length_.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/49139/mor/gui/branches/x5/selenium/sqls/settings/invoices/prepaid_number_length_.sql
+END
+postpaid_page_limit0.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/49259/mor/gui/branches/x5/selenium/sqls/settings/invoices/postpaid_page_limit0.sql
+END
+prepaid_number_length.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/49139/mor/gui/branches/x5/selenium/sqls/settings/invoices/prepaid_number_length.sql
+END
+postpaid_page_limit1.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/49307/mor/gui/branches/x5/selenium/sqls/settings/invoices/postpaid_page_limit1.sql
+END
+postpaid_show_balance_line.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/49065/mor/gui/branches/x5/selenium/sqls/settings/invoices/postpaid_show_balance_line.sql
+END
+prepaid_show_balance_line.sql
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/49075/mor/gui/branches/x5/selenium/sqls/settings/invoices/prepaid_show_balance_line.sql
+END
+show_details_3.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/43053/mor/gui/branches/x5/selenium/sqls/settings/invoices/show_details_3.sql
+END
+functionality_invoice_recalculate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/49102/mor/gui/branches/x5/selenium/sqls/settings/invoices/functionality_invoice_recalculate.sql
+END
+show_details_6.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/43059/mor/gui/branches/x5/selenium/sqls/settings/invoices/show_details_6.sql
+END
+invoice_settings.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/49194/mor/gui/branches/x5/selenium/sqls/settings/invoices/invoice_settings.sql
+END
+prepaid_number_type_1.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/49119/mor/gui/branches/x5/selenium/sqls/settings/invoices/prepaid_number_type_1.sql
+END
+postpaid_number_type_2.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/49065/mor/gui/branches/x5/selenium/sqls/settings/invoices/postpaid_number_type_2.sql
+END
+prepaid_number_type_2.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/49065/mor/gui/branches/x5/selenium/sqls/settings/invoices/prepaid_number_type_2.sql
+END
+prepaid_number_length2.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/49180/mor/gui/branches/x5/selenium/sqls/settings/invoices/prepaid_number_length2.sql
+END

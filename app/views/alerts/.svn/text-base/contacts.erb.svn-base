@@ -1,0 +1,69 @@
+<table class="maintable" width="100%">
+  <tr align="left">
+    <th><%= nice_list_order('id', _('ID'), @options) %></th>
+    <th align="center"><%= nice_list_order('status', _('Active'), @options) %></th>
+    <th><%= nice_list_order('name', _('contact_name'), @options) %></th>
+    <th align="center"><%= nice_list_order('timezone', _('timezone'), @options) %></th>
+    <th><%= nice_list_order('email', _('email'), @options) %></th>
+    <th align="right"><%= nice_list_order('max_emails_per_hour', _('max_emails_hour'), @options) %></th>
+    <th align="right"><%= nice_list_order('emails_this_hour', _('emails_this_hour'), @options) %></th>
+    <th align="right"><%= nice_list_order('max_emails_per_day', _('max_emails_day'), @options) %></th>
+    <th align="right"><%= nice_list_order('emails_this_day', _('emails_this_day'), @options) %></th>
+    <th><%= nice_list_order('phone_number', _('phone_number'), @options) %></th>
+    <th align="right"><%= nice_list_order('max_sms_per_hour', _('max_sms_hour'), @options) %></th>
+    <th align="right"><%= nice_list_order('sms_this_hour', _('sms_this_hour'), @options) %></th>
+    <th align="right"><%= nice_list_order('max_sms_per_day', _('max_sms_day'), @options) %></th>
+    <th align="right"><%= nice_list_order('sms_this_day', _('sms_this_day'), @options) %></th>
+    <th><%= nice_list_order('comment', _('Comment'), @options) %></th>
+    <th colspan=2></th>
+  </tr>
+  <% @contacts.each_with_index do |contact, i| %>
+    <tr align="left" class="row<%= i%2+1 %>">
+      <td id="_id_<%= contact.id %>"><%= contact.id %></td>
+      <td id="_status_<%= contact.id %>" align="center"><%= link_to (contact.status == 'enabled' ? b_check({title: 'Contact will be used'}) : b_cross({title: 'Contact will not be used'})), action: 'contact_toggle', id: contact.id, params: params %></td>
+      <td id="_name_<%= contact.id %>"><%= contact.name %></td>
+      <td id="_timezone_<%= contact.id %>" align="center"><%= nice_alert_timezone(contact.timezone) %></td>
+      <td id="_email_<%= contact.id %>"><%= contact.email %></td>
+      <td id="_max_emails_per_hour_<%= contact.id %>" align="right"><%= contact.max_emails_per_hour %></td>
+      <td id="_emails_this_hour_<%= contact.id %>" align="right"><%= contact.emails_this_hour %></td>
+      <td id="_max_emails_per_day_<%= contact.id %>" align="right"><%= contact.max_emails_per_day %></td>
+      <td id="_emails_this_day_<%= contact.id %>" align="right"><%= contact.emails_this_day %></td>
+      <td id="_phone_number_<%= contact.id %>"><%= contact.phone_number %></td>
+      <td id="_max_sms_per_hour_<%= contact.id %>" align="right"><%= contact.max_sms_per_hour %></td>
+      <td id="_sms_this_hour_<%= contact.id %>" align="right"><%= contact.sms_this_hour %></td>
+      <td id="_max_sms_per_day_<%= contact.id %>" align="right"><%= contact.max_sms_per_day %></td>
+      <td id="_sms_this_day_<%= contact.id %>" align="right"><%= contact.sms_this_day %></td>
+      <td id="_comment_<%= contact.id %>"><%= contact.comment %></td>
+      <td id="_edit_<%= contact.id %>" align="center"><%= link_to b_edit, { action: 'contact_edit', id: contact.id }, { id: 'edit_link_#{contact.id}' } %></td>
+      <td id="_delete_<%= contact.id %>" align="center"><%= link_to b_delete, {action: 'contact_destroy', id: contact.id}, {confirm: _('Are_you_sure'), method: 'post', id: 'delete_link_#{contact.id}'} %></td>
+    </tr>
+  <% end %>
+  <%= form_for :new_contact, url: { action: 'contact_add' } do |f| %>
+    <tr align="left">
+      <th></th>
+      <th></th>
+      <th><%= f.text_field :name, class: 'input', size: 20 %></th>
+      <th align="center">
+        <%=
+            f.collection_select(:timezone,
+              ActiveSupport::TimeZone.all, :formatted_offset, :to_s,
+              { selected: alerts_new_contact_timezone(@cache) },
+              { style: 'width: 86px' }
+            )
+        -%>
+      </th>
+      <th><%= f.text_field :email, class: 'input', size: 30 %></th>
+      <th align="right"><%= f.text_field :max_emails_per_hour, class: 'input', size: 8 %></th>
+      <th></th>
+      <th align="right"><%= f.text_field :max_emails_per_day, class: 'input', size: 8 %></th>
+      <th></th>
+      <th><%= f.text_field :phone_number, class: 'input', size: 20 %></th>
+      <th align="right"><%= f.text_field :max_sms_per_hour, class: 'input', size: 8 %></th>
+      <th></th>
+      <th align="right"><%= f.text_field :max_sms_per_day, class: 'input', size: 8 %></th>
+      <th></th>
+      <th><%= f.text_field :comment, class: 'input', size: 30 %></th>
+      <th colspan=2 align="center"><%= f.submit type: 'image', src: Web_Dir+'/images/icons/add.png', title:  _('Add') %></th>
+    </tr>
+  <% end %>
+</table>

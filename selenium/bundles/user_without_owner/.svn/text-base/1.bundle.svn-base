@@ -1,0 +1,9 @@
+# Remove reseller, Create user with bad owner id,
+# ----
+# Deleting reseller, despite of that he has calls and his own users
+user/reseller_3/reseller_delete.sql
+# Done
+# Creating user with bad owner id
+user/user_1001/user_no_owner.sql
+# Done
+# bundle loaded

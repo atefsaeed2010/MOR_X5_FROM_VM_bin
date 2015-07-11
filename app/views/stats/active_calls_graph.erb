@@ -1,0 +1,29 @@
+<%= javascript_include_tag 'swfobject' %>
+<% content_for :scripts do %>
+  <!-- amline script-->
+  <script>
+  // <![CDATA[
+    var graph = new SWFObject("<%= Web_Dir %>/swf/amline.swf", "amline", "100%", "500", "6", "#FFFFFF");
+    graph.addVariable("path", "<%= Web_Dir %>/swf/");
+    graph.addParam("wmode", "transparent");
+    graph.addVariable("chart_settings", encodeURIComponent("<settings><font>Tahoma</font><connect>false</connect><reload_data_interval><%= @graph[:refresh_period] %></reload_data_interval><labels><label><x>0</x><y>20</y><rotate>false</rotate><align>center</align><text_size>15</text_size><text><![CDATA[<b><%= _('active_calls_graph') %></b>]]></text></label></labels><hide_bullets_count>18</hide_bullets_count><data_type>csv</data_type><background><alpha>90</alpha><border_alpha>10</border_alpha></background><plot_area><margins><left>50</left><right>40</right><bottom>65</bottom></margins></plot_area><grid><x><alpha>10</alpha><approx_count>24</approx_count></x><y_left><alpha>10</alpha></y_left></grid><axes><x><width>1</width><color>0D8ECF</color></x><y_left><width>1</width><color>0D8ECF</color></y_left></axes><values><x><rotate>90</rotate></x><y_left><min>0</min><max>10</max><skip_first>0</skip_first><skip_last>1</skip_last><unit></unit></y_left></values><indicator><color>0D8ECF</color><x_balloon_text_color>FFFFFF</x_balloon_text_color><zoomable>false</zoomable><line_alpha>50</line_alpha><selection_color>0D8ECF</selection_color><selection_alpha>20</selection_alpha></indicator><zoom_out_button><text_color_hover>FF0F00</text_color_hover></zoom_out_button><help><button><color>FCD202</color><text_color>000000</text_color><text_color_hover>FF0F00</text_color_hover></button></help><graphs><graph><title><%= _('This_day') %></title><line_width>2</line_width><color>#00CC00</color><color_hover>#00CC00</color_hover></graph><graph><title><%= _('yesterday') %></title><color>#0000FF</color><color_hover>#0000FF</color_hover><line_width>2</line_width></graph><graph/></graphs><legend><x>20</x><y>20</y><enabled>1</enabled></legend></settings>"));
+    graph.addVariable("data_file", escape('<%= Web_Dir %>/tmp/active_calls.csv'));
+    graph.write("active_calls_graph");
+  // ]]>
+
+    new PeriodicalExecuter(function () {
+      new Ajax.Request('<%=Web_Dir%>/stats/update_active_calls_graph', {asynchronous:true, evalScripts:true, onComplete:function (request) {
+        Element.hide('spinner');
+      }, onLoading:function (request) {
+        Element.show('spinner');
+      }})
+    }, <%= @graph[:refresh_period] - 1 %>);
+  </script>
+  <!-- end of amline script -->
+<% end %>
+<div class="info_table">
+  <%= _('Page_refreshes_every') %>: <%= @graph[:refresh_period] %> s
+</div>
+<div id="active_calls_graph" align="center">
+  <strong>You need to upgrade your Flash Player</strong>
+</div>

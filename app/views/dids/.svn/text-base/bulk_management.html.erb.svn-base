@@ -1,0 +1,111 @@
+<div class="form_background">
+  <%= form_tag(:action => 'confirm_did_action') do %>
+      <table>
+        <tr>
+          <td colspan="2"><b><%= _('Which_DIDs') %>:</b></td>
+        </tr>
+        <tr>
+          <td class="indented_form_row" colspan="2">
+            <b><%= _('DID_interval') %>:</b><%= text_field_tag 'did_start', @bulk_params[:did_start], "class" => "input" %>
+            - <%= text_field_tag 'did_end', @bulk_params[:did_end], "class" => "input" %>
+            <br/>
+          </td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td class="indented_form_row" >
+            <b><%= _('User') %>: </b>
+          </td>
+          <td>
+            <%= render 'shared/live_search_field', object: @bulk_params[:did_user],
+                                                   object_id: @bulk_params[:did_user_id],
+                                                   object_name: 'User',
+                                                   action_url: {controller: :users,
+                                                                action: :get_users_map,
+                                                                options: {show_admin: true}
+                                                                } %>
+            &nbsp;&nbsp;<b><%= _('Device') %>:</b>
+            <span id="device_list_span">
+              <%= select_tag("device", options_for_select([[_('All'), ""]] + @devices.map { |d| [nice_device(d, {:image => false}), d.id.to_s] }, @search_device.to_s), :style => "max-width:100px") %>
+              <script type="text/javascript">
+              new Form.Element.EventObserver('s_user', function(element, value) {
+                new Ajax.Updater('device_list_span', '<%= Web_Dir %>/devices/ajax_get_user_devices', {
+                  asynchronous:true,
+                  evalScripts:true,
+                  onComplete:function(request){
+                    Element.hide('spinner');
+                  },
+                  onLoading:function(request){
+                    Element.show('spinner');
+                  },
+                  parameters:'user_id=' + encodeURIComponent($('s_user_id').value) + '&default=<%= @search_device.to_i.to_s %>&all=true&fax=true'})
+              })
+              </script>
+            </span>
+          </td>
+        </tr>
+        </table>
+        <table>
+        <tr>
+          <td colspan="2"><b><%= _('What_to_do') %>:</b></td>
+        </tr>
+        <tr>
+          <td>
+            <table>
+              <tr>
+                <td class="border_disabled indented_form_row small_cell">
+                  <label for="did_action_1"><b><%= _('Update') %></b></label></td>
+                <td class="border_disabled"><%= radio_button_tag('did_action', '1', (@bulk_params[:did_action].to_i == 1)) %> </td>
+              </tr>
+
+              <% unless reseller? %>
+                  <tr>
+                    <td class="border_disabled indented_form_row small_cell">
+                      <label for="did_action_2"><b><%= _('Delete') %></b></label></td>
+                    <td class="border_disabled"> <%= radio_button_tag('did_action', '2', (@bulk_params[:did_action] == 2)) %></td>
+                  </tr>
+
+
+                  <tr>
+                    <td class="border_disabled indented_form_row small_cell">
+                      <label for="did_action_3"><b><%= _('Manage_rates') %></b></label></td>
+                    <td class="border_disabled"><%= radio_button_tag('did_action', '3', (@bulk_params[:did_action] == 3)) %></td>
+                  </tr>
+              <% end %>
+
+              <% unless reseller? %>
+                  <tr>
+                    <td class="border_disabled indented_form_row small_cell">
+                      <label for="did_action_4"><b><%= _('Add_to_Trunk') %></b></label></td>
+                    <% if @trunk.to_i > 0 %>
+                        <td class="border_disabled"><%= radio_button_tag('did_action', '4', (@bulk_params[:did_action] == 4)) %></td>
+                    <% else %>
+                        <td class="border_disabled"><%= radio_button_tag('did_action', '4', (@bulk_params[:did_action] == 4), :disabled => true) %><%= _('No_trunks') %></td>
+                    <% end %>
+                  </tr>
+              <% end %>
+
+              <tr>
+                <td class="border_disabled indented_form_row small_cell">
+                  <label for="did_action_5"><b><%= _('Add_to_user') %></b></label></td>
+                <td class="border_disabled"><%= radio_button_tag('did_action', '5', (@bulk_params[:did_action].to_i == 5)) %></td>
+              </tr>
+
+              <% unless reseller? %>
+                  <tr>
+                    <td class="border_disabled indented_form_row small_cell">
+                      <label for="did_action_6"><b><%= _('Assign_DialPlan') %></b></label></td>
+                    <td class="border_disabled"> <%= radio_button_tag('did_action', '6', (@bulk_params[:did_action].to_i == 6 ), {:disabled => (not @dps_created)}) %><%= _('No_dialplans') if not @dps_created %></td>
+                  </tr>
+              <% end %>
+
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"><%= submit_tag _('Change'), :disable_with => _('Processing..') %></td>
+        </tr>
+      </table>
+  <% end %>
+</div>

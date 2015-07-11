@@ -1,0 +1,21 @@
+# give permissions and update addresses
+# reseller permissions
+permissions/reseller/create.sql
+# cc
+permissions/reseller/cc_write.sql
+# pg
+permissions/reseller/payment_gateways_write.sql
+# assign permissions
+user/reseller_3/assign_permissions.sql
+# update users addresses
+# reseller address
+user/reseller_3/set_address.sql
+# user_admin address
+user/user_2/set_address.sql
+# admin address
+user/admin_0/set_address.sql
+# accountant address
+user/accountant_4/set_address.sql
+# user reseller address
+user/user_5/set_address.sql
+# bundle loaded

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/52056/mor/gui/branches/x5/selenium/sqls/settings/payments
+END
+disable_paypal_0.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/52056/mor/gui/branches/x5/selenium/sqls/settings/payments/disable_paypal_0.sql
+END
+enable_webmoney_0.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/payments/enable_webmoney_0.sql
+END
+enable_paypal_0.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/52056/mor/gui/branches/x5/selenium/sqls/settings/payments/enable_paypal_0.sql
+END

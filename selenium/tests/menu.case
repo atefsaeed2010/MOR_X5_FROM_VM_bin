@@ -1,0 +1,2118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--reseller nemato voices, pbx pools be permissionų (tam buvo ticket)-->
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//a[contains(@href, '/billing/ivrvoices')]</td>
+	<td>Voices</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>link=IVR</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//a[contains(@href, '/billing/ivr_time_periods')]</td>
+	<td>Time Periods</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//a[contains(@href, '/billing/ivr')]</td>
+	<td>IVRs</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--SETTINGS skiltis-->
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dsettings_menu0']/div/a[2]</td>
+	<td>Setup</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/settings')]</td>
+	<td>Settings</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/users/default_user')]</td>
+	<td>Default User</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/devices/default_device')]</td>
+	<td>Default Device</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/translations')]</td>
+	<td>Translations</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/currencies/currencies')]</td>
+	<td>Currencies</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/permissions/list?group_type=accountant')]</td>
+	<td>Accountant permissions</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/cron_actions')]</td>
+	<td>Cron Actions</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/emails/list')]</td>
+	<td>Emails</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/backups/backup_manager')]</td>
+	<td>Backups</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/integrity_check')]</td>
+	<td>Integrity check</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/generate_hash')]</td>
+	<td>Generate hash</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/background_tasks')]</td>
+	<td>Background Tasks</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dsettings_menu0']/div[3]/a[2]</td>
+	<td>Billing</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/servers/list')]</td>
+	<td>Servers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/providers/list')]</td>
+	<td>Providers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/terminators/list')]</td>
+	<td>Terminators</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/providers/quick_changes')]</td>
+	<td>Quick Changes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/providers/list?s_hidden=1')]</td>
+	<td>Hidden</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/lcrs/list')]</td>
+	<td>LCR</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/lcrs/clone_options')]</td>
+	<td>Copy LCR</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/tariffs/list')]</td>
+	<td>Tariffs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/tariffs/day_setup')]</td>
+	<td>Day setup</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/directions/list')]</td>
+	<td>Directions</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/destination_groups/list')]</td>
+	<td>Groups</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/dids/list')]</td>
+	<td>DIDs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/dialplans/dialplans')]</td>
+	<td>Dial Plans</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Quickforwards</td>
+	<td>Quickforwards</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/quickforwards_rules/settings')]</td>
+	<td>Settings</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/quickforwards_rules/list')]</td>
+	<td>Rules</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=saddons_menu26</td>
+	<td>IVR</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/ivrvoices')]</td>
+	<td>Voices</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/ivr_time_periods')]</td>
+	<td>Time Periods</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=CDR</td>
+	<td>CDR</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/cdr/import_csv')]</td>
+	<td>Import</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/cdr/rerating')]</td>
+	<td>Rerating</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Functions</td>
+	<td>Functions</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/locations/localization')]</td>
+	<td>Localization</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/number_pools/pool_list')]</td>
+	<td>Number Pools</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/call_tracing')]</td>
+	<td>Call Tracing</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dsettings_menu0']/div[5]/a[2]</td>
+	<td>Accounting</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/services/list')]</td>
+	<td>Services</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/services/subscriptions')]</td>
+	<td>Subscriptions</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/accounting/invoices')]</td>
+	<td>Invoices</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/credit_note/list')]</td>
+	<td>Credit notes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/accounting/financial_statements')]</td>
+	<td>Financial statements</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/payments/list')]</td>
+	<td>Payments</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/users/list')]</td>
+	<td>Users</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/first_activity')]</td>
+	<td>First activity</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/users/hidden')]</td>
+	<td>Hidden</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/devices/devices_all')]</td>
+	<td>Devices</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/devices/clis')]</td>
+	<td>CLIs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/import_user_data')]</td>
+	<td>Import</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/login_as')]</td>
+	<td>Login as</td>
+</tr>
+<!--ADDONS skiltis-->
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/autodialer/campaigns')]</td>
+	<td>Auto Dialer</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/autodialer/campaign_statistics')]</td>
+	<td>Campaign Stats</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/callback_settings')]</td>
+	<td>Callback</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/cardgroups/list')]</td>
+	<td>Calling Cards</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/calling_cards_settings')]</td>
+	<td>Settings</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/cardgroups/cardgroups_stats')]</td>
+	<td>Stats</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/cardgroups/aggregate')]</td>
+	<td>Aggregate</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/groups/list')]</td>
+	<td>Call Shop</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(text(),'Monitorings')]</td>
+	<td>Monitorings</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/alerts')]</td>
+	<td>Alerts</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(text(),'Alert Contacts')]</td>
+	<td>Alert Contacts</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(text(),'Alert Schedules')]</td>
+	<td>Alert Schedules</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(text(),'Alert Groups')]</td>
+	<td>Alert Groups</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/monitorings/settings')]</td>
+	<td>Settings</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/payment_gateways/configuration')]</td>
+	<td>Payment gateways</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/settings_payments')]</td>
+	<td>Payments</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/vouchers/vouchers')]</td>
+	<td>Vouchers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/pbx_functions/list')]</td>
+	<td>PBX functions</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/pbx_functions')]</td>
+	<td>External DIDs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/ringgroups')]</td>
+	<td>Ring Groups</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/settings_vm')]</td>
+	<td>VoiceMail</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/phonebooks/list')]</td>
+	<td>PhoneBook</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/mohs')]</td>
+	<td>Music On Hold</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/ast_queues/list')]</td>
+	<td>Queues</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/providers/billing')]</td>
+	<td>Provider billing</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/recordings/recordings')]</td>
+	<td>Recordings</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/recordings_settings')]</td>
+	<td>Settings</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/recordings/list_users')]</td>
+	<td>Users</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/resellers')]</td>
+	<td>Resellers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/common_use_providers')]</td>
+	<td>Common Use Providers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/resellers/settings')]</td>
+	<td>Settings</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/permissions/list?group_type=reseller')]</td>
+	<td>Reseller permissions</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/sms/users')]</td>
+	<td>SMS</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/sms/lcrs')]</td>
+	<td>LCR</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/smsautodialer/user_campaigns')]</td>
+	<td>Mass SMS</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/sms/providers')]</td>
+	<td>Providers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/sms_settings')]</td>
+	<td>Settings</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/sms/tariffs')]</td>
+	<td>Tariffs</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//a[contains(@href, '/billing/functions/webphone_settings')]</td>
+	<td>Webphone</td>
+</tr>
+<!--STATISTICS skiltis-->
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/show_user_stats')]</td>
+	<td>Calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/active_calls')]</td>
+	<td>Active calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/old_calls_stats')]</td>
+	<td>Archived Calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/calls_by_scr')]</td>
+	<td>Calls by Source</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/calls_per_day')]</td>
+	<td>Calls per Day</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/country_stats')]</td>
+	<td>Country Stats</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/all_users_detailed')]</td>
+	<td>Graphs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/last_calls_stats')]</td>
+	<td>Last calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/load_stats')]</td>
+	<td>Load Stats</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/loss_making_calls')]</td>
+	<td>Loss making calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/providers')]</td>
+	<td>Providers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/users_finances')]</td>
+	<td>Finances</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/profit')]</td>
+	<td>Profit</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dstatistics_menu0']/div[5]/a[2]</td>
+	<td>Various</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/dids')]</td>
+	<td>DIDs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/dids_usage')]</td>
+	<td>Usage</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/faxes')]</td>
+	<td>Faxes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/google_maps')]</td>
+	<td>Google Maps</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/hangup_cause_codes_stats')]</td>
+	<td>Hangup Cause</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/search')]</td>
+	<td>Search</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/subscriptions_stats')]</td>
+	<td>Subscriptions</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/system_stats')]</td>
+	<td>System stats</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/action_log')]</td>
+	<td>Action log</td>
+</tr>
+<!--PERSONAL MENU-->
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(text(),'Start page')]</td>
+	<td>Start page</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(text(),'Personal details')]</td>
+	<td>Personal details</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/callc/logout')]</td>
+	<td>Logout</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--PERSONAL MENU-->
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dpersonal_menu0']/div/a</td>
+	<td>Start page</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dpersonal_menu0']/div[2]/a[2]</td>
+	<td>Personal details</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/devices/user_devices')]</td>
+	<td>Devices</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/payments/personal_payments')]</td>
+	<td>Payments</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/accounting/user_invoices')]</td>
+	<td>Invoices</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/accounting/financial_statements')]</td>
+	<td>Financial statements</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/services/user_subscriptions')]</td>
+	<td>Subscriptions</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/last_calls_stats')]</td>
+	<td>Calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dpersonal_menu8']/div/a</td>
+	<td>Last calls</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//a[contains(@href, '/billing/stats/missed_calls')]</td>
+	<td>Missed calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/user_stats')]</td>
+	<td>Graphs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/recordings/list_recordings')]</td>
+	<td>Recordings</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dpersonal_menu0']/div[6]/a[2]</td>
+	<td>Various</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/dids/personal_dids')]</td>
+	<td>DIDs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/devices/user_device_clis')]</td>
+	<td>CLIs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/phonebooks/list')]</td>
+	<td>PhoneBook</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/dids/quickforwarddids')]</td>
+	<td>Quick Forwards</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/faxes_list/2')]</td>
+	<td>Faxes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/callback')]</td>
+	<td>Callback</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/autodialer/user_campaigns')]</td>
+	<td>Auto Dialer</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/callc/logout')]</td>
+	<td>Logout</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--PERSONAL MENU-->
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dpersonal_menu0']/div/a</td>
+	<td>Start page</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dpersonal_menu0']/div[2]/a[2]</td>
+	<td>Personal details</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/devices/user_devices')]</td>
+	<td>Devices</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/payments/personal_payments')]</td>
+	<td>Payments</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/accounting/user_invoices')]</td>
+	<td>Invoices</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/accounting/financial_statements')]</td>
+	<td>Financial statements</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/services/user_subscriptions')]</td>
+	<td>Subscriptions</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/last_calls_stats')]</td>
+	<td>Calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dpersonal_menu8']/div/a</td>
+	<td>Last calls</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//a[contains(@href, '/billing/stats/missed_calls')]</td>
+	<td>Missed calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/user_stats')]</td>
+	<td>Graphs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/recordings/list_recordings')]</td>
+	<td>Recordings</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dpersonal_menu0']/div[6]/a[2]</td>
+	<td>Various</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/dids/personal_dids')]</td>
+	<td>DIDs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/devices/user_device_clis')]</td>
+	<td>CLIs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/phonebooks/list')]</td>
+	<td>PhoneBook</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/dids/quickforwarddids')]</td>
+	<td>Quick Forwards</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/faxes_list/5')]</td>
+	<td>Faxes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/callback')]</td>
+	<td>Callback</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/callc/logout')]</td>
+	<td>Logout</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--SETTINGS skiltis-->
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/reseller_settings')]</td>
+	<td>Settings</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/users/default_user')]</td>
+	<td>Default User</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/devices/default_device')]</td>
+	<td>Default Device</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/translations')]</td>
+	<td>Translations</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dreseller_menu0']/div[3]/a[2]</td>
+	<td>Routing</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/dids/list')]</td>
+	<td>DIDs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/dialplans/dialplans')]</td>
+	<td>Dial Plans</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/quickforwards_rules/list')]</td>
+	<td>Quickforwards Rules</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/locations/localization')]</td>
+	<td>Localization</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/call_tracing')]</td>
+	<td>Call Tracing</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/tariffs/list')]</td>
+	<td>Tariffs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/search')]</td>
+	<td>Search</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dreseller_menu0']/div[5]/a[2]</td>
+	<td>Billing</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/payments/list')]</td>
+	<td>Payments</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/accounting/invoices')]</td>
+	<td>Invoices</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/credit_note/list')]</td>
+	<td>Credit notes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/accounting/financial_statements')]</td>
+	<td>Financial statements</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/profit')]</td>
+	<td>Profit</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/services/list')]</td>
+	<td>Services</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/services/subscriptions')]</td>
+	<td>Subscriptions</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/users/list')]</td>
+	<td>Users</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/devices/devices_all')]</td>
+	<td>Devices</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/devices/clis')]</td>
+	<td>CLIs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/users/hidden')]</td>
+	<td>Hidden</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/last_calls_stats')]</td>
+	<td>Calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/reseller_all_user_stats')]</td>
+	<td>Graphs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/show_user_stats')]</td>
+	<td>Call Stats</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/google_maps')]</td>
+	<td>Google Maps</td>
+</tr>
+<!--PERSONAL MENU-->
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dpersonal_menu0']/div/a</td>
+	<td>Start page</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(text(),'Personal details')]</td>
+	<td>Personal details</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/payments/personal_payments')]</td>
+	<td>Payments</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/accounting/user_invoices')]</td>
+	<td>Invoices</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/accounting/financial_statements')]</td>
+	<td>Financial statements</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/callc/logout')]</td>
+	<td>Logout</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--make reseller rspro-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=reseller_pro_lcr/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--SETTINGS skiltis-->
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/ivrvoices')]</td>
+	<td>Voices</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/reseller_settings')]</td>
+	<td>Settings</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/users/default_user')]</td>
+	<td>Default User</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/devices/default_device')]</td>
+	<td>Default Device</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/translations')]</td>
+	<td>Translations</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dreseller_menu0']/div[3]/a[2]</td>
+	<td>Routing</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/dids/list')]</td>
+	<td>DIDs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/dialplans/dialplans')]</td>
+	<td>Dial Plans</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/quickforwards_rules/list')]</td>
+	<td>Quickforwards Rules</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/locations/localization')]</td>
+	<td>Localization</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/lcrs/list')]</td>
+	<td>LCR</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/providers/list')]</td>
+	<td>Providers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/providers/quick_changes')]</td>
+	<td>Quick Changes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/terminators/list')]</td>
+	<td>Terminators</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/providers/list?s_hidden=1')]</td>
+	<td>Hidden</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//a[contains(text(),'IVR')]</td>
+	<td>IVR</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/ivrvoices')]</td>
+	<td>Voices</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//a[contains(@href, '/billing/ivr_time_periods')]</td>
+	<td>Time Periods</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/call_tracing')]</td>
+	<td>Call Tracing</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/tariffs/list')]</td>
+	<td>Tariffs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/cdr/import_csv')]</td>
+	<td>CDR Import</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dreseller_menu0']/div[5]/a[2]</td>
+	<td>Billing</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/payments/list')]</td>
+	<td>Payments</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/accounting/invoices')]</td>
+	<td>Invoices</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/credit_note/list')]</td>
+	<td>Credit notes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/accounting/financial_statements')]</td>
+	<td>Financial statements</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/profit')]</td>
+	<td>Profit</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/services/list')]</td>
+	<td>Services</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/services/subscriptions')]</td>
+	<td>Subscriptions</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/providers/billing')]</td>
+	<td>Provider billing</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/users/list')]</td>
+	<td>Users</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/devices/devices_all')]</td>
+	<td>Devices</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/devices/clis')]</td>
+	<td>CLIs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/users/hidden')]</td>
+	<td>Hidden</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/last_calls_stats')]</td>
+	<td>Calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/reseller_all_user_stats')]</td>
+	<td>Graphs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/active_calls')]</td>
+	<td>Active calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/show_user_stats')]</td>
+	<td>Call Stats</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/old_calls_stats')]</td>
+	<td>Archived Calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/google_maps')]</td>
+	<td>Google Maps</td>
+</tr>
+<!--ADDONS skiltis-->
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dreseller_menu_addons0']/div/a</td>
+	<td>Provider billing</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>link=IVR</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//a[contains(@href, '/billing/ivr_time_periods')]</td>
+	<td>Time Periods</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=sreseller_menu_addons9</td>
+	<td></td>
+</tr>
+<!--STATISTICS skiltis-->
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/country_stats')]</td>
+	<td>Country Stats</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/load_stats')]</td>
+	<td>Load Stats</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/search')]</td>
+	<td>Search</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/providers')]</td>
+	<td>Providers</td>
+</tr>
+<!--PERSONAL MENU-->
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dpersonal_menu0']/div/a</td>
+	<td>Start page</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(text(),'Personal details')]</td>
+	<td>Personal details</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/payments/personal_payments')]</td>
+	<td>Payments</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/accounting/user_invoices')]</td>
+	<td>Invoices</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/accounting/financial_statements')]</td>
+	<td>Financial statements</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/callc/logout')]</td>
+	<td>Logout</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=email_sending_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=email_from</td>
+	<td>test@test.lt</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=show_rates_for_users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=show_active_calls_for_users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/sql/acc_groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/permissions/edit/12?group_type=reseller</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=pbx_functions_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=autodialer_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=webphone_res_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=payment_gateways_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=sms_addon_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=call_shop_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=calling_cards_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--SETTINGS skiltis-->
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/emails/list')]</td>
+	<td>Emails</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/ivrvoices')]</td>
+	<td>Voices</td>
+</tr>
+<!--ADDONS skiltis-->
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/groups/list')]</td>
+	<td>Call Shop</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/cardgroups/list')]</td>
+	<td>Calling Cards</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/cardgroups/cardgroups_stats')]</td>
+	<td>Stats</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/cardgroups/aggregate')]</td>
+	<td>Aggregate</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/payment_gateways/configuration')]</td>
+	<td>Payment gateways</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/reseller_settings_payments')]</td>
+	<td>Payments</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dreseller_menu_addons0']/div[6]/a[2]</td>
+	<td>PBX functions</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/pbx_functions')]</td>
+	<td>External DIDs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=sreseller_menu_addons9</td>
+	<td>IVR</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/ivr_time_periods')]</td>
+	<td>Time Periods</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dreseller_menu_addons0']/div[8]/a</td>
+	<td>Provider billing</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//a[contains(@href, '/billing/functions/webphone_settings')]</td>
+	<td>Webphone</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/autodialer/campaigns')]</td>
+	<td>Auto Dialer</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/autodialer/campaign_statistics')]</td>
+	<td>Campaign Stats</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=IVR</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(@href, '/billing/ivr_time_periods')]</td>
+	<td>Time Periods</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(@href, '/billing/ivr')]</td>
+	<td>IVRs</td>
+</tr>
+<!--PERSONAL MENU-->
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/tariffs/user_rates')]</td>
+	<td>Rates</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/reseller_settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=show_rates_for_users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/tariffs/user_rates')]</td>
+	<td>Rates</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/active_calls')]</td>
+	<td>Active calls</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/tariffs/user_rates')]</td>
+	<td>Rates</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>accountant</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>accountant1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--STATISTICS skiltis-->
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/show_user_stats')]</td>
+	<td>Calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/active_calls')]</td>
+	<td>Active calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/old_calls_stats')]</td>
+	<td>Archived Calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/calls_by_scr')]</td>
+	<td>Calls by Source</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/calls_per_day')]</td>
+	<td>Calls per Day</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/country_stats')]</td>
+	<td>Country Stats</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/all_users_detailed')]</td>
+	<td>Graphs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/last_calls_stats')]</td>
+	<td>Last calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/load_stats')]</td>
+	<td>Load Stats</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/loss_making_calls')]</td>
+	<td>Loss making calls</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/providers')]</td>
+	<td>Providers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dstatistics_menu0']/div[3]/a[2]</td>
+	<td>Various</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/faxes')]</td>
+	<td>Faxes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/hangup_cause_codes_stats')]</td>
+	<td>Hangup Cause</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/search')]</td>
+	<td>Search</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/system_stats')]</td>
+	<td>System stats</td>
+</tr>
+<!--PERSONAL MENU-->
+<tr>
+	<td>waitForText</td>
+	<td>//div[@id='dpersonal_menu0']/div/a</td>
+	<td>Start page</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dpersonal_menu0']/div[2]/a</td>
+	<td>Personal details</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/callc/logout')]</td>
+	<td>Logout</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/sql/acc_all_permissions_write</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/permissions/edit/11?group_type=accountant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=call_tracing_usage_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>accountant</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>accountant1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--STATISTICS skiltis-->
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/users_finances')]</td>
+	<td>Finances</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/profit')]</td>
+	<td>Profit</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/dids')]</td>
+	<td>DIDs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/dids_usage')]</td>
+	<td>Usage</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/dids/summary')]</td>
+	<td>Summary</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/stats/subscriptions_stats')]</td>
+	<td>Subscriptions</td>
+</tr>
+<!--ACCOUNTANT skiltis-->
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='dacc_menu0']/div/a[2]</td>
+	<td>Billing</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/tariffs/list')]</td>
+	<td>Tariffs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/tariffs/day_setup')]</td>
+	<td>Day setup</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/dids/list')]</td>
+	<td>DIDs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/ast_queues/list')]</td>
+	<td>Queues</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/users/list')]</td>
+	<td>Users</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/users/hidden')]</td>
+	<td>Hidden</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(text(),'Accounting')]</td>
+	<td>Accounting</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/accounting/invoices')]</td>
+	<td>Invoices</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/credit_note/list')]</td>
+	<td>Credit notes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/accounting/financial_statements')]</td>
+	<td>Financial statements</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/payments/list')]</td>
+	<td>Payments</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/vouchers/vouchers')]</td>
+	<td>Vouchers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/services/list')]</td>
+	<td>Services</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/services/subscriptions')]</td>
+	<td>Subscriptions</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(text(),'Addons')]</td>
+	<td>Addons</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/cardgroups/list')]</td>
+	<td>Calling Cards</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/functions/call_tracing')]</td>
+	<td>Call Tracing</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--disable pbx addon-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=deactivate_addons/pbx</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(@href, '/billing/ivrvoices')]</td>
+	<td>Voices</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>link=IVR</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//a[contains(@href, '/billing/ivr_time_periods')]</td>
+	<td>Time Periods</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=sreseller_menu_addons9</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

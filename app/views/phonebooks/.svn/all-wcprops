@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/42152/mor/gui/branches/x5/app/views/phonebooks
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/app/views/phonebooks/edit.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/42152/mor/gui/branches/x5/app/views/phonebooks/new.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/app/views/phonebooks/list.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/41942/mor/gui/branches/x5/app/views/phonebooks/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/app/views/phonebooks/_form.html.erb
+END

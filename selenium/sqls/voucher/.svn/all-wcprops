@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/46170/mor/gui/branches/x5/selenium/sqls/voucher
+END
+create_vouchers.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/44669/mor/gui/branches/x5/selenium/sqls/voucher/create_vouchers.sql
+END
+set_taxes.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/46170/mor/gui/branches/x5/selenium/sqls/voucher/set_taxes.sql
+END

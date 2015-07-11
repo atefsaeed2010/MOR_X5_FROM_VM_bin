@@ -1,0 +1,7 @@
+<%= form_tag(:action => 'tariff_update', :id => @tariff) do %>
+    <%= render 'tariff_form', no_edit_tariff_type: @no_edit_tariff_type, tariff: @tariff, user_wholesale_enabled: @user_wholesale_enabled, currs: @currs %>
+    <br><br>
+    <%= submit_tag _('Edit'), :disable_with => _('Processing..') %>
+<% end %>
+
+<br><br>

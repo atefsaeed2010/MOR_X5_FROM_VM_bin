@@ -1,0 +1,6 @@
+# must be used after for_import_with_effective_from_date.bundle
+# add afghanistan rates with effective form dates for provider tariff 12001
+/tariff/provider_12001/create_rates_with_effective_from_date_for_afghanistan_second.sql
+# add afghanistan rates with effective form dates for provider tariff 12001
+/tariff/provider_12001/create_rates_with_effective_from_date_for_afghanistan_third.sql
+# bundle loaded

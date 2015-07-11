@@ -1,0 +1,41 @@
+<%= javascript_include_tag 'swfobject' %>
+<b> <%= draw_flag @direction.code %> <%= @direction.name %> </b> <br/>
+<b><%= _('Prefix') %></b>:<%= @destination.prefix %>
+<br/>
+<br/>
+<div class="nb">
+  <%= form_tag(:action => 'stats', :id => @direction.id, :des_id => @destination.id) do %>
+      <%= _('From') %>
+      : <%= select_date(Time.mktime(session[:year_from], session[:month_from], session[:day_from]), :end_year => Date.today.year+1, :prefix => "date_from") %>
+      &nbsp;&nbsp;<%= _('to') %>
+      : <%= select_date(Time.mktime(session[:year_till], session[:month_till], session[:day_till]), :end_year => Date.today.year+1, :prefix => "date_till") %>
+      &nbsp;&nbsp;<%= submit_tag _('Change_date'), :disable_with => _('Processing..') %>
+  <% end %>
+</div>
+<br/>
+<br/>
+<div id="table">
+  <%= render '/directions/std_stats', :lv_destination => @destination,
+                          :lv_rate => @rate,
+                          :lv_rate1 => @rate1,
+                          :lv_rate_details => @rate_details,
+                          :lv_rate2 => @rate2,
+                          :lv_Calls_graph => @Calls_graph,
+                          :lv_answered_calls => @answered_calls,
+                          :lv_no_answer_calls => @no_answer_calls,
+                          :lv_no_answer_calls_pr => @no_answer_calls_pr,
+                          :lv_busy_calls => @busy_calls,
+                          :lv_busy_calls_pr => @busy_calls_pr,
+                          :lv_failed_calls => @failed_calls,
+                          :lv_failed_calls_pr => @failed_calls_pr,
+                          :lv_Calls_graph2 => @Calls_graph2,
+                          :lv_Calltime_graph => @Calltime_graph,
+                          :lv_Avg_Calltime_graph => @Avg_Calltime_graph,
+                          :lv_html_flag => @html_flag,
+                          :lv_html_name => @html_name,
+                          :lv_html_prefix_name => @html_prefix_name,
+                          :lv_html_prefix => @html_prefix,
+                          :lv_Asr_graph => @Asr_graph,
+                          :lv_asr_calls => @asr_calls
+  %>
+</div>

@@ -1,0 +1,45 @@
+<%= render 'bulk_management_header', from: @from, till: @till, user: @user, device: @device, dids: @dids %>
+<% unless @dids.size.to_i < 1 %>
+    <%= form_tag({:action => 'update', :back => 1}.merge(@opts)) do %>
+        <%= hidden_field_tag 'status', "reserved" %>
+        <table class="maintable" width="100%">
+          <tr>
+            <th align="left"><%= _('Reserve_did_for_user') %></th>
+          </tr>
+          <tr class="row1">
+            <td>
+              <br/>
+              <%= _('Reserve_did_for_user_expanded') %>
+              <br/>
+              <br/>
+              <%= b_user %>
+              <%= render 'shared/live_search_field', object: '', object_id: -2,left_margin: 20, object_name: 'User', action_url: {:controller => :users, :action => :get_users_map } %>
+              <br/>
+              <br/>
+              <%= submit_tag(_('Reserve'), id: 'submit_reserve', :disable_with => _('Processing..')) %>
+              <br/>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <script type="text/javascript">
+          var userIdField = $('s_user_id');
+          var submitField = $('submit_reserve');
+
+          function toogleStatus(){
+            if (parseInt(userIdField.value) >= 0 ) {
+              submitField.show();
+            } else {
+              submitField.hide();
+            }
+          }
+
+          toogleStatus();
+
+          Event.observe($('s_user'), 'change', toogleStatus);
+</script>
+            </td>
+          </tr>
+        </table>
+    <% end %>
+<% end %>

@@ -1,0 +1,135 @@
+<% if @country %>
+    <b><%= _('Country') %>:</b>
+    <%= @country.name %>
+    <br/>
+<% end %>
+<% if @provider %>
+    <b><%= _('Provider') %>:</b>
+    <%= @provider.name %>
+    <br/>
+<% end %>
+<% if @direction %>
+    <b><%= _('Direction') %>:</b>
+    <%= @direction %>
+    <br/>
+<% end %>
+<% if @user %>
+    <b><%= _('User') %>:</b>
+    <%= nice_user(@user) %>
+    <br/>
+<% end %>
+<br/>
+<br/>
+
+<div align="left" class="nb">
+  <%= form_tag action: :calls_per_day do %>
+      <%= hidden_field_tag 'search_on', 1 %>
+      <table class='bordered'>
+        <tr>
+          <td>
+            <%= _('From') %>:
+          </td>
+          <td>
+            <%= select_date(Time.mktime(session[:year_from], session[:month_from], session[:day_from]), end_year: (Date.today.year + 1), prefix: 'date_from') %>
+          </td>
+          <td>
+            <%= _('To') %>:
+          </td>
+          <td>
+            <%= select_date(Time.mktime(session[:year_till], session[:month_till], session[:day_till]), end_year: (Date.today.year + 1), prefix: 'date_till') %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <%= _('Country') %>:
+          </td>
+          <td>
+            <select name="country_id">
+              <option value=<%= '-1' %> <%= 'selected' if !@country %>> <%= _('All') %></option>
+              <% @countries.each do |country| %>
+                  <option value=<%= country.id %>
+                            <% if @country %>
+                                <%= 'selected' if country.id == @country.id %>
+                            <% end %>
+                  ><%= h(country.name) %></option>
+              <% end %>
+            </select>
+          </td>
+          <td>
+            <%= _('Provider') %>:
+          </td>
+          <td>
+            <select name="provider_id">
+              <option value=<%= '-1' %> <%= 'selected' if !@provider %>> <%= _('All') %></option>
+              <% @providers.each do |provider| %>
+                  <option value=<%= provider.id %>
+                            <% if @provider %>
+                                <%= 'selected' if provider.id == @provider.id %>
+                            <% end %>
+                  ><%= provider.name %></option>
+              <% end %>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <%= _('Direction') %>:
+          </td>
+          <td>
+            <select name="direction">
+              <option value=<%= '-1' %> <%= "selected" if !@direction %>> <%= _('All') %></option>
+              <option value=<%= 'Outgoing' %>
+                        <% if @direction %><%= "selected" if 'Outgoing' == @direction.to_s %> <%end%>> <%= _('Outgoing') %> </option>
+              <option value=<%= 'Incoming' %>
+                        <% if @direction %><%= "selected" if 'Incoming' == @direction.to_s %> <%end%>> <%= _('Incoming') %> </option>
+            </select>
+          </td>
+          <td>
+            <%= _('User') %>:
+          </td>
+          <td>
+            <%= render('shared/live_search_field',
+                       object: params[:s_user].to_s,
+                       object_id: @user.try(:id) || -2,
+                       object_name: 'User',
+                       action_url: {controller: :users, action: :get_users_map, options: {show_admin: true}}
+                )
+            %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <%= _('Reseller') %>:
+          </td>
+          <td colspan='3'>
+            <select name="reseller_id">
+              <option value=<%= '-1' %> <%= 'selected' if !@reseller %>> <%= _('All') %></option>
+              <% @resellers.each do |reseller| %>
+                  <option value=<%= reseller.id %>
+                            <% if @reseller %>
+                                <%= 'selected' if reseller.id == @reseller.id %>
+                            <% end %>
+                  ><%= nice_user(reseller) %></option>
+              <% end %>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan='4'>
+            <%= submit_tag _('Change_date'), disable_with: _('Processing..') %>
+          </td>
+        </tr>
+      </table>
+  <% end %>
+</div>
+
+<% unless @searching %>
+    <%= b_info + _('press_search_button_to_show_data') %>
+<% end %>
+
+<% if @res %>
+    <br/>
+    <div id="table">
+      <%= render 'list_calls_per_day', res: @res, res_total: @res_total, directions: @directions %>
+    </div>
+<% end %>

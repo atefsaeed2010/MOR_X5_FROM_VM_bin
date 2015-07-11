@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ivr_sound_files
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ivr_sound_files/edit.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ivr_sound_files/new.html.erb
+END
+play_sound.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ivr_sound_files/play_sound.html.erb
+END

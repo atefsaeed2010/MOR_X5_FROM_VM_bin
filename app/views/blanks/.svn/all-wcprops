@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/43678/mor/gui/branches/x5/app/views/blanks
+END
+new.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/43619/mor/gui/branches/x5/app/views/blanks/new.erb
+END
+list.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/43657/mor/gui/branches/x5/app/views/blanks/list.erb
+END
+_form.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/43678/mor/gui/branches/x5/app/views/blanks/_form.erb
+END
+edit.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/43092/mor/gui/branches/x5/app/views/blanks/edit.erb
+END

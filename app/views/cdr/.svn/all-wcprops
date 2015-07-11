@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/52164/mor/gui/branches/x5/app/views/cdr
+END
+import_csv.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/48771/mor/gui/branches/x5/app/views/cdr/import_csv.html.erb
+END
+not_import_bad_cdr.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/48377/mor/gui/branches/x5/app/views/cdr/not_import_bad_cdr.html.erb
+END
+bad_rows_from_csv.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/49613/mor/gui/branches/x5/app/views/cdr/bad_rows_from_csv.erb
+END
+rerating.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/52164/mor/gui/branches/x5/app/views/cdr/rerating.html.erb
+END
+_new_cli.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/48771/mor/gui/branches/x5/app/views/cdr/_new_cli.html.erb
+END
+cli_add.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/40049/mor/gui/branches/x5/app/views/cdr/cli_add.html.erb
+END
+_bad_cdrs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/48334/mor/gui/branches/x5/app/views/cdr/_bad_cdrs.html.erb
+END
+_analize.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/49613/mor/gui/branches/x5/app/views/cdr/_analize.html.erb
+END
+fix_bad_cdr.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/48377/mor/gui/branches/x5/app/views/cdr/fix_bad_cdr.html.erb
+END

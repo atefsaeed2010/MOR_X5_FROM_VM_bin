@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/49811/mor/gui/branches/x5/app/models/dialplans
+END
+authbypin.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/48263/mor/gui/branches/x5/app/models/dialplans/authbypin.rb
+END
+callingcard.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/49811/mor/gui/branches/x5/app/models/dialplans/callingcard.rb
+END
+quickforwarddids.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/48263/mor/gui/branches/x5/app/models/dialplans/quickforwarddids.rb
+END
+callback.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/48263/mor/gui/branches/x5/app/models/dialplans/callback.rb
+END
+fabricator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/48263/mor/gui/branches/x5/app/models/dialplans/fabricator.rb
+END

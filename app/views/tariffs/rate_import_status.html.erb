@@ -1,0 +1,11 @@
+---
+<div id="rate_import_status" style="background-color:#eee;"></div>
+
+<%= content_for :js do %>
+  new Ajax.PeriodicalUpdater("rate_import_status",
+    "/rate_import_status_view",
+    { frequency: 2,
+      method: 'get'})
+<% end %>
+
+---

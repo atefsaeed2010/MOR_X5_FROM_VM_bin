@@ -1,0 +1,13 @@
+# ----
+# invoice  settings
+# 
+calls/calls_fix_delta.sql
+# tax settings
+settings/invoices/invoice_settings.sql
+# prepaid "number type" 2
+settings/invoices/prepaid_number_type_2.sql
+# postpaid number type 2
+settings/invoices/postpaid_number_type_2.sql 
+# users taxes id 
+settings/tax/update_tax_id.sql
+# bundle loaded

@@ -1,0 +1,12 @@
+<%= form_tag(:action => 'update_personal_details', :id => @user) do %>
+    <%= render 'personal_form', user: @user, devices: @devices, countries: @countries,
+                                total_recordings_size: @total_recordings_size, i: @i,
+                                disallow_email_editing: @disallow_email_editing,
+                                default_country_id: @default_country_id %>
+    <br>
+    <br>
+    <% if !(user? and Confline.get_value("Disallow_Details_Editing", @user.owner_id).to_i == 1) %>
+      <%= submit_tag _('Change'), :disable_with => _('Processing..') %>
+    <% end %>
+<% end %>
+<br>

@@ -1,0 +1,7 @@
+# Creat acc permissions group and assign to test accountant
+# ----
+# Acc group
+/permissions/accountant/create.sql
+# Assign permissions group to accountant
+/user/accountant_4/assign_permissions.sql
+# bundle loaded

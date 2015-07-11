@@ -1,0 +1,21 @@
+# ----
+# create group
+permissions/reseller/create.sql
+# assign permissions
+permissions/reseller/cc_write.sql
+# assign reseller_3 to cc group
+user/reseller_3/assign_permissions.sql
+# make reseller_3 RS pro
+user/reseller_3/make_rspro.sql
+# create reseller2
+user/reseller_1002/create.sql
+# make rspro
+user/reseller_1002/make_rspro.sql
+# make new dids list
+did/dids_list/dids_free.sql
+# reserve dids for Test Reseller
+#did/dids_list/6012-6016/reserve_6012-14.sql
+# reserve dids for reseller2
+#did/dids_list/6012-6016/reserve_6015-16.sql
+#
+# bundle loaded

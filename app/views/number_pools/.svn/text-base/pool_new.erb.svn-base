@@ -1,0 +1,6 @@
+<%= form_tag(:action => 'pool_create') do %>
+  <%= render 'form' %>
+  <%= submit_tag _('Create'), :disable_with => _('Processing..') %>
+<% end %>
+
+<br />

@@ -1,0 +1,16 @@
+Destination;Prefix;Subcode;Country code;Rate(USD);Effective from;Connection Fee(USD);Increment;Minimal Time
+Afghanistan premium;9390;NGN;AFG;9.6952;01/01/2021 00:00:00;0.001;1;60
+Afghanistan freephone;9380;NGN;AFG;7.266;01/01/2021 00:00:00;0.001;1;60
+Afghanistan mobile-Roshan;9379;MOB;AFG;9.5493;01/01/2021 00:00:00;0.001;1;60
+Afghanistan mobile-Etisa;9378;MOB;AFG;9.369;01/01/2021 00:00:00;0.001;1;60
+Afghanistan mobile-Areeba;9377;MOB;AFG;9.266;01/01/2021 00:00:00;0.001;1;60
+Afghanistan mobile;9376;MOB;AFG;8.6952;01/01/2021 00:00:00;0.001;1;60
+Afghanistan Cdma;9375;MOB;AFG;6.266;01-01-2021 00:00:00;0.001;1;60
+Afghanistan mobile;9372;MOB;AFG;8.5493;01/01/2021 00:00:00;0.001;1;60
+Afghanistan mobile;9371;MOB;AFG;8.369;01/01/2021 00:00:00;0.001;1;60
+Afghanistan mobile;9370;MOB;AFG;5.5493;01/01/2021 00:00:00;0.001;1;60
+Afghanistan Jalalabad;9360;FIX;AFG;5.266;01/01/2021 00:00:00;0.001;1;60
+Afghanistan Mazar-e-sharif;9350;FIX;AFG;7.5493;01/01/2021 00:00:00;0.001;1;60
+Afghanistan Herat;9340;FIX;AFG;4.5596;01 01 2021 00:00:00;0.001;1;60
+Afghanistan Kandahar;9330;FIX;AFG;4.5493;01/01/2021 00:00:00;0.001;1;60
+Afghanistan Kabul;9320;FIX;AFG;4.369;01/01/2021 00:00:00;0.001;1;60

@@ -1,0 +1,7 @@
+# Drops previous reseller users active calls
+calls/re_9301/drop_active_calls.sql
+# Four reseller user calls
+calls/re_9301/create_user_active_calls.sql
+# Four admin user calls
+calls/user_9007/create_user_active_calls.sql
+# bundle loaded

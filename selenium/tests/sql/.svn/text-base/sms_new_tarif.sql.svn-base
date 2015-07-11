@@ -1,0 +1,1 @@
+INSERT INTO `sms_tariffs` (`currency`, `name`, `owner_id`, `tariff_type`) VALUES ('USD', 'tarifas', 3, 'user')

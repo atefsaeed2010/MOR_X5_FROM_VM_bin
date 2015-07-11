@@ -1,0 +1,37 @@
+10
+
+dir
+52326
+http://svn.kolmisoft.com/mor/gui/branches/x5/selenium/bundles/payments
+http://svn.kolmisoft.com
+
+
+
+2013-11-08T15:29:46.292103Z
+41875
+ieva
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19941b1f-7a74-413c-ab52-0de3e92e9a87
+
+authorize_net
+dir
+
+pg_hsbc
+dir
+
+payment_osmp
+dir
+

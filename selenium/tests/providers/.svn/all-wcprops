@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/52178/mor/gui/branches/x5/selenium/tests/providers
+END
+sip_provider.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/48485/mor/gui/branches/x5/selenium/tests/providers/sip_provider.case
+END
+provider_no_tariff.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/providers/provider_no_tariff.sql
+END
+providers_ipaddr_invalid.case
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/45518/mor/gui/branches/x5/selenium/tests/providers/providers_ipaddr_invalid.case
+END
+provider_test_data.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/providers/provider_test_data.sql
+END
+provider_stats.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/43305/mor/gui/branches/x5/selenium/tests/providers/provider_stats.case
+END
+quick_providers.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/42922/mor/gui/branches/x5/selenium/tests/providers/quick_providers.case
+END
+providers.case
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/52178/mor/gui/branches/x5/selenium/tests/providers/providers.case
+END
+providers_billing.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/50302/mor/gui/branches/x5/selenium/tests/providers/providers_billing.case
+END
+stats_providers.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/providers/stats_providers.sql
+END
+providers_register.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/47789/mor/gui/branches/x5/selenium/tests/providers/providers_register.case
+END
+provider_no_tariff.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/providers/provider_no_tariff.case
+END
+providers_rules.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/providers/providers_rules.case
+END
+h323_provider.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/41814/mor/gui/branches/x5/selenium/tests/providers/h323_provider.case
+END
+providers_in_terminators.case
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/49042/mor/gui/branches/x5/selenium/tests/providers/providers_in_terminators.case
+END
+pro_common_use_destroy.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/providers/pro_common_use_destroy.case
+END
+provider_assign_to_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/51581/mor/gui/branches/x5/selenium/tests/providers/provider_assign_to_user.case
+END
+providers2.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/49334/mor/gui/branches/x5/selenium/tests/providers/providers2.case
+END
+sms_providers.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/44808/mor/gui/branches/x5/selenium/tests/providers/sms_providers.case
+END
+provider_auth_unique.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/44421/mor/gui/branches/x5/selenium/tests/providers/provider_auth_unique.case
+END
+make_not_alive.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/providers/make_not_alive.sql
+END
+common_use_providers.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/49617/mor/gui/branches/x5/selenium/tests/providers/common_use_providers.case
+END
+providers_delete_device.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/providers/providers_delete_device.sql
+END
+fake_form_provider.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/47070/mor/gui/branches/x5/selenium/tests/providers/fake_form_provider.case
+END
+common_use_providers_without_tariff.sql
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/providers/common_use_providers_without_tariff.sql
+END
+server_providers.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/providers/server_providers.case
+END
+provider_zap.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/providers/provider_zap.case
+END
+providers_for_users.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/providers/providers_for_users.case
+END
+providers_ip_authentication.case
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/44421/mor/gui/branches/x5/selenium/tests/providers/providers_ip_authentication.case
+END

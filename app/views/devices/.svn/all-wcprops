@@ -1,0 +1,323 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/52129/mor/gui/branches/x5/app/views/devices
+END
+cli_user_devices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/51883/mor/gui/branches/x5/app/views/devices/cli_user_devices.html.erb
+END
+user_device_clis.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/app/views/devices/user_device_clis.html.erb
+END
+_device_form_voicemail.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/43597/mor/gui/branches/x5/app/views/devices/_device_form_voicemail.html.erb
+END
+device_extlines.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/app/views/devices/device_extlines.html.erb
+END
+devices_all.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/51903/mor/gui/branches/x5/app/views/devices/devices_all.html.erb
+END
+cli_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/app/views/devices/cli_edit.html.erb
+END
+get_devices_for_search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/52129/mor/gui/branches/x5/app/views/devices/get_devices_for_search.html.erb
+END
+_form_skype.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/devices/_form_skype.html.erb
+END
+device_edit_skype.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/app/views/devices/device_edit_skype.html.erb
+END
+user_devices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/50109/mor/gui/branches/x5/app/views/devices/user_devices.html.erb
+END
+callflow_device.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/app/views/devices/callflow_device.html.erb
+END
+ajax_get_user_devices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/51723/mor/gui/branches/x5/app/views/devices/ajax_get_user_devices.html.erb
+END
+show_devices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/51903/mor/gui/branches/x5/app/views/devices/show_devices.html.erb
+END
+pdffaxemail_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/app/views/devices/pdffaxemail_edit.html.erb
+END
+_device_form_debug.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/45058/mor/gui/branches/x5/app/views/devices/_device_form_debug.html.erb
+END
+devicecodecs_sort.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/app/views/devices/devicecodecs_sort.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/50831/mor/gui/branches/x5/app/views/devices/new.html.erb
+END
+_device_form_servers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/49541/mor/gui/branches/x5/app/views/devices/_device_form_servers.html.erb
+END
+device_test.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/devices/device_test.html.erb
+END
+_device_form_authentication2.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/45486/mor/gui/branches/x5/app/views/devices/_device_form_authentication2.erb
+END
+_device_form_codecs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/45591/mor/gui/branches/x5/app/views/devices/_device_form_codecs.html.erb
+END
+user_device_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/43597/mor/gui/branches/x5/app/views/devices/user_device_edit.html.erb
+END
+device_dids.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/devices/device_dids.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/52013/mor/gui/branches/x5/app/views/devices/_form.html.erb
+END
+default_device.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/50831/mor/gui/branches/x5/app/views/devices/default_device.html.erb
+END
+device_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/51903/mor/gui/branches/x5/app/views/devices/device_edit.html.erb
+END
+_devices_fix_from_integrity_check.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/43597/mor/gui/branches/x5/app/views/devices/_devices_fix_from_integrity_check.html.erb
+END
+callflow_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/51814/mor/gui/branches/x5/app/views/devices/callflow_edit.html.erb
+END
+cli_user_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/39906/mor/gui/branches/x5/app/views/devices/cli_user_edit.html.erb
+END
+_device_form_tell_options.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/43597/mor/gui/branches/x5/app/views/devices/_device_form_tell_options.html.erb
+END
+_device_recordings.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/48321/mor/gui/branches/x5/app/views/devices/_device_recordings.html.erb
+END
+_device_codecs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/45595/mor/gui/branches/x5/app/views/devices/_device_codecs.html.erb
+END
+_device_form_general.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/50109/mor/gui/branches/x5/app/views/devices/_device_form_general.html.erb
+END
+_device_form_op_tp.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/43761/mor/gui/branches/x5/app/views/devices/_device_form_op_tp.erb
+END
+get_user_devices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/app/views/devices/get_user_devices.html.erb
+END
+insecure_devices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/43597/mor/gui/branches/x5/app/views/devices/insecure_devices.html.erb
+END
+cli_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/51913/mor/gui/branches/x5/app/views/devices/cli_new.html.erb
+END
+_device_form_callerid.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/50109/mor/gui/branches/x5/app/views/devices/_device_form_callerid.html.erb
+END
+_device_form_groups.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/43597/mor/gui/branches/x5/app/views/devices/_device_form_groups.html.erb
+END
+device_forward.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/43597/mor/gui/branches/x5/app/views/devices/device_forward.html.erb
+END
+_device_form_address.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/50831/mor/gui/branches/x5/app/views/devices/_device_form_address.html.erb
+END
+forwards.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/43597/mor/gui/branches/x5/app/views/devices/forwards.html.erb
+END
+pdffaxemail_add.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/app/views/devices/pdffaxemail_add.html.erb
+END
+clis.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/51913/mor/gui/branches/x5/app/views/devices/clis.html.erb
+END
+_device_form_network.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/43597/mor/gui/branches/x5/app/views/devices/_device_form_network.html.erb
+END
+cli_device_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/app/views/devices/cli_device_edit.html.erb
+END
+device_all_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/app/views/devices/device_all_details.html.erb
+END
+devices_weak_passwords.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/43597/mor/gui/branches/x5/app/views/devices/devices_weak_passwords.html.erb
+END
+_form_h323.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/52029/mor/gui/branches/x5/app/views/devices/_form_h323.html.erb
+END
+_pdffaxemails.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/43597/mor/gui/branches/x5/app/views/devices/_pdffaxemails.html.erb
+END
+_device_form_advance.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/50657/mor/gui/branches/x5/app/views/devices/_device_form_advance.html.erb
+END
+callflow.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/app/views/devices/callflow.html.erb
+END
+device_edit_h323.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/51903/mor/gui/branches/x5/app/views/devices/device_edit_h323.html.erb
+END

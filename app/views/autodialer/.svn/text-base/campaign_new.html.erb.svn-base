@@ -1,0 +1,10 @@
+<% unless ad_active? %>
+  <%= raw b_info + _('Autodialer_campaigns_restriction').html_safe %>
+  <br/><br/>
+<% end %>
+
+<%= form_tag :action => 'campaign_create' do %>
+  <%= render 'form', from_hour: @from_hour, from_min: @from_min, till_hour: @till_hour, till_min: @till_min,
+                     ctypes: @ctypes, devices: @devices, campaign: @campaign %>
+  <%= submit_tag _('Create'), :disable_with => _('Processing..') %>
+<% end %>

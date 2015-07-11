@@ -1,0 +1,3856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/active_calls/active_calls_more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/stats/active_calls</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=s_user</td>
+	<td>All Test User #1 User Resellers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=s_status</td>
+	<td>All Answered Ringing</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=s_country</td>
+	<td>All Afghanistan Albania Algeria American Samoa Andorra Angola Anguilla Antarctica Antigua And Barbuda Argentina Armenia Aruba Australia Austria Azerbaijan Bahamas Bahrain Bangladesh Barbados Belarus Belgium Belize Benin Bermuda Bhutan Bolivia Bosnia And Herzegovina Botswana Brazil Brunei Darussalam Bulgaria Burkina Faso Burundi Cambodia Cameroon Canada Cape Verde Cayman Islands Central African Republic Chad Chile China Christmas Island Cocos (Keeling) Islands Colombia Comoros Congo Congo, The Democratic Republic Of The Cook Islands Costa Rica Ivory Cost Croatia Cuba Cyprus Czech Republic Denmark Djibouti Dominica Dominican Republic Ecuador Egypt El Salvador Equatorial Guinea Eritrea Estonia Ethiopia Falkland Islands (Malvinas) Faroe Islands Fiji Finland France French Guiana French Polynesia Gabon Gambia Georgia Germany Ghana Gibraltar Greece Greenland Grenada Guadeloupe Guam Guatemala Guinea Guinea-Bissau Guyana Haiti Vatican City Honduras Hong Kong Hungary Iceland India Indonesia Iran Iraq Ireland Israel Italy Jamaica Japan Jordan Kazakhstan Kenya Kiribati Korea, Democratic People's Republic Of Korea, Republic of Kuwait Kyrgyzstan Laos Latvia Lebanon Lesotho Liberia Libyan Arab Jamahiriya Liechtenstein Lithuania Luxembourg Macao Macedonia Madagascar Malawi Malaysia Maldives Mali Malta Marshall islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia Moldova Monaco Mongolia Montserrat Morocco Mozambique Myanmar Namibia Nauru Nepal Netherlands Netherlands Antilles New Caledonia New Zealand Nicaragua Niger Nigeria Niue Norfolk Island Northern Mariana Islands Norway Oman Pakistan Palau Palestine Panama Papua New Guinea Paraguay Peru Philippines Poland Portugal Puerto Rico Qatar Reunion Romania Russian Federation Rwanda Saint Helena Saint Kitts And Nevis Saint Lucia Saint Pierre And Miquelon Saint Vincent And The Grenadines Samoa San Marino Sao Tome And Principe Saudi Arabia Senegal Seychelles Sierra Leone Singapore Slovakia Slovenia Solomon Islands Somalia South Africa Spain Sri Lanka Sudan Suriname Swaziland Sweden Switzerland Syrian Arab Republic Taiwan Tajikistan Tanzania Thailand Togo Tokelau Tonga Trinidad And Tobago Tunisia Turkey Turkmenistan Turks And Caicos Islands Tuvalu Uganda Ukraine United Arab Emirates United Kingdom United States Uruguay Uzbekistan Vanuatu Venezuela Vietnam Virgin Islands, British Virgin Islands, U.S. Wallis And Futuna Yemen Zambia Zimbabwe Ascension Island Diego Garcia Inmarsat East Timor Iridium Serbia and Montenegro Emsat Ellipso-3 Globalstar Montenegro Kosovo South Sudan Thuraya</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=s_provider</td>
+	<td>All Test Provider</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=s_source</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=s_destination</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<!--paieska pagal source-->
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>306984327345</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<!--paieska pagal src su %-->
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>30%</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>%347</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>%327%</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>30%45</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<!--paieska pagal useri-->
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_user</td>
+	<td>label=Test User #1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_user</td>
+	<td>label=All</td>
+</tr>
+<!--paieska pagal sali-->
+<tr>
+	<td>select</td>
+	<td>id=s_country</td>
+	<td>label=Philippines</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<!--paieska pagal dst-->
+<tr>
+	<td>click</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForSelectedLabel</td>
+	<td>id=s_country</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>63</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>63727007887</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>63%</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>%887</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>%007%</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>%89</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>6%886</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<!--paieska pagal provaideri-->
+<tr>
+	<td>click</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>id=s_destination</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_provider</td>
+	<td>label=Test Provider</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>11</td>
+</tr>
+<!--paieska pagal status-->
+<tr>
+	<td>select</td>
+	<td>id=s_status</td>
+	<td>label=Ringing</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_status</td>
+	<td>label=Answered</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<!--clear search-->
+<tr>
+	<td>select</td>
+	<td>id=s_user</td>
+	<td>label=Test User #1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_status</td>
+	<td>label=Ringing</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_provider</td>
+	<td>label=Test Provider</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>22</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_country</td>
+	<td>label=Afghanistan</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>65</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_status</td>
+	<td>Ringing</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_provider</td>
+	<td>Test Provider</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_source</td>
+	<td>22</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_country</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_destination</td>
+	<td>65</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_user</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_status</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_provider</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_source</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_country</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_destination</td>
+	<td></td>
+</tr>
+<!--testavimas su kitais useriais-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/settings/conflines/show_active_calls_for_users_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>accountant</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>accountant1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/stats/active_calls</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=s_user</td>
+	<td>All Test User #1 User Resellers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=s_status</td>
+	<td>All Answered Ringing</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=s_country</td>
+	<td>All Afghanistan Albania Algeria American Samoa Andorra Angola Anguilla Antarctica Antigua And Barbuda Argentina Armenia Aruba Australia Austria Azerbaijan Bahamas Bahrain Bangladesh Barbados Belarus Belgium Belize Benin Bermuda Bhutan Bolivia Bosnia And Herzegovina Botswana Brazil Brunei Darussalam Bulgaria Burkina Faso Burundi Cambodia Cameroon Canada Cape Verde Cayman Islands Central African Republic Chad Chile China Christmas Island Cocos (Keeling) Islands Colombia Comoros Congo Congo, The Democratic Republic Of The Cook Islands Costa Rica Ivory Cost Croatia Cuba Cyprus Czech Republic Denmark Djibouti Dominica Dominican Republic Ecuador Egypt El Salvador Equatorial Guinea Eritrea Estonia Ethiopia Falkland Islands (Malvinas) Faroe Islands Fiji Finland France French Guiana French Polynesia Gabon Gambia Georgia Germany Ghana Gibraltar Greece Greenland Grenada Guadeloupe Guam Guatemala Guinea Guinea-Bissau Guyana Haiti Vatican City Honduras Hong Kong Hungary Iceland India Indonesia Iran Iraq Ireland Israel Italy Jamaica Japan Jordan Kazakhstan Kenya Kiribati Korea, Democratic People's Republic Of Korea, Republic of Kuwait Kyrgyzstan Laos Latvia Lebanon Lesotho Liberia Libyan Arab Jamahiriya Liechtenstein Lithuania Luxembourg Macao Macedonia Madagascar Malawi Malaysia Maldives Mali Malta Marshall islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia Moldova Monaco Mongolia Montserrat Morocco Mozambique Myanmar Namibia Nauru Nepal Netherlands Netherlands Antilles New Caledonia New Zealand Nicaragua Niger Nigeria Niue Norfolk Island Northern Mariana Islands Norway Oman Pakistan Palau Palestine Panama Papua New Guinea Paraguay Peru Philippines Poland Portugal Puerto Rico Qatar Reunion Romania Russian Federation Rwanda Saint Helena Saint Kitts And Nevis Saint Lucia Saint Pierre And Miquelon Saint Vincent And The Grenadines Samoa San Marino Sao Tome And Principe Saudi Arabia Senegal Seychelles Sierra Leone Singapore Slovakia Slovenia Solomon Islands Somalia South Africa Spain Sri Lanka Sudan Suriname Swaziland Sweden Switzerland Syrian Arab Republic Taiwan Tajikistan Tanzania Thailand Togo Tokelau Tonga Trinidad And Tobago Tunisia Turkey Turkmenistan Turks And Caicos Islands Tuvalu Uganda Ukraine United Arab Emirates United Kingdom United States Uruguay Uzbekistan Vanuatu Venezuela Vietnam Virgin Islands, British Virgin Islands, U.S. Wallis And Futuna Yemen Zambia Zimbabwe Ascension Island Diego Garcia Inmarsat East Timor Iridium Serbia and Montenegro Emsat Ellipso-3 Globalstar Montenegro Kosovo South Sudan Thuraya</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=s_provider</td>
+	<td>All Test Provider</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=s_source</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=s_destination</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<!--paieska pagal source-->
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>37060011225</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<!--paieska pagal src su %-->
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>30%</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>%347</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>%327%</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>30%45</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<!--paieska pagal useri-->
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_user</td>
+	<td>label=Test User #1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_user</td>
+	<td>label=All</td>
+</tr>
+<!--paieska pagal sali-->
+<tr>
+	<td>select</td>
+	<td>id=s_country</td>
+	<td>label=Philippines</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<!--paieska pagal dst-->
+<tr>
+	<td>click</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForSelectedLabel</td>
+	<td>id=s_country</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>63</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>63727007887</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>63%</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>%007</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>%007%</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>%89</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>7%886</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=s_destination</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>63%886</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<!--paieska pagal provaideri-->
+<tr>
+	<td>click</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForValue</td>
+	<td>id=s_destination</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_provider</td>
+	<td>label=Test Provider</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>11</td>
+</tr>
+<!--paieska pagal status-->
+<tr>
+	<td>select</td>
+	<td>id=s_status</td>
+	<td>label=Ringing</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_status</td>
+	<td>label=Answered</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>306984327347&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327344&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327343&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>306984327345&nbsp;&nbsp;Test User #1 / IAX2/101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>555333327342</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011221&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011225&nbsp;&nbsp;Test User #1 / IAX2/1002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011238</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011234&nbsp;&nbsp;User Resellers / IAX2/105</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011233</td>
+	<td></td>
+</tr>
+<!--clear search-->
+<tr>
+	<td>select</td>
+	<td>id=s_user</td>
+	<td>label=Test User #1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_status</td>
+	<td>label=Ringing</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_provider</td>
+	<td>label=Test Provider</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>22</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_country</td>
+	<td>label=Afghanistan</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>65</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_status</td>
+	<td>Ringing</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_provider</td>
+	<td>Test Provider</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_source</td>
+	<td>22</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_country</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_destination</td>
+	<td>65</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForSelectedLabel</td>
+	<td>id=s_user</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_status</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_provider</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_source</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_country</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_destination</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/stats/active_calls</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=s_user</td>
+	<td>All User Resellers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=s_status</td>
+	<td>All Answered Ringing</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=s_country</td>
+	<td>All Afghanistan Albania Algeria American Samoa Andorra Angola Anguilla Antarctica Antigua And Barbuda Argentina Armenia Aruba Australia Austria Azerbaijan Bahamas Bahrain Bangladesh Barbados Belarus Belgium Belize Benin Bermuda Bhutan Bolivia Bosnia And Herzegovina Botswana Brazil Brunei Darussalam Bulgaria Burkina Faso Burundi Cambodia Cameroon Canada Cape Verde Cayman Islands Central African Republic Chad Chile China Christmas Island Cocos (Keeling) Islands Colombia Comoros Congo Congo, The Democratic Republic Of The Cook Islands Costa Rica Ivory Cost Croatia Cuba Cyprus Czech Republic Denmark Djibouti Dominica Dominican Republic Ecuador Egypt El Salvador Equatorial Guinea Eritrea Estonia Ethiopia Falkland Islands (Malvinas) Faroe Islands Fiji Finland France French Guiana French Polynesia Gabon Gambia Georgia Germany Ghana Gibraltar Greece Greenland Grenada Guadeloupe Guam Guatemala Guinea Guinea-Bissau Guyana Haiti Vatican City Honduras Hong Kong Hungary Iceland India Indonesia Iran Iraq Ireland Israel Italy Jamaica Japan Jordan Kazakhstan Kenya Kiribati Korea, Democratic People's Republic Of Korea, Republic of Kuwait Kyrgyzstan Laos Latvia Lebanon Lesotho Liberia Libyan Arab Jamahiriya Liechtenstein Lithuania Luxembourg Macao Macedonia Madagascar Malawi Malaysia Maldives Mali Malta Marshall islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia Moldova Monaco Mongolia Montserrat Morocco Mozambique Myanmar Namibia Nauru Nepal Netherlands Netherlands Antilles New Caledonia New Zealand Nicaragua Niger Nigeria Niue Norfolk Island Northern Mariana Islands Norway Oman Pakistan Palau Palestine Panama Papua New Guinea Paraguay Peru Philippines Poland Portugal Puerto Rico Qatar Reunion Romania Russian Federation Rwanda Saint Helena Saint Kitts And Nevis Saint Lucia Saint Pierre And Miquelon Saint Vincent And The Grenadines Samoa San Marino Sao Tome And Principe Saudi Arabia Senegal Seychelles Sierra Leone Singapore Slovakia Slovenia Solomon Islands Somalia South Africa Spain Sri Lanka Sudan Suriname Swaziland Sweden Switzerland Syrian Arab Republic Taiwan Tajikistan Tanzania Thailand Togo Tokelau Tonga Trinidad And Tobago Tunisia Turkey Turkmenistan Turks And Caicos Islands Tuvalu Uganda Ukraine United Arab Emirates United Kingdom United States Uruguay Uzbekistan Vanuatu Venezuela Vietnam Virgin Islands, British Virgin Islands, U.S. Wallis And Futuna Yemen Zambia Zimbabwe Ascension Island Diego Garcia Inmarsat East Timor Iridium Serbia and Montenegro Emsat Ellipso-3 Globalstar Montenegro Kosovo South Sudan Thuraya</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=s_provider</td>
+	<td>All Test Provider</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=s_source</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=s_destination</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<!--paieska pagal source-->
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007886&nbsp;&nbsp;DID (37063042438 )</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>306984327347</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<!--paieska pagal src su %-->
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>37%</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007886&nbsp;&nbsp;DID (37063042438 )</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>%234</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007886&nbsp;&nbsp;DID (37063042438 )</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>%843%</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>37%34</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007886&nbsp;&nbsp;DID (37063042438 )</td>
+	<td></td>
+</tr>
+<!--paieska pagal useri-->
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_user</td>
+	<td>label=User Resellers</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007886&nbsp;&nbsp;DID (37063042438 )</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_user</td>
+	<td>label=All</td>
+</tr>
+<!--paieska pagal sali-->
+<tr>
+	<td>select</td>
+	<td>id=s_country</td>
+	<td>label=Philippines</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007886&nbsp;&nbsp;DID (37063042438 )</td>
+	<td></td>
+</tr>
+<!--paieska pagal dst-->
+<tr>
+	<td>click</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForSelectedLabel</td>
+	<td>id=s_country</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>63</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007886&nbsp;&nbsp;DID (37063042438 )</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>63727007887</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007886&nbsp;&nbsp;DID (37063042438 )</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>63%</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007886&nbsp;&nbsp;DID (37063042438 )</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>%887</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007886&nbsp;&nbsp;DID (37063042438 )</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>%007%</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007886&nbsp;&nbsp;DID (37063042438 )</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>%39</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007886&nbsp;&nbsp;DID (37063042438 )</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>63%887</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007886&nbsp;&nbsp;DID (37063042438 )</td>
+	<td></td>
+</tr>
+<!--paieska pagal status-->
+<tr>
+	<td>click</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_status</td>
+	<td>label=Ringing</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth590ee30de0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007886&nbsp;&nbsp;DID (37063042438 )</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_status</td>
+	<td>label=Answered</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007886&nbsp;&nbsp;DID (37063042438 )</td>
+	<td></td>
+</tr>
+<!--clear search-->
+<tr>
+	<td>select</td>
+	<td>id=s_user</td>
+	<td>label=User Resellers</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_status</td>
+	<td>label=Ringing</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_source</td>
+	<td>22</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_country</td>
+	<td>label=Afghanistan</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_destination</td>
+	<td>65</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_user</td>
+	<td>User Resellers</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_status</td>
+	<td>Ringing</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_source</td>
+	<td>22</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_country</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_destination</td>
+	<td>65</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForNotVisible</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_user</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_status</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_source</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_country</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_destination</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=universal_bundles/make_rspro</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=resellers_provider/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/stats/active_calls</td>
+	<td></td>
+</tr>
+<!--paieska pagal provaideri-->
+<tr>
+	<td>assertText</td>
+	<td>id=s_provider</td>
+	<td>All res_prov_sip</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_provider</td>
+	<td>label=res_prov_sip</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=s_provider</td>
+	<td>res_prov_sip</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=active_calls_count</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011223&nbsp;&nbsp;System Admin / IAX2/ipauth*</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>37060011239&nbsp;&nbsp;United States FIX USA 231 Michigan</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007887&nbsp;&nbsp;Philippines FIX Philippines proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>63727007886&nbsp;&nbsp;DID (37063042438 )</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Clear search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForSelectedLabel</td>
+	<td>id=s_provider</td>
+	<td>All</td>
+</tr>
+</tbody></table>
+</body>
+</html>

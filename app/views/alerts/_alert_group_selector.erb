@@ -1,0 +1,43 @@
+<table width='100%' style="margin-left: 20px" id='test_table'>
+  <% if alert_dependencies %>
+    <% alert_dependencies.each do |alert| %>
+        <tr>
+          <td>
+            <%= nice_alert(Alert.where(id: alert.alert_id).first) %>
+          </td>
+          <td>
+            <%= link_to b_delete, "javascript:void(0);",
+              :onclick => "new Ajax.Updater('group_selector', '#{Web_Dir}/alerts/remove_alert_from_group/#{alert.id.to_s}', {
+                              asynchronous:false, evalScripts:true,
+                              onComplete:function(request){Element.hide('spinner');},
+                              onLoading:function(request){Element.show('spinner');},
+                              parameters: {alert_id: #{alert.alert_id}, check_type: jQuery('#alert_check_type').val() == undefined ? jQuery('#object_type').attr('value') :
+                              jQuery('#alert_check_type').val()},
+                          });"
+            %>
+          </td>
+        </tr>
+    <% end %>
+  <% end %>
+  <tr>
+    <% alerts = reject_with_circles(alerts) %>
+    <% if alerts.size > 0 %>
+      <td>
+        <%= select_tag('', options_for_select(alerts.map { |alert| [nice_alert(alert), alert.id] }), :id => 'alert_id', :style => "width:100%") %>
+      </td>
+      <td>
+        <%= link_to b_add, "javascript:void(0);", :onclick => "new Ajax.Updater('group_selector', '#{Web_Dir}/alerts/add_alert_to_group', {
+                                                                        asynchronous:false, evalScripts:true,
+                                                                        onComplete:function(request){Element.hide('spinner');},
+                                                                        onLoading:function(request){Element.show('spinner');},
+                                                                        parameters: {alert_id: $('alert_id').value, check_type: jQuery('#alert_check_type').val() == undefined ? jQuery('#object_type').attr('value') : jQuery('#alert_check_type').val()}
+                                                                      });"
+        %>
+      </td>
+    <% else %>
+      <td>
+        <%= select_tag('', options_for_select([_('None')]), :id => 'alert_id', :style => "width:100%") %>
+      </td>
+    <% end %>
+  </tr>
+</table>

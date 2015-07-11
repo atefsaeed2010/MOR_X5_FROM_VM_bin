@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/test
+END
+test2.sql
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/test/test2.sql
+END
+test_bad_sql.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/test/test_bad_sql.sql
+END
+test1.sql
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/test/test1.sql
+END

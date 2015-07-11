@@ -1,0 +1,12 @@
+<%= form_tag(:action => 'create') do %>
+  <%= render 'form',
+      cardgroup: @cardgroup, price_with_vat: @price_with_vat,
+      currencies: @currencies, lcrs: @lcrs, tariffs: @tariffs,
+      locations: @locations,
+      year_from: @year_from, month_from: @month_from, day_from: @day_from,
+      year_till: @year_till, month_till: @month_till, day_till: @day_till
+  %>
+  <br/>
+  <%= submit_tag _('Create'), :disable_with => _('Processing..') %>
+<% end %>
+<br/>

@@ -1,0 +1,203 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/44497/mor/gui/branches/x5/selenium/sqls/settings/addons
+END
+provb_deactivate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/provb_deactivate.sql
+END
+sms_activate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/sms_activate.sql
+END
+pbx_deactivate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/pbx_deactivate.sql
+END
+rspro_activate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/rspro_activate.sql
+END
+acc_groups.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/44497/mor/gui/branches/x5/selenium/sqls/settings/addons/acc_groups.sql
+END
+ast_18_deactivate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/ast_18_deactivate.sql
+END
+rec_activate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/rec_activate.sql
+END
+sms_deactivate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/sms_deactivate.sql
+END
+callb_activate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/callb_activate.sql
+END
+rspro_deactivate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/rspro_deactivate.sql
+END
+cc_single_login_activate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/cc_single_login_activate.sql
+END
+deactivate_addons.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/deactivate_addons.sql
+END
+rec_deactivate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/rec_deactivate.sql
+END
+cc_activate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/cc_activate.sql
+END
+wp_activate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/wp_activate.sql
+END
+callb_deactivate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/callb_deactivate.sql
+END
+cc_single_login_deactivate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/cc_single_login_deactivate.sql
+END
+ma_activate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/ma_activate.sql
+END
+cc_deactivate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/cc_deactivate.sql
+END
+wp_deactivate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/wp_deactivate.sql
+END
+cs_activate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/cs_activate.sql
+END
+ma_deactivate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/ma_deactivate.sql
+END
+pg_activate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/pg_activate.sql
+END
+activate_addons.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/activate_addons.sql
+END
+cs_deactivate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/cs_deactivate.sql
+END
+pg_deactivate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/pg_deactivate.sql
+END
+ad_activate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/ad_activate.sql
+END
+rs_activate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/rs_activate.sql
+END
+provb_activate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/provb_activate.sql
+END
+pbx_activate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/pbx_activate.sql
+END
+ad_deactivate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/ad_deactivate.sql
+END
+rs_deactivate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/rs_deactivate.sql
+END
+ast_18_activate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/settings/addons/ast_18_activate.sql
+END

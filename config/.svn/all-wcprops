@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/!svn/ver/52071/mor/gui/branches/x5/config
+END
+acc_permissions.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/44789/mor/gui/branches/x5/config/acc_permissions.yml
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/44912/mor/gui/branches/x5/config/routes.rb
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/43198/mor/gui/branches/x5/config/application.rb
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/39906/mor/gui/branches/x5/config/boot.rb
+END
+gateway_config.yml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/42371/mor/gui/branches/x5/config/gateway_config.yml
+END

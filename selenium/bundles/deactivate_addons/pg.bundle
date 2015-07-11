@@ -1,0 +1,5 @@
+# turn off addon for test payments/payment_gateways.case
+# ----
+# turn off calling cards addon
+/settings/addons/pg_deactivate.sql
+# bundle loaded

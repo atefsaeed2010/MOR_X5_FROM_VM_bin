@@ -1,0 +1,14 @@
+<% if @searching %>
+    <%= _('Total_records') %>: <b><%= @total_records %></b>
+<% end %>
+<br/>
+<br/>
+<%= render 'search_form', options: @options, searching: @searching,
+                          terminators: @terminators, countries: @countries, from: @from, till: @till,
+                          total_records: @total_records %>
+<br/>
+<% if @searching %>
+    <%= render 'aggregates', aggregates: @aggregates, options: @options, total_pages: @total_pages,
+                             total_records: @total_records, originator: @options[:originator_id].to_s != 'none',
+                             terminator: @options[:terminator].to_i > -1 %>
+<% end %>

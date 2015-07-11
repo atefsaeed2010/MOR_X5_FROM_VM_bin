@@ -1,0 +1,1998 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--Kūrimas-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Name:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td>user type alert 1</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_type_parameters</td>
+	<td>ASR ACD PDD TTC BILLSEC TOTAL CALLS ANSWERED CALLS NOT ANSWERED CALLS HGC (ABSOLUTE) HGC (PERCENT) GROUP SIMULTANEOUS CALLS PRICE SUM</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=TOTAL CALLS</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=alert_type_parameters</td>
+	<td>TOTAL CALLS</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=alert_notify_to_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_less</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_more</td>
+	<td>8</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td>user type alert 2</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_type_parameters</td>
+	<td>ASR ACD PDD TTC BILLSEC TOTAL CALLS ANSWERED CALLS NOT ANSWERED CALLS HGC (ABSOLUTE) HGC (PERCENT) GROUP SIMULTANEOUS CALLS PRICE SUM</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=SIMULTANEOUS CALLS</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=alert_type_parameters</td>
+	<td>SIMULTANEOUS CALLS</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_more</td>
+	<td>85</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_less</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td>Test Group</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_type_parameters</td>
+	<td>ASR ACD PDD TTC BILLSEC TOTAL CALLS ANSWERED CALLS NOT ANSWERED CALLS HGC (ABSOLUTE) HGC (PERCENT) GROUP SIMULTANEOUS CALLS PRICE SUM</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<!--turi būti priskirti bent du-->
+<tr>
+	<td>assertTextPresent</td>
+	<td>Alert was not created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* Alert group must have more than one alert assigned.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Alert was not created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* Alert group must have more than one alert assigned.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Name:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=a &gt; img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=alert_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_type_parameters</td>
+	<td>ASR ACD PDD TTC BILLSEC TOTAL CALLS ANSWERED CALLS NOT ANSWERED CALLS HGC (ABSOLUTE) HGC (PERCENT) GROUP SIMULTANEOUS CALLS PRICE SUM</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>id=alert_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_id</td>
+	<td>user type alert 1 user type alert 2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=alert_ignore_if_calls_less</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=alert_ignore_if_calls_more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_check_type</td>
+	<td>User Provider Device Destination Destination group</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_type_parameters</td>
+	<td>ASR ACD PDD TTC BILLSEC TOTAL CALLS ANSWERED CALLS NOT ANSWERED CALLS HGC (ABSOLUTE) HGC (PERCENT) GROUP SIMULTANEOUS CALLS PRICE SUM</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_alert_count_type</td>
+	<td>ABS</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tr.group &gt; td</td>
+	<td>exact:Group:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Alert when more than</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Clear when less than</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>alerts are active</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=a &gt; img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td>Test Group</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=parameter_3</td>
+	<td>GROUP</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_name</td>
+	<td>Test Group</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=alert_id</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=user type alert 1</td>
+	<td>user type alert 1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=user type alert 2</td>
+	<td>user type alert 2</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td>Test Group 2</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Device</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0 </td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0 </td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=alert_type_parameters</td>
+	<td>GROUP</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>999</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Alert was not created<br /> * Alert group must have more than one alert assigned.</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td>Test Group 2</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Device</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_type_parameters</td>
+	<td>ASR ACD PDD TTC BILLSEC TOTAL CALLS ANSWERED CALLS NOT ANSWERED CALLS HGC (ABSOLUTE) HGC (PERCENT) GROUP</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=device_user</td>
+	<td>label=Test User #1 (2)</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>name=users_device</td>
+	<td>Not used IAX2/101 FAX/102 IAX2/1002</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=users_device</td>
+	<td>label=FAX/102</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_type_parameters</td>
+	<td>ASR ACD PDD TTC BILLSEC TOTAL CALLS ANSWERED CALLS NOT ANSWERED CALLS HGC (ABSOLUTE) HGC (PERCENT) GROUP</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0 </td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Destination</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=alert_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Device</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0 </td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0 </td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=alert_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Provider</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=alert_id</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=User</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0 </td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_id</td>
+	<td>user type alert 1 user type alert 2 Test Group</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_id</td>
+	<td>label=Test Group</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0 </td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_id</td>
+	<td>user type alert 1 user type alert 2</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_id</td>
+	<td>label=user type alert 1</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0 </td>
+	<td>3000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>css=a &gt; img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>dsf „ūįš„ūį„%(*&amp;%&amp;*(%</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>dsf „ūįš„ūį„%(*&amp;%&amp;*(%</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=parameter_4</td>
+	<td>GROUP</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/alerts/alert_edit/3')]</td>
+	<td>Test Group</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_id</td>
+	<td>user type alert 2</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>-5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>-9</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Delete']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@alt='Delete']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_id</td>
+	<td>user type alert 1 user type alert 2 Test Group</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//a[contains(@href, '/billing/alerts/alert_edit/3')]</td>
+	<td>Test Group</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* Alert group must have more than one alert assigned.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_id</td>
+	<td>Test Group</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//a[contains(@href, '/billing/alerts/alert_edit/3')]</td>
+	<td>Test Group</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td>provider alert 1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Provider</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_less</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_more</td>
+	<td>54</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=object_type_5</td>
+	<td>Provider</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td>provider alert 2</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Provider</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_more</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_less</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=object_type_6</td>
+	<td>Provider</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Provider</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_check_data2</td>
+	<td>All Test Provider/1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_data2</td>
+	<td>label=Test Provider/1</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_type_parameters</td>
+	<td>ASR ACD PDD TTC BILLSEC TOTAL CALLS ANSWERED CALLS NOT ANSWERED CALLS HGC (ABSOLUTE) HGC (PERCENT) GROUP SIMULTANEOUS CALLS PRICE SUM</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td>Test Group 3</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_check_type</td>
+	<td>User Provider Device Destination Destination group</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=provider alert 1</td>
+	<td>provider alert 1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=provider alert 2</td>
+	<td>provider alert 2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/7</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td>Test Group 4</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_type_parameters</td>
+	<td>ASR ACD PDD TTC BILLSEC TOTAL CALLS ANSWERED CALLS NOT ANSWERED CALLS HGC (ABSOLUTE) HGC (PERCENT) GROUP SIMULTANEOUS CALLS PRICE SUM</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>17</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>17</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_id</td>
+	<td>label=Test Group</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_id</td>
+	<td>label=Test Group 2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_id</td>
+	<td>user type alert 1 user type alert 2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<!--Ciklų situacijos-->
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/alerts/alert_edit/3')]</td>
+	<td>Test Group</td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_id</td>
+	<td>user type alert 1 user type alert 2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//img[@alt='Delete'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_id</td>
+	<td>user type alert 1 user type alert 2 Test Group 2</td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>css=img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Test Group</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Alert Edit</td>
+</tr>
+<tr>
+	<td>goBackAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>17</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Test Group 2</td>
+	<td>Test Group 2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Test Group</td>
+	<td>Test Group</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/8</td>
+	<td></td>
+</tr>
+<!--neturi rodyti tų alertų, su kuriais išeina ciklas-->
+<tr>
+	<td>assertText</td>
+	<td>link=Test Group</td>
+	<td>Test Group</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Test Group 2</td>
+	<td>Test Group 2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_id</td>
+	<td>user type alert 1 user type alert 2</td>
+</tr>
+<!--Editas-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td>Simple Group Alert</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_type_parameters</td>
+	<td>ASR ACD PDD TTC BILLSEC TOTAL CALLS ANSWERED CALLS NOT ANSWERED CALLS HGC (ABSOLUTE) HGC (PERCENT) GROUP SIMULTANEOUS CALLS PRICE SUM</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=a &gt; img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_id</td>
+	<td>Test Group Test Group 2 Test Group 4</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=alert_id</td>
+	<td>Test Group</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=alert_ignore_if_calls_less</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=alert_ignore_if_calls_more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_name</td>
+	<td>Simple Group Alert</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tr.group &gt; td</td>
+	<td>exact:Group:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Alert when more than</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Clear when less than</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>alerts are active</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_name</td>
+	<td>Alert_9</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td>Simple Group Alert edited</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_id</td>
+	<td>label=Test Group</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>css=a &gt; img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>dsf „ūįš„ūį„%(*&amp;%&amp;*(%</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>dsf „ūįš„ūį„%(*&amp;%&amp;*(%</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/alerts/alert_edit/3')]</td>
+	<td>Test Group</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_id</td>
+	<td>Test Group 2 Test Group 4</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>-5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>-9</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//img[@alt='Delete'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_id</td>
+	<td>Test Group Test Group 2 Test Group 4</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//a[contains(@href, '/billing/alerts/alert_edit/3')]</td>
+	<td>Test Group</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_id</td>
+	<td>Test Group Test Group 2 Test Group 4</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//a[contains(@href, '/billing/alerts/alert_edit/3')]</td>
+	<td>Test Group</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(@href, '/billing/alerts/alert_edit/3')]</td>
+	<td>Test Group</td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>css=img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Test Group</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title</td>
+	<td>Alert Edit</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>17</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>17</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_id</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_when_more_than</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_when_less_than</td>
+	<td>17</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Test Group</td>
+	<td>Test Group</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Test Group 2</td>
+	<td>Test Group 2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Test Group 4</td>
+	<td>Test Group 4</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=alert_id</td>
+	<td>None</td>
+</tr>
+<!--patikrinimas, jog galima priskirti visokio tipo alertus-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td>user type alert</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_data1</td>
+	<td>label=Postpaid</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_more</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td>provider&nbsp;&nbsp;type alert</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Provider</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_data2</td>
+	<td>label=Test Provider/1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=NOT ANSWERED CALLS</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_disable_provider_in_lcr</td>
+	<td>label=Primary</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=alert_disable_clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=alert_action_alert_disable_object</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_less</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td>destination type alert</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Destination</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=HGC (ABSOLUTE)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_check_data3</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_count_period</td>
+	<td>label=10 h</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_comment</td>
+	<td>test<br /></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_more</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_name</td>
+	<td>device type alert</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Device</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=device_user</td>
+	<td>All Not used System Admin (0) Test User #1 (2) Test Reseller (3) Test Accountant (4)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=device_user</td>
+	<td>label=Test User #1 (2)</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>name=users_device</td>
+	<td>Not used IAX2/101 FAX/102 IAX2/1002</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=users_device</td>
+	<td>label=FAX/102</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=TTC</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_more</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=clear_on_date_year</td>
+	<td>label=2016</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=clear_on_date_month</td>
+	<td>label=February</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=clear_on_date_day</td>
+	<td>label=7</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=clear_on_date_hour</td>
+	<td>label=01</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=clear_on_date_minute</td>
+	<td>label=08</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_type_parameters</td>
+	<td>ASR ACD PDD TTC BILLSEC TOTAL CALLS ANSWERED CALLS NOT ANSWERED CALLS HGC (ABSOLUTE) HGC (PERCENT) GROUP SIMULTANEOUS CALLS PRICE SUM</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>2000</td>
+	<td></td>
+</tr>
+<!--grupei gali būti priskirti tik tos paties objekto tipo alertai-->
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_id</td>
+	<td>user type alert 1 user type alert 2 Test Group Test Group 2 Test Group 4 Simple Group Alert edited user type alert</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Provider</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_id</td>
+	<td>provider alert 1 provider alert 2 Test Group 3 provider type alert</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Device</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_id</td>
+	<td>device type alert</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Destination</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_id</td>
+	<td>destination type alert</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Destination group</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_id</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=User</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=GROUP</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_id</td>
+	<td>user type alert 1 user type alert 2 Test Group Test Group 2 Test Group 4 Simple Group Alert edited user type alert</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_id</td>
+	<td>user type alert 2 Test Group Test Group 2 Test Group 4 Simple Group Alert edited user type alert</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_id</td>
+	<td>Test Group Test Group 2 Test Group 4 Simple Group Alert edited user type alert</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_id</td>
+	<td>Test Group 2 Test Group 4 Simple Group Alert edited user type alert</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_id</td>
+	<td>Test Group 4 Simple Group Alert edited user type alert</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_id</td>
+	<td>Simple Group Alert edited user type alert</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_id</td>
+	<td>user type alert</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=a &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_id</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/14</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_name</td>
+	<td>Alert_14</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=user type alert</td>
+	<td>user type alert</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>link=origination point type alert</td>
+	<td>device type alert</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>link=destination type alert</td>
+	<td>destination type alert</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//a[contains(text(),'termination point&nbsp;&nbsp;type alert')]</td>
+	<td>provider type alert</td>
+</tr>
+</tbody></table>
+</body>
+</html>

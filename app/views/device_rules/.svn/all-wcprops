@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/52071/mor/gui/branches/x5/app/views/device_rules
+END
+_device_rules.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/52071/mor/gui/branches/x5/app/views/device_rules/_device_rules.erb
+END
+list.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/42152/mor/gui/branches/x5/app/views/device_rules/list.erb
+END
+edit.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/app/views/device_rules/edit.erb
+END

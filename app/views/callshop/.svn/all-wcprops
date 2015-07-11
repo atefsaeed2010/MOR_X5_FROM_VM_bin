@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/50699/mor/gui/branches/x5/app/views/callshop
+END
+invoice_print.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/app/views/callshop/invoice_print.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/app/views/callshop/new.html.erb
+END
+free_booth.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/50699/mor/gui/branches/x5/app/views/callshop/free_booth.html.erb
+END
+_status_occupied.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/50188/mor/gui/branches/x5/app/views/callshop/_status_occupied.html.erb
+END
+invoices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/app/views/callshop/invoices.html.erb
+END
+rate_search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/app/views/callshop/rate_search.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/49796/mor/gui/branches/x5/app/views/callshop/show.html.erb
+END
+_status_reserved.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/50188/mor/gui/branches/x5/app/views/callshop/_status_reserved.html.erb
+END
+invoice_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/39906/mor/gui/branches/x5/app/views/callshop/invoice_edit.html.erb
+END
+topup_booth.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/app/views/callshop/topup_booth.html.erb
+END
+_status_free.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/50188/mor/gui/branches/x5/app/views/callshop/_status_free.html.erb
+END
+comment_update.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/app/views/callshop/comment_update.html.erb
+END

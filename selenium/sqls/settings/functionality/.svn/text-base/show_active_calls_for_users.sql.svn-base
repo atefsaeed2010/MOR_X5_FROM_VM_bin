@@ -1,0 +1,1 @@
+insert into conflines (name, value) VALUES ('Show_Active_Calls_For_Users', 1);

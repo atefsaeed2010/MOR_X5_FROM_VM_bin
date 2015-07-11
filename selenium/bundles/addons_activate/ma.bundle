@@ -1,0 +1,5 @@
+# turn off addon for test tests/monitorings.case
+# ----
+# turn off calling cards addon
+/settings/addons/ma_activate.sql
+# bundle loaded

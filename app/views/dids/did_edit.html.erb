@@ -1,0 +1,71 @@
+<b><%= _('DID') %>: <%= @did.did %></b>
+<br/>
+<br/>
+<b><%= _('Current_status') %>: <%= @did.status.capitalize.capitalize %>
+</b>
+<br/>
+
+<% if @did.device %>
+    <%= b_device + _('Assigned_to_device') %>:
+    <%if @did.user_id != 0 and @did.reseller_id != 0 %>
+      <%= nice_device @did.device %>
+    <% else %>
+      <%= link_nice_device @did.device %>
+    <% end %>
+    <br />
+<% end %>
+
+<% if @did_route_to_server %>
+    <%= _('assigned_to_server') %>: <%= @did.external_server %>
+    <br />
+<% end %>
+
+<br/>
+<br/>
+<b><%= _('Possible_choices') %>:</b>
+<br/>
+<br/>
+
+<%= form_tag(:action => 'did_update', :id => @did) do %>
+  <%= hidden_field_tag 'status', "active" %>
+  <table class="maintable">
+    <tr>
+      <th align="left"> <%= b_device %> <%= _('Assign_did_to_device') %> </th>
+    </tr>
+    <tr class="row1">
+      <td>
+        <table>
+        <br/>
+          <tr>
+            <td id='route_to_device'>
+              <%= radio_button_tag('route_type', 'dev', !@did_route_to_server) %>
+              <%= _('route_calls_from_did_to_device') %>:
+            </td>
+            <td id='route_to_device_options'>
+              <% if @free_devices.size > 0 %>
+                  <%= select_tag("device_id", options_for_select(@free_devices.map { |dev| ["#{nice_device(dev, {:image => false})}#{ (" - " + dev.description.to_s) if dev.description.to_s.length > 0 }", dev.id] }, @did.device_id)) %>
+              <% else %>
+                  <%= _('No_free_devices') %>
+              <% end %>
+            </td>
+          </tr>
+          <tr>
+            <td id='route_to_sip'>
+              <%= radio_button_tag('route_type', 'server', @did_route_to_server || (session[:external_server_must_be_present_err] && (session[:external_server_must_be_present_err] == 1))) %>
+              <%= _('route_calls_from_did_to_external_server') %>:
+            </td>
+            <td id='route_to_sip_input'>
+              <%= text_field_tag "external_sip", @did.external_server.to_s, class: 'input', size: 23 %>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+            <br/>
+            <%= submit_tag(_('Assign'), :disable_with => _('Processing..')) %>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+<% end %>

@@ -1,0 +1,1685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>api_callflow_update</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">api_callflow_update</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/enable_api</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=admin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=user_admin&amp;device_id=777&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash2</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--Klaidų pranešimai-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=user_admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=user_admin&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=user_admin&amp;device_id=777&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=user_reseller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=user_reseller&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=user_reseller&amp;device_id=777&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=accountant&amp;device_id=777&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You are not authorised to use this functionality</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=777&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not found</td>
+	<td></td>
+</tr>
+<!--reseleriui reikia pbx addono, kad galėtų matyti callflow, accountantui devices permissionų. -->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=reseller&amp;device_id=777&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You are not authorised to use this functionality</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=accountant&amp;device_id=777&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You are not authorised to use this functionality</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=res&amp;device_id=777&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/callflow/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/addons/activate_pbx_addon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/permissions/edit/12?group_type=reseller</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=pbx_functions_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--acc, res gavo permissionus, dabar gali naudotis funkcionalumu-->
+<!--<tr> 	<td>open</td> 	<td>/billing/api/device_callflow_update?u=accountant&amp;device_id=777&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertTextPresent</td> 	<td>Device was not found</td> 	<td></td> </tr>-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=reseller&amp;device_id=777&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not found</td>
+	<td></td>
+</tr>
+<!--1. ADMIN-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow state was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow state was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=dsfsdf&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow state was not found</td>
+	<td></td>
+</tr>
+<!--BEFORE CALL-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow action was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;action=dsfdsgdfg&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow action was not found</td>
+	<td></td>
+</tr>
+<!--NO ANSWER-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=no_answer&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow action was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=no_answer&amp;action=dsfdsgdfg&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow action was not found</td>
+	<td></td>
+</tr>
+<!--BUSY-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=busy&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow action was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=busy&amp;action=dsfdsgdfg&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow action was not found</td>
+	<td></td>
+</tr>
+<!--FAILED-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=failed&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow action was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=failed&amp;action=dsfdsgdfg&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow action was not found</td>
+	<td></td>
+</tr>
+<!--action turi būti įrašytas-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=user_admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow action was not found</td>
+	<td></td>
+</tr>
+<!--ACTION: Before call - EMPTY-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=empty&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<!--einame patikrinti, ar pasiupdatino-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/callflow/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tr.row1 &gt; td</td>
+	<td>Before Call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=before_call</td>
+	<td>-</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--ACTION: Before call - forward-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Missing forward parameters</td>
+	<td></td>
+</tr>
+<!--...forward_to_device-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;forward_to_device=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>Before call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td>Forward</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_type</td>
+	<td>From Device</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;forward_to_device=2&amp;device_callerid=abcd&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>Before call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td>Forward</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_type</td>
+	<td>From Device</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;forward_to_device=999&amp;device_callerid=abcd&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Local device was not found</td>
+	<td></td>
+</tr>
+<!--einame patikrinti, ar pasiupdatino-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/callflow/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tr.row1 &gt; td</td>
+	<td>Before Call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=before_call</td>
+	<td>Forward IAX2/101</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--....forward to external number-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;external_number=&amp;device_callerid=abcd&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>External number was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;external_number=37062699289&amp;device_callerid=abcd&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>Before call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td>Forward</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td>37062699289</td>
+</tr>
+<!--einame patikrinti, ar pasiupdatino-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/callflow/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tr.row1 &gt; td</td>
+	<td>Before Call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=before_call</td>
+	<td>Forward 37062699289</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_extlines/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>[mor_local] exten =&gt; 1002,8,Goto(mor,37062699289,1)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--... be forward su caller id-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;device_callerid=caller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Missing forward parameters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;src_callerid=caller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Missing forward parameters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;did_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Missing forward parameters</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;custom=caller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Missing forward parameters</td>
+	<td></td>
+</tr>
+<!--... forward_to_device su caller id-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;forward_to_device=2&amp;device_callerid=caller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>Before call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td>Forward</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_type</td>
+	<td>From Device</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/callflow_edit/4?cft=before_call</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=cf_data3_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_extlines/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> [mor_local] exten =&gt; 1002,8,NoOp(MOR starts) </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;forward_to_device=2&amp;src_callerid=caller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>Before call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td>Forward</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_type</td>
+	<td>Unchanged</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/callflow_edit/4?cft=before_call</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=cf_data3_2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=cf_data3_1</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;forward_to_device=2&amp;did_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>DID was not found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/did/did_2/assign_to_device_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;forward_to_device=2&amp;did_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>Before call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td>Forward</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_type</td>
+	<td>DID</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_data</td>
+	<td>37093042422</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;forward_to_device=2&amp;custom=caller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>Before call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td>Forward</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_type</td>
+	<td>Custom</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_data</td>
+	<td>caller</td>
+</tr>
+<!--... forward to external number su caller id-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;external_number=37062699289&amp;device_callerid=caller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td>Forward</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td>37062699289</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_type</td>
+	<td>From Device</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/device_extlines/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>[mor_local] exten =&gt; 1002,8,Goto(mor,37062699289,1)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/callflow/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=before_call</td>
+	<td>Forward 37062699289</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/callflow_edit/4?cft=before_call</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=cf_data3_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;external_number=37062699289&amp;src_callerid=caller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td>Forward</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td>37062699289</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_type</td>
+	<td>Unchanged</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/callflow/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=before_call</td>
+	<td>Forward 37062699289</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/callflow_edit/4?cft=before_call</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=cf_data3_2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;external_number=37062699289&amp;did_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td>Forward</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td>37062699289</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_type</td>
+	<td>DID</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_data</td>
+	<td>37093042422</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/callflow_edit/4?cft=before_call</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=cf_data3_3</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>name=did_id</td>
+	<td>37093042422</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=forward&amp;external_number=37062699289&amp;custom=caller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td>Forward</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td>37062699289</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=callerid_type</td>
+	<td>Custom</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_data</td>
+	<td>caller</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/callflow_edit/4?cft=before_call</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=cf_data3_4</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=cf_data4</td>
+	<td>caller</td>
+</tr>
+<!--ACTION: Before call - voicemail-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=voicemail&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>Before call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td>Voicemail</td>
+</tr>
+<!--ACTION: Before call - fax device-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=fax_detect&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>FAX device was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=fax_detect&amp;fax_device=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>FAX device was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=before_call&amp;callflow_action=fax_detect&amp;fax_device=3&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>Before call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td>Fax detect</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td>FAX/102</td>
+</tr>
+<!--ACTION: no answer  - EMPTY-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=no_answer&amp;callflow_action=empty&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<!--einame patikrinti, ar pasiupdatino-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/callflow/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[5]/td</td>
+	<td>No Answer</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=no_answer</td>
+	<td>-</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--ACTION: no answer  - forward-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=no_answer&amp;callflow_action=forward&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Missing forward parameters</td>
+	<td></td>
+</tr>
+<!--...forward_to_device-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=no_answer&amp;callflow_action=forward&amp;forward_to_device=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>No answer</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td>Forward</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_type</td>
+	<td>From Device</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=no_answer&amp;callflow_action=forward&amp;forward_to_device=2&amp;device_callerid=abcd&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>No answer</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td>Forward</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_type</td>
+	<td>From Device</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=no_answer&amp;callflow_action=forward&amp;forward_to_device=999&amp;device_callerid=abcd&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Local device was not found</td>
+	<td></td>
+</tr>
+<!--einame patikrinti, ar pasiupdatino-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/callflow/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[5]/td</td>
+	<td>No Answer</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=no_answer</td>
+	<td>Forward IAX2/101</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--....forward to external number-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=no_answer&amp;callflow_action=forward&amp;external_number=&amp;device_callerid=abcd&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>External number was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_update?u=admin&amp;device_id=4&amp;state=no_answer&amp;callflow_action=forward&amp;external_number=37062699289&amp;device_callerid=abcd&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Callflow was successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>No answer</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td>Forward</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td>37062699289</td>
+</tr>
+<!--einame patikrinti, ar pasiupdatino-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/callflow/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[5]/td</td>
+	<td>No Answer</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=no_answer</td>
+	<td>Forward 37062699289</td>
+</tr>
+</tbody></table>
+</body>
+</html>

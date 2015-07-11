@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title><%= session[:admin_browser_title] %> <%= raw @page_title %> </title>
+  <script type="text/javascript">var mor_web_dir = '<%=Web_Dir%>';</script>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= yield :head %>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+
+<%= javascript_include_tag "dtree" %>
+<%= javascript_include_tag "wz_tooltip" %>
+
+<table width="100%" style="border-collapse:collapse;">
+  <tr id="page_header" style="background-color:#FFFFFF;">
+    <td>
+      <table width="100%">
+        <tr>
+          <td valign="top">
+            <% if session[:logo_picture] %>
+                <% unless session[:logo_picture].blank? %>
+                    <%= link_to(image_tag("/images/" + session[:logo_picture].to_s), {:controller => "/callc", :action => "main"}, {:id => "company_logo", :title => session[:company]}) %>
+                <% end %>
+            <% else %>
+                <% user = User.where(uniquehash: params[:id].to_s).first %>
+                <% user_id = user.present? ? user.try(:id).to_i : -1 %>
+                <% if Confline.get_value("Show_logo_on_register_page", user_id).to_i == 1 %>
+                    <%= link_to(image_tag("/images/" + Confline.get_value("Logo_Picture", user_id).to_s), {:controller => "/callc", :action => "main"}, {:id => "company_logo", :title => Confline.get_value("Company", user_id)}) %>
+                <% end %>
+            <% end %>
+          </td>
+          <td>
+            <table width="100%">
+              <tr>
+                <td align="right" class="nb">
+                  <% if session[:login] == true %>
+                      <% name = '' %>
+                      <% if (session[:first_name].to_s.length + session[:last_name].to_s.length) > 0 %>
+                          <% name = "<b>#{session[:first_name].titleize} #{session[:last_name].titleize}</b>".html_safe %>
+                      <% end %>
+                      <%= link_to name + "(#{session[:username]})", :controller => :users, :action => :personal_details, :id => session[:user_id] %>  <%= link_to _('Logout'), :controller => "callc", :action => "logout" %>
+                  <% end %>
+                </td>
+              </tr>
+              <tr>
+                <td align="right" valign="bottom">
+                  <div id="flag_list_div"><%= flag_list.html_safe %></div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+</table>
+<div id="ddnav">
+  <div id="page_title_icon" class="page_title_new">
+    <% if @page_title %>
+          <span id="page_title">
+            <b>&nbsp;</b><%= image_tag('icons/' + @page_icon, :title => @page_title) if @page_icon %>&nbsp;<%= raw @page_title.html_safe %>
+          </span>
+    <% end %>
+    <% if @help_link and (admin? or reseller?) and session[:help_link].to_i == 1 %>
+        &nbsp;<a href="<%= @help_link %>" target="_blank"><%= icon(:help, :title => _('Get_help_about_this_page')) %></a>
+    <% end %>
+    <%= icon(:application_side_expand, {:id => :application_side_expand, :title => _('Show_menus')}) %>
+    <%= icon(:application_side_contract, {:id => :application_side_expand, :title => _('Hide_menus')}) %>
+  </div>
+  <div id="spinner" style="display: none;">
+    <%= image_tag("ajax-loader.gif", :border => 0) %>
+  </div>
+  <div id="spinner2" style="display: none;">
+    <%= image_tag "ajax-loader_line2.gif", :style => "padding-left: 45%; padding-top: 10%; margin-top: 10%" %>
+  </div>
+</div>
+
+
+<table width="100%">
+  <tr>
+    <td>
+      <table style="width: 100%">
+        <tr valign="top">
+          <% if session[:login] == true %>
+              <td class="left_menu" width="170" id="slide_1">
+                <% if admin? %>
+                      <span>
+                        <% if session[:integrity_check] == 1 %>
+                          <table class='error_table'>
+                            <tr>
+                              <td><%= link_to b_exclamation + _("Please_Check_System_Integrity_Here") , :controller=> "functions", :action=>"integrity_check" %></td>
+                            </tr>
+                          </table>
+                          <br/>
+                        <% end %>
+                        <br/>
+                        <div class="tree_menu" id="settings_menu_div"></div>
+                        <% content_for :scripts do %>
+                          <%= render 'layouts/settings_menu' %>
+                        <% end %>
+                <% end %>
+
+                <% if admin? %>
+                    <div class="tree_menu" id="addons_menu_div"></div>
+                    <% content_for :scripts do %>
+                        <%= render 'layouts/addons_menu' %>
+                    <% end %>
+                <% end %>
+
+                <% if admin? or accountant? %>
+                    <div class="tree_menu" id="statistics_menu_div"></div>
+                    <% content_for :scripts do %>
+                        <%= render 'layouts/statistics_menu' %>
+                    <% end %>
+                <% end %>
+
+                <% if reseller? %>
+                    <div class="tree_menu" id="reseller_menu_div"></div>
+                    <div class="tree_menu" id="reseller_menu_addons_div"></div>
+                    <% content_for :scripts do %>
+                        <%= render 'layouts/reseller_menu' %>
+                    <% end %>
+                <% end %>
+
+                <% if current_user.reseller_allow_providers_tariff? and reseller? %>
+                    <div class="tree_menu" id="reseller_statistics_menu_div"></div>
+                    <% content_for :scripts do %>
+                        <%= render 'layouts/reseller_statistics_menu' %>
+                    <% end %>
+                <% end %>
+
+                <% if accountant? %>
+                    <div class="tree_menu" id="accountant_menu_div"></div>
+                    <% content_for :scripts do %>
+                        <%= render 'layouts/accountant_menu' %>
+                    <% end %>
+                <% end %>
+
+                <div class="tree_menu" id="personal_menu_div"></div>
+                <% content_for :scripts do %>
+                    <% if current_user_permission %>
+                        <%= render 'layouts/personal_menu2' %>
+                    <% else %>
+                        <%= render 'layouts/personal_menu' %>
+                    <% end %>
+                <% end %>
+                </span>
+              </td>
+          <% end %>
+
+          <td align="left" class="main_window" style='height: 500px'>
+            <% if @show_currency_selector %>
+                <% if params[:controller].to_s == "tariffs" and params[:action].to_s == "user_rates" %>
+                    <%= currency_selector(true).html_safe %>
+                <% else %>
+                    <%= currency_selector.html_safe %>
+                <% end %>
+            <% else %>
+                <br/>
+            <% end %>
+            <% if flash[:status] -%>
+                <div id="status"><%= flash[:status].html_safe %></div>
+                <br/>
+            <% end -%>
+            <% if flash[:notice] -%>
+                <div id="notice"><%= flash[:notice].html_safe %></div>
+                <br/>
+            <% end -%>
+            <div class="nb">
+              <%= raw yield.html_safe %>
+            </div>
+          </td>
+
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<div id="footerbck"></div>
+<div id="footerbox">
+  <div class="left-element">
+    <% if session[:version] and session[:copyright_title] %>
+        &nbsp;&nbsp;<%= raw session[:version] %> <%= raw session[:copyright_title].to_s.encode("UTF-8", :invalid => :replace, :undef => :replace, :replace => "?") %>
+    <% else %>
+        <% if Confline.get_value("Show_logo_on_register_page", 0).to_i == 1 %>
+            &nbsp;&nbsp;<%=raw Confline.get_value("Version", 0) %> <%= raw Confline.get_value("Copyright_Title", 0).to_s.encode("UTF-8", :invalid => :replace, :undef => :replace, :replace => "?") %>
+        <% end %>
+    <% end %>
+    <%# nice_date_time(Time.now) %>
+    <% session[:usertype] %>&nbsp;
+  </div>
+  <% if admin? and session[:hide_manual_link].to_i != 1 %>
+      <div class="right-element">
+        <a style="" href="http://wiki.kolmisoft.com/index.php/MOR_Manual" target="_blank"><%= image_tag('icons/pdf.png', :title => _('Manual')) %>
+          Manual</a></div>
+  <% end %>
+</div>
+
+<% if @help_link and (admin? or reseller? or accountant?) and session[:help_link].to_i == 1 %>
+    <div class="help_link">
+      <a href="<%= @help_link %>" target="_blank"><%= image_tag('help_banner.png', :title => _('Help_Banner_Notification')) %></a>
+    </div>
+<% end %>
+
+<%= javascript_include_tag "jquery-1.4.2.min.js" %>
+<script type="text/javascript">
+    $j = jQuery.noConflict();
+</script>
+<%= javascript_include_tag "mor/mor.js" %>
+
+<script type="text/javascript">
+    read_show_hide_menus();
+    $j(".application_side_contract").click(function () {
+        show_hide_menus();
+    });
+    $j(".application_side_expand").click(function () {
+        show_hide_menus();
+    });
+    <%if session[:show_menu].to_i == 1%>
+    show_hide_menus2(1);
+    <%end%>
+    // Firefox disable form cache on reload
+    $j('input,textarea,select').attr('autocomplete', 'off');
+</script>
+
+<%= yield :scripts %>
+
+</body>
+</html>

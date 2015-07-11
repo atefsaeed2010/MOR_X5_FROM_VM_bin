@@ -1,0 +1,4 @@
+<%= form_tag(:action => 'create') do %>
+    <%= render 'form', local_variables_for_partial(self) %>
+    <%= submit_tag _('Create'), :disable_with => _('Processing..') %>
+<% end %>

@@ -1,0 +1,36 @@
+<% invoice = user.cs_invoices.first %>
+<tr id="booth-<%= user.id %>" class="booth reserved booth-<%= user.id %>">
+  <td class="status">
+    <span></span>
+  </td>
+  <td class="num"><%= index + 1 %></td>
+  <td class="created_at"><%= nice_date_time(invoice.created_at) %></td>
+  <td class="duration">-</td>
+  <td class="user_rate">-</td>
+  <td class="country">-</td>
+  <td class="number">-</td>
+  <td class="balance">
+    <% if invoice.prepaid? %>
+        <span id="balance_<% user.id %>" class="balance-value <%= ((invoice.balance - invoice.call_price) < 0.0) ? "red" : "green" %>"><%= _(invoice.invoice_type.capitalize).upcase %>
+          (<%= nice_number(invoice.balance.to_f - invoice.call_price.to_f) %>)</span>
+        <a href="" class="topup topup-prepaid" title="<%= _('Adjust_user_balance') %>">&nbsp;</a>
+    <% else %>
+        <span id="balance_<% user.id %>" class="balance-value <%= (invoice.call_price > 0.0) ? "red" : "green" %>"><%= _(invoice.invoice_type.capitalize).upcase %>
+          (<%= nice_number(invoice.balance - invoice.call_price) %>)</span>
+    <% end %>
+  </td>
+  <td class="comment">
+    <%= h(invoice.comment) %> <%= link_to "", "", {:class => "comm-edit", :title => _('Update_comment')} %>
+  </td>
+  <td class="session last" style="white-space: nowrap;">
+    <% if callshop.simple_session? %>
+      <%= b_view_colums %>
+      <a class="reset-session" href=""><%= b_refresh %></a>
+      <a class="quick-end-session" href=""><%= b_refresh_print %></a>
+    <% else %>
+      <div class="btn">
+        <a class="end-session" href=""><%= _('End') %></a>
+      </div>
+    <% end %>
+  </td>
+</tr>

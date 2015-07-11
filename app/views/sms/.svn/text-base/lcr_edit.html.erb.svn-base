@@ -1,0 +1,6 @@
+<%= form_tag(:action => 'lcr_update', :id => @lcr) do %>
+    <%= render 'lcr_form', lcr: @lcr %>
+    <%= submit_tag _('Edit'), :disable_with => _('Processing..') %>
+<% end %>
+
+<br><br>

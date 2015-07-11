@@ -1,0 +1,63 @@
+<tr>
+  <td height="20"></td>
+</tr>
+<tr>
+  <td class="bottom_border">
+    <b><%= _('Agent_options') %></b>
+  </td>
+</tr>
+<tr>
+  <td height="10"></td>
+</tr>
+<tr>
+  <td valign="top">
+    <table class="simple">
+      <tr>
+        <td id="cid_name_prefix"><%= _('CID_name_prefix') %>:</td>
+        <td id="queue_name_value"><%= text_field 'queue', 'cid_name_prefix', "class" => "input", :size => 15 %> </td>
+      </tr>
+      <tr>
+        <td> <%= _('Report_hold_time') %>:</td>
+        <td>
+          <%= radio_button_tag('queue[reportholdtime]', 'no', queue.reportholdtime == 'no') %> <%= _('_No') %>
+          <%= radio_button_tag('queue[reportholdtime]', 'yes', queue.reportholdtime == 'yes') %> <%= _('_Yes') %>
+        </td>
+      </tr>
+      <tr>
+        <td> <%= _('Agent_announcement') %>:</td>
+        <td>
+          <select name="queue[announce]">
+            <% for a in announcements %>
+                <option value=<%= a.id %> <%= "selected" if queue.announce.to_i == a.id.to_i %>>
+                  <%= a.path.to_s %>
+                </option>
+            <% end %>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td> <%= _('Agent_delay') %>:</td>
+        <td><%= text_field_tag 'queue[memberdelay]', queue.memberdelay, :size => 5, "class" => "input" %> <%= _('seconds') %></td>
+      </tr>
+      <tr>
+        <td> <%= _('Agent_timeout') %>:</td>
+        <td><%= text_field_tag 'queue[timeout]', queue.timeout, :size => 5, "class" => "input" %> <%= _('seconds') %></td>
+      </tr>
+      <tr>
+        <td> <%= _('Retry') %>:</td>
+        <td><%= text_field_tag 'queue[retry]', queue.retry, :size => 5, "class" => "input" %> <%= _('seconds') %></td>
+      </tr>
+      <tr>
+        <td> <%= _('Wrap_up_time') %>:</td>
+        <td><%= text_field_tag 'queue[wrapuptime]', queue.wrapuptime, :size => 5, "class" => "input" %> <%= _('seconds') %></td>
+      </tr>
+      <tr>
+        <td> <%= _('Allow_hangup_by') %>:</td>
+        <td>
+          <%= radio_button_tag('queue[allow_callee_hangup]', 'no', queue.allow_callee_hangup == 'no') %> <%= _('_No') %>
+          <%= radio_button_tag('queue[allow_callee_hangup]', 'yes', queue.allow_callee_hangup == 'yes') %> <%= _('_Yes') %>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>

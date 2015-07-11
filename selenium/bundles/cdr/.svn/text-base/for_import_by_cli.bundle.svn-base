@@ -1,0 +1,13 @@
+# Bundle for cdr import by cli
+#
+/user/user_2/create_callerid.sql
+/user/user_5/create_callerid.sql
+# Some callerids for amdins and reseller user loaded
+/tariff/delete_all_rates.sql
+# All rates deleted
+/tariff/provider_1/add_rates.sql
+/tariff/retail_4/add_rates.sql
+/tariff/retail_3/add_rates.sql
+/tariff/wholesale_2/add_rates.sql
+# New rates added for reseller, user_admin and user_reseller tariffs
+# bundle loaded

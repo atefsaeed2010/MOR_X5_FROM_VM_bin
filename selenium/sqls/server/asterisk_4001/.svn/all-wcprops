@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/49375/mor/gui/branches/x5/selenium/sqls/server/asterisk_4001
+END
+create.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/49294/mor/gui/branches/x5/selenium/sqls/server/asterisk_4001/create.sql
+END
+assign_providers_devices_to_server.sql
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/!svn/ver/49375/mor/gui/branches/x5/selenium/sqls/server/asterisk_4001/assign_providers_devices_to_server.sql
+END

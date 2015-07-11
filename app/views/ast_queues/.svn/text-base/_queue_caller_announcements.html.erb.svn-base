@@ -1,0 +1,112 @@
+<tr>
+  <td height="20"></td>
+</tr>
+<tr>
+  <td class="bottom_border">
+    <b><%= _('Caller_Announcements') %></b>
+  </td>
+</tr>
+<tr>
+  <td height="10"></td>
+</tr>
+<tr>
+  <td valign="top">
+    <table class="simple">
+      <tr>
+        <td id="repeat_frequency"><%= _('Repeat_Frequency') %>:</td>
+        <td id="repeat_frequency_value">
+          <select name="queue[announce_frequency]" id="repeat_frequency_select">
+            <% 11.times do |i| %>
+              <% if i == 0 %>
+                <option value="0" <%= "selected" if queue.announce_frequency.to_i == 0 %>><%= _('_OFF') %></option>
+              <% else %>
+                <option value=<%= i*30 %> <%= "selected" if queue.announce_frequency.to_i == i*30 %>>
+                  <%= (i*30).to_s %>
+                </option>
+              <% end %>
+            <% end %>
+          </select>
+          <%= " " + _('seconds') %>
+        </td>
+      </tr>
+      <tr id="row_to_hide_1">
+        <td id="min_announce_frequency"><%= _('Min_Announce_Frequency') %>:</td>
+        <td id="min_announce_frequency_value"><%= text_field 'queue', 'min_announce_frequency', "class" => "input", :size => 5 %></td>
+      </tr>
+      <tr id="row_to_hide_2">
+        <td id="announce_position"><%= _('Announce_Position') %>:</td>
+        <td id="announce_position_value">
+          <%= radio_button_tag('queue[announce_position]', 'no', queue.announce_position == 'no', :class => "position") %> <%= _('_No') %>
+          <%= radio_button_tag('queue[announce_position]', 'yes', queue.announce_position == 'yes', :class => "position") %> <%= _('_Yes') %>
+          <%= radio_button_tag('queue[announce_position]', 'limit', queue.announce_position == 'limit', :class => "position") %> <%= _('Limit') %>
+          <%= radio_button_tag('queue[announce_position]', 'more', queue.announce_position == 'more', :class => "position") %> <%= _('More') %>
+        </td>
+      </tr>
+      <tr id="row_to_hide_3">
+        <td id="limit"><%= _('Limit') %></td>
+        <td id="limit_value"><%= text_field 'queue', 'announce_position_limit', "class" => "input", :size => 5 %></td>
+      </tr>
+      <tr id="row_to_hide_4">
+        <td id="announce_hold_time"><%= _('Announce_Hold_Time') %>:</td>
+        <td id="announce_hold_time_value">
+          <%= radio_button_tag('queue[announce_holdtime]', 'no', queue.announce_holdtime == 'no', :class => "hold_time") %> <%= _('_No') %>
+          <%= radio_button_tag('queue[announce_holdtime]', 'yes', queue.announce_holdtime == 'yes', :class => "hold_time") %> <%= _('_Yes') %>
+          <%= radio_button_tag('queue[announce_holdtime]', 'once', queue.announce_holdtime == 'once', :class => "hold_time") %> <%= _('Once') %>
+        </td>
+      </tr>
+      <tr id="row_to_hide_5">
+        <td id="round_seconds"><%= _('Round_Seconds') %>:</td>
+        <td id="round_seconds_value"><%= text_field 'queue', 'announce_round_seconds', "class" => "input", :size => 5 %></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+<script type="text/javascript">
+    function observe_repeat_frequency() {
+       if ($('repeat_frequency_select').value == 0) {
+           $('row_to_hide_1').hide();
+           $('row_to_hide_2').hide();
+           $('row_to_hide_3').hide();
+           $('row_to_hide_4').hide();
+           $('row_to_hide_5').hide();
+       } else {
+           $('row_to_hide_1').show();
+           $('row_to_hide_2').show();
+           show_hide_limit();
+           $('row_to_hide_4').show();
+           show_hide_round_seconds();
+       }
+    }
+
+    function show_hide_limit(){
+        if ($('queue_announce_position_no').checked || $('queue_announce_position_yes').checked) {
+            $('row_to_hide_3').hide();
+        } else {
+            $('row_to_hide_3').show();
+        }
+    }
+
+    function show_hide_round_seconds(){
+        if ($('queue_announce_holdtime_no').checked) {
+            $('row_to_hide_5').hide();
+        } else {
+            $('row_to_hide_5').show();
+        }
+    }
+
+    Event.observe(window, 'load', function () {
+        show_hide_limit();
+        show_hide_round_seconds();
+        observe_repeat_frequency();
+        Event.observe($('repeat_frequency_select'), 'change', function () {
+            observe_repeat_frequency();
+        })
+        $('announce_position_value').on('change', '.position', function(event) {
+            show_hide_limit();
+        });
+        $('announce_hold_time_value').on('change', '.hold_time', function(event) {
+            show_hide_round_seconds();
+        });
+    })
+</script>

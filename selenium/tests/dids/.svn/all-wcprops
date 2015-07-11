@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/52325/mor/gui/branches/x5/selenium/tests/dids
+END
+user_dids_forward.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/50194/mor/gui/branches/x5/selenium/tests/dids/user_dids_forward.case
+END
+dids2.case
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/51775/mor/gui/branches/x5/selenium/tests/dids/dids2.case
+END
+dids.sql
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/dids/dids.sql
+END
+dids_lifesearch.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/45398/mor/gui/branches/x5/selenium/tests/dids/dids_lifesearch.case
+END
+did_export_and_search.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/51412/mor/gui/branches/x5/selenium/tests/dids/did_export_and_search.case
+END
+refresh_did_list.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/dids/refresh_did_list.case
+END
+did_owner.case
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/51910/mor/gui/branches/x5/selenium/tests/dids/did_owner.case
+END
+bulk_management2.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/52321/mor/gui/branches/x5/selenium/tests/dids/bulk_management2.case
+END
+quickforwarddids_sort.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/52319/mor/gui/branches/x5/selenium/tests/dids/quickforwarddids_sort.case
+END
+dids_import.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/49142/mor/gui/branches/x5/selenium/tests/dids/dids_import.case
+END
+route_to_did.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/51573/mor/gui/branches/x5/selenium/tests/dids/route_to_did.case
+END
+quickforwards_rules2.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/dids/quickforwards_rules2.case
+END
+dids_peak_rates.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/51775/mor/gui/branches/x5/selenium/tests/dids/dids_peak_rates.case
+END
+dids_in_active_calls.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/52325/mor/gui/branches/x5/selenium/tests/dids/dids_in_active_calls.case
+END
+bulk_management_with_zero.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/51999/mor/gui/branches/x5/selenium/tests/dids/bulk_management_with_zero.case
+END
+dids.case
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/52238/mor/gui/branches/x5/selenium/tests/dids/dids.case
+END
+search_dids_and_ordering.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/52230/mor/gui/branches/x5/selenium/tests/dids/search_dids_and_ordering.case
+END
+quickforwards_rules_re.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/52210/mor/gui/branches/x5/selenium/tests/dids/quickforwards_rules_re.case
+END
+bulk_management_rates.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/51558/mor/gui/branches/x5/selenium/tests/dids/bulk_management_rates.case
+END
+dids_edit.case
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/51749/mor/gui/branches/x5/selenium/tests/dids/dids_edit.case
+END
+did_comment_callflow_flag_stats_bulk.case
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/51775/mor/gui/branches/x5/selenium/tests/dids/did_comment_callflow_flag_stats_bulk.case
+END
+bulk_management.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/51798/mor/gui/branches/x5/selenium/tests/dids/bulk_management.case
+END
+dids_callflow.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/dids/dids_callflow.sql
+END
+quickforwards_rules.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/51775/mor/gui/branches/x5/selenium/tests/dids/quickforwards_rules.case
+END
+terminated_dids.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/43863/mor/gui/branches/x5/selenium/tests/dids/terminated_dids.case
+END
+dids_flag.sql
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/dids/dids_flag.sql
+END
+calls_through_dids.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/51399/mor/gui/branches/x5/selenium/tests/dids/calls_through_dids.case
+END
+dids_stats.case
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/52319/mor/gui/branches/x5/selenium/tests/dids/dids_stats.case
+END
+bulk_management_provider.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/52154/mor/gui/branches/x5/selenium/tests/dids/bulk_management_provider.case
+END

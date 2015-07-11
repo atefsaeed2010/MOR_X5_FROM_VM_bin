@@ -1,0 +1,43 @@
+<table class="simple" width="100%">
+  <tr>
+    <td></td>
+    <td colspan="2"><%= _('Server_load_is_too_high') %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td height="10" style="width:350px;"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="2"><u><%= _('GUI_Server') %></u></td>
+  </tr>
+  <tr>
+    <td height="10"></td>
+  </tr>
+  <%= raw settings_group_number(_('HDD_utilisation'), 'gui_hdd_utilisation', "GUI_HDD_utilisation", {:sufix => " %"}, :size => "3") %>
+  <%= raw settings_group_number(_('CPU_General_load'), 'gui_hdd_general_load', "GUI_CPU_General_load", {:sufix => " %"}, :size => "3") %>
+  <%= raw settings_group_text(_('CPU_Loadstats'), 'gui_hdd_loadstats', "GUI_CPU_Loadstats", {}, :size => "3") %>
+  <%= raw settings_group_number(_('CPU_Ruby_process'), 'gui_hdd_ruby_process', "GUI_CPU_Ruby_process", {:sufix => " %"}, :size => "3") %>
+  <%= raw settings_group_number(_('CPU_asterisk_process'), 'gui_hdd_asterisk_process', "GUI_CPU_asterisk_process", {:sufix => " %"}, :size => "3") %>
+  <tr>
+    <td height="10"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="2"><u><%= _('DB_Server') %></u></td>
+  </tr>
+  <tr>
+    <td height="10"></td>
+  </tr>
+  <%= raw settings_group_number(_('HDD_utilisation'), 'db_hdd_utilisation', "DB_HDD_utilisation", {:sufix => " %"}, :size => "3") %>
+  <%= raw settings_group_number(_('CPU_General_load'), 'db_hdd_general_load', "DB_CPU_General_load", {:sufix => " %"}, :size => "3") %>
+  <%= raw settings_group_text(_('CPU_Loadstats'), 'db_hdd_loadstats', "DB_CPU_Loadstats", {}, :size => "3") %>
+  <%= raw settings_group_number(_('CPU_MySQL_process'), 'db_hdd_mysql_process', "DB_CPU_MySQL_process", {:sufix => " %"}, :size => "3") %>
+  <%= raw settings_group_number(_('CPU_asterisk_process'), 'db_hdd_asterisk_process', "DB_CPU_asterisk_process", {:sufix => " %"}, :size => "3") %>
+  <tr>
+    <td height="50"></td>
+  </tr>
+  <%= raw settings_group_number(_('Delete_Server_Load_stats_older_than'), 'delete_server_load_stats', "Delete_Server_Load_stats_older_than", {:sufix => " days"}, :size => "3") %>
+
+</table>

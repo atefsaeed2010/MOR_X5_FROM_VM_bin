@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/52158/mor/gui/branches/x5/selenium/sqls/calls
+END
+call_details_sipchaninfo.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/45539/mor/gui/branches/x5/selenium/sqls/calls/call_details_sipchaninfo.sql
+END
+calls_to_affganistan.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/51712/mor/gui/branches/x5/selenium/sqls/calls/calls_to_affganistan.sql
+END
+delete_from_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/48631/mor/gui/branches/x5/selenium/sqls/calls/delete_from_calls.sql
+END
+good_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/49065/mor/gui/branches/x5/selenium/sqls/calls/good_calls.sql
+END
+prefix_with_letter.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/52158/mor/gui/branches/x5/selenium/sqls/calls/prefix_with_letter.sql
+END
+aggregates.sql
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/44095/mor/gui/branches/x5/selenium/sqls/calls/aggregates.sql
+END
+calls_fix_delta.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/49065/mor/gui/branches/x5/selenium/sqls/calls/calls_fix_delta.sql
+END
+set_answered_calls_0_variation_11.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/48950/mor/gui/branches/x5/selenium/sqls/calls/set_answered_calls_0_variation_11.sql
+END
+set_broken_duration.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/48023/mor/gui/branches/x5/selenium/sqls/calls/set_broken_duration.sql
+END

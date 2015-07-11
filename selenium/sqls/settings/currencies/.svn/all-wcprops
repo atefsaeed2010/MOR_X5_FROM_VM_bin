@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/49160/mor/gui/branches/x5/selenium/sqls/settings/currencies
+END
+update_currencies.sql
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/49160/mor/gui/branches/x5/selenium/sqls/settings/currencies/update_currencies.sql
+END
+change_default.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/43513/mor/gui/branches/x5/selenium/sqls/settings/currencies/change_default.sql
+END

@@ -1,0 +1,5 @@
+<%= form_for(:pbx_pool, url: {action: 'pbx_pool_create'}) do |f| %>
+  <%= render 'pbx_pool_form', f: f %>
+  <br/>
+  <%= f.submit _('Create'), disable_with: _('Processing..') %>
+<% end %>

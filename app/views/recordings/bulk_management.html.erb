@@ -1,0 +1,131 @@
+<% if @find_rec_size.to_i > -1 %>
+    <p><b><%= _('Delete_by') %> : </b>
+      <% if @type == 1 %>
+          <b><%= _('Device') %> : </b> <%= nice_device(@device) %>
+      <% else %>
+          <b><%= _('Date') %> : </b> <%= session_from_datetime %> - <%= session_till_datetime %>
+      <% end %>
+    </p>
+    <p><b><%= _('Found_recordings_to_delete') %> : <%= @find_rec_size.to_i %> </b></p>
+<% else %>
+    <p><b><%= _('Delete_recordings') %></b></p>
+<% end %>
+<br/>
+<% if @find_rec_size.to_i == -1 %>
+    <div class="form_background">
+      <%= form_tag :action => :bulk_management do %>
+          <table>
+            <tr>
+              <td><%= _('Device') %>:</td>
+              <td onclick="hideSubmitButton()"><%= radio_button_tag('rec_action', '1', params[:recordings_action].to_i != 2) %></td>
+              <td width="1px">
+                <%= _('User') %>:&nbsp;&nbsp;
+              </td>
+              <td width="155px">
+                <%= render 'shared/live_search_field', object: params[:s_user].to_s, object_id: params[:s_user_id] || '-2', object_name: 'User', action_url: {controller: :users, action: :get_users_map, options: {show_owned_users_only: true, show_users_only: true} } %>&nbsp;&nbsp;
+              </td>
+              <td id="device-text"><%= _('Device') %>:</td>
+              <td id="device_list_span">
+                <%= select_tag("s_device", options_for_select(@devices.map { |d| [nice_device(d, {:image => false}), d.id] }, params[:s_device]), :style => "max-width:100px") %>
+              </td>
+              <td id="user_not_selected_info" style="display: none" colspan="2">
+                <%= b_exclamation(style: 'vertical-align: bottom') + _('Please_select_User') %>
+              </td>
+              <td id="user_has_no_devices" style="display: none" colspan="2">
+                <%= b_exclamation(style: 'vertical-align: bottom') + _('User_has_no_Devices') %>
+              </td>
+            </tr>
+            <tr>
+              <td><%= _('Date') %>:</td>
+              <td onclick="hideSubmitButton()"><%= radio_button_tag('rec_action', '2', params[:recordings_action].to_i == 2) %></td>
+              <td ><%= _('From') %>:</td>
+              <td colspan="3">
+                <%= select_datetime(Time.mktime(session[:year_from], session[:month_from], session[:day_from], session[:hour_from], session[:minute_from]), :end_year => Date.today.year+1, :prefix => "date_from", :use_month_numbers => false) %>
+              </td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;<%= _('To') %>:</td>
+              <td>
+                <%= select_datetime(Time.mktime(session[:year_till], session[:month_till], session[:day_till], session[:hour_till], session[:minute_till]), :end_year => Date.today.year+1, :prefix => "date_till", :use_month_numbers => false) %></td>
+            </tr>
+            <tr>
+              <td colspan="3"><%= submit_tag _('Delete'), :disable_with => _('Processing..'), id: 'submit' %></td>
+            </tr>
+          </table>
+      <% end %>
+    </div>
+<% else %>
+    <% if @find_rec_size.to_i > 0 %>
+        <%= button_to(_('Confirm'), {:action => :bulk_delete}, {:class => "imput", :onclick => "return confirm('#{_('Are_you_sure')}');", :confirm => _('are_you_sure'), :id => "rec_delete_link", :method => "post"}) %>
+        <br/>
+        <br/>
+    <% end %>
+    <%= link_to b_back + _('Back_to_bulk_management'), :action => :bulk_management, s_user: params[:s_user], s_user_id: params[:s_user_id], recordings_action: params[:rec_action], s_device: params[:s_device] %>
+<% end %>
+
+
+<% if @find_rec_size.to_i == -1 %>
+
+  <script type="text/javascript">
+    var user_id = $("s_user_id");
+
+    hideSubmitButton();
+    hideShowExclamation();
+
+    new Form.Element.EventObserver('s_user', function(element, value){
+      new Ajax.Updater(
+        'device_list_span',
+        '<%= Web_Dir %>/devices/ajax_get_user_devices',
+        {
+          asynchronous:true,
+          evalScripts:true,
+          onComplete:function(request){
+            Element.hide('spinner');
+            hideShowExclamation();
+            hideSubmitButton();
+          },
+          onLoading:function(request){
+            Element.show('spinner');
+          },
+          parameters: 'user_id=' + encodeURIComponent(user_id.value) + '&default=<%= @search_device.to_i.to_s %>' + '&fax=false&no_server=true&no_provider=true'
+        }
+      )
+    })
+
+    new Form.Element.EventObserver('s_user', hideSubmitButton);
+
+    function hideSubmitButton(){
+      var submit = $('submit');
+
+      if((user_id.value === '-2' || $('s_device').length === 0) && $('rec_action_1').checked){
+        submit.disabled = true;
+      } else {
+        submit.disabled = false;
+      }
+    }
+
+    function hideShowExclamation(){
+      var user_has_no_devices = $('user_has_no_devices');
+      var device_list_span = $('device_list_span');
+      var device_text = $('device-text');
+      var user_not_selected_info = $('user_not_selected_info');
+
+
+      if(user_id.value === '-2'){
+        user_has_no_devices.hide();
+        device_list_span.hide();
+        device_text.hide();
+        user_not_selected_info.show();
+      } else if ($('s_device').length === 0){
+        device_list_span.hide();
+        device_text.hide();
+        user_not_selected_info.hide();
+        user_has_no_devices.show();
+      } else {
+        user_has_no_devices.hide();
+        user_not_selected_info.hide();
+        device_list_span.show();
+        device_text.show();
+      }
+    }
+  </script>
+
+<% end %>

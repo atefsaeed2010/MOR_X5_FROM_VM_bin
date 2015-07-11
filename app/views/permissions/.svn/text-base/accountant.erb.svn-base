@@ -1,0 +1,56 @@
+<%= form_tag action: 'acc_permissions_save', id: params[:id] do %>
+
+  <%= _("Name") %>: <%= text_field_tag("name", @group.name, "class" => "input", :size => "50", :maxlength => "255") %>
+  <br/>
+  <%= _("Description") %>: <%= text_area(:group, :description, {:rows => 5, :style => "width: 100%;", :class => "input"}) %>
+  <br/>
+  <%= _("Accountant_Can_Only_View") %><%= hidden_field_tag("only_view", "0", {:id => "view_only_hidden"}) %>
+  : <%= check_box_tag "only_view", "1", @group.only_view == true %>
+  <br/>
+  <br/>
+  <table class='maintable' width='500px'>
+    <tr align='center'>
+      <th class='blank'></th>
+      <th><%= _('no_access') %></th>
+      <th><%= _('can_view') %></th>
+      <th><%= _('can_change') %></th>
+    </tr>
+    <tr align='center'>
+      <th class='blank'></th>
+      <th><%= _('Disabled') %></th>
+      <th><%= _('Read') %></th>
+      <th><%= _('Write') %></th>
+    </tr>
+    <% @template.each do |master, branches| %>
+      <% branches.each_with_index do |(name, value), i| %>
+        <% title = (name == 'active' ? master : name) %>
+        <tr class='row<%= i%2+1 %>' style='background-color: <%= name == 'active' ? '#c0c0c0' : 'auto' %>'>
+          <td><%= _(title) %></td>
+          <% (0..2).each do |v| %>
+            <td align='center' height='20px'>
+              <span class='nice_radio'>
+              <% if check_selectable_field(master+'_'+name+v.to_s) %>
+                <input type="radio"
+                  <%=raw ("onclick='set_opts(this.value, " + branches.keys.map { |val| master+'_'+val }.inspect + ");'") if name == 'active' %>
+                  id="<%= master+'_'+name+v.to_s %>"
+                  name="<%= master+'_'+name %>"
+                  value=<%= v %>
+                  <%= 'checked' if value == v %>
+                  <%= 'disabled' if (branches['active'].to_i < v and name != 'active') %>
+                >
+                <label id="<%= master+'_'+name+v.to_s+'_label' %>" for="<%= master+'_'+name+v.to_s %>"></label>
+              <% else %>
+                <%= b_cross_disabled %>
+              <% end %>
+              </span>
+            </td>
+          <% end %>
+        </tr>
+      <% end %>
+    <% end %>
+  </table>
+  <br />
+  <%= submit_tag("Update") %>
+<% end %>
+
+<%= javascript_include_tag "accountant_permissions.js" %>

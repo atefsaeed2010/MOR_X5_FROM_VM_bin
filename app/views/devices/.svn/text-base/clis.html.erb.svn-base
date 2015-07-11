@@ -1,0 +1,269 @@
+<% content_for :scripts do %>
+<script type="application/x-javascript">
+   Event.observe(window, 'load',  function() {
+    update();
+      Event.observe($('s_user'), 'change', function(){
+        update();
+      });
+   });
+
+   function update() {
+    if ($('s_user_id').value >= 0){
+     new Ajax.Updater('user_devices', '<%= Web_Dir %>/devices/cli_user_devices?add=1' + '&id=' + $('s_user_id').value + '&dev_id=' + '<%= params[:device_id] || @search[:device] %>'+ '&only_dropdown=true', {evalScripts:true, onComplete:function(request){Element.hide('spinner');}, onLoading:function(request){Element.show('spinner');}})
+   }
+       if ($('s_user_id').value < 0) {
+           document.getElementById('user_devices').style.display = 'none';
+           $('dev_name').hide();
+       } else {
+           document.getElementById('user_devices').style.display = '';
+           $('dev_name').show();
+       }}
+
+  function addDeviceSelect() {
+    var first_td = $j('#dev_name');
+    var second_td = $j('#dev_select');
+    checkAndRemove(first_td, second_td);
+    var devices_div = $j('#user_devices');
+    var device_name_div = $j('#device_name');
+    var textElement = device_name_div.html();
+    selectElement = $j('#device_select').find('select');
+    selectElement.css('width', '100px');
+    if (selectElement.html() != '') {
+      first_td.append(textElement);
+      second_td.append(selectElement);
+    } else {
+      textElement.remove();
+      selectElement.remove();
+    }
+    devices_div.css('display', 'none');
+  };
+
+  function checkAndRemove(first_td, second_td) {
+    if (first_td.html() != '' || second_td.html() != '') {
+      first_td.html('');
+      second_td.html('');
+    }
+  }
+</script>
+<% end %>
+
+<% if @allow_edit %>
+<table width="100%">
+  <tr>
+    <% if params[:device_id].blank? %>
+      <td><%= link_to b_add + _('Add_new') + ' CLI', :action => 'cli_new' %></td>
+    <% else %>
+      <td><%= link_to b_add + _('Add_new') + ' CLI', :action => 'cli_new',
+                                                     user: params[:user_id] || @search[:user] || -2,
+                                                     device_id: params[:device_id].to_i %></td>
+    <% end %>
+  </tr>
+</table>
+<br/>
+<% end %>
+
+<%= form_tag :action => 'clis' do %>
+    <div id="search_details">
+
+      <table style='border: 1px solid #D4D0C8;' class='simple'>
+        <tr>
+          <td>
+            <%= _('Cli') + ':' %>
+          </td>
+          <td>
+            <%= text_field_tag 's_cli', @search[:cli], "class" => "input", :maxlength => "30", 'width' => '100px' %>
+          </td>
+          <td>
+            <%= _('Description') + ':'%>
+          </td>
+          <td>
+            <%= text_field_tag 's_description', @search[:description], "class" => "input", :maxlength => "30", 'width' => '100px' %>
+          </td>
+          <td width='80px'>
+            <% if @searched == 'true' %>
+              <%= link_to b_cross + _('Clear_search'), :action => 'clis', :clear => 'true' %>
+            <% end %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <%= _('Comment') + ':' %>
+          </td>
+          <td>
+            <%= text_field_tag 's_comment', @search[:comment], "class" => "input", :maxlength => "30", 'width' => '100px' %>
+          </td>
+          <td>
+            <%= _('Banned') + ':' %>
+          </td>
+          <td>
+            <select name="s_banned" style='width: 100px;'>
+              <option value="-1" <%= "selected" if @search[:banned] == nil or (@search[:banned].to_i == -1) %>><%= _('All') %> </option>
+              <option value="0" <%= "selected" if (@search[:banned].to_i == 0) %>><%= _('Not_banned') %> </option>
+              <option value="1" <%= "selected" if (@search[:banned].to_i == 1) %>><%= _('Banned') %> </option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+        <% if callback_active? %>
+          <td>
+            <%= _('Use_for_Email_Callback') + ':' %>
+          </td>
+          <td>
+            <select name="s_email_callback" style='width: 100px;'>
+              <option value="-1" <%= "selected" if @search[:email_callback] == nil or (@search[:email_callback].to_i == -1) %>><%= _('All') %> </option>
+              <option value="0" <%= "selected" if (@search[:email_callback].to_i == 0) %>><%= _('Not_use_for_Email_Callback') %> </option>
+              <option value="1" <%= "selected" if (@search[:email_callback].to_i == 1) %>><%= _('Use_for_Email_Callback') %> </option>
+            </select>
+          </td>
+        <% end %>
+        <% if allow_manage_providers? or current_user.usertype != 'reseller' %>
+          <td>
+            <%= _('IVR') + ':' %>
+          </td>
+          <td>
+            <select name="s_ivr" style='width: 100px;'>
+              <option value="-1" <%= "selected" if @search[:ivr] == nil or (@search[:ivr].to_i == -1) %>><%= _('All') %> </option>
+              <% for iv in @ivrs.sort_by{ |ivr| ivr.name.downcase } %>
+                <option value="<%= iv.id %>" <%= "selected" if @search[:ivr] == iv.id %>><%= iv.name %> </option>
+              <% end %>
+            </select>
+          </td>
+        <% end %>
+        </tr>
+        <tr>
+          <td>
+            <%= _('User') + ':' %>
+          </td>
+          <td>
+            <% nice_user_name = nice_user(User.where(id: params[:user_id]).first) %>
+            <%= render('shared/live_search_field',
+                     object: (params[:user_id] && nice_user_name) || params[:s_user].to_s,
+                     object_id: params[:user_id] || @search[:user] || -2,
+                     object_name: 'User',
+                     action_url: {controller: :users, action: :get_users_map, options: {show_admin: true}}
+              )
+          %>
+          </td>
+          <td>
+            <div id='dev_name' style='display: none;'>
+              <%= _('Device') %>:
+            </div>
+          </td>
+          <td>
+            <div id = 'user_devices'>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td align= 'left'>
+            <%= submit_tag _('Search'), :disable_with => _('Processing..') %>
+          </td>
+        </tr>
+      </table>
+    </div>
+<% end %>
+
+<% if @total_pages > 1 %>
+    <br/>
+    <%= page_select_header(@options[:page], @total_pages) %>
+<% end %>
+
+<br/>
+
+<table width="100%" class="maintable">
+  <tr>
+    <th align='left'>
+      <%= sortable_list_header('cli', _('Cli'), @options) %>
+    </th>
+    <th align='left'>
+      <%= sortable_list_header('device', _('Device'), @options) %>
+    </th>
+    <th align='left'>
+      <%= sortable_list_header('description', _('Description'), @options) %>
+    </th>
+    <th align="center">
+      <%= sortable_list_header('added_at', _('Added_at'), @options) %>
+    </th>
+    <th align="center">
+      <%= sortable_list_header('updated_at', _('Updated_at'), @options) %>
+    </th>
+    <% if allow_manage_providers? or current_user.usertype != 'reseller' %>
+        <th align='left'>
+          <%= sortable_list_header('ivr', _('Ivr'), @options) %>
+        </th>
+    <% end %>
+    <th align='left'><%=  sortable_list_header('comment', _('Comment'), @options) %>
+    </th>
+    <% if callback_active? %>
+        <th align="center">
+          <%= _('Use_for_Email_Callback') %>
+        </th>
+    <% end %>
+    <th align="center">
+      <%= _('Banned') %>
+    </th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% @clis.each_with_index { |cl, i| %>
+      <% %>
+      <tr class="row<%= (i % 2 + 1).to_s %>">
+        <td align='left' id='cli_<%= cl.id %>'>
+          <%= cl.cli %>
+        </td>
+        <td align='left' id='device_<%= cl.id %>'>
+          <%= link_nice_device(cl.device) %>
+        </td>
+        <td align='left id' id='description_<%= cl.id %>'>
+          <%= cl.description %>
+        </td>
+        <td align="center" id='added_at_<%= cl.id %>'>
+          <%= nice_date_time(cl.added_at) %>
+        </td>
+        <td align="center" id='updated_at_<%= cl.id %>'>
+          <%= nice_date_time(cl.updated_at) %>
+        </td>
+        <% if allow_manage_providers? or current_user.usertype != 'reseller' %>
+            <td align = 'left' id='ivr_<%= cl.id %>'>
+              <%= cl.ivr_name %>
+            </td>
+        <% end %>
+        <td align='left' id='comment_<%= cl.id %>'>
+          <%= cl.comment.to_s %>
+        </td>
+        <% if callback_active? %>
+          <td align="center" id='email_callback_<%= cl.id %>'>
+            <% if @allow_edit %>
+              <%= link_to(b_check, {:action => 'change_email_callback_status', :id => cl.id, :email_callback => 0}, :id => "email_#{cl.id}", :confirm => _('Are_you_sure'), :method => :post) if cl.email_callback == 1 %>
+              <%= link_to(b_cross, {:action => 'change_email_callback_status', :id => cl.id, :email_callback => 1}, :id => "email_#{cl.id}", :confirm => _('Are_you_sure'), :method => :post) if cl.email_callback == 0 %>
+            <% else %>
+              <%= b_check if cl.email_callback == 1 %>
+              <%= b_cross if cl.email_callback == 0 %>
+            <% end %>
+          </td>
+        <% end %>
+        <td align="center" id='banned_status_<%= cl.id %>'>
+          <% if @allow_edit %>
+            <%= link_to(b_check, {:action => 'clis_banned_status', :id => cl.id}, :id => "banned_#{cl.id}", :method => :post) if cl.banned == 1 %>
+            <%= link_to(b_cross, {:action => 'clis_banned_status', :id => cl.id}, :id => "banned_#{cl.id}", :method => :post) if cl.banned == 0 %>
+          <% else %>
+             <%= b_check if cl.banned == 1 %>
+             <%= b_cross if cl.banned == 0 %>
+          <% end %>
+        </td>
+        <td align="center" id='edit_<%= cl.id %>'>
+          <%= link_to b_edit, :action => 'cli_edit', :id => cl.id %>
+        </td>
+        <% if @allow_edit %>
+          <td align="center" id='delete_<%= cl.id %>'>
+            <%= link_to b_delete, {:action => 'cli_delete', :id => cl.id}, :confirm => _('Are_you_sure'), :method => :post %>
+          </td>
+        <% end %>
+      </tr>
+  <% } %>
+</table>
+
+<% if @total_pages > 1 %>
+    <br/>
+    <%= render 'page_select_header' %>
+<% end %>

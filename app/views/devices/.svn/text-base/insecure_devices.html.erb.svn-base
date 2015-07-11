@@ -1,0 +1,5 @@
+<%= b_info %> <%= _('Insecure_Devices_explanation') %>
+<br />
+<br />
+<%= render 'devices_fix_from_integrity_check', devices: @devices,
+options: @options, total_pages: @total_pages %>

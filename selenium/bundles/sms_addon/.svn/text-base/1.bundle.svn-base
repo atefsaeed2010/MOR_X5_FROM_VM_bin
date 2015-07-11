@@ -1,0 +1,13 @@
+#bundle creates sms provider, tariffs for sms provider and user, lcr  and  assign lcr providers  
+# ----
+#create sms provider 
+tariff/sms_provider_12004/create.sql
+#create smss provider 
+provider/sms_3008/create.sql
+#create sms lcr 
+lcr/sms_12004/create.sql
+#assiign providers
+lcr/sms_12004/assign_provider.sql
+#create tariffs for user
+tariff/sms_user_12004/create.sql
+# bundle loaded

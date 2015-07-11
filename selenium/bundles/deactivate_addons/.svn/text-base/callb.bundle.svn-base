@@ -1,0 +1,5 @@
+# turn off addon for test tests/callback.case
+# ----
+# turn off calling cards addon
+/settings/addons/callb_deactivate.sql
+# bundle loaded

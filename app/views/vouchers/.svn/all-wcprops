@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/51151/mor/gui/branches/x5/app/views/vouchers
+END
+voucher_use.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/app/views/vouchers/voucher_use.html.erb
+END
+bulk_management.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/40161/mor/gui/branches/x5/app/views/vouchers/bulk_management.html.erb
+END
+voucher_status.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/50091/mor/gui/branches/x5/app/views/vouchers/voucher_status.html.erb
+END
+vouchers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/40161/mor/gui/branches/x5/app/views/vouchers/vouchers.html.erb
+END
+vouchers_create.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/app/views/vouchers/vouchers_create.html.erb
+END
+vouchers_interval.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/app/views/vouchers/vouchers_interval.html.erb
+END
+voucher_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/51151/mor/gui/branches/x5/app/views/vouchers/voucher_new.html.erb
+END

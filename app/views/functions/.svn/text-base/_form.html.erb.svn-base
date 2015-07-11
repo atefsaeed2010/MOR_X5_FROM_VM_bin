@@ -1,0 +1,9 @@
+<p><%= hidden_field :mohs, :id %></p>
+<p><%= _('Name') %>:<br />
+<%= text_field :mohs, :moh_name, :class => "input", :value => mohs.moh_name %></p>
+<p><%= _('Description') %>:<br />
+<%= text_field :mohs, :comment, :class => "input", :value => mohs.comment %></p>
+<p><%= _('Voice_name') %>: &nbsp;
+<%= select_tag 'mohs[ivr_voice_id]', options_for_select(ivrs.each.collect{ |ivr| [ivr[:voice], ivr[:id]] }, mohs.ivr_voice_id.to_i ), :include_blank => true %></p>
+<p><%= _('Random') %>:
+<%= radio_button :mohs, :random, "yes" %> Yes <%= radio_button :mohs, :random, "no" %> No</p><br />

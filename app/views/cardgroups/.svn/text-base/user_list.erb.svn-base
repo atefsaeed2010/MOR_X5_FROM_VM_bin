@@ -1,0 +1,76 @@
+<%= form_tag :action => "user_search" do %>
+  <table id="search_details" class="simple bordered">
+    <tr>
+      <td><%= _('Number') %>:</td>
+      <td><%= text_field_tag 's_number', @options[:s_number], "class" => "input", :size => "15" %></td>
+      <% if @pin_visible %>
+        <td><%= _('PIN') %>:</td>
+        <td><%= text_field_tag 's_pin', @options[:s_pin], "class" => "input", :size => "15" %></td>
+      <% end %>
+    </tr>
+    <tr>
+      <td> <%= _('Balance_between') %>:</td>
+      <td>
+        <%= text_field_tag 's_balance_min', @options[:s_balance_min], "class" => "input", :size => "7", :maxlength => "10" %> -
+        <%= text_field_tag 's_balance_max', @options[:s_balance_max], "class" => "input", :size => "7", :maxlength => "10" %>
+      </td>
+      <td><%= _('Active') %>?:</td>
+      <td>
+        <select name="s_active">
+          <option value="all" selected> <%= _('All') %> </option>
+          <option value="yes" <%= "selected" if @options[:s_active] == "yes" %>> <%= _('_Yes') %> </option>
+          <option value="no" <%= "selected" if @options[:s_active] == "no" %>> <%= _('_No') %> </option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td><%= submit_tag _('Search'), :disable_with => _('Processing..') %></td>
+    </tr>
+  </table>
+<% end %>
+
+<% length = @pin_visible ? 1 : 2 %>
+<% width = @pin_visible ? "25%" : "50%" %>
+<br/>
+<br/>
+<% for cg in @cardgroups %>
+  <%= form_tag :action => 'cards_to_csv', :id => cg.id do %>
+    <table class="maintable" width="100%">
+      <tr class="row2">
+        <td id="picture_<%= cg.id %>" align="center" width="7%" rowspan=4><%= image_tag "/images/cards/#{cg.image}", :style => 'border-style:none', :title => cg.name, :size => "100x64" %> </td>
+        <th id="name_column_<%= cg.id %>" align="left" width=<%= width %> colspan=<%= length %>><%= _('Name') %></th>
+        <th id="description_column_<%= cg.id %>" align="left" colspan=<%= length %>><%= _('Description') %></th>
+        <% if @pin_visible %>
+          <th id="num_length_column_<%= cg.id %>" align="center" colspan=2><%= _('Number_length')+ "/" +_('Pin_length') %></th>
+        <% end %>
+      </tr>
+
+      <tr class="row1">
+        <td id="name_<%= cg.id %>" align="left" width=<%= width %> colspan=<%= length %>><%= h cg.name %></td>
+        <td id="description_<%= cg.id %>" align="left" colspan=<%= length %>><%= cg.description[0..100] %></td>
+        <% if @pin_visible %>
+          <td id="num_pin_length_<%= cg.id %>" align="center" colspan=2><%= cg.number_length.to_s + "/" + cg.pin_length.to_s %></td>
+        <% end %>
+      </tr>
+
+      <tr>
+        <th id="price_<%= cg.id %>" align="right"><%= _('Price') %> <%= current_user.currency.name %></th>
+        <th id="without_vat_<%= cg.id %>" align="right"><%= _('Without_VAT') %> <%= current_user.currency.name %></th>
+        <th id="cards_<%= cg.id %>" align="center"><%= _('Cards') %></th>
+        <th></th>
+      </tr>
+
+      <tr class="row1">
+        <% cg.get_tax %>
+        <td id="count_tax_amount_<%= cg.id %>" align="right"><%= nice_number(cg.price + cg.get_tax.count_tax_amount(cg.price)) %></td>
+        <td id="price_usd_<%= cg.id %>" align="right"><%= nice_number cg.price %></td>
+        <td id="cards_size_<%= cg.id %>" align="center"><%= link_to(b_view + "(" + cg.card_count.to_s + ")", {:controller => "cards", :action => "user_list", :cg => cg, :clean => 1}, :id => 'cards_img_'+cg.id.to_s) %></td>
+        <td id="excel_icon_<%= cg.id %>" align="center"><%= image_submit_tag 'icons/excel.png', :title => _('Cards'), :id => 'excel_img_'+cg.id.to_s %></td>
+      </tr>
+    </table>
+  <% end %>
+  <br/>
+<% end %>
+
+
+

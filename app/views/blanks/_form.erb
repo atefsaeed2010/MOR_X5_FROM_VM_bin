@@ -1,0 +1,64 @@
+<table>
+  <tr>
+    <td colspan="2" class="bottom_border"><b><%= _('General') %></b></td>
+  </tr>
+  <tr>
+    <td height="10" colspan="2"></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2">
+      <table class="simple">
+
+        <tr>
+          <td><%= _('Name') %>:</td>
+          <td><%= f.text_field :name, class: 'input', size: 27, maxlength: 255 %></td>
+        </tr>
+        <tr>
+          <td><%= _('Date') %>:</td>
+          <td><%= select_datetime(blank.date.in_time_zone(user_tz), :end_year => Time.zone.now.year+1, :prefix => 'date') %></td>
+        </tr>
+        <tr>
+          <td><%= _('Value1') %>:</td>
+          <td><%= f.text_field :value1, class: 'input', size: 10, maxlength: 20 %></td>
+        </tr>
+        <tr>
+          <td><%= _('Value2') %>:</td>
+          <td><%= f.text_field :value2, class: 'input', size: 10, maxlength: 20 %></td>
+        </tr>
+        <tr>
+          <td><%= _('Value3') %>:</td>
+          <td><%= f.check_box :value3, {}, 'yes', 'no' %></td>
+        </tr>
+        <tr>
+          <td><%= _('Balance') %>:</td>
+          <% if ['create', 'update'].include?(params[:action].to_s)%>
+            <td><%= f.text_field :balance, :value => params[:blank][:balance], class: 'input', size: 10, maxlength: 20 %></td>
+          <% else %>
+            <td><%= f.text_field :balance, :value => nice_number(blank.balance), class: 'input', size: 10, maxlength: 20 %></td>
+          <% end %>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td height="10" colspan="2"></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="bottom_border"><b><%= _('Description') %></b></td>
+  </tr>
+  <tr>
+    <td height="10" colspan="2"></td>
+  </tr>
+  <tr>
+    <td valign="top" colspan="2">
+      <table class="simple">
+
+        <tr>
+          <td><%= f.text_area :description, class: 'input', cols: 32, rows: 4 %></td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>

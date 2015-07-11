@@ -1,0 +1,5 @@
+# allow reseller to create virtual devices
+# ----
+# 
+user/reseller_3/allow_virtual_devices.sql
+# bundle loaded

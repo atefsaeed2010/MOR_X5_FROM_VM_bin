@@ -1,0 +1,83 @@
+<table width="100%">
+  <tr>
+    <td>
+      <%= raw b_info + _('Alerts_restriction').html_safe unless monitorings_addon_active? %>
+      <br/><br/>
+      <%= link_to( b_add + _('Add_new_alert'), :action => 'alert_new') if @allow_add_alert %>
+    </td>
+  </tr>
+</table>
+<%= page_select_header(@options[:page], @total_pages, nil, @options) %>
+<br />
+<table class="maintable" width="100%">
+  <tr align="left">
+    <th><%= _('ID') %></th>
+    <th align="center"><%= _('Active') %></th>
+    <th><%= _('raised_cleared_at') %></th>
+    <th><%= _('object_type') %></th>
+    <th><%= _('object_name') %></th>
+    <th><%= _('Parameter') %></th>
+    <th><%= _('alert_type') %></th>
+    <th align="right"><%= _('Value_at_Alert') %></th>
+    <th align="right"><%= _('alert_if') + " <=" %></th>
+    <th align="right"><%= _('alert_if') + " >=" %></th>
+    <th align="center"><%= _('Disable_Object') %></th>
+    <th><%= _('LCR_on_alert') %></th>
+    <th align="right"><%= _('Value_at_Clear') %></th>
+    <th align="right"><%= _('clear_if') + " <=" %></th>
+    <th align="right"><%= _('clear_if') + " >=" %></th>
+    <th align="center"><%= _('Enable_Object') %></th>
+    <th><%= _('LCR_on_clear') %></th>
+    <th><%= _('Group_to_Notify') %></th>
+    <th colspan=2></th>
+  </tr>
+  <% @alerts.each_with_index do |alert, i| %>
+    <%
+      tooltip_info =  "#{_('Parameter_counting_in')}: #{['asr', 'hgc_percent'].member?(alert.alert_type) ? "%" : (["calls_total", "calls_answered", "calls_not_answered", 'hgc_absolute'].member?(alert.alert_type) ? "unit" : "seconds")}<br />"
+      tooltip_info << "#{_('alert_type')}: #{alert.alert_count_type}<br />"
+      tooltip_info << "#{_('Ignore_if_Calls') + " <= "}: #{alert.ignore_if_calls_less}<br />"
+      tooltip_info << "#{_('Ignore_if_Calls') + " >= "}: #{alert.ignore_if_calls_more}<br />"
+      tooltip_info << "#{_('Comment')}: #{alert.comment}<br />"
+    %>
+    <tr align="left" class="row<%= i%2+1 %>" <%= raw "style='background-color:#FFCCCC;'" if alert.alert_raised_at.to_i > alert.alert_cleared_at.to_i %><%= raw tooltip(_("Details"),tooltip_info) %>>
+      <td id="id_<%= alert.id %>"><%= alert.id %></td>
+      <td id="status_<%= alert.id %>" align="center"><%= link_to (alert.status == 'enabled' ? (b_check :alt => _("Enabled")) : (b_cross :alt => _("Disabled"))), action: 'alert_toggle', id: alert.id %></td>
+      <td id="raised_cleared_at_<%= alert.id %>">
+        <%= (alert.alert_raised_at.to_i > alert.alert_cleared_at.to_i ? nice_user_timezone(alert.alert_raised_at) : nice_user_timezone(alert.alert_cleared_at)) if alert.alert_raised_at or alert.alert_cleared_at %>
+      </td>
+      <td id="object_type_<%= alert.id %>"><%= _(alert.check_type.to_s.capitalize) %></td>
+      <td id="object_name_<%= alert.id %>">
+        <%= generate_check_data(alert) %>
+      </td>
+      <td id="parameter_<%= alert.id %>"><%= _(alert.alert_type.upcase) %></td>
+      <td id="alert_type_<%= alert.id %>"><%= alert.alert_count_type %></td>
+      <td id="value_at_alert_<%= alert.id %>" align="right" style="background-color:#FFCCCC;color:red;"><b><%= ["asr", "pdd", "ttc", 'price_sum'].member?(alert.alert_type) ? alert.value_at_alert : alert.value_at_alert.to_i %></b></td>
+      <td id="alert_if_less_<%= alert.id %>" align="right" style="background-color:#FFCCCC;">
+        <%= (["asr", "pdd", "ttc", 'price_sum'].member?(alert.alert_type) ? alert.alert_if_less : alert.alert_if_less.to_i) if alert.alert_if_more == 0 and alert.clear_if_less == 0 %>
+      </td>
+      <td id="alert_if_more_<%= alert.id %>" align="right" style="background-color:#FFCCCC;">
+        <%= (["asr", "pdd", "ttc", 'price_sum'].member?(alert.alert_type) ? alert.alert_if_more : alert.alert_if_more.to_i) if alert.alert_if_less == 0 and alert.clear_if_more == 0 %>
+      </td>
+      <td id="disable_object_<%= alert.id %>" align="center"><%= alert.action_alert_disable_object == 1 ? b_check : b_cross %></td>
+      <td id="lcr_on_alert_<%= alert.id %>">
+        <%= alert.action_alert_change_lcr_id == 0 ? "" : link_to(alert.lcr_alert_name, :controller => :lcrs, :action => :edit, :id => alert.lcr_alert_id) %>
+      </td>
+      <td id="value_at_clear_<%= alert.id %>" align="right" style="background-color:#CCFFCC;"><%= ["asr", "pdd", "ttc"].member?(alert.alert_type) ? alert.value_at_clear : alert.value_at_clear.to_i %></td>
+      <td id="clear_if_less_<%= alert.id %>" align="right" style="background-color:#CCFFCC;">
+        <%= alert.disable_clear.to_i == 1 ? _('Disabled') : ((["asr", "pdd", "ttc"].member?(alert.alert_type) ? alert.clear_if_less : alert.clear_if_less.to_i) if alert.alert_if_less == 0 and alert.clear_if_more == 0) %>
+      </td>
+      <td id="clear_if_more_<%= alert.id %>" align="right" style="background-color:#CCFFCC;">
+        <%= alert.disable_clear.to_i == 1 ? _('Disabled') : ((["asr", "pdd", "ttc"].member?(alert.alert_type) ? alert.clear_if_more : alert.clear_if_more.to_i) if alert.alert_if_more == 0 and alert.clear_if_less == 0) %>
+      </td>
+      <td id="enable_object_<%= alert.id %>" align="center"><%= alert.action_clear_enable_object == 1 ? b_check : b_cross %></td>
+      <td id="lcr_on_clear_<%= alert.id %>">
+        <%= alert.action_clear_change_lcr_id == 0 ? "" : (alert.action_clear_change_lcr_id == -1 ? _('restore_orig') : link_to(alert.lcr_clear_name, :controller => :lcrs, :action => :edit, :id => alert.lcr_clear_id)) %>
+      </td>
+      <td id="group_to_notify_<%= alert.id %>"><%= alert.alert_groups_id > 0 ? link_to(alert.alert_group_name, :controller => :alerts, :action => :group_edit, :id => alert.alert_group_id) : "" %></td>
+      <td id="edit_<%= alert.id %>" align="center"><%= link_to b_edit, action: 'alert_edit', id: alert.id %></td>
+      <td id="delete_<%= alert.id %>" align="center"><%= link_to b_delete, {:action => 'alert_destroy', :id => alert.id}, {:confirm => _('are_you_sure'), :method => :post, :id => "delete_link_#{alert.id}"} %></td>
+    </tr>
+  <% end %>
+</table>
+<br />
+<%= page_select_header(@options[:page], @total_pages, nil, @options) %>

@@ -1,0 +1,75 @@
+<table class="maintable" width="100%">
+  <tr>
+    <th align="left"><%= _('User') %></th>
+    <th align="left"><%= _('Name') %></th>
+    <th align="left"><%= _('Type') %></th>
+    <th align="center"><%= _('Status') %></th>
+    <th align="center"><%= _('Run_time') %></th>
+    <th align="center"><%= _('Numbers') %></th>
+    <th align="right"><%= _('Dialed') %></th>
+    <th align="right"><%= _('Completed') %></th>
+    <th align="right"><%= _('Profit') %></th>
+    <th align="center"><%= _('Actions') %></th>
+  </tr>
+  <% i = 0 %>
+  <% if @campaigns.size.to_i > 0 %>
+      <% @campaigns.each do |camp| %>
+          <tr class="row<%= (i % 2 + 1).to_s %>" style='height: 90px'>
+            <td align="left"><%= camp.read_attribute(:nice_user).to_s %></td>
+            <td align="left"><%= camp.name %></td>
+            <td align="left"><%= camp.campaign_type %></td>
+            <td align="center" nowrap>
+              <% if camp.status == "enabled" %>
+                  <div class="bold_green"><%= _('Active') %>            </div>
+              <% else %>
+                  <div class="bold_red"><%= _('Stopped') %>             </div>
+              <% end %>
+            </td>
+
+            <td align="center"><%= nice_time_in_user_tz camp.start_time %> - <%= nice_time_in_user_tz camp.stop_time %></td>
+
+            <% numbers = camp.adnumbers
+               @total_numbers += numbers.size
+            %>
+            <td align="center"><%= numbers.size.to_s %></td>
+
+            <%
+               executed_numbers = camp.executed_numbers_count
+               @total_dialed += executed_numbers.to_i
+            %>
+            <td align="right"><%= executed_numbers.to_s %></td>
+
+            <%
+               completed_numbers = camp.completed_numbers_count
+               @total_completed += completed_numbers.to_i
+            %>
+            <td align="right"><%= completed_numbers %></td>
+
+            <%
+               profit = camp.profit
+               @total_profit += profit.to_f
+            %>
+            <td align="center"><%= nice_number profit %></td>
+            <td align="center"><%= link_to b_actions, :action => 'view_campaign_actions', :id => camp.id if camp.adactions.size > 0 %> <%= camp.adactions.size %></td>
+
+          </tr>
+          <% i += 1 %>
+      <% end %>
+
+  <% end %>
+
+
+  <tr>
+    <th align="left" colspan=5>  <%= _('Total') %>:</th>
+    <th align="center">  <%= @total_numbers %>  </th>
+    <th align="right">  <%= @total_dialed %> </th>
+    <th align="right">  <%= @total_completed %> </th>
+    <th align="right">  <%= nice_number @total_profit %> </th>
+    <th align="left"></th>
+
+  </tr>
+
+
+</table>
+
+

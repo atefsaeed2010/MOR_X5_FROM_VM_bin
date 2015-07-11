@@ -1,0 +1,5 @@
+# Acc permissions
+# ----
+# See financial data permission set as read
+/permissions/accountant/see_financial_data_read.sql
+# bundle loaded

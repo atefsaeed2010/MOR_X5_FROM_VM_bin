@@ -1,0 +1,1 @@
+UPDATE `providers` SET `tariff_id`='12001' WHERE id='3002';

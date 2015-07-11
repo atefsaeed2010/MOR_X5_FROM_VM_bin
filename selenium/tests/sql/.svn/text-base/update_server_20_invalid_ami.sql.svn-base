@@ -1,0 +1,1 @@
+UPDATE servers SET ami_username = 'invalid', ami_secret = 'invalid' WHERE id = 20;

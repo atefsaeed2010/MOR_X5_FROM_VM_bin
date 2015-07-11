@@ -1,0 +1,38 @@
+<table width="100%">
+  <tr>
+    <td>
+      <%= link_to( b_add + _('Add_new_number_pool'), :action => 'pool_new') %>
+    </td>
+  </tr>
+</table>
+<br />
+<% if @total_pages > 1 %>
+  <br />
+  <%= page_select_header(@options[:page], @total_pages, nil, @options) %>
+  <br />
+<% end %>
+<% if @total_pools_size > 0 %>
+  <table class="maintable" width="100%">
+    <tr align="left">
+      <th width='30px'><%= nice_list_order('id', _('ID'), @options) %></th>
+      <th><%= nice_list_order('name', _('Name'), @options) %></th>
+      <th><%= _('Comment') %></th>
+      <th align="center"><%= nice_list_order('numbers', _('Numbers'), @options) %></th>
+      <th colspan=2></th>
+    </tr>
+    <% @number_pools.each_with_index do |pool, i| %>
+      <tr align="left" class="row<%= i%2+1 %>">
+        <td id="id_<%= pool.id %>"><%= pool.id %></td>
+        <td id="name_<%= pool.id %>"><%= pool.name %></td>
+        <td id="comment_<%= pool.id %>" width="400"><%= pool.comment %></td>
+        <td id="numbers_<%= pool.id %>" align="center" width="150">
+          <%= link_to b_details + " (" + pool.num.to_i.to_s + ")", action: 'number_list', id: pool.id %>
+        </td>
+        <td width='20px' id="edit_<%= pool.id %>" align="center"><%= link_to b_edit, action: 'pool_edit', id: pool.id %></td>
+        <td width='20px'  id="delete_<%= pool.id %>" align="center"><%= link_to b_delete, {:action => 'pool_destroy', :id => pool.id}, {:confirm => _('are_you_sure'), :method => :post, :id => "delete_link_#{pool.id}"} %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+<br />
+<%= page_select_header(@options[:page], @total_pages, nil, @options) %>

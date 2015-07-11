@@ -1,0 +1,1497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>cdr_import_by_cli_basics_rspro</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">cdr_import_by_cli_basics_rspro</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=cdr/for_import_by_cli_rspro</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/cdr/import_csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=file</td>
+	<td>/home/mor/selenium/files/csv/cdr_by_cli_full_params.csv</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Please confirm Column Separator and Decimal Separator for CSV file</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=use_suggestion_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Column Separator , and Decimal Separator ^</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=use_suggestion_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=decn2</td>
+	<td>.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Total file lines: 73</td>
+	<td></td>
+</tr>
+<!--Select Just Neccessary  Fields-->
+<tr>
+	<td>select</td>
+	<td>name=calldate_id</td>
+	<td>label=Date</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=clid_id</td>
+	<td>label=Clid</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=dst_id</td>
+	<td>label=Destination</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=billsec_id</td>
+	<td>label=Billsec</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=imp_calldate_3</td>
+	<td>2014-01-02 16:16:02</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_clid_3</td>
+	<td>886546</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_dst_3</td>
+	<td>886234567</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_billsec_3</td>
+	<td>55</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=conf</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Columns assigned</td>
+</tr>
+<!--Nekursim naujų cli-->
+<tr>
+	<td>click</td>
+	<td>id=import_type_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Analysis completed</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=file_lines_number</td>
+	<td>73</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=cdr_in_csv_file_number</td>
+	<td>14</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=bad_cdrs</td>
+	<td>59 bad CDRs(Press here to get the list)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=existing_clis_number</td>
+	<td>14</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=new_clis_number</td>
+	<td>13</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#cdrs_to_insert_value &gt; b</td>
+	<td>14</td>
+</tr>
+<!--<tr> 	<td>clickAndWait</td> 	<td>link=(Press here to get the list)</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>//tr[2]/td[11]</td> 	<td>Destination is not a numerical value</td> </tr> <tr> 	<td>assertText</td> 	<td>//tr[3]/td[11]</td> 	<td>Billsec is not a numerical value</td> </tr> <tr> 	<td>assertText</td> 	<td>//tr[4]/td[11]</td> 	<td>CLI is not a number</td> </tr> <tr> 	<td>assertText</td> 	<td>//tr[5]/td[11]</td> 	<td>Invalid calldate</td> </tr> <tr> 	<td>goBackAndWait</td> 	<td></td> 	<td></td> </tr>-->
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_calls</td>
+	<td>14</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imported_calls</td>
+	<td>14</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=failed_calls</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=error_msg_0</td>
+	<td>CLI is not a number</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=error_0</td>
+	<td>Date</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=error_msg_1</td>
+	<td>Destination is not a numerical value</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=error_1</td>
+	<td>2014-01-03 13:16:06</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=error_msg_2</td>
+	<td>Billsec is not a numerical value</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=error_2</td>
+	<td>2014-01-03 17:16:08</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=error_msg_3</td>
+	<td>CLI is not a number</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=error_3</td>
+	<td>2014-01-04 15:16:12</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=error_msg_4</td>
+	<td>Invalid calldate</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=error_4</td>
+	<td>wrong_date</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=error_msg_35</td>
+	<td>CLI belongs to Test Reseller</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#error_msg_34 &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#error_msg_33 &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title</td>
+	<td>User settings: Test Reseller</td>
+</tr>
+<!--Ar last calls atsirado?-->
+<tr>
+	<td>open</td>
+	<td>/billing/stats/last_calls_stats</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_year</td>
+	<td>label=2014</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_month</td>
+	<td>label=January</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_day</td>
+	<td>label=1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_year</td>
+	<td>label=2014</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_month</td>
+	<td>label=January</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_day</td>
+	<td>label=31</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=s_call_type</td>
+	<td>label=Answered</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>0.2234</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>0.1300</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=src_34</td>
+	<td>223322114455</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=dst_34</td>
+	<td>2234567699</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billsec_34</td>
+	<td>exact:00:00:37</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=disposition_34</td>
+	<td>ANSWERED</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_rate_34</td>
+	<td>0.2230</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_price_34</td>
+	<td>0.1375</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#user_34 &gt; a</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_rate_34</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_rate_40</td>
+	<td>0.1200</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_price_40</td>
+	<td>0.1720</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=balance_2</td>
+	<td>-1.2943</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=balance_3</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<!--Ar last calls atsirado?-->
+<tr>
+	<td>open</td>
+	<td>/billing/stats/last_calls_stats</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_year</td>
+	<td>label=2014</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_month</td>
+	<td>label=January</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_day</td>
+	<td>label=1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_year</td>
+	<td>label=2014</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_month</td>
+	<td>label=January</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_day</td>
+	<td>label=31</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>No calls...</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/calls/delete_from_calls</td>
+	<td></td>
+</tr>
+<!--Patikrinam ar rspro mato kito rspr clis-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller21</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/cdr/import_csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=file</td>
+	<td>/home/mor/selenium/files/csv/cdr_by_cli_full_params.csv</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Please confirm Column Separator and Decimal Separator for CSV file</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=use_suggestion_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Column Separator , and Decimal Separator ^</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=use_suggestion_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=decn2</td>
+	<td>.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Total file lines: 73</td>
+	<td></td>
+</tr>
+<!--select neccessary and include src name and dispostion-->
+<tr>
+	<td>select</td>
+	<td>name=calldate_id</td>
+	<td>label=Date</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=clid_id</td>
+	<td>label=Clid</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=src_name_id</td>
+	<td>label=Source</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=dst_id</td>
+	<td>label=Destination</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=billsec_id</td>
+	<td>label=Billsec</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=disposition_id</td>
+	<td>label=Dispostion</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Columns assigned</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_calldate_14</td>
+	<td>wrong_date</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_clid_13</td>
+	<td>wrong_caller_id</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_src_name_17</td>
+	<td>wrong_src</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_dst_7</td>
+	<td>wrong_dst</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_billsec_9</td>
+	<td>wrong_billsec</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_disposition_9</td>
+	<td>Answered</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_disposition_2</td>
+	<td>Busy</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_disposition_0</td>
+	<td>Dispostion</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=conf</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=import_type_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=file_lines_number</td>
+	<td>73</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=cdr_in_csv_file_number</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=bad_cdrs</td>
+	<td>73 bad CDRs(Press here to get the list)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=existing_clis_number</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=new_clis_number</td>
+	<td>13</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=fix_cdrs_value</td>
+	<td>73</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#cdrs_to_insert_value &gt; b</td>
+	<td>0</td>
+</tr>
+<!--Nuėjus į bad cdrs neturi rodyti test resellerio-->
+<tr>
+	<td>click</td>
+	<td>link=(Press here to get the list)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForPopUp</td>
+	<td>new_window</td>
+	<td>30000</td>
+</tr>
+<tr>
+	<td>windowFocus</td>
+	<td>selenium.getAllWindowNames()[selenium.getAllWindowNames().length-1]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>Kolmisoft</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=row_41_error</td>
+	<td>CLI was not found</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Test Reseller</td>
+	<td></td>
+</tr>
+<tr>
+	<td>close</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<!--tokio cli nėra sistemoje-->
+<tr>
+	<td>goBackAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Test Reseller</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<!--Nieko nepasakantis error-->
+<!--<tr> 	<td>assertText</td> 	<td>id=status</td> 	<td>Import completed</td> </tr> <tr> 	<td>assertText</td> 	<td>id=total_calls</td> 	<td>58</td> </tr> <tr> 	<td>assertText</td> 	<td>id=imported_calls</td> 	<td>30</td> </tr> <tr> 	<td>assertText</td> 	<td>css=div.nb &gt; b</td> 	<td>Congratulations, successfully imported CSV file!</td> </tr>-->
+<tr>
+	<td>open</td>
+	<td>/billing/stats/last_calls_stats</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_year</td>
+	<td>label=2014</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_month</td>
+	<td>label=January</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_day</td>
+	<td>label=1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_year</td>
+	<td>label=2014</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_month</td>
+	<td>label=January</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_day</td>
+	<td>label=31</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>No calls...</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/calls/delete_from_calls</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/stats/last_calls_stats</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_year</td>
+	<td>label=2014</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_month</td>
+	<td>label=January</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_day</td>
+	<td>label=1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_year</td>
+	<td>label=2014</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_month</td>
+	<td>label=January</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_day</td>
+	<td>label=31</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>No calls...</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/cdr/import_csv</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=file</td>
+	<td>/home/mor/selenium/files/csv/cdr_by_cli_full_params.csv</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Please confirm Column Separator and Decimal Separator for CSV file</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=use_suggestion_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Column Separator , and Decimal Separator ^</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=use_suggestion_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=decn2</td>
+	<td>.</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Total file lines: 73</td>
+	<td></td>
+</tr>
+<!--select neccessary and include src name and dispostion-->
+<tr>
+	<td>select</td>
+	<td>name=calldate_id</td>
+	<td>label=Date</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=clid_id</td>
+	<td>label=Clid</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=src_name_id</td>
+	<td>label=Source</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=dst_id</td>
+	<td>label=Destination</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=billsec_id</td>
+	<td>label=Billsec</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=disposition_id</td>
+	<td>label=Dispostion</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Columns assigned</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_calldate_14</td>
+	<td>wrong_date</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_clid_13</td>
+	<td>wrong_caller_id</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_src_name_17</td>
+	<td>wrong_src</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_dst_7</td>
+	<td>wrong_dst</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_billsec_9</td>
+	<td>wrong_billsec</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_disposition_9</td>
+	<td>Answered</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_disposition_2</td>
+	<td>Busy</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_disposition_0</td>
+	<td>Dispostion</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=conf</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=import_type_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=file_lines_number</td>
+	<td>73</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=cdr_in_csv_file_number</td>
+	<td>16</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=bad_cdrs</td>
+	<td>57 bad CDRs(Press here to get the list)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=existing_clis_number</td>
+	<td>16</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=new_clis_number</td>
+	<td>13</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=fix_cdrs_value</td>
+	<td>57</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#cdrs_to_insert_value &gt; b</td>
+	<td>16</td>
+</tr>
+<!--<tr> 	<td>clickAndWait</td> 	<td>link=(Press here to get the list)</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>//tr[2]/td[11]</td> 	<td>Destination is not a numerical value</td> </tr> <tr> 	<td>assertText</td> 	<td>//tr[3]/td[11]</td> 	<td>Billsec is not a numerical value</td> </tr> <tr> 	<td>assertText</td> 	<td>//tr[4]/td[11]</td> 	<td>CLI is not a number</td> </tr> <tr> 	<td>assertText</td> 	<td>//tr[5]/td[11]</td> 	<td>Invalid calldate</td> </tr> <tr> 	<td>goBackAndWait</td> 	<td></td> 	<td></td> </tr>-->
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=cdr_file_size_value</td>
+	<td>5332</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=file_lines_number</td>
+	<td>73</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=cdr_in_csv_file_number</td>
+	<td>16</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=bad_cdrs</td>
+	<td>57 bad CDRs(Press here to get the list)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=existing_clis_number</td>
+	<td>16</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#fix_cdrs_value &gt; b</td>
+	<td>57</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#cdrs_to_insert_value &gt; b</td>
+	<td>16</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_calls</td>
+	<td>16</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imported_calls</td>
+	<td>16</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=failed_calls</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=error_msg_52</td>
+	<td>Destination is not a numerical value</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=error_msg_23</td>
+	<td>CLI is not a number</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=error_msg_54</td>
+	<td>Invalid calldate</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/stats/last_calls_stats</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_year</td>
+	<td>label=2014</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_month</td>
+	<td>label=January</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_day</td>
+	<td>label=1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_year</td>
+	<td>label=2014</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_month</td>
+	<td>label=January</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_day</td>
+	<td>label=31</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Total calls: 16</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_58</td>
+	<td>exact:00:00:04</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=disposition_58</td>
+	<td>ANSWERED</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_58</td>
+	<td>res_prov_sip</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_rate_58</td>
+	<td>0.1521</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=provider_price_58</td>
+	<td>0.0101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_58</td>
+	<td>User Resellers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_rate_58</td>
+	<td>0.1300</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_price_58</td>
+	<td>0.0087</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=profit_58</td>
+	<td>-0.0015</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=src_58</td>
+	<td>11447788</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=dst_58</td>
+	<td>1123455</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=src_47</td>
+	<td>2233221144</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=dst_47</td>
+	<td>2234567655</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=disposition_47</td>
+	<td>FAILED</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_47</td>
+	<td>res_prov_sip</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_rate_47</td>
+	<td>0.3021</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_price_47</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_47</td>
+	<td>User Resellers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_44</td>
+	<td>exact:00:00:57</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=disposition_44</td>
+	<td>ANSWERED</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_rate_44</td>
+	<td>0.3021</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_price_44</td>
+	<td>0.2870</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_rate_44</td>
+	<td>0.2233</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_price_44</td>
+	<td>0.2121</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=profit_44</td>
+	<td>-0.0749</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/stats/last_calls_stats</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_year</td>
+	<td>label=2014</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_month</td>
+	<td>label=January</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_day</td>
+	<td>label=1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_year</td>
+	<td>label=2014</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_month</td>
+	<td>label=January</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_day</td>
+	<td>label=31</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=src_58</td>
+	<td>11447788</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=dst_58</td>
+	<td>1123455</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=disposition_58</td>
+	<td>ANSWERED</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_58</td>
+	<td>res_prov_sip</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_rate_58</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_price_58</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=reseller_58</td>
+	<td>Test Reseller</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_58</td>
+	<td>User Resellers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_rate_58</td>
+	<td>0.1300</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_price_58</td>
+	<td>0.0087</td>
+</tr>
+<!--Rspro negali importuoti adminui ir nesuimportavo-->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>886546</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>223322114455</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>1144778899</td>
+	<td></td>
+</tr>
+<!--Test User #1 skambučių turėtų nebūti.-->
+<!--Testas turi apie 1500 eilučių, papildomai nepildyti-->
+</tbody></table>
+</body>
+</html>

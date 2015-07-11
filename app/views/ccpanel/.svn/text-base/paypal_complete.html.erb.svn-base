@@ -1,0 +1,12 @@
+<div id="process-list"></div>
+
+<%= content_for :js do %>
+  new Ajax.PeriodicalUpdater("process-list",
+    "/tx_status",
+    { frequency: 3,
+      method: 'get'})
+<% end %>
+
+<div class="separator">&nbsp;</div>
+
+<%= link_to b_back + _('Back_to_store'), :action => "index" %>

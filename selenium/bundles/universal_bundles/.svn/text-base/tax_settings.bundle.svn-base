@@ -1,0 +1,27 @@
+# ----
+# total tax name
+/settings/tax/total_tax_name.sql
+# tax 1 name
+/settings/tax/tax_1_name.sql
+# tax 2 name
+/settings/tax/tax_2_name.sql
+# tax 3 name
+/settings/tax/tax_3_name.sql
+# tax 4 name
+/settings/tax/tax_4_name.sql
+# tax 1 value 10
+/settings/tax/set_tax1_10.sql
+# tax 2 value 10
+/settings/tax/set_tax2_10.sql
+# tax 3 value 20
+/settings/tax/set_tax3_20.sql
+# tax 4 value 30
+/settings/tax/set_tax4_30.sql
+# set tax 2 active
+/settings/tax/check_tax2_active.sql
+# set tax 3 active
+/settings/tax/check_tax3_active.sql
+# set tax 4 active
+/settings/tax/check_tax4_active.sql
+# bundle loaded
+# ----

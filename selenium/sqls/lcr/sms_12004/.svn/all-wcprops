@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/44720/mor/gui/branches/x5/selenium/sqls/lcr/sms_12004
+END
+create.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/44720/mor/gui/branches/x5/selenium/sqls/lcr/sms_12004/create.sql
+END
+assign_provider.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/44720/mor/gui/branches/x5/selenium/sqls/lcr/sms_12004/assign_provider.sql
+END

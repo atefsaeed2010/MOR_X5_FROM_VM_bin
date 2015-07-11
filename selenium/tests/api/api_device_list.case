@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>api_devices_get</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">api_devices_get</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--Enable MOR API-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/enable_api</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=admin&amp;user_id=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=admin&amp;user_id=5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash2</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=reseller&amp;user_id=9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash3</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=user_admin&amp;user_id=0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash4</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=admin&amp;user_id=2&amp;test=1&amp;hash=${hash}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device_id</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device_type</td>
+	<td>IAX2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//device[2]/device_id</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//device[2]/device_type</td>
+	<td>FAX</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//device[3]/device_id</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//device[3]/device_type</td>
+	<td>IAX2</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=admin&amp;user_id=5&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=reseller&amp;user_id=9&amp;test=1&amp;hash=${hash3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=user_admin&amp;user_id=0&amp;test=1&amp;hash=${hash4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--API be hash-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/disable_hash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--adminas savo user-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=admin&amp;user_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device_id</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device_type</td>
+	<td>IAX2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//device[2]/device_id</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//device[2]/device_type</td>
+	<td>FAX</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//device[3]/device_id</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//device[3]/device_type</td>
+	<td>IAX2</td>
+</tr>
+<!--adminas reseller userio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=admin&amp;user_id=5&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<!--adminas reselerio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=admin&amp;user_id=3&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>6 IAX2</td>
+</tr>
+<!--adminas accountanto-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=admin&amp;user_id=4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device not found</td>
+	<td></td>
+</tr>
+<!--admin neegzistuojančio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=admin&amp;user_id=9&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User not found</td>
+	<td></td>
+</tr>
+<!--reseleris savo userio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=reseller&amp;user_id=5&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device_id</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device_type</td>
+	<td>IAX2</td>
+</tr>
+<!--reseleris admino userio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=reseller&amp;user_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<!--reseleris accountanto-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=reseller&amp;user_id=4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<!--reseleris neegzistuojancio userio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=reseller&amp;user_id=9&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User not found</td>
+	<td></td>
+</tr>
+<!--101 kitu useriu-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=user_admin&amp;user_id=0&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=user_admin&amp;user_id=3&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=user_admin&amp;user_id=4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<!--101 savo devaisa-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=user_admin&amp;user_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<!--101 neegzistuojanti-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=user_admin&amp;user_id=9&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User not found</td>
+	<td></td>
+</tr>
+<!--user_reseller kitu useriu-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=user_reseller&amp;user_id=0&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=user_reseller&amp;user_id=3&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=user_reseller&amp;user_id=4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<!--user_reseller savo devaisa-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=user_reseller&amp;user_id=5&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<!--user_reseller neegzistuojanti-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=user_reseller&amp;user_id=9&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User not found</td>
+	<td></td>
+</tr>
+<!--accountant be permissionų-->
+<!--accountant admin user-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=accountant&amp;user_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You are not authorized to view this page</td>
+	<td></td>
+</tr>
+<!--accountant reseller userio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=accountant&amp;user_id=5&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You are not authorized to view this page</td>
+	<td></td>
+</tr>
+<!--accountant reselerio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=accountant&amp;user_id=3&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You are not authorized to view this page</td>
+	<td></td>
+</tr>
+<!--accountant accountanto-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=accountant&amp;user_id=4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You are not authorized to view this page</td>
+	<td></td>
+</tr>
+<!--accountant neegzistuojančio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=admin&amp;user_id=9&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User not found</td>
+	<td></td>
+</tr>
+<!--accountant su permissionais-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/sql/acc_groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/sql/acc_all_permissions_write</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--accountant admin user-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=accountant&amp;user_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device_id</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device_type</td>
+	<td>IAX2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//device[2]/device_id</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//device[2]/device_type</td>
+	<td>FAX</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//device[3]/device_id</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//device[3]/device_type</td>
+	<td>IAX2</td>
+</tr>
+<!--accountant reseller userio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=accountant&amp;user_id=5&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<!--accountant reselerio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=accountant&amp;user_id=3&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device_id</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device_type</td>
+	<td>IAX2</td>
+</tr>
+<!--accountant accountanto-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=accountant&amp;user_id=4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device not found</td>
+	<td></td>
+</tr>
+<!--accountant neegzistuojančio-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=admin&amp;user_id=9&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>user_id is empty</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/devices_get?u=admin&amp;user_id=&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>user_id is empty</td>
+	<td></td>
+</tr>
+<!--su slaptazodziu ir senu linku-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_list?u=accountant&amp;p=accountant1&amp;user_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device_id</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device_type</td>
+	<td>IAX2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//device[2]/device_id</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//device[2]/device_type</td>
+	<td>FAX</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//device[3]/device_id</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//device[3]/device_type</td>
+	<td>IAX2</td>
+</tr>
+<!--test=1 formato testavimas - iki siol buvo tik html-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/settings/api/enable_xml</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_list?u=accountant&amp;p=accountant1&amp;user_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=page</td>
+	<td>2 IAX2 3 FAX 4 IAX2</td>
+</tr>
+</tbody></table>
+</body>
+</html>

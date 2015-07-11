@@ -1,0 +1,9 @@
+# create data for devices/device_callerid.case
+# ----
+# make dids free
+did/did_1/make_free.sql
+did/did_2/make_free.sql
+# create couple of CLIs
+user/user_2/create_callerid.sql
+user/user_5/create_callerid.sql
+# bundle loaded

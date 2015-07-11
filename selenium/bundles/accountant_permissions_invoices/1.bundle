@@ -1,0 +1,14 @@
+# enable API, balance checking, disable hash checking
+# create invoice for testing, enable invoice sending
+# ----
+# Allow API globally:
+/settings/api/enable_0.sql
+# Disable hash checking:
+/settings/api/disable_hash_0.sql
+# Allow GET API:
+/settings/api/allow_get.sql
+# Create invoice
+/user/user_2/create_invoice_postpaid_2009_2011.sql
+# enable email
+/settings/email/enable_sending.sql
+# bundle loaded

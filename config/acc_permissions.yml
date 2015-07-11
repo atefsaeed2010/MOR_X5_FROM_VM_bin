@@ -1,0 +1,78 @@
+# AS: Should load with rails.
+
+users_usage:
+  active: 0
+  create: 0
+  password: 0
+  user_type: 0
+  lcr: 0
+  tariff: 0
+  balance: 0
+  payment_type: 0
+  call_limit: 0
+
+devices_usage:
+  active: 0
+  create: 0
+  password: 0
+  extension: 0
+  pin: 0
+  authentication: 0
+  cid_number: 0
+  cid_name: 0
+  recordings: 0
+  voicemail_password: 0
+  ivr_in_cli: 0
+
+calling_cards_usage:
+  active: 0
+  financial_data: 0
+  pin: 0
+
+calls_statistics_usage:
+  active: 0
+  financial_data: 0
+
+finances_statistics_usage:
+  active: 0
+
+various_statistics_usage:
+  active: 0
+  financial_data: 0
+
+dids_usage:
+  active: 0
+  rates: 0
+
+queues:
+  active: 0
+
+vauchers_usage:
+  active: 0
+  financial_data: 0
+
+services_usage:
+  active: 0
+
+subscriptions_usage:
+  active: 0
+  financial_data: 0
+
+invoices_usage:
+  active: 0
+
+monitorings_usage:
+  active: 0
+
+credit_notes_usage:
+  active: 0
+
+financial_statements_usage:
+  active: 0
+
+payments_usage:
+  active: 0
+
+tariffs_usage:
+  active: 0
+

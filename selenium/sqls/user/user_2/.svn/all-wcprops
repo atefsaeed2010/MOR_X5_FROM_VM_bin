@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/48896/mor/gui/branches/x5/selenium/sqls/user/user_2
+END
+delete_user_2.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/44429/mor/gui/branches/x5/selenium/sqls/user/user_2/delete_user_2.sql
+END
+create_callerid.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/44816/mor/gui/branches/x5/selenium/sqls/user/user_2/create_callerid.sql
+END
+delete_sip_2004.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/46782/mor/gui/branches/x5/selenium/sqls/user/user_2/delete_sip_2004.sql
+END
+create_sip_2004.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/40315/mor/gui/branches/x5/selenium/sqls/user/user_2/create_sip_2004.sql
+END
+assign_sms.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/45088/mor/gui/branches/x5/selenium/sqls/user/user_2/assign_sms.sql
+END
+set_warning_balance_sent_admin.sql
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/48896/mor/gui/branches/x5/selenium/sqls/user/user_2/set_warning_balance_sent_admin.sql
+END
+set_tax_1.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/41832/mor/gui/branches/x5/selenium/sqls/user/user_2/set_tax_1.sql
+END
+set_warning_balance_sent_manager.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/48896/mor/gui/branches/x5/selenium/sqls/user/user_2/set_warning_balance_sent_manager.sql
+END
+create_monitoring_1001.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/user/user_2/create_monitoring_1001.sql
+END
+set_warning_balance_sent_user.sql
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/48896/mor/gui/branches/x5/selenium/sqls/user/user_2/set_warning_balance_sent_user.sql
+END
+create_invoice_postpaid_2009_2011.sql
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/user/user_2/create_invoice_postpaid_2009_2011.sql
+END
+set_address.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/41875/mor/gui/branches/x5/selenium/sqls/user/user_2/set_address.sql
+END

@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/52211/mor/gui/branches/x5/selenium/tests/tariffs
+END
+tariff_import.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/51589/mor/gui/branches/x5/selenium/tests/tariffs/tariff_import.case
+END
+tar_imp_with_fee.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/42810/mor/gui/branches/x5/selenium/tests/tariffs/tar_imp_with_fee.case
+END
+tariff_reseller.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/42467/mor/gui/branches/x5/selenium/tests/tariffs/tariff_reseller.case
+END
+tar_imp_with_same_prefix.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/48672/mor/gui/branches/x5/selenium/tests/tariffs/tar_imp_with_same_prefix.case
+END
+make_tariffs_from_lcr_providers.case
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/50617/mor/gui/branches/x5/selenium/tests/tariffs/make_tariffs_from_lcr_providers.case
+END
+tar_imp_with_subcode2.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/48672/mor/gui/branches/x5/selenium/tests/tariffs/tar_imp_with_subcode2.case
+END
+tar_imp_with_effective_date_for_wholesale.case
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/51150/mor/gui/branches/x5/selenium/tests/tariffs/tar_imp_with_effective_date_for_wholesale.case
+END
+effective_rates_settings.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/50142/mor/gui/branches/x5/selenium/tests/tariffs/effective_rates_settings.case
+END
+tariffs2.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/52002/mor/gui/branches/x5/selenium/tests/tariffs/tariffs2.case
+END
+make_tariff_with_effective_date.case
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/51886/mor/gui/branches/x5/selenium/tests/tariffs/make_tariff_with_effective_date.case
+END
+tar_imp_effective_date_format.case
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/52167/mor/gui/branches/x5/selenium/tests/tariffs/tar_imp_effective_date_format.case
+END
+tariffs3.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/52211/mor/gui/branches/x5/selenium/tests/tariffs/tariffs3.case
+END
+mixed_tar_imp.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/42810/mor/gui/branches/x5/selenium/tests/tariffs/mixed_tar_imp.case
+END
+tar_imp_without_subcode.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/42829/mor/gui/branches/x5/selenium/tests/tariffs/tar_imp_without_subcode.case
+END
+tariff_rate.case
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/50591/mor/gui/branches/x5/selenium/tests/tariffs/tariff_rate.case
+END
+tariff_import2.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/51129/mor/gui/branches/x5/selenium/tests/tariffs/tariff_import2.case
+END
+tar_imp_effective_date_format_for_wholesale.case
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/!svn/ver/50830/mor/gui/branches/x5/selenium/tests/tariffs/tar_imp_effective_date_format_for_wholesale.case
+END
+tariff_import_destinations.case
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/42709/mor/gui/branches/x5/selenium/tests/tariffs/tariff_import_destinations.case
+END
+tar_imp_with_increment.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/42810/mor/gui/branches/x5/selenium/tests/tariffs/tar_imp_with_increment.case
+END
+tar_imp_with_subcode.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/48672/mor/gui/branches/x5/selenium/tests/tariffs/tar_imp_with_subcode.case
+END
+tar_imp_update.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/46263/mor/gui/branches/x5/selenium/tests/tariffs/tar_imp_update.case
+END
+pro_tariff_to_retail.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/tariffs/pro_tariff_to_retail.case
+END
+last_tariff_update_reseller.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/52017/mor/gui/branches/x5/selenium/tests/tariffs/last_tariff_update_reseller.case
+END
+tariffs.case
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/50636/mor/gui/branches/x5/selenium/tests/tariffs/tariffs.case
+END
+last_tariff_update.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/52017/mor/gui/branches/x5/selenium/tests/tariffs/last_tariff_update.case
+END
+tariff_imp_delete_rates.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/51129/mor/gui/branches/x5/selenium/tests/tariffs/tariff_imp_delete_rates.case
+END
+tar_imp_without_destinations.case
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/50660/mor/gui/branches/x5/selenium/tests/tariffs/tar_imp_without_destinations.case
+END
+tar_imp_with_effective_date.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/51031/mor/gui/branches/x5/selenium/tests/tariffs/tar_imp_with_effective_date.case
+END
+tar_imp_day_rate.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/50613/mor/gui/branches/x5/selenium/tests/tariffs/tar_imp_day_rate.case
+END
+usa_tar_imp.case
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/42810/mor/gui/branches/x5/selenium/tests/tariffs/usa_tar_imp.case
+END

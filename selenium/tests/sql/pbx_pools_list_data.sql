@@ -1,0 +1,11 @@
+delete from conflines where name = 'x6_functionality_4';
+INSERT INTO pbx_pools (`name`, `comment`, `owner_id`) VALUES ('Pirmas Poolas', 'Pirmas komentaras', '0');
+INSERT INTO pbx_pools (`name`, `comment`, `owner_id`) VALUES ('Antras Poolas', 'Poolas trinimui(naudojamas userio)', '0');
+INSERT INTO pbx_pools (`name`, `comment`, `owner_id`) VALUES ('Trecias Poolas', '', '0');
+INSERT INTO pbx_pools (`name`,  `comment`, `owner_id`) VALUES ('Ketvirtas Poolas', 'Reselerio poolas', '3');
+INSERT INTO pbx_pools (`name`,  `comment`, `owner_id`) VALUES ('Penktas Poolas', 'Poolas trinimui(naudojamas userio)', '3');
+SELECT * FROM pbx_pools;
+INSERT INTO conflines (name, value) VALUES ('x6_functionality_4', '1');
+ALTER TABLE users ADD pbx_pool_id INT(11);
+update users set pbx_pool_id = 2 WHERE id ='0';
+update users set pbx_pool_id = 5 WHERE id ='3';

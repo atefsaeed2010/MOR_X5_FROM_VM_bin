@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/44817/mor/gui/branches/x5/selenium/sqls/user/user_5
+END
+create_callerid.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/44817/mor/gui/branches/x5/selenium/sqls/user/user_5/create_callerid.sql
+END
+create_sip_2503.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/40239/mor/gui/branches/x5/selenium/sqls/user/user_5/create_sip_2503.sql
+END
+create_fax_2502.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/40239/mor/gui/branches/x5/selenium/sqls/user/user_5/create_fax_2502.sql
+END
+set_address.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/41894/mor/gui/branches/x5/selenium/sqls/user/user_5/set_address.sql
+END

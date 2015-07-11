@@ -1,0 +1,9 @@
+# update reseller's data
+user/reseller_3/make_rspro.sql
+# create second lcr
+lcr/price_11302/create.sql
+# create user 1
+user/user_1302/create.sql
+# create user 2
+user/user_1303/create.sql
+# bundle loaded

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/49092/mor/gui/branches/x5/selenium/sqls/user/reseller_3
+END
+enable_recording.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/user/reseller_3/enable_recording.sql
+END
+make_rspro.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/user/reseller_3/make_rspro.sql
+END
+enable_can_add_own_dids.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/40237/mor/gui/branches/x5/selenium/sqls/user/reseller_3/enable_can_add_own_dids.sql
+END
+allow_virtual_devices.sql
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/40290/mor/gui/branches/x5/selenium/sqls/user/reseller_3/allow_virtual_devices.sql
+END
+assign_sms.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/45088/mor/gui/branches/x5/selenium/sqls/user/reseller_3/assign_sms.sql
+END
+assign_currency_eur.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/49092/mor/gui/branches/x5/selenium/sqls/user/reseller_3/assign_currency_eur.sql
+END
+assign_permissions.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/user/reseller_3/assign_permissions.sql
+END
+reseller_delete.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/user/reseller_3/reseller_delete.sql
+END
+set_address.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/41875/mor/gui/branches/x5/selenium/sqls/user/reseller_3/set_address.sql
+END

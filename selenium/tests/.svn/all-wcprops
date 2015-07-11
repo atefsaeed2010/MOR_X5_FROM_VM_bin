@@ -1,0 +1,1175 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/52326/mor/gui/branches/x5/selenium/tests
+END
+default_currencies.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/51580/mor/gui/branches/x5/selenium/tests/default_currencies.case
+END
+alert_groups.case
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/50559/mor/gui/branches/x5/selenium/tests/alert_groups.case
+END
+cli.case
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/52326/mor/gui/branches/x5/selenium/tests/cli.case
+END
+queues.case
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/queues.case
+END
+quick_check_for_internal_errors.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/quick_check_for_internal_errors.case
+END
+acc_groups.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/52071/mor/gui/branches/x5/selenium/tests/acc_groups.sql
+END
+recordings_bulk.case
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/51869/mor/gui/branches/x5/selenium/tests/recordings_bulk.case
+END
+blank_create_edit.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/45166/mor/gui/branches/x5/selenium/tests/blank_create_edit.case
+END
+call_prices.case
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/52260/mor/gui/branches/x5/selenium/tests/call_prices.case
+END
+aggregate_new_variations3.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/51431/mor/gui/branches/x5/selenium/tests/aggregate_new_variations3.case
+END
+midnight_calls.case
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/43273/mor/gui/branches/x5/selenium/tests/midnight_calls.case
+END
+check_post.case
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/check_post.case
+END
+addons_limits_rs_rspro.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/47066/mor/gui/branches/x5/selenium/tests/addons_limits_rs_rspro.case
+END
+same_callerid.case
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/51791/mor/gui/branches/x5/selenium/tests/same_callerid.case
+END
+delete_from_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/delete_from_calls.sql
+END
+srtp.case
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/47410/mor/gui/branches/x5/selenium/tests/srtp.case
+END
+backups.case
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/52233/mor/gui/branches/x5/selenium/tests/backups.case
+END
+ccl_ip_authentication.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/44421/mor/gui/branches/x5/selenium/tests/ccl_ip_authentication.case
+END
+time_zone.case
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/50339/mor/gui/branches/x5/selenium/tests/time_zone.case
+END
+calls_old.case
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/49300/mor/gui/branches/x5/selenium/tests/calls_old.case
+END
+callback.case
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/49437/mor/gui/branches/x5/selenium/tests/callback.case
+END
+caller_id_with_asterisk_sign.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/caller_id_with_asterisk_sign.case
+END
+aggregate_new_variations.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/52189/mor/gui/branches/x5/selenium/tests/aggregate_new_variations.case
+END
+vulnerable_links.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/vulnerable_links.case
+END
+carrier_addon_other_devices.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/52072/mor/gui/branches/x5/selenium/tests/carrier_addon_other_devices.case
+END
+codecs.case
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/45440/mor/gui/branches/x5/selenium/tests/codecs.case
+END
+carrier_addon_with_provider_devices.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/49582/mor/gui/branches/x5/selenium/tests/carrier_addon_with_provider_devices.case
+END
+carrier_addon_ip_auth.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/49294/mor/gui/branches/x5/selenium/tests/carrier_addon_ip_auth.case
+END
+check_heartbeat_ip.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/check_heartbeat_ip.sql
+END
+warning_balance.case
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/51418/mor/gui/branches/x5/selenium/tests/warning_balance.case
+END
+fax_path_setup.case
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/fax_path_setup.case
+END
+decimal_separator.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/43272/mor/gui/branches/x5/selenium/tests/decimal_separator.case
+END
+load_stats2.case
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/52137/mor/gui/branches/x5/selenium/tests/load_stats2.case
+END
+stats2.case
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/52158/mor/gui/branches/x5/selenium/tests/stats2.case
+END
+country_stats.case
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/51401/mor/gui/branches/x5/selenium/tests/country_stats.case
+END
+call_info_permissions.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/call_info_permissions.case
+END
+credit_notes.case
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/43946/mor/gui/branches/x5/selenium/tests/credit_notes.case
+END
+private_number.case
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/43285/mor/gui/branches/x5/selenium/tests/private_number.case
+END
+blank_page.case
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/43664/mor/gui/branches/x5/selenium/tests/blank_page.case
+END
+calls_limitation.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/50141/mor/gui/branches/x5/selenium/tests/calls_limitation.case
+END
+ipauth_name.case
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/44421/mor/gui/branches/x5/selenium/tests/ipauth_name.case
+END
+accounting.case
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/51580/mor/gui/branches/x5/selenium/tests/accounting.case
+END
+calls_for_user_graphs.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/44663/mor/gui/branches/x5/selenium/tests/calls_for_user_graphs.sql
+END
+financial_statements.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/51319/mor/gui/branches/x5/selenium/tests/financial_statements.case
+END
+prefix_test.case
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/47082/mor/gui/branches/x5/selenium/tests/prefix_test.case
+END
+time_zone_default.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/45790/mor/gui/branches/x5/selenium/tests/time_zone_default.case
+END
+aggregate_new_show_columns.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/50146/mor/gui/branches/x5/selenium/tests/aggregate_new_show_columns.case
+END
+settings.case
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/49629/mor/gui/branches/x5/selenium/tests/settings.case
+END
+lcrs.case
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/47093/mor/gui/branches/x5/selenium/tests/lcrs.case
+END
+calls_search_limits.case
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/50905/mor/gui/branches/x5/selenium/tests/calls_search_limits.case
+END
+menu.case
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/50356/mor/gui/branches/x5/selenium/tests/menu.case
+END
+multiple_servers.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/43369/mor/gui/branches/x5/selenium/tests/multiple_servers.case
+END
+calls_now.sql
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/calls_now.sql
+END
+phonebooks.case
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/41605/mor/gui/branches/x5/selenium/tests/phonebooks.case
+END
+security.case
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/security.case
+END
+custom_rates.case
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/52002/mor/gui/branches/x5/selenium/tests/custom_rates.case
+END
+aggregates.case
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/51211/mor/gui/branches/x5/selenium/tests/aggregates.case
+END
+search_after_commit_personal_various.case
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/48215/mor/gui/branches/x5/selenium/tests/search_after_commit_personal_various.case
+END
+aggregate_new_gui_and_search.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/52277/mor/gui/branches/x5/selenium/tests/aggregate_new_gui_and_search.case
+END
+check_price_invoice_last_calls.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/51536/mor/gui/branches/x5/selenium/tests/check_price_invoice_last_calls.case
+END
+alerts2.case
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/50967/mor/gui/branches/x5/selenium/tests/alerts2.case
+END
+for_last_calls_dids.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/for_last_calls_dids.sql
+END
+custom_rates_acc.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/custom_rates_acc.case
+END
+call_details.case
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/45539/mor/gui/branches/x5/selenium/tests/call_details.case
+END
+summer_time_zone.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/50339/mor/gui/branches/x5/selenium/tests/summer_time_zone.case
+END
+recordings2.case
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/43305/mor/gui/branches/x5/selenium/tests/recordings2.case
+END
+prefix_finder_show_rates.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/51881/mor/gui/branches/x5/selenium/tests/prefix_finder_show_rates.case
+END
+lcr_copies.case
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/50833/mor/gui/branches/x5/selenium/tests/lcr_copies.case
+END
+calls_per_day.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/calls_per_day.sql
+END
+prefix_test_simple_users.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/51327/mor/gui/branches/x5/selenium/tests/prefix_test_simple_users.case
+END
+queues_edit3.case
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/52310/mor/gui/branches/x5/selenium/tests/queues_edit3.case
+END
+password_testing.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/48881/mor/gui/branches/x5/selenium/tests/password_testing.case
+END
+calls_fix_delta.sql
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/calls_fix_delta.sql
+END
+callflow.case
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/52166/mor/gui/branches/x5/selenium/tests/callflow.case
+END
+default_user2.case
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/41990/mor/gui/branches/x5/selenium/tests/default_user2.case
+END
+ip_authentication.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/45511/mor/gui/branches/x5/selenium/tests/ip_authentication.case
+END
+default_seperator.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/51432/mor/gui/branches/x5/selenium/tests/default_seperator.case
+END
+registration.case
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/50194/mor/gui/branches/x5/selenium/tests/registration.case
+END
+integrity_check.case
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/51694/mor/gui/branches/x5/selenium/tests/integrity_check.case
+END
+periodic_actions.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/44514/mor/gui/branches/x5/selenium/tests/periodic_actions.case
+END
+aggregate_new_variations2.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/51431/mor/gui/branches/x5/selenium/tests/aggregate_new_variations2.case
+END
+hide_menu_and_disable_buttons.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/hide_menu_and_disable_buttons.case
+END
+ccl_and_authentication.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/47288/mor/gui/branches/x5/selenium/tests/ccl_and_authentication.case
+END
+settings3.case
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/52139/mor/gui/branches/x5/selenium/tests/settings3.case
+END
+help_links.case
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/49257/mor/gui/branches/x5/selenium/tests/help_links.case
+END
+alerts.case
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/47888/mor/gui/branches/x5/selenium/tests/alerts.case
+END
+bg_tasks.case
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/48139/mor/gui/branches/x5/selenium/tests/bg_tasks.case
+END
+asterisk_servers.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/49334/mor/gui/branches/x5/selenium/tests/asterisk_servers.case
+END
+pop_up_user_information.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/pop_up_user_information.case
+END
+search_by_user_id.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/search_by_user_id.case
+END
+ignore_global_alerts.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/47953/mor/gui/branches/x5/selenium/tests/ignore_global_alerts.case
+END
+alerts4.case
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/47630/mor/gui/branches/x5/selenium/tests/alerts4.case
+END
+integrity_actions_errors.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/integrity_actions_errors.sql
+END
+calls_old.sql
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/calls_old.sql
+END
+time_zone_and_profits.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/51543/mor/gui/branches/x5/selenium/tests/time_zone_and_profits.case
+END
+registration_email.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/48962/mor/gui/branches/x5/selenium/tests/registration_email.case
+END
+pbx_functions.case
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/52302/mor/gui/branches/x5/selenium/tests/pbx_functions.case
+END
+reseller_calls_now_and_old.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/42053/mor/gui/branches/x5/selenium/tests/reseller_calls_now_and_old.sql
+END
+default_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/48597/mor/gui/branches/x5/selenium/tests/default_user.case
+END
+db_update_check.case
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/42534/mor/gui/branches/x5/selenium/tests/db_update_check.case
+END
+vat_checking.case
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/vat_checking.case
+END
+calls_in_graphs_timezones.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/calls_in_graphs_timezones.case
+END
+ip_auth_check.case
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/45505/mor/gui/branches/x5/selenium/tests/ip_auth_check.case
+END
+monitorings_settings.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/45488/mor/gui/branches/x5/selenium/tests/monitorings_settings.case
+END
+calls_in_graphs.case
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/49039/mor/gui/branches/x5/selenium/tests/calls_in_graphs.case
+END
+blocked_user_with_weak_pass.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/blocked_user_with_weak_pass.case
+END
+addons_limits.case
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/47265/mor/gui/branches/x5/selenium/tests/addons_limits.case
+END
+recaptcha.case
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/44763/mor/gui/branches/x5/selenium/tests/recaptcha.case
+END
+disable_test_production.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/disable_test_production.sql
+END
+ipauth_just_host.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/ipauth_just_host.case
+END
+accountant_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/accountant_calls.sql
+END
+cli_import.case
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/51930/mor/gui/branches/x5/selenium/tests/cli_import.case
+END
+call_prices2.case
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/50985/mor/gui/branches/x5/selenium/tests/call_prices2.case
+END
+fake_form_rules.case
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/fake_form_rules.case
+END
+recordings_addon.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/51776/mor/gui/branches/x5/selenium/tests/recordings_addon.case
+END
+time_zone_export_csv.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/51869/mor/gui/branches/x5/selenium/tests/time_zone_export_csv.case
+END
+time_zone_cc_cards.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/51807/mor/gui/branches/x5/selenium/tests/time_zone_cc_cards.case
+END
+callerid_presentation.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/callerid_presentation.case
+END
+alerts_hgc.case
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/47265/mor/gui/branches/x5/selenium/tests/alerts_hgc.case
+END
+queues_edit.case
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/52301/mor/gui/branches/x5/selenium/tests/queues_edit.case
+END
+check_status_notice.case
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/43265/mor/gui/branches/x5/selenium/tests/check_status_notice.case
+END
+aggregate_new_script.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/51468/mor/gui/branches/x5/selenium/tests/aggregate_new_script.case
+END
+update_currencies_from_web.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/44162/mor/gui/branches/x5/selenium/tests/update_currencies_from_web.case
+END
+last_calls_dids.case
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/51456/mor/gui/branches/x5/selenium/tests/last_calls_dids.case
+END
+check_heartbeat_ip.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/43344/mor/gui/branches/x5/selenium/tests/check_heartbeat_ip.case
+END
+recordings_addon2.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/51675/mor/gui/branches/x5/selenium/tests/recordings_addon2.case
+END
+cli_users.case
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/51901/mor/gui/branches/x5/selenium/tests/cli_users.case
+END
+google_maps.case
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/44421/mor/gui/branches/x5/selenium/tests/google_maps.case
+END
+carrier_addon.case
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/50260/mor/gui/branches/x5/selenium/tests/carrier_addon.case
+END
+queues_agents.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/queues_agents.sql
+END
+calls_through_different_servers.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/42928/mor/gui/branches/x5/selenium/tests/calls_through_different_servers.case
+END
+iwantto_help.case
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/49287/mor/gui/branches/x5/selenium/tests/iwantto_help.case
+END
+queues_edit2.case
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/52291/mor/gui/branches/x5/selenium/tests/queues_edit2.case
+END
+aggregate_new_no_small_calls.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/51468/mor/gui/branches/x5/selenium/tests/aggregate_new_no_small_calls.case
+END
+no_duplicate_extension.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/48156/mor/gui/branches/x5/selenium/tests/no_duplicate_extension.case
+END
+cron_actions.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/cron_actions.sql
+END
+alert_schedules.case
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/50156/mor/gui/branches/x5/selenium/tests/alert_schedules.case
+END
+aggregates_livesearches.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/52245/mor/gui/branches/x5/selenium/tests/aggregates_livesearches.case
+END
+webmoney_gateway.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/41949/mor/gui/branches/x5/selenium/tests/webmoney_gateway.case
+END
+invoice_delete_src.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/invoice_delete_src.sql
+END
+eur_default_currency.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/51580/mor/gui/branches/x5/selenium/tests/eur_default_currency.case
+END
+calls_for_hgc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/calls_for_hgc.sql
+END
+ipauth_in_location_devices.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/44421/mor/gui/branches/x5/selenium/tests/ipauth_in_location_devices.case
+END
+time_zone2.case
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/45785/mor/gui/branches/x5/selenium/tests/time_zone2.case
+END
+filter_by_reseller.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/51418/mor/gui/branches/x5/selenium/tests/filter_by_reseller.case
+END
+user_rates.case
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/52170/mor/gui/branches/x5/selenium/tests/user_rates.case
+END
+warning_balance_reset.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/48962/mor/gui/branches/x5/selenium/tests/warning_balance_reset.case
+END
+financial_statements_other_users.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/51319/mor/gui/branches/x5/selenium/tests/financial_statements_other_users.case
+END
+carrier_addon2.case
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/49294/mor/gui/branches/x5/selenium/tests/carrier_addon2.case
+END
+hgc_stats.case
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/51630/mor/gui/branches/x5/selenium/tests/hgc_stats.case
+END
+settings_change_confline_check.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/42395/mor/gui/branches/x5/selenium/tests/settings_change_confline_check.case
+END
+settings2.case
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/51494/mor/gui/branches/x5/selenium/tests/settings2.case
+END
+taxes.case
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/46170/mor/gui/branches/x5/selenium/tests/taxes.case
+END
+prefix_finder_show_rates_effective_from.case
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/52315/mor/gui/branches/x5/selenium/tests/prefix_finder_show_rates_effective_from.case
+END
+settings_addons.case
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/44808/mor/gui/branches/x5/selenium/tests/settings_addons.case
+END
+ip_authentication2.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/44421/mor/gui/branches/x5/selenium/tests/ip_authentication2.case
+END
+default_currency.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/44981/mor/gui/branches/x5/selenium/tests/default_currency.case
+END
+ring_groups.case
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/43106/mor/gui/branches/x5/selenium/tests/ring_groups.case
+END
+stats.case
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/52223/mor/gui/branches/x5/selenium/tests/stats.case
+END
+tariffs_with_import_csv_new_import_action.case
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/47406/mor/gui/branches/x5/selenium/tests/tariffs_with_import_csv_new_import_action.case
+END
+recordings.case
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/48340/mor/gui/branches/x5/selenium/tests/recordings.case
+END
+search_only_after_commit.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/50905/mor/gui/branches/x5/selenium/tests/search_only_after_commit.case
+END
+hgc.case
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/43006/mor/gui/branches/x5/selenium/tests/hgc.case
+END
+profit.case
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/51830/mor/gui/branches/x5/selenium/tests/profit.case
+END
+alert_contacts.case
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/50853/mor/gui/branches/x5/selenium/tests/alert_contacts.case
+END
+midnight_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/midnight_calls.sql
+END
+no_pay_sub_table.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/45771/mor/gui/branches/x5/selenium/tests/no_pay_sub_table.case
+END
+calls_new.case
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/43125/mor/gui/branches/x5/selenium/tests/calls_new.case
+END
+pbx_pool_create_edit.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/pbx_pool_create_edit.case
+END
+languages_for_devices_and_cards.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/41372/mor/gui/branches/x5/selenium/tests/languages_for_devices_and_cards.case
+END
+alerts3.case
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/46760/mor/gui/branches/x5/selenium/tests/alerts3.case
+END
+pbx_pool_list.case
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/pbx_pool_list.case
+END
+privacy.case
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/48146/mor/gui/branches/x5/selenium/tests/privacy.case
+END
+lcrs_list_search_order.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/lcrs_list_search_order.case
+END
+for_aggregate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/for_aggregate.sql
+END
+exceptions.case
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/44613/mor/gui/branches/x5/selenium/tests/exceptions.case
+END
+cron_actions.case
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/50173/mor/gui/branches/x5/selenium/tests/cron_actions.case
+END
+music_on_hold.case
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/music_on_hold.case
+END
+quickforwards_rules_rspro.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/52207/mor/gui/branches/x5/selenium/tests/quickforwards_rules_rspro.case
+END
+date_format.case
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/51447/mor/gui/branches/x5/selenium/tests/date_format.case
+END
+directions_destinations.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/41739/mor/gui/branches/x5/selenium/tests/directions_destinations.case
+END
+active_callback.case
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/active_callback.case
+END
+calls_for_hgc_stats.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/calls_for_hgc_stats.sql
+END
+warning_balance_tz.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/46188/mor/gui/branches/x5/selenium/tests/warning_balance_tz.case
+END
+hide_non_answered_calls.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/50144/mor/gui/branches/x5/selenium/tests/hide_non_answered_calls.case
+END
+cli_user.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/cli_user.sql
+END
+call_stats.case
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/51967/mor/gui/branches/x5/selenium/tests/call_stats.case
+END
+servers.case
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/49319/mor/gui/branches/x5/selenium/tests/servers.case
+END
+quick_stats.case
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/49273/mor/gui/branches/x5/selenium/tests/quick_stats.case
+END
+stats_user_logins.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/stats_user_logins.sql
+END
+warning_balance2.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/48963/mor/gui/branches/x5/selenium/tests/warning_balance2.case
+END
+load_stats.case
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/51313/mor/gui/branches/x5/selenium/tests/load_stats.case
+END
+alert_param_group.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/51592/mor/gui/branches/x5/selenium/tests/alert_param_group.case
+END
+for_permissions_test.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/52302/mor/gui/branches/x5/selenium/tests/for_permissions_test.sql
+END
+number_pools.case
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/41963/mor/gui/branches/x5/selenium/tests/number_pools.case
+END

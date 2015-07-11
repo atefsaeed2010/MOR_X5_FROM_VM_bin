@@ -1,0 +1,43 @@
+<%= link_to b_add + _('Add_New_Timeperiod'), :action => 'new' %>
+<br/>
+<br/>
+<% if @total_pages > 1 %>
+  <%= render 'page_select_header', page: @page, total_pages: @total_pages,
+      page_select_header_id: @page_select_header_id, st: @st,
+      call_type: @call_type, direction: @direction,
+      sel_device_id: @sel_device_id, date: @date, action: @action,
+      user_id: @user_id, processed: @processed, s_provider: @s_provider %>
+<% end %>
+<br/>
+<table class="maintable" width="100%">
+  <tr>
+    <th align="left"><%= sortable_list_header("name",  _("Name"), @options) %></th>
+    <th align="center"><%= sortable_list_header("start",  _("Start_Time"), @options) %></th>
+    <th align="center"><%= sortable_list_header("end", _("End_Time"), @options) %></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% @ivr_timeperiod.each_with_index { |period, index| %>
+      <tr class="row<%= index%2+1 %>">
+        <td align="left"><%= period.name %></td>
+        <td align="center"><%= period.start_month_name.to_s + " " if period.start_month %>
+          <%= period.start_day.to_s+" " if period.start_day %>
+          <%= period.start_weekday_name+" " if period.start_weekday %>
+          <%= period.start_time %></td>
+        <td align="center"><%= period.end_month_name.to_s + " " if period.end_month %>
+          <%= period.end_day.to_s+" " if period.end_day %>
+          <%= period.end_weekday_name+" " if period.end_weekday %>
+          <%= period.end_time %></td>
+        <td align="center"><%= link_to b_edit, :action => 'edit', :id => period.id %></td>
+        <td align="center"><%= link_to b_delete, {:action => 'destroy', :id => period.id}, :confirm => _('are_you_sure'), :method => "post" %></td>
+      </tr>
+  <% } %>
+</table>
+<br/>
+<% if @total_pages > 1 %>
+    <%= render 'page_select_header', page: @page, total_pages: @total_pages,
+        page_select_header_id: @page_select_header_id, st: @st,
+        call_type: @call_type, direction: @direction,
+        sel_device_id: @sel_device_id, date: @date, action: @action,
+        user_id: @user_id, processed: @processed, s_provider: @s_provider %>
+<% end %>

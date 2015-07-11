@@ -1,0 +1,7 @@
+# email settings for admin and reseller and also emails in personal details for admin, user_admin, reseller and user_reseller
+# ----
+# active_calls_show_server
+/settings/functionality/active_calls_show_server.sql
+# infinity for hide active calls
+/settings/functionality/active_calls_show_did.sql
+# bundle loaded

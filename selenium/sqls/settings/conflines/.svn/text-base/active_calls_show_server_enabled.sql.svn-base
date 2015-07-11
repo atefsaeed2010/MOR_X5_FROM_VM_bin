@@ -1,0 +1,1 @@
+UPDATE `conflines` SET value='1' where name='Active_Calls_Show_Server';

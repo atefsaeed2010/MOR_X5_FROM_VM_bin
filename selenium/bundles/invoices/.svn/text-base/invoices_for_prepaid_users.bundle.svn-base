@@ -1,0 +1,11 @@
+# ----
+# invoice  settings
+# good calls 
+calls/good_calls.sql
+# sms  invoices
+sms/sms_for_invoices.sql
+# update users tax id 
+settings/tax/update_tax_id.sql
+# invoice settings
+settings/invoices/invoice_settings.sql
+# bundle loaded

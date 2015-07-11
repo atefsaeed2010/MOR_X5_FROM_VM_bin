@@ -1,0 +1,8 @@
+# ----
+# good calls data for testing
+calls/good_calls.sql
+# calls fix delta
+calls/calls_fix_delta.sql
+# prepaid number type 2
+settings/invoices/prepaid_number_type_2.sql
+# bundle loaded

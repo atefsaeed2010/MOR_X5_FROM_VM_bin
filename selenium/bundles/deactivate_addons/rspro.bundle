@@ -1,0 +1,5 @@
+# turn off addon for test resellers/resellers_settings.case
+# ----
+# turn off calling cards addon
+/settings/addons/rspro_deactivate.sql
+# bundle loaded

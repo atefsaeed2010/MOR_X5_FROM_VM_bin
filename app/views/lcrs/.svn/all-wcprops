@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/50801/mor/gui/branches/x5/app/views/lcrs
+END
+prefix_finder_find_country.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/app/views/lcrs/prefix_finder_find_country.html.erb
+END
+providers_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/46098/mor/gui/branches/x5/app/views/lcrs/providers_list.html.erb
+END
+change_position.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/app/views/lcrs/change_position.html.erb
+END
+clone_options.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/41942/mor/gui/branches/x5/app/views/lcrs/clone_options.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/41942/mor/gui/branches/x5/app/views/lcrs/list.html.erb
+END
+lcrpartial_destinations.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/app/views/lcrs/lcrpartial_destinations.html.erb
+END
+resellers_lcrs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/lcrs/resellers_lcrs.html.erb
+END
+prefix_finder_find.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/app/views/lcrs/prefix_finder_find.html.erb
+END
+providers_sort.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/lcrs/providers_sort.html.erb
+END
+details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/app/views/lcrs/details.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/43384/mor/gui/branches/x5/app/views/lcrs/edit.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/43384/mor/gui/branches/x5/app/views/lcrs/new.html.erb
+END
+providers_percent.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/41942/mor/gui/branches/x5/app/views/lcrs/providers_percent.html.erb
+END
+resellers_with_common_providers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/39906/mor/gui/branches/x5/app/views/lcrs/resellers_with_common_providers.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/45510/mor/gui/branches/x5/app/views/lcrs/_form.html.erb
+END
+lcrpartial_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/40006/mor/gui/branches/x5/app/views/lcrs/lcrpartial_edit.html.erb
+END
+details_by_destinations.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/50801/mor/gui/branches/x5/app/views/lcrs/details_by_destinations.html.erb
+END

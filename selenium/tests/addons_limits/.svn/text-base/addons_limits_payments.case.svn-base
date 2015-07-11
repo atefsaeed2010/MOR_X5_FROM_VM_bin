@@ -1,0 +1,2970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=deactivate_addons/pg</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/configuration</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(@href, '/billing/payment_gateways/configuration')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Payment gateways</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings_payments</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<!--configure payments and test 1 payment with each-->
+<tr>
+	<td>check</td>
+	<td>id=vouchers_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=paypal_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=paypal_email</td>
+	<td>test@test.lt</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=webmoney_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=linkpoint_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=ouroboros_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Settings saved</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//img[@src='/billing/images/logo/vouchers_logo.png']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//img[@src='/billing/images/logo/paypal_logo.gif']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//img[@src='/billing/images/logo/webmoney_logo.gif']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//img[@src='/billing/images/logo/linkpoint_logo.jpg']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//img[@src='/billing/images/logo/ouroboros_logo.jpg']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/paypal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=amount</td>
+	<td>0.1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/paypal?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<!--patikriname, kad paymentas susikūrė-->
+<tr>
+	<td>open</td>
+	<td>/billing/payments/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_10</td>
+	<td>System Admin</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=paymenttype_10</td>
+	<td>Paypal</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=amount_10</td>
+	<td>5.0000</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/addons_limits/delete_paypal_payment</td>
+	<td></td>
+</tr>
+<!--<tr> 	<td>open</td> 	<td>/billing/vouchers/voucher_new</td> 	<td></td> </tr> <tr> 	<td>type</td> 	<td>id=amount_total</td> 	<td>1</td> </tr> <tr> 	<td>type</td> 	<td>id=tag</td> 	<td>voucher</td> </tr> <tr> 	<td>select</td> 	<td>id=date_from_year</td> 	<td>label=2017</td> </tr> <tr> 	<td>select</td> 	<td>id=date_from_month</td> 	<td>label=December</td> </tr> <tr> 	<td>select</td> 	<td>id=date_from_day</td> 	<td>label=31</td> </tr> <tr> 	<td>type</td> 	<td>id=credit</td> 	<td>5</td> </tr> <tr> 	<td>clickAndWait</td> 	<td>name=commit</td> 	<td></td> </tr> <tr> 	<td>storeText</td> 	<td>id=number_2</td> 	<td>voucher</td> </tr> <tr> 	<td>open</td> 	<td>/billing/vouchers/voucher_use</td> 	<td></td> </tr> <tr> 	<td>assertElementPresent</td> 	<td>css=img[alt=&quot;Information&quot;]</td> 	<td></td> </tr> <tr> 	<td>assertTextPresent</td> 	<td>This is a limited version. You can make only 1 payment per day.</td> 	<td></td> </tr> <tr> 	<td>type</td> 	<td>id=number</td> 	<td>${voucher}</td> </tr> <tr> 	<td>clickAndWait</td> 	<td>name=commit</td> 	<td></td> </tr> <tr> 	<td>assertElementPresent</td> 	<td>css=img[alt=&quot;Information&quot;]</td> 	<td></td> </tr> <tr> 	<td>assertTextPresent</td> 	<td>This is a limited version. You can make only 1 payment per day.</td> 	<td></td> </tr> <tr> 	<td>assertElementPresent</td> 	<td>id=number</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=credit_with_tax</td> 	<td>5.0000 USD</td> </tr> <tr> 	<td>clickAndWait</td> 	<td>name=commit</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=status</td> 	<td>Voucher used to update balance. Thank you!</td> </tr> <tr> 	<td>open</td> 	<td>/billing/vouchers/voucher_use</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=notice</td> 	<td>This is a limited version. You can make only 1 payment per day.</td> </tr> <tr> 	<td>assertText</td> 	<td>id=page_title_icon</td> 	<td>Start page</td> </tr>-->
+<tr>
+	<td>open</td>
+	<td>/billing/payments/linkpoint</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=amount</td>
+	<td>0.1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/linkpoint?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<!--patikriname, kad paymentas susikūrė-->
+<tr>
+	<td>open</td>
+	<td>/billing/payments/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_year</td>
+	<td>label=2012</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_year</td>
+	<td>label=2014</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_11</td>
+	<td>System Admin</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=paymenttype_11</td>
+	<td>Linkpoint</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=amount_11</td>
+	<td>0.1000</td>
+</tr>
+<!--reikia istrinti paymenta-->
+<tr>
+	<td>open</td>
+	<td>/billing/payments/cyberplat?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/addons_limits/delete_linkpoint_payment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/webmoney?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/webmoney?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/ouroboros?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<!--patikriname, kad paymentas susikūrė-->
+<tr>
+	<td>open</td>
+	<td>/billing/payments/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_12</td>
+	<td>System Admin</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=paymenttype_12</td>
+	<td>Webmoney</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=amount_12</td>
+	<td>10.0000</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/addons_limits/delete_webmoney_payment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/ouroboros?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=amount</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/ouroboros?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<!--patikriname, kad paymentas susikūrė-->
+<tr>
+	<td>open</td>
+	<td>/billing/payments/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_13</td>
+	<td>System Admin</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=paymenttype_13</td>
+	<td>Ouroboros</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=amount_13</td>
+	<td>5.0000</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/addons_limits/delete_ouroboros_payment</td>
+	<td></td>
+</tr>
+<!--kiti useriai neturi matyti paymentu logo, nes juos daryti gali tik adminas-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/vouchers_logo.png']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/paypal_logo.gif']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/webmoney_logo.gif']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/linkpoint_logo.jpg']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=img[alt=&quot;Cyberplat_logo&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/ouroboros_logo.jpg']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/paypal?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/vouchers/voucher_use</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Voucher</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/linkpoint?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/cyberplat?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/webmoney?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/ouroboros?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/vouchers_logo.png']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/paypal_logo.gif']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/webmoney_logo.gif']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/linkpoint_logo.jpg']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=img[alt=&quot;Cyberplat_logo&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/ouroboros_logo.jpg']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/paypal?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/vouchers/voucher_use</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Voucher</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/linkpoint?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/cyberplat?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/webmoney?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/ouroboros?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/vouchers_logo.png']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/paypal_logo.gif']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/webmoney_logo.gif']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/linkpoint_logo.jpg']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=img[alt=&quot;Cyberplat_logo&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/ouroboros_logo.jpg']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/paypal?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/vouchers/voucher_use</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Voucher</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/linkpoint?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/cyberplat?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/webmoney?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/ouroboros?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>accountant</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>accountant1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/vouchers_logo.png']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/paypal_logo.gif']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/webmoney_logo.gif']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/linkpoint_logo.jpg']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=img[alt=&quot;Cyberplat_logo&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>//img[@src='/billing/images/logo/ouroboros_logo.jpg']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/paypal?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/vouchers/voucher_use</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Voucher</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/linkpoint?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/cyberplat?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/webmoney?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/ouroboros?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<!--Kiti payment gateways-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/configuration</td>
+	<td></td>
+</tr>
+<!--authorize-->
+<tr>
+	<td>check</td>
+	<td>gateways_authorize_net_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_authorize_net_login</td>
+	<td>3Dacu3L6v</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_authorize_net_password</td>
+	<td>436vr9FYam95YsC8</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_authorize_net_min_amount</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_authorize_net_max_amount</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>gateways_authorize_net_payment_notification</td>
+	<td></td>
+</tr>
+<!--Bogus-->
+<tr>
+	<td>check</td>
+	<td>gateways_bogus_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_bogus_login</td>
+	<td>abc</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_bogus_password</td>
+	<td>def</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_bogus_min_amount</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>gateways_bogus_test</td>
+	<td></td>
+</tr>
+<!--Paypal-->
+<tr>
+	<td>click</td>
+	<td>id=gateways_paypal_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_paypal_login</td>
+	<td>Log In</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_paypal_signature</td>
+	<td>Parasas</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_paypal_password</td>
+	<td>Sunset12</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_paypal_min_amount</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways_paypal_max_amount</td>
+	<td>555</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>gateways_paypal_test</td>
+	<td></td>
+</tr>
+<!--HSBC-->
+<tr>
+	<td>check</td>
+	<td>id=gateways_hsbc_secure_epayments_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_login</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_client_id</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_password</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_xml_url</td>
+	<td>https://www.secure-epayments.apixml.hsbc.com</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=gateways_hsbc_secure_epayments_tax_in_amount</td>
+	<td>label=Excluded</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_min_amount</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_max_amount</td>
+	<td>222</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=gateways_hsbc_secure_epayments_payment_confirmation</td>
+	<td>label=Required for all payments</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=gateways_hsbc_secure_epayments_default_geteway_currency</td>
+	<td>label=EUR</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gateways_hsbc_secure_epayments_payment_notification</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=gateways_hsbc_secure_epayments_test</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_logo_image</td>
+	<td>/home/mor/selenium/files/pics/reseller_logo.jpg</td>
+</tr>
+<!--moneybookers-->
+<tr>
+	<td>click</td>
+	<td>id=integrations_moneybooker_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=integrations_moneybooker_login</td>
+	<td>testlogin</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=integrations_moneybooker_test</td>
+	<td></td>
+</tr>
+<!--2Checkout-->
+<tr>
+	<td>check</td>
+	<td>id=integrations_two_checkout_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=integrations_two_checkout_login</td>
+	<td>userlogin</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=integrations_two_checkout_test</td>
+	<td></td>
+</tr>
+<!--Ideal-->
+<tr>
+	<td>click</td>
+	<td>id=ideal_ideal_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ideal_ideal_merchant_id</td>
+	<td>mecgant_123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ideal_ideal_passphrase</td>
+	<td>the_passphrase</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ideal_ideal_description</td>
+	<td>payment description</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ideal_ideal_min_amount</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>ideal_ideal_max_amount</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways[ideal][ideal][private_key_file]</td>
+	<td>/home/mor/selenium/files/certificates/private_key.pem</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways[ideal][ideal][private_certificate_file]</td>
+	<td>/home/mor/selenium/files/certificates/private_certificate.cer</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>gateways[ideal][ideal][ideal_certificate_file]</td>
+	<td>/home/mor/selenium/files/certificates/private_certificate.cer</td>
+</tr>
+<!--osmp-->
+<tr>
+	<td>click</td>
+	<td>id=osmp_osmp_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Settings saved</td>
+</tr>
+<!--testavimas-->
+<!--bogus-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/bogus?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_bogus_first_name</td>
+	<td>testuser</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_bogus_last_name</td>
+	<td>testuser</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_bogus_number</td>
+	<td>654987654321</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_bogus_verification_value</td>
+	<td>0123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_bogus_amount</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=gateways_bogus_year</td>
+	<td>label=2021</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Payment was unsuccessful, answer from gateway:</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/bogus?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/ouroboros?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<!--patikriname, kad paymentas susikūrė-->
+<tr>
+	<td>open</td>
+	<td>/billing/payments/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_14</td>
+	<td>System Admin</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=paymenttype_14</td>
+	<td>Gateways_bogus</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=amount_14</td>
+	<td>5.0000</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/addons_limits/delete_bogus_payment</td>
+	<td></td>
+</tr>
+<!--hsbc-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/hsbc_secure_epayments</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_number</td>
+	<td>4485014884781383</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_billing_address_country</td>
+	<td>Lithuania</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_first_name</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_last_name</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_verification_value</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_billing_address_name</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_billing_address_address1</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_billing_address_city</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_billing_address_phone</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_amount</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_hsbc_secure_epayments_billing_address_zip</td>
+	<td>10222</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=gateways_hsbc_secure_epayments_year</td>
+	<td>label=2015</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Payment was unsuccessful, answer from gateway:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* Invalid URI</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/hsbc_secure_epayments</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/ouroboros?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<!--patikriname, kad paymentas susikūrė-->
+<tr>
+	<td>open</td>
+	<td>/billing/payments/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_15</td>
+	<td>System Admin</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=paymenttype_15</td>
+	<td>Gateways_hsbc_secure_epayments</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=amount_15</td>
+	<td>20.0000</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/addons_limits/delete_hsbc_payment</td>
+	<td></td>
+</tr>
+<!--moneybookers-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/integrations/moneybooker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=integrations_moneybooker_amount</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/integrations/moneybooker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/ouroboros?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<!--patikriname, kad paymentas susikūrė-->
+<tr>
+	<td>open</td>
+	<td>/billing/payments/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_16</td>
+	<td>System Admin</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=paymenttype_16</td>
+	<td>Integrations_moneybooker</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=amount_16</td>
+	<td>5.0000</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/addons_limits/delete_moneybookers_payment</td>
+	<td></td>
+</tr>
+<!--Authorize NET-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_authorize_net_number</td>
+	<td>4007000000027</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_authorize_net_verification_value</td>
+	<td>523</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_authorize_net_amount</td>
+	<td>17</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=gateways_authorize_net_year</td>
+	<td>label=2022</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Payment was unsuccessful, answer from gateway:</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/ouroboros?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<!--patikriname, kad paymentas susikūrė-->
+<tr>
+	<td>open</td>
+	<td>/billing/payments/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_17</td>
+	<td>System Admin</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=paymenttype_17</td>
+	<td>Gateways_authorize_net</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=amount_17</td>
+	<td>17.0000</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/addons_limits/delete_authorize_payment</td>
+	<td></td>
+</tr>
+<!--OSMP-->
+<!--jei cia lus, paziureti, kokiu formatu rodo menesi-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/osmp/osmp/notify?command=pay&amp;txn_id=1235567&amp;txn_date=20141006144510&amp;account=user_admin&amp;sum=10.45</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=osmp_txn_id</td>
+	<td>1235567</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=sum</td>
+	<td>10.45</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=comment</td>
+	<td>OK</td>
+</tr>
+<!--pakeiciama paymento data i siandien-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/addons_limits/set_osmp_payment_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/osmp/osmp/notify?command=pay&amp;txn_id=1235567&amp;txn_date=20141006144510&amp;account=user_admin&amp;sum=10.45</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=page_title_icon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/ouroboros?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<!--Ideal testavimas cia - nera kaip istestuoti per sistema su paymentu-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/ideal/ideal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_year</td>
+	<td>label=2015</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_till_month</td>
+	<td>label=December</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_18</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=paymenttype_18</td>
+	<td>Osmp_osmp</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=amount_18</td>
+	<td>10.4500</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/addons_limits/delete_osmp_payment</td>
+	<td></td>
+</tr>
+<!--IDEAL-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/ideal/ideal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ideal_ideal_amount</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<!--2CHECKOOUT-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/integrations/two_checkout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=integrations_two_checkout_amount</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/integrations/two_checkout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/ouroboros?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<!--patikriname, kad paymentas susikūrė-->
+<tr>
+	<td>open</td>
+	<td>/billing/payments/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_19</td>
+	<td>System Admin</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=paymenttype_19</td>
+	<td>Integrations_two_checkout</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=amount_19</td>
+	<td>20.0000</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/addons_limits/delete_twocheckout_payment</td>
+	<td></td>
+</tr>
+<!--PAYPAL PRO-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/paypal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_paypal_number</td>
+	<td>4485698695698222</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=gateways_paypal_year</td>
+	<td>label=2022</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_paypal_verification_value</td>
+	<td>523</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_paypal_billing_address_address1</td>
+	<td>address1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_paypal_billing_address_address2</td>
+	<td>address2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_paypal_billing_address_city</td>
+	<td>city</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_paypal_billing_address_zip</td>
+	<td>10222</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_paypal_billing_address_phone</td>
+	<td>8656565664</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gateways_paypal_amount</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Information&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/ouroboros?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Start page</td>
+</tr>
+<!--patikriname, kad paymentas susikūrė-->
+<tr>
+	<td>open</td>
+	<td>/billing/payments/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_20</td>
+	<td>System Admin</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=paymenttype_20</td>
+	<td>Gateways_paypal</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=amount_20</td>
+	<td>20.0000</td>
+</tr>
+<!--CYBERPLAT-->
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings_payments</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Cyberplat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Cyberplat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=cyberplat_active</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/login_as_execute?user=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=img[alt=&quot;Cyberplat_logo&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/bogus?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/hsbc_secure_epayments</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/integrations/moneybooker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/osmp/osmp/notify?command=pay&amp;txn_id=1235567&amp;txn_date=20110606144510&amp;account=user_admin&amp;sum=10.45</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/ideal/ideal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/integrations/two_checkout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/paypal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/cyberplat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/bogus?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/hsbc_secure_epayments</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/integrations/moneybooker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/osmp/osmp/notify?command=pay&amp;txn_id=12355670&amp;txn_date=20110606144510&amp;account=user_admin&amp;sum=10.45</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/ideal/ideal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/integrations/two_checkout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/paypal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/cyberplat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/bogus?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/hsbc_secure_epayments</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/integrations/moneybooker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/osmp/osmp/notify?command=pay&amp;txn_id=1235573&amp;txn_date=20110606144510&amp;account=user_admin&amp;sum=10.45</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/ideal/ideal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/integrations/two_checkout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/paypal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>accountant</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>accountant1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/cyberplat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/bogus?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/hsbc_secure_epayments</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/integrations/moneybooker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/osmp/osmp/notify?command=pay&amp;txn_id=1235572&amp;txn_date=20110606144510&amp;account=user_admin&amp;sum=10.45</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/ideal/ideal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/integrations/two_checkout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/paypal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--make payment older than this day-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/addons_limits/update_paypalpro_payment_date</td>
+	<td></td>
+</tr>
+<!--dabar vel nebedraudzia uzeiti i paymenta-->
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/authorize_net</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Authorize.Net</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=gateways_authorize_net_first_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/bogus?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Bogus</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=gateways_bogus_first_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/hsbc_secure_epayments</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>HSBC Secure ePayments</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=gateways_hsbc_secure_epayments_first_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/integrations/moneybooker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Moneybooker</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=integrations_moneybooker_amount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/ideal/ideal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//img[@src='/billing/images/logo/ideal_logo.gif']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=ideal_ideal_amount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/integrations/two_checkout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Two checkout</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=integrations_two_checkout_amount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/gateways/paypal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>PayPal Website Payments Pro (US)</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=gateways_paypal_first_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/cyberplat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Cyberplat</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.nb</td>
+	<td>Cyberplat disabled</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/paypal?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>PayPal</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=amount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/linkpoint?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>LinkPoint</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=amount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/webmoney?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>WebMoney</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=amount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/ouroboros?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title_icon</td>
+	<td>Ouroboros</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=amount</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=addons_activate/pg</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/webmoney?fr=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=amount</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=paymenttype_21</td>
+	<td>Webmoney</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_21</td>
+	<td>System Admin</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/integrations/moneybooker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=integrations_moneybooker_amount</td>
+	<td>25</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payments/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=paymenttype_22</td>
+	<td>Integrations_moneybooker</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_22</td>
+	<td>System Admin</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=deactivate_addons/pg</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/payment_gateways/integrations/moneybooker</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+</tr>
+<!--Jei būna nustatyta reikšmė Hide_payment_options_for_postpaid_users, value = 1, tuomet payment gateways nėra rodomi. Kadangi mūsų test sistemoje nėra confline reikšmės Hide_payment_options_for_postpaid_users, todėl ji yra suapvalinama į 0 (.to_i) ir atitinka sąlygą kaip Hide_payment_options_for_postpaid_users, value = 0. Pas vartotoją buvo šita reikšmė, todėl jam nerodė.-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/sql/hide_payment_options_for_postpaid_users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>This is a limited version. You can make only 1 payment per day. </td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>This is a limited version. To be able to make more than 1 payment per day purchase Payment Gateways addon.</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//img[@src='/billing/images/logo/vouchers_logo.png']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//img[@src='/billing/images/logo/paypal_logo.gif']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//img[@src='/billing/images/logo/webmoney_logo.gif']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//img[@src='/billing/images/logo/linkpoint_logo.jpg']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//img[@src='/billing/images/logo/ouroboros_logo.jpg']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Bogus logo&quot;]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

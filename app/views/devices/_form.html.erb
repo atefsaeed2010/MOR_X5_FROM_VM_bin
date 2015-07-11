@@ -1,0 +1,83 @@
+<!--[form:device]-->
+<table class="simple" width="100%">
+  <tr>
+    <td valign="top">
+      <table class="simple">
+        <%= render 'device_form_general', pdffaxemails: pdffaxemails,
+            device: device, sip_proxy_server: sip_proxy_server,
+            device_type: device_type, new_device: new_device,
+            default: default, devgroups: devgroups,
+            devicetypes: devicetypes, fax_enabled: fax_enabled,
+            extension: extension, locations: locations, servers: servers %>
+
+        <% if default.to_i != 1 and  device_type != 'FAX' %>
+            <%= render 'device_form_authentication2', new_device: new_device, device_type: device_type, device: device %>
+        <% end %>
+        <% if not new_device and device_type != 'FAX' %>
+            <%= render 'device_form_callerid', cid_name: cid_name,
+            device_caller_id_number: device_caller_id_number, device_dids_numbers: device_dids_numbers,
+            device_cids: device_cids, device: device, device_type: device_type, cid_number: cid_number, number_pools: number_pools %>
+        <% end %>
+
+        <% if not new_device and device_type != 'FAX' and device_type != 'Virtual' %>
+            <% unless device.is_dahdi? %>
+                <%= render 'device_form_network', device: device, device_type: device_type, device_trunk: device_trunk, qualify_time: qualify_time %>
+            <% end %>
+        <% end %>
+
+        <% if not new_device and device_type != 'FAX' and device_type != 'Virtual' and !reseller? %>
+            <%= render 'device_form_groups', device: device %>
+        <% end %>
+
+        <% if not new_device and device_type != 'FAX' and pbx_active? %>
+            <%= render 'device_form_voicemail', fullname: fullname, device_voicemail_box: device_voicemail_box,
+            device_voicemail_box_email: device_voicemail_box_email, device_voicemail_box_password: device_voicemail_box_password,
+            device_enable_mwi: device_enable_mwi %>
+        <% end %>
+
+        <% if not new_device and params[:action] != 'default_device' and ccl_active? and device_type != 'IAX2' %>
+            <%= render 'device_form_servers', servers: servers, server_devices: server_devices, device_type: device_type %>
+        <% end %>
+
+        <% if default.to_i != 1 %>
+          <%= render 'shared/form_comment', object_name: 'device', object: device %>
+        <% end %>
+
+      </table>
+    </td>
+
+    <td valign="top">
+      <table <%= " style='width:300px;aligin:left;' " if device_type == 'FAX' %> >
+
+        <% if not new_device %>
+            <% if device_type != 'Virtual' %>
+                <% unless device.is_dahdi? %>
+                    <%= render 'device_form_codecs', device_type: device_type,
+                    device: device, video_codecs: video_codecs, audio_codecs: audio_codecs %>
+                    <% if not device_type == 'FAX' %>
+                        <%= render 'device_form_address', ip_first: ip_first, ip_second: ip_second,
+                        ip_third: ip_third, mask_first: mask_first, mask_second: mask_second, mask_third: mask_third %>
+                    <% end %>
+                <% end %>
+            <% end %>
+            <%= render 'device_form_advance', device: device,
+                device_type: device_type, default: default %>
+
+            <% if device_type != 'FAX' %>
+                <%= render 'device_form_tell_options', device: device,
+                global_tell_balance: global_tell_balance, global_tell_time: global_tell_time %>
+            <% end %>
+
+            <% if !['Virtual', 'FAX'].include?(device_type) %>
+                <%= render 'device_form_debug', device_type: device_type, device: device %>
+            <% end %>
+            <% if device_type != 'FAX' and (current_user.recording_enabled.to_i == 1 or (admin? or accountant?)) %>
+                <%= render 'device_recordings', device: device, user: user %>
+            <% end %>
+        <% end %>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--[eoform:device]-->
+<br/>

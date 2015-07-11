@@ -1,0 +1,12 @@
+# ----
+# good calls data for testing
+calls/good_calls.sql
+# postpaid "Show balance line:" setting
+settings/invoices/postpaid_show_balance_line.sql
+# prepaid "Show balance line" setting
+settings/invoices/prepaid_show_balance_line.sql
+# prepaid "Show balance line:" INV070601    
+settings/invoices/prepaid_number_type_2.sql
+# reseller "Show balance line"
+settings/reseller/show_balance_line.sql
+# bundle loaded

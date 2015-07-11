@@ -1,0 +1,7 @@
+# create data for devices/device_callerid.case
+# ----
+# assign did to test users' device
+did/did_1/assign_to_device_2.sql
+# assign did 2 to test users' device
+did/did_2/assign_to_device_2.sql
+# bundle loaded

@@ -1,0 +1,19 @@
+#creates reseller group
+permissions/reseller/create.sql
+#adds permissions
+permissions/reseller/cc_write.sql
+#assign user to calling cards
+user/reseller_3/assign_permissions.sql
+#make own_provider
+user/reseller_3/make_rspro.sql
+#create lcr
+lcr/price_11302/create.sql
+#assigns location
+user/reseller_3/location/create_1301.sql
+#create tariffs
+tariff/provider_12301/create.sql
+#create provider
+provider/sip_3304/create.sql
+#assign provider for lcr
+lcr/price_11302/assign_provider_3304.sql
+#bundle loaded

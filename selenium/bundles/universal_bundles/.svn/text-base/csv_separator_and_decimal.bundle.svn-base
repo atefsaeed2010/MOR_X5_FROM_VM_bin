@@ -1,0 +1,6 @@
+# ----
+# . csv decimal
+/settings/functionality/set_csv_decimal_dot.sql
+# ; csv separator
+/settings/functionality/set_csv_separator_semicolon.sql
+# bundle loaded

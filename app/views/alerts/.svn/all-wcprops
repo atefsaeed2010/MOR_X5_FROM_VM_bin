@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/51105/mor/gui/branches/x5/app/views/alerts
+END
+list.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/46651/mor/gui/branches/x5/app/views/alerts/list.erb
+END
+alert_edit.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/51105/mor/gui/branches/x5/app/views/alerts/alert_edit.erb
+END
+contacts.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/48482/mor/gui/branches/x5/app/views/alerts/contacts.erb
+END
+schedules.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/42248/mor/gui/branches/x5/app/views/alerts/schedules.erb
+END
+groups.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/48482/mor/gui/branches/x5/app/views/alerts/groups.erb
+END
+_schedule_periods.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/42569/mor/gui/branches/x5/app/views/alerts/_schedule_periods.erb
+END
+_alert_group_selector.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/51105/mor/gui/branches/x5/app/views/alerts/_alert_group_selector.erb
+END
+group_contacts.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/41942/mor/gui/branches/x5/app/views/alerts/group_contacts.erb
+END
+_schedule_edit_js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/41942/mor/gui/branches/x5/app/views/alerts/_schedule_edit_js.erb
+END
+ajax_get_alert_type_parameters.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/app/views/alerts/ajax_get_alert_type_parameters.erb
+END
+contact_edit.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/41942/mor/gui/branches/x5/app/views/alerts/contact_edit.erb
+END
+schedule_edit.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/42569/mor/gui/branches/x5/app/views/alerts/schedule_edit.erb
+END
+group_edit.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/app/views/alerts/group_edit.erb
+END
+ajax_get_lcrs.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/46871/mor/gui/branches/x5/app/views/alerts/ajax_get_lcrs.erb
+END
+_alert_edit_js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/50891/mor/gui/branches/x5/app/views/alerts/_alert_edit_js.erb
+END

@@ -1,0 +1,12 @@
+# enable API, balance checking, disable hash checking
+# make did terminated for deletion testing
+# ----
+# Allow API globally:
+/settings/api/enable_0.sql
+# Disable hash checking:
+/settings/api/disable_hash_0.sql
+# Allow GET API:
+/settings/api/allow_get.sql
+# terminate the did
+/did/did_2/terminate.sql
+# bundle loaded

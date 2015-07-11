@@ -1,0 +1,9 @@
+# creates sms lcr, tariff and assign for test user
+# -----
+#creates sms lcr
+/lcr/sms_12004/create.sql
+#creates tariff for user
+/tariff/sms_user_12004/create.sql
+#assign sms for test user 
+/user/user_2/assign_sms.sql
+# bundle loaded

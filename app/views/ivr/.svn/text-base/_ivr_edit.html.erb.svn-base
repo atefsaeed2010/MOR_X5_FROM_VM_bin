@@ -1,0 +1,87 @@
+<div id="edit_window">
+  <table class="simple" width=100%>
+    <tr>
+      <td width="40%" valign="top">
+        <table class="simpletable" width=100%>
+          <tr>
+            <td align="left">
+              <div id="ivr_name_div">
+                <b><%= _("Ivr_Name") %>:</b> <%= raw text_field_tag('ivr[name]', lv_ivr ? lv_ivr.name.to_s : "", "id" => "ivr_name", "class" => "input", :size => "40", :maxlength => "250") %>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <b><%= _("all_users_can_use_it") %>:</b> <%= raw check_box_tag('ivr[all_users_can_use]', lv_ivr.all_users_can_use, checked = (lv_ivr.all_users_can_use == 1 ? true : false),:id => "all_users_can_use_it" ) %>
+            </td>
+          </tr>
+        </table>
+        <script type="text/javascript">
+          new Form.Element.EventObserver('ivr_name', function(element, value) {new Ajax.Request('<%= Web_Dir %>/ivr/update_ivr_name/<%= lv_ivr.id %>', {asynchronous:false, evalScripts:true, onComplete:function(request){Element.hide('spinner');}, onLoading:function(request){Element.show('spinner');}, parameters:'data=' + encodeURIComponent(value)})})
+          new Form.Element.EventObserver('all_users_can_use_it', function(element, value) {new Ajax.Request('<%= Web_Dir %>/ivr/update_ivr_all_users_can_use/<%= lv_ivr.id %>', {asynchronous:false, evalScripts:true, onComplete:function(request){Element.hide('spinner');}, onLoading:function(request){Element.show('spinner');}, parameters:'data=' + encodeURIComponent(value)})})
+        </script>
+        <table class="simpletable" width=100%>
+          <tr>
+            <% if lv_block.id != lv_ivr.start_block_id %>
+              <td align="left">
+                <%= link_to b_delete + _("Remove_This_Block"), "javascript:void(0);", :onclick => "new Ajax.Updater('edit_window', '#{Web_Dir}/ivr/add_block', {asynchronous:false, evalScripts:true, onComplete:function(request){Element.hide('spinner');}, onLoading:function(request){Element.show('spinner');}, parameters:'block_id=' + #{lv_block.id} + '&rm=true'})" %>
+              </td>
+            <% end %>
+            <th align="<%= lv_block.id != lv_ivr.start_block_id ? 'center' : 'left' %>"><%= link_to b_extlines + _('Extlines'), :action => "ivr_extlines", :block_id => lv_block.id %></th>
+            <th align="right">
+              <%= link_to b_add + _("Add_New_Block"), "javascript:void(0);", :onclick => "new Ajax.Updater('edit_window', '#{Web_Dir}/ivr/add_block', {asynchronous:false, evalScripts:true, onComplete:function(request){Element.hide('spinner');}, onLoading:function(request){Element.show('spinner');}, parameters:'block_id=' + #{lv_block.id}})" %>
+            </th>
+          </tr>
+        </table>
+        <input type="hidden" id="last_changed" name="last_changed" value="<%= lv_block.name.to_s if lv_block %>"/>
+        <table class="maintable" width=100%>
+          <tr>
+            <th><b><%= _('Block_Name') %>:</b></th>
+            <th><b><%= _('Timeout_Response') %>:</b></th>
+            <th><b><%= _('Timeout_Digits') %>:</b></th>
+          </tr>
+          <tr>
+            <td>
+              <div id="block_name_div"><%= text_field_tag('block[name]', lv_block ? lv_block.name.to_s : "", "id" => "block_name", "class" => "input", :maxlength => "50") %></div>
+            </td>
+            <td>
+              <div id="block_timeout_response_div"><%= text_field_tag('block[timeout_response]', lv_block ? lv_block.timeout_response.to_s : "", "id" => "block_timeout_response", "class" => "input", :maxlength => "50") %></div>
+            </td>
+            <td>
+              <div id="block_timeout_digits_div"><%= text_field_tag('block[timeout_digits]', lv_block ? lv_block.timeout_digits.to_s : "", "id" => "block_timeout_digits", "class" => "input", :maxlength => "50") %></div>
+            </td>
+          </tr>
+        </table>
+
+        <script type="text/javascript">
+          new Form.Element.EventObserver('block_name', function(element, value) {new Ajax.Request('<%= Web_Dir %>/ivr/update_block_name/<%= lv_block.id %>', {asynchronous:false, evalScripts:true, onComplete:function(request){Element.hide('spinner');<%= last_changed("block_name") %>}, onLoading:function(request){Element.show('spinner');}, parameters:'data=' + encodeURIComponent(value)})})
+          new Form.Element.EventObserver('block_timeout_response', function(element, value) {new Ajax.Request('<%= Web_Dir %>/ivr/update_block_timeout_response/<%= lv_block.id %>', {asynchronous:false, evalScripts:true, onComplete:function(request){Element.hide('spinner');<%= last_changed("block_timeout_response") %>}, onLoading:function(request){Element.show('spinner');}, parameters:'data=' + encodeURIComponent(value)})})
+          new Form.Element.EventObserver('block_timeout_digits', function(element, value) {new Ajax.Request('<%= Web_Dir %>/ivr/update_block_timeout_digits/<%= lv_block.id %>', {asynchronous:false, evalScripts:true, onComplete:function(request){Element.hide('spinner');<%= last_changed("block_name") %>}, onLoading:function(request){Element.show('spinner');}, parameters:'data=' + encodeURIComponent(value)})})
+        </script>
+
+        <div id="action_selector">
+            <%= render 'ivr_action_selector', :lv_actions => actions,
+                                              :lv_block => block,
+                                              :lv_ivr_sound_files => ivr_sound_files,
+                                              :lv_ivr_voices => ivr_voices
+            %>
+        </div>
+        <br/>
+
+        <div id="extensions_selector">
+          <%= raw render 'ivr_extension_selector', :lv_blocks => blocks, :lv_extensions => extensions, :lv_block => block %>
+        </div>
+        <br/>
+
+        <div id="all_blocks">
+          <%= raw render 'all_blocks', :lv_blocks => blocks %>
+        </div>
+      </td>
+      <td width="60%" valign="top">
+        <div id="block_list">
+          <%= raw render 'block_list', :lv_block => block, :lv_blocks => blocks %>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>

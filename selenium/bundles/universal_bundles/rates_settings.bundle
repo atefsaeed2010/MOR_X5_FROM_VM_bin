@@ -1,0 +1,8 @@
+# ----
+# set show rates for user
+/settings/functionality/show_rates_for_users.sql
+# set show advanced rates for user
+/settings/functionality/show_advanced_rates_for_user_insert.sql
+# 5 items per page
+/settings/visual/5_items_per_page.sql
+# bundle loaded

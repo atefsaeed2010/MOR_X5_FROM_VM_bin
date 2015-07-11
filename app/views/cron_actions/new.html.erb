@@ -1,0 +1,13 @@
+<%= form_for(:cron_setting, url: {action: 'create'}) do |f| %>
+  <%= render 'form',
+              f: f,
+              cron_setting: @cron_setting,
+              users: @users,
+              lcrs: @lcrs,
+              providers: @providers,
+              tariffs: @tariffs,
+              provider_tariffs: @provider_tariffs,
+              email_sending_disabled: @email_sending_disabled
+  %>
+    <%= f.submit _('Create'), :disable_with => _('Processing..') %>
+<% end %>

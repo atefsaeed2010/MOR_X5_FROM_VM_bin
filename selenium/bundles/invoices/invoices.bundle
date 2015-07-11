@@ -1,0 +1,19 @@
+# ----
+# invoice  settings
+#various taxes
+settings/tax/various_taxes.sql
+# prepaid "number type" 
+settings/invoices/prepaid_number_type_2.sql
+# postpaid number type 2
+settings/invoices/postpaid_number_type_2.sql 
+# prepaid number start
+settings/invoices/prepaid_invoice_number_start.sql
+#prepaid number lenght 11
+settings/invoices/prepaid_number_length2.sql
+# postpaid number length = 11 
+settings/invoices/postpaid_number_length.sql
+# good calls 
+calls/good_calls.sql
+# update tax id 
+settings/tax/update_tax_id.sql
+# bundle loaded

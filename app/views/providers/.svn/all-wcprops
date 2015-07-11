@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/50831/mor/gui/branches/x5/app/views/providers
+END
+_provider_codecs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/app/views/providers/_provider_codecs.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/50057/mor/gui/branches/x5/app/views/providers/list.html.erb
+END
+_form_zap.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/43284/mor/gui/branches/x5/app/views/providers/_form_zap.html.erb
+END
+_form_skype.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/39906/mor/gui/branches/x5/app/views/providers/_form_skype.html.erb
+END
+billing.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/50251/mor/gui/branches/x5/app/views/providers/billing.html.erb
+END
+providercodecs_sort.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/app/views/providers/providercodecs_sort.html.erb
+END
+edit_h323.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/43283/mor/gui/branches/x5/app/views/providers/edit_h323.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/50831/mor/gui/branches/x5/app/views/providers/edit.html.erb
+END
+provider_rule_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/app/views/providers/provider_rule_edit.html.erb
+END
+_select_servers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/49286/mor/gui/branches/x5/app/views/providers/_select_servers.html.erb
+END
+provider_test.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/app/views/providers/provider_test.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/50831/mor/gui/branches/x5/app/views/providers/new.html.erb
+END
+edit_skype.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/app/views/providers/edit_skype.html.erb
+END
+_form_h323.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/43284/mor/gui/branches/x5/app/views/providers/_form_h323.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/50831/mor/gui/branches/x5/app/views/providers/_form.html.erb
+END
+provider_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/app/views/providers/provider_new.html.erb
+END
+_provider_rules.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/app/views/providers/_provider_rules.html.erb
+END
+provider_servers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/app/views/providers/provider_servers.html.erb
+END
+provider_rules.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/42152/mor/gui/branches/x5/app/views/providers/provider_rules.html.erb
+END
+quick_changes.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/50057/mor/gui/branches/x5/app/views/providers/quick_changes.html.erb
+END

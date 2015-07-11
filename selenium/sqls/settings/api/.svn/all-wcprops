@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/51097/mor/gui/branches/x5/selenium/sqls/settings/api
+END
+disable_hash_0.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/40237/mor/gui/branches/x5/selenium/sqls/settings/api/disable_hash_0.sql
+END
+payment_confirmation.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/40319/mor/gui/branches/x5/selenium/sqls/settings/api/payment_confirmation.sql
+END
+disable_hash_3.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/40237/mor/gui/branches/x5/selenium/sqls/settings/api/disable_hash_3.sql
+END
+login_redirect.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/40319/mor/gui/branches/x5/selenium/sqls/settings/api/login_redirect.sql
+END
+enable_devices_check_balance.sql
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/49145/mor/gui/branches/x5/selenium/sqls/settings/api/enable_devices_check_balance.sql
+END
+allow_payments.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/40319/mor/gui/branches/x5/selenium/sqls/settings/api/allow_payments.sql
+END
+enable_devices_check_rate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/49145/mor/gui/branches/x5/selenium/sqls/settings/api/enable_devices_check_rate.sql
+END
+check_balance_disable.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/40602/mor/gui/branches/x5/selenium/sqls/settings/api/check_balance_disable.sql
+END
+enable_0.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/40237/mor/gui/branches/x5/selenium/sqls/settings/api/enable_0.sql
+END
+enable_xml.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/40237/mor/gui/branches/x5/selenium/sqls/settings/api/enable_xml.sql
+END
+set_secret_key.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/49123/mor/gui/branches/x5/selenium/sqls/settings/api/set_secret_key.sql
+END
+allow_registration.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/40319/mor/gui/branches/x5/selenium/sqls/settings/api/allow_registration.sql
+END
+delete_api_secret_key.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/42725/mor/gui/branches/x5/selenium/sqls/settings/api/delete_api_secret_key.sql
+END
+enable_3.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/40237/mor/gui/branches/x5/selenium/sqls/settings/api/enable_3.sql
+END
+allow_get.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/43849/mor/gui/branches/x5/selenium/sqls/settings/api/allow_get.sql
+END
+disallow_get.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/43849/mor/gui/branches/x5/selenium/sqls/settings/api/disallow_get.sql
+END
+allow_reseller_to_use_admin_tariffs.sql
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/51090/mor/gui/branches/x5/selenium/sqls/settings/api/allow_reseller_to_use_admin_tariffs.sql
+END

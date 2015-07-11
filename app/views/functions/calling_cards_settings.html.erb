@@ -1,0 +1,22 @@
+<%= form_tag :action => 'calling_cards_settings_update' do %>
+  <table class="simple settings">
+    <tr>
+      <td width="30"></td>
+      <td><b><%= _('CCShop_show_values_without_VAT_for_user') %>:</b></td>
+      <td align="center" style="width:60px"><%= check_box_tag 'CCShop_show_values_without_VAT_for_user', "1", Confline.get_value("CCShop_show_values_without_VAT_for_user", session[:user_id]).to_i == 1 %> </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <b><%= _('calling_cards_distributor_settings') %></b>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td style="padding-left: 27px;"><b><%= _('calling_cards_hide_pin')%>:</b></td>
+      <td align="center" style="width:60px"><%= check_box_tag 'CCShop_hide_pins_for_distributors', "1", Confline.get_value('CCShop_hide_pins_for_distributors', session[:user_id]).to_i == 1 %></td>
+    </tr>
+  </table>
+  <%= hidden_field_tag('indirect', 1) %>
+  <%= submit_tag _('Save_changes'), :disable_with => _('Processing..') %>
+<% end %>

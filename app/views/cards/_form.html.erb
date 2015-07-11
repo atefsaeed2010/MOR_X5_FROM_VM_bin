@@ -1,0 +1,120 @@
+<!--[form:card]-->
+
+<table>
+  <tr>
+    <td>
+      <%= label('card', 'number', _('Number')) %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= text_field 'card', 'number', "class" => "input", "maxlength" => card.cardgroup.number_length %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= label('card', 'number', _('Name')) %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= text_field 'card', 'name', "class" => "input", :size => 10 %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= label('card', 'pin', _('PIN')) %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <% if session[:usertype] == "accountant" %>
+        <% if session[:acc_callingcard_pin].to_i > 0 %>
+          <% if session[:acc_callingcard_pin].to_i == 1 %>
+            <%= card.pin %>
+          <% else %>
+            <%= text_field 'card', 'pin', "class" => "input", :size => 10, "maxlength" => card.cardgroup.pin_length %>
+          <% end %>
+        <% end %>
+      <% else %>
+        <%= text_field 'card', 'pin', "class" => "input", :size => 10, "maxlength" => card.cardgroup.pin_length %>
+      <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= label('card', 'batch_number', _('batch_number')) %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= text_field 'card', 'batch_number', "class" => "input", :size => 10 %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= label('card', 'callerid', _('CallerID_for_pinless_dialing')) %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= text_field 'card', 'callerid', "class" => "input", :size => 10, "maxlength" => 30 %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= _('Balance') %> <%= nice_number(card.balance) %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= label('card', 'sold', _('Minimal_balance')) %>: <%= text_field 'card', 'min_balance', :size => 10, "class" => "input"  %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= label('card', 'sold', _('Sold')) %>? <%= image_tag 'icons/cross.png', :title => _('Unsold') if card.sold ==0 %><%= image_tag 'icons/check.png', :title => _('Sold') if card.sold == 1 %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= label('card', 'daily_charge_paid_till', _('Daily_charge_paid_till')) %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= date_select 'card', 'daily_charge_paid_till' %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= label('card', 'sold', _('Language')) %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= text_field 'card', 'language', :size => 10, "class" => "input" %></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= label('card', 'user', _('Distributor')) %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+       <%= render 'shared/live_search_field', object: nice_user(card.user),
+                                              object_id: card.user_id,
+                                              object_name: 'User',
+                                              action_url: {
+                                                controller: :users,
+                                                action: :get_users_map,
+                                                options: {
+                                                  show_users_only: true,
+                                                  show_owned_users_only: true
+                                                }
+                                              } %>
+    </td>
+  </tr>
+</table>
+<!--[eoform:card]-->

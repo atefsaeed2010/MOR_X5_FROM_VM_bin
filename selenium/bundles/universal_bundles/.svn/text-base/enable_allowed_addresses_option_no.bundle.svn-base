@@ -1,0 +1,7 @@
+# Enable "Allowed addresses" option
+# ----
+# device settings no
+/settings/various/device_settings_0.sql
+# provider settings no
+/settings/various/provider_settings_0.sql
+# bundle loaded

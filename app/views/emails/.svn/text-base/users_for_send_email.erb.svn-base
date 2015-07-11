@@ -1,0 +1,1 @@
+<%= render 'send_emails_users_list', user_id_max: @user_id_max, user_id_max: @user_id_max, user: @user, users: @users %>

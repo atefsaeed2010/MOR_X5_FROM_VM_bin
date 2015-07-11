@@ -1,0 +1,9 @@
+# Acc group permissions for user and payment management
+# ----
+# User usage permission set as write
+/permissions/accountant/manage_users_write.sql
+# payments permission set as write
+/permissions/accountant/manage_payments_write.sql
+# assign accountant
+/user/accountant_4/assign_permissions.sql
+# bundle loaded

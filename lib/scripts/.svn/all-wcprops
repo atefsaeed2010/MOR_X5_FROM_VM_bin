@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/43516/mor/gui/branches/x5/lib/scripts
+END
+invoice_tax_fix.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/42205/mor/gui/branches/x5/lib/scripts/invoice_tax_fix.rb
+END
+reseller_migrate_to_admin.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/42205/mor/gui/branches/x5/lib/scripts/reseller_migrate_to_admin.rb
+END
+monthly_actions_fix.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/42205/mor/gui/branches/x5/lib/scripts/monthly_actions_fix.rb
+END
+user_balance_check.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/42205/mor/gui/branches/x5/lib/scripts/user_balance_check.rb
+END
+run_sms_campaign.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/43516/mor/gui/branches/x5/lib/scripts/run_sms_campaign.rb
+END

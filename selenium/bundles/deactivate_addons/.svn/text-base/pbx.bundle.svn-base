@@ -1,0 +1,5 @@
+# turn off addon for test pbx_functions.case
+# ----
+# turn off pbx addon
+/settings/addons/pbx_deactivate.sql
+# bundle loaded

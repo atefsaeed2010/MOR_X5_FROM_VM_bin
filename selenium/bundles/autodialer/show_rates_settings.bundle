@@ -1,0 +1,9 @@
+#rates setings for sms addon
+# ----
+# check button for showing rates for users
+/settings/functionality/show_rates_for_users.sql
+# check button for showing rates without tax"
+/settings/functionality/show_rates_without_tax.sql
+# check button for showing advanced rates for user
+/settings/functionality/show_advanced_rates_for_user.sql
+#bundle loaded

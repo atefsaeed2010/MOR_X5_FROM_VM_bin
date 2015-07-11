@@ -1,0 +1,1 @@
+<%= select_tag("device_agent", options_for_select(@static_agent_devices.map { |d| [nice_device_no_pic(d), d.id] })) %>

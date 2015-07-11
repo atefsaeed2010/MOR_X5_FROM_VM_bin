@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/50831/mor/gui/branches/x5/selenium/repeated_testing
+END
+default_device_allowed_addresses.case
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/50831/mor/gui/branches/x5/selenium/repeated_testing/default_device_allowed_addresses.case
+END
+ring_groups_reachability.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/39906/mor/gui/branches/x5/selenium/repeated_testing/ring_groups_reachability.case
+END
+ring_groups_did_selects.case
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/39906/mor/gui/branches/x5/selenium/repeated_testing/ring_groups_did_selects.case
+END
+accountant_permissions_subscriptions.case
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/39906/mor/gui/branches/x5/selenium/repeated_testing/accountant_permissions_subscriptions.case
+END
+providers_dynamic.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/repeated_testing/providers_dynamic.case
+END
+update_currencies_from_web.case
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/39906/mor/gui/branches/x5/selenium/repeated_testing/update_currencies_from_web.case
+END

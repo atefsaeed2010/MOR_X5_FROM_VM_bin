@@ -1,0 +1,7 @@
+<% if js_new %>
+    <%=raw nice_schedule_period(js_new, true, day) -%>
+<% else %>
+    <% schedule.alert_schedule_periods.where(day_type: day).each do |period| %>
+        <%=raw nice_schedule_period(period) -%>
+    <% end %>
+<% end %>

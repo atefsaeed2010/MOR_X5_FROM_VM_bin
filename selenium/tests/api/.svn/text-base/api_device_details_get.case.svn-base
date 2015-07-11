@@ -1,0 +1,2265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://192.168.0.118" />
+<title>api_device_details_get</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">api_device_details_get</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=admin&amp;device_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>API Requests are disabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/enable_api</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=admin&amp;device_id=2&amp;hash=&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Incorrect hash</td>
+	<td></td>
+</tr>
+<!--ADMIN-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=admin&amp;device_id=2&amp;hash=38282ca5e65e63746498ef5b39a2fe71c6448df4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=name</td>
+	<td>101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=host</td>
+	<td>dynamic</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=secret</td>
+	<td>vauvszef</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=context</td>
+	<td>mor_local</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=ipaddr</td>
+	<td>0.0.0.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=port</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=regseconds</td>
+	<td>1175892667</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=accountcode</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid</td>
+	<td>&quot;101&quot; &lt;101&gt;</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=extension</td>
+	<td>101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=voicemail_active</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=username</td>
+	<td>101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device_type</td>
+	<td>IAX2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=works_not_logged</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=forward_to</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=record</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=transfer</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=disallow</td>
+	<td>all</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=allow</td>
+	<td>all</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=deny</td>
+	<td>0.0.0.0/0.0.0.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=permit</td>
+	<td>0.0.0.0/0.0.0.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=nat</td>
+	<td>yes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=qualify</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=canreinvite</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=dtmfmode</td>
+	<td>rfc2833</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=trustrpid</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=sendrpid</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=insecure</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=progressinband</td>
+	<td>never</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=videosupport</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=description</td>
+	<td>Test Device #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=istrunk</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=cid_from_dids</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tell_balance</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tell_rtime_when_left</td>
+	<td>60</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=repeat_rtime_every</td>
+	<td>60</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=t38pt_udptl</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=ani</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=promiscredir</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=timeout</td>
+	<td>60</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=process_sipchaninfo</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=allow_duplicate_calls</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=call_limit</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=lastms</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=faststart</td>
+	<td>yes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h245tunneling</td>
+	<td>yes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=latency</td>
+	<td>0.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=grace_time</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=recording_to_email</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=recording_keep</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=record_forced</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=fake_ring</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=save_call_log</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=enable_mwi</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=requirecalltoken</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=use_ani_for_cli</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=change_failed_code_to</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=max_timeout</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=anti_resale_auto_answer</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=qf_tell_balance</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=qf_tell_time</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=time_limit_per_day</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_advanced_control</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=transport</td>
+	<td>udp</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=encryption</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=block_callerid</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tell_rate</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=trunk</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=proxy_port</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=cps_call_limit</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=cps_period</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=timerb</td>
+	<td>6400</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=op</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=op_active</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=op_routing_algorithm</td>
+	<td>lcr</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=op_capacity</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tp</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tp_active</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tp_capacity</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=defaultuser</td>
+	<td>101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=type</td>
+	<td>friend</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=auth</td>
+	<td>md5</td>
+</tr>
+<!--klaidos-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=admindf&amp;device_id=2&amp;hash=38282ca5e65e63746498ef5b39a2fe71c6448df4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?device_id=2&amp;hash=38282ca5e65e63746498ef5b39a2fe71c6448df4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?hash=e5e9fa1ba31ecd1ae84f75caaa474f3a663f05f4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=admin&amp;device_id=9&amp;hash=94aff6ce0a6732c51059622cb3406b7aa2863d77&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Device was not found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=admin&amp;hash=e5e9fa1ba31ecd1ae84f75caaa474f3a663f05f4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Device was not found</td>
+</tr>
+<!--reselerio ir jo userio devaisai-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=admin&amp;device_id=7&amp;hash=c1b046000bef3cde3ab96dc8f51d516878a29432&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Device was not found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=admin&amp;device_id=5&amp;hash=d303ad2eaef52ff1993350cf96ca3fecbadf78ce&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=host</td>
+	<td>dynamic</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid</td>
+	<td>&quot;103&quot; &lt;103&gt;</td>
+</tr>
+<!--ACCOUNTANT-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=accountant&amp;device_id=2&amp;hash=38282ca5e65e63746498ef5b39a2fe71c6448df4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>You are not authorized to view this page</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/sql/acc_groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/permissions/edit/11?group_type=accountant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=device_manage_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_manage_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=sbmt</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=accountant&amp;device_id=2&amp;hash=38282ca5e65e63746498ef5b39a2fe71c6448df4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=name</td>
+	<td>101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=host</td>
+	<td>dynamic</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=secret</td>
+	<td>vauvszef</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=context</td>
+	<td>mor_local</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=ipaddr</td>
+	<td>0.0.0.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=port</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=regseconds</td>
+	<td>1175892667</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=accountcode</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid</td>
+	<td>&quot;101&quot; &lt;101&gt;</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=extension</td>
+	<td>101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=voicemail_active</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=username</td>
+	<td>101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device_type</td>
+	<td>IAX2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=works_not_logged</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=forward_to</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=record</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=transfer</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=disallow</td>
+	<td>all</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=allow</td>
+	<td>all</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=deny</td>
+	<td>0.0.0.0/0.0.0.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=permit</td>
+	<td>0.0.0.0/0.0.0.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=nat</td>
+	<td>yes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=qualify</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=canreinvite</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=dtmfmode</td>
+	<td>rfc2833</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=trustrpid</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=sendrpid</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=insecure</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=progressinband</td>
+	<td>never</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=videosupport</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=description</td>
+	<td>Test Device #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=istrunk</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=cid_from_dids</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tell_balance</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tell_rtime_when_left</td>
+	<td>60</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=repeat_rtime_every</td>
+	<td>60</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=t38pt_udptl</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=ani</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=promiscredir</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=timeout</td>
+	<td>60</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=process_sipchaninfo</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=allow_duplicate_calls</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=call_limit</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=lastms</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=faststart</td>
+	<td>yes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h245tunneling</td>
+	<td>yes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=latency</td>
+	<td>0.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=grace_time</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=recording_to_email</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=recording_keep</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=record_forced</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=fake_ring</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=save_call_log</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=enable_mwi</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=requirecalltoken</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=use_ani_for_cli</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=change_failed_code_to</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=max_timeout</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=anti_resale_auto_answer</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=qf_tell_balance</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=qf_tell_time</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=time_limit_per_day</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_advanced_control</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=transport</td>
+	<td>udp</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=encryption</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=block_callerid</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tell_rate</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=trunk</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=proxy_port</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=cps_call_limit</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=cps_period</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=timerb</td>
+	<td>6400</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=op</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=op_active</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=op_routing_algorithm</td>
+	<td>lcr</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=op_capacity</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tp</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tp_active</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tp_capacity</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=defaultuser</td>
+	<td>101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=type</td>
+	<td>friend</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=auth</td>
+	<td>md5</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/permissions/edit/11?group_type=accountant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=device_manage_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_manage_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=accountant&amp;device_id=2&amp;hash=38282ca5e65e63746498ef5b39a2fe71c6448df4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=name</td>
+	<td>101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=host</td>
+	<td>dynamic</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=secret</td>
+	<td>vauvszef</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=context</td>
+	<td>mor_local</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=ipaddr</td>
+	<td>0.0.0.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=port</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=regseconds</td>
+	<td>1175892667</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=accountcode</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid</td>
+	<td>&quot;101&quot; &lt;101&gt;</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=extension</td>
+	<td>101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=voicemail_active</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=username</td>
+	<td>101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device_type</td>
+	<td>IAX2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=works_not_logged</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=forward_to</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=record</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=transfer</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=disallow</td>
+	<td>all</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=allow</td>
+	<td>all</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=deny</td>
+	<td>0.0.0.0/0.0.0.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=permit</td>
+	<td>0.0.0.0/0.0.0.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=nat</td>
+	<td>yes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=qualify</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=canreinvite</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=dtmfmode</td>
+	<td>rfc2833</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=trustrpid</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=sendrpid</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=insecure</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=progressinband</td>
+	<td>never</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=videosupport</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=description</td>
+	<td>Test Device #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=istrunk</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=cid_from_dids</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tell_balance</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tell_rtime_when_left</td>
+	<td>60</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=repeat_rtime_every</td>
+	<td>60</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=t38pt_udptl</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=ani</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=promiscredir</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=timeout</td>
+	<td>60</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=process_sipchaninfo</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=allow_duplicate_calls</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=call_limit</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=lastms</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=faststart</td>
+	<td>yes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h245tunneling</td>
+	<td>yes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=latency</td>
+	<td>0.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=grace_time</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=recording_to_email</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=recording_keep</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=record_forced</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=fake_ring</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=save_call_log</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=enable_mwi</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=requirecalltoken</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=use_ani_for_cli</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=change_failed_code_to</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=max_timeout</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=anti_resale_auto_answer</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=qf_tell_balance</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=qf_tell_time</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=time_limit_per_day</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_advanced_control</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=transport</td>
+	<td>udp</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=encryption</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=block_callerid</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tell_rate</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=trunk</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=proxy_port</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=cps_call_limit</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=cps_period</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=timerb</td>
+	<td>6400</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=op</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=op_active</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=op_routing_algorithm</td>
+	<td>lcr</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=op_capacity</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tp</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tp_active</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tp_capacity</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=defaultuser</td>
+	<td>101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=type</td>
+	<td>friend</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=auth</td>
+	<td>md5</td>
+</tr>
+<!--klaidos-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=accountant&amp;device_id=9&amp;hash=94aff6ce0a6732c51059622cb3406b7aa2863d77&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Device was not found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=accountant&amp;hash=e5e9fa1ba31ecd1ae84f75caaa474f3a663f05f4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Device was not found</td>
+</tr>
+<!--reselerio ir jo userio devaisai-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=accountant&amp;device_id=7&amp;hash=c1b046000bef3cde3ab96dc8f51d516878a29432&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Device was not found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=accountant&amp;device_id=5&amp;hash=d303ad2eaef52ff1993350cf96ca3fecbadf78ce&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=host</td>
+	<td>dynamic</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid</td>
+	<td>&quot;103&quot; &lt;103&gt;</td>
+</tr>
+<!--RESELLER-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=reseller&amp;device_id=5&amp;hash=&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=reseller&amp;device_id=7&amp;hash=c1b046000bef3cde3ab96dc8f51d516878a29432&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=name</td>
+	<td>105</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=host</td>
+	<td>dynamic</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=secret</td>
+	<td>ddrpdjjx</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=context</td>
+	<td>mor_local</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=ipaddr</td>
+	<td>0.0.0.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=port</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=regseconds</td>
+	<td>1175892667</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=accountcode</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid</td>
+	<td>&quot;105&quot; &lt;105&gt;</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=extension</td>
+	<td>105</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=voicemail_active</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=username</td>
+	<td>105</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device_type</td>
+	<td>IAX2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=works_not_logged</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=forward_to</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=record</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=transfer</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=disallow</td>
+	<td>all</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=allow</td>
+	<td>all</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=deny</td>
+	<td>0.0.0.0/0.0.0.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=permit</td>
+	<td>0.0.0.0/0.0.0.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=nat</td>
+	<td>yes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=qualify</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=canreinvite</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=dtmfmode</td>
+	<td>rfc2833</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=trustrpid</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=sendrpid</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=insecure</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=progressinband</td>
+	<td>never</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=videosupport</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=description</td>
+	<td>Test Device for Resellers User</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=istrunk</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=cid_from_dids</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tell_balance</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tell_rtime_when_left</td>
+	<td>60</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=repeat_rtime_every</td>
+	<td>60</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=t38pt_udptl</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=ani</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=promiscredir</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=timeout</td>
+	<td>60</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=process_sipchaninfo</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=allow_duplicate_calls</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=call_limit</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=lastms</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=faststart</td>
+	<td>yes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h245tunneling</td>
+	<td>yes</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=latency</td>
+	<td>0.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=grace_time</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=recording_to_email</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=recording_keep</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=record_forced</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=fake_ring</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=save_call_log</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=enable_mwi</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=requirecalltoken</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=use_ani_for_cli</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=change_failed_code_to</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=max_timeout</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=anti_resale_auto_answer</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=qf_tell_balance</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=qf_tell_time</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=time_limit_per_day</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=callerid_advanced_control</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=transport</td>
+	<td>udp</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=encryption</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=block_callerid</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tell_rate</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=trunk</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=proxy_port</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=cps_call_limit</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=cps_period</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=timerb</td>
+	<td>6400</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=op</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=op_active</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=op_routing_algorithm</td>
+	<td>lcr</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=op_capacity</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tp</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tp_active</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=tp_capacity</td>
+	<td>500</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=defaultuser</td>
+	<td>105</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=type</td>
+	<td>friend</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=auth</td>
+	<td>md5</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=reseller&amp;device_id=9&amp;hash=94aff6ce0a6732c51059622cb3406b7aa2863d77&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Device was not found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=reseller&amp;hash=e5e9fa1ba31ecd1ae84f75caaa474f3a663f05f4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Device was not found</td>
+</tr>
+<!--admino ir jo userio devaisai-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=reseller&amp;device_id=2&amp;hash=38282ca5e65e63746498ef5b39a2fe71c6448df4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Device was not found</td>
+</tr>
+<!--paprastiems useriams sitas api neturi veikti-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=user_admin&amp;device_id=2&amp;hash=38282ca5e65e63746498ef5b39a2fe71c6448df4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>You are not authorized to view this page</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=user_reseller&amp;device_id=7&amp;hash=c1b046000bef3cde3ab96dc8f51d516878a29432&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>You are not authorized to view this page</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=user_admin&amp;device_id=7&amp;hash=c1b046000bef3cde3ab96dc8f51d516878a29432&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>You are not authorized to view this page</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=user_reseller&amp;device_id=2&amp;hash=38282ca5e65e63746498ef5b39a2fe71c6448df4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>You are not authorized to view this page</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/disable_hash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=admin&amp;device_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=name</td>
+	<td>101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=host</td>
+	<td>dynamic</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=accountant&amp;device_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=name</td>
+	<td>101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=host</td>
+	<td>dynamic</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=reseller&amp;device_id=7&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=name</td>
+	<td>105</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=host</td>
+	<td>dynamic</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/settings/api/enable_xml</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=admin&amp;device_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=html</td>
+	<td>101 dynamic vauvszef mor_local 0.0.0.0 0 1175892667 2 &quot;101&quot; &lt;101&gt; 101 0 101 IAX2 1 0 0 no all all 0.0.0.0/0.0.0.0 0.0.0.0/0.0.0.0 yes 500 no rfc2833 no no no never no Test Device #1 0 0 0 0 60 60 no 0 no 60 0 0 0 0 yes yes 0.0 0 0 0 0 0 0 0 no false 0 0 0 0 0 0 0 udp no 0 0 no 0 0 0 6400 0 0 lcr 500 0 0 500 0 101 friend md5</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/settings/api/disallow_get</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_details_get?u=admin&amp;device_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>GET Requests are disabled</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/fake_form?path_to_action=/billing/api/device_details_get</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_1</td>
+	<td>u</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_1</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_1</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_2</td>
+	<td>device_id</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_2</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_2</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_3</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_3</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_3</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=name</td>
+	<td>101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=host</td>
+	<td>dynamic</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=secret</td>
+	<td>vauvszef</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=context</td>
+	<td>mor_local</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=ipaddr</td>
+	<td>0.0.0.0</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/fake_form?path_to_action=/billing/api/device_details_get</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_1</td>
+	<td>u</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_1</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_1</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_2</td>
+	<td>device_id</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_2</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_2</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_3</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_3</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_3</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Device was not found</td>
+</tr>
+</tbody></table>
+</body>
+</html>

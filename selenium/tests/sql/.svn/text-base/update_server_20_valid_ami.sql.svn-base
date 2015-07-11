@@ -1,0 +1,1 @@
+UPDATE servers SET ami_username = 'mor', ami_secret = 'morsecret' WHERE id = 20;

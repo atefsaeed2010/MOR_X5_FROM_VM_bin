@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost" />
+<title>make_tariff_with_effective_date</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">make_tariff_with_effective_date</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=tariff_import/for_import_with_effective_from_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/settings/visual/50_items_per_page</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<!--#Testavimas su provaiderio tarifu-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_12001</td>
+	<td>provider_tariff_for_admin_1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Make user retail tariff</td>
+	<td>Make user retail tariff</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Make Wholesale Tariff</td>
+	<td>Make Wholesale Tariff</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/import_csv2/12001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=file</td>
+	<td>/home/mor/selenium/files/csv/effective_rates.csv</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Please confirm Column Separator and Decimal Separator for CSV file</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>File uploaded</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=prefix_id</td>
+	<td>label=Prefix</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=rate_id</td>
+	<td>label=Rate(USD)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=effective_from</td>
+	<td>label=Effective from</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=connection_fee_id</td>
+	<td>label=Connection Fee(USD)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=increment_id</td>
+	<td>label=Increment</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=min_time_id</td>
+	<td>label=Minimal Time</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=manual_ghost_percent</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=destination_id</td>
+	<td>label=Destination</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=country_code_id</td>
+	<td>label=Country code</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=subcode</td>
+	<td>label=Subcode</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Columns assigned</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='commit'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Analysis completed</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=bad_dest</td>
+	<td>3 bad destination(s)(Press here to get the list)</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/bad_rows_from_csv?csv2=1&amp;tariff_id=12001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//td[10]</td>
+	<td>Bad Effective from date format</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[2]/td[10]</td>
+	<td>Bad Effective from date format</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[3]/td[10]/b</td>
+	<td>Bad Effective from date format</td>
+</tr>
+<tr>
+	<td>goBackAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=dest_to_create</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=r_to_update</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_r_to_create</td>
+	<td>63</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Rates updated: 1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>New rates created: 63</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123225</td>
+	<td>2022-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120101</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123201</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123225</td>
+	<td>10.2660</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123201</td>
+	<td>4.3690</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123194</td>
+	<td>8.5493</td>
+</tr>
+<!--mažiausi aktyvūs rates-->
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120101</td>
+	<td>0.0256</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120109</td>
+	<td>0.0257</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120116</td>
+	<td>0.2500</td>
+</tr>
+<!--didžiausi aktyvūs rates-->
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120105</td>
+	<td>0.5896</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120113</td>
+	<td>0.6995</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120117</td>
+	<td>0.2690</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12001?st=L</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120090</td>
+	<td>2023-01-01 15:15:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123224</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120118</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120090</td>
+	<td>0.2000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123224</td>
+	<td>19.3690</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120118</td>
+	<td>0.2695</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=1</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=2</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12001?st=U</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123226</td>
+	<td>2022-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120147</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123222</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123226</td>
+	<td>23.3690</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120147</td>
+	<td>0.2595</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120058</td>
+	<td>0.0650</td>
+</tr>
+<!--"Make user retail tariff" turi imti tik tuo metu aktyvų rate-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/make_user_tariff/12001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=add_percent</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=add_confee_percent</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_rates_list/12305</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate1</td>
+	<td>0.5896</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate2</td>
+	<td>0.6995</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate473</td>
+	<td>0.269</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>10.2660</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>4.3690</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>8.5493</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>0.2656</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>0.2657</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>0.2500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_rates_list/12305?st=L</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate250</td>
+	<td>0.64596</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2023-01-01 15:15:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2021-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2013-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>0.2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>19.3690</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>0.2695</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_rates_list/12305?st=U</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate448</td>
+	<td>0.6965</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate449</td>
+	<td>0.9522</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2022-01-01 00:00:00</td>
+	<td>2022-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2013-01-01 00:00:00</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2021-01-01 00:00:00</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>23.3690</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>0.2595</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>0.0650</td>
+	<td></td>
+</tr>
+<!--"Make Wholesale Tariff" turi imti visus rates ir išlaikyti visas effective from datas-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/make_user_tariff_wholesale/12001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=add_percent</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=add_confee_percent</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=t_type</td>
+	<td>label=wholesale user</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Tariff created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12306</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123437</td>
+	<td>2022-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123314</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123413</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123437</td>
+	<td>10.2660</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123413</td>
+	<td>4.3690</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123406</td>
+	<td>8.5493</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123314</td>
+	<td>0.0256</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123320</td>
+	<td>0.0257</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123327</td>
+	<td>0.2500</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123315</td>
+	<td>0.5856</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123324</td>
+	<td>0.6995</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123328</td>
+	<td>0.2690</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12306?st=L</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2023-01-01 15:15:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2021-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2013-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123313</td>
+	<td>0.2000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123436</td>
+	<td>19.3690</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123329</td>
+	<td>0.2695</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12306?st=U</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123438</td>
+	<td>23.3690</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123350</td>
+	<td>0.2595</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123281</td>
+	<td>0.0650</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2022-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2013-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2021-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12306?st=Z</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2022-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2013-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2021-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//b[3]</td>
+	<td>Retail tariffs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_12305</td>
+	<td>provider_tariff_for_admin_1 + 0%</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//b[4]</td>
+	<td>Wholesale tariffs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_12306</td>
+	<td>provider_tariff_for_admin_1 + 0.0 + 0.0%</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=rates_12001</td>
+	<td>Rates (205)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=rates_12306</td>
+	<td>Rates (205)</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/import_csv2/12303</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=file</td>
+	<td>/home/mor/selenium/files/csv/effective_rates.csv</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Please confirm Column Separator and Decimal Separator for CSV file</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>File uploaded</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=prefix_id</td>
+	<td>label=Prefix</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=rate_id</td>
+	<td>label=Rate(USD)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=effective_from</td>
+	<td>label=Effective from</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=connection_fee_id</td>
+	<td>label=Connection Fee(USD)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=increment_id</td>
+	<td>label=Increment</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=min_time_id</td>
+	<td>label=Minimal Time</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=manual_ghost_percent</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=destination_id</td>
+	<td>label=Destination</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=country_code_id</td>
+	<td>label=Country code</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=subcode</td>
+	<td>label=Subcode</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Columns assigned</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='commit'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Analysis completed</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=r_to_update</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_r_to_create</td>
+	<td>63</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Rates updated: 1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>New rates created: 63</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12303</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123500</td>
+	<td>2022-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123101</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123476</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123111</td>
+	<td>0.6995</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123500</td>
+	<td>10.2660</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123101</td>
+	<td>0.0256</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123476</td>
+	<td>4.3690</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12303?st=L</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123163</td>
+	<td>0.0010</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123163</td>
+	<td>2023-01-01 11:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123499</td>
+	<td>19.3690</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123499</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123124</td>
+	<td>11.3690</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123124</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<!--"Make user retail tariff" turi imti tik tuo metu aktyvų rate-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/make_user_tariff/12303</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=add_amount</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Tariff created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_rates_list/12307</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate1</td>
+	<td>5.5896</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate2</td>
+	<td>5.6995</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate473</td>
+	<td>5.269</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>10.2660</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>15.2660</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>4.3690</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>9.3690</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>0.2500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>5.2500</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_rates_list/12307?st=L</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate250</td>
+	<td>5.64596</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2023-01-01 15:15:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2021-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2013-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>0.2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>5.2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>19.3690</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>24.3690</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_rates_list/12307?st=U</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate448</td>
+	<td>5.6965</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate449</td>
+	<td>5.9522</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2022-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2013-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2021-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>23.3690</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>28.3690</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>0.2595</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>5.2595</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>0.2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>5.2000</td>
+	<td></td>
+</tr>
+<!--"Make Wholesale Tariff" turi imti visus rates ir išlaikyti visas effective from datas-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/make_user_tariff_wholesale/12303</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=add_amount</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12308</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123712</td>
+	<td>15.2660</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123712</td>
+	<td>2022-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123688</td>
+	<td>9.3690</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123688</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123588</td>
+	<td>5.0256</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123588</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123688</td>
+	<td>9.3690</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12308?st=L</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123650</td>
+	<td>5.0010</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123650</td>
+	<td>2023-01-01 11:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123711</td>
+	<td>24.3690</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123711</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123603</td>
+	<td>5.2695</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123603</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12308?st=U</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123713</td>
+	<td>28.3690</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123713</td>
+	<td>2022-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123624</td>
+	<td>5.2595</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123624</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123709</td>
+	<td>28.6952</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123709</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//b[3]</td>
+	<td>Retail tariffs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_12307</td>
+	<td>prov_tariff_rs_2 + 5</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//b[4]</td>
+	<td>Wholesale tariffs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_12308</td>
+	<td>prov_tariff_rs_2 + 5.0 + 0.0%</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=rates_12303</td>
+	<td>Rates (205)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=rates_12308</td>
+	<td>Rates (205)</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/tariff/make_provider_tariffs_user_wholesale</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<!--#Testavimas su wholesale tarifu-->
+<!--"Make user retail tariff" turi imti tik tuo metu aktyvų rate-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/make_user_tariff/12001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=add_amount</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Tariff created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_rates_list/12309</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate1</td>
+	<td>1.5896</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate2</td>
+	<td>1.6995</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate473</td>
+	<td>1.269</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>11.2660</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>4.3690</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>9.5493</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>0.2656</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>1.2656</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_rates_list/12309?st=L</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate250</td>
+	<td>1.64596</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2023-01-01 15:15:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2021-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2013-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>0.2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>1.2000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>19.3690</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>20.3690</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_rates_list/12309?st=U</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate448</td>
+	<td>1.6965</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=rate449</td>
+	<td>1.9522</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2022-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2013-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>2021-01-01 00:00:00</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>23.3690</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>24.3690</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>0.2595</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>1.2595</td>
+	<td></td>
+</tr>
+<!--"Make Wholesale Tariff" turi imti visus rates ir išlaikyti visas effective from datas-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/make_user_tariff_wholesale/12001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=add_percent</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=t_type</td>
+	<td>label=wholesale user</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12310</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123924</td>
+	<td>20.5320</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123924</td>
+	<td>2022-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123801</td>
+	<td>0.0512</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123801</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123900</td>
+	<td>8.7380</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123900</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12310?st=L</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123800</td>
+	<td>0.4000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123800</td>
+	<td>2023-01-01 15:15:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123923</td>
+	<td>38.7380</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123923</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123816</td>
+	<td>0.5390</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123816</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=1</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=2</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12310?st=U</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123925</td>
+	<td>46.7380</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123925</td>
+	<td>2022-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123837</td>
+	<td>0.5190</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123837</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123921</td>
+	<td>47.3904</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123921</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//b[3]</td>
+	<td>Retail tariffs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_12309</td>
+	<td>provider_tariff_for_admin_1 + 1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//b[4]</td>
+	<td>Wholesale tariffs</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_12310</td>
+	<td>provider_tariff_for_admin_1 + 0.0 + 100.0%</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#delete_all_rates_12306 &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=status</td>
+	<td>All rates deleted</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=rates_12306</td>
+	<td>Rates (0)</td>
+</tr>
+</tbody></table>
+</body>
+</html>

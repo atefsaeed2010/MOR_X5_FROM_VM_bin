@@ -1,0 +1,25 @@
+# Bundle for cdr import by cli
+#
+/user/user_2/create_callerid.sql
+/user/user_5/create_callerid.sql
+# Some callerids for amdins and reseller user loaded
+/tariff/delete_all_rates.sql
+# All rates deleted
+/tariff/provider_1/add_rates.sql
+/tariff/retail_4/add_rates.sql
+/tariff/retail_3/add_rates.sql
+/tariff/wholesale_2/add_rates.sql
+# New rates added for reseller, user_admin and user_reseller tariffs
+/user/reseller_3/make_rspro.sql
+# reseller become rpsro
+/tariff/provider_12301/create.sql
+/tariff/provider_12301/add_rates.sql
+#reseller got prov tariff with rates
+/provider/sip_3304/create.sql
+# reseller got provider
+/user/reseller_1002/create.sql
+/user/reseller_1002/make_rspro.sql
+# one more rspro created
+/provider/sip_3100201/create.sql
+# new rspro got provider
+# bundle loaded

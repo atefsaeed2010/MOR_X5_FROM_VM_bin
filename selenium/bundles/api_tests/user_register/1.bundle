@@ -1,0 +1,14 @@
+# create simple device for admin user
+# ----
+# 
+/settings/currencies/update_currencies.sql
+/permissions/accountant/create.sql
+# enable api in admin + secret key
+settings/api/enable_0.sql
+# GET 
+settings/api/allow_get.sql
+# enable api in reseller + secret key
+settings/api/enable_3.sql
+/settings/api/login_redirect.sql
+/settings/registration/enable_recaptcha.sql
+# bundle loaded

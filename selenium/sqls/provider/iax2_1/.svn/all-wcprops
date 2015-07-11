@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/49378/mor/gui/branches/x5/selenium/sqls/provider/iax2_1
+END
+add_to_server4001.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/49378/mor/gui/branches/x5/selenium/sqls/provider/iax2_1/add_to_server4001.sql
+END
+assign_to_user2.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/41599/mor/gui/branches/x5/selenium/sqls/provider/iax2_1/assign_to_user2.sql
+END
+add_to_server4302.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/49378/mor/gui/branches/x5/selenium/sqls/provider/iax2_1/add_to_server4302.sql
+END
+create_rule_cut_8_add_370.sql
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/provider/iax2_1/create_rule_cut_8_add_370.sql
+END

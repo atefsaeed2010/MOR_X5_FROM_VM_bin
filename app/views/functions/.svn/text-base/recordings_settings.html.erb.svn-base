@@ -1,0 +1,35 @@
+<%= form_tag :action => 'recordings_settings_update' do %>
+  <br/>
+  <br/>
+  <table class="simple">
+    <tr>
+      <td><b><%= _('Use_external_Server') %>:</b></td>
+      <td></td>
+      <td> <%= check_box_tag 'ra_use_external_server', "1", Confline.get_value("Recordings_addon_Use_External_Server", session[:user_id]).to_i == 1 %> </td>
+    </tr>
+    <tr>
+      <td><b><%= _('Show_recordings_with_zero_billsec') %>:</b></td>
+      <td></td>
+      <td> <%= check_box_tag 'show_recordings_with_zero_billsec', '1', Confline.get_value("Show_recordings_with_zero_billsec", session[:user_id]).to_i == 1 %></td>
+    </tr>
+    <tr>
+      <td><b><%= _('Recordings_Server') %>:</b></td>
+      <td><b><%= _('IP') %>:</b></td>
+      <td> <%= text_field_tag('ra_ip', Confline.get_value("Recordings_addon_IP", session[:user_id]), "class" => "input", :size => "35", :maxlength => "15") %> </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><b><%= _('Port') %>:</b></td>
+      <td> <%= text_field_tag('ra_port', Confline.get_value("Recordings_addon_Port", session[:user_id]), "class" => "input", :size => "10", :maxlength => "5") %> </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><b><%= _('Login') %>:</b></td>
+      <td> <%= text_field_tag('ra_login', Confline.get_value("Recordings_addon_Login", session[:user_id]), "class" => "input", :size => "35", :maxlength => "255") %> </td>
+    </tr>
+  </table>
+  <%= hidden_field_tag('indirect', 1) %>
+  <br/>
+  <br/>
+  <%= submit_tag _('Save_changes'), :disable_with => _('Processing..') %>
+<% end %>

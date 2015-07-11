@@ -1,0 +1,25 @@
+# creating test provider
+provider/sip_3304/create.sql
+# test provider created
+#
+# updating reseller's data
+user/reseller_3/make_rspro.sql
+# reseller's data updated
+#
+# creating terminator
+terminator/8301/create.sql
+# terminator created
+#
+# creating user call
+calls/re_9301/create_user_call.sql
+# user call created
+#
+# creating user's aggregate call
+calls/re_9301/aggregate_call.sql
+# aggregate call created
+#
+# updating active calls
+calls/re_9301/update_active_call.sql
+# active calls updated
+#
+# bundle loaded

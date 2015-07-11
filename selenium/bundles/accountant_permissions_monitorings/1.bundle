@@ -1,0 +1,13 @@
+# enable API, balance checking, disable hash checking
+# monitoring for testing
+# 
+# ----
+# Allow API globally:
+/settings/api/enable_0.sql
+# Disable hash checking:
+/settings/api/disable_hash_0.sql
+# Allow GET API:
+/settings/api/allow_get.sql
+# monitoring for testing
+/user/user_2/create_monitoring_1001.sql
+# bundle loaded

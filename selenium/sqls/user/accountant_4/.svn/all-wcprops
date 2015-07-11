@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/41875/mor/gui/branches/x5/selenium/sqls/user/accountant_4
+END
+assign_permissions.sql
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/41731/mor/gui/branches/x5/selenium/sqls/user/accountant_4/assign_permissions.sql
+END
+set_address.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/41875/mor/gui/branches/x5/selenium/sqls/user/accountant_4/set_address.sql
+END

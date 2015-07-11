@@ -1,0 +1,5 @@
+<%= form_tag(:action => 'update', :id => @email) do %>
+    <%= render 'form', email: @email %>
+    <%= submit_tag _('Change'), :disable_with => _('Processing..') %>
+<% end %>
+<br>

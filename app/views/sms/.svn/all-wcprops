@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/48860/mor/gui/branches/x5/app/views/sms
+END
+_letter_select_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/43721/mor/gui/branches/x5/app/views/sms/_letter_select_header.html.erb
+END
+user_rates_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/sms/user_rates_list.html.erb
+END
+sms.wml.builder
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/41942/mor/gui/branches/x5/app/views/sms/sms.wml.builder
+END
+user_rates.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/43596/mor/gui/branches/x5/app/views/sms/user_rates.html.erb
+END
+_provider_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/43596/mor/gui/branches/x5/app/views/sms/_provider_form.html.erb
+END
+providers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/39906/mor/gui/branches/x5/app/views/sms/providers.html.erb
+END
+lcr_providers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/app/views/sms/lcr_providers.html.erb
+END
+rates.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/44552/mor/gui/branches/x5/app/views/sms/rates.html.erb
+END
+tariff_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/43596/mor/gui/branches/x5/app/views/sms/tariff_edit.html.erb
+END
+lcr_edit_user.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/app/views/sms/lcr_edit_user.html.erb
+END
+tariff_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/43596/mor/gui/branches/x5/app/views/sms/tariff_new.html.erb
+END
+lcr_providers_sort.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/app/views/sms/lcr_providers_sort.html.erb
+END
+prefix_finder_find.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/app/views/sms/prefix_finder_find.html.erb
+END
+form_sms.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/app/views/sms/form_sms.html.erb
+END
+lcr_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/app/views/sms/lcr_details.html.erb
+END
+lcr_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/43596/mor/gui/branches/x5/app/views/sms/lcr_edit.html.erb
+END
+lcr_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/43596/mor/gui/branches/x5/app/views/sms/lcr_new.html.erb
+END
+_tariff_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/43596/mor/gui/branches/x5/app/views/sms/_tariff_form.html.erb
+END
+sms_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/43596/mor/gui/branches/x5/app/views/sms/sms_list.html.erb
+END
+tariffs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/43596/mor/gui/branches/x5/app/views/sms/tariffs.html.erb
+END
+provider_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/43596/mor/gui/branches/x5/app/views/sms/provider_edit.html.erb
+END
+_ratedetail_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/43596/mor/gui/branches/x5/app/views/sms/_ratedetail_form.html.erb
+END
+rate_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/app/views/sms/rate_details.html.erb
+END
+users.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/39906/mor/gui/branches/x5/app/views/sms/users.html.erb
+END
+_lcr_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/43596/mor/gui/branches/x5/app/views/sms/_lcr_form.html.erb
+END
+sms.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/48860/mor/gui/branches/x5/app/views/sms/sms.html.erb
+END
+provider_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/43596/mor/gui/branches/x5/app/views/sms/provider_new.html.erb
+END
+lcrs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/39906/mor/gui/branches/x5/app/views/sms/lcrs.html.erb
+END
+rate_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/43721/mor/gui/branches/x5/app/views/sms/rate_new.html.erb
+END

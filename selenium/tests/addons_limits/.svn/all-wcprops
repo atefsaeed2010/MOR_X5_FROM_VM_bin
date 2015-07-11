@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/51079/mor/gui/branches/x5/selenium/tests/addons_limits
+END
+set_osmp_payment_date.sql
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/41507/mor/gui/branches/x5/selenium/tests/addons_limits/set_osmp_payment_date.sql
+END
+update_paypalpro_payment_date.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/43460/mor/gui/branches/x5/selenium/tests/addons_limits/update_paypalpro_payment_date.sql
+END
+delete_webmoney_payment.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/41482/mor/gui/branches/x5/selenium/tests/addons_limits/delete_webmoney_payment.sql
+END
+addons_limits_payments.case
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/51079/mor/gui/branches/x5/selenium/tests/addons_limits/addons_limits_payments.case
+END
+delete_paypal_payment.sql
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/41482/mor/gui/branches/x5/selenium/tests/addons_limits/delete_paypal_payment.sql
+END
+delete_linkpoint_payment.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/41482/mor/gui/branches/x5/selenium/tests/addons_limits/delete_linkpoint_payment.sql
+END
+delete_paypalpro_payment.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/41482/mor/gui/branches/x5/selenium/tests/addons_limits/delete_paypalpro_payment.sql
+END
+delete_ouroboros_payment.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/41482/mor/gui/branches/x5/selenium/tests/addons_limits/delete_ouroboros_payment.sql
+END
+delete_authorize_payment.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/43460/mor/gui/branches/x5/selenium/tests/addons_limits/delete_authorize_payment.sql
+END
+delete_moneybookers_payment.sql
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/43460/mor/gui/branches/x5/selenium/tests/addons_limits/delete_moneybookers_payment.sql
+END
+delete_osmp_payment.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/43460/mor/gui/branches/x5/selenium/tests/addons_limits/delete_osmp_payment.sql
+END
+delete_bogus_payment.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/41482/mor/gui/branches/x5/selenium/tests/addons_limits/delete_bogus_payment.sql
+END
+delete_hsbc_payment.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/41482/mor/gui/branches/x5/selenium/tests/addons_limits/delete_hsbc_payment.sql
+END
+delete_twocheckout_payment.sql
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/43460/mor/gui/branches/x5/selenium/tests/addons_limits/delete_twocheckout_payment.sql
+END

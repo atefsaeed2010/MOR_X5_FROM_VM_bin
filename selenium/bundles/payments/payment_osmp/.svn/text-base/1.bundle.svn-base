@@ -1,0 +1,5 @@
+# set tax 1 for user_admin
+# ----
+# set tax
+/user/user_2/set_tax_1.sql
+# bundle loaded

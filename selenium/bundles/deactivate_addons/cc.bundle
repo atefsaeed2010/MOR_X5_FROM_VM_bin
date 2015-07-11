@@ -1,0 +1,5 @@
+# turn off addon for test icalling_cards/calling_cards2.case
+# ----
+# turn off calling cards addon
+/settings/addons/cc_deactivate.sql
+# bundle loaded

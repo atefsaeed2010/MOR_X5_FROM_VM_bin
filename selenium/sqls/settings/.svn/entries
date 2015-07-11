@@ -1,0 +1,70 @@
+10
+
+dir
+52326
+http://svn.kolmisoft.com/mor/gui/branches/x5/selenium/sqls/settings
+http://svn.kolmisoft.com
+
+
+
+2014-09-16T10:54:40.120287Z
+52319
+ieva
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19941b1f-7a74-413c-ab52-0de3e92e9a87
+
+invoices
+dir
+
+actions
+dir
+
+conflines
+dir
+
+payments
+dir
+
+currencies
+dir
+
+visual
+dir
+
+email
+dir
+
+addons
+dir
+
+functionality
+dir
+
+various
+dir
+
+api
+dir
+
+registration
+dir
+
+tax
+dir
+
+reseller
+dir
+

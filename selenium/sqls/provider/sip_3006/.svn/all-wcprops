@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/49377/mor/gui/branches/x5/selenium/sqls/provider/sip_3006
+END
+make_common_use.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/48751/mor/gui/branches/x5/selenium/sqls/provider/sip_3006/make_common_use.sql
+END
+set_unique_name.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/48747/mor/gui/branches/x5/selenium/sqls/provider/sip_3006/set_unique_name.sql
+END
+assign_tariff_12002.sql
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/48747/mor/gui/branches/x5/selenium/sqls/provider/sip_3006/assign_tariff_12002.sql
+END
+create.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/provider/sip_3006/create.sql
+END
+assign_common_use_tariff_2.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/48795/mor/gui/branches/x5/selenium/sqls/provider/sip_3006/assign_common_use_tariff_2.sql
+END
+add_to_server4001.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/49377/mor/gui/branches/x5/selenium/sqls/provider/sip_3006/add_to_server4001.sql
+END
+assign_to_user2.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/41599/mor/gui/branches/x5/selenium/sqls/provider/sip_3006/assign_to_user2.sql
+END
+add_to_server4302.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/49377/mor/gui/branches/x5/selenium/sqls/provider/sip_3006/add_to_server4302.sql
+END

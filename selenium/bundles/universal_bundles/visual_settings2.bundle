@@ -1,0 +1,10 @@
+# ----
+# , global number decimal
+/settings/visual/set_semicolon_as_decimal.sql
+# ; csv decimal
+/settings/functionality/set_csv_decimal_semicolon.sql
+# . csv separator
+/settings/functionality/set_csv_separator_dot.sql
+# 56 csv file size
+/settings/functionality/56_csv_file_size.sql
+# bundle loaded

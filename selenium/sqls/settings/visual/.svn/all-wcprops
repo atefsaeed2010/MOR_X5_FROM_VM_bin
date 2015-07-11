@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/50824/mor/gui/branches/x5/selenium/sqls/settings/visual
+END
+hide_device_passwords_for_users_check.sql
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/!svn/ver/49609/mor/gui/branches/x5/selenium/sqls/settings/visual/hide_device_passwords_for_users_check.sql
+END
+uncheck_hide_quick_stats.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/49272/mor/gui/branches/x5/selenium/sqls/settings/visual/uncheck_hide_quick_stats.sql
+END
+10_items_per_page.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/47021/mor/gui/branches/x5/selenium/sqls/settings/visual/10_items_per_page.sql
+END
+hide_device_passwords_for_users_uncheck.sql
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/!svn/ver/49609/mor/gui/branches/x5/selenium/sqls/settings/visual/hide_device_passwords_for_users_uncheck.sql
+END
+set_7_digits.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/45221/mor/gui/branches/x5/selenium/sqls/settings/visual/set_7_digits.sql
+END
+set_date_format_7.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/50824/mor/gui/branches/x5/selenium/sqls/settings/visual/set_date_format_7.sql
+END
+show_device_and_cid_in_last_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/49299/mor/gui/branches/x5/selenium/sqls/settings/visual/show_device_and_cid_in_last_calls.sql
+END
+50_items_per_page.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/42202/mor/gui/branches/x5/selenium/sqls/settings/visual/50_items_per_page.sql
+END
+15_items_per_page.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/50660/mor/gui/branches/x5/selenium/sqls/settings/visual/15_items_per_page.sql
+END
+show_user_billsec_instead_billsec_0.sql
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/49101/mor/gui/branches/x5/selenium/sqls/settings/visual/show_user_billsec_instead_billsec_0.sql
+END
+show_user_billsec_instead_billse_3.sql
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/!svn/ver/49119/mor/gui/branches/x5/selenium/sqls/settings/visual/show_user_billsec_instead_billse_3.sql
+END
+show_billsec_instead_user_billsec_0.sql
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/49310/mor/gui/branches/x5/selenium/sqls/settings/visual/show_billsec_instead_user_billsec_0.sql
+END
+hide_device_passwords_for_users_check_0.sql
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/!svn/ver/49618/mor/gui/branches/x5/selenium/sqls/settings/visual/hide_device_passwords_for_users_check_0.sql
+END
+show_user_billsec_instead_billsec_3.sql
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/49160/mor/gui/branches/x5/selenium/sqls/settings/visual/show_user_billsec_instead_billsec_3.sql
+END
+one_item_per_page.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/42049/mor/gui/branches/x5/selenium/sqls/settings/visual/one_item_per_page.sql
+END
+hide_device_passwords_for_users_uncheck_0.sql
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/!svn/ver/49618/mor/gui/branches/x5/selenium/sqls/settings/visual/hide_device_passwords_for_users_uncheck_0.sql
+END
+100_items_per_page.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/47028/mor/gui/branches/x5/selenium/sqls/settings/visual/100_items_per_page.sql
+END
+2_items_per_page.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/49221/mor/gui/branches/x5/selenium/sqls/settings/visual/2_items_per_page.sql
+END
+set_semicolon_as_decimal.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/47068/mor/gui/branches/x5/selenium/sqls/settings/visual/set_semicolon_as_decimal.sql
+END
+5_items_per_page.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/47021/mor/gui/branches/x5/selenium/sqls/settings/visual/5_items_per_page.sql
+END
+set_date_format_d_m_y.sql
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/50791/mor/gui/branches/x5/selenium/sqls/settings/visual/set_date_format_d_m_y.sql
+END
+set_comma_as_decimal.sql
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/45221/mor/gui/branches/x5/selenium/sqls/settings/visual/set_comma_as_decimal.sql
+END
+check_hide_iwantto.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/49285/mor/gui/branches/x5/selenium/sqls/settings/visual/check_hide_iwantto.sql
+END
+set_0_digits.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/50636/mor/gui/branches/x5/selenium/sqls/settings/visual/set_0_digits.sql
+END
+show_billsec_instead_user_billsec_0_1.sql
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/!svn/ver/49251/mor/gui/branches/x5/selenium/sqls/settings/visual/show_billsec_instead_user_billsec_0_1.sql
+END
+check_hide_quick_stats.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/49272/mor/gui/branches/x5/selenium/sqls/settings/visual/check_hide_quick_stats.sql
+END

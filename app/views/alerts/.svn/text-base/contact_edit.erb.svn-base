@@ -1,0 +1,50 @@
+<div class="nb"><%= b_user + _('Contact') %>: <%= @contact.name %> </div>
+<br/>
+<%= form_for :contact, url: { action: 'contact_update', id: @contact.id } do |f| %>
+  <table class="maintable" width="100%">
+    <tr align="left">
+      <th><%= _('ID') %></th>
+      <th align="center"><%= _('Status') %></th>
+      <th><%= _('contact_name') %></th>
+      <th align="center"><%= _('timezone') %></th>
+      <th><%= _('email') %></th>
+      <th align="right"><%= _('max_emails_hour') %></th>
+      <th align="right"><%= _('emails_this_hour') %></th>
+      <th align="right"><%= _('max_emails_day') %></th>
+      <th align="right"><%= _('emails_this_day') %></th>
+      <th><%= _('phone_number') %></th>
+      <th align="right"><%= _('max_sms_hour') %></th>
+      <th align="right"><%= _('sms_this_hour') %></th>
+      <th align="right"><%= _('max_sms_day') %></th>
+      <th align="right"><%= _('sms_this_day') %></th>
+      <th><%= _('Comment') %></th>
+    </tr>
+    <tr align="left">
+      <td><%= @contact.id %></td>
+      <td align="center"><%= f.check_box :status, {}, 'enabled', 'disabled' %></td>
+      <td><%= f.text_field :name, class: 'input', size: 20 %></td>
+      <td align="center">
+        <%=
+            f.collection_select(:timezone,
+              ActiveSupport::TimeZone.all, :formatted_offset, :to_s,
+              { selected: alerts_edit_selected_timezone(@contact.timezone) },
+              { style: 'width: 86px' }
+            )
+        -%>
+      </td>
+      <td><%= f.text_field :email, class: 'input', size: 30 %></td>
+      <td align="right"><%= f.text_field :max_emails_per_hour, class: 'input', size: 8 %></td>
+      <td align="right"><%= @contact.emails_this_hour %></td>
+      <td align="right"><%= f.text_field :max_emails_per_day, class: 'input', size: 8 %></td>
+      <td align="right"><%= @contact.emails_this_day %></td>
+      <td><%= f.text_field :phone_number, class: 'input', size: 20 %></td>
+      <td align="right"><%= f.text_field :max_sms_per_hour, class: 'input', size: 8 %></td>
+      <td align="right"><%= @contact.sms_this_hour %></td>
+      <td align="right"><%= f.text_field :max_sms_per_day, class: 'input', size: 8 %></td>
+      <td align="right"><%= @contact.sms_this_day %></td>
+      <td><%= f.text_field :comment, class: 'input', size: 30 %></td>
+    </tr>
+  </table>
+  <br /> <br />
+  <%= f.submit _('Save_changes'), disable_with: _('Processing...') %>
+<% end %>

@@ -1,0 +1,10 @@
+# -----
+# delete sip device_2004
+/user/user_2/delete_sip_2004.sql
+# unassing reseller_1002 did
+/did/did_6001/unassign_reseller.sql
+# create tariff
+/tariff/reseller_12305/create.sql
+# create user for reseller_1002
+/user/user_1306/create.sql
+# bundle loaded

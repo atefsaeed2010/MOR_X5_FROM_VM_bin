@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/42577/mor/gui/branches/x5/app/views/pbx_functions
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/42152/mor/gui/branches/x5/app/views/pbx_functions/edit.html.erb
+END
+pbx_pool_new.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/42158/mor/gui/branches/x5/app/views/pbx_functions/pbx_pool_new.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/app/views/pbx_functions/list.html.erb
+END
+pbx_pools_list.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/41149/mor/gui/branches/x5/app/views/pbx_functions/pbx_pools_list.erb
+END
+pbx_pool_users.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/41211/mor/gui/branches/x5/app/views/pbx_functions/pbx_pool_users.erb
+END
+_pbx_pool_form.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/41245/mor/gui/branches/x5/app/views/pbx_functions/_pbx_pool_form.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/pbx_functions/_form.html.erb
+END
+pbx_pool_edit.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/42356/mor/gui/branches/x5/app/views/pbx_functions/pbx_pool_edit.erb
+END

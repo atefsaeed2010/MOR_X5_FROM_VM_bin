@@ -1,0 +1,144 @@
+<%= form_tag :action => 'pbx_function_update', :id => @dialplan.id do %>
+    <table width="100%" class="maintable">
+      <tr>
+        <th align="left" style="width: 10%"><%= _('Extension') %></th>
+        <th align="left" style="width: 20%"><%= _('Dialplan_name') %></th>
+        <th align="center" style="width: 20%"><%= _('Pbx_function') %></th>
+        <th align="center" class="j_currency"><%= _('Currency') %></th>
+        <th align="left" class="j_device"><%= _('Call_will_be_billed_to_User/Device') %></th>
+        <th align="left" class="j_language"><%= _('Language') %></th>
+        <th align="center" class="j_user"><%= _('User') %>/<%= _('Card') %></th>
+        <th align="center" class="j_sound_file" style="width: 40%"><%= _('Sound_file') %></th>
+      </tr>
+      <tr class="row1">
+        <td align="left"><%= text_field_tag 'dialplan[ext]', @dialplan.data2, "class" => "input", :size => "10", :maxlength => "15" %></td>
+
+        <td align="left"><%= text_field_tag 'dialplan[name]', @dialplan.name, "class" => "input", :size => "20", :maxlength => "30" %></td>
+        <td align="center">
+          <select id="dp_type" name="dialplan[type_id]" <%= "onchange=\"Disab(this.value);\"".html_safe %>>
+            <% for pf in @pbxfunctions %>
+                <option value="<%= pf.id %>" <%= "selected" if pf.id == @dialplan.data1.to_i %>> <%= pf.name %> </option>
+            <% end %>
+          </select>
+        </td>
+
+        <td class="j_currency" style="width: 10%" align="center">
+          <select id="currency_tell_balance" name="dialplan[currency]">
+            <% for curr in @currency %>
+                <option value="<%= curr.name %>" <%= "selected" if curr.name == @dialplan.data3 %>> <%= curr.name %> </option>
+            <% end %>
+          </select>
+        </td>
+
+        <td class="j_device" style="width: 20%" align="left" NOWRAP>
+          <span style="float:left; padding-top:1%"><%= _('User') %>:</span>
+          <span style="float:left;"><%= render 'shared/live_search_field',
+            object: @user ? nice_user(@user) : params[:s_user],
+            object_id: @dialplan.data5 || -2,
+            object_name: 'User',
+            action_url: {
+                controller: :users,
+                action: :get_users_map,
+                options: {show_admin: true, include_owner: current_user.is_reseller? ? true : false}
+                } %></span>
+          <span id="user_not_selected_info" style="float:left;">
+             <%= b_exclamation + _('Please_select_User') %>
+          </span>
+        </td>
+
+        <td class="j_language" style="width: 15%" align="left">
+          <%= text_field_tag 'dialplan[language]', @dialplan.data4, "class" => "input", :size => "10", :maxlength => "30", :id => "language_tell_balance" %>
+        </td>
+        <td class="j_user" style="width: 15%" align="center">
+          <%= radio_button_tag('dialplan[data5]', "user", checked = (@dialplan.data5 == 'user'), :id => "user_tell_balance") %> <%= _('User') %>
+          <%= radio_button_tag('dialplan[data5]', "card", checked = (@dialplan.data5 == 'card'), :id => "card_tell_balance") %> <%= _('Card') %>
+        </td>
+        <td class="j_sound_file" style="width: 40%" align="center">
+          <%= select_sound_file(@dialplan, "sound_file_id", nil, :include_blank => true) %>
+        </td>
+      </tr>
+    </table>
+<br/>
+<%= submit_tag _('Save_changes'), id: 'submit' %>
+<% end %>
+<br/>
+
+<script type="text/javascript">
+    function Disab(val) {
+        // alert(val);
+        $$('.j_currency').each(function (el) {
+            Element.setStyle(el, {display:'none'});
+        });
+        $$('.j_device').each(function (el) {
+            Element.setStyle(el, {display:'none'});
+        });
+        $$('.j_language').each(function (el) {
+            Element.setStyle(el, {display:'none'});
+        });
+        $$('.j_user').each(function (el) {
+            Element.setStyle(el, {display:'none'});
+        });
+        $$('.j_sound_file').each(function (el) {
+            Element.setStyle(el, {display:'none'});
+        });
+        $$('.j_other').each(function (el) {
+            Element.setStyle(el, {display:'none'});
+        });
+        if (val == 1) {
+            $$('.j_currency').each(function (el) {
+                Element.setStyle(el, {display:'table-cell', width:'10%'});
+            });
+            $$('.j_language').each(function (el) {
+                Element.setStyle(el, {display:'table-cell', width:'15%'});
+            });
+            $$('.j_user').each(function (el) {
+                Element.setStyle(el, {display:'table-cell', width:'15%'});
+            });
+        }
+        if (val == 2) {
+            $$('.j_currency').each(function (el) {
+                Element.setStyle(el, {display:'table-cell', width:'20%'});
+            });
+            $$('.j_language').each(function (el) {
+                Element.setStyle(el, {display:'table-cell', width:'20%'});
+            });
+        }
+        if (val == 4) {
+            $$('.j_sound_file').each(function (el) {
+                Element.setStyle(el, {display:'table-cell'});
+            });
+        }
+        if (val == 8) {
+            $$('.j_device').each(function (el) {
+                Element.setStyle(el, {display:'table-cell'});
+            });
+        }
+        if (val != 4 && val != 1 && val != 2) {
+            $$('.j_other').each(function (el) {
+                Element.setStyle(el, {display:'table-cell'});
+            });
+        }
+    }
+    Disab('<%=@dialplan.data1%>')
+
+    Event.observe(window, 'load',  function() {
+      update();
+
+      Event.observe($('s_user'), 'change', update);
+      Event.observe($('dp_type'), 'change', update);
+    });
+
+   function update() {
+      // dp_type = 8 <- External DID
+       var dp_type = $('dp_type');
+       var selected_dp_type = dp_type.options[dp_type.selectedIndex].value;
+
+       if ($('s_user_id').value < 0 && selected_dp_type == 8) {
+           $('user_not_selected_info').show();
+           $('submit').disabled = true;
+       } else {
+           $('user_not_selected_info').hide();
+           $('submit').disabled = false;
+       }
+   }
+</script>

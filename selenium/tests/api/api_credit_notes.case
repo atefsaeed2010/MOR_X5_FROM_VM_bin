@@ -1,0 +1,4576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<!--set api settings-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/enable_api</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<!--CREATE-->
+<!--# hash 1 - user_id=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?user_id=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash1</td>
+</tr>
+<!--# hash 2 - user_id=2 price=-32-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?user_id=2&amp;price=-23</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash2</td>
+</tr>
+<!--# hash 3 - user_id=3 price=20-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?user_id=3&amp;price=20</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash3</td>
+</tr>
+<!--# hash 4 - user_id=2 issue_date='2012-01-01 23:23:23'-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?user_id=2&amp;issue_date=1330594129</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash4</td>
+</tr>
+<!--# hash 5 - user_id=4 price=20 number=5-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?user_id=4&amp;price=20&amp;number=5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash5</td>
+</tr>
+<!--# hash 6 - user_id=3 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?user_id=2&amp;price=20&amp;comment=labas vakaras</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash6</td>
+</tr>
+<!--# hash 7 - user_id=0 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?user_id=0&amp;price=20&amp;comment=labas vakaras issue_date=1330594129</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash7</td>
+</tr>
+<!--# hash 8 - user_id=3 price=20 comment=labas vakaras   issue_date='2012-01-01 23:23:23'  number=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?user_id=2&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash8</td>
+</tr>
+<!--# hash 9 - user_id=0 price=20 comment=labas vakaras   issue_date='2012-01-01 23:23:23'  number=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?user_id=0&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash9</td>
+</tr>
+<!--# hash 10 - user_id=3 price=20 comment=labas vakaras   issue_date='2012-01-01 23:23:23'  number=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?user_id=3&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash10</td>
+</tr>
+<!--# hash 11 - user_id=4 price=20 comment=labas vakaras   issue_date='2012-01-01 23:23:23'  number=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?user_id=4&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash11</td>
+</tr>
+<!--# hash 12 - user_id=5 price=20 comment=labas vakaras   issue_date='2012-01-01 23:23:23'  number=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?user_id=5&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash12</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--# hash 1 - user_id=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?user_id=2&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 1 - user_id=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=2&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not created</td>
+	<td></td>
+</tr>
+<!--# hash 2 - user_id=2 price=-32-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=2&amp;price=-23&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not created</td>
+	<td></td>
+</tr>
+<!--# hash 3 - user_id=3 price=20-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=3&amp;price=20&amp;test=1&amp;hash=${hash3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not created</td>
+	<td></td>
+</tr>
+<!--# hash 5 - user_id=4 price=20 number=5-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=4&amp;price=20&amp;number=5&amp;test=1&amp;hash=${hash5}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not created</td>
+	<td></td>
+</tr>
+<!--# hash 6 - user_id=3 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=2&amp;price=20&amp;comment=labas vakaras&amp;test=1&amp;hash=${hash6}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not created</td>
+	<td></td>
+</tr>
+<!--# hash 7 - user_id=0 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=0&amp;price=20&amp;comment=labas vakaras issue_date=1330594129&amp;test=1&amp;hash=${hash7}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User was not found</td>
+	<td></td>
+</tr>
+<!--# hash 8 - user_id=2 price=20 comment=labas vakaras   issue_date='2012-01-01 23:23:23'  number=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=2&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash8}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was created</td>
+	<td></td>
+</tr>
+<!--# hash 9 - user_id=0 price=20 comment=labas vakaras   issue_date=  number=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=0&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash9}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User was not found</td>
+	<td></td>
+</tr>
+<!--# hash 10 - user_id=3 price=20 comment=labas vakaras   issue_date='2012-01-01 23:23:23'  number=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=3&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash10}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was created</td>
+	<td></td>
+</tr>
+<!--# hash 11 - user_id=4 price=20 comment=labas vakaras   issue_date='2012-01-01 23:23:23'  number=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=4&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash11}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was created</td>
+	<td></td>
+</tr>
+<!--# hash 12 - user_id=5 price=20 comment=labas vakaras   issue_date='2012-01-01 23:23:23'  number=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=5&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash12}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User was not found</td>
+	<td></td>
+</tr>
+<!--incorect hash-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=2&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Incorrect hash</td>
+	<td></td>
+</tr>
+<!--OTHER USERS-->
+<!--RESELLER-->
+<!--# hash 10 - user_id=3 price=20-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=reseller&amp;user_id=3&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash10}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User was not found</td>
+	<td></td>
+</tr>
+<!--# hash 11 - user_id=4 price=20 number=5-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=reseller&amp;user_id=4&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash11}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User was not found</td>
+	<td></td>
+</tr>
+<!--# hash 8 - user_id=3 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=reseller&amp;user_id=2&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash8}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User was not found</td>
+	<td></td>
+</tr>
+<!--# hash 9 - user_id=0 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=reseller&amp;user_id=0&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash9}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User was not found</td>
+	<td></td>
+</tr>
+<!--# hash 12 - user_id=5 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=reseller&amp;user_id=5&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash12}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was created</td>
+	<td></td>
+</tr>
+<!--101-->
+<!--# hash 10 - user_id=3 price=20-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=user_admin&amp;user_id=3&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash10}</td>
+	<td></td>
+</tr>
+<!--2. Virtoje Access Denied gaunu bad login-->
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 11 - user_id=4 price=20 number=5-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=user_admin&amp;user_id=4&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash11}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 8 - user_id=2 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=user_admin&amp;user_id=2&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash8}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 9 - user_id=0 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=user_admin&amp;user_id=0&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash9}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 12 - user_id=5 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=user_admin&amp;user_id=5&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash12}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--USER_RESELLER-->
+<!--# hash 10 - user_id=3 price=20-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=user_reseller&amp;user_id=3&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash10}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 11 - user_id=4 price=20 number=5-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=user_reseller&amp;user_id=4&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash11}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 8 - user_id=2 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=user_reseller&amp;user_id=2&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash8}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 9 - user_id=0 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=user_reseller&amp;user_id=0&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash9}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 12 - user_id=5 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=user_reseller&amp;user_id=5&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash12}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--ACCOUNTANT-->
+<!--# hash 10 - user_id=3 price=20-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=accountant&amp;user_id=3&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash10}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 11 - user_id=4 price=20 number=5-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=accountant&amp;user_id=4&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash11}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 8 - user_id=2 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=accountant&amp;user_id=2&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash8}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 9 - user_id=0 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=accountant&amp;user_id=0&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash9}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 12 - user_id=5 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=accountant&amp;user_id=5&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash12}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/credit_note/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_3</td>
+	<td>Test Reseller</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_4</td>
+	<td>Test Accountant</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_2</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=note_number_2</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=note_number_3</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=note_number_4</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=image_not_paid_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=image_not_paid_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=image_not_paid_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=note_price_2</td>
+	<td>20.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=note_price_3</td>
+	<td>20.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=note_price_4</td>
+	<td>20.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=note_full_price_2</td>
+	<td>20.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=note_full_price_3</td>
+	<td>20.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=note_full_price_4</td>
+	<td>20.0000</td>
+</tr>
+<!--# hash 13 - user_id=4 price=-*&^ comment='656y' w6y "we6hrds"  issue_date='2012-01-01 23:23:23'  number=abc-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?user_id=4&amp;price=-*&amp;^&amp;comment='656y' w6y &quot;we6hrds&quot;&amp;issue_date=1330594129&amp;number=abc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash13</td>
+</tr>
+<!--# hash 14 - user_id=3 price=20 comment=labas vakaras   issue_date='2012-01-01 23:23:23'  number=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?user_id=3&amp;price=20&amp;comment=labas vakaras&amp;issue_date=&amp;^$#&amp;number=-2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash14</td>
+</tr>
+<!--# hash 15 - user_id=-4 price=20 comment=labas vakaras   issue_date='2012-01-01 23:23:23'  number=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?user_id=-4&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash15</td>
+</tr>
+<!--# hash 16 - user_id=XXX price=20 comment=labas vakaras   issue_date='2012-01-01 23:23:23'  number=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?user_id=XXX&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash16</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--# hash 14 - user_id=3 price=20 comment=labas vakaras   issue_date='2012-01-01 23:23:23'  number=2-->
+<!--<tr> 	<td>open</td> 	<td>/billing/api/credit_note_create?u=admin&amp;user_id=3&amp;price=20&amp;comment=labas vakaras&amp;issue_date=&amp;^%$#&amp;number=2&amp;test=1&amp;hash=${hash14}</td> 	<td></td> </tr>-->
+<!--# hash 15 - user_id=-4 price=20 comment=labas vakaras   issue_date='2012-01-01 23:23:23'  number=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=-4&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash15}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User was not found</td>
+	<td></td>
+</tr>
+<!--# hash 16 - user_id=XXX price=20 comment=labas vakaras   issue_date='2012-01-01 23:23:23'  number=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=XXX&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash16}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/credit_note/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_5</td>
+	<td>User Resellers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=note_number_5</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=image_not_paid_5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=note_price_5</td>
+	<td>20.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=note_full_price_5</td>
+	<td>20.0000</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<!--# hash 17 credit_note_id=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?credit_note_id=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash17</td>
+</tr>
+<!--# hash 18 credit_note_id=-2-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?credit_note_id=-2&amp;status=paid</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash18</td>
+</tr>
+<!--# hash 19 credit_note_id=&^TT-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?credit_note_id=&amp;^TT&amp;status=paid&amp;comment=labas</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash19</td>
+</tr>
+<!--# hash 20 credit_note_id=3-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?credit_note_id=3&amp;status=paid&amp;comment=labas</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash20</td>
+</tr>
+<!--# hash 21 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?credit_note_id=4&amp;status=paid&amp;comment=labas re</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash21</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--# hash 12 - user_id=5 price=20 comment=labas vakaras-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=reseller&amp;user_id=5&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash12}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<!--# hash 17 credit_note_id=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?credit_note_id=2&amp;test=1&amp;hash=${hash17}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 17 credit_note_id=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=admin&amp;credit_note_id=2&amp;test=1&amp;hash=${hash17}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<!--# hash 18 credit_note_id=-2-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=admin&amp;credit_note_id=-2&amp;status=paid&amp;test=1&amp;hash=${hash18}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<!--# hash 19 credit_note_id=&^TT-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=admin&amp;credit_note_id=&amp;^TT&amp;status=paid&amp;comment=labas&amp;test=1&amp;hash=${hash19}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<!--# hash 20 credit_note_id=3-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=accountant&amp;credit_note_id=3&amp;status=paid&amp;comment=labas&amp;test=1&amp;hash=${hash20}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 21 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=accountant&amp;credit_note_id=5&amp;status=paid&amp;comment=labas re&amp;test=1&amp;hash=${hash21}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 20 credit_note_id=3-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=user_admin&amp;credit_note_id=3&amp;status=paid&amp;comment=labas&amp;test=1&amp;hash=${hash20}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 21 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=user_admin&amp;credit_note_id=5&amp;status=paid&amp;comment=labas re&amp;test=1&amp;hash=${hash21}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 20 credit_note_id=3-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=user_reseller&amp;credit_note_id=3&amp;status=paid&amp;comment=labas&amp;test=1&amp;hash=${hash20}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 21 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=user_reseller&amp;credit_note_id=5&amp;status=paid&amp;comment=labas re&amp;test=1&amp;hash=${hash21}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 20 credit_note_id=3-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=reseller&amp;credit_note_id=3&amp;status=paid&amp;comment=labas&amp;test=1&amp;hash=${hash20}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<!--# hash 21 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=admin&amp;credit_note_id=5&amp;status=paid&amp;comment=labas re&amp;test=1&amp;hash=${hash21}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/credit_note/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=image_paid_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/credit_note/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=image_paid_4</td>
+	<td></td>
+</tr>
+<!--# hash 20 credit_note_id=3-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=admin&amp;credit_note_id=3&amp;status=paid&amp;comment=labas&amp;test=1&amp;hash=${hash20}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<!--# hash 21 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=admin&amp;credit_note_id=5&amp;status=paid&amp;comment=labas re&amp;test=1&amp;hash=${hash21}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<!--# hash 21 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=reseller&amp;credit_note_id=5&amp;status=paid&amp;comment=labas re&amp;test=1&amp;hash=${hash21}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/credit_note/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=image_paid_3</td>
+	<td></td>
+</tr>
+<!--# hash 22 credit_note_id=3-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?credit_note_id=2&amp;user_id=6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash22</td>
+</tr>
+<!--# hash 23 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?credit_note_id=4&amp;user_id=5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash23</td>
+</tr>
+<!--# hash 24 credit_note_id=3-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?credit_note_id=3&amp;status=unpaid&amp;comment=labas</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash24</td>
+</tr>
+<!--# hash 25 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?credit_note_id=5&amp;status=unpaid&amp;comment=labas re</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash25</td>
+</tr>
+<!--# hash 26 credit_note_id=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?credit_note_id=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash26</td>
+</tr>
+<!--# hash 27 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?credit_note_id=4&amp;user_id=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash27</td>
+</tr>
+<!--# hash 28 credit_note_id=#$%^-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?credit_note_id=#$%^&amp;user_id=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash28</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/credit_note/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=image_paid_5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--# hash 1 - user_id=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_notes_get?u=admin&amp;user_id=2&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user_id</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=comment</td>
+	<td>labas vakaras</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=price</td>
+	<td>20.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=price_with_vat</td>
+	<td>20.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=number</td>
+	<td>2</td>
+</tr>
+<!--# hash 22 credit_note_id=2-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_notes_get?u=admin&amp;credit_note_id=2&amp;user_id=6&amp;test=1&amp;hash=${hash22}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user_id</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=comment</td>
+	<td>labas vakaras</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=price</td>
+	<td>20.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=price_with_vat</td>
+	<td>20.0</td>
+</tr>
+<!--# hash 23 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_notes_get?u=admin&amp;credit_note_id=5&amp;user_id=5&amp;test=1&amp;hash=${hash23}</td>
+	<td></td>
+</tr>
+<!--1 credit_notes, negaunu pranešimo, kad nerastas id -->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>not</td>
+	<td></td>
+</tr>
+<!--# hash 26 credit_note_id=3-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_notes_get?u=admin&amp;credit_note_id=2&amp;test=1&amp;hash=${hash26}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user_id</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=comment</td>
+	<td>labas vakaras</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=number</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=price</td>
+	<td>20.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=price_with_vat</td>
+	<td>20.0</td>
+</tr>
+<!--# hash 27 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_notes_get?u=admin&amp;credit_note_id=5&amp;user_id=2&amp;test=1&amp;hash=${hash27}</td>
+	<td></td>
+</tr>
+<!--1 credit_notes, negaunu pranešimo, kad nerastas id -->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>not</td>
+	<td></td>
+</tr>
+<!--# hash 28 credit_note_id=4-->
+<!--<tr> 	<td>open</td> 	<td>/billing/api/credit_notes_get?u=admin&amp;credit_note_id=#$%^&amp;user_id=2&amp;test=1&amp;hash=${hash28}</td> 	<td></td> </tr>-->
+<!--# hash 24 credit_note_id=3-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=admin&amp;credit_note_id=3&amp;status=unpaid&amp;comment=labas&amp;test=1&amp;hash=${hash24}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<!--# hash 25 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=reseller&amp;credit_note_id=5&amp;status=unpaid&amp;comment=labas re&amp;test=1&amp;hash=${hash25}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/credit_note/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=image_not_paid_5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/credit_note/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=image_not_paid_3</td>
+	<td></td>
+</tr>
+<!--# hash 29 credit_note_id=#$%^-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?credit_note_id=#$%^&amp;user_id=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash29</td>
+</tr>
+<!--# hash 30 credit_note_id=2.5-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?credit_note_id=2,5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash30</td>
+</tr>
+<!--# hash 31 credit_note_id=3-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?credit_note_id=3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash31</td>
+</tr>
+<!--# hash 32 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?credit_note_id=4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash32</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--# hash 29 credit_note_id=#$%^-->
+<!--<tr> 	<td>open</td> 	<td>/billing/api/credit_notes_get?u=admin&amp;credit_note_id=#$%^&amp;user_id=2&amp;test=1&amp;hash=${hash29}</td> 	<td></td> </tr>-->
+<!--# hash 30 credit_note_id=2.5-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=user_reseller&amp;credit_note_id=2,5&amp;test=1&amp;hash=${hash30}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 31 credit_note_id=3-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=user_reseller&amp;credit_note_id=3&amp;test=1&amp;hash=${hash31}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 32 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=user_reseller&amp;credit_note_id=5&amp;test=1&amp;hash=${hash32}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 30 credit_note_id=2.5-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=user_admin&amp;credit_note_id=2,5&amp;test=1&amp;hash=${hash30}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 31 credit_note_id=3-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=user_admin&amp;credit_note_id=3&amp;test=1&amp;hash=${hash31}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 32 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=user_admin&amp;credit_note_id=5&amp;test=1&amp;hash=${hash32}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 30 credit_note_id=2.5-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=accountant&amp;credit_note_id=2,5&amp;test=1&amp;hash=${hash30}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 31 credit_note_id=3-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=accountant&amp;credit_note_id=3&amp;test=1&amp;hash=${hash31}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--# hash 32 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=accountant&amp;credit_note_id=5&amp;test=1&amp;hash=${hash32}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/credit_note/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=image_not_paid_5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/credit_note/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=image_not_paid_3</td>
+	<td></td>
+</tr>
+<!--# hash 30 credit_note_id=2.5-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=admin&amp;credit_note_id=2,5&amp;test=1&amp;hash=${hash30}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was deleted</td>
+	<td></td>
+</tr>
+<!--# hash 31 credit_note_id=3-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=admin&amp;credit_note_id=3&amp;test=1&amp;hash=${hash31}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was deleted</td>
+	<td></td>
+</tr>
+<!--# hash 32 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=admin&amp;credit_note_id=5&amp;test=1&amp;hash=${hash32}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<!--# hash 30 credit_note_id=2.5-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=reseller&amp;credit_note_id=2,5&amp;test=1&amp;hash=${hash30}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<!--# hash 31 credit_note_id=3-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=reseller&amp;credit_note_id=3&amp;test=1&amp;hash=${hash31}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<!--# hash 32 credit_note_id=4-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=reseller&amp;credit_note_id=5&amp;test=1&amp;hash=${hash32}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_notes_get?u=admin&amp;user_id=9&amp;test=1&amp;hash=</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/credit_note/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=image_not_paid_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/credit_note/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=image_not_paid_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/disable_hash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<!--API commands without hash-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?user_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=2&amp;price=-23&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=0&amp;price=20&amp;comment=labas vakaras issue_date=1330594129&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=2&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=reseller&amp;user_id=3&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=reseller&amp;user_id=5&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was created</td>
+	<td></td>
+</tr>
+<!--su password ir senu linku-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;p=admin1&amp;user_id=2&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=reseller&amp;p=reseller1&amp;user_id=5&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=admin&amp;p=admin1&amp;credit_note_id=6&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=reseller&amp;p=reseller1&amp;credit_note_id=7&amp;status=paid&amp;comment=labas re&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=admin&amp;p=admin1&amp;credit_note_id=6&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=reseller&amp;p=reseller1&amp;credit_note_id=7&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_notes?u=admin&amp;p=admin1&amp;user_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2 2012-03-01 11:28:49 +0200 2 labas vakaras 20.0 20.0 2 2012-03-01 11:28:49 +0200 2 labas vakaras 20.0 20.0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_notes?u=admin&amp;p=admin1&amp;user_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2 2012-03-01 11:28:49 +0200 2 labas vakaras 20.0 20.0 2 2012-03-01 11:28:49 +0200 2 labas vakaras 20.0 20.0</td>
+	<td></td>
+</tr>
+<!--test=1 formato testavimas - iki siol buvo tik html-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/settings/api/enable_xml</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_create?u=admin&amp;user_id=2&amp;price=20&amp;comment=labas vakaras&amp;issue_date=1330594129&amp;number=2&amp;test=1&amp;hash=${hash8}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=page</td>
+	<td>Credit note was created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_update?u=admin&amp;credit_note_id=1&amp;status=paid&amp;comment=labas re&amp;test=1&amp;hash=${hash21}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=page</td>
+	<td>Credit note was updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=admin&amp;credit_note_id=10&amp;test=1&amp;hash=${hash30}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=page</td>
+	<td>Credit note was deleted</td>
+</tr>
+<!--various accountant permissions-->
+<!--Grand accountant variuos permissions to create, edit, update, view credit notes-->
+<tr>
+	<td>open</td>
+	<td>/billing/permissions/list?group_type=accountant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>group1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=description</td>
+	<td>all necesary permissions</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;image&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Group created</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>group2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;image&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Group created</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>group3</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;image&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Group created</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=name</td>
+	<td>group4</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;image&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Group created</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Edit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=invoices_manage_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=see_financial_data_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Group updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/permissions/list?group_type=accountant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=edit_link_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=see_financial_data_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=invoices_manage_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Group updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/permissions/list?group_type=accountant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=edit_link_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=see_financial_data_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=invoices_manage_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Group updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/permissions/list?group_type=accountant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=edit_link_4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=see_financial_data_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=invoices_manage_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Group updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=accountant_type_select</td>
+	<td>label=group1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+</tr>
+<!--Try to create few credit notes for admin's users, but when logged in as accountant, but send only necesary params. Accountant has Incoice manage Write/Read, financial data read permissions, so he cannot create any credit notes-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=accountant_type_select</td>
+	<td>label=group2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_create?u=accountant&amp;p=accountant1&amp;user_id=2&amp;price=77&amp;issue_date=1330040000&amp;test=1&amp;hash=c857cb96bbc8428f6c7ec80d6700859ae1de1173</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Bad login</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_create?u=accountant&amp;p=accountant1&amp;user_id=3&amp;price=88&amp;issue_date=1340040000&amp;test=1&amp;hash=7843823941fca74449cbff5d042838d0122bf340</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Bad login</td>
+</tr>
+<!--Try to create few credit notes for admin's users, but when logged in as accountant, but send only necesary params. Accountant has Incoice manage Write/Read, financial data read permissions, so he cannot create any credit notes-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=accountant_type_select</td>
+	<td>label=group3</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_create?u=accountant&amp;p=accountant1&amp;user_id=2&amp;price=77&amp;issue_date=1330040000&amp;test=1&amp;hash=c857cb96bbc8428f6c7ec80d6700859ae1de1173</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Bad login</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_create?u=accountant&amp;p=accountant1&amp;user_id=3&amp;price=88&amp;issue_date=1340040000&amp;test=1&amp;hash=7843823941fca74449cbff5d042838d0122bf340</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Bad login</td>
+</tr>
+<!--Try to create few credit notes for admin's users, but when logged in as accountant, but send only necesary params. Accountant has Incoice manage Write/Read, financial data read permissions, so he cannot create any credit notes-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=accountant_type_select</td>
+	<td>label=group4</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_create?u=accountant&amp;p=accountant1&amp;user_id=2&amp;price=77&amp;issue_date=1330040000&amp;test=1&amp;hash=c857cb96bbc8428f6c7ec80d6700859ae1de1173</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Bad login</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_create?u=accountant&amp;p=accountant1&amp;user_id=3&amp;price=88&amp;issue_date=1340040000&amp;test=1&amp;hash=7843823941fca74449cbff5d042838d0122bf340</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Bad login</td>
+</tr>
+<!--Reseller should be able to see only his own users credit notes. he created 2 credit notes they prices are 77, 88-->
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=reseller&amp;p=reseller1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>5 2012-03-01 11:28:49 +0200 2 labas vakaras 20.0 20.0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=reseller&amp;p=reseller1&amp;credit_note_id=9&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>5 2012-03-01 11:28:49 +0200 2 labas vakaras 20.0 20.0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=reseller&amp;p=reseller1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=credit_notes</td>
+	<td></td>
+</tr>
+<!--Accountant without can see finances cannot see financial data-->
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user_id</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=issue_date</td>
+	<td>2012-03-01 11:28:49 +0200</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=number</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=comment</td>
+	<td>labas re</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=price</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=price_with_vat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=pay_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;user_id=2&amp;test=1&amp;hash=7843823941fca74449cbff5d042838d0122bf340</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user_id</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=issue_date</td>
+	<td>2012-03-01 11:28:49 +0200</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=number</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=comment</td>
+	<td>labas re</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=price</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=price_with_vat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=pay_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=4&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>4 2012-03-01 11:28:49 +0200 2 labas vakaras</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=price</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=price_with_vat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=pay_date</td>
+	<td></td>
+</tr>
+<!--Accountant as admin should not see information about other users credit notes-->
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;user_id=5&amp;test=1&amp;hash=6931829e1191e97dff9a76883f4864d2336999a9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=credit_notes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=6&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=credit_notes</td>
+	<td></td>
+</tr>
+<!--Change accountants rights-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=accountant_type_select</td>
+	<td>label=group3</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user_id</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=issue_date</td>
+	<td>2012-03-01 11:28:49 +0200</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=number</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=comment</td>
+	<td>labas re</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=price</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=price_with_vat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=pay_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;user_id=2&amp;test=1&amp;hash=7843823941fca74449cbff5d042838d0122bf340</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user_id</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=issue_date</td>
+	<td>2012-03-01 11:28:49 +0200</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=number</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=comment</td>
+	<td>labas re</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=price</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=price_with_vat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=pay_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=4&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>4 2012-03-01 11:28:49 +0200 2 labas vakaras</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=price</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=price_with_vat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=pay_date</td>
+	<td></td>
+</tr>
+<!--Accountant as admin should not see information about other users credit notes-->
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;user_id=5&amp;test=1&amp;hash=6931829e1191e97dff9a76883f4864d2336999a9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=credit_notes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=6&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=credit_notes</td>
+	<td></td>
+</tr>
+<!--Change accountants rights, he should be able to see financial data-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=accountant_type_select</td>
+	<td>label=group2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user_id</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=issue_date</td>
+	<td>2012-03-01 11:28:49 +0200</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=number</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=comment</td>
+	<td>labas re</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=price</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=price_with_vat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=pay_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=price</td>
+	<td>20.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=price_with_vat</td>
+	<td>20.0</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;user_id=2&amp;test=1&amp;hash=7843823941fca74449cbff5d042838d0122bf340</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user_id</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=issue_date</td>
+	<td>2012-03-01 11:28:49 +0200</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=number</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=comment</td>
+	<td>labas re</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=price</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=price_with_vat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=pay_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=price</td>
+	<td>20.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=price_with_vat</td>
+	<td>20.0</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=4&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>4 2012-03-01 11:28:49 +0200 2 labas vakaras 20.0 20.0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=price</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=price_with_vat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=pay_date</td>
+	<td></td>
+</tr>
+<!--Accountant as admin should not see information about other users credit notes-->
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;user_id=5&amp;test=1&amp;hash=6931829e1191e97dff9a76883f4864d2336999a9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=credit_notes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=6&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=credit_notes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=accountant_type_select</td>
+	<td>label=group1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user_id</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=issue_date</td>
+	<td>2012-03-01 11:28:49 +0200</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=number</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=comment</td>
+	<td>labas re</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=price</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=price_with_vat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=pay_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=price</td>
+	<td>20.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=price_with_vat</td>
+	<td>20.0</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;user_id=2&amp;test=1&amp;hash=7843823941fca74449cbff5d042838d0122bf340</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user_id</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=issue_date</td>
+	<td>2012-03-01 11:28:49 +0200</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=number</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=comment</td>
+	<td>labas re</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=price</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=price_with_vat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=pay_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=price</td>
+	<td>20.0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=price_with_vat</td>
+	<td>20.0</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=4&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>4 2012-03-01 11:28:49 +0200 2 labas vakaras 20.0 20.0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=price</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=price_with_vat</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=pay_date</td>
+	<td></td>
+</tr>
+<!--Accountant as admin should not see information about other users credit notes-->
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;user_id=5&amp;test=1&amp;hash=6931829e1191e97dff9a76883f4864d2336999a9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=credit_notes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=6&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=credit_notes</td>
+	<td></td>
+</tr>
+<!--There are few posible error mesages that might raise when trying to update credit note-->
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=adm&amp;comment=updated_comment&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=user&amp;p=user1&amp;comment=updated_comment&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--Admin should have rights to update credit note comment or set note as paid or unpaid-->
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=admin&amp;p=admin1&amp;comment=updated_comment&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=admin&amp;p=admin1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=admin&amp;p=admin1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2 2012-03-01 11:28:49 +0200 2 labas re 20.0 20.0 *</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=admin&amp;p=admin1&amp;credit_note_id=1&amp;comment=updated_comment&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=admin&amp;p=admin1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2 2012-03-01 11:28:49 +0200 2 updated_comment 20.0 20.0*</td>
+	<td></td>
+</tr>
+<!--Update credit note status. Verify that amount is added and subtracted from balance-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=admin&amp;p=admin1&amp;credit_note_id=1&amp;status=unpaid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=admin&amp;p=admin1&amp;credit_note_id=1&amp;status=paid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>20.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=admin&amp;p=admin1&amp;credit_note_id=1&amp;status=paid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>20.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=admin&amp;p=admin1&amp;credit_note_id=1&amp;status=unpaid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<!--But admin shoud not have rights to update not his own users credit notes-->
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=admin&amp;p=admin1&amp;credit_note_id=5&amp;status=unpaid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<!--Accountant should not be able to update status if he does not have sufficient privileges-->
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;comment=updated_comment&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2 2012-03-01 11:28:49 +0200 2 updated_comment 20.0 20.0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;comment=updated_comment&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2 2012-03-01 11:28:49 +0200 2 updated_comment 20.0 20.0</td>
+	<td></td>
+</tr>
+<!--Update credit note status. Verify that amount is added and subtracted from balance-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=admin&amp;p=admin1&amp;credit_note_id=1&amp;status=unpaid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=admin&amp;p=admin1&amp;credit_note_id=1&amp;status=paid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>20.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=admin&amp;p=admin1&amp;credit_note_id=1&amp;status=paid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>20.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=admin&amp;p=admin1&amp;credit_note_id=1&amp;status=unpaid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<!--Change accountants rights, he should be able to see financial data, but should not be able to edit it-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=accountant_type_select</td>
+	<td>label=group2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;comment=updated_comment&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2 2012-03-01 11:28:49 +0200 2 updated_comment 20.0 20.0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;comment=updated_comment&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2 2012-03-01 11:28:49 +0200 2 updated_comment 20.0 20.0</td>
+	<td></td>
+</tr>
+<!--Update credit note status. Verify that amount is added and subtracted from balance-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;status=unpaid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;status=paid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;status=paid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;status=unpaid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<!--Change accountants rights, he should be able to see financial data, but should not be able to edit it-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=accountant_type_select</td>
+	<td>label=group2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;comment=updated_comment&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2 2012-03-01 11:28:49 +0200 2 updated_comment 20.0 20.0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;comment=updated_comment&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2 2012-03-01 11:28:49 +0200 2 updated_comment 20.0 20.0</td>
+	<td></td>
+</tr>
+<!--Update credit note status. Verify that amount is added and subtracted from balance-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> 0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;status=unpaid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;status=paid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;status=paid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;status=unpaid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<!--Change accountants rights, he should be not able to see or edit financial data-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=accountant_type_select</td>
+	<td>label=group3</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;comment=updated_comment&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2 2012-03-01 11:28:49 +0200 2 updated_comment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;comment=updated_comment&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2 2012-03-01 11:28:49 +0200 2 updated_comment</td>
+	<td></td>
+</tr>
+<!--Update credit note status. Verify that amount is added and subtracted from balance-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> 0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;status=unpaid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;status=paid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;status=paid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;status=unpaid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<!--Change accountants rights, he should be able to see financial data, but should not be able to edit it-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=accountant_type_select</td>
+	<td>label=group4</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;comment=updated_comment&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2 2012-03-01 11:28:49 +0200 2 updated_comment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;comment=updated_comment&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_notes?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>2 2012-03-01 11:28:49 +0200 2 updated_comment</td>
+	<td></td>
+</tr>
+<!--Update credit note status. Verify that amount is added and subtracted from balance-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> 0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;status=unpaid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;status=paid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;status=paid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=accountant&amp;p=accountant1&amp;credit_note_id=1&amp;status=unpaid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<!--Update resellers users credit note status. Verify that amount is added and subtracted from balance-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=reseller&amp;p=reseller1&amp;credit_note_id=9&amp;status=unpaid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=reseller&amp;p=reseller1&amp;credit_note_id=9&amp;status=paid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>40.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=reseller&amp;p=reseller1&amp;credit_note_id=9&amp;status=paid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>40.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=reseller&amp;p=reseller1&amp;credit_note_id=9&amp;status=unpaid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<!--But reseller shoud not have rights to update not his own users credit notes-->
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=reseller&amp;p=reseller1&amp;credit_note_id=1&amp;status=unpaid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<!--Verify that response to incorrect login is ok-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=adm&amp;credit_note_id=2&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Bad login</td>
+</tr>
+<!--Verify that response if credit note was not found(credit exists but owner is another user) is ok-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=admin&amp;p=admin1&amp;credit_note_id=6&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Credit note was not found</td>
+</tr>
+<!--Verify that response if credit note was not found(note does not exist) is ok-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=admin&amp;p=admin1&amp;credit_note_id=100&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<!--Verify that ordinery user cannot delete credit notes and response is ok-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=user&amp;p=user&amp;credit_note_id=2&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Bad login</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<!--Try to delete fithout specifieing credit note-->
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_delete?u=admin&amp;p=admin1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<!--Delete admins users credit notes, assert that user balance changes only if paid credit note is deleted-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=admin&amp;p=admin1&amp;credit_note_id=1&amp;status=paid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>20.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_delete?u=admin&amp;p=admin1&amp;credit_note_id=8&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>20.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_delete?u=admin&amp;p=admin1&amp;credit_note_id=1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<!--Delete resellers created credit notes, assert that user balance changes only if paid credit note is deleted-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>0.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_update?u=reseller&amp;p=reseller1&amp;credit_note_id=9&amp;status=paid&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>40.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_delete?u=reseller&amp;p=reseller1&amp;credit_note_id=9&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>40.0000 USD </td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_delete?u=reseller&amp;p=reseller1&amp;credit_note_id=9&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<!--čia turi ištrinti kažkokį kitą credit note-->
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/5</td>
+	<td></td>
+</tr>
+<!--cia turi pasidaryti 0.0000, tam bus sukurtas ticket-->
+<tr>
+	<td>assertTextPresent</td>
+	<td>40.0000 USD </td>
+	<td></td>
+</tr>
+<!--Verify that reseller cannot delete other users credit notes-->
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_delete?u=reseller&amp;p=reseller1&amp;credit_note_id=9&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Credit note was not found</td>
+</tr>
+<!--Verify that response to incorrect login is ok-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=account&amp;credit_note_id=2&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Bad login</td>
+</tr>
+<!--Login as admin to assign group to reseller-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<!--Change accountants rights, he should be able to see financial data, but should not be able to edit it-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=accountant_type_select</td>
+	<td>label=group4</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+</tr>
+<!--Try to delete admins users credit note-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=accountant&amp;p=accountant1&amp;credit_note_id=8&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--Change accountants rights, he should be able to see financial data, but should not be able to edit it-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=accountant_type_select</td>
+	<td>label=group3</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+</tr>
+<!--Try to delete admins users credit note-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=accountant&amp;p=accountant1&amp;credit_note_id=7&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--Change accountants rights, he should be able to see financial data, but should not be able to edit it-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=accountant_type_select</td>
+	<td>label=group2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+</tr>
+<!--Try to delete admins users credit note-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=accountant&amp;p=accountant1&amp;credit_note_id=4&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Bad login</td>
+	<td></td>
+</tr>
+<!--Change accountants rights, he should be able to see financial data, but should not be able to edit it-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=accountant_type_select</td>
+	<td>label=group1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Accountant</td>
+</tr>
+<!--Delete admins users credit note-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=accountant&amp;p=accountant1&amp;credit_note_id=4&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was deleted</td>
+	<td></td>
+</tr>
+<!--Verify that response if credit note was not found(note does not exist) is ok-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/credit_note_delete?u=accountant&amp;p=accountant1&amp;credit_note_id=100&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+<!--Try to delete without specifieing credit note-->
+<tr>
+	<td>open</td>
+	<td>billing/api/credit_note_delete?u=accountant&amp;p=accountant1&amp;test=1&amp;hash=30d0f117301d1f5cfbe27045206c0c2de95e2ac0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Credit note was not found</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

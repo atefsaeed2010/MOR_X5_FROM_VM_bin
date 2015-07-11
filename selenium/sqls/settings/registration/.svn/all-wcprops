@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/49665/mor/gui/branches/x5/selenium/sqls/settings/registration
+END
+allow_registration_username_passwords_in_devices_check.sql
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/!svn/ver/49665/mor/gui/branches/x5/selenium/sqls/settings/registration/allow_registration_username_passwords_in_devices_check.sql
+END
+allow_registration_username_passwords_in_devices_uncheck.sql
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/!svn/ver/49665/mor/gui/branches/x5/selenium/sqls/settings/registration/allow_registration_username_passwords_in_devices_uncheck.sql
+END
+enable_recaptcha.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/49146/mor/gui/branches/x5/selenium/sqls/settings/registration/enable_recaptcha.sql
+END

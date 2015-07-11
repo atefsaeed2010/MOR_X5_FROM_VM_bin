@@ -1,0 +1,10 @@
+# disable hash
+settings/api/disable_hash_0.sql
+settings/api/disable_hash_3.sql
+# accountant permissions
+permissions/accountant/create.sql
+permissions/accountant/dids_read.sql
+user/accountant_4/assign_permissions.sql
+# reseller pro
+/user/reseller_3/make_rspro.sql
+# bundle loaded

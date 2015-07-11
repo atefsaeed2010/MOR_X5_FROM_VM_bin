@@ -1,0 +1,35 @@
+<div class="nb"><%= b_user + _('User') %>: <%= link_nice_user(@user) %></div>
+<br/>
+
+<% if session[:usertype] == "admin" or session[:usertype] == "reseller" %>
+    <table width="100%" class="maintable">
+      <tr>
+        <th align="left" nowrap width="10%"><%= link_to b_rules + _('Rules'), :controller => :device_rules, :action => :list, :id => @device.id %></th>
+        <% if pbx_active? %>
+            <th align="left" nowrap width="10%"><%= link_to b_callflow + _('Callflow'), :action => "callflow", :id => @device.id %></th>
+        <% end %>
+        <th align="left" nowrap width="10%"><%= link_to b_did + _('DIDs'), :action => "device_dids", :id => @device.id %></th>
+        <th align="left" nowrap width="10%"><%= link_to b_cli + _('CLIs'), :action => "clis", :user_id => @device.user_id, :device_id => @device.id %></th>
+        <% if session[:usertype] == "admin" %>
+            <th align="left" nowrap width="15%"><%= link_to b_extlines + _('Extlines'), :action => "device_extlines", :id => @device.id %></th>
+        <% end %>
+        <th align="left" nowrap width="10%"><%= link_to b_view + _('Device_details'), :action => "device_all_details", :id => @device.id %></th>
+        <th width="100%"></th>
+      </tr>
+    </table>
+<% end %>
+<br/>
+
+<%= form_tag(:action => 'device_update', :id => @device.id) do %>
+    <%= render 'form_h323', device: @device, device_type: @device_type,
+               new_device: @new_device, default: @default, devgroups: @devgroups,
+               extension: @extension, locations: @locations, tariffs: @tariffs,
+               user: @user, servers: @servers, cid_name: @cid_name, cid_number: @cid_number,
+               device_caller_id_number: @device_caller_id_number, device_dids_numbers: @device_dids_numbers,
+               number_pools: @number_pools, device_cids: @device_cids, server_devices: @server_devices,
+               asterisk_servers: @asterisk_servers, audio_codecs: @audio_codecs, video_codecs: @video_codecs %>
+    <br/>
+    <% if can_see_finances? -%>
+        <%= submit_tag _('update'), :disable_with => _('Processing..') %>
+    <% end -%>
+<% end %>

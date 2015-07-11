@@ -1,0 +1,1841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>monitorings_settings</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">monitorings_settings</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(@href, '/billing/monitorings/settings')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/sql/main</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Blacklist Feature enabled:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Blacklist LCR:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Routing Threshold:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_no</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_global</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_-2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_routing_threshold</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_-2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_routing_threshold</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_routing_threshold_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>user_routing_threshold_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>user_routing_threshold_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_routing_threshold_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_-2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_blacklist_lcr</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_blacklist_enabled_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_routing_threshold_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=user_routing_threshold</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=user_routing_threshold_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=user_routing_threshold_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold</td>
+	<td>abcd</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold_2</td>
+	<td>efgh</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold_3</td>
+	<td>klmn</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_blacklist_lcr_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=user_blacklist_lcr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_blacklist_lcr</td>
+	<td>NoneLCR ordered by percent LCR ordered by price LCR ordered by priority Primary</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td>NoneLCR ordered by percent LCR ordered by price LCR ordered by priority Primary</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td>NoneLCR ordered by percent LCR ordered by price LCR ordered by priority Primary</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_blacklist_lcr</td>
+	<td>label=LCR ordered by price</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td>label=LCR ordered by percent</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td>label=LCR ordered by priority</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User's settings successfully changed: Test Wholesale User</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_-2</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_-2</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_blacklist_lcr</td>
+	<td>LCR ordered by price</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td>LCR ordered by percent</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td>LCR ordered by priority</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_routing_threshold</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_routing_threshold_2</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_routing_threshold_3</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_routing_threshold_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold_2</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold_3</td>
+	<td>gdfgfg</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=sbmt</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Wholesale User</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_2</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_3</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold</td>
+	<td>dgdfg</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold_2</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold_3</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=sbmt</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>User's settings successfully changed: Test Wholesale User</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_2</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_3</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_no</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_global</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_-2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_routing_threshold</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_routing_threshold_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_routing_threshold_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_-2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Global(None, None, None)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/monitorings/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Magnifier&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title</td>
+	<td>Monitorings Settings</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Chanspy is disabled globally:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Blacklist Feature enabled:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Threshold #1:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Threshold #2:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Threshold #3:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_routing_threshold</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_routing_threshold_2</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_routing_threshold_3</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>LCR:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Use default blacklisting rules:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Default scores:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Default SRC Score:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Default DST Score:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Default IP Score:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=default_blacklist_lcr</td>
+	<td>None Primary LCR ordered by price LCR ordered by priority LCR ordered by percent</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=default_blacklist_lcr_2</td>
+	<td>None Primary LCR ordered by price LCR ordered by priority LCR ordered by percent</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=default_blacklist_lcr_3</td>
+	<td>None Primary LCR ordered by price LCR ordered by priority LCR ordered by percent</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=disable_chanspy</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=blacklist_enabled</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_bl_rules</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_src_score</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_dst_score</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_ip_score</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=disable_chanspy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=blacklist_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=default_blacklist_lcr</td>
+	<td>label=LCR ordered by percent</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_routing_threshold</td>
+	<td>123123123123</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=default_bl_rules</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_src_score</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_dst_score</td>
+	<td>70</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_ip_score</td>
+	<td>80</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=default_blacklist_lcr</td>
+	<td>label=LCR ordered by price</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=default_blacklist_lcr_2</td>
+	<td>label=LCR ordered by priority</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=default_blacklist_lcr_3</td>
+	<td>label=LCR ordered by percent</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_routing_threshold</td>
+	<td>dfgdfg</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_routing_threshold_2</td>
+	<td>ghjghj0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_routing_threshold_3</td>
+	<td>eawsad</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Monitorings settings saved</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_routing_threshold</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_routing_threshold_2</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_routing_threshold_3</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=default_blacklist_lcr</td>
+	<td>LCR ordered by price</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=default_blacklist_lcr_2</td>
+	<td>LCR ordered by priority</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=default_blacklist_lcr_3</td>
+	<td>LCR ordered by percent</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=disable_chanspy</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=blacklist_enabled</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=default_blacklist_lcr</td>
+	<td>LCR ordered by price</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_bl_rules</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_src_score</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_dst_score</td>
+	<td>70</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_ip_score</td>
+	<td>80</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_src_score</td>
+	<td>ghjghjgh</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_dst_score</td>
+	<td>ghjghj</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Score should be a natural number</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=disable_chanspy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=blacklist_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_routing_threshold</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_routing_threshold_2</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_routing_threshold_3</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=default_bl_rules</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_src_score</td>
+	<td>fhvjgmh</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_dst_score</td>
+	<td>tfgmjft</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_ip_score</td>
+	<td>dftghjhgedfg</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Score should be a natural number</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=disable_chanspy</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=default_bl_rules</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=default_blacklist_lcr</td>
+	<td>label=LCR ordered by priority</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_routing_threshold</td>
+	<td>55555555</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_src_score</td>
+	<td>fhvjgmh</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_dst_score</td>
+	<td>tfgmjft</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_ip_score</td>
+	<td>dftghjhgedfg</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Score should be a natural number</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=blacklist_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_src_score</td>
+	<td>fhvjgmh</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_dst_score</td>
+	<td>tfgmjft</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_ip_score</td>
+	<td>dftghjhgedfg</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=disable_chanspy</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_bl_rules</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=default_routing_threshold</td>
+	<td>55555555</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=default_blacklist_lcr</td>
+	<td>LCR ordered by priority</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_src_score</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_dst_score</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=default_ip_score</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Monitorings settings saved</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=blacklist_enabled</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_no</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_global</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_-2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_routing_threshold</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_routing_threshold_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_routing_threshold_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_-2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Global(LCR ordered by priority, LCR ordered by priority, LCR ordered by percent) </td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Global(55555555, 9, 4)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Global(LCR ordered by priority, LCR ordered by priority, LCR ordered by percent)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold_2</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold_3</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=user_routing_threshold</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_blacklist_enabled_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_blacklist_lcr_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_blacklist_lcr</td>
+	<td>label=LCR ordered by priority</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td>label=LCR ordered by priority</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td>label=LCR ordered by priority</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User's settings successfully changed: Test Wholesale User</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_blacklist_lcr</td>
+	<td>LCR ordered by priority</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_2</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_3</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_routing_threshold_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold</td>
+	<td>srdtfyhgjh</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/default_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Global(55555555, 9, 4)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Global(LCR ordered by priority, LCR ordered by priority, LCR ordered by percent) </td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Blacklist Feature enabled:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Blacklist LCR:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Routing Threshold:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_no</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_global</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_-2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_routing_threshold</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_-2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_routing_threshold</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_routing_threshold_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>user_routing_threshold_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>user_routing_threshold_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_routing_threshold_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_-2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_blacklist_lcr</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_blacklist_enabled_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_routing_threshold_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=user_routing_threshold</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=user_routing_threshold_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=user_routing_threshold_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold</td>
+	<td>abcd</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold_2</td>
+	<td>efgh</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold_3</td>
+	<td>klmn</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_blacklist_lcr_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=user_blacklist_lcr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_blacklist_lcr</td>
+	<td>NoneLCR ordered by percent LCR ordered by price LCR ordered by priority Primary</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td>NoneLCR ordered by percent LCR ordered by price LCR ordered by priority Primary</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td>NoneLCR ordered by percent LCR ordered by price LCR ordered by priority Primary</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_blacklist_lcr</td>
+	<td>label=LCR ordered by price</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td>label=LCR ordered by percent</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td>label=LCR ordered by priority</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Default User saved</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_2</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_3</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_-2</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_blacklist_lcr</td>
+	<td>LCR ordered by price</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td>LCR ordered by percent</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td>LCR ordered by priority</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_routing_threshold_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold_2</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold_3</td>
+	<td>gdfgfg</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Default User saved</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_2</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_3</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold</td>
+	<td>dgdfg</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold_2</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_routing_threshold_3</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Default User saved</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_2</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_3</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_2</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_3</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Global(55555555, 9, 4)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_blacklist_lcr</td>
+	<td>LCR ordered by price</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td>LCR ordered by percent</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td>LCR ordered by priority</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_routing_threshold_-2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_routing_threshold</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_routing_threshold_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_2</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_3</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_blacklist_lcr_-2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_blacklist_enabled_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_blacklist_lcr</td>
+	<td>label=LCR ordered by price</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_blacklist_enabled_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_routing_threshold_-2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=user_username</td>
+	<td>testuser</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=password_password</td>
+	<td>testuser1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/22</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_-2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_-2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Global(55555555, 9, 4)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Global(LCR ordered by priority, LCR ordered by priority, LCR ordered by percent) </td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_routing_threshold</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_routing_threshold_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>user_routing_threshold_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>user_routing_threshold</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>user_routing_threshold_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>user_routing_threshold_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/monitorings/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=default_blacklist_lcr</td>
+	<td>label=LCR ordered by percent</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=blacklist_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/make_select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=table</td>
+	<td>label=users</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=search_devices_all</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=blacklist_enabled_value</td>
+	<td>global</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=blacklist_lcr_value</td>
+	<td>-1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=routing_threshold_value</td>
+	<td>-1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_no</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_enabled_global</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_-2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_routing_threshold_</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_routing_threshold</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_routing_threshold_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_routing_threshold_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_-2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Global(LCR ordered by percent, LCR ordered by priority, LCR ordered by percent) </td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_blacklist_lcr_</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=user_blacklist_lcr_3</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

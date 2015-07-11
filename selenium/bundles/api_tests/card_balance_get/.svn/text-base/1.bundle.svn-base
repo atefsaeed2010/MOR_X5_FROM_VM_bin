@@ -1,0 +1,11 @@
+# calling cards permissions for reseller
+# ---
+# create permission group
+permissions/reseller/create.sql
+# enable manage callign cards
+permissions/reseller/cc_write.sql
+# assign permission to acc
+user/reseller_3/assign_permissions.sql
+# assign distributor to card 2
+calling_cards/card_2/assign_distributor_2.sql
+# bundle loaded

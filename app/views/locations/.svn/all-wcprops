@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/51859/mor/gui/branches/x5/app/views/locations
+END
+localization.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/app/views/locations/localization.html.erb
+END
+location_devices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/app/views/locations/location_devices.html.erb
+END
+edit_localization.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/app/views/locations/edit_localization.html.erb
+END
+import_admins_locations.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/app/views/locations/import_admins_locations.html.erb
+END
+location_rules.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/51859/mor/gui/branches/x5/app/views/locations/location_rules.html.erb
+END
+location_rule_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/51859/mor/gui/branches/x5/app/views/locations/location_rule_edit.html.erb
+END

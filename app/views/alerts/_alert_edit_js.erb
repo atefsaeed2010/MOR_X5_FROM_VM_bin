@@ -1,0 +1,293 @@
+<script type="text/javascript">
+  var clear_fields = new Array(
+    $('alert_clear_if_less'),
+    $('alert_clear_if_more'),
+    $('alert_clear_after'),
+    $('alert_action_clear_enable_object'),
+    $('alert_action_clear_change_lcr_id'),
+    $('alert_enable_provider_in_lcr'),
+    $('alert_action_clear_email'));
+  var disable_clear = $('alert_disable_clear');
+
+  <% if action_link.eql? 'alert_add' %>
+    var user     = $('user');
+    var user_val = $('alert_check_data1');
+    var dev      = $('device');
+    var prov     = $('provider');
+    var prov_val = $('alert_check_data2');
+    var dest     = $('destination');
+    var dest_val = $('alert_check_data3');
+    var dest_g   = $('destination_group');
+    var dest_g_val = $('alert_check_data4');
+    new Form.Element.EventObserver('device_user', function(element, value) {updateDevices();})
+    new Form.Element.EventObserver('alert_check_data2', function(element, value) {updateLcrs();})
+  <% end %>
+
+  var regexp = /^0*\.?0*$/;  // regex to detect blank string or zero float
+  var ail = $('alert_alert_if_less');
+  var aim = $('alert_alert_if_more');
+  var cil = $('alert_clear_if_less');
+  var cim = $('alert_clear_if_more');
+  var ca  = $('alert_clear_after');
+
+  function updateObjectNameFields(value) {
+    if (value == "user") {
+      user.style.display = 'block';
+      enable_field(user_val);
+    } else {
+      user.style.display = 'none';
+      disable_field(user_val);
+    }
+    if (value == "provider") {
+      prov.style.display = 'block';
+      enable_field(prov_val);
+    } else {
+      prov.style.display = 'none';
+      disable_field(prov_val);
+    }
+    if (value == "destination") {
+      dest.style.display = 'block';
+      enable_field(dest_val);
+    } else {
+      dest.style.display = 'none';
+      disable_field(dest_val);
+    }
+    if (value == "destination_group") {
+      dest_g.style.display = 'block';
+      enable_field(dest_g_val);
+    } else {
+      dest_g.style.display = 'none';
+      disable_field(dest_g_val);
+    }
+    if (value == "device") {
+      dev.style.display = 'block';
+    } else {
+      dev.style.display = 'none';
+    }
+  }
+
+  function updateDevices() {
+    new Ajax.Updater('users_device', '<%= Web_Dir %>/dialplans/dialplans_device_ajax', {asynchronous:false, evalScripts:true, onComplete:function(request){Element.hide('spinner');}, onLoading:function(request){Element.show('spinner');}, parameters:'id=' + $('device_user').value + '&device_id=' + <%= is_numeric?(alert.check_data) ? alert.check_data.to_s : "0" %>})
+  }
+  function updateLcrs() {
+    new Ajax.Updater('disable_prov_in_lcr', '<%= Web_Dir %>/alerts/ajax_get_lcrs', {asynchronous:false, evalScripts:true, onComplete:function(request){Element.hide('spinner');}, onLoading:function(request){Element.show('spinner');}, parameters:'id=<%= alert.id.to_s %>&prov_id=' + ($('alert_check_data2') ? prov_val.value : <%= alert.check_data.to_i.to_s %>) + '&dis=<%= alert.disable_provider_in_lcr.to_s %>'})
+  }
+
+  function disableObjectCheck() {
+    if ($('alert_action_alert_disable_object').checked && disable_clear.checked == false) {
+      enable_field($('alert_action_clear_enable_object'));
+    } else {
+      disable_field($('alert_action_clear_enable_object'));
+    }
+  }
+
+  function enableClearFields() {
+      if (disable_clear.checked == true) {
+          for(var i=0,j=clear_fields.length; i<j; i++){
+              disable_field(clear_fields[i]);
+          };
+          cim.value     = "";
+          cil.value     = "";
+          ca.value      = "";
+          <% ['year', 'month', 'day', 'hour', 'minute'].each do |value| %>
+          disable_field($("clear_on_date_<%= value %>"));
+          <% end %>
+      } else {
+          for(var i=0,j=clear_fields.length; i<j; i++){
+              enable_field(clear_fields[i]);
+          };
+          <% ['year', 'month', 'day', 'hour', 'minute'].each do |value| %>
+          enable_field($("clear_on_date_<%= value %>"));
+          <% end %>
+          disableObjectCheck();
+      }
+      disable_enable_alerts_and_clears();
+  }
+
+  Event.observe(window, 'load', function () {
+    <% if action_link.eql? 'alert_add' %>
+      updateDevices();
+      updateObjectNameFields($('alert_check_type').value);
+      disableObjectCheck();
+      check_alert_check_type();
+      updateAlertTypeParams();
+      Event.observe($('alert_check_type'), 'change', function(){
+        updateAlertTypeParams();
+      });
+    <% else %>
+      change_counting('<%= alert.alert_type %>');
+    <% end %>
+    enableClearFields();
+    updateLcrs();
+    check_prov_settings();
+  });
+
+  function updateAlertTypeParams() {
+    select_html = '';
+
+    switch ($('alert_check_type').value) {
+      case 'user': select_html = '<%= generate_parameters(alert.alert_type, alert_type_parameters[:user]) %>';
+        break;
+      case 'provider': select_html = '<%= generate_parameters(alert.alert_type, alert_type_parameters[:provider]) %>';
+        break;
+      default: select_html = '<%= generate_parameters(alert.alert_type, alert_type_parameters[:base]) %>';
+    }
+
+    $('alert_type_parameters').innerHTML = select_html;
+
+    change_counting($('alert_type_parameters').value);
+
+    Event.observe($('alert_type_parameters'), 'change', function(){
+      change_counting($('alert_type_parameters').value);
+    });
+  }
+
+  function change_counting(value) {
+    groupSelected(false);
+    if ((value == "asr") || (value == 'hgc_percent')) {
+      $('params_counting').innerHTML = "%";
+    } else if (['calls_total', 'calls_answered', 'calls_not_answered', 'price_sum', 'sim_calls', 'hgc_absolute'].indexOf(value) > -1) {
+      $('params_counting').innerHTML = "unit";
+    } else if (value == "group") {
+      $('params_counting').innerHTML = '';
+      groupSelected(true);
+    } else {
+      $('params_counting').innerHTML = "seconds";
+    }
+
+      if ((<%= ['hgc_absolute', 'hgc_percent'].include?(alert.alert_type) and action_link.eql? 'alert_update'%>) ||
+              (value == 'hgc_percent') || (value == 'hgc_absolute')) {
+          $('hgc_input').style.display = '';
+      } else {
+          $('hgc_input').style.display = 'none';
+      }
+  }
+
+  function check_alert_check_type() {
+    if (['user','device'].indexOf($('alert_check_type').value) > -1) {
+      enable_field($('alert_action_alert_disable_object'));
+      enable_field($('alert_action_alert_change_lcr_id'));
+      enable_field($('alert_action_clear_change_lcr_id'));
+      disableObjectCheck();
+    } else if ($('alert_check_type').value == 'provider') {
+      enable_field($('alert_action_alert_disable_object'));
+      disable_field($('alert_action_alert_change_lcr_id'));
+      disable_field($('alert_action_clear_change_lcr_id'));
+      disableObjectCheck();
+    } else {
+      disable_field($('alert_action_clear_enable_object'));
+      disable_field($('alert_action_alert_disable_object'));
+      disable_field($('alert_action_alert_change_lcr_id'));
+      disable_field($('alert_action_clear_change_lcr_id'));
+    }
+  }
+
+  function check_prov_settings() {
+    <% if action_link.eql? 'alert_update' %>
+      if (<%= alert.check_type.to_s == 'provider' and action_link.eql? 'alert_update'%>) {
+        enableLcrFields();
+      } else {
+        disableLcrFields();
+      }
+    <% else %>
+      if ($('alert_check_type').value == 'provider') {
+        enableLcrFields();
+      } else {
+        disableLcrFields();
+      }
+    <% end %>
+
+    if ((<%= (alert.check_type.to_s == 'user' or alert.check_type.to_s == 'device')  and action_link.eql? 'alert_update'%>) || ($('alert_check_type') && $('alert_check_type').value == 'user' || $('alert_check_type').value == 'device')) {
+      $('notify_to_user').style.display = '';
+    } else {
+      $('notify_to_user').style.display = 'none';
+    }
+  }
+
+  function enableLcrFields() {
+    $('prov_lcr_settings1').style.display = '';
+    $('prov_lcr_settings2').style.display = '';
+    enable_field($('alert_enable_provider_in_lcr'));
+    enable_field($('alert_disable_provider_in_lcr'));
+  }
+
+  function disableLcrFields() {
+    $('prov_lcr_settings1').style.display = 'none';
+    $('prov_lcr_settings2').style.display = 'none';
+    disable_field($('alert_enable_provider_in_lcr'));
+    disable_field($('alert_disable_provider_in_lcr'));
+  }
+
+
+  // function to disable aim,ail,cim,cil settings to protect client from logic mistakes.
+
+  function disable_enable_alerts_and_clears() {
+    enable_field(ail);
+    enable_field(aim);
+    if (disable_clear.checked == false) {
+      enable_field(cil);
+      enable_field(cim);
+    }
+
+    if (!regexp.test(ail.value) || !regexp.test(cim.value)) {
+      //disable alert >= clear <=.
+      disable_field(cil);
+      disable_field(aim);
+    } else if (!regexp.test(aim.value) || !regexp.test(cil.value)) {
+      //disable alert <= clear >=.
+      disable_field(ail);
+      disable_field(cim);
+    }
+  }
+
+  // function to disable other clear inputs then selected one
+  function clears_cond_basis_check() {
+    if (!regexp.test(cil.value) || !regexp.test(cim.value)) {
+      disable_field(ca);
+    } else if (!regexp.test(ca.value)) {
+      disable_field(cil);
+      disable_field(cim);
+    } else {
+      enable_field(ca);
+    }
+  }
+
+  // function to disable and put grey color on field
+  function disable_field(field) {
+    field.disabled = true;
+    if (field.type == 'checkbox') {
+      field.value = 1;
+    } else {
+      field.value = "";
+    }
+    field.style.backgroundColor = "#ebebeb";
+  }
+
+  // function to enable and take away grey color from the field
+  function enable_field(field) {
+    field.disabled = false;
+    field.style.backgroundColor = "";
+  }
+
+  function groupSelected(value){
+    if(value == true){
+      <% if ['alert_new', 'alert_add'].include?(params[:action]) %>
+        jQuery.ajax({
+          url: '<%= Web_Dir %>/alerts/update_dependency_selector',
+          data: {check_type: jQuery('#alert_check_type').val()},
+          success: function(rezult){
+            jQuery('#group_selector').html(rezult);
+          }
+        });
+      <% end %>
+      jQuery('.conditions').hide();
+      jQuery('.group :input').attr("disabled", false);
+      jQuery('.group').show();
+    } else {
+      jQuery('.conditions').show();
+      jQuery('.group').hide();
+      jQuery('.group :input').attr("disabled", true);
+    }
+  }
+
+</script>

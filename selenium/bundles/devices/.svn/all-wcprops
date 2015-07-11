@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/48593/mor/gui/branches/x5/selenium/bundles/devices
+END
+device_callerid.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/44815/mor/gui/branches/x5/selenium/bundles/devices/device_callerid.bundle
+END
+device_callerid_2.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/44816/mor/gui/branches/x5/selenium/bundles/devices/device_callerid_2.bundle
+END
+disable_email_after_registration.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/48593/mor/gui/branches/x5/selenium/bundles/devices/disable_email_after_registration.bundle
+END

@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/51706/mor/gui/branches/x5/app/views/services
+END
+user_subscriptions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/44965/mor/gui/branches/x5/app/views/services/user_subscriptions.html.erb
+END
+subscriptions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/51706/mor/gui/branches/x5/app/views/services/subscriptions.html.erb
+END
+subscription_confirm_destroy.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/40296/mor/gui/branches/x5/app/views/services/subscription_confirm_destroy.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/39906/mor/gui/branches/x5/app/views/services/list.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/39906/mor/gui/branches/x5/app/views/services/show.html.erb
+END
+_page_select_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/43440/mor/gui/branches/x5/app/views/services/_page_select_header.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/43440/mor/gui/branches/x5/app/views/services/edit.html.erb
+END
+destination_prefixes.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/app/views/services/destination_prefixes.html.erb
+END
+subscription_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/41942/mor/gui/branches/x5/app/views/services/subscription_edit.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/43440/mor/gui/branches/x5/app/views/services/new.html.erb
+END
+subscription_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/41942/mor/gui/branches/x5/app/views/services/subscription_new.html.erb
+END
+destination_prefix_find.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/app/views/services/destination_prefix_find.html.erb
+END
+subscriptions_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/41942/mor/gui/branches/x5/app/views/services/subscriptions_list.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/43440/mor/gui/branches/x5/app/views/services/_form.html.erb
+END
+destinations.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/43440/mor/gui/branches/x5/app/views/services/destinations.html.erb
+END

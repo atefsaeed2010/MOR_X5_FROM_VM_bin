@@ -1,0 +1,21 @@
+#  enable api + payments, registration, balance check.
+# ----
+# enable api in admin + secret key
+settings/api/enable_0.sql
+# GET 
+settings/api/allow_get.sql
+# enable api in reseller + secret key
+settings/api/enable_3.sql
+# allow check balance over API
+settings/api/enable_devices_check_balance.sql
+# allow payments over API
+settings/api/allow_payments.sql
+# allow check device rate over API
+settings/api/enable_devices_check_rate.sql
+# allow login redirect
+settings/api/login_redirect.sql
+# allow payment confirmation over API
+settings/api/payment_confirmation.sql
+# allow registration over API
+settings/api/allow_registration.sql
+# bundle loaded

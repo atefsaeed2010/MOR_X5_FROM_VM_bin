@@ -1,0 +1,48 @@
+<table class="maintable" width='100%'>
+  <tr>
+    <th colspan="3"><b><%= _('Actions') %>:</b></th>
+  </tr>
+  <% if lv_actions %>
+      <% t_to = 0 %>
+      <% lv_actions.each_with_index { |action, index| %>
+          <tr class="row<%= index%2+1 %>">
+            <td>
+              <%= link_to b_delete, "javascript:void(0);", :onclick => "if (confirm('#{_('Are_you_sure')}')) { new Ajax.Updater('action_selector', '#{Web_Dir}/ivr/add_ivr_action/#{action.id.to_s}', {asynchronous:false, evalScripts:true, onComplete:function(request){Element.hide('spinner');}, onLoading:function(request){Element.show('spinner');}, parameters:'block_id=' + #{lv_block.id} + '&rm=true'})}" %>
+            </td>
+            <td NOWRAP>
+              <span id="exclamation_<%= action.id %>" style="display:<%=t_to.to_i == 1 ? "''": 'none'%>;" <%= raw(tooltip(_('Transfer_To_explanation'), _('This_action_will_not_be_taken_because_call_will_be_transferred_out_of_this_IVR_with_Transfer_To_action'))).html_safe %> ><%= b_exclamation %></span>
+              <% t_to = 1 if action.name.to_s == 'Transfer To' %>
+              <%= raw pos_action_select(action, $pos_actions, {:sounds => lv_ivr_sound_files, :voices => lv_ivr_voices}) %>
+            </td>
+            <td width='100%'>
+              <div id="action_params_<%= action.id %>"><%= raw proper_params(action).html_safe %></div>
+            </td>
+          </tr>
+      <% } %>
+
+      <script type="text/javascript">
+          function view_extension(val, id) {
+          <%  iv = IvrAction.where("ivr_block_id = #{lv_block.id} AND name = 'Transfer To'").order("id asc").first %>
+              var t_to_id = <%= iv ?  iv.id : 10000 %>;
+              if (val == "Transfer To" && id < t_to_id) {
+                  t_to_id = id;
+              }
+              var act_size = <%= 100 %>;
+              for (i = 1; i <= act_size; i++) {
+                  if ($('exclamation_' + i)) {
+                      $('exclamation_' + i).style.display = 'none';
+                      if (i > t_to_id) {
+                          $('exclamation_' + i).style.display = '';
+                      }
+                  }
+              }
+          }
+      </script>
+
+  <% end %>
+  <tr>
+    <td colspan="3">
+      <%= link_to b_add + _("Add_New_Action"), "javascript:void(0);", :onclick => "new Ajax.Updater('action_selector', '#{Web_Dir}/ivr/add_ivr_action', {asynchronous:false, evalScripts:true, onComplete:function(request){Element.hide('spinner');}, onLoading:function(request){Element.show('spinner');}, parameters:'block_id=' + #{lv_block.id}})" %>
+    </td>
+  </tr>
+</table>

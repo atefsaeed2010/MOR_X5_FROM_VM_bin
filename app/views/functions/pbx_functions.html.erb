@@ -1,0 +1,52 @@
+<%= page_select_header(@options[:page], @total_pages, @options) %>
+
+<table width="100%" class="maintable">
+  <tr>
+    <th align="left"><%= sortable_list_header("extension", _('Extension'), @options) %></th>
+    <th align="left"><%= sortable_list_header("name", _('Dialplan_name'), @options) %></th>
+    <th align="left"><%= sortable_list_header("pbx_function_name", _('Pbx_function_name'), @options) %></th>
+    <th align="left"><%= sortable_list_header("call_will_be_billed_to_user/device", _('Call_will_be_billed_to_User/Device'), @options) %></th>
+    <th align="left"><%= sortable_list_header("details", _('Details'), @options) %></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% @dialplans.each_with_index { |dialplan, i| %>
+      <tr class="row<%= (i % 2 + 1).to_s %>">
+        <td align="left" id="data2_<%= dialplan.id %>"><%= dialplan.data2 %></td>
+        <td align="left" id="name_<%= dialplan.id %>"><%= dialplan.name %></td>
+        <td align="left" id="pbxfunction_<%= dialplan.id %>"><%= dialplan.pbxfunction.name if dialplan.pbxfunction %></td>
+        <td align="left" id="device_<%= dialplan.id %>">
+          <% if dialplan.data1.to_i == 8 %>
+              <%= link_to_user(dialplan.data5.to_i) %>
+          <% end %>
+        </td>
+        <td align="left" id="details_<%= dialplan.id %>"><%= dialplan.data3 %> <%= dialplan.data4 %> <%= dialplan.data5 if dialplan.data1.to_i != 8 %> <%= dialplan.data6 %> <%= dialplan.data7 %> <%= dialplan.data8 %> <%= dialplan.sound_file_name %></td>
+        <td align="center" id="edit_<%= dialplan.id %>"><%= link_to b_edit, {:action => 'pbx_function_edit', :id => dialplan.id}, :id => "dp_edit_#{dialplan.id}" %></td>
+        <td align="center" id="delete_<%= dialplan.id %>"><%= link_to b_delete, {:action => 'pbx_function_destroy', :id => dialplan.id}, :confirm => _('Are_you_sure'), :method => :post, :id => "dp_delete_#{dialplan.id}" %></td>
+      </tr>
+  <% } %>
+
+
+  <%= form_tag :action => 'pbx_function_add' do %>
+      <tr>
+        <th align="left"><%= text_field_tag 'ext', "", "class" => "input", :size => "10", :maxlength => "15" %></th>
+        <th align="left"><%= text_field_tag 'name', (session[:pbx_functions][:name].to_s if session[:pbx_functions]), "class" => "input", :size => "30", :maxlength => "30" %></th>
+
+        <th align="left">
+          <select name="type_id">
+
+            <% for pf in @pbxfunctions %>
+                <option value="<%= pf.id %>"  <%= ' selected ' if session[:pbx_functions] and pf.id.to_i == session[:pbx_functions][:pbxname].to_i %>> <%= pf.name %> </option>
+            <% end %>
+
+          </select></th>
+        <th></th>
+        <th></th>
+
+        <th align="center" colspan=2><%= image_submit_tag 'icons/add.png', :title => _('Add') %></th>
+      </tr>
+  <% end %>
+
+</table>
+<br/>
+<%= page_select_header(@options[:page], @total_pages, @options) %>

@@ -1,0 +1,1 @@
+UPDATE `conflines` set value='0' where name='Fax_Device_Enabled' and owner_id=0;

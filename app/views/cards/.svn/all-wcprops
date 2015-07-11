@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/51768/mor/gui/branches/x5/app/views/cards
+END
+act.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/51719/mor/gui/branches/x5/app/views/cards/act.html.erb
+END
+user_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/50116/mor/gui/branches/x5/app/views/cards/user_list.html.erb
+END
+card_payment_status.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/app/views/cards/card_payment_status.html.erb
+END
+bulk_confirm.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39945/mor/gui/branches/x5/app/views/cards/bulk_confirm.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/51768/mor/gui/branches/x5/app/views/cards/list.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/39906/mor/gui/branches/x5/app/views/cards/show.html.erb
+END
+_analize.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/43440/mor/gui/branches/x5/app/views/cards/_analize.html.erb
+END
+card_pay.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/app/views/cards/card_pay.html.erb
+END
+act_confirm.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/app/views/cards/act_confirm.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/51768/mor/gui/branches/x5/app/views/cards/edit.html.erb
+END
+import_csv.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/43440/mor/gui/branches/x5/app/views/cards/import_csv.html.erb
+END
+card_buy.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/40161/mor/gui/branches/x5/app/views/cards/card_buy.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/51732/mor/gui/branches/x5/app/views/cards/new.html.erb
+END
+bullk_for_activate.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39945/mor/gui/branches/x5/app/views/cards/bullk_for_activate.html.erb
+END
+payments.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/40161/mor/gui/branches/x5/app/views/cards/payments.html.erb
+END
+bad_cards.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/app/views/cards/bad_cards.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/51768/mor/gui/branches/x5/app/views/cards/_form.html.erb
+END
+_new_cards.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/40442/mor/gui/branches/x5/app/views/cards/_new_cards.html.erb
+END

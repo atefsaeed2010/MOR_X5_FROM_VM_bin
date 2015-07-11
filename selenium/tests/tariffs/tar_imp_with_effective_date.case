@@ -1,0 +1,2932 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>tar_imp_with_effective_date</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">tar_imp_with_effective_date</td></tr>
+</thead><tbody>
+<!--LOGIN AS ADMIN-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<!--LOAD TARIFFS AND RATES-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=tariff_import/for_import_with_effective_from_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--LOGIN AS RSPRO-->
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<!--CHECK RSPRO RATES-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12303</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_123101</td>
+	<td>Afghanistan proper</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123101</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123101</td>
+	<td>0.0256</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123101</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123011</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123011</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123011</td>
+	<td>0.0256</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123011</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123012</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123012</td>
+	<td>9320</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123012</td>
+	<td>0.2652</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123012</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123013</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123013</td>
+	<td>9330</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123013</td>
+	<td>0.2688</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123013</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123102</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123102</td>
+	<td>9340</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123102</td>
+	<td>0.5856</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123102</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123014</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123014</td>
+	<td>9340</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123014</td>
+	<td>0.5856</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123014</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=7</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123103</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123103</td>
+	<td>9350</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123103</td>
+	<td>9350</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123103</td>
+	<td>0.5896</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123103</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123015</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123015</td>
+	<td>9350</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123015</td>
+	<td>0.5896</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123015</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/ratedetail_edit/123101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ratedetail_rate</td>
+	<td>0.0353</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/generate_providers_rates_csv/12303?test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0353</td>
+	<td></td>
+</tr>
+<!--sitas reitas neaktyvus, jo neturi rodyti-->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0256</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--LOGIN AS ADMIN-->
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<!--CHECK ADMIN RATES-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_120101</td>
+	<td>Afghanistan proper</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120101</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120101</td>
+	<td>0.0256</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120101</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_120011</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120011</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120011</td>
+	<td>0.0256</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120011</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_120012</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120012</td>
+	<td>9320</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120012</td>
+	<td>0.2652</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120012</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_120013</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120013</td>
+	<td>9330</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120013</td>
+	<td>0.2688</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120013</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_120104</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120104</td>
+	<td>9340</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120104</td>
+	<td>0.5856</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120104</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_120014</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120014</td>
+	<td>9340</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120014</td>
+	<td>0.5856</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120014</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=7</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_120105</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120105</td>
+	<td>9350</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120105</td>
+	<td>9350</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120105</td>
+	<td>0.5896</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120105</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_120015</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120015</td>
+	<td>9350</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120015</td>
+	<td>0.5896</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120015</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/ratedetail_edit/120011</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ratedetail_rate</td>
+	<td>0.0422</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/generate_providers_rates_csv/12001?test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0256</td>
+	<td></td>
+</tr>
+<!--sitas reitas neaktyvus, jo neturi rodyti-->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0422</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/settings/visual/50_items_per_page</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/import_csv2/12001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=file</td>
+	<td>/home/mor/selenium/files/csv/effective_rates.csv</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Please confirm Column Separator and Decimal Separator for CSV file</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>File uploaded</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=prefix_id</td>
+	<td>label=Prefix</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=rate_id</td>
+	<td>label=Rate(USD)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=effective_from</td>
+	<td>label=Effective from</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=connection_fee_id</td>
+	<td>label=Connection Fee(USD)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=increment_id</td>
+	<td>label=Increment</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=min_time_id</td>
+	<td>label=Minimal Time</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=manual_ghost_percent</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=destination_id</td>
+	<td>label=Destination</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=country_code_id</td>
+	<td>label=Country code</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=subcode</td>
+	<td>label=Subcode</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Columns assigned</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='commit'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Analysis completed</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=bad_dest</td>
+	<td>3 bad destination(s)(Press here to get the list)</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/bad_rows_from_csv?csv2=1&amp;tariff_id=12001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//td[10]</td>
+	<td>Bad Effective from date format</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[2]/td[10]</td>
+	<td>Bad Effective from date format</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[3]/td[10]/b</td>
+	<td>Bad Effective from date format</td>
+</tr>
+<tr>
+	<td>goBackAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=dest_to_create</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=r_to_update</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_r_to_create</td>
+	<td>63</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Rates updated: 1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>New rates created: 63</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123225</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123225</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123225</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ghost_percent_123225</td>
+	<td>30.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123225</td>
+	<td>10.2660</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123225</td>
+	<td>10.2660</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123225</td>
+	<td>2022-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_120101</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120101</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ghost_percent_120101</td>
+	<td>5.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120101</td>
+	<td>0.0256</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120101</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_120011</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120011</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120011</td>
+	<td>0.0422</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120011</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=L</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123224</td>
+	<td>Lithuania</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123224</td>
+	<td>370</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123224</td>
+	<td>19.3690</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123224</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123224</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_120118</td>
+	<td>Lithuania</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_120118</td>
+	<td>Lithuania</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120118</td>
+	<td>370</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120118</td>
+	<td>0.2695</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120118</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_120028</td>
+	<td>Lithuania</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120028</td>
+	<td>370</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120028</td>
+	<td>0.2695</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120028</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_prefix</td>
+	<td>3706%</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120043</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120133</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123166</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/generate_providers_rates_csv/12001?test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0256</td>
+	<td></td>
+</tr>
+<!--sitas reitas neaktyvus, jo neturi rodyti-->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0422</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/make_user_tariff/12001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=add_percent</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=add_confee_percent</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Tariff created</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Back to Tariffs</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_12305</td>
+	<td>provider_tariff_for_admin_1 + 30%</td>
+</tr>
+<!--Bus naujas ticketas-->
+<tr>
+	<td>open</td>
+	<td>/billing/stats/prefix_finder</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=search</td>
+	<td>3706</td>
+</tr>
+<!--Bus naujas ticketas-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--LOGIN AS RSPRO-->
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/import_csv2/12303</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=file</td>
+	<td>/home/mor/selenium/files/csv/effective_rates.csv</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Please confirm Column Separator and Decimal Separator for CSV file</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>File uploaded</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=prefix_id</td>
+	<td>label=Prefix</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=rate_id</td>
+	<td>label=Rate(USD)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=effective_from</td>
+	<td>label=Effective from</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=connection_fee_id</td>
+	<td>label=Connection Fee(USD)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=increment_id</td>
+	<td>label=Increment</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=min_time_id</td>
+	<td>label=Minimal Time</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=manual_ghost_percent</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=destination_id</td>
+	<td>label=Destination</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=country_code_id</td>
+	<td>label=Country code</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=subcode</td>
+	<td>label=Subcode</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Columns assigned</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='commit'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Analysis completed</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=r_to_update</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_r_to_create</td>
+	<td>63</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Rates updated: 1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>New rates created: 63</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12303</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123295</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123295</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123295</td>
+	<td>10.2660</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123295</td>
+	<td>2022-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123101</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123101</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123101</td>
+	<td>0.0353</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123101</td>
+	<td>0.0353</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123101</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123101</td>
+	<td>2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123011</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123011</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123011</td>
+	<td>0.0256</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123011</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123270</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123012</td>
+	<td>9320</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123271</td>
+	<td>4.3690</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123271</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123012</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123012</td>
+	<td>9320</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123012</td>
+	<td>9320</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123012</td>
+	<td>0.2652</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123012</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123269</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123270</td>
+	<td>9330</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123270</td>
+	<td>9330</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123270</td>
+	<td>4.5493</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123270</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123270</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123013</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123013</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123013</td>
+	<td>9330</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123013</td>
+	<td>0.2688</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123013</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/generate_providers_rates_csv/12303?test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0353</td>
+	<td></td>
+</tr>
+<!--sitas reitas neaktyvus, jo neturi rodyti-->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0256</td>
+	<td></td>
+</tr>
+<!--TZ ir datos formatai-->
+<tr>
+	<td>open</td>
+	<td>/billing/users/personal_details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_time_zone</td>
+	<td>label=(GMT+00:00) London</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/reseller_settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=date_format</td>
+	<td>label=d.m.Y H:M:S</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12303</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123295</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123295</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123295</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ghost_percent_123295</td>
+	<td>30.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123295</td>
+	<td>10.2660</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123295</td>
+	<td>10.2660</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123295</td>
+	<td>31.12.2021 22:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123101</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123101</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ghost_percent_123101</td>
+	<td>5.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123101</td>
+	<td>0.0353</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123101</td>
+	<td>31.12.2012 22:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123011</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123011</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123011</td>
+	<td>0.0256</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123011</td>
+	<td>0.0256</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123011</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/generate_providers_rates_csv/12303?test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0353</td>
+	<td></td>
+</tr>
+<!--sitas reitas neaktyvus, jo neturi rodyti-->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0256</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/personal_details</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_time_zone</td>
+	<td>label=(GMT+13:00) Nuku'alofa</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12303</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123295</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123295</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123295</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ghost_percent_123295</td>
+	<td>30.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123295</td>
+	<td>10.2660</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123295</td>
+	<td>10.2660</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123295</td>
+	<td>01.01.2022 10:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123101</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123101</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ghost_percent_123101</td>
+	<td>5.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123101</td>
+	<td>0.0353</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123101</td>
+	<td>01.01.2013 10:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123011</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123011</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123011</td>
+	<td>0.0256</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123011</td>
+	<td>0.0256</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123011</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/generate_providers_rates_csv/12303?test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0353</td>
+	<td></td>
+</tr>
+<!--sitas reitas neaktyvus, jo neturi rodyti-->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0256</td>
+	<td></td>
+</tr>
+<!--TZ ir datos formatas importuojant tarifus-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/import_csv2/12304</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=file</td>
+	<td>/home/mor/selenium/files/csv/effective_rates_another_date_format2.csv</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>File uploaded</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=prefix_id</td>
+	<td>label=Prefix</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=rate_id</td>
+	<td>label=Rate(USD)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=effective_from</td>
+	<td>label=Effective from</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=connection_fee_id</td>
+	<td>label=Connection Fee(USD)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=increment_id</td>
+	<td>label=Increment</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=min_time_id</td>
+	<td>label=Minimal Time</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=manual_ghost_percent</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=destination_id</td>
+	<td>label=Destination</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=country_code_id</td>
+	<td>label=Country code</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=subcode</td>
+	<td>label=Subcode</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=effective_from_date_format</td>
+	<td>label=m.d.Y</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Columns assigned</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_4</td>
+	<td>01.01.2012 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_7</td>
+	<td>2021-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_13</td>
+	<td>2021 01 01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_11</td>
+	<td>01.01.2012 00:00:00</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='commit'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Analysis completed</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=r_to_update</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_r_to_create</td>
+	<td>13</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=file_lines</td>
+	<td>16</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>New rates created: 13</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12304</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123308</td>
+	<td>01.01.2012 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123303</td>
+	<td>01.01.2012 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123306</td>
+	<td>01.01.2012 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123299</td>
+	<td>01.01.2012 00:00:00</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/generate_providers_rates_csv/12303?test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0353</td>
+	<td></td>
+</tr>
+<!--sitas reitas neaktyvus, jo neturi rodyti-->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0256</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/settings/visual/set_date_format_d_m_y</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/personal_details/0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_time_zone</td>
+	<td>label=(GMT+00:00) London</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123225</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123225</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123225</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ghost_percent_123225</td>
+	<td>30.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123225</td>
+	<td>10.2660</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123225</td>
+	<td>10.2660</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123225</td>
+	<td>31/12/2021 22:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_120101</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120101</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ghost_percent_120101</td>
+	<td>5.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120101</td>
+	<td>0.0256</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120101</td>
+	<td>31/12/2012 22:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_120011</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120011</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120011</td>
+	<td>0.0422</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120011</td>
+	<td>0.0422</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120011</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/generate_providers_rates_csv/12001?test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0256</td>
+	<td></td>
+</tr>
+<!--sitas reitas neaktyvus, jo neturi rodyti-->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0422</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/personal_details/0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_time_zone</td>
+	<td>label=(GMT+13:00) Nuku'alofa</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_123225</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123225</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_123225</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ghost_percent_123225</td>
+	<td>30.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123225</td>
+	<td>10.2660</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_123225</td>
+	<td>10.2660</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123225</td>
+	<td>01/01/2022 10:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_120101</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120101</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=ghost_percent_120101</td>
+	<td>5.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120101</td>
+	<td>0.0256</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120101</td>
+	<td>01/01/2013 10:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=destination_120011</td>
+	<td>Afghanistan</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=prefix_120011</td>
+	<td>93</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=details_img_120011</td>
+	<td>0.0422</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_120011</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/generate_providers_rates_csv/12001?test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0256</td>
+	<td></td>
+</tr>
+<!--sitas reitas neaktyvus, jo neturi rodyti-->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0422</td>
+	<td></td>
+</tr>
+<!--TZ ir datos formatas importuojant tarifus-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/import_csv2/12002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=file</td>
+	<td>/home/mor/selenium/files/csv/effective_rates_another_date_format.csv</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>File uploaded</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=prefix_id</td>
+	<td>label=Prefix</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=rate_id</td>
+	<td>label=Rate(USD)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=effective_from</td>
+	<td>label=Effective from</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=connection_fee_id</td>
+	<td>label=Connection Fee(USD)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=increment_id</td>
+	<td>label=Increment</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=min_time_id</td>
+	<td>label=Minimal Time</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=manual_ghost_percent</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=destination_id</td>
+	<td>label=Destination</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=country_code_id</td>
+	<td>label=Country code</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=subcode</td>
+	<td>label=Subcode</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=effective_from_date_format</td>
+	<td>label=m/d/Y</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Columns assigned</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_4</td>
+	<td>01/01/2021 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_7</td>
+	<td>01-01-2021 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_13</td>
+	<td>01 01 2021 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_11</td>
+	<td>01/01/2021 00:00:00</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='commit'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Analysis completed</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=r_to_update</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_r_to_create</td>
+	<td>13</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=bad_dest</td>
+	<td>3 bad destination(s)(Press here to get the list)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>New rates created: 13</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123322</td>
+	<td>01/01/2021 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123315</td>
+	<td>01/01/2021 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123312</td>
+	<td>01/01/2021 00:00:00</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/generate_providers_rates_csv/12001?test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0256</td>
+	<td></td>
+</tr>
+<!--sitas reitas neaktyvus, jo neturi rodyti-->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0422</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/import_csv2/12002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=file</td>
+	<td>/home/mor/selenium/files/csv/effective_rates_same_rate.csv</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>File uploaded</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=prefix_id</td>
+	<td>label=Prefix</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=rate_id</td>
+	<td>label=Rate(USD)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=effective_from</td>
+	<td>label=Effective from</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=connection_fee_id</td>
+	<td>label=Connection Fee(USD)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=increment_id</td>
+	<td>label=Increment</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=min_time_id</td>
+	<td>label=Minimal Time</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=manual_ghost_percent</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=destination_id</td>
+	<td>label=Destination</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=country_code_id</td>
+	<td>label=Country code</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=subcode</td>
+	<td>label=Subcode</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=effective_from_date_format</td>
+	<td>label=d/m/Y</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Columns assigned</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_4</td>
+	<td>24/12/2011 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_8</td>
+	<td>24/12/2011 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_rate_8</td>
+	<td>8.5493</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_rate_9</td>
+	<td>8.5493</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_9</td>
+	<td>25/12/2011 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_rate_10</td>
+	<td>8.5493</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_10</td>
+	<td>26/12/2011 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_rate_12</td>
+	<td>5.5493</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_12</td>
+	<td>24/12/2011 00:00:00</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='commit'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Analysis completed</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=r_to_update</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_r_to_create</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=bad_dest</td>
+	<td>3 bad destination(s)(Press here to get the list)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>New rates created: 15</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12002</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123335</td>
+	<td>26/12/2011 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123334</td>
+	<td>25/12/2011 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123332</td>
+	<td>24/12/2011 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[15]/td[7]</td>
+	<td>8.5493</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[16]/td[7]</td>
+	<td>8.5493</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[17]/td[7]</td>
+	<td>8.5493</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123336</td>
+	<td>24/12/2011 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[11]/td[7]</td>
+	<td>5.5493</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123319</td>
+	<td>01/01/2021 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[10]/td[7]</td>
+	<td>5.5493</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/generate_providers_rates_csv/12001?test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0256</td>
+	<td></td>
+</tr>
+<!--sitas reitas neaktyvus, jo neturi rodyti-->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0422</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/import_csv2/12304</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=file</td>
+	<td>/home/mor/selenium/files/csv/effective_rates_same_rate2.csv</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>File uploaded</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=prefix_id</td>
+	<td>label=Prefix</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=rate_id</td>
+	<td>label=Rate(USD)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=effective_from</td>
+	<td>label=Effective from</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=connection_fee_id</td>
+	<td>label=Connection Fee(USD)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=increment_id</td>
+	<td>label=Increment</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=min_time_id</td>
+	<td>label=Minimal Time</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=manual_ghost_percent</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=destination_id</td>
+	<td>label=Destination</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=country_code_id</td>
+	<td>label=Country code</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=subcode</td>
+	<td>label=Subcode</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=effective_from_date_format</td>
+	<td>label=d.m.Y</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit_button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Columns assigned</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_9</td>
+	<td>23.10.2011 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_rate_9</td>
+	<td>8.369</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_rate_10</td>
+	<td>8.369</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_10</td>
+	<td>24.10.2011 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_rate_11</td>
+	<td>8.369</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_11</td>
+	<td>25.10.2011 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=imp_effective_from_4</td>
+	<td>23.10.2011 00:00:00</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='commit'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Analysis completed</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=r_to_update</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_r_to_create</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>New rates created: 15</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12304</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123306</td>
+	<td>2012-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[6]/td[7]</td>
+	<td>7.5493</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[7]/td[7]</td>
+	<td>7.5493</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123353</td>
+	<td>2011-10-23 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[13]/td[7]</td>
+	<td>8.3690</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123351</td>
+	<td>2011-10-25 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[14]/td[7]</td>
+	<td>8.3690</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123350</td>
+	<td>2011-10-24 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[15]/td[7]</td>
+	<td>8.3690</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123348</td>
+	<td>2011-10-23 00:00:00</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/generate_providers_rates_csv/12303?test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0353</td>
+	<td></td>
+</tr>
+<!--sitas reitas neaktyvus, jo neturi rodyti-->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Afghanistan,Afghanistan proper,93,FIX,AFG,0.0256</td>
+	<td></td>
+</tr>
+<!--LOGIN AS ADMIN-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<!--LOAD TARIFFS AND RATES-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=tariff_import/rates_for_delete_old_rates</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=delete_not_actual_rates_after</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Settings saved</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=delete_not_actual_rates_after</td>
+	<td>asxdcddvgh</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Delete outdated Rates after must be integer</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=delete_not_actual_rates_after</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=delete_not_actual_rates_after</td>
+	<td>-5</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Delete outdated Rates after must be greater or equal to 0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#tabTabdhtmlgoodies_tabView1_8 &gt; span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=delete_not_actual_rates_after</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=delete_not_actual_rates_after</td>
+	<td>25</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Settings saved</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=delete_not_actual_rates_after</td>
+	<td>25</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/launch_script</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=command</td>
+	<td>/usr/local/mor/mor_delete_old_rates</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>No such file</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=body</td>
+	<td>Launching script.<br />Output:<br />STATUS:0</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=effective_from_123225</td>
+	<td>01/01/2022 10:00:00</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=effective_from_1201012</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=effective_from_120101</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=effective_from_1201011</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=effective_from_120011</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=effective_from_1201072</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=effective_from_120107</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=effective_from_1201071</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=effective_from_120017</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>api_phonebook_record_create</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">api_phonebook_record_create</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=0&amp;number=5&amp;name=sutampa su user_reseller&amp;speeddial=222&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>API Requests are disabled</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/enable_api</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=admin&amp;user_id=2&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash2</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=admin&amp;user_id=2&amp;number=5&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash3</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=admin&amp;user_id=2&amp;number=5&amp;name=test%20speed%20dial&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash4</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=admin&amp;user_id=2&amp;number=5&amp;name=test speed dial&amp;speeddial=327&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash5</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--Klaidų pranešimai-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=reseller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=accountant&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=user_admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=user_reseller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=adm&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Access Denied</td>
+</tr>
+<!--HASH TIKRINIMAS-->
+<!--username kitoks - į hash neįeina, tad jis nesikeičia -->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admtest&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Access Denied</td>
+</tr>
+<!--p neįeina į hash-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;p=admin1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>User was not found</td>
+</tr>
+<!--user id įeina į hash-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Speed Dial name must be provided</td>
+</tr>
+<!--name įeina į hash-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;number=5&amp;name=test speed dial&amp;test=1&amp;hash=${hash3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;number=5&amp;name=test%20speed%20dial&amp;test=1&amp;hash=${hash4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Speed Dial should have at least two digits</td>
+</tr>
+<!--number įeina į hash-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;number=5&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;number=5&amp;test=1&amp;hash=${hash3}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Speed Dial name must be provided</td>
+</tr>
+<!--speeddial įeina į hash-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;number=5&amp;name=test speed dial&amp;speeddial=327&amp;test=1&amp;hash=${hash4}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;number=5&amp;name=test speed dial&amp;speeddial=327&amp;test=1&amp;hash=${hash5}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Record successfully added</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/phonebooks/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_1</td>
+	<td>test speed dial</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=number_1</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=speeddial_1</td>
+	<td>327</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/disable_hash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/phonebooks/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_1</td>
+	<td>test speed dial</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=number_1</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=speeddial_1</td>
+	<td>327</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/phonebooks/show/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>PhoneBook: test speed dial</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Number: 5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Speeddial: 327</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--formatas-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;number=dfgdfgdhf&amp;name=test speed dial&amp;speeddial=475&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Record number must be numeric</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;number=5&amp;name=test speed dial&amp;speeddial=gdfgdfg&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Speed Dial must be numeric</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;number=5&amp;name=546546456&amp;speeddial=475&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Record successfully added</td>
+</tr>
+<!--PERMISSIONAI-->
+<!--adminas kuria sau ir kitiems-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=0&amp;number=5&amp;name=admins&amp;speeddial=222&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Record successfully added</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=3&amp;number=5&amp;name=for reseller&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=4&amp;number=5&amp;name=for acc&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=5&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Record successfully added</td>
+</tr>
+<!--reseleris kuria sau ir kitiems-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=reseller&amp;user_id=0&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=reseller&amp;user_id=3&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=reseller&amp;user_id=4&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=reseller&amp;user_id=5&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=reseller&amp;user_id=2&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<!--accountant kuria sau ir kitiems-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=accountant&amp;user_id=0&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=accountant&amp;user_id=3&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=accountant&amp;user_id=4&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=accountant&amp;user_id=5&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=accountant&amp;user_id=2&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<!--user_admin kuria sau ir kitiems-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=user_admin&amp;user_id=0&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=user_admin&amp;user_id=3&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=user_admin&amp;user_id=4&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=user_admin&amp;user_id=5&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=user_admin&amp;user_id=2&amp;number=5&amp;name=admins&amp;speeddial=777&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Record successfully added</td>
+</tr>
+<!--user_reseller kuria sau ir kitiems-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=user_reseller&amp;user_id=0&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=user_reseller&amp;user_id=3&amp;number=5&amp;name=admins&amp;speeddial=888&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=user_reseller&amp;user_id=4&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=user_reseller&amp;user_id=5&amp;number=5&amp;name=admins&amp;speeddial=123&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Record successfully added</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=user_reseller&amp;user_id=2&amp;number=5&amp;name=admins&amp;speeddial=777&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Access Denied</td>
+</tr>
+<!--UNIKALUMAS-->
+<!--neturi sutapti to paties userio speedial-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;number=5&amp;name=test speed dial&amp;speeddial=327&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Speed dial must be unique</td>
+</tr>
+<!--pakeičiu tik name-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;number=5&amp;name=test speed dial2&amp;speeddial=327&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Speed dial must be unique</td>
+</tr>
+<!--pakeičiu tik number-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;number=7&amp;name=test speed dial&amp;speeddial=327&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Speed dial must be unique</td>
+</tr>
+<!--pakeičiu tik speeddial-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;number=5&amp;name=test speed dial&amp;speeddial=478&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Record successfully added</td>
+</tr>
+<!--gali sutapti su admino speeddial, kada kuria simple useris-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=user_admin&amp;user_id=2&amp;number=5&amp;name=sutampa su admino&amp;speeddial=222&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Record successfully added</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=user_reseller&amp;user_id=5&amp;number=5&amp;name=sutampa su admino&amp;speeddial=222&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Record successfully added</td>
+</tr>
+<!--gali sutapti su kito userio speeddial-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;number=5&amp;name=sutampa su user_reseller&amp;speeddial=888&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Record successfully added</td>
+</tr>
+<!--admino kuriamas globalus  negali sutapti su userių-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=0&amp;number=5&amp;name=sutampa su user_reseller&amp;speeddial=888&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Speed dial must be unique</td>
+</tr>
+<!--admino kuriamas sau negali sutapti su savo paties-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=0&amp;number=5&amp;name=sutampa su user_reseller&amp;speeddial=222&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Speed dial must be unique</td>
+</tr>
+<!--Fake Form-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/fake_form?path_to_action=/billing/api/phonebook_record_create</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_1</td>
+	<td>user_id</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_1</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_1</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_2</td>
+	<td>u</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_2</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_2</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_3</td>
+	<td>speeddial</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_3</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_3</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_4</td>
+	<td>number</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_4</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_4</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_5</td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_5</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_5</td>
+	<td>not unique</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_6</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_6</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_6</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=success</td>
+	<td>Record successfully added</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/fake_form?path_to_action=/billing/api/phonebook_record_create</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_1</td>
+	<td>user_id</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_1</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_1</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_2</td>
+	<td>u</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_2</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_2</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_3</td>
+	<td>speeddial</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_3</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_3</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_4</td>
+	<td>number</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_4</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_4</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_5</td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_5</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_5</td>
+	<td>not unique</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_6</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_6</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_6</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Speed dial must be unique</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/settings/api/enable_xml</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/phonebook_record_create?u=admin&amp;user_id=2&amp;number=5&amp;name=sutampa su user_reseller&amp;speeddial=888&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=html</td>
+	<td>Speed dial must be unique</td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# set address for admin with various symbols
+# admin address
+user/admin_0/set_silly_address.sql
+# bundle loaded

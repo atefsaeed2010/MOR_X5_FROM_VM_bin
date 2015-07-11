@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/51936/mor/gui/branches/x5/selenium/tests/last_calls_stats
+END
+update_callerid.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/last_calls_stats/update_callerid.sql
+END
+last_call_stats_right_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/51549/mor/gui/branches/x5/selenium/tests/last_calls_stats/last_call_stats_right_user.case
+END
+invalid_reseller_type.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/last_calls_stats/invalid_reseller_type.sql
+END
+failed_last_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/last_calls_stats/failed_last_calls.sql
+END
+last_call_stats_reseller.case
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/51494/mor/gui/branches/x5/selenium/tests/last_calls_stats/last_call_stats_reseller.case
+END
+last_calls_dids_search.case
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/51775/mor/gui/branches/x5/selenium/tests/last_calls_stats/last_calls_dids_search.case
+END
+last_call_stats_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/51780/mor/gui/branches/x5/selenium/tests/last_calls_stats/last_call_stats_user.case
+END
+calls_for_profit.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/last_calls_stats/calls_for_profit.sql
+END
+last_calls_ordering_export.case
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/51180/mor/gui/branches/x5/selenium/tests/last_calls_stats/last_calls_ordering_export.case
+END
+right_call_src.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/43273/mor/gui/branches/x5/selenium/tests/last_calls_stats/right_call_src.case
+END
+export_last_calls.case
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/45166/mor/gui/branches/x5/selenium/tests/last_calls_stats/export_last_calls.case
+END
+last_calls_stats_search.case
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/51680/mor/gui/branches/x5/selenium/tests/last_calls_stats/last_calls_stats_search.case
+END
+last_call_stats_admin.case
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/51936/mor/gui/branches/x5/selenium/tests/last_calls_stats/last_call_stats_admin.case
+END
+last_call_no_provider.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/last_calls_stats/last_call_no_provider.sql
+END
+failed_last_calls2.sql
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/last_calls_stats/failed_last_calls2.sql
+END
+last_call_stats_accountant.case
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/51526/mor/gui/branches/x5/selenium/tests/last_calls_stats/last_call_stats_accountant.case
+END
+search_by_providers.case
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/last_calls_stats/search_by_providers.case
+END
+search_with_deviceid.case
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/43255/mor/gui/branches/x5/selenium/tests/last_calls_stats/search_with_deviceid.case
+END
+hgc_tool_tips.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/48891/mor/gui/branches/x5/selenium/tests/last_calls_stats/hgc_tool_tips.case
+END
+last_calls_stats_callerid.case
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/43273/mor/gui/branches/x5/selenium/tests/last_calls_stats/last_calls_stats_callerid.case
+END
+last_call_stats_user.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/last_calls_stats/last_call_stats_user.sql
+END
+search_by_callerid.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/51509/mor/gui/branches/x5/selenium/tests/last_calls_stats/search_by_callerid.case
+END
+profit.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/51509/mor/gui/branches/x5/selenium/tests/last_calls_stats/profit.case
+END

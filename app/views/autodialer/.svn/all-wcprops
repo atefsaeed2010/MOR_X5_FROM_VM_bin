@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/51210/mor/gui/branches/x5/app/views/autodialer
+END
+import_numbers_from_file.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/43775/mor/gui/branches/x5/app/views/autodialer/import_numbers_from_file.html.erb
+END
+campaign_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/48771/mor/gui/branches/x5/app/views/autodialer/campaign_new.html.erb
+END
+campaign_statistics.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/48373/mor/gui/branches/x5/app/views/autodialer/campaign_statistics.html.erb
+END
+view_campaign_actions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/app/views/autodialer/view_campaign_actions.html.erb
+END
+campaign_numbers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/40002/mor/gui/branches/x5/app/views/autodialer/campaign_numbers.html.erb
+END
+bad_numbers_from_csv.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/app/views/autodialer/bad_numbers_from_csv.erb
+END
+play_rec.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/autodialer/play_rec.html.erb
+END
+campaign_actions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/app/views/autodialer/campaign_actions.html.erb
+END
+user_campaigns.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/43516/mor/gui/branches/x5/app/views/autodialer/user_campaigns.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/48771/mor/gui/branches/x5/app/views/autodialer/_form.html.erb
+END
+action_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/41942/mor/gui/branches/x5/app/views/autodialer/action_edit.html.erb
+END
+campaigns.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/51210/mor/gui/branches/x5/app/views/autodialer/campaigns.html.erb
+END
+campaign_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/48771/mor/gui/branches/x5/app/views/autodialer/campaign_edit.html.erb
+END

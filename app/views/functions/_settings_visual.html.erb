@@ -1,0 +1,63 @@
+<table class="simple" width="100%">
+  <%= raw settings_string(_('Items_Per_Page'), 'items_per_page', "Items_Per_Page") %>
+  <tr>
+    <td></td>
+    <td><b><%= _('Default_Date_Format') %>:</b></td>
+    <td>
+      <select name='date_format'>
+        <% sdf = Confline.get_value('Date_format', 0).to_s %>
+        <% for df in $date_formats %>
+            <option value='<%= df %>' <%= 'selected' if df == sdf %>>
+              <%= h df.to_s.delete('%') %>
+            </option>
+        <% end %>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><b><%= _('Default_Time_Format') %>:</b></td>
+    <td>
+      <select name='time_format'>
+        <% sdt = Confline.get_value('time_format', 0).to_s %>
+        <% for dt in $time_formats %>
+            <option value='<%= dt %>' <%= 'selected' if dt == sdt %>>
+              <%= h dt.to_s.delete('%') %>
+            </option>
+        <% end %>
+      </select>
+    </td>
+    </td>
+  </tr>
+  <%= raw settings_string(_('Nice_Number_Digits'), 'nice_number_digits', "Nice_Number_Digits") %>
+  <%= raw setting_boolean(_('Hide_Quick_Stats'), 'hide_quick_stats', "Hide_quick_stats") %>
+  <%= raw setting_boolean(_('Hide_device_passwords_for_users'), 'hide_device_passwords_for_users', "Hide_Device_Passwords_For_Users") %>
+  <%= raw setting_boolean(_('Hide_HELP_banner'), 'hide_help_banner', "Hide_HELP_banner") %>
+  <%= raw setting_boolean(_('Hide_Iwantto'), 'hide_iwantto', "Hide_Iwantto") %>
+  <%= raw setting_boolean(_('Hide_manual_link'), 'hide_manual_link', "Hide_Manual_Link") %>
+  <%= raw setting_boolean(_('Show_Full_Src'), 'show_full_src', "Show_Full_Src") %>
+  <%= raw setting_boolean(_('Hide_payment_options_for_postpaid_users'), 'hide_payment_options_for_postpaid_users', "Hide_payment_options_for_postpaid_users") %>
+  <%= raw setting_boolean(_('Hide_non_completed_payments_for_user'), 'hide_non_completed_payments_for_user', "Hide_non_completed_payments_for_user") %>
+  <%= raw setting_boolean(_('Show_only_main_page'), 'show_only_main_page', "Show_only_main_page") %>
+  <%= raw setting_boolean(_('Show_forgot_password'), 'show_forgot_password', "Show_forgot_password") %>
+  <%= raw setting_boolean(_('Hide_recordings_for_all_users'), 'hide_recordings_for_all_users', "Hide_recordings_for_all_users") %>
+  <%= raw setting_boolean(_('Instead_billsec_show_user_billsec'), 'invoice_user_billsec_show', "Invoice_user_billsec_show", 0, {:id => 'inv_user_billsec', :tip => tooltip(_('billsec_and_user_billsec'), _('billsec_and_user_billsec_explanation'))}) %>
+  <tr>
+    <td></td>
+    <td><b><%= _('Default_Number_Decimal') %>:</b></td>
+    <td>
+      <select name='global_number_decimal'>
+        <% sdf = Confline.get_value('Global_Number_Decimal', 0).to_s %>
+        <% for df in $decimal_formats %>
+            <option value='<%= df %>' <%= 'selected' if df == sdf %>>
+              <%= h df.to_s %>
+            </option>
+        <% end %>
+      </select>
+    </td>
+  </tr>
+  <%= raw setting_boolean(_('Change_LCR_priority_using_drag_and_drop'), 'lcr_priority_using_drag_and_drop', "LCR_priority_using_drag_and_drop") %>
+  <%= raw settings_group_number(_('show_calls_stats_to_user_for_last'), 'show_calls_stats_to_user_for_last', "Show_Calls_statistics_to_User_for_last", {:sufix => " days"}, :size => "4") %>
+  <%= raw setting_boolean(_('show_device_and_cid_in_last_calls'), 'show_device_and_cid_in_last_calls', 'Show_device_and_cid_in_last_calls') %>
+  <%= raw setting_boolean(_('allow_user_assign_did_to_device'), 'allow_user_assign_did_to_device', 'Allow_User_assign_DID_to_Device') %>
+</table>

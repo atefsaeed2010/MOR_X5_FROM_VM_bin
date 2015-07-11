@@ -1,0 +1,1 @@
+UPDATE `conflines` set value='.' where name='CSV_Separator';

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/49092/mor/gui/branches/x5/selenium/sqls/user/admin_0
+END
+set_email.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/41453/mor/gui/branches/x5/selenium/sqls/user/admin_0/set_email.sql
+END
+set_first_last_name.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/45056/mor/gui/branches/x5/selenium/sqls/user/admin_0/set_first_last_name.sql
+END
+assign_currency_eur.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/49092/mor/gui/branches/x5/selenium/sqls/user/admin_0/assign_currency_eur.sql
+END
+admin_delete.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/user/admin_0/admin_delete.sql
+END
+set_silly_address.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/41920/mor/gui/branches/x5/selenium/sqls/user/admin_0/set_silly_address.sql
+END
+set_address.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/41875/mor/gui/branches/x5/selenium/sqls/user/admin_0/set_address.sql
+END

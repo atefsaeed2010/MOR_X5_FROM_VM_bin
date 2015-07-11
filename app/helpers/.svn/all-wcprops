@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/52036/mor/gui/branches/x5/app/helpers
+END
+callc_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/48286/mor/gui/branches/x5/app/helpers/callc_helper.rb
+END
+groups_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/49709/mor/gui/branches/x5/app/helpers/groups_helper.rb
+END
+payment_gateways_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/44692/mor/gui/branches/x5/app/helpers/payment_gateways_helper.rb
+END
+cron_actions_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/41849/mor/gui/branches/x5/app/helpers/cron_actions_helper.rb
+END
+devices_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/50413/mor/gui/branches/x5/app/helpers/devices_helper.rb
+END
+dids_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/48286/mor/gui/branches/x5/app/helpers/dids_helper.rb
+END
+servers_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/41942/mor/gui/branches/x5/app/helpers/servers_helper.rb
+END
+autodialer_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/45044/mor/gui/branches/x5/app/helpers/autodialer_helper.rb
+END
+alerts_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/48286/mor/gui/branches/x5/app/helpers/alerts_helper.rb
+END
+cards_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/43924/mor/gui/branches/x5/app/helpers/cards_helper.rb
+END
+tariffs_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/50717/mor/gui/branches/x5/app/helpers/tariffs_helper.rb
+END
+stats_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/51463/mor/gui/branches/x5/app/helpers/stats_helper.rb
+END
+did_rates_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/48286/mor/gui/branches/x5/app/helpers/did_rates_helper.rb
+END
+payments_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/44309/mor/gui/branches/x5/app/helpers/payments_helper.rb
+END
+layouts_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/51127/mor/gui/branches/x5/app/helpers/layouts_helper.rb
+END
+ivr_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/52036/mor/gui/branches/x5/app/helpers/ivr_helper.rb
+END
+users_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/51926/mor/gui/branches/x5/app/helpers/users_helper.rb
+END
+application_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/50566/mor/gui/branches/x5/app/helpers/application_helper.rb
+END
+lcrs_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/52036/mor/gui/branches/x5/app/helpers/lcrs_helper.rb
+END
+callshop_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/50077/mor/gui/branches/x5/app/helpers/callshop_helper.rb
+END
+dialplans_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/44309/mor/gui/branches/x5/app/helpers/dialplans_helper.rb
+END
+terminators_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/app/helpers/terminators_helper.rb
+END
+functions_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/48286/mor/gui/branches/x5/app/helpers/functions_helper.rb
+END
+cdr_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/49613/mor/gui/branches/x5/app/helpers/cdr_helper.rb
+END
+cardgroups_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/48286/mor/gui/branches/x5/app/helpers/cardgroups_helper.rb
+END
+permissions_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/48286/mor/gui/branches/x5/app/helpers/permissions_helper.rb
+END
+providers_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/app/helpers/providers_helper.rb
+END

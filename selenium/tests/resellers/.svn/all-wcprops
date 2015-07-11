@@ -1,0 +1,377 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/52319/mor/gui/branches/x5/selenium/tests/resellers
+END
+reseller_stats_provider.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/42242/mor/gui/branches/x5/selenium/tests/resellers/reseller_stats_provider.case
+END
+rates_for_re_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/52294/mor/gui/branches/x5/selenium/tests/resellers/rates_for_re_user.case
+END
+resellers_personal_details.case
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/43951/mor/gui/branches/x5/selenium/tests/resellers/resellers_personal_details.case
+END
+re_dids_in_cc_details.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/51543/mor/gui/branches/x5/selenium/tests/resellers/re_dids_in_cc_details.case
+END
+resellers_fake_form.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/48494/mor/gui/branches/x5/selenium/tests/resellers/resellers_fake_form.case
+END
+resellers_provider.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/51543/mor/gui/branches/x5/selenium/tests/resellers/resellers_provider.case
+END
+last_call_stats.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/50985/mor/gui/branches/x5/selenium/tests/resellers/last_call_stats.case
+END
+re_sound_file.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/51543/mor/gui/branches/x5/selenium/tests/resellers/re_sound_file.case
+END
+rspro_localization.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/rspro_localization.case
+END
+rspro_create_own_dids.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/52243/mor/gui/branches/x5/selenium/tests/resellers/rspro_create_own_dids.case
+END
+rspro_provider.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/44450/mor/gui/branches/x5/selenium/tests/resellers/rspro_provider.case
+END
+user_created_at_specific_date.sql
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/user_created_at_specific_date.sql
+END
+resellers_lcrs.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/51680/mor/gui/branches/x5/selenium/tests/resellers/resellers_lcrs.case
+END
+resellers_and_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/resellers_and_calls.sql
+END
+reseller_user_fake_form.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/reseller_user_fake_form.case
+END
+resellers_payment_option.case
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/resellers_payment_option.case
+END
+reseller_localization.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/reseller_localization.case
+END
+last_call_stats_re.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/41975/mor/gui/branches/x5/selenium/tests/resellers/last_call_stats_re.sql
+END
+resellers_def_currency.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/49045/mor/gui/branches/x5/selenium/tests/resellers/resellers_def_currency.case
+END
+reseller_fax_device.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/45612/mor/gui/branches/x5/selenium/tests/resellers/reseller_fax_device.case
+END
+resellers_prov_ip_check.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/44421/mor/gui/branches/x5/selenium/tests/resellers/resellers_prov_ip_check.case
+END
+resellers_permissions.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/resellers_permissions.case
+END
+reseller_pro_lcr.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/47490/mor/gui/branches/x5/selenium/tests/resellers/reseller_pro_lcr.case
+END
+reseller_create_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/42047/mor/gui/branches/x5/selenium/tests/resellers/reseller_create_user.case
+END
+resellers_and_calls_for_filter.sql
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/resellers_and_calls_for_filter.sql
+END
+resellers_pbx_functions.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/52166/mor/gui/branches/x5/selenium/tests/resellers/resellers_pbx_functions.case
+END
+reseller_last_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/reseller_last_calls.sql
+END
+resellers_ccg_location.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/41372/mor/gui/branches/x5/selenium/tests/resellers/resellers_ccg_location.case
+END
+reseller_user_services_own_prov.case
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/51405/mor/gui/branches/x5/selenium/tests/resellers/reseller_user_services_own_prov.case
+END
+resellers_user_active_call.sql
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/resellers_user_active_call.sql
+END
+reseller_user_main_page.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/42047/mor/gui/branches/x5/selenium/tests/resellers/reseller_user_main_page.case
+END
+stats_provider_pro.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/stats_provider_pro.sql
+END
+recordings_in_rspro_user_edit.case
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/recordings_in_rspro_user_edit.case
+END
+resellers_prefix_find.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/43951/mor/gui/branches/x5/selenium/tests/resellers/resellers_prefix_find.case
+END
+resellers_user_call.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/resellers_user_call.sql
+END
+reseller_last_calls.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/51027/mor/gui/branches/x5/selenium/tests/resellers/reseller_last_calls.case
+END
+reseller_country_stats.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/48306/mor/gui/branches/x5/selenium/tests/resellers/reseller_country_stats.case
+END
+resellers_stats.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/43946/mor/gui/branches/x5/selenium/tests/resellers/resellers_stats.case
+END
+re_create_own_dids.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/52251/mor/gui/branches/x5/selenium/tests/resellers/re_create_own_dids.case
+END
+reseller_user_edit.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/44025/mor/gui/branches/x5/selenium/tests/resellers/reseller_user_edit.case
+END
+resellers_provider_custom_use.case
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/resellers_provider_custom_use.case
+END
+reseller_all_user_stats.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/43305/mor/gui/branches/x5/selenium/tests/resellers/reseller_all_user_stats.case
+END
+resellers_users.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/51405/mor/gui/branches/x5/selenium/tests/resellers/resellers_users.case
+END
+reseller_card_group.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/41372/mor/gui/branches/x5/selenium/tests/resellers/reseller_card_group.case
+END
+resellers_profit.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/42047/mor/gui/branches/x5/selenium/tests/resellers/resellers_profit.case
+END
+reseller_homepage_and_logo.case
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/46165/mor/gui/branches/x5/selenium/tests/resellers/reseller_homepage_and_logo.case
+END
+resellers_rates_option.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/51129/mor/gui/branches/x5/selenium/tests/resellers/resellers_rates_option.case
+END
+resellers_provider_call.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/resellers_provider_call.sql
+END
+user_reseller_recordings.case
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/48494/mor/gui/branches/x5/selenium/tests/resellers/user_reseller_recordings.case
+END
+ccshop_reseller_second.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/ccshop_reseller_second.sql
+END
+resellers_user_meniu.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/50356/mor/gui/branches/x5/selenium/tests/resellers/resellers_user_meniu.case
+END
+providers_for_rspro.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/providers_for_rspro.sql
+END
+registration_tab_reseller.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/47490/mor/gui/branches/x5/selenium/tests/resellers/registration_tab_reseller.case
+END
+resellers_devices_list.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/50356/mor/gui/branches/x5/selenium/tests/resellers/resellers_devices_list.case
+END
+re_did_bulk_management.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/52319/mor/gui/branches/x5/selenium/tests/resellers/re_did_bulk_management.case
+END
+ccshop_reseller.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/ccshop_reseller.sql
+END
+resellers_translations.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/42257/mor/gui/branches/x5/selenium/tests/resellers/resellers_translations.case
+END
+resellers_call_tracing.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/51456/mor/gui/branches/x5/selenium/tests/resellers/resellers_call_tracing.case
+END
+reseller_aggregate_call.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/reseller_aggregate_call.sql
+END
+resellers_dids.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/52258/mor/gui/branches/x5/selenium/tests/resellers/resellers_dids.case
+END
+rspro_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/resellers/rspro_user.case
+END
+resellers_table_check.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/43285/mor/gui/branches/x5/selenium/tests/resellers/resellers_table_check.case
+END

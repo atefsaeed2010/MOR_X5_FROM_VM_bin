@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/52313/mor/gui/branches/x5/app/views/ast_queues
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/43278/mor/gui/branches/x5/app/views/ast_queues/list.html.erb
+END
+_queue_agent_options.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/43932/mor/gui/branches/x5/app/views/ast_queues/_queue_agent_options.html.erb
+END
+agent_get_users.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ast_queues/agent_get_users.html.erb
+END
+get_user_devices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ast_queues/get_user_devices.html.erb
+END
+_queue_caller_options.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/43932/mor/gui/branches/x5/app/views/ast_queues/_queue_caller_options.html.erb
+END
+_queue_announcements.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/48771/mor/gui/branches/x5/app/views/ast_queues/_queue_announcements.html.erb
+END
+_queue_agents.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/48771/mor/gui/branches/x5/app/views/ast_queues/_queue_agents.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/52129/mor/gui/branches/x5/app/views/ast_queues/edit.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ast_queues/new.html.erb
+END
+_queue_static_agents.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/52129/mor/gui/branches/x5/app/views/ast_queues/_queue_static_agents.html.erb
+END
+agent_get_user_devices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ast_queues/agent_get_user_devices.html.erb
+END
+_queue_periodic_announcements.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/43932/mor/gui/branches/x5/app/views/ast_queues/_queue_periodic_announcements.html.erb
+END
+_queue_options.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/52313/mor/gui/branches/x5/app/views/ast_queues/_queue_options.html.erb
+END
+_queue_caller_announcements.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/43932/mor/gui/branches/x5/app/views/ast_queues/_queue_caller_announcements.html.erb
+END
+_queue_visualization.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/43932/mor/gui/branches/x5/app/views/ast_queues/_queue_visualization.html.erb
+END

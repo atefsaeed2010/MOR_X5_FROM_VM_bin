@@ -1,0 +1,2674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>API Requests are disabled</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>API Requests are disabled</td>
+</tr>
+<!--per api negalima enablinti api-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;api_secret_key=secret&amp;allow_api=1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>API Requests are disabled</td>
+</tr>
+<!--Reseller gali naudotis metodu tik tada, kai adminas pas save enablinęs api-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_password_length=1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>API Requests are disabled</td>
+</tr>
+<!--pas reselerį niekas nepakitę-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/reseller_settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=allow_api</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=api_secret_key</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/settings/api/enable_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/quickforwards_rules/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=quickforwards_rule_name</td>
+	<td>qf rule</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=quickforwards_rule_rule_regexp</td>
+	<td>3706%</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Quickforwards Rule successfully created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--Klaidų pranešimai-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>GET Requests are disabled</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/settings/api/allow_get</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Conflines successfully updated</td>
+</tr>
+<!--Nė vienas iš parametrų neturi įeiti į hash-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_user_password_length=1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_password_length must be between 6 and 30</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_user_password_length=98&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_password_length must be between 6 and 30</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_user_password_length=1&amp;default_user_password_length=98&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_password_length must be between 6 and 30</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_user_password_length=-2&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_password_length must be between 6 and 30</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_user_credit=-11&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_credit must be positive number or -1 for infinity</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_user_balance=abcd&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_balance must be number</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_user_postpaid=abcd&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_postpaid must be 0 or 1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_user_allow_loss_calls=abcd&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_allow_loss_calls must be 0 or 1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_user_call_limit=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_credit must be positive integer</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_user_time_zone=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_time_zone name was not correct</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_user_currency=-5&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_currency name was not correct</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_user_currency=lt&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_currency name was not correct</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_user_quickforwards_rule_id=sdfsdf&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_quickforwards_rule_id was not found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_user_quickforwards_rule_id=15&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_quickforwards_rule_id was not found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_user_recording_enabled=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_recording_enabled must be 0 or 1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_user_recording_forced_enabled=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_recording_forced_enabled must be 0 or 1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_device_call_limit=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_device_call_limit must be positive integer</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_device_call_limit=adasdasd&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_device_call_limit must be positive integer</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_device_canreinvite=dasdasdasd&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_device_canreinvite can only be one of the following: 'yes', 'no', 'nonat', 'update', 'update,nonat'</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_device_canreinvite=yes,dasdasdasd&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_device_canreinvite can only be one of the following: 'yes', 'no', 'nonat', 'update', 'update,nonat'</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_device_nat=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_device_nat can only be one of the following: 'yes', 'no', 'force_rport', 'comedia'</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>default_device_nat can only be 'no' or &gt;= 1000 integer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_device_qualify=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_device_qualify can only be 'no' or &gt;= 1000 integer</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_device_grace_time=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_device_grace_time must be positive integer</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_device_grace_time=dfsdfsdf&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_device_grace_time must be positive integer</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;default_device_audio_codecs=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=success</td>
+	<td>Conflines successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;allow_api=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>allow_api must be 0 or 1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;api_secret_key=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>api_secret_key length must be higher than 5</td>
+</tr>
+<!--Reseller-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_password_length=1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_password_length must be between 6 and 30</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_password_length=98&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_password_length must be between 6 and 30</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_password_length=6&amp;default_user_password_length=98&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_password_length must be between 6 and 30</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_password_length=6&amp;default_user_password_length=-2&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_password_length must be between 6 and 30</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_credit=-11&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_credit must be positive number or -1 for infinity</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_balance=abcd&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_balance must be number</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_postpaid=abcd&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_postpaid must be 0 or 1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_allow_loss_calls=abcd&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_allow_loss_calls must be 0 or 1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_call_limit=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_credit must be positive integer</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_time_zone=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_time_zone name was not correct</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_currency=-5&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_currency name was not correct</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_currency=lt&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_currency name was not correct</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_quickforwards_rule_id=sdfsdf&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_quickforwards_rule_id was not found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_quickforwards_rule_id=1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_quickforwards_rule_id was not found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_recording_enabled=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_recording_enabled must be 0 or 1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_user_recording_forced_enabled=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_recording_forced_enabled must be 0 or 1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_device_call_limit=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_device_call_limit must be positive integer</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_device_call_limit=adasdasd&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_device_call_limit must be positive integer</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_device_canreinvite=dasdasdasd&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_device_canreinvite can only be one of the following: 'yes', 'no', 'nonat', 'update', 'update,nonat'</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_device_canreinvite=yes,dasdasdasd&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_device_canreinvite can only be one of the following: 'yes', 'no', 'nonat', 'update', 'update,nonat'</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_device_nat=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_device_nat can only be one of the following: 'yes', 'no', 'force_rport', 'comedia'</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>default_device_nat can only be 'no' or &gt;= 1000 integer</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_device_qualify=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_device_qualify can only be 'no' or &gt;= 1000 integer</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_device_grace_time=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_device_grace_time must be positive integer</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_device_grace_time=dfsdfsdf&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_device_grace_time must be positive integer</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;default_device_audio_codecs=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=success</td>
+	<td>Conflines successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;allow_api=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>allow_api must be 0 or 1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;api_secret_key=-1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>api_secret_key length must be higher than 5</td>
+</tr>
+<!--updeitas su teisingomis reikšmėmis-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;api_secret_key=secret!%40%23%24%25%5E%26*()_&amp;allow_api=1&amp;default_device_video_codecs=h261,h263p&amp;default_device_audio_codecs=gsm,ulaw,adpcm&amp;default_device_grace_time=33&amp;default_device_qualify=1005&amp;default_device_canreinvite=update&amp;default_device_nat=comedia&amp;default_device_call_limit=20&amp;default_user_recording_forced_enabled=1&amp;default_user_recording_enabled=1&amp;default_user_currency=RUB&amp;default_user_time_zone=Tbilisi&amp;default_user_call_limit=5&amp;default_user_allow_loss_calls=1&amp;default_user_postpaid=0&amp;default_user_balance=105,99&amp;default_user_credit=50&amp;default_user_password_length=7&amp;default_user_quickforwards_rule_id=1&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=success</td>
+	<td>Conflines successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_api</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=api_secret_key</td>
+	<td>secret!@#$%^&amp;*()_</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/default_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=password_length</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_balance</td>
+	<td>105.99</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=unlimited</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=credit</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_postpaid_2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_loss_calls</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_call_limit</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_time_zone</td>
+	<td>(GMT+04:00) Tbilisi</td>
+</tr>
+<!--defaultine, nes RUB nebuvo enablinta-->
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_currency_id</td>
+	<td>USD</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=recording_enabled</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=recording_forced_enabled</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_quickforwards_rule_id</td>
+	<td>qf rule</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/default_device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=call_limit</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=canreinvite</td>
+	<td>update</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=device_nat_comedia</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=qualify_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=grace_time</td>
+	<td>33</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=qualify_time</td>
+	<td>1005</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_gsm</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h261</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_adpcm</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_ulaw</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h263p</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g723</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_speex</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_alaw</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g726</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g729</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_ilbc</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_lpc10</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_slin</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g722</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h263</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h264</td>
+	<td>off</td>
+</tr>
+<!--hash pasikeitė-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;api_secret_key=987654321&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash2</td>
+</tr>
+<!--kita valiuta ir kitos reikšmės-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;api_secret_key=987654321&amp;default_device_video_codecs=h263&amp;default_device_audio_codecs=ilbc,speex&amp;default_device_grace_time=111&amp;default_device_qualify=2356&amp;default_device_nat=force_rport&amp;default_device_canreinvite=update,nonat&amp;default_device_call_limit=9985&amp;default_user_recording_forced_enabled=0&amp;default_user_recording_enabled=0&amp;default_user_currency=EUR&amp;default_user_time_zone=Mountain Time (US %26 Canada)&amp;default_user_call_limit=72&amp;default_user_allow_loss_calls=0&amp;default_user_postpaid=1&amp;default_user_balance=102.65948&amp;default_user_credit=-1&amp;default_user_password_length=23&amp;default_user_quickforwards_rule_id=0&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=success</td>
+	<td>Conflines successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_api</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=api_secret_key</td>
+	<td>987654321</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/default_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=password_length</td>
+	<td>23</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_balance</td>
+	<td>102.65948</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=credit</td>
+	<td>Unlimited</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=unlimited</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_postpaid_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_loss_calls</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_call_limit</td>
+	<td>72</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_currency_id</td>
+	<td>EUR</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_time_zone</td>
+	<td>(GMT-07:00) Mountain Time (US &amp; Canada)</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_quickforwards_rule_id</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=recording_enabled</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=recording_forced_enabled</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/default_device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=call_limit</td>
+	<td>9985</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=canreinvite</td>
+	<td>update,nonat</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=device_nat_force_rport</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=qualify_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=grace_time</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=qualify_time</td>
+	<td>2356</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_gsm</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h261</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_adpcm</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_ulaw</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h263p</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g723</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_speex</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_alaw</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g726</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g729</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_ilbc</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_lpc10</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_slin</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g722</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h263</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h264</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=recording_enabled</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=sbmt</td>
+	<td></td>
+</tr>
+<!--pas reselerį niekas nepakitę-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/reseller_settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_api</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=api_secret_key</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/default_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=password_length</td>
+	<td>8</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_balance</td>
+	<td>0.0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=credit</td>
+	<td>Unlimited</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=unlimited</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_postpaid_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_loss_calls</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_call_limit</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_currency_id</td>
+	<td>USD</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_time_zone</td>
+	<td>(GMT+00:00) UTC</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=user_quickforwards_rule_id</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=recording_enabled</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=recording_forced_enabled</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/default_device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=call_limit</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=canreinvite</td>
+	<td>no</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=device_nat_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=qualify_yes</td>
+	<td>on</td>
+</tr>
+<!--ticket bus tam, kad admino default setingai updeitina reselerio setingus #10253-->
+<tr>
+	<td>assertValue</td>
+	<td>id=grace_time</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=qualify_time</td>
+	<td>1000</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_gsm</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h261</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_adpcm</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_ulaw</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h263p</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g723</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_speex</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_alaw</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g726</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g729</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_ilbc</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_lpc10</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_slin</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g722</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h263</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h264</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/quickforwards_rules/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=quickforwards_rule_name</td>
+	<td>qf rule by reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=quickforwards_rule_rule_regexp</td>
+	<td>37065%</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Quickforwards Rule successfully created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash2</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--updeitas su teisingomis reikšmėmis-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;api_secret_key=secret!%40%23%24%25%5E%26*()_&amp;allow_api=1&amp;default_device_video_codecs=h261,h263p&amp;default_device_audio_codecs=gsm,ulaw,adpcm&amp;default_device_grace_time=33&amp;default_device_qualify=1005&amp;default_device_nat=comedia&amp;default_device_canreinvite=update&amp;default_device_call_limit=20&amp;default_user_recording_forced_enabled=1&amp;default_user_recording_enabled=1&amp;default_user_currency=RUB&amp;default_user_time_zone=Tbilisi&amp;default_user_call_limit=5&amp;default_user_allow_loss_calls=1&amp;default_user_postpaid=0&amp;default_user_balance=105,99&amp;default_user_credit=50&amp;default_user_password_length=7&amp;default_user_quickforwards_rule_id=2&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=success</td>
+	<td>Conflines successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/reseller_settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_api</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=api_secret_key</td>
+	<td>secret!@#$%^&amp;*()_</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/default_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=password_length</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_balance</td>
+	<td>105.99</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=unlimited</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=credit</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_postpaid_2</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_loss_calls</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_call_limit</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_time_zone</td>
+	<td>(GMT+04:00) Tbilisi</td>
+</tr>
+<!--defaultine, nes RUB nebuvo enablinta-->
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_currency_id</td>
+	<td>USD</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=recording_enabled</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=recording_forced_enabled</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_quickforwards_rule_id</td>
+	<td>qf rule by reseller</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/default_device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=call_limit</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=canreinvite</td>
+	<td>update</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=device_nat_comedia</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=qualify_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=grace_time</td>
+	<td>33</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=qualify_time</td>
+	<td>1005</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_gsm</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h261</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_adpcm</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_ulaw</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h263p</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g723</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_speex</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_alaw</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g726</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g729</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_ilbc</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_lpc10</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_slin</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g722</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h263</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h264</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--kita valiuta ir kitos reikšmės-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;api_secret_key=987654321&amp;default_device_video_codecs=h263&amp;default_device_audio_codecs=ilbc,speex&amp;default_device_grace_time=111&amp;default_device_qualify=2356&amp;default_device_nat=force_rport&amp;default_device_canreinvite=update,nonat&amp;default_device_call_limit=9985&amp;default_user_recording_forced_enabled=0&amp;default_user_recording_enabled=0&amp;default_user_currency=EUR&amp;default_user_time_zone=Mountain%20Time%20(US%20%26%20Canada)&amp;default_user_call_limit=72&amp;default_user_allow_loss_calls=0&amp;default_user_postpaid=1&amp;default_user_balance=102.65948&amp;default_user_credit=-1&amp;default_user_password_length=23&amp;default_user_quickforwards_rule_id=0&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=success</td>
+	<td>Conflines successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/reseller_settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_api</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=api_secret_key</td>
+	<td>987654321</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/default_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=password_length</td>
+	<td>23</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_balance</td>
+	<td>102.65948</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=credit</td>
+	<td>Unlimited</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=unlimited</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_postpaid_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_loss_calls</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_call_limit</td>
+	<td>72</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_currency_id</td>
+	<td>EUR</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_time_zone</td>
+	<td>(GMT-07:00) Mountain Time (US &amp; Canada)</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_quickforwards_rule_id</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=recording_enabled</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=recording_forced_enabled</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/default_device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=call_limit</td>
+	<td>9985</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=canreinvite</td>
+	<td>update,nonat</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=device_nat_force_rport</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=qualify_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=grace_time</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=qualify_time</td>
+	<td>2356</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_gsm</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h261</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_adpcm</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_ulaw</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h263p</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g723</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_speex</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_alaw</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g726</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g729</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_ilbc</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_lpc10</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_slin</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g722</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h263</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h264</td>
+	<td>off</td>
+</tr>
+<!--Reselerio api neturi reaguoti į jo nustatymus-->
+<tr>
+	<td>open</td>
+	<td>/billing/functions/reseller_settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=api_disable_hash_checking</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;api_secret_key=987654321&amp;default_device_video_codecs=h263&amp;default_device_audio_codecs=ilbc,speex&amp;default_device_grace_time=111&amp;default_device_qualify=2356&amp;default_device_nat=force_rport&amp;default_device_canreinvite=update,nonat&amp;default_device_call_limit=9985&amp;default_user_recording_forced_enabled=0&amp;default_user_recording_enabled=0&amp;default_user_currency=EUR&amp;default_user_time_zone=Mountain%20Time%20(US%20%26%20Canada)&amp;default_user_call_limit=72&amp;default_user_allow_loss_calls=0&amp;default_user_postpaid=1&amp;default_user_balance=102.65948&amp;default_user_credit=-1&amp;default_user_password_length=23&amp;default_user_quickforwards_rule_id=0&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>Incorrect hash</td>
+</tr>
+<!--jei api metode yra klaidų, neturi išsaugoti teisingų reikšmių-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;api_secret_key=656598&amp;default_device_video_codecs=&amp;default_device_audio_codecs=&amp;default_device_grace_time=98&amp;default_device_qualify=5000&amp;default_device_nat=yes&amp;default_device_canreinvite=no&amp;default_device_call_limit=356&amp;default_user_recording_forced_enabled=1&amp;default_user_recording_enabled=1&amp;default_user_currency=USD&amp;default_user_time_zone=Lima&amp;default_user_call_limit=15&amp;default_user_allow_loss_calls=1&amp;default_user_postpaid=0&amp;default_user_balance=122&amp;default_user_credit=22&amp;default_user_password_length=8&amp;default_user_quickforwards_rule_id=18&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_quickforwards_rule_id was not found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/reseller_settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_api</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=api_secret_key</td>
+	<td>987654321</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/default_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=password_length</td>
+	<td>23</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_balance</td>
+	<td>102.65948</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=credit</td>
+	<td>Unlimited</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=unlimited</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_postpaid_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_loss_calls</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_call_limit</td>
+	<td>72</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_currency_id</td>
+	<td>EUR</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_time_zone</td>
+	<td>(GMT-07:00) Mountain Time (US &amp; Canada)</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_quickforwards_rule_id</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=recording_enabled</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=recording_forced_enabled</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/default_device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=call_limit</td>
+	<td>9985</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=canreinvite</td>
+	<td>update,nonat</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=device_nat_force_rport</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=qualify_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=grace_time</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=qualify_time</td>
+	<td>2356</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_gsm</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h261</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_adpcm</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_ulaw</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h263p</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g723</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_speex</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_alaw</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g726</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g729</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_ilbc</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_lpc10</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_slin</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g722</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h263</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h264</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;api_secret_key=656598&amp;default_device_video_codecs=&amp;default_device_audio_codecs=&amp;default_device_grace_time=98&amp;default_device_qualify=5000&amp;default_device_nat=yes&amp;default_device_canreinvite=no&amp;default_device_call_limit=356&amp;default_user_recording_forced_enabled=1&amp;default_user_recording_enabled=1&amp;default_user_currency=USD&amp;default_user_time_zone=Lima&amp;default_user_call_limit=15&amp;default_user_allow_loss_calls=1&amp;default_user_postpaid=0&amp;default_user_balance=122&amp;default_user_credit=22&amp;default_user_password_length=8&amp;default_user_quickforwards_rule_id=18&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>default_user_quickforwards_rule_id was not found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_api</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=api_secret_key</td>
+	<td>987654321</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/default_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=password_length</td>
+	<td>23</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_balance</td>
+	<td>102.65948</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=credit</td>
+	<td>Unlimited</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=unlimited</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_postpaid_1</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_loss_calls</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=user_call_limit</td>
+	<td>72</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_currency_id</td>
+	<td>EUR</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_time_zone</td>
+	<td>(GMT-07:00) Mountain Time (US &amp; Canada)</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=user_quickforwards_rule_id</td>
+	<td>None</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=recording_enabled</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=recording_forced_enabled</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/default_device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=call_limit</td>
+	<td>9985</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=canreinvite</td>
+	<td>update,nonat</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=device_nat_force_rport</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=qualify_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=grace_time</td>
+	<td>111</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=qualify_time</td>
+	<td>2356</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_gsm</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h261</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_adpcm</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_ulaw</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h263p</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g723</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_speex</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_alaw</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g726</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g729</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_ilbc</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_lpc10</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_slin</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_g722</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h263</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=codec_h264</td>
+	<td>off</td>
+</tr>
+<!--Per API galima išjungti api-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;allow_api=0&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=success</td>
+	<td>Conflines successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/reseller_settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_api</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=reseller&amp;allow_api=0&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=success</td>
+	<td>Conflines successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/reseller_settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_api</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;allow_api=0&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=success</td>
+	<td>Conflines successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;allow_api=0&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>API Requests are disabled</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_api</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/conflines_update?u=admin&amp;allow_api=1&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=allow_api</td>
+	<td>off</td>
+</tr>
+</tbody></table>
+</body>
+</html>

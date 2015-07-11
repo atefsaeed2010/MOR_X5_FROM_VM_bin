@@ -1,0 +1,5 @@
+# disable check balance
+# ----
+# disallow check balance over API
+settings/api/check_balance_disable.sql
+# bundle loaded

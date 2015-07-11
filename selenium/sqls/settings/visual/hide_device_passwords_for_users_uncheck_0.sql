@@ -1,0 +1,1 @@
+UPDATE `conflines` SET `value` = '0' WHERE name='Hide_Device_Passwords_For_Users' and `owner_id` = '0';

@@ -1,0 +1,52 @@
+<%= javascript_include_tag 'swfobject' %>
+
+<!--
+<div id="table">
+    <%#= _('Todays_normative') %>: <%#= @todays_normative %>%
+</div>
+
+<div id="table">
+    <%#= _('Months_normative') %>: <%#= @months_normative %>%
+</div>
+
+<div id="table">
+    <%#= _('New_calls_today') %>: <%#= @new_calls_today %>
+</div>
+-->
+<br></br>
+
+<div align="left" class="nb">
+  <%= form_tag(:action => 'reseller_all_user_stats') do %>
+      <%= _('From') %>
+      : <%= select_date(Time.mktime(session[:year_from], session[:month_from], session[:day_from]), :end_year => Date.today.year+1, :prefix => "date_from") %>
+      &nbsp;&nbsp;<%= _('to') %>
+      : <%= select_date(Time.mktime(session[:year_till], session[:month_till], session[:day_till]), :end_year => Date.today.year+1, :prefix => "date_till") %>
+      &nbsp;&nbsp;<%= submit_tag _('Change_date'), :disable_with => _('Processing..') %>
+  <% end %>
+</div>
+
+<br></br>
+<div id="table">
+  <%= render 'std_stats', :total_calls => @total_calls, :a_date => @a_date,
+      :outgoing_calls => @outgoing_calls, :outgoing_perc => @outgoing_perc,
+      :incoming_calls => @incoming_calls, :incoming_perc => @incoming_perc,
+      :o_answered_calls => @o_answered_calls, :o_answered_perc => @o_answered_perc,
+      :i_answered_calls => @i_answered_calls, :i_answered_perc => @i_answered_perc,
+      :t_answered_calls => @t_answered_calls, :t_answered_perc => @t_answered_perc,
+      :o_no_answer_calls => @o_no_answer_calls, :o_no_answer_perc => @o_no_answer_perc,
+      :i_no_answer_calls => @i_no_answer_calls, :i_no_answer_perc => @i_no_answer_perc,
+      :t_no_answer_calls => @t_no_answer_calls, :t_no_answer_perc => @t_no_answer_perc,
+      :o_busy_calls => @o_busy_calls, :o_busy_perc => @o_busy_perc,
+      :i_busy_calls => @i_busy_calls, :i_busy_perc => @i_busy_perc,
+      :t_busy_calls => @t_busy_calls, :t_busy_perc => @t_busy_perc,
+      :o_failed_calls => @o_failed_calls, :o_failed_perc => @o_failed_perc,
+      :i_failed_calls => @i_failed_calls, :i_failed_perc => @i_failed_perc,
+      :t_failed_calls => @t_failed_calls, :t_failed_perc => @t_failed_perc,
+      :a_calls => @a_calls, :a_billsec => @a_billsec, :a_avg_billsec => @a_avg_billsec,
+      :t_calls => @t_calls, :t_billsec => @t_billsec, :t_avg_billsec => @t_avg_billsec,
+      :hide_non_answered_calls_for_user => @hide_non_answered_calls_for_user,
+      :lv_Calls_graph => @Calls_graph, :lv_Calls_graph2 => @Calls_graph2,
+      :lv_Calltime_graph => @Calltime_graph, :lv_Asr_graph => @Asr_graph,
+      :lv_Avg_Calltime_graph => @Avg_Calltime_graph, :lv_Out_in_calls_graph => @Out_in_calls_graph,
+      :lv_Out_in_calls_graph2 => @Out_in_calls_graph2 %>
+</div>

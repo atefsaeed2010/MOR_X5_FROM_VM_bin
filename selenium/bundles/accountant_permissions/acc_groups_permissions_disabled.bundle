@@ -1,0 +1,7 @@
+# Acc group permissions for user and payment management set as Disabled
+# ----
+# User usage permission set as disabled
+/permissions/accountant/manage_users_disabled.sql
+# payments permission set as disabled
+/permissions/accountant/manage_payments_disabled.sql
+# bundle loaded

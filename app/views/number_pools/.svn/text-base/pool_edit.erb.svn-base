@@ -1,0 +1,6 @@
+<%= form_tag(:action => 'pool_update', :id => @number_pool.id) do %>
+  <%= render 'form' %>
+  <%= submit_tag _('Save_changes'), :disable_with => _('Processing..') %>
+<% end %>
+
+<br />

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/39906/mor/gui/branches/x5/selenium/converter
+END
+converter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/selenium/converter/converter.rb
+END
+refactor_tests.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/selenium/converter/refactor_tests.rb
+END
+set_hosts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/selenium/converter/set_hosts.rb
+END

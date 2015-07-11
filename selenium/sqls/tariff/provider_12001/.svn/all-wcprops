@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/51712/mor/gui/branches/x5/selenium/sqls/tariff/provider_12001
+END
+create_rates_for_lithuania.sql
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/50990/mor/gui/branches/x5/selenium/sqls/tariff/provider_12001/create_rates_for_lithuania.sql
+END
+create_rates_with_effective_from_date_for_afghanistan.sql
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/!svn/ver/42080/mor/gui/branches/x5/selenium/sqls/tariff/provider_12001/create_rates_with_effective_from_date_for_afghanistan.sql
+END
+create_rates_for_mali.sql
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/48742/mor/gui/branches/x5/selenium/sqls/tariff/provider_12001/create_rates_for_mali.sql
+END
+create_rates_with_effective_from_date_for_us.sql
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/!svn/ver/42080/mor/gui/branches/x5/selenium/sqls/tariff/provider_12001/create_rates_with_effective_from_date_for_us.sql
+END
+create_rates_for_afghanistan.sql
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/!svn/ver/42080/mor/gui/branches/x5/selenium/sqls/tariff/provider_12001/create_rates_for_afghanistan.sql
+END
+create_rates_with_effective_from_date_for_afghanistan_fourth.sql
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/!svn/ver/51712/mor/gui/branches/x5/selenium/sqls/tariff/provider_12001/create_rates_with_effective_from_date_for_afghanistan_fourth.sql
+END
+create_rates_for_us.sql
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/42080/mor/gui/branches/x5/selenium/sqls/tariff/provider_12001/create_rates_for_us.sql
+END
+create_tariff.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/42080/mor/gui/branches/x5/selenium/sqls/tariff/provider_12001/create_tariff.sql
+END
+create_rates_with_effective_from_date_for_afghanistan_third.sql
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/!svn/ver/46370/mor/gui/branches/x5/selenium/sqls/tariff/provider_12001/create_rates_with_effective_from_date_for_afghanistan_third.sql
+END
+create_rates_with_effective_from_date_for_afghanistan_second.sql
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/!svn/ver/46370/mor/gui/branches/x5/selenium/sqls/tariff/provider_12001/create_rates_with_effective_from_date_for_afghanistan_second.sql
+END
+create_rates_with_effective_from_date_for_lithuania.sql
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/!svn/ver/42080/mor/gui/branches/x5/selenium/sqls/tariff/provider_12001/create_rates_with_effective_from_date_for_lithuania.sql
+END

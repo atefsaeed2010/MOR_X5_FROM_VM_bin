@@ -1,0 +1,20 @@
+<%= render 'search_header', options: @options, cardgroups: @cardgroups %>
+<br/>
+<table class="bordered">
+  <tr>
+    <td align="left" NOWRAP>
+      <%= _("Records") %>: <%= @total_calls %>&nbsp;&nbsp;&nbsp;
+      <%= _("Pages") %>: <%= @total_pages %>&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" NOWRAP>
+      <%= render 'page_select_header_agg', options: @options, total_pages: @total_pages %>
+    </td>
+  </tr>
+</table>
+<br/>
+<% if @total_calls.to_i > 0 %>
+    <%= link_to b_csv + _('Export_to_CSV'), :action => :aggregate, :csv => 1 %>
+<% end %>
+<br/>
+<br/>
+<%= render 'aggregate_call_list', options: @options, result: @result, total: @total %>

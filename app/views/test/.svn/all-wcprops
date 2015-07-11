@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/!svn/ver/46396/mor/gui/branches/x5/app/views/test
+END
+fake_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/app/views/test/fake_form.html.erb
+END
+launch_script.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/42164/mor/gui/branches/x5/app/views/test/launch_script.erb
+END
+make_select.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/41906/mor/gui/branches/x5/app/views/test/make_select.html.erb
+END
+raise_exception.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/app/views/test/raise_exception.erb
+END
+time.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/46396/mor/gui/branches/x5/app/views/test/time.html.erb
+END

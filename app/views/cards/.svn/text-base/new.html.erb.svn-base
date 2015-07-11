@@ -1,0 +1,185 @@
+<% unless calling_cards_active? %>
+  <div>
+    <%= raw b_info + _('calling_cards_restriction') %>
+  </div>
+  </br>
+<% end %>
+<div>
+  <b><%= _('Number_length')%>:</b> <%= @cg.number_length %>
+</div>
+</br>
+<table class="multiformTable">
+  <tr>
+    <td>
+      <table>
+        <tr>
+          <td colspan="2">
+            </br>
+            <%= _('cc_add_one_card') %>:
+            </br>
+            </br>
+          </td>
+        </tr>
+        <%= form_for(:single_card, url: {action: 'create', cg: @cg.id}) do |f| %>
+            <tr>
+              <td id="single_title_card_number">
+                <b><%= _('Card_number') %>:</b>
+              </td>
+              <td>
+                <%= f.text_field 'number', class: 'input', size: 20, maxlength: @cg.number_length %>
+              </td>
+            </tr>
+            <tr>
+              <td id="single_title_min_balance">
+                <b><%= _('min_balance') %>:</b>
+              </td>
+              <td>
+                <%= f.text_field 'min_balance', class: 'input', maxlength: 255, size: 10 %>
+              </td>
+            </tr>
+            <tr>
+              <td id="single_title_batch_number">
+                <b><%= _('batch_number')%>:</b>
+              </td>
+              <td>
+                <%= f.text_field 'batch_number', class: 'input', maxlength: 255, size: 10 %>
+              </td>
+            </tr>
+            <tr>
+              <td id="single_title_language">
+                <b><%= _('Language') %>:</b>
+              </td>
+              <td>
+                <%= f.text_field 'language', size: 10, class: 'input', value: 'en' %>
+              </td>
+            </tr>
+            <tr>
+              <td id="single_title_distributor">
+                <b><%= _('Distributor') %>:</b>
+              </td>
+              <td>
+                <%= render 'shared/live_search_field', object: nice_user(@single_card.try(:user)),
+                                                    object_id: @single_card.try(:user_id),
+                                                    object_name: 'User',
+                                                     action_url: {
+                                                       controller: :users,
+                                                       action: :get_users_map,
+                                                       options: {
+                                                         show_users_only: true,
+                                                         show_owned_users_only: true
+                                                       }
+                                                     } %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= f.submit _('Create'), :disable_with => _('Processing..') %>
+              </td>
+            </tr>
+        <% end %>
+      </table>
+    </td>
+  </tr>
+</table>
+</br>
+<table class="multiformTable">
+  <tr>
+    <td>
+      <table>
+        <tr>
+          <td colspan="2">
+            </br>
+            <%= _('cc_add_cards_interval') %>:
+            </br>
+            </br>
+          </td>
+        </tr>
+        <%= form_for(:bulk_form, url: {action: 'create_bulk', cg: @cg.id}) do |f| %>
+            <tr>
+              <td id="interval_title_cards_interval">
+                <b><%= _('cards_interval') %>:</b>
+              </td>
+              <td>
+                <%= f.text_field 'start_number',  "class" => "input", id: 'start_number', size: 20, "maxlength" => @cg.number_length %>
+              </td>
+              <td>
+                <%= f.text_field 'end_number',  "class" => "input", id: 'end_number', size: 20, "maxlength" => @cg.number_length %>
+              </td>
+            </tr>
+            <tr>
+              <td id="interval_title_min_balance">
+                <b><%= _('min_balance') %>:</b>
+              </td>
+              <td>
+                <%= f.text_field 'min_balance',  'class' => 'input', id: 'min_balance', 'maxlength' => '255', :size => 10 %>
+              </td>
+            </tr>
+            <tr>
+              <td id="interval_title_batch_number">
+                <b><%= _('batch_number') %>:</b>
+              </td>
+              <td>
+                <%= f.text_field 'batch_number', "class" => "input", id: 'batch_number',"maxlength" => '255', :size => 10 %>
+              </td>
+            </tr>
+            <tr>
+              <td id="interval_title_language">
+                <b><%= _('Language') %>:</b>
+              </td>
+              <td>
+                <%= f.text_field 'language', :size => 10, id: 'card_language', "class" => "input" %>
+              </td>
+            </tr>
+            <tr>
+              <td id="interval_title_distributor">
+                <b><%= _('Distributor') %>:</b>
+              </td>
+              <td>
+              <%= render 'shared/live_search_field', object: '',
+                                                    object_id: -1,
+                                                    object_name: 'Bulk_user',
+                                                     action_url: {
+                                                       controller: :users,
+                                                       action: :get_users_map,
+                                                       options: {
+                                                         show_users_only: true,
+                                                         show_owned_users_only: true
+                                                       }
+                                                     } %>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <%= f.submit _('Create'), :disable_with => _('Processing..') %>
+              </td>
+            </tr>
+        <% end %>
+      </table>
+    </td>
+  </tr>
+</table>
+</br>
+<table class="multiformTable">
+  <tr>
+    <td>
+      <table>
+        <tr>
+          <td colspan="2">
+            </br>
+            <%= _('cc_add_cards_from_csv') %>:
+            </br>
+            </br>
+          </td>
+        </tr>
+        <%= form_tag({:action => 'import_csv', :step => "1", :cg => @cg.id}, {:multipart => "true", :id => "files"}) do %>
+            <tr>
+              <td id="csv_title_upload"><b><%= _('Upload') %>:</b> <%= file_field_tag "file" %></td>
+            </tr>
+            <tr>
+              <td><%= submit_tag( _('Upload_file'), :disable_with=>_('Processing..')  )%></td>
+            </tr>
+        <% end %>
+      </table>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/48034/mor/gui/branches/x5/app/views/ringgroups
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/43636/mor/gui/branches/x5/app/views/ringgroups/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/42152/mor/gui/branches/x5/app/views/ringgroups/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/43636/mor/gui/branches/x5/app/views/ringgroups/new.html.erb
+END
+show_extlines.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ringgroups/show_extlines.html.erb
+END
+_devices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/43636/mor/gui/branches/x5/app/views/ringgroups/_devices.html.erb
+END
+delete_device.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/43636/mor/gui/branches/x5/app/views/ringgroups/delete_device.html.erb
+END
+free_user_devices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ringgroups/free_user_devices.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/48034/mor/gui/branches/x5/app/views/ringgroups/_form.html.erb
+END
+show_devices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ringgroups/show_devices.html.erb
+END
+assign_device.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/43636/mor/gui/branches/x5/app/views/ringgroups/assign_device.html.erb
+END
+show_dids.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ringgroups/show_dids.html.erb
+END

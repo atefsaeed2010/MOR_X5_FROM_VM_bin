@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/51852/mor/gui/branches/x5/selenium/tests/rates
+END
+ct_split_rates_re.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/51487/mor/gui/branches/x5/selenium/tests/rates/ct_split_rates_re.case
+END
+rates_new.case
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/44594/mor/gui/branches/x5/selenium/tests/rates/rates_new.case
+END
+rates_pagination.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/rates/rates_pagination.case
+END
+destinations.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/rates/destinations.sql
+END
+rates_new_quick_add.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/rates/rates_new_quick_add.case
+END
+advanced_rates.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/51852/mor/gui/branches/x5/selenium/tests/rates/advanced_rates.case
+END

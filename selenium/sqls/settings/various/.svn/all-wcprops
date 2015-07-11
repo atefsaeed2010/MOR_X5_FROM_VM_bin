@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/49848/mor/gui/branches/x5/selenium/sqls/settings/various
+END
+device_range_min_1004.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/49675/mor/gui/branches/x5/selenium/sqls/settings/various/device_range_min_1004.sql
+END
+do_not_allow_duplicate_device_check.sql
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/!svn/ver/49773/mor/gui/branches/x5/selenium/sqls/settings/various/do_not_allow_duplicate_device_check.sql
+END
+allow_short_passwords_in_devices_check.sql
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/!svn/ver/49780/mor/gui/branches/x5/selenium/sqls/settings/various/allow_short_passwords_in_devices_check.sql
+END
+do_not_allow_duplicate_device_uncheck.sql
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/!svn/ver/49773/mor/gui/branches/x5/selenium/sqls/settings/various/do_not_allow_duplicate_device_uncheck.sql
+END
+provider_settings_0.sql
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/49848/mor/gui/branches/x5/selenium/sqls/settings/various/provider_settings_0.sql
+END
+allow_short_passwords_in_devices_uncheck.sql
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/!svn/ver/49780/mor/gui/branches/x5/selenium/sqls/settings/various/allow_short_passwords_in_devices_uncheck.sql
+END
+provider_settings_1.sql
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/49848/mor/gui/branches/x5/selenium/sqls/settings/various/provider_settings_1.sql
+END
+device_settings_0.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/49848/mor/gui/branches/x5/selenium/sqls/settings/various/device_settings_0.sql
+END
+device_settings_1.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/49848/mor/gui/branches/x5/selenium/sqls/settings/various/device_settings_1.sql
+END

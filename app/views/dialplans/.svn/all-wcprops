@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/52266/mor/gui/branches/x5/app/views/dialplans
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/52071/mor/gui/branches/x5/app/views/dialplans/edit.html.erb
+END
+list_extlines.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/43480/mor/gui/branches/x5/app/views/dialplans/list_extlines.html.erb
+END
+dialplans.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/50662/mor/gui/branches/x5/app/views/dialplans/dialplans.html.erb
+END
+dialplans_device_ajax.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/48870/mor/gui/branches/x5/app/views/dialplans/dialplans_device_ajax.html.erb
+END
+did_assign_to_dp.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/app/views/dialplans/did_assign_to_dp.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/52266/mor/gui/branches/x5/app/views/dialplans/new.html.erb
+END
+_callback_dialplan.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/43480/mor/gui/branches/x5/app/views/dialplans/_callback_dialplan.html.erb
+END
+_dialplan_dids_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/app/views/dialplans/_dialplan_dids_list.html.erb
+END
+_dialplan.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/43480/mor/gui/branches/x5/app/views/dialplans/_dialplan.html.erb
+END

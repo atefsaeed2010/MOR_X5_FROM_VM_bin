@@ -1,0 +1,6 @@
+<%= form_tag(:action => 'create') do %>
+    <%= render 'form', :user_wholesale_enabled => @user_wholesale_enabled,
+        :currs => @currs, :tariff => @tariff, :no_edit_purpose => @no_edit_purpose %>
+    <br><br><br>
+    <%= submit_tag _('Create'), :disable_with => _('Processing..') %>
+<% end %>

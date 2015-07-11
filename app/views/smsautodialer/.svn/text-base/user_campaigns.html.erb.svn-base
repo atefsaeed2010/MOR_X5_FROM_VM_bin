@@ -1,0 +1,99 @@
+<%= render 'page_select_header', page: @page,
+                                 total_pages: @total_pages,
+                                 page_select_header_id: @page_select_header_id,
+                                 search_username: @search_username,
+                                 search_fname: @search_fname,
+                                 search_lname: @search_lname,
+                                 search_agrnumber: @search_agrnumber,
+                                 search_sub: @search_sub,
+                                 search_account_number: @search_account_number if @total_pages > 1 %>
+<%= "<br/>".html_safe if @total_pages > 1 %>
+
+<table class="maintable" width="100%">
+  <tr>
+    <th align="left"><%= sortable_list_header('name', _('Name'), @options) %></th>
+    <th align="left"><%= sortable_list_header('type', _('Type'), @options) %></th>
+    <th align="center"><%= sortable_list_header('status',_('Status'), @options) %></th>
+    <th align="center"><%= sortable_list_header('start_time', _('Start_time'), @options) %></th>
+    <th align="center"><%= sortable_list_header('stop_time', _('Stop_time'), @options) %></th>
+    <th align="center"><%= _('Numbers') %></th>
+    <th align="center"><%= _('Dialed') %></th>
+    <th align="center"><%= _('Completed') %></th>
+    <th align="center"><%= _('Price') %></th>
+    <th align="center"><%= _('Actions') %></th>
+    <th></th>
+    <th align="center"><%= _('Stats') %></th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% @total_numbers = @total_dialed = @total_completed = @total_price = 0 -%>
+
+  <% @campaigns.each_with_index { |camp, i| %>
+      <tr class="row<%= (i % 2 + 1).to_s %>">
+
+        <%
+           numbers = camp.sms_adnumbers
+           @total_numbers += numbers.size
+           executed_numbers = camp.executed_numbers_count
+           @total_dialed += executed_numbers.to_i
+           completed_numbers = camp.completed_numbers_count
+           @total_completed += completed_numbers.to_i
+           billsec = camp.completed_numbers_user_billsec
+           price = camp.user_price
+           @total_price += price.to_f
+        %>
+
+        <td id="name_<%= camp.id %>" align="left"><%= camp.name %></td>
+        <td id="type_<%= camp.id %>" align="left"><%= camp.campaign_type %></td>
+        <%= form_tag :action => 'campaign_change_status', :id => camp.id do %>
+            <td id="enabled_<%= camp.id %>" align="center" nowrap>
+              <% if camp.status == "enabled" %>
+                  <div class="bold_green"><%= _('Active') %>
+                    <%= image_submit_tag 'icons/stop.png', :title => _('Stop') %>
+                  </div>
+              <% else %>
+                  <div class="bold_red"><%= _('Stopped') %>
+                    <%= image_submit_tag 'icons/play.png', :title => _('Start') %>
+                  </div>
+              <% end %>
+            </td>
+        <% end %>
+        <td id="start_time_<%= camp.id %>" align="center"><%= nice_time2 camp.start_time %></td>
+        <td id="stop_time_<%= camp.id %>" align="center"><%= nice_time2 camp.stop_time %></td>
+        <td id="campaign_numbers_<%= camp.id %>" align="center"><%= link_to b_details, :action => 'campaign_numbers', :id => camp.id %><%= numbers.size.to_s %></td>
+        <td id="execute_numbers_<%= camp.id %>" align="center"><%= executed_numbers.to_s %></td>
+        <td id="complete_numbers_<%= camp.id %>" align="center"><%= completed_numbers %></td>
+        <td id="price_<%= camp.id %>" align="center"><%= nice_number price %></td>
+        <td id="actions_<%= camp.id %>" align="center"><%= link_to(b_actions, {:action => 'campaign_actions', :id => camp.id}, {:id => "link_redial_#{camp.id}"}) %> <%= camp.sms_adactions.size %></td>
+        <td id="redial_<%= camp.id %>" align="center"><%= link_to(_('resend_all_failed_sms'), {:action => 'redial_all_failed_calls', :id => camp.id}, {:id => "link_redial_#{camp.id}", :confirm => _('Are_you_sure'), :method => :post}) %></td>
+        <td id="stats_<%= camp.id %>" align="center"><%= link_to(b_call_stats, {:action => 'campaign_statistics', :campaign_id => camp.id}, {:id => "link_call_stats_#{camp.id}"}) %></td>
+        <td id="edit_<%= camp.id %>" align="center"><%= link_to(b_edit, {:action => 'campaign_edit', :id => camp.id}, {:id => "link_edit_#{camp.id}"}) %></td>
+        <td id="delete_<%= camp.id %>" align="center"><%= link_to(b_delete, {:action => 'campaign_destroy', :id => camp.id}, {:id => "link_delete_#{camp.id}", :confirm => _('Are_you_sure'), :method => :post}) %></td>
+      </tr>
+  <% } %>
+
+  <tr>
+    <th id="total" align="left" colspan=5>  <%= _('Total') %>:</th>
+    <th id="total_numbers" align="center"><%= @total_numbers %></th>
+    <th id="total_dialed" align="center"><%= @total_dialed %></th>
+    <th id="total_complete" align="center"><%= @total_completed %></th>
+    <th id="total_price" align="center"><%= nice_number @total_price %></th>
+    <th align="left"></th>
+    <th align="left"></th>
+    <th align="left"></th>
+    <th align="left"></th>
+    <th align="left"></th>
+  </tr>
+</table>
+<br/>
+<%= render 'page_select_header', page: @page,
+                                 total_pages: @total_pages,
+                                 page_select_header_id: @page_select_header_id,
+                                 search_username: @search_username,
+                                 search_fname: @search_fname,
+                                 search_lname: @search_lname,
+                                 search_agrnumber: @search_agrnumber,
+                                 search_sub: @search_sub,
+                                 search_account_number: @search_account_number if @total_pages > 1 %>
+<%= "<br>".html_safe if @total_pages > 1 %>
+<%= link_to b_add + _('Add_campaign'), :action => 'campaign_new' %>

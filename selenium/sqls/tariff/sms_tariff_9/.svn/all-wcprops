@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/44639/mor/gui/branches/x5/selenium/sqls/tariff/sms_tariff_9
+END
+change_tariff_type.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/44639/mor/gui/branches/x5/selenium/sqls/tariff/sms_tariff_9/change_tariff_type.sql
+END
+change_tariff_owner.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/44639/mor/gui/branches/x5/selenium/sqls/tariff/sms_tariff_9/change_tariff_owner.sql
+END
+sms_rates.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/44639/mor/gui/branches/x5/selenium/sqls/tariff/sms_tariff_9/sms_rates.sql
+END

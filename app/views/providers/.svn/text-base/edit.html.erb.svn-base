@@ -1,0 +1,31 @@
+<table width="100%" class="maintable">
+  <tr>
+    <th align="left" style="white-space:nowrap; width: 10%">
+      <%= link_to b_rules + _('Rules'), :action => 'provider_rules', :id => @provider %></th>
+    <th align="left" style="white-space:nowrap; width: 10%"><%= link_to b_call + _('Calls'), :controller => "stats", :action => 'last_calls_stats', :s_provider => @provider %></th>
+    <th style="width: 100%"></th>
+  </tr>
+</table>
+<br/>
+
+<%= form_tag(:action => 'update', :id => @provider) do %>
+  <% unless @provider.is_dahdi? %>
+    <%= render 'form', action: @action, providertypes: @providertypes,
+    provider: @provider, tariffs: @tariffs, new_provider: @new_provider,
+    device: @device, locations: @locations, curr: @curr, cid_name: @cid_name,
+    device_caller_id_number: @device_caller_id_number, cid_number: @cid_number,
+    number_pools: @number_pools, qualify_time: @qualify_time,
+    audio_codecs: @audio_codecs, video_codecs: @video_codecs, ip_first: @ip_first,
+    ip_second: @ip_second, ip_third: @ip_third, mask_first: @mask_first, mask_second: @mask_second, mask_third: @mask_third,
+    is_common_use_used: @is_common_use_used, device_type: @device_type,
+    servers: @servers, serverproviders: @serverproviders
+  %>
+  <% else %>
+    <%= render 'form_zap', action: @action, providertypes: @providertypes,
+    provider: @provider, tariffs: @tariffs, new_provider: @new_provider,
+    device: @device, locations: @locations,
+    servers: @servers, serverproviders: @serverproviders %>
+  <% end %>
+  <%= submit_tag _('Save_changes') %>
+<% end %>
+<br/>

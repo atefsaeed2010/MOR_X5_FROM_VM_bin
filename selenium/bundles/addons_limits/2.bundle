@@ -1,0 +1,10 @@
+# bundle for addons_limits.case test: allow API, GET API, secret key + hash_disabled
+# ----
+#  enable API
+/settings/api/enable_0.sql
+# allow GET API
+/settings/api/allow_get.sql
+# disable hash ckecking
+/settings/api/disable_hash_0.sql
+#
+# bundle loaded

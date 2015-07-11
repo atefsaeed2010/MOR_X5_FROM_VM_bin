@@ -1,0 +1,1 @@
+UPDATE `users` SET own_providers='1' WHERE id='1002';

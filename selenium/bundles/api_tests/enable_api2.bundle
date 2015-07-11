@@ -1,0 +1,18 @@
+#  simple settings for testing api
+# ----
+# enable api in admin + secret key
+settings/api/enable_0.sql
+# GET 
+settings/api/allow_get.sql
+# enable api in reseller + secret key
+settings/api/enable_3.sql
+# Allow API Login Redirect
+settings/api/login_redirect.sql
+# API allow registration
+settings/api/allow_registration.sql
+# disable hash checking
+settings/api/disable_hash_0.sql 
+# disable hash checking for reseller
+settings/api/disable_hash_3.sql 
+# bundle loaded
+

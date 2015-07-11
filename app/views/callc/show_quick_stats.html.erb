@@ -1,0 +1,17 @@
+<div id="quick_stats">
+  <b><%= _('Quick_stats') %></b><br/><br/>
+  <table class="nb" width="50%">
+    <% if Confline.get_value("Hide_quick_stats").to_i == 1 %>
+        <%= render 'quick_stat', quick_stats: @quick_stats, ex: @ex, user: @user %>
+    <% end %>
+  </table>
+  <% if allow_manage_providers? %>
+    <!-- Replacement for periodically_call_remote in Rails 3 -->
+    <%= content_for :js do %>
+    new Ajax.PeriodicalUpdater("active_calls_count",
+      "/stats/active_calls_count",
+      { frequency: session[:active_calls_refresh_interval],
+        method: 'get'})
+    <% end %>
+  <% end %>
+</div>

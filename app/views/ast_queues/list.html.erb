@@ -1,0 +1,63 @@
+<% if !(session[:usertype] == "accountant" and session[:acc_manage_queues].to_i == 0 or session[:acc_manage_queues].to_i == 1) %>
+  <%= link_to b_add + _('Add_New_Queue'), :action => 'new' %>
+  <br/>
+  <br/>
+<% end %>
+
+<% if @total_pages > 1 %>
+  <%= page_select_header @page, @total_pages, nil, @options %>
+<% end %>
+<br/>
+
+<table width="100%" class="maintable">
+  <tr>
+    <th><%= sortable_list_header("name", _('Name'), @options) %></th>
+    <th><%= sortable_list_header("extension", _('Extension'), @options) %></th>
+    <th><%= sortable_list_header("strategy", _('Strategy'), @options) %></th>
+    <th><%= _('Accessible_over_DIDs') %></th>
+    <th><%= _('Agents') %></th>
+    <% if @allow_edit %>
+      <th></th>
+      <th></th>
+    <% end %>
+  </tr>
+  <% for q in @queues %>
+      <tr>
+        <td id="name_<%= q.id %>"><%= q.name %></td>
+        <td id="extension_<%= q.id %>"><%= q.extension %></td>
+        <td id="strategy_<%= q.id %>"><%= q.strategy %></td>
+        <!-- DIDs of current Queue-->
+        <td>
+          <% dids = Did.joins("LEFT JOIN dialplans ON (dids.dialplan_id = dialplans.id)").where("dialplans.data1 = #{q.id}").all %>
+          <% if dids.size < 21 %>
+              <% for d in dids %>
+                  <% if accountant? and session[:acc_manage_dids_opt_1].to_i != 2 %>
+                    <%= d.did.to_s %>
+                  <% else %>
+                    <%= raw link_to d.did, :controller => "dids", :action => "edit", :id => d.id %>
+                  <% end %>
+                  <br />
+              <% end %>
+          <% else %>
+              <%= raw link_to (dids.size.to_s + " " + _('DID_s')), :controller => "dids", :action => "list", :s_dialplan => dids[0].dialplan_id %>
+          <% end %>
+        </td>
+        <!-- Agents of current Queue-->
+        <td>
+          <% agents = Device.joins("LEFT JOIN queue_agents ON (devices.id = queue_agents.device_id)").where("queue_agents.queue_id = #{q.id}").order("priority ASC").all %>
+          <% if agents.size < 21 %>
+            <% for a in agents %>
+              <%= link_nice_device(a) %>
+              <br />
+            <% end %>
+          <% else %>
+            <%= agents.size.to_s + " " + _('Agents_Total') %>
+          <% end %>
+        </td>
+        <% if @allow_edit %>
+          <td align="center"><%= link_to b_edit, {:action => 'edit', :id => q.id}, :id => "edit_link_#{q.id.to_s}" %></td>
+          <td align="center"><%= link_to b_delete, {:action => 'destroy', :id => q.id}, :id => "delete_link_#{q.id.to_s}", :confirm => _('are_you_sure'), :method => "post" %></td>
+        <% end %>
+      </tr>
+  <% end %>
+</table>

@@ -1,0 +1,10 @@
+<table class="simple">
+  <tr>
+    <td><%= _('Name') %>:</td>
+    <td><%= f.text_field(:name, class: 'input', :size => '27', maxlength:'255') %></td>
+  </tr>
+  <tr>
+    <td><%= _('Comment') %>:</td>
+    <td><%= f.text_area(:comment, class: 'input', cols: '32', rows: '4') %></td>
+  </tr>
+</table>

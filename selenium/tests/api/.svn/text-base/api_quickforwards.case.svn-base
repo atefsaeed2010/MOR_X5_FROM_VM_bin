@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>api_quickforwards</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">api_quickforwards</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/enable_api_and_other_settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=admin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=user_reseller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash2</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=user_admin&amp;test=1&amp;did=4565sdfsdf8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash3</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--Klaidų pranešimai-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/quickforwards_dids_get?u=user_admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/quickforwards_dids_get?u=admin&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=page</td>
+	<td>You are not authorized to use Quickforwards</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/quickforwards_dids_get?u=user_reseller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/quickforwards_dids_get?u=reseller&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=page</td>
+	<td>You are not authorized to use Quickforwards</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/quickforwards_dids_get?u=accountant&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=page</td>
+	<td>You are not authorized to use Quickforwards</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/quickforwards_dids_get?u=user_admin&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=page</td>
+	<td>Quickforwards list is empty</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/quickforwards_dids_get?u=user_reseller&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=page</td>
+	<td>Quickforwards list is empty</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/quickforwards_dids_get?u=ussdsd&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=page</td>
+	<td>User was not found</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=page</td>
+	<td>This method available from MOR X5</td>
+</tr>
+<!--<tr> 	<td>assertText</td> 	<td>css=status</td> 	<td>Incorrect hash</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_reseller&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=status</td> 	<td>Incorrect hash</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=admin&amp;test=1&amp;hash=${hash1}</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>You are not authorized to use Quickforwards</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=reseller&amp;test=1&amp;hash=${hash1}</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>You are not authorized to use Quickforwards</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=accountant&amp;test=1&amp;hash=${hash1}</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>You are not authorized to use Quickforwards</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;test=1&amp;hash=${hash1}</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_reseller&amp;test=1&amp;hash=${hash1}</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=ussdsd&amp;test=1&amp;hash=${hash1}</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>User was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;did=asdfdsgdfsg&amp;test=1&amp;hash=c65cb8fd8635e7146aa180a27bf600b92e8ac8c3</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;forward_to=asdfdsgdfsg&amp;test=1&amp;hash=c65cb8fd8635e7146aa180a27bf600b92e8ac8c3</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr>-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/quickforwards_did_delete?u=ussdsd&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=page</td>
+	<td>This method available from MOR X5</td>
+</tr>
+<!--<tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>User was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_delete?u=user_admin&amp;test=1&amp;did=4565465978</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=status</td> 	<td>Incorrect hash</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_delete?u=user_reseller&amp;test=1&amp;did=4565465978</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=status</td> 	<td>Incorrect hash</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_delete?u=user_admin&amp;test=1&amp;hash=${hash1}</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_delete?u=admin&amp;test=1&amp;hash=${hash1}</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>You are not authorized to use Quickforwards</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_delete?u=reseller&amp;test=1&amp;hash=${hash1}</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>You are not authorized to use Quickforwards</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_delete?u=accountant&amp;test=1&amp;hash=${hash1}</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>You are not authorized to use Quickforwards</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_delete?u=user_reseller&amp;test=1&amp;hash=${hash1}</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_delete?u=user_admin&amp;test=1&amp;did=4565sdfsdf8&amp;hash=${hash3}</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr>-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/disable_hash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<!--Sukuriamas RULE, priskiriamas useriui, kol kas nėra didų-->
+<tr>
+	<td>open</td>
+	<td>/billing/quickforwards_rules/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=quickforwards_rule_rule_regexp</td>
+	<td>2%</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=quickforwards_rule_name</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/quickforwards_rules/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=quickforwards_rule_rule_regexp</td>
+	<td>5%</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=quickforwards_rule_name</td>
+	<td>rs test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_quickforwards_rule_id</td>
+	<td>label=test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/resellers/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=resellers_can_add_their_own_dids</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/quickforwards_rules/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=quickforwards_rule_rule_regexp</td>
+	<td>5%</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=quickforwards_rule_name</td>
+	<td>rs test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_quickforwards_rule_id</td>
+	<td>label=rs test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/quickforwards_dids_get?u=user_admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=page</td>
+	<td>Quickforwards list is empty</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=page</td>
+	<td>This method available from MOR X5</td>
+</tr>
+<!--<tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;did=23232323232&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;forward_to=4565465978&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;did=23232323232&amp;forward_to=4565465978&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_dids_get?u=user_reseller&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>Quickforwards list is empty</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_reseller&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_reseller&amp;did=23232323232&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_reseller&amp;forward_to=4565465978&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_reseller&amp;did=23232323232&amp;forward_to=4565465978&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr>-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/dids/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=did_start</td>
+	<td>233656564646</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=did_end</td>
+	<td>233656564655</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='commit'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/dids/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=did_start</td>
+	<td>533656564646</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=did_end</td>
+	<td>533656564655</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='commit'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=user_quickforwards_rule_id</td>
+	<td>label=rs test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<!--rulai sukurti ir priskirti, bet nera dialplan-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/quickforwards_dids_get?u=user_admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=page</td>
+	<td>Quickforwards list is empty</td>
+</tr>
+<!--<tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;did=23232323232&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;forward_to=4565465978&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;did=23232323232&amp;forward_to=4565465978&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_dids_get?u=user_reseller&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>Quickforwards list is empty</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_reseller&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_reseller&amp;did=23232323232&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_reseller&amp;forward_to=4565465978&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_reseller&amp;did=23232323232&amp;forward_to=4565465978&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=page</td> 	<td>DID was not found</td> </tr>-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/dialplans/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>//input[@id='quickforward_dp_name']</td>
+	<td>qf dp</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=cb_add</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/dids/bulk_management</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=did_start</td>
+	<td>233656564646</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=did_end</td>
+	<td>533656564655</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=did_action_6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=fovard_pd</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>21 out of 22 DID(s) were assigned to Dial Plan</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/settings/api/enable_xml</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<!--dabar useriai turi quickforwardus savo meniu-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/quickforwards_dids_get?u=user_admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did</td>
+	<td>233656564646</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//quick_forward_did[2]/did</td>
+	<td>233656564647</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//quick_forward_did[3]/did</td>
+	<td>233656564648</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//quick_forward_did[4]/did</td>
+	<td>233656564649</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//quick_forward_did[5]/did</td>
+	<td>233656564650</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>533656564646</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>533656564647</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/quickforwards_dids_get?u=user_reseller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=did</td>
+	<td>533656564646</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//quick_forward_did[2]/did</td>
+	<td>533656564647</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//quick_forward_did[3]/did</td>
+	<td>533656564648</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//quick_forward_did[4]/did</td>
+	<td>533656564649</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//quick_forward_did[5]/did</td>
+	<td>533656564650</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>233656564646</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>233656564647</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;did=233656564646&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=error</td>
+	<td>This method available from MOR X5</td>
+</tr>
+<!--<tr> 	<td>assertText</td> 	<td>css=error</td> 	<td>Invalid Quickforward number</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;did=233656564646&amp;forward_to=44444dsfdsf4444&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=error</td> 	<td>Invalid Quickforward number</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;did=233656564646&amp;forward_to=444444444&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=did</td> 	<td>233656564646</td> </tr> <tr> 	<td>assertText</td> 	<td>css=forward_to</td> 	<td>444444444</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_dids_get?u=user_admin&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=did</td> 	<td>233656564646</td> </tr> <tr> 	<td>assertText</td> 	<td>css=forward_to</td> 	<td>444444444</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;did=23fdsfsdf564646&amp;forward_to=444444444&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=error</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;did=233656564646&amp;forward_to=444444444&amp;description=forwarded&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=did</td> 	<td>233656564646</td> </tr> <tr> 	<td>assertText</td> 	<td>css=forward_to</td> 	<td>444444444</td> </tr> <tr> 	<td>assertText</td> 	<td>css=description</td> 	<td>forwarded</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_dids_get?u=user_admin&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=did</td> 	<td>233656564646</td> </tr> <tr> 	<td>assertText</td> 	<td>css=forward_to</td> 	<td>444444444</td> </tr> <tr> 	<td>assertText</td> 	<td>css=description</td> 	<td>forwarded</td> </tr>-->
+<!--updatinamas reselerio userio didas-->
+<!--<tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_admin&amp;did=533656564646&amp;forward_to=444444444&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=error</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_reseller&amp;did=533656564646&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=error</td> 	<td>Invalid Quickforward number</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_reseller&amp;did=533656564646&amp;forward_to=666666dsfdsf6666&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=error</td> 	<td>Invalid Quickforward number</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_reseller&amp;did=533656564646&amp;forward_to=666666666&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=did</td> 	<td>533656564646</td> </tr> <tr> 	<td>assertText</td> 	<td>css=forward_to</td> 	<td>666666666</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_dids_get?u=user_reseller&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=did</td> 	<td>533656564646</td> </tr> <tr> 	<td>assertText</td> 	<td>css=forward_to</td> 	<td>666666666</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_reseller&amp;did=53fdsfsdf564646&amp;forward_to=66666666&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=error</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_reseller&amp;did=533656564646&amp;forward_to=666666666&amp;description=forwarded&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=did</td> 	<td>533656564646</td> </tr> <tr> 	<td>assertText</td> 	<td>css=forward_to</td> 	<td>666666666</td> </tr> <tr> 	<td>assertText</td> 	<td>css=description</td> 	<td>forwarded</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_dids_get?u=user_reseller&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=did</td> 	<td>533656564646</td> </tr> <tr> 	<td>assertText</td> 	<td>css=forward_to</td> 	<td>666666666</td> </tr> <tr> 	<td>assertText</td> 	<td>css=description</td> 	<td>forwarded</td> </tr>-->
+<!--updatinamas admino userio didas-->
+<!--<tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_update?u=user_reseller&amp;did=233656564646&amp;forward_to=444444444&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=error</td> 	<td>DID was not found</td> </tr>-->
+<!--patikrinama gui-->
+<!--<tr> 	<td>open</td> 	<td>/billing/callc/logout</td> 	<td></td> </tr> <tr> 	<td>type</td> 	<td>login_username</td> 	<td>user_admin</td> </tr> <tr> 	<td>type</td> 	<td>login_psw</td> 	<td>user_admin1</td> </tr> <tr> 	<td>clickAndWait</td> 	<td>commit</td> 	<td></td> </tr> <tr> 	<td>open</td> 	<td>/billing/dids/quickforwarddids</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=did_233656564646</td> 	<td>233656564646</td> </tr> <tr> 	<td>assertText</td> 	<td>id=number_233656564646</td> 	<td>444444444</td> </tr> <tr> 	<td>assertText</td> 	<td>id=desc_233656564646</td> 	<td>forwarded</td> </tr> <tr> 	<td>assertElementPresent</td> 	<td>css=img[alt=&quot;Delete&quot;]</td> 	<td></td> </tr> <tr> 	<td>open</td> 	<td>/billing/callc/logout</td> 	<td></td> </tr> <tr> 	<td>type</td> 	<td>login_username</td> 	<td>user_reseller</td> </tr> <tr> 	<td>type</td> 	<td>login_psw</td> 	<td>user_reseller1</td> </tr> <tr> 	<td>clickAndWait</td> 	<td>commit</td> 	<td></td> </tr> <tr> 	<td>open</td> 	<td>/billing/dids/quickforwarddids</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=did_533656564646</td> 	<td>533656564646</td> </tr> <tr> 	<td>assertText</td> 	<td>id=number_533656564646</td> 	<td>666666666</td> </tr> <tr> 	<td>assertText</td> 	<td>id=desc_533656564646</td> 	<td>forwarded</td> </tr> <tr> 	<td>assertElementPresent</td> 	<td>css=img[alt=&quot;Delete&quot;]</td> 	<td></td> </tr> <tr> 	<td>open</td> 	<td>/billing/callc/logout</td> 	<td></td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_delete?u=user_admin&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=error</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_delete?u=user_admin&amp;did=233656564648&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=error</td> 	<td>No Quickforward is assigned to specified DID</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_delete?u=user_admin&amp;did=233656564646&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=status</td> 	<td>Quickforward successfully deleted</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_dids_get?u=user_admin&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertTextNotPresent</td> 	<td>forwarded</td> 	<td></td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_delete?u=user_reseller&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=error</td> 	<td>DID was not found</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_delete?u=user_reseller&amp;did=533656564648&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=error</td> 	<td>No Quickforward is assigned to specified DID</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_did_delete?u=user_reseller&amp;did=533656564646&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=status</td> 	<td>Quickforward successfully deleted</td> </tr> <tr> 	<td>open</td> 	<td>/billing/api/quickforwards_dids_get?u=user_reseller&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertTextNotPresent</td> 	<td>forwarded</td> 	<td></td> </tr>-->
+<!--patikrinama gui-->
+<!--<tr> 	<td>open</td> 	<td>/billing/callc/logout</td> 	<td></td> </tr> <tr> 	<td>type</td> 	<td>login_username</td> 	<td>user_admin</td> </tr> <tr> 	<td>type</td> 	<td>login_psw</td> 	<td>user_admin1</td> </tr> <tr> 	<td>clickAndWait</td> 	<td>commit</td> 	<td></td> </tr> <tr> 	<td>open</td> 	<td>/billing/dids/quickforwarddids</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=did_233656564646</td> 	<td>233656564646</td> </tr> <tr> 	<td>assertText</td> 	<td>id=number_233656564646</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=desc_233656564646</td> 	<td></td> </tr> <tr> 	<td>assertElementNotPresent</td> 	<td>css=img[alt=&quot;Delete&quot;]</td> 	<td></td> </tr> <tr> 	<td>open</td> 	<td>/billing/callc/logout</td> 	<td></td> </tr> <tr> 	<td>type</td> 	<td>login_username</td> 	<td>user_reseller</td> </tr> <tr> 	<td>type</td> 	<td>login_psw</td> 	<td>user_reseller1</td> </tr> <tr> 	<td>clickAndWait</td> 	<td>commit</td> 	<td></td> </tr> <tr> 	<td>open</td> 	<td>/billing/dids/quickforwarddids</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=did_533656564646</td> 	<td>533656564646</td> </tr> <tr> 	<td>assertText</td> 	<td>id=number_533656564646</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=desc_533656564646</td> 	<td></td> </tr> <tr> 	<td>assertElementNotPresent</td> 	<td>css=img[alt=&quot;Delete&quot;]</td> 	<td></td> </tr>-->
+</tbody></table>
+</body>
+</html>

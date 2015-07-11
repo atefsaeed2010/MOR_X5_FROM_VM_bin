@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://192.168.0.88" />
+<title>alerts_hgc</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">alerts_hgc</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<!--alerts HGC-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_type_parameters</td>
+	<td>ASR ACD PDD TTC BILLSEC TOTAL CALLS ANSWERED CALLS NOT ANSWERED CALLS HGC (ABSOLUTE) HGC (PERCENT) GROUP SIMULTANEOUS CALLS PRICE SUM</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>HGC:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=alert_hgc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=HGC (ABSOLUTE)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=params_counting</td>
+	<td>unit</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=HGC (PERCENT)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=params_counting</td>
+	<td>%</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>HGC:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_hgc</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertVisible</td>
+	<td>id=alert_hgc</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>abcd</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_hgc</td>
+	<td>abcd</td>
+</tr>
+<!--* Alert cannot be equal to Clear-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_more</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* HGC must be integer between 0 and 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>-9.6584</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* HGC must be integer between 0 and 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_type_parameters</td>
+	<td>ASR ACD PDD TTC BILLSEC TOTAL CALLS ANSWERED CALLS NOT ANSWERED CALLS HGC (ABSOLUTE) HGC (PERCENT) GROUP SIMULTANEOUS CALLS PRICE SUM</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>400.6597</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* HGC must be integer between 0 and 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>20%</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* HGC must be integer between 0 and 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=parameter_1</td>
+	<td>HGC (PERCENT)</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=parameter</td>
+	<td>HGC (PERCENT) %</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_hgc</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>abcd</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_hgc</td>
+	<td>abcd</td>
+</tr>
+<!--* Alert cannot be equal to Clear-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* HGC must be integer between 0 and 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>-9.6584</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* HGC must be integer between 0 and 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>400.6597</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* HGC must be integer between 0 and 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>20%</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* HGC must be integer between 0 and 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>55</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_hgc</td>
+	<td>55</td>
+</tr>
+<!--HGC absolute-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_type_parameters</td>
+	<td>ASR ACD PDD TTC BILLSEC TOTAL CALLS ANSWERED CALLS NOT ANSWERED CALLS HGC (ABSOLUTE) HGC (PERCENT) GROUP SIMULTANEOUS CALLS PRICE SUM</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_type_parameters</td>
+	<td>label=HGC (ABSOLUTE)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>abcd</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_hgc</td>
+	<td>abcd</td>
+</tr>
+<!--* Alert cannot be equal to Clear-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_more</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* HGC must be integer between 0 and 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>-9.6584</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* HGC must be integer between 0 and 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>400.6597</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* HGC must be integer between 0 and 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>20%</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* HGC must be integer between 0 and 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>32</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=parameter_2</td>
+	<td>HGC (ABSOLUTE)</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=parameter</td>
+	<td>HGC (ABSOLUTE) unit</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_hgc</td>
+	<td>32</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>abcd</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_hgc</td>
+	<td>abcd</td>
+</tr>
+<!--* Alert cannot be equal to Clear-->
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* HGC must be integer between 0 and 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>-9.6584</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* HGC must be integer between 0 and 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>400.6597</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* HGC must be integer between 0 and 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>20%</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>id=notice</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* HGC must be integer between 0 and 400</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_hgc</td>
+	<td>77</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_hgc</td>
+	<td>77</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,743 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/51828/mor/gui/branches/x5/selenium/tests/sql
+END
+update_active_calls_server.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_active_calls_server.sql
+END
+archive_old_calls_at.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/archive_old_calls_at.sql
+END
+delete_rights.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/delete_rights.sql
+END
+acc_all_permissions_write.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/41473/mor/gui/branches/x5/selenium/tests/sql/acc_all_permissions_write.sql
+END
+sms_tariff_for_users.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/44587/mor/gui/branches/x5/selenium/tests/sql/sms_tariff_for_users.sql
+END
+main.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/main.sql
+END
+acc_groups.sql
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/acc_groups.sql
+END
+hide_balance_line.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/41771/mor/gui/branches/x5/selenium/tests/sql/hide_balance_line.sql
+END
+expired_subscriptions.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/expired_subscriptions.sql
+END
+backups.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/backups.sql
+END
+aggregate_test_db.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/45518/mor/gui/branches/x5/selenium/tests/sql/aggregate_test_db.sql
+END
+update_resellers_uniquehash.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_resellers_uniquehash.sql
+END
+services_and_subscriptions.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/services_and_subscriptions.sql
+END
+reseller_calls_now_and_old.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/50892/mor/gui/branches/x5/selenium/tests/sql/reseller_calls_now_and_old.sql
+END
+set_all_cards_not_sold.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/set_all_cards_not_sold.sql
+END
+8090.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/44598/mor/gui/branches/x5/selenium/tests/sql/8090.sql
+END
+sms_new_tarif.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/44507/mor/gui/branches/x5/selenium/tests/sql/sms_new_tarif.sql
+END
+update_minimal_charge.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_minimal_charge.sql
+END
+hgc_two_hundred.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/hgc_two_hundred.sql
+END
+bad_exchange_rate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/bad_exchange_rate.sql
+END
+invalid_server_ip.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/43165/mor/gui/branches/x5/selenium/tests/sql/invalid_server_ip.sql
+END
+start_time_null.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/51828/mor/gui/branches/x5/selenium/tests/sql/start_time_null.sql
+END
+simultaneous_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/simultaneous_calls.sql
+END
+time_zone_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/time_zone_calls.sql
+END
+update_user_credit.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_user_credit.sql
+END
+sms_reseler_enables.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/44557/mor/gui/branches/x5/selenium/tests/sql/sms_reseler_enables.sql
+END
+various_calls_updated.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/various_calls_updated.sql
+END
+providers_with_balance.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/providers_with_balance.sql
+END
+small_prices.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/small_prices.sql
+END
+update_server_20_valid_ami.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/43369/mor/gui/branches/x5/selenium/tests/sql/update_server_20_valid_ami.sql
+END
+rspro_provider.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/rspro_provider.sql
+END
+many_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/43047/mor/gui/branches/x5/selenium/tests/sql/many_calls.sql
+END
+graphs_two_months_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/graphs_two_months_calls.sql
+END
+update_dids.sql
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_dids.sql
+END
+delete_last_calls_parametres.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/delete_last_calls_parametres.sql
+END
+update_balance.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_balance.sql
+END
+set_billsec_zero.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/set_billsec_zero.sql
+END
+quick_stats.sql
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/44580/mor/gui/branches/x5/selenium/tests/sql/quick_stats.sql
+END
+sms_tariff_rates.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/44520/mor/gui/branches/x5/selenium/tests/sql/sms_tariff_rates.sql
+END
+recordings_for_various_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/recordings_for_various_calls.sql
+END
+update_cc_pin_length.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_cc_pin_length.sql
+END
+reseller_price.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/44663/mor/gui/branches/x5/selenium/tests/sql/reseller_price.sql
+END
+delete_non_answered_calls_confline.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/42817/mor/gui/branches/x5/selenium/tests/sql/delete_non_answered_calls_confline.sql
+END
+update_currencies.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_currencies.sql
+END
+update_server_20_invalid_ami.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/43369/mor/gui/branches/x5/selenium/tests/sql/update_server_20_invalid_ami.sql
+END
+underscored_user_call.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/underscored_user_call.sql
+END
+turn_off_currencies_update.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/turn_off_currencies_update.sql
+END
+delete_server_device.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/42932/mor/gui/branches/x5/selenium/tests/sql/delete_server_device.sql
+END
+xfive_func_pbx_pools_disabled.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/50126/mor/gui/branches/x5/selenium/tests/sql/xfive_func_pbx_pools_disabled.sql
+END
+call_tracing_re.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/call_tracing_re.sql
+END
+servers_correct.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/42938/mor/gui/branches/x5/selenium/tests/sql/servers_correct.sql
+END
+warning_email.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/warning_email.sql
+END
+providers.sql
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/providers.sql
+END
+good_calls_update_prov.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/good_calls_update_prov.sql
+END
+flatrate_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/flatrate_calls.sql
+END
+cron_actions.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/cron_actions.sql
+END
+sms_add_provider.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/44520/mor/gui/branches/x5/selenium/tests/sql/sms_add_provider.sql
+END
+subscriptions_for_pagination.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/subscriptions_for_pagination.sql
+END
+not_simultaneous_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/not_simultaneous_calls.sql
+END
+servers.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/49296/mor/gui/branches/x5/selenium/tests/sql/servers.sql
+END
+pbx_pools_list_data.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/50126/mor/gui/branches/x5/selenium/tests/sql/pbx_pools_list_data.sql
+END
+various_devices.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/48909/mor/gui/branches/x5/selenium/tests/sql/various_devices.sql
+END
+ivr_list.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/46263/mor/gui/branches/x5/selenium/tests/sql/ivr_list.sql
+END
+show_balance_line.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/41771/mor/gui/branches/x5/selenium/tests/sql/show_balance_line.sql
+END
+bg_tasks.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/bg_tasks.sql
+END
+server_load_ok.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/server_load_ok.sql
+END
+set_uniqueid.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/41101/mor/gui/branches/x5/selenium/tests/sql/set_uniqueid.sql
+END
+sms_provider_create.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/44520/mor/gui/branches/x5/selenium/tests/sql/sms_provider_create.sql
+END
+quick_stats_updated.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/quick_stats_updated.sql
+END
+sms_tariff_for_providers.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/44587/mor/gui/branches/x5/selenium/tests/sql/sms_tariff_for_providers.sql
+END
+update_vouchers.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_vouchers.sql
+END
+mor_eleven_extend.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/mor_eleven_extend.sql
+END
+frontpage_confline.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/frontpage_confline.sql
+END
+users_for_reseller.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/users_for_reseller.sql
+END
+callshop.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/callshop.sql
+END
+delete_from_actions.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/47825/mor/gui/branches/x5/selenium/tests/sql/delete_from_actions.sql
+END
+good_calls_today.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/46616/mor/gui/branches/x5/selenium/tests/sql/good_calls_today.sql
+END
+change_server_extension.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/42604/mor/gui/branches/x5/selenium/tests/sql/change_server_extension.sql
+END
+subscriptions.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/47799/mor/gui/branches/x5/selenium/tests/sql/subscriptions.sql
+END
+update_various_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_various_calls.sql
+END
+hide_payment_options_for_postpaid_users.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/41785/mor/gui/branches/x5/selenium/tests/sql/hide_payment_options_for_postpaid_users.sql
+END
+cc_various_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/cc_various_calls.sql
+END
+delete_from_subscriptions.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/delete_from_subscriptions.sql
+END
+dids_for_ivr_dialplan.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/dids_for_ivr_dialplan.sql
+END
+update_various_calls_prefixes.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_various_calls_prefixes.sql
+END
+accountant_minimal_charge.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/accountant_minimal_charge.sql
+END
+reseller_last_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/reseller_last_calls.sql
+END
+wholesale_tariff.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/51058/mor/gui/branches/x5/selenium/tests/sql/wholesale_tariff.sql
+END
+did_billing_current_time.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/did_billing_current_time.sql
+END
+calls_with_various_hgc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/42110/mor/gui/branches/x5/selenium/tests/sql/calls_with_various_hgc.sql
+END
+call_tracing.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/48841/mor/gui/branches/x5/selenium/tests/sql/call_tracing.sql
+END
+update_good_calls_provider.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_good_calls_provider.sql
+END
+services.sql
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/47799/mor/gui/branches/x5/selenium/tests/sql/services.sql
+END
+update_cc_cards_dates.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_cc_cards_dates.sql
+END
+cc_acc_permissions_and_cards.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/cc_acc_permissions_and_cards.sql
+END
+emails_for_manage_user.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/emails_for_manage_user.sql
+END
+update_default_curencies.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_default_curencies.sql
+END
+device_weak_password.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/device_weak_password.sql
+END
+drop_devices_trunk.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/drop_devices_trunk.sql
+END
+sms_addon_create_lcr.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/44518/mor/gui/branches/x5/selenium/tests/sql/sms_addon_create_lcr.sql
+END
+warning_balance1.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/46248/mor/gui/branches/x5/selenium/tests/sql/warning_balance1.sql
+END
+update_calls_set_zero_price.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_calls_set_zero_price.sql
+END
+warning_balance2.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/46250/mor/gui/branches/x5/selenium/tests/sql/warning_balance2.sql
+END
+zero_destgroup_id_for_lt.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/zero_destgroup_id_for_lt.sql
+END
+make_currencies_zero.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/make_currencies_zero.sql
+END
+update_calls_for_cardgroups.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_calls_for_cardgroups.sql
+END
+did_billing.sql
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/did_billing.sql
+END
+delete_conflines.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/delete_conflines.sql
+END
+update_payments.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/update_payments.sql
+END
+user_calls_through_prov.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/user_calls_through_prov.sql
+END
+good_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/50892/mor/gui/branches/x5/selenium/tests/sql/good_calls.sql
+END
+drop_devices_name.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/drop_devices_name.sql
+END
+various_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/42896/mor/gui/branches/x5/selenium/tests/sql/various_calls.sql
+END
+currencies_update_from_web_disable.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/44640/mor/gui/branches/x5/selenium/tests/sql/currencies_update_from_web_disable.sql
+END
+drop_devices_server_id.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/drop_devices_server_id.sql
+END
+call_billsec.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/call_billsec.sql
+END
+global_time_zone.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/global_time_zone.sql
+END
+qualify.sql
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/42325/mor/gui/branches/x5/selenium/tests/sql/qualify.sql
+END
+blank_list_data.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/43656/mor/gui/branches/x5/selenium/tests/sql/blank_list_data.sql
+END
+invalid_card_payment.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/invalid_card_payment.sql
+END
+backup_every_hour.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/43344/mor/gui/branches/x5/selenium/tests/sql/backup_every_hour.sql
+END
+delete_balance_line.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/41771/mor/gui/branches/x5/selenium/tests/sql/delete_balance_line.sql
+END
+delete_tariffs.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sql/delete_tariffs.sql
+END

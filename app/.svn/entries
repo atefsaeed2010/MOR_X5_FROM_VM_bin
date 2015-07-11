@@ -1,0 +1,43 @@
+10
+
+dir
+52326
+http://svn.kolmisoft.com/mor/gui/branches/x5/app
+http://svn.kolmisoft.com
+
+
+
+2014-09-16T11:22:05.123319Z
+52326
+karolina
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19941b1f-7a74-413c-ab52-0de3e92e9a87
+
+assets
+dir
+
+helpers
+dir
+
+models
+dir
+
+controllers
+dir
+
+views
+dir
+

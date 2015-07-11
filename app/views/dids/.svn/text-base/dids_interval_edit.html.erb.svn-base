@@ -1,0 +1,112 @@
+<%= render 'bulk_management_header', from: @from, till: @till, user: @user, device: @device, dids: @dids  %>
+<% unless @dids.size.to_i < 1 %>
+    <b><%= _('Possible_choices') %>:</b>
+    <br/>
+    <br/>
+    <% unless reseller? %>
+        <%= form_tag({:action => 'update', :BMUpdate_setting => 'details'}.merge(@opts)) do %>
+            <%= hidden_field_tag 'status', "provider", {:id => "status_provider"} %>
+            <table class="maintable" width="100%">
+              <tr>
+                <th align="left"><%= _('Details') %></th>
+              </tr>
+              <tr class="row1">
+                <td>
+                  <br/>
+                  <b><%= _('Provider') %>:</b>
+                  <select name="did[provider_id]">
+                    <% for p in @providers %>
+                        <option value=<%= p.id %>> <%= p.name %> </option>
+                    <% end %>
+                  </select>
+                  <br/>
+                  <b><%= _('Language') %>
+                    :</b> <%= text_field_tag 'did[language]', '', "class" => "input", :size => "5", :maxlength => "4", :id => "did_language" %>
+                  <br/>
+                  <br/>
+                  <%= submit_tag _('Change'), :disable_with => _('Processing..') %>
+                  <br/>
+                </td>
+              </tr>
+            </table>
+            <br/>
+        <% end %>
+    <% end %>
+
+    <%= form_tag({:action => 'update', management_action: 'interval_edit'}.merge(@opts)) do %>
+
+        <%= hidden_field_tag 'status', "reserved", {:id => "status_reserver"} %>
+        <table class="maintable" width="100%">
+          <tr>
+            <th align="left">    <%= _('Reserve_did_for_user') %>    </th>
+          </tr>
+          <tr class="row1">
+            <td>
+              <br/>
+              <%= _('Reserve_did_for_user_expanded') %>
+              <br/>
+              <br/>
+              <%= b_user %>
+              <%= render 'shared/live_search_field', object: '', object_id: -2, left_margin: 20, object_name: 'User', action_url: {:controller => :users, :action => :get_users_map } %>
+
+              <span id="device_list_span"></span>
+              <script type="text/javascript">
+                new Form.Element.EventObserver('s_user', function(element, value) {
+                  new Ajax.Updater('device_list_span', '<%= Web_Dir %>/devices/ajax_get_user_devices', {
+                    asynchronous:true,
+                    evalScripts:true,
+                    onComplete:function(request){
+                      Element.hide('spinner');
+                    },
+                    onLoading:function(request){
+                      Element.show('spinner');
+                    },
+                    parameters:'user_id=' + encodeURIComponent($('s_user_id').value) + '&default=<%= @search_device.to_i.to_s %>&none=true&fax=true'})
+                })
+              </script>
+              <br/>
+              <br/>
+              <%= submit_tag(_('Reserve'), id: 'submit_reserve', :disable_with => _('Processing..')) %>
+              <br/>
+            </td>
+          </tr>
+        </table>
+        <br/>
+        <script type="text/javascript">
+          var userIdField = $('s_user_id');
+          var submitField = $('submit_reserve');
+
+          function toogleStatus(){
+            if (parseInt(userIdField.value) >= 0 ) {
+              submitField.show();
+            } else {
+              submitField.hide();
+            }
+          }
+
+          toogleStatus();
+
+          Event.observe($('s_user'), 'change', toogleStatus);
+</script>
+    <% end %>
+
+    <%= form_tag({:action => 'update'}.merge(@opts)) do %>
+        <%= hidden_field_tag 'status', "free", {:id => "status_free"} %>
+        <table class="maintable" width="100%">
+          <tr>
+            <th align="left">    <%= _('Make_did_free') %>    </th>
+          </tr>
+          <tr class="row1">
+            <td>
+              <br/>
+              <%= b_check + _('Make_did_free_expanded') %>
+              <br/>
+              <br/>
+              <%= submit_tag _('Make_did_free'), :disable_with => _('Processing..') %>
+              <br/>
+            </td>
+          </tr>
+        </table>
+        <br/>
+    <% end %>
+<% end %>

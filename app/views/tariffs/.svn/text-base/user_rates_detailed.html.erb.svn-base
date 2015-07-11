@@ -1,0 +1,33 @@
+<b><%= _('Destination') %>:</b> <%= draw_flag_by_code @dgroup.flag %> <%= @dgroup.name %> <%= @dgroup.desttype %>
+<br>
+<br>
+<br>
+<% if @wdfd %>
+    <table class='simple' width="100%">
+      <tr>
+        <td><b><%= _('Rate_details_for_WDFD') %>:</b></td>
+      </tr>
+    </table>
+    <%= render 'user_rates_retail_detailed_items', :rate_details => @day_arr, :ards => @day_arr,
+        :type => '', :lv_ards => @ards, :lv_show_rates_without_tax => @show_rates_without_tax,
+        :lv_exchange_rate => @exchange_rate, :tariff => @tariff %>
+<% else %>
+    <table class='simple' width="100%">
+      <tr>
+        <td><b><%= _('Rate_details_for_WD') %>:</b></td>
+      </tr>
+    </table>
+    <%= render 'user_rates_retail_detailed_items', :rate_details => @wd_arr, :type => 'WD',
+        :lv_ards => @ards, :lv_show_rates_without_tax => @show_rates_without_tax,
+        :lv_exchange_rate => @exchange_rate, :tariff => @tariff %>
+    <br>
+    <br>
+    <table class='simple' width="100%">
+      <tr>
+        <td><b><%= _('Rate_details_for_FD') %>:</b></td>
+      </tr>
+    </table>
+    <%= render 'user_rates_retail_detailed_items', :rate_details => @fd_arr, :type => 'FD',
+        :lv_ards => @ards, :lv_show_rates_without_tax => @show_rates_without_tax,
+        :lv_exchange_rate => @exchange_rate, :tariff => @tariff %>
+<% end %>

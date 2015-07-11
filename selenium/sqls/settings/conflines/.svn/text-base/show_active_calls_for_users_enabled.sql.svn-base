@@ -1,0 +1,1 @@
+INSERT INTO `conflines` (`name`, `value`, `owner_id`, `value2`) VALUES ('Show_Active_Calls_for_Users', '1', 0, NULL);

@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>api_callflow_get</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">api_callflow_get</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/enable_api</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=admin</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash1</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/test_api?u=user_admin&amp;device_id=777&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>css=body</td>
+	<td>hash2</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--Klaidų pranešimai-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=user_admin&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=user_admin&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=user_admin&amp;device_id=777&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=user_reseller&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=status</td>
+	<td>Incorrect hash</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=user_reseller&amp;test=1&amp;hash=${hash1}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=user_reseller&amp;device_id=777&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=accountant&amp;device_id=777&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You are not authorised to use this functionality</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=admin&amp;device_id=777&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not found</td>
+	<td></td>
+</tr>
+<!--reseleriui reikia pbx addono, kad galėtų matyti callflow-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=reseller&amp;device_id=777&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You are not authorised to use this functionality</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=res&amp;device_id=777&amp;test=1&amp;hash=${hash2}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>User was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/disable_hash</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/callflow/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/addons/activate_pbx_addon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/permissions/edit/12?group_type=reseller</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=pbx_functions_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<!--acc gavo permissionus, dabar gali naudotis funkcionalumu-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=accountant&amp;device_id=777&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You are not authorised to use this functionality</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=reseller&amp;device_id=777&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not found</td>
+	<td></td>
+</tr>
+<!--success-->
+<!--adminas gali matyti savo userio callflow-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=admin&amp;device_id=4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>Before call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/state</td>
+	<td>Call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/action</td>
+	<td>Dial</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/data</td>
+	<td>IAX2/1002|60</td>
+</tr>
+<!--reseller gali matyti savo userio callflow-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=reseller&amp;device_id=7&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>User Resellers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/105</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>Before call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/state</td>
+	<td>Call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/action</td>
+	<td>Dial</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/data</td>
+	<td>IAX2/105|60</td>
+</tr>
+<!--accountant gali matyti admino userio callflow-->
+<!--<tr> 	<td>open</td> 	<td>/billing/api/device_callflow_get?u=accountant&amp;device_id=4&amp;test=1</td> 	<td></td> </tr>-->
+<!--<tr> 	<td>assertText</td> 	<td>css=user</td> 	<td>Test User #1</td> </tr> <tr> 	<td>assertText</td> 	<td>css=device</td> 	<td>IAX2/1002</td> </tr> <tr> 	<td>assertText</td> 	<td>css=state</td> 	<td>Before Call</td> </tr> <tr> 	<td>assertText</td> 	<td>css=priority</td> 	<td>1</td> </tr> <tr> 	<td>assertText</td> 	<td>css=action</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>css=data</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>//callflow[2]/state</td> 	<td>Call</td> </tr> <tr> 	<td>assertText</td> 	<td>//callflow[2]/priority</td> 	<td>1</td> </tr> <tr> 	<td>assertText</td> 	<td>//callflow[2]/action</td> 	<td>Dial(IAX2/1002|60)</td> </tr> <tr> 	<td>assertText</td> 	<td>//callflow[2]/data</td> 	<td></td> </tr>-->
+<!--user_admin gali matyti savo device callflow-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=user_admin&amp;device_id=4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>Before call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/state</td>
+	<td>Call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/action</td>
+	<td>Dial</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/data</td>
+	<td>IAX2/1002|60</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[3]/state</td>
+	<td>Answered</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[3]/priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[3]/action</td>
+	<td>Hangup</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[4]/state</td>
+	<td>No answer</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[4]/priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[5]/state</td>
+	<td>Busy</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[5]/priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[6]/state</td>
+	<td>Failed</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[6]/priority</td>
+	<td>1</td>
+</tr>
+<!--user_reseller gali matyti savo callflow-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=user_reseller&amp;device_id=7&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>User Resellers</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>IAX2/105</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>Before call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/state</td>
+	<td>Call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/action</td>
+	<td>Dial</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/data</td>
+	<td>IAX2/105|60</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[3]/state</td>
+	<td>Answered</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[3]/priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[3]/action</td>
+	<td>Hangup</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[4]/state</td>
+	<td>No answer</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[4]/priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[5]/state</td>
+	<td>Busy</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[5]/priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[6]/state</td>
+	<td>Failed</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[6]/priority</td>
+	<td>1</td>
+</tr>
+<!--NEPASIEKIAMI DEVAISAI-->
+<!--adminas negali matyti reselerio userio devaisų-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=admin&amp;device_id=7&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not found</td>
+	<td></td>
+</tr>
+<!--reseleris negali matyti admino userio devaisų-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=reseller&amp;device_id=4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not found</td>
+	<td></td>
+</tr>
+<!--accountant negali matyti reseller userio devaisų-->
+<!--<tr> 	<td>open</td> 	<td>/billing/api/device_callflow_get?u=accountant&amp;device_id=7&amp;test=1</td> 	<td></td> </tr> <tr> 	<td>assertTextPresent</td> 	<td>Device was not found</td> 	<td></td> </tr>-->
+<!--user_admin negali matyti reseller userio devaisų-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=user_admin&amp;device_id=7&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not found</td>
+	<td></td>
+</tr>
+<!--user_reseller negali matyti admin userio devaisų-->
+<tr>
+	<td>open</td>
+	<td>/billing/api/device_callflow_get?u=user_reseller&amp;device_id=4&amp;test=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Device was not found</td>
+	<td></td>
+</tr>
+<!--POST metodas-->
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=api_tests/get_xml</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/fake_form?path_to_action=/billing/api/device_callflow_get</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_1</td>
+	<td>u</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_1</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_1</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_2</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_2</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_2</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_3</td>
+	<td>device_id</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_3</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_3</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=device</td>
+	<td>FAX/102</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=state</td>
+	<td>Before call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=action</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/state</td>
+	<td>Call</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/priority</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/action</td>
+	<td>Dial</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//callflow[2]/data</td>
+	<td>FAX/102|60</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/fake_form?path_to_action=/billing/api/device_callflow_get</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_1</td>
+	<td>u</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_1</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_1</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_2</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_2</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_2</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=input[type=&quot;button&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=c_3</td>
+	<td>device_id</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>id=c_3</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=n_c_3</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=page</td>
+	<td>Device was not found</td>
+</tr>
+<!--pratestuoti XML-->
+</tbody></table>
+</body>
+</html>

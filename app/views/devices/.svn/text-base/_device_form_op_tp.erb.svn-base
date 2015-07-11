@@ -1,0 +1,150 @@
+<tr>
+  <td height="20"></td>
+</tr>
+<tr>
+  <td class="bottom_border">
+    <b><%= _('origination_point') %></b>
+  </td>
+</tr>
+<tr>
+  <td height="10"></td>
+</tr>
+<tr>
+  <td>
+    <table class="simple">
+      <tr>
+        <td style="min-width: 120px"><%= _('act_as_origination_point') %>:</td>
+        <td>
+          <%= radio_button_tag 'device[op]', '0', device.op.to_i == 0, onclick: "toggle_op_settings_display(false);" %> <%= _('_No') %>
+          <%= radio_button_tag 'device[op]', '1', device.op.to_i == 1, onclick: "toggle_op_settings_display(true)" %> <%= _('_Yes') %>
+        </td>
+      </tr>
+      <tr class='op_setting'>
+        <td><%= _('Active') %>:</td>
+        <td>
+          <%= radio_button_tag 'device[op_active]', '0', device.op_active.to_i == 0 %> <%= _('_No') %>
+          <%= radio_button_tag 'device[op_active]', '1', device.op_active.to_i == 1 %> <%= _('_Yes') %>
+        </td>
+      </tr>
+      <tr class='op_setting'>
+        <td><%= _('tech_prefix') %>:</td>
+        <td><%= text_field_tag 'device[op_tech_prefix]', device.op_tech_prefix.to_s, class: 'input' %></td>
+      </tr>
+      <tr class='op_setting'>
+        <td><%= _('routing_algorithm') %>:</td>
+        <td><%= select_tag 'device[op_routing_algorithm]', options_for_select(routing_algorithms, device.op_routing_algorithm.to_s) %></td>
+      </tr>
+      <tr class='op_setting'>
+        <td><%= _('routing_group') %>:</td>
+        <td>
+          <% if routing_groups.blank? %>
+            <%= link_to b_exclamation + _('please_create_routing_group'), Web_Dir + '/routing_groups/new' %>
+          <% else %>
+            <%= select_tag 'device[op_routing_group_id]', options_for_select(routing_groups.map{|rg| [rg.name, rg.id]}, device.op_routing_group_id.to_i) %>
+          <% end %>
+        </td>
+      </tr>
+      <tr class='op_setting'>
+        <td><%= _('tariff') %>:</td>
+        <td>
+          <% if tariffs.blank? %>
+            <%= link_to b_exclamation + _('please_create_tariff'), Web_Dir + '/tariffs/new' %>
+          <% else %>
+            <%= select_tag 'device[op_tariff_id]', options_for_select(tariffs.map {|tariff| [nice_tariff(tariff), tariff.id]}, device.op_tariff_id.to_i) %>
+          <% end %>
+        <td>
+      </tr>
+      <tr class='op_setting'>
+        <td><%= _('capacity') %>:</td>
+        <td><%= text_field_tag 'device[op_capacity]', device.op_capacity.to_s, class: 'input' %></td>
+      </tr>
+      <tr class='op_setting'>
+        <td><%= _('source_cid_allow') %>:</td>
+        <td><%= text_field_tag 'device[op_src_regexp]', device.op_src_regexp.to_s, class: 'input' %></td>
+      </tr>
+      <tr class='op_setting'>
+        <td><%= _('source_cid_deny') %>:</td>
+        <td><%= text_field_tag 'device[op_src_deny_regexp]', device.op_src_deny_regexp.to_s, class: 'input' %></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+  <td height="20"></td>
+</tr>
+<tr>
+  <td class="bottom_border">
+    <b><%= _('termination_point') %></b>
+  </td>
+</tr>
+<tr>
+  <td height="10"></td>
+</tr>
+<tr>
+  <td>
+    <table class="simple">
+      <tr>
+        <td style="min-width: 120px"><%= _('act_as_termination_point') %>:</td>
+        <td>
+          <%= radio_button_tag 'device[tp]', '0', device.tp.to_i == 0, onclick: "toggle_tp_settings_display(false);" %> <%= _('_No') %>
+          <%= radio_button_tag 'device[tp]', '1', device.tp.to_i == 1, onclick: "toggle_tp_settings_display(true);" %> <%= _('_Yes') %>
+        </td>
+      </tr>
+      <tr class='tp_setting'>
+        <td><%= _('Active') %>:</td>
+        <td><%= radio_button_tag 'device[tp_active]', '0', device.tp_active.to_i == 0 %> <%= _('_No') %> <%= radio_button_tag 'device[tp_active]', '1', device.tp_active.to_i == 1 %> <%= _('_Yes') %></td>
+      </tr>
+      <tr class='tp_setting'>
+        <td><%= _('tech_prefix') %>:</td>
+        <td><%= text_field_tag 'device[tp_tech_prefix]', device.tp_tech_prefix.to_s, class: 'input' %></td>
+      </tr>
+      <tr class='tp_setting'>
+        <td><%= _('tariff') %>:</td>
+        <td>
+          <% if tariffs.blank? %>
+            <%= link_to b_exclamation + _('please_create_tariff'), Web_Dir + '/tariffs/new' %>
+          <% else %>
+            <%= select_tag 'device[tp_tariff_id]', options_for_select(tariffs.map {|tariff| [nice_tariff(tariff), tariff.id]}, device.tp_tariff_id.to_i) %>
+          <% end %>
+        </td>
+      </tr>
+      <tr class='tp_setting'>
+        <td><%= _('capacity') %>:</td>
+        <td><%= text_field_tag 'device[tp_capacity]', device.tp_capacity.to_s, class: 'input' %></td>
+      </tr>
+      <tr class='tp_setting'>
+        <td><%= _('source_cid_allow') %>:</td>
+        <td><%= text_field_tag 'device[tp_src_regexp]', device.tp_src_regexp.to_s, class: 'input' %></td>
+      </tr>
+      <tr class='tp_setting'>
+        <td><%= _('source_cid_deny') %>:</td>
+        <td><%= text_field_tag 'device[tp_src_deny_regexp]', device.tp_src_deny_regexp.to_s, class: 'input' %></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+<% content_for :scripts do %>
+  <script>
+    var op_settings = $j(".op_setting");
+    var tp_settings = $j(".tp_setting");
+    var op_inputs = op_settings.find('input, select');
+    var tp_inputs = tp_settings.find('input, select');
+
+    visible_op = $j("#device_op_1").attr('checked');
+    visible_tp = $j("#device_tp_1").attr('checked');
+
+    toggle_op_settings_display(visible_op);
+    toggle_tp_settings_display(visible_tp);
+
+    function toggle_op_settings_display(visible) {
+      op_settings.toggle(visible);
+      op_inputs.attr('disabled', !visible);
+    }
+
+    function toggle_tp_settings_display(visible) {
+      tp_settings.toggle(visible);
+      tp_inputs.attr('disabled', !visible);
+    }
+  </script>
+<% end %>

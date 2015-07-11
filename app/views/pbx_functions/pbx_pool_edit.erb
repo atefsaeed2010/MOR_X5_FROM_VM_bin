@@ -1,0 +1,5 @@
+<%= form_for(:pbx_pool, url: {action: 'pbx_pool_update', id: @pbx_pool.id}) do |f| %>
+  <%= render 'pbx_pool_form', f: f %>
+  <br/>
+  <%= submit_tag _('Save_changes'), disable_with: _('Processing..') %>
+<% end %>

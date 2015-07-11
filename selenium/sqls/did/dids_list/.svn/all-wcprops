@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/50505/mor/gui/branches/x5/selenium/sqls/did/dids_list
+END
+dids_free.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/50505/mor/gui/branches/x5/selenium/sqls/did/dids_list/dids_free.sql
+END
+reserve_6501.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/40237/mor/gui/branches/x5/selenium/sqls/did/dids_list/reserve_6501.sql
+END
+assign_6501_to_device.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/40237/mor/gui/branches/x5/selenium/sqls/did/dids_list/assign_6501_to_device.sql
+END

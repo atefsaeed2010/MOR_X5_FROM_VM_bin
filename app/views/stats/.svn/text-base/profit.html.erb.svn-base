@@ -1,0 +1,217 @@
+<div align="left" class="bordered">
+
+  <%= form_tag :action => 'profit', s_user_id: @user_id, s_user: @search_user do %>
+  <%= hidden_field_tag 'search_on', 1 %>
+  <%= hidden_field_tag 'page', 1 %>
+      <%= _('From') %>:
+      <%= select_date(Time.mktime(session[:year_from], session[:month_from], session[:day_from]), :end_year => Date.today.year+1, :prefix => "date_from") %>
+      <%= _('To') %>:
+      <%= select_date(Time.mktime(session[:year_till], session[:month_till], session[:day_till]), :end_year => Date.today.year+1, :prefix => "date_till") %>
+      &nbsp;&nbsp;<%= submit_tag _('Change_date'), :disable_with => _('Processing..') %>
+  <% end %>
+  <br>
+  <%= form_tag :action => 'profit' do %>
+    <%= hidden_field_tag 'search_on', 1 %>
+    <div style="float: left">
+      <%= _('User') %>:&nbsp;
+    </div>
+    <div style="float: left">
+      <% if admin? %>
+        <%= render 'shared/live_search_field', object: @search_user, object_id: @user_id, object_name: 'User', action_url: {controller: :users, action: :get_users_map, options: {show_admin: true}, send_view_values: {responsible_accountant_id: "$('responsible_accountant_id').value"} } %>
+      <% elsif accountant? %>
+        <%= render 'shared/live_search_field', object: @search_user, object_id: @user_id, object_name: 'User', action_url: {controller: :users, action: :get_users_map, options: {show_admin: true} } %>
+      <% else %>
+        <%= render 'shared/live_search_field', object: @search_user, object_id: @user_id, object_name: 'User', action_url: {controller: :users, action: :get_users_map, options: {include_owner: true} } %>
+      <% end %>
+    </div>
+    <% if admin? %>
+      <% @rs_map = @responsible_accountants.map { |accountant| [nice_user(accountant), accountant.id] } %>
+      &nbsp;&nbsp;&nbsp;&nbsp;<%= _('Responsible_accountant') %>:<%= select_tag("responsible_accountant_id", options_for_select([[_('All'), "-1"]] + @rs_map, @responsible_accountant_id)) %>
+      <script type="text/javascript">
+          //<![CDATA[
+          Event.observe(window, 'load',  function() {
+            Event.observe($('s_user'), 'change', function(){
+              $('responsible_accountant_id').disabled = ($('s_user_id').value != '-2');
+            });
+          });
+          //]]>
+      </script>
+    <% end %>
+    &nbsp;&nbsp;<%= submit_tag _('Recalculate'), :disable_with => _('Processing..') %>
+  <% end %>
+</div>
+<% unless @searching %>
+  <%= b_info + _('press_search_button_to_show_data') %>
+<% end %>
+
+<% if @user_id != '-2' || @search_user.blank? %>
+  <% if @searching %>
+    <br>
+    <table width="100%" class="maintable">
+      <tr>
+        <th colspan="5" align="left">
+          <%= _('Profit_for') %>:
+          <% if @user_id == -1 %>
+              <%= _('All') %>
+          <% else %>
+            <% if user = User.where(id: @user_id).first %>
+              <%= user.username + " - " + user.first_name + " " + user.last_name %>
+            <% else %>
+              <%= @search_user.to_s %>
+            <% end %>
+          <% end %>
+          <%= ", " + _('Period') + ": " + nice_date(session_from_date, 0) + " - " + nice_date(session_till_date, 0) %>
+        </th>
+      </tr>
+
+      <tr class="row<%= cycle(1, 2) %>">
+        <td align="left" id="text_total_calls"><%= _('Total_calls') %></td>
+        <td align="right" id="number_total_calls"><%= @total_calls %></td>
+        <td colspan="3"></td>
+      </tr>
+
+      <tr class="row<%= cycle(1, 2) %>">
+        <td align="left" id="text_answer_calls"><%= _('Answered_calls') %></td>
+        <td align="right" id="number_answer_calls"><%= @total_answered_calls %></td>
+        <td align="right" id="percent_answer_calls"><%= nice_number(@total_answer_percent) + " %" %></td>
+        <td align="left"> <%= _('Duration') + ": " + nice_time(@total_duration.to_s) %></td>
+        <td align="left"> <%= _('Average_call_duration') + ": " + nice_time(@average_call_duration.to_s) %> </td>
+      </tr>
+
+      <tr class="row<%= cycle(1, 2) %>">
+        <td align="left" id="text_no_ans_calls"> <%= _('No_Answer') %> </td>
+        <td align="right" id="number_no_ans_calls"> <%= @total_not_ans_calls %> </td>
+        <td align="right" id="percent_no_ans_calls"> <%= nice_number(@total_not_ans_percent) + " %" %> </td>
+        <td colspan="2"></td>
+      </tr>
+
+      <tr class="row<%= cycle(1, 2) %>">
+        <td align="left" id="text_busy_calls"> <%= _('Busy_calls') %> </td>
+        <td align="right" id="number_busy_calls"> <%= @total_busy_calls %> </td>
+        <td align="right" id="percent_busy_calls"> <%= nice_number(@total_busy_percent) + " %" %> </td>
+        <td colspan="2"></td>
+      </tr>
+
+      <tr class="row<%= cycle(1, 2) %>">
+        <td align="left" id="text_erro_calls"> <%= _('Error_calls') %> </td>
+        <td align="right" id="number_erro_calls"> <%= @total_error_calls %> </td>
+        <td align="right" id="percent_erro_calls"> <%= nice_number(@total_error_percent) + " %" %> </td>
+        <td colspan="2"></td>
+      </tr>
+
+      <tr>
+        <th></th>
+        <th align="right"> <%= _('Amount') %> </th>
+        <th align="center"> <%= _('Call_time') %> </th>
+        <th align="right"> <%= _('Active_users') %> </th>
+        <th align="right"> <%= _('Percent') %> </th>
+      </tr>
+
+      <tr class="row<%= cycle(1, 2) %>">
+        <td align="left" id="text_total_call_price"> <%= _('Total_call_price') %> </td>
+        <td align="right" id="number_total_call_price"> <%= nice_number(@total_call_price) %> </td>
+        <td align="center" id="total_duration_percent"> <%= nice_time(@total_duration) %> </td>
+        <td align="right" id="total_users_percent"> <%= @total_users %></td>
+        <td align="right" id="total_percent"> <%= nice_number(@total_percent) + " %" %> </td>
+      </tr>
+
+      <tr class="row<%= cycle(1, 2) %>">
+        <td align="left" id="text_total_self_price"> <%= _('Total_call_self_price') %> </td>
+        <td align="right" id="number_total_self_price"> <%= nice_number(@total_call_selfprice) %> </td>
+        <td colspan="2"></td>
+        <td align="right" id="total_selfcost_percent"> <%= nice_number(@total_selfcost_percent) + " %" %> </td>
+
+      </tr>
+
+      <tr>
+        <th align="left" id="text_calls_profit"><%= _('Calls_profit') %></th>
+        <th align="right" id="number_calls_profit"> <%= nice_number(@total_profit) %></th>
+        <th colspan="2"></th>
+        <th align="right" id="percent_calls_profit"> <%= nice_number(@total_profit_percent) + " %" %></th>
+
+      </tr>
+
+      <tr class="row<%= cycle(1, 2) %>">
+        <td align="left" id="text_avg_profit_per_min"> <%= _('Average_profit_per_call_min') %></td>
+        <td align="right" id="number_avg_profit_per_min"> <%= nice_number(@avg_profit_call_min) %></td>
+        <td colspan="3"></td>
+      </tr>
+
+      <tr class="row<%= cycle(1, 2) %>">
+        <td align="left"> <%= _('Average_profit_per_call') %></td>
+        <td id="avg_profit_per_call" align="right"> <%= nice_number(@avg_profit_call) %></td>
+        <td colspan="3"></td>
+      </tr>
+
+      <tr class="row<%= cycle(1, 2) %>">
+        <td align="left"> <%= _('Average_profit_per_day') %></td>
+        <td id="avg_profit_per_day" align="right"> <%= nice_number(@avg_profit_day) %></td>
+        <td colspan="3"></td>
+      </tr>
+
+      <tr class="row<%= cycle(1, 2) %>">
+        <td align="left"> <%= _('Average_profit_per_active_user') %></td>
+        <td id="avg_profit_per_user" align="right"> <%= nice_number(@avg_profit_user) %></td>
+        <td colspan="3"></td>
+      </tr>
+
+      <tr>
+        <th></th>
+        <th align="right"> <%= _('Without_VAT') %> </th>
+        <th colspan="3"></th>
+      </tr>
+      <% if session[:usertype] != 'reseller' %>
+          <tr>
+            <th align="left"><%= _('Subscriptions_profit') %></th>
+            <th id="subscription_profit" align="right"> <%= nice_number(@sub_price.to_f) %></th>
+            <th colspan="3"></th>
+          </tr>
+          <tr>
+            <th align="left"><%= _('Did_owner_profit') %></th>
+            <th id="did_owner_cost" align="right"> <%= nice_number(@did_owner_cost.to_f) %></th>
+            <th colspan="3"></th>
+          </tr>
+      <% end %>
+      <tr>
+        <th align="left" id="test_total_profit"><%= _('Total_profit') %></th>
+        <th align="right" id="number_total_profit"> <%= nice_number(@s_total_profit.to_f) %></th>
+        <th colspan="3"></th>
+      </tr>
+    </table>
+
+    <br/>
+    <br/>
+
+    <%= form_tag url_for(:action => 'generate_profit_pdf', user_id: @user_id, username: @search_user), id: 'form_id' do %>
+        <%= hidden_field_tag 'total_calls', @total_calls %>
+        <%= hidden_field_tag 'total_answered_calls', @total_answered_calls %>
+        <%= hidden_field_tag 'total_answer_percent', @total_answer_percent %>
+        <%= hidden_field_tag 'total_not_ans_calls', @total_not_ans_calls %>
+        <%= hidden_field_tag 'total_not_ans_percent', @total_not_ans_percent %>
+        <%= hidden_field_tag 'total_busy_calls', @total_busy_calls %>
+        <%= hidden_field_tag 'total_busy_percent', @total_busy_percent %>
+        <%= hidden_field_tag 'total_error_calls', @total_error_calls %>
+        <%= hidden_field_tag 'total_error_percent', @total_error_percent %>
+        <%= hidden_field_tag 'total_duration', @total_duration %>
+        <%= hidden_field_tag 'average_call_duration', @average_call_duration %>
+        <%= hidden_field_tag 'total_call_price', @total_call_price %>
+        <%= hidden_field_tag 'total_percent', @total_percent %>
+        <%= hidden_field_tag 'active_users', @total_users %>
+        <%= hidden_field_tag 'total_call_selfprice', @total_call_selfprice %>
+        <%= hidden_field_tag 'total_selfcost_percent', @total_selfcost_percent %>
+        <%= hidden_field_tag 'total_profit', @total_profit %>
+        <%= hidden_field_tag 'total_profit_percent', @total_profit_percent %>
+        <%= hidden_field_tag 'avg_profit_call_min', @avg_profit_call_min %>
+        <%= hidden_field_tag 'avg_profit_call', @avg_profit_call %>
+        <%= hidden_field_tag 'avg_profit_day', @avg_profit_day %>
+        <%= hidden_field_tag 'avg_profit_user', @avg_profit_user %>
+        <% if session[:usertype] != 'reseller' %>
+            <%= hidden_field_tag 'sub_price', @sub_price %>
+            <%= hidden_field_tag 's_total', @s_total_profit %>
+            <%= hidden_field_tag 'did_owner_cost', @did_owner_cost %>
+        <% end %>
+        <%#= image_submit_tag('icons/pdf.png', :title => (_('Export_to_PDF')  + _('Export_to_PDF')) %>
+        <%= link_to b_pdf + _('Export_to_PDF'), '#', :onclick=>"$('form_id').submit()", :remote => true %>
+    <% end %>
+  <% end %>
+<% end %>

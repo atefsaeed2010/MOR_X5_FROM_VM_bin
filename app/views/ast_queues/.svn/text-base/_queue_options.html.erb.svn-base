@@ -1,0 +1,305 @@
+<tr>
+  <td class="bottom_border">
+    <b><%= _('Queue_options') %></b>
+  </td>
+</tr>
+<tr>
+  <td height="10"></td>
+</tr>
+<tr>
+  <td valign="top">
+    <table class="simple">
+      <tr>
+        <td id="queue_name"><%= _('Queue_name') %>:</td>
+        <td id="queue_name_value"><%= text_field 'queue', 'name', "class" => "input" %> </td>
+      </tr>
+      <tr>
+        <td id="assigned_dids"><%= _('Assigned_did') %>:</td>
+        <td id="assigned_dids_value" style="width: 200px;">
+          <% if assigned_dids.size < 21 %>
+            <% assigned_dids.each_with_index{|d,i| %>
+              <% if accountant? and session[:acc_manage_dids_opt_1].to_i != 2 %>
+                <%= d.did.to_s %><%= "," if i < assigned_dids.size - 1 %>
+              <% else %>
+                <%= raw link_to d.did, {:controller => "dids", :action => "edit", :id => d.id}, {:style => 'font-size: 10px'} %><%= "," if i < assigned_dids.size - 1 %>
+              <% end %>
+            <% } %>
+          <% else %>
+            <%= raw link_to (assigned_dids.size.to_s + " " + _('DID_s')), :controller => "dids", :action => "list", :s_dialplan => dialplan.id %>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td id="queue_extension"><%= _('extension') %>:</td>
+        <td id="queue_extension_value"><%= text_field 'queue', 'extension', "class" => "input" %> </td>
+      </tr>
+      <tr id="servers_dropdown">
+        <td> <%= b_server + _('Server') %>:</td>
+        <td>
+          <select name="queue[server_id]">
+            <% for ser in servers %>
+              <option value=<%= ser.id %> <%= "selected" if queue.server_id.to_i == ser.id %>>
+                ID: <%= ser.id %>, IP: <%= ser.server_ip %> (<%= ser.comment %>)
+              </option>
+            <% end %>
+          </select>
+        </td>
+      </tr>
+      <tr id="ring_strategies">
+        <td> <%= _('Ring_strategies') %>:</td>
+        <td>
+          <select name="queue[strategy]">
+            <% for q_str in queue_strategies %>
+                <option value=<%= q_str %> <%= "selected" if q_str.to_s == queue.strategy.to_s %>><%= q_str %></option>
+            <% end %>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td id="queue_weight"><%= _('Queue_weight') %>:</td>
+        <td id="queue_weight_value"><%= text_field 'queue', 'weight', "class" => "input" %> </td>
+      </tr>
+      <tr>
+        <td> <%= _('Autofill') %>:</td>
+        <td>
+          <%= radio_button_tag('queue[autofill]', 'no', queue.autofill == 'no') %> <%= _('_No') %>
+          <%= radio_button_tag('queue[autofill]', 'yes', queue.autofill == 'yes') %> <%= _('_Yes') %>
+        </td>
+      </tr>
+      <tr>
+        <td> <%= _('Skip_busy_agents') %>:</td>
+        <td>
+          <%= radio_button_tag('queue[ringinuse]', 'no', queue.ringinuse == 'no') %> <%= _('_No') %>
+          <%= radio_button_tag('queue[ringinuse]', 'yes', queue.ringinuse == 'yes') %> <%= _('_Yes') %>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <table style="border:1px solid #cccccc;">
+            <tr>
+              <td colspan="3"><%= _('Fail_over_action') %>:</td>
+            </tr>
+            <tr>
+              <td onclick="hideSubmitButton();hideShowExclamation();">
+                <%= radio_button_tag('queue[failover_action]', 'hangup', queue.failover_action == 'hangup') %> <%= _('Hangup') %>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td onclick="hideSubmitButton();hideShowExclamation()">
+                <%= radio_button_tag('queue[failover_action]', 'extension', queue.failover_action == 'extension') %> <%= _('Transfer_to_extension') %>
+              </td>
+              <td></td>
+              <td><%= text_field 'queue', 'failover_data', "class" => "input", "value" => (queue.failover_data if queue.failover_action == 'extension'), :size => 20 %></td>
+            </tr>
+            <tr>
+              <td onclick="hideSubmitButton();hideShowExclamation()">
+                <%= radio_button_tag('queue[failover_action]', 'did', queue.failover_action == 'did') %> <%= _('Transfer_to_DID') %>
+              </td>
+              <td></td>
+              <td nowrap="true">
+                    <span width=100px>
+                      <input title="DID live search" class="input" type="text" size="20" id="s_did_pattern" name="s_did_pattern" autocomplete="off" value="<%=raw (did ? did.did : queue.failover_data) if queue.failover_action == 'did' %>" />
+                      <table id="did_list" style='margin-left:2px;margin-top:0px;position:absolute;min-width:50px;max-width:120px;border-width: 1px;border-image: initial;-webkit-box-shadow: rgba(0, 0, 0, 0.398438) 0px 2px 4px;box-shadow: rgba(0, 0, 0, 0.398438) 0px 2px 4px;background-clip: initial;background-color: rgb(255, 255, 255);background-position: initial initial;background-repeat: initial initial;'></table>
+                    </span>
+              </td>
+            </tr>
+            <tr>
+              <td onclick="hideSubmitButton();hideShowExclamation();">
+                <%= radio_button_tag('queue[failover_action]', 'device', queue.failover_action == 'device') %> <%= _('Transfer_to_device') %>
+              </td>
+              <td  style="vertical-align: bottom; position: relative;"><span style="margin-right: 13px;"><%= _('User') %>:</span></td>
+              <td nowrap="true">
+                <%= render 'shared/live_search_field', object: nice_user(@user), object_id: params[:user_id] || @user.try(:id) || '-2', object_name: 'user', action_url: {controller: :users, action: :get_users_map, options: {show_users_only: true} }, style: {class: 'input'} %>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td align="right"><span id="device_text"><%= _('Device') %>:</span>&nbsp;</td>
+              <% options = devices.map{|dev| [nice_device(dev, {:image => false}) ,dev.id.to_s ]} %>
+              <td nowrap="true" height="22px">
+                <span id="s_device_span">
+                  <% dev = defined?(device) ? device : nil %>
+                  <%= select_tag("s_device", options_for_select(options, dev.try(:id)), :disabled => devices.empty?, :style => "width:100px") %>
+                </span>
+                <div id="user_not_selected_info" style="display: none">
+                  <%= b_exclamation(style: 'vertical-align: bottom') + _('Please_select_User') %>
+                </div>
+                <div id="user_has_no_devices" style="display: none" colspan="2">
+                  <%= b_exclamation(style: 'vertical-align: bottom') + _('User_has_no_Devices') %>
+                </div>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+<script type="text/javascript">
+  new Form.Element.EventObserver('s_user', function(element, value) {
+    new Ajax.Updater(
+      's_device_span',
+      '<%= Web_Dir %>/devices/get_devices_for_search',
+      {
+        asynchronous:true,
+        evalScripts:true,
+        onComplete:function(request){
+          Element.hide('spinner');
+          hideShowExclamation();
+          hideSubmitButton();
+        },
+        onLoading:function(request){
+          Element.show('spinner');
+        },
+        parameters:'user_id=' + encodeURIComponent($('s_user_id').value) + '&dont_show_all=true'
+      }
+    )
+  })
+</script>
+
+<script type='text/javascript'>
+    Event.observe(window, 'load',  function() {
+        Event.observe($('s_did_pattern'), 'click', function(){
+            if ($('s_did_pattern').value == "") {
+                $('did_list').innerHTML = "";
+            <%=raw remote_function(:update => 'did_list',:url => {:controller => :locations, :action => :get_did_map }, :with => "'empty_click=true'") %>
+            }
+            Event.observe($('s_did_pattern'), 'keyup', function(){
+                $('did_list').innerHTML = "";
+                <%=raw remote_function(:update => 'did_list',:url => {:controller => :locations, :action => :get_did_map }, :with => "'did_livesearch='+$('s_did_pattern').value") %>
+            });
+
+            Event.observe($('did_list'), 'mouseover', function(){
+                var el = document.getElementById('did_list').getElementsByTagName('td');
+                for(var i=0;i<el.length;i++){
+                    el[i].onclick=function(){
+                        if (this.id != -2) {
+                            document.getElementById('s_did_pattern').value = this.innerHTML
+                        <%= raw remote_function(:update => 'did_list',:url => {:controller => :locations, :action => :get_did_map }, :with => "'did_livesearch='") %>
+                        }
+                    }
+                    el[i].onmouseover=function(){
+                        this.style.backgroundColor="#BBBBBB";
+                    }
+                    el[i].onmouseout=function(){
+                        this.style.backgroundColor="rgb(255, 255, 255)";
+                    }
+                }
+            });
+
+        });
+    });
+</script>
+
+<script type='text/javascript'>
+    Event.observe(window, 'load',  function() {
+        var handup = $('queue_failover_action_hangup');
+        var extension = $('queue_failover_action_extension');
+        var did = $('queue_failover_action_did');
+        var device = $('queue_failover_action_device');
+
+        var ext_data = $('queue_failover_data');
+        var did_val = $('s_did_pattern');
+        var user = $('s_user');
+        var device_val = $('s_device');
+
+        ext_data.disabled = extension.checked ? false : true;
+        did_val.disabled = did.checked ? false : true;
+        user.disabled = device.checked ? false : true;
+        device_val.disabled = device.checked ? false : true;
+
+        Event.observe(handup, 'click', function(){
+            ext_data.disabled = true;
+            did_val.disabled = true;
+            user.disabled = true;
+            device_val.disabled = true;
+        });
+        Event.observe(extension, 'click', function(){
+            ext_data.disabled = false;
+            did_val.disabled = true;
+            user.disabled = true;
+            device_val.disabled = true;
+        });
+        Event.observe(did, 'click', function(){
+          console.log(device_val);
+            ext_data.disabled = true;
+            did_val.disabled = false;
+            user.disabled = true;
+            device_val.disabled = true;
+        });
+        Event.observe(device, 'click', function(){
+            ext_data.disabled = true;
+            did_val.disabled = true;
+            user.disabled = false;
+            device_val.disabled = false;
+        });
+    });
+</script>
+
+<script type="text/javascript">
+
+  Event.observe(window, 'load',  function() {
+    hideSubmitButton();
+    hideShowExclamation();
+    $('s_user').observe('change', function(){
+      hideSubmitButton();
+      hideShowExclamation();
+    })
+
+    new Form.Element.EventObserver('s_user', hideSubmitButton);
+  })
+
+
+
+  function hideSubmitButton(){
+    var submit = $('submit');
+
+    if(($("s_user_id").value === '-2' || $('s_device').length === 0) && $('queue_failover_action_device').checked){
+      submit.disabled = true;
+    } else {
+      submit.disabled = false;
+    }
+
+    if($('queue_failover_action_device').checked === false){
+      $('s_device').disabled = true;
+    } else {
+      $('s_device').disabled = false;
+    }
+  }
+
+  function hideShowExclamation(){
+
+    var user_id = $("s_user_id");
+
+    var user_has_no_devices = $('user_has_no_devices');
+    var device_list_span = $('s_device');
+    var user_not_selected_info = $('user_not_selected_info');
+
+
+    if(user_id.value === '-2'){
+      user_has_no_devices.hide();
+      device_list_span.hide();
+      if($('queue_failover_action_device').checked){
+        user_not_selected_info.show();
+      }
+    } else if ($('s_device').length === 0){
+      device_list_span.hide();
+      user_not_selected_info.hide();
+      user_has_no_devices.show();
+    } else {
+      user_has_no_devices.hide();
+      user_not_selected_info.hide();
+      device_list_span.show();
+    }
+
+    if(!$('queue_failover_action_device').checked && user_id.value === '-2'){
+      $('device_text').hide();
+      user_not_selected_info.hide();
+    } else {
+      $('device_text').show();
+    }
+  }
+</script>

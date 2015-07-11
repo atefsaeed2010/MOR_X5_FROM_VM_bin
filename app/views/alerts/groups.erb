@@ -1,0 +1,49 @@
+<table class="maintable" width="100%">
+  <tr>
+    <th><%= sortable_list_header('id', _('ID'), @options) %></th>
+    <th align='center'><%= sortable_list_header('status', _('Active'), @options) %></th>
+    <th><%= sortable_list_header('name', _('group_name'), @options) %></th>
+    <th align='center'><%= _('Contacts') %></th>
+    <th align='left'><%= sortable_list_header('email_schedule', _('email_schedule'), @options) %></th>
+    <th align='right'><%= sortable_list_header('max_emails_month', _('max_emails_month'), @options) %></th>
+    <th align='right'><%= sortable_list_header('emails_this_month', _('emails_this_month'), @options) %></th>
+    <th align='left'><%= sortable_list_header('sms_schedule', _('sms_schedule'), @options) %></th>
+    <th align='right'><%= sortable_list_header('max_sms_month', _('max_sms_month'), @options) %></th>
+    <th align='right'><%= sortable_list_header('sms_this_month', _('sms_this_month'), @options) %></th>
+    <th align='left'><%= sortable_list_header('comment', _('Comment'), @options) %></th>
+    <th colspan=2></th>
+  </tr>
+  <% @groups.each_with_index do |group, i| %>
+    <tr align="left" class="row<%= i%2+1 %>">
+      <td id="id_<%= group.id %>"><%= group.id %></td>
+      <td id="status_<%= group.id %>" align="center"><%= link_to (group.status == 'enabled' ? b_check({title: 'Group will be used'}) : b_cross({title: 'Group will not be used'})), action: 'group_toggle', id: group.id %></td>
+      <td id="name_<%= group.id %>"><%= group.name %></td>
+      <td id="contacts_<%= group.id %>" align='center'><%= link_to image_tag('http://www.kolmisoft.com/packets/icons/silk_complete/images/vcard.png') + " (#{count_group_contacts(group.id)})", {action: 'group_contacts', id: group.id}, {} %></td>
+      <td id="email_schedule_<%= group.id %>" align="left"><%= nice_group_schedule(group.email_schedule)  %></td>
+      <td id="max_emails_month_<%= group.id %>" align="right"><%= group.max_emails_per_month %></td>
+      <td id="emails_this_month_<%= group.id %>" align="right"><%= group.emails_this_month %></td>
+      <td id="sms_schedule_<%= group.id %>" align="left"><%= nice_group_schedule(group.sms_schedule) %></td>
+      <td id="max_sms_per_month_<%= group.id %>" align='right'><%= group.max_sms_per_month %></td>
+      <td id="sms_this_month_<%= group.id %>" align='right'><%= group.sms_this_month %></td>
+      <td id="comment_<%= group.id %>" align='left'><%= group.comment %></td>
+      <td id="edit_<%= group.id %>" align='center'><%= link_to b_edit, { action: 'group_edit', id: group.id }, { method: 'post', id: 'edit_link_#{group.id}' } %></td>
+      <td id="delete_<%= group.id %>" align='center'><%= link_to b_delete, {action: 'group_destroy', id: group.id}, {confirm: _('Are_you_sure'), method: 'post', id: 'delete_link_#{group.id}'} %></td>
+    </tr>
+  <% end %>
+  <%= form_for :new_group, url: { action: 'group_add' } do |f| %>
+    <tr align="left">
+      <th></th>
+      <th align='center' id='group_status'><%= f.check_box :status, {}, 'enabled', 'disabled' %></th>
+      <th align='left' id='name'><%= f.text_field :name, class: 'input', size: 20 %></th>
+      <th></th>
+      <th align="left" id="email_schedule"><%= f.collection_select :email_schedule_id, @schedules, :id, :name, {include_blank: (@schedules.size == 0 ? _('no_schedules_available') : _('select_schedule'))} %></th>
+      <th align="right" id="max_emails_month"><%= f.text_field :max_emails_per_month, class: 'input', size: 8 %></th>
+      <th></th>
+      <th align="left" id="sms_schedule"><%= f.collection_select :sms_schedule_id, @schedules, :id, :name, {include_blank: (@schedules.size == 0 ? _('no_schedules_available') : _('select_schedule'))} %></th>
+      <th align="right" id="max_sms_per_month"><%= f.text_field :max_sms_per_month, class: 'input', size: 8 %></th>
+      <th></th>
+      <th align='left' id="comment"><%= f.text_field :comment, class: 'input', size: 30 %></th>
+      <th colspan=2 align="center"><%= f.submit type: 'image', src: Web_Dir+'/images/icons/add.png', :title => _('Add') %></th>
+    </tr>
+  <% end %>
+</table>

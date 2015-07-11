@@ -1,0 +1,8 @@
+# disables "Send Email to User after Registration" and "Send Email to Admin after Registration" 
+# from Registration section.   
+# ----
+# disable "Send Email to User after Registration:"
+settings/email/disable_send_email_to_user_after_registration.sql
+# disable "Send Email to Admin after Registration:"
+settings/email/disable_send_email_to_admin_after_registration.sql
+# bundle loaded

@@ -1,0 +1,4677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>queues2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">queues2</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_name</td>
+	<td>test queue</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_extension</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=img[alt=&quot;Group&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[@href='http://wiki.kolmisoft.com/index.php/Call_Queues']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Queue successfully created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=table.simple &gt; tbody &gt; tr &gt; td.nb</td>
+	<td>test queue</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Queue Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=queue_name</td>
+	<td>Queue Name:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[name]</td>
+	<td>test queue</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=assigned_dids</td>
+	<td>Assigned DID(s):</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=assigned_dids_value</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=queue_extension</td>
+	<td>exact:Extension:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[extension]</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#servers_dropdown &gt; td</td>
+	<td>exact:Server:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>name=queue[server_id]</td>
+	<td>exact:ID: 1, IP: 127.0.0.1 (main system)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#ring_strategies &gt; td</td>
+	<td>Ring Strategies:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>name=queue[strategy]</td>
+	<td>ringall roundrobin leastrecent fewestcalls random rrmemory wrandom linear rrordered</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=queue_weight</td>
+	<td>Queue Weight:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[weight]</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[7]/td</td>
+	<td>exact:Autofill:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_autofill_no</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_autofill_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[8]/td</td>
+	<td>Skip Busy Agents:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ringinuse_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ringinuse_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Fail Over Action:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_failover_action_hangup</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_failover_action_extension</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_failover_action_did</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_failover_action_device</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[9]/td/table/tbody/tr[3]/td</td>
+	<td>Transfer to Extension</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[9]/td/table/tbody/tr[4]/td</td>
+	<td>Transfer to DID</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[9]/td/table/tbody/tr[5]/td</td>
+	<td>Transfer to Device</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_failover_action_extension</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_failover_data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_failover_action_did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_did_pattern</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_failover_action_device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_not_selected_info</td>
+	<td>Please select User</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=img[alt=&quot;Exclamation&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Please select User</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>css=img[alt=&quot;Exclamation&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=s_device</td>
+	<td>IAX2/101 FAX/102 IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Agent Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=cid_name_prefix</td>
+	<td>CID Name Prefix:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_cid_name_prefix</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[7]/td/table/tbody/tr[2]/td</td>
+	<td>Report Hold Time:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_reportholdtime_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_reportholdtime_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[7]/td/table/tbody/tr[3]/td</td>
+	<td>Agent Announcement:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>name=queue[announce]</td>
+	<td>silence1.wav silence2.wav silence3.wav silence4.wav silence5.wav silence6.wav silence7.wav silence8.wav silence9.wav silence10.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_memberdelay</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_timeout</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_retry</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_wrapuptime</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_allow_callee_hangup_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_allow_callee_hangup_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[7]/td/table/tbody/tr[8]/td</td>
+	<td>exact:Allow hangup by *:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[9]/td/b</td>
+	<td>Static Agents</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Add new Static Agent</td>
+	<td>Add new Static Agent</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_maxlen</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>name=queue[join_announcement]</td>
+	<td>none silence1.wav silence2.wav silence3.wav silence4.wav silence5.wav silence6.wav silence7.wav silence8.wav silence9.wav silence10.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=queue[join_announcement]</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ringing_instead_of_moh_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ringing_instead_of_moh_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>name=queue[moh_id]</td>
+	<td>default</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=queue[moh_id]</td>
+	<td>default</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ring_at_once_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ring_at_once_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[6]/td/table/tbody/tr/td</td>
+	<td>Join Empty:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[6]/td[2]/table/tbody/tr/td</td>
+	<td>Leave When Empty:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=leave_empty_</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[2]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[6]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[6]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[2]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=join_empty_</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[3]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[4]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[5]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[7]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[8]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[3]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[4]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[5]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[7]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[8]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_allow_caller_hangup_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_allow_caller_hangup_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>name=queue[context]</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=queue[context]</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_max_wait_time</td>
+	<td>300</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Caller Announcements</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=repeat_frequency_select</td>
+	<td>OFF 30 60 90 120 150 180 210 240 270 300</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=repeat_frequency_select</td>
+	<td>90</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_min_announce_frequency</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_position_no</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_position_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_position_limit</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_position_more</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_holdtime_no</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_holdtime_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_holdtime_once</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_round_seconds</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//td[2]/table/tbody/tr[9]/td/b</td>
+	<td>Periodic Announcements</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=periodic_repeat_frequency_select</td>
+	<td>OFF 30 60 90 120 150 180 210 240 270 300</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=periodic_repeat_frequency_select</td>
+	<td>60</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_random_periodic_announce_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_random_periodic_announce_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_relative_periodic_announce_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_relative_periodic_announce_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td>Add new Periodic Announcement</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//td[3]/table/tbody/tr/td/b</td>
+	<td>Visualization</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.ringgroup_class</td>
+	<td>Incoming Call</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Call&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.ringgroup_items2</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[5]/span</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[7]/span</td>
+	<td>test queue</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[11]/span</td>
+	<td>default</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[13]/span</td>
+	<td>ringall</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#show_did2 &gt; span.ringgroup_items2</td>
+	<td>Hangup</td>
+</tr>
+<!--tikrinamas ajax-->
+<tr>
+	<td>click</td>
+	<td>link=Add new Static Agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Add new Static Agent</td>
+	<td>Add new Static Agent</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_user_agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=static_agent_not_selected_info</td>
+	<td>Please select User</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#static_agent_not_selected_info &gt; img[alt=&quot;Exclamation&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_agent_penalty</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#submit_new_agent &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Static Agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Add new Static Agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=s_user_agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=device_agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_agent_penalty</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>css=#submit_new_agent &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td>Add new Periodic Announcement</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#submit_new_periodic_announcement &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_periodic_announcement</td>
+	<td>silence1.wav silence2.wav silence3.wav silence4.wav silence5.wav silence6.wav silence7.wav silence8.wav silence9.wav silence10.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=new_periodic_announcement</td>
+	<td>silence1.wav</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#submit_new_periodic_announcement &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>css=#submit_new_periodic_announcement &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=new_periodic_announcement</td>
+	<td>silence1.wav silence2.wav silence3.wav silence4.wav silence5.wav silence6.wav silence7.wav silence8.wav silence9.wav silence10.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>css=#submit_new_periodic_announcement &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=s_device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=s_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=s_did_pattern</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=queue_failover_data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_failover_action_did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=s_did_pattern</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=s_device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=s_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=queue_failover_data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_failover_action_extension</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=queue_failover_data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=s_did_pattern</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=s_device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=s_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_ringing_instead_of_moh_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>name=queue[moh_id]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=repeat_frequency_select</td>
+	<td>label=OFF</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_min_announce_frequency</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_announce_position_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_announce_position_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_announce_position_limit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_announce_holdtime_once</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_announce_holdtime_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_announce_round_seconds</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=repeat_frequency_select</td>
+	<td>label=30</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>name=queue[announce_position_limit]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_position_limit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[announce_position_limit]</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_position_more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[announce_position_limit]</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_position_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>name=queue[announce_position_limit]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_round_seconds</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_holdtime_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_round_seconds</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_holdtime_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_announce_round_seconds</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=periodic_repeat_frequency_select</td>
+	<td>label=OFF</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_random_periodic_announce_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_random_periodic_announce_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_relative_periodic_announce_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_relative_periodic_announce_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td></td>
+</tr>
+<!--reiksmiu saugojimas-->
+<tr>
+	<td>type</td>
+	<td>name=queue[name]</td>
+	<td>test queue edited</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[extension]</td>
+	<td>987</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=queue[strategy]</td>
+	<td>label=roundrobin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[weight]</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_autofill_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_ringinuse_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_failover_action_did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_did_pattern</td>
+	<td>37063042438</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_cid_name_prefix</td>
+	<td>wp</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_reportholdtime_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=queue[announce]</td>
+	<td>label=silence2.wav</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_memberdelay</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_timeout</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_retry</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_wrapuptime</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_allow_callee_hangup_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Static Agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_agent_penalty</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#submit_new_agent &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_maxlen</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=queue[join_announcement]</td>
+	<td>label=silence4.wav</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_ringing_instead_of_moh_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_ring_at_once_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='join_empty_'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='join_empty_'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='join_empty_'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=join_empty_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='join_empty_'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='leave_empty_'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='leave_empty_'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='leave_empty_'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='leave_empty_'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=leave_empty_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_allow_caller_hangup_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_max_wait_time</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=repeat_frequency_select</td>
+	<td>label=120</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_min_announce_frequency</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_position_limit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[announce_position_limit]</td>
+	<td>25</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_holdtime_once</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_announce_round_seconds</td>
+	<td>98</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=periodic_repeat_frequency_select</td>
+	<td>label=210</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_random_periodic_announce_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_relative_periodic_announce_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=new_periodic_announcement</td>
+	<td>label=silence9.wav</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#submit_new_periodic_announcement &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.ringgroup_items2</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[7]/span</td>
+	<td>test queue</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[9]/span</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[11]/span</td>
+	<td>default</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[13]/span</td>
+	<td>ringall</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[4]/span[2]</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#show_did2 &gt; span.ringgroup_items2</td>
+	<td>Hangup</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Queue successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_1</td>
+	<td>test queue edited</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=extension_1</td>
+	<td>987</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=strategy_1</td>
+	<td>roundrobin</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Edit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[name]</td>
+	<td>test queue edited</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[weight]</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=queue[strategy]</td>
+	<td>roundrobin</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_autofill_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ringinuse_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_failover_action_did</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_did_pattern</td>
+	<td>37063042438</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_cid_name_prefix</td>
+	<td>wp</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_reportholdtime_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=queue[announce]</td>
+	<td>silence2.wav</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_memberdelay</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_timeout</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_retry</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_wrapuptime</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_allow_callee_hangup_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=agent_device_1</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=agent_penalty_1</td>
+	<td>exact:Penalty: 3</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Edit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_maxlen</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=queue[join_announcement]</td>
+	<td>silence4.wav</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ringing_instead_of_moh_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ring_at_once_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[3]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[4]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=join_empty_</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[2]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=leave_empty_</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[2]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[5]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[7]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_allow_caller_hangup_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_max_wait_time</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=repeat_frequency_select</td>
+	<td>120</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_min_announce_frequency</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_position_limit</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[announce_position_limit]</td>
+	<td>25</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_holdtime_once</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_round_seconds</td>
+	<td>98</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=periodic_repeat_frequency_select</td>
+	<td>210</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_random_periodic_announce_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_relative_periodic_announce_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#sortable_table2 &gt; table &gt; tbody &gt; #item_1 &gt; td</td>
+	<td>silence9.wav</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#queue_announcement_delete_1 &gt; span &gt; img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=#sortable_table2 &gt; table.0.0</td>
+	<td>silence9.wav</td>
+</tr>
+<!--drag and dropai-->
+<!--agents-->
+<tr>
+	<td>click</td>
+	<td>link=Add new Static Agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=device_agent</td>
+	<td>FAX/102 IAX2/1002</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=device_agent</td>
+	<td>label=FAX/102</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_agent_penalty</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#submit_new_agent &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Static Agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=device_agent</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=device_agent</td>
+	<td>label=IAX2/1002</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_agent_penalty</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#submit_new_agent &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=s_user_agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=device_agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>assertTable</td>
+	<td>css=#sortable_table &gt; table.0.0</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertTable</td>
+	<td>css=#sortable_table &gt; table.1.0</td>
+	<td>FAX/102</td>
+</tr>
+<tr>
+	<td>assertTable</td>
+	<td>css=#sortable_table &gt; table.2.0</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//img[@src='/billing/images/icons/arrow_down_blue.png'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>assertTable</td>
+	<td>css=#sortable_table &gt; table.0.0</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForTable</td>
+	<td>css=#sortable_table &gt; table.1.0</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForTable</td>
+	<td>css=#sortable_table &gt; table.2.0</td>
+	<td>FAX/102</td>
+</tr>
+<!--<tr> 	<td>answerOnNextPrompt</td> 	<td>987</td> 	<td></td> </tr> <tr> 	<td>click</td> 	<td>css=#agent_edit_4 &gt; span &gt; img[alt=&quot;Edit&quot;]</td> 	<td></td> </tr> <tr> 	<td>assertPrompt</td> 	<td>Enter another penalty</td> 	<td></td> </tr> <tr> 	<td>waitForText</td> 	<td>id=agent_penalty_4</td> 	<td>exact:Penalty: 987</td> </tr>-->
+<tr>
+	<td>click</td>
+	<td>css=#agent_delete_3 &gt; span &gt; img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>Penalty: 9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Static Agent</td>
+	<td></td>
+</tr>
+<!--istrynus agent, jis grizta i dropdowna-->
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=device_agent</td>
+	<td>IAX2/1002</td>
+</tr>
+<!--periodic announcements-->
+<tr>
+	<td>click</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=new_periodic_announcement</td>
+	<td>label=cc_busy.wav</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#submit_new_periodic_announcement &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=new_periodic_announcement</td>
+	<td>label=cc_card_not_found.wav</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#submit_new_periodic_announcement &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForTable</td>
+	<td>css=#sortable_table2 &gt; table.0.0</td>
+	<td>silence9.wav</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForTable</td>
+	<td>css=#sortable_table2 &gt; table.1.0</td>
+	<td>cc_busy.wav</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForTable</td>
+	<td>css=#sortable_table2 &gt; table.2.0</td>
+	<td>cc_card_not_found.wav</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//img[@src='/billing/images/icons/arrow_down_blue.png'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#sortable_table2 &gt; table &gt; tbody &gt; #item_2 &gt; td</td>
+	<td>cc_busy.wav</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#sortable_table2 &gt; table &gt; tbody &gt; #item_1 &gt; td</td>
+	<td>silence9.wav</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#sortable_table2 &gt; table &gt; tbody &gt; #item_3 &gt; td</td>
+	<td>cc_card_not_found.wav</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#queue_announcement_delete_3 &gt; span &gt; img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForElementNotPresent</td>
+	<td>css=#sortable_table2 &gt; table &gt; tbody &gt; #item_3 &gt; td</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.ringgroup_items2</td>
+	<td>987</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[5]/span</td>
+	<td>987</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[7]/span</td>
+	<td>test queue edited</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[9]/span</td>
+	<td>silence4.wav</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[11]/span</td>
+	<td>default</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[13]/span</td>
+	<td>roundrobin</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=li</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[4]/span[2]</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#show_did2 &gt; span.ringgroup_items2</td>
+	<td>Transfer to DID: 37063042438</td>
+</tr>
+<!--testing errors-->
+<tr>
+	<td>type</td>
+	<td>id=queue_memberdelay</td>
+	<td>54</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_position_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_holdtime_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_random_periodic_announce_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_relative_periodic_announce_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_allow_caller_hangup_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='leave_empty_'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='leave_empty_'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=leave_empty_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='join_empty_'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='join_empty_'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='join_empty_'])[8]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=queue[join_announcement]</td>
+	<td>label=cc_enter_pin.wav</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[extension]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=queue[name]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[name]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[weight]</td>
+	<td>sdfsdfsd</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_did_pattern</td>
+	<td>dsfsdf</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>exact:Queue was not updated<br /> * Please enter extension<br /> * Name cannot be blank<br /> * Fail Over Action DID was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[name]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[extension]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_did_pattern</td>
+	<td>dsfsdf</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=queue[join_announcement]</td>
+	<td>cc_enter_pin.wav</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=leave_empty_</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[2]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[3]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[6]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[7]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[8]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[extension]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[name]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=queue_ringing_instead_of_moh_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_allow_caller_hangup_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_position_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_holdtime_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_random_periodic_announce_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_relative_periodic_announce_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[weight]</td>
+	<td>sdfsdfsd</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//img[@src=&quot;/billing/images/icons/arrow_up_blue.png&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>10000</td>
+</tr>
+<!--<tr> 	<td>waitForTextPresent</td> 	<td>Penalty: 987</td> 	<td></td> </tr>-->
+<tr>
+	<td>click</td>
+	<td>xpath=(//img[@src='/billing/images/icons/arrow_down_blue.png'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>assertTable</td>
+	<td>css=#sortable_table2 &gt; table.0.0</td>
+	<td>cc_busy.wav</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_maxlen</td>
+	<td>fghdfgdfg</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_max_wait_time</td>
+	<td>dfgdfgdfg</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_min_announce_frequency</td>
+	<td>dfgdfgdf</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>exact:Queue was not updated<br /> * Please enter extension<br /> * Name cannot be blank<br /> * Fail Over Action DID was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/sql/acc_groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/sql/acc_all_permissions_write</td>
+	<td></td>
+</tr>
+<!--visi permissionai iskyrus viena-->
+<tr>
+	<td>open</td>
+	<td>/billing/permissions/edit/11?group_type=accountant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=manage_queues_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/users/edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=#confirm_without_message &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/edit/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You are not authorized to view this page</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>accountant</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>accountant1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/edit/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You do not have rights to edit this</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You are not authorized to view this page</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/destroy/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You do not have rights to edit this</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Queues</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/permissions/edit/11?group_type=accountant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=manage_queues_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>accountant</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>accountant1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/edit/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You do not have rights to edit this</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title</td>
+	<td>Queues</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_1</td>
+	<td>test queue edited</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=extension_1</td>
+	<td>987</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=strategy_1</td>
+	<td>roundrobin</td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=img[alt=&quot;Edit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/destroy/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You do not have rights to edit this</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/permissions/edit/11?group_type=accountant</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_manage_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_create_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_create_opt_7_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_create_opt_6_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_create_opt_5_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_create_opt_4_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_create_opt_3_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_create_opt_2_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=user_create_opt_1_0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=manage_queues_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>accountant</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>accountant1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/edit/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>You do not have rights to edit this</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title</td>
+	<td>Queues</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_1</td>
+	<td>test queue edited</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=extension_1</td>
+	<td>987</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=strategy_1</td>
+	<td>roundrobin</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Edit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_name</td>
+	<td>acc queue</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_extension</td>
+	<td>dasdasd</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Queue successfully created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title</td>
+	<td>Queue Edit</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[name]</td>
+	<td>acc queue</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Queue Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=queue_name</td>
+	<td>Queue Name:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[name]</td>
+	<td>acc queue</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=assigned_dids</td>
+	<td>Assigned DID(s):</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=assigned_dids_value</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=queue_extension</td>
+	<td>exact:Extension:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[extension]</td>
+	<td>dasdasd</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#servers_dropdown &gt; td</td>
+	<td>exact:Server:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>name=queue[server_id]</td>
+	<td>exact:ID: 1, IP: 127.0.0.1 (main system)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#ring_strategies &gt; td</td>
+	<td>Ring Strategies:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>name=queue[strategy]</td>
+	<td>ringall roundrobin leastrecent fewestcalls random rrmemory wrandom linear rrordered</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=queue_weight</td>
+	<td>Queue Weight:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[weight]</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[7]/td</td>
+	<td>exact:Autofill:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_autofill_no</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_autofill_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[8]/td</td>
+	<td>Skip Busy Agents:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ringinuse_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ringinuse_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Fail Over Action:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_failover_action_hangup</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_failover_action_extension</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_failover_action_did</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_failover_action_device</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[9]/td/table/tbody/tr[3]/td</td>
+	<td>Transfer to Extension</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[9]/td/table/tbody/tr[4]/td</td>
+	<td>Transfer to DID</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[9]/td/table/tbody/tr[5]/td</td>
+	<td>Transfer to Device</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_failover_action_extension</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_failover_data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_failover_action_did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_did_pattern</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_failover_action_device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=s_device</td>
+	<td>IAX2/101 FAX/102 IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Agent Options</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=cid_name_prefix</td>
+	<td>CID Name Prefix:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_cid_name_prefix</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[7]/td/table/tbody/tr[2]/td</td>
+	<td>Report Hold Time:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_reportholdtime_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_reportholdtime_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[7]/td/table/tbody/tr[3]/td</td>
+	<td>Agent Announcement:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>name=queue[announce]</td>
+	<td>silence1.wav silence2.wav silence3.wav silence4.wav silence5.wav silence6.wav silence7.wav silence8.wav silence9.wav silence10.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_memberdelay</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_timeout</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_retry</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_wrapuptime</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_allow_callee_hangup_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_allow_callee_hangup_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[7]/td/table/tbody/tr[8]/td</td>
+	<td>exact:Allow hangup by *:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[9]/td/b</td>
+	<td>Static Agents</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Add new Static Agent</td>
+	<td>Add new Static Agent</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_maxlen</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>name=queue[join_announcement]</td>
+	<td>none silence1.wav silence2.wav silence3.wav silence4.wav silence5.wav silence6.wav silence7.wav silence8.wav silence9.wav silence10.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=queue[join_announcement]</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ringing_instead_of_moh_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ringing_instead_of_moh_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>name=queue[moh_id]</td>
+	<td>default</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=queue[moh_id]</td>
+	<td>default</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ring_at_once_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ring_at_once_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[6]/td/table/tbody/tr/td</td>
+	<td>Join Empty:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[6]/td[2]/table/tbody/tr/td</td>
+	<td>Leave When Empty:</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=leave_empty_</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[2]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[6]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[6]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[2]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=join_empty_</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[3]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[4]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[5]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[7]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[8]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[3]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[4]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[5]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[7]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[8]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_allow_caller_hangup_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_allow_caller_hangup_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>name=queue[context]</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=queue[context]</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_max_wait_time</td>
+	<td>300</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Caller Announcements</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=repeat_frequency_select</td>
+	<td>OFF 30 60 90 120 150 180 210 240 270 300</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=repeat_frequency_select</td>
+	<td>90</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_min_announce_frequency</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_position_no</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_position_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_position_limit</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_position_more</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_holdtime_no</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_holdtime_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_holdtime_once</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_round_seconds</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//td[2]/table/tbody/tr[9]/td/b</td>
+	<td>Periodic Announcements</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=periodic_repeat_frequency_select</td>
+	<td>OFF 30 60 90 120 150 180 210 240 270 300</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=periodic_repeat_frequency_select</td>
+	<td>60</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_random_periodic_announce_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_random_periodic_announce_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_relative_periodic_announce_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_relative_periodic_announce_yes</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td>Add new Periodic Announcement</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//td[3]/table/tbody/tr/td/b</td>
+	<td>Visualization</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p.ringgroup_class</td>
+	<td>Incoming Call</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Call&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.ringgroup_items2</td>
+	<td>dasdasd</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[7]/span</td>
+	<td>acc queue</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[11]/span</td>
+	<td>default</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[13]/span</td>
+	<td>ringall</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#show_did2 &gt; span.ringgroup_items2</td>
+	<td>Hangup</td>
+</tr>
+<!--tikrinamas ajax-->
+<tr>
+	<td>click</td>
+	<td>link=Add new Static Agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Add new Static Agent</td>
+	<td>Add new Static Agent</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_user_agent</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=s_device</td>
+	<td>IAX2/101 FAX/102 IAX2/1002</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_agent_penalty</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#submit_new_agent &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Static Agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>link=Add new Static Agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=s_user_agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=device_agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_agent_penalty</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>css=#submit_new_agent &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td>Add new Periodic Announcement</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#submit_new_periodic_announcement &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_periodic_announcement</td>
+	<td>silence1.wav silence2.wav silence3.wav silence4.wav silence5.wav silence6.wav silence7.wav silence8.wav silence9.wav silence10.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=new_periodic_announcement</td>
+	<td>silence1.wav</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=#submit_new_periodic_announcement &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>css=#submit_new_periodic_announcement &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=new_periodic_announcement</td>
+	<td>silence1.wav silence2.wav silence3.wav silence4.wav silence5.wav silence6.wav silence7.wav silence8.wav silence9.wav silence10.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav cc_enter_card_number_pin.wav cc_enter_pin.wav cc_you_have_entered_nothing.wav cc_card_not_found.wav cc_card_expired.wav cc_card_is_not_sold_yet.wav cc_card_is_empty.wav cc_please_enter_number.wav cc_busy.wav cc_unreachable.wav cc_callingcard_choices.wav cc_dialing_previous_number.wav cc_goodbye.wav</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>css=#submit_new_periodic_announcement &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=s_device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=s_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=s_did_pattern</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=queue_failover_data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_failover_action_did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=s_did_pattern</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=s_device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=s_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=queue_failover_data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_failover_action_extension</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=queue_failover_data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=s_did_pattern</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=s_device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=s_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_ringing_instead_of_moh_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>name=queue[moh_id]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=repeat_frequency_select</td>
+	<td>label=OFF</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_min_announce_frequency</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_announce_position_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_announce_position_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_announce_position_limit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_announce_holdtime_once</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_announce_holdtime_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_announce_round_seconds</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=repeat_frequency_select</td>
+	<td>label=30</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>name=queue[announce_position_limit]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_position_limit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[announce_position_limit]</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_position_more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[announce_position_limit]</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_position_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>name=queue[announce_position_limit]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_round_seconds</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_holdtime_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_round_seconds</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_holdtime_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_announce_round_seconds</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=periodic_repeat_frequency_select</td>
+	<td>label=OFF</td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_random_periodic_announce_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_random_periodic_announce_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_relative_periodic_announce_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>id=queue_relative_periodic_announce_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td></td>
+</tr>
+<!--reiksmiu saugojimas-->
+<tr>
+	<td>type</td>
+	<td>name=queue[name]</td>
+	<td>test queue edited</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[extension]</td>
+	<td>987</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=queue[strategy]</td>
+	<td>label=roundrobin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[weight]</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_autofill_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_ringinuse_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_failover_action_did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_did_pattern</td>
+	<td>37063042438</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_cid_name_prefix</td>
+	<td>wp</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_reportholdtime_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=queue[announce]</td>
+	<td>label=silence2.wav</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_memberdelay</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_timeout</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_retry</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_wrapuptime</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_allow_callee_hangup_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Static Agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_agent_penalty</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#submit_new_agent &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_maxlen</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=queue[join_announcement]</td>
+	<td>label=silence4.wav</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_ringing_instead_of_moh_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_ring_at_once_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='join_empty_'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='join_empty_'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='join_empty_'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=join_empty_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='join_empty_'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='leave_empty_'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='leave_empty_'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='leave_empty_'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='leave_empty_'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=leave_empty_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_allow_caller_hangup_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_max_wait_time</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=repeat_frequency_select</td>
+	<td>label=120</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_min_announce_frequency</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_position_limit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[announce_position_limit]</td>
+	<td>25</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_holdtime_once</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_announce_round_seconds</td>
+	<td>98</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=periodic_repeat_frequency_select</td>
+	<td>label=210</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_random_periodic_announce_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_relative_periodic_announce_yes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=new_periodic_announcement</td>
+	<td>label=silence9.wav</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#submit_new_periodic_announcement &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.ringgroup_items2</td>
+	<td>dasdasd</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[7]/span</td>
+	<td>acc queue</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[9]/span</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[11]/span</td>
+	<td>default</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[13]/span</td>
+	<td>ringall</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[4]/span[2]</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#show_did2 &gt; span.ringgroup_items2</td>
+	<td>Hangup</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Queue successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_2</td>
+	<td>test queue edited</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=extension_2</td>
+	<td>987</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=strategy_2</td>
+	<td>roundrobin</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Edit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[name]</td>
+	<td>test queue edited</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[weight]</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=queue[strategy]</td>
+	<td>roundrobin</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_autofill_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ringinuse_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_failover_action_did</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_did_pattern</td>
+	<td>37063042438</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_cid_name_prefix</td>
+	<td>wp</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_reportholdtime_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=queue[announce]</td>
+	<td>silence2.wav</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_memberdelay</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_timeout</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_retry</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_wrapuptime</td>
+	<td>15</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_allow_callee_hangup_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=agent_device_4</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=agent_penalty_4</td>
+	<td>exact:Penalty: 3</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Edit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_maxlen</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=queue[join_announcement]</td>
+	<td>silence4.wav</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ringing_instead_of_moh_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_ring_at_once_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[3]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[4]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=join_empty_</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[2]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=leave_empty_</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[2]</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[5]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[7]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_allow_caller_hangup_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_max_wait_time</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=repeat_frequency_select</td>
+	<td>120</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_min_announce_frequency</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_position_limit</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[announce_position_limit]</td>
+	<td>25</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_holdtime_once</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_round_seconds</td>
+	<td>98</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=periodic_repeat_frequency_select</td>
+	<td>210</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_random_periodic_announce_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_relative_periodic_announce_yes</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertTable</td>
+	<td>css=#sortable_table2 &gt; table.0.0</td>
+	<td>silence9.wav</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#queue_announcement_delete_4 &gt; span &gt; img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>css=#sortable_table2 &gt; table.0.0</td>
+	<td>silence9.wav</td>
+</tr>
+<!--drag and dropai-->
+<tr>
+	<td>click</td>
+	<td>link=Add new Static Agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=device_agent</td>
+	<td>label=FAX/102</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_agent_penalty</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#submit_new_agent &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Static Agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=device_agent</td>
+	<td>label=IAX2/1002</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_agent_penalty</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#submit_new_agent &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>assertTable</td>
+	<td>css=#sortable_table &gt; table.0.0</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertTable</td>
+	<td>css=#sortable_table &gt; table.1.0</td>
+	<td>FAX/102</td>
+</tr>
+<tr>
+	<td>assertTable</td>
+	<td>css=#sortable_table &gt; table.2.0</td>
+	<td>IAX2/1002</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//img[contains(@alt, 'down')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<!--<tr> 	<td>answerOnNextPrompt</td> 	<td>987</td> 	<td></td> </tr> <tr> 	<td>click</td> 	<td>css=#agent_edit_6 &gt; span &gt; img[alt=&quot;Edit&quot;]</td> 	<td></td> </tr> <tr> 	<td>assertPrompt</td> 	<td>Enter another penalty</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=agent_penalty_6</td> 	<td>exact:Penalty: 987</td> </tr>-->
+<tr>
+	<td>click</td>
+	<td>css=#agent_delete_5 &gt; span &gt; img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>Penalty: 7</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=new_periodic_announcement</td>
+	<td>label=cc_busy.wav</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#submit_new_periodic_announcement &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=new_periodic_announcement</td>
+	<td>label=cc_card_not_found.wav</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#submit_new_periodic_announcement &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Periodic Announcement</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=new_periodic_announcement</td>
+	<td>label=silence9.wav</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#submit_new_periodic_announcement &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>assertTable</td>
+	<td>css=#sortable_table2 &gt; table.0.0</td>
+	<td>cc_busy.wav</td>
+</tr>
+<tr>
+	<td>waitForTable</td>
+	<td>css=#sortable_table2 &gt; table.1.0</td>
+	<td>cc_card_not_found.wav</td>
+</tr>
+<tr>
+	<td>waitForTable</td>
+	<td>css=#sortable_table2 &gt; table.2.0</td>
+	<td>silence9.wav</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//img[contains(@alt, 'down')])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForTable</td>
+	<td>css=#sortable_table2 &gt; table.0.0</td>
+	<td>cc_busy.wav</td>
+</tr>
+<tr>
+	<td>waitForTable</td>
+	<td>css=#sortable_table2 &gt; table.1.0</td>
+	<td>silence9.wav</td>
+</tr>
+<tr>
+	<td>waitForTable</td>
+	<td>css=#sortable_table2 &gt; table.2.0</td>
+	<td>cc_card_not_found.wav</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#queue_announcement_delete_7 &gt; span &gt; img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().jQuery.active == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=span.ringgroup_items2</td>
+	<td>987</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[7]/span</td>
+	<td>test queue edited</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[9]/span</td>
+	<td>silence4.wav</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[11]/span</td>
+	<td>default</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//p[13]/span</td>
+	<td>roundrobin</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=li</td>
+	<td>IAX2/101</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[4]/span[2]</td>
+	<td>none</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#show_did2 &gt; span.ringgroup_items2</td>
+	<td>Transfer to DID: 37063042438</td>
+</tr>
+<!--testing errors-->
+<tr>
+	<td>type</td>
+	<td>id=queue_memberdelay</td>
+	<td>54</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_position_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_announce_holdtime_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_random_periodic_announce_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_relative_periodic_announce_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_allow_caller_hangup_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='leave_empty_'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='leave_empty_'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=leave_empty_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='join_empty_'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='join_empty_'])[7]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//input[@id='join_empty_'])[8]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=queue[join_announcement]</td>
+	<td>label=cc_enter_pin.wav</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[extension]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>name=queue[name]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[name]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[weight]</td>
+	<td>sdfsdfsd</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_failover_action_did</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_did_pattern</td>
+	<td>dsfsdf</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>exact:Queue was not updated<br /> * Please enter extension<br /> * Name cannot be blank<br /> * Fail Over Action DID was not found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[name]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[extension]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_did_pattern</td>
+	<td>dsfsdf</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>name=queue[join_announcement]</td>
+	<td>cc_enter_pin.wav</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=leave_empty_</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[2]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='leave_empty_'])[3]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[6]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[7]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>xpath=(//input[@id='join_empty_'])[8]</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[extension]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[name]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=queue_ringing_instead_of_moh_no</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_allow_caller_hangup_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_position_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_announce_holdtime_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_random_periodic_announce_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=queue_relative_periodic_announce_no</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=queue[weight]</td>
+	<td>sdfsdfsd</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>xpath=(//img[contains(@alt, 'up')])</td>
+	<td></td>
+</tr>
+<!--<tr> 	<td>waitForTable</td> 	<td>css=#sortable_table &gt; table.0.1</td> 	<td>exact:Penalty: 987</td> </tr>-->
+<tr>
+	<td>type</td>
+	<td>id=queue_maxlen</td>
+	<td>fghdfgdfg</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_max_wait_time</td>
+	<td>dfgdfgdfg</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_min_announce_frequency</td>
+	<td>dfgdfgdf</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>exact:Queue was not updated<br /> * Please enter extension<br /> * Name cannot be blank</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[name]</td>
+	<td>any name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[extension]</td>
+	<td>some ext</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=queue[join_announcement]</td>
+	<td>label=silence2.wav</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/devices/show_devices/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#destroy_link_3 &gt; img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#destroy_link_4 &gt; img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ivrvoices</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Unable to delete - some Sound Files are assigned to Queue</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Edit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>INTERNAL ERROR</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You are not authorized to view this page</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You are not authorized to view this page</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/destroy/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>You are not authorized to view this page</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/update/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

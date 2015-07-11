@@ -1,0 +1,5 @@
+# turn off addon for test sms/sms_addon2.case
+# ----
+# turn off calling cards addon
+/settings/addons/sms_activate.sql
+# bundle loaded

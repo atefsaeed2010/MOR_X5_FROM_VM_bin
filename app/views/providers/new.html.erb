@@ -1,0 +1,12 @@
+<%= form_tag(:action => 'create') do %>
+    <%= render 'form', action: @action, providertypes: @providertypes,
+        provider: @provider, tariffs: @tariffs, new_provider: @new_provider,
+        device: @device, locations: @locations, curr: @curr, cid_name: @cid_name,
+        device_caller_id_number: @device_caller_id_number, cid_number: @cid_number,
+        number_pools: @number_pools, qualify_time: @qualify_time,
+        audio_codecs: @audio_codecs, video_codecs: @video_codecs, ip_first: @ip_first,
+        ip_second: @ip_second, ip_third: @ip_third, mask_first: @mask_first, mask_second: @mask_second, mask_third: @mask_third,
+        is_common_use_used: @is_common_use_used, device_type: @device_type,
+        servers: @servers, serverproviders: @serverproviders %>
+    <%= submit_tag _('Create'), :disable_with => _('Processing..') %>
+<% end %>

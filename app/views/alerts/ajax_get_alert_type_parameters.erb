@@ -1,0 +1,1 @@
+<%= select_tag('alert[alert_type]', options_for_select(@alert_type_parameters.map {|a_type| [_(a_type.upcase), a_type]}, @alert_type), :id => 'alert_type_parameters') %>

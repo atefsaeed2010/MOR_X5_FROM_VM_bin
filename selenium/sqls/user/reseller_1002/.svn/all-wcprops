@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/46782/mor/gui/branches/x5/selenium/sqls/user/reseller_1002
+END
+make_rspro.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/user/reseller_1002/make_rspro.sql
+END
+create.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/46170/mor/gui/branches/x5/selenium/sqls/user/reseller_1002/create.sql
+END
+allow_own_providers.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/46782/mor/gui/branches/x5/selenium/sqls/user/reseller_1002/allow_own_providers.sql
+END
+create_sip_1002.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/46782/mor/gui/branches/x5/selenium/sqls/user/reseller_1002/create_sip_1002.sql
+END

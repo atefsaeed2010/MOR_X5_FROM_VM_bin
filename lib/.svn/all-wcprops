@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/!svn/ver/51028/mor/gui/branches/x5/lib
+END
+sql_cache.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/39906/mor/gui/branches/x5/lib/sql_cache.rb
+END
+model_helpers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/39906/mor/gui/branches/x5/lib/model_helpers.rb
+END
+web_money.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/39906/mor/gui/branches/x5/lib/web_money.rb
+END
+cyberplat.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/39906/mor/gui/branches/x5/lib/cyberplat.rb
+END
+paypal.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/39906/mor/gui/branches/x5/lib/paypal.rb
+END
+money.rb
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/!svn/ver/39906/mor/gui/branches/x5/lib/money.rb
+END
+recaptcha_verificator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/44729/mor/gui/branches/x5/lib/recaptcha_verificator.rb
+END
+rami.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/!svn/ver/42205/mor/gui/branches/x5/lib/rami.rb
+END
+universal_helpers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/48912/mor/gui/branches/x5/lib/universal_helpers.rb
+END
+csv_import_db.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/42302/mor/gui/branches/x5/lib/csv_import_db.rb
+END
+pop.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/!svn/ver/39906/mor/gui/branches/x5/lib/pop.rb
+END
+extensions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/39906/mor/gui/branches/x5/lib/extensions.rb
+END
+sql_export.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/43909/mor/gui/branches/x5/lib/sql_export.rb
+END
+ruby_extensions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/39906/mor/gui/branches/x5/lib/ruby_extensions.rb
+END
+utility_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/44708/mor/gui/branches/x5/lib/utility_helper.rb
+END
+matrix.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/47498/mor/gui/branches/x5/lib/matrix.rb
+END
+smtp_tls.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/39906/mor/gui/branches/x5/lib/smtp_tls.rb
+END
+csv_file_mor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/39906/mor/gui/branches/x5/lib/csv_file_mor.rb
+END
+api_client.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/45036/mor/gui/branches/x5/lib/api_client.rb
+END
+clickatell.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/!svn/ver/39906/mor/gui/branches/x5/lib/clickatell.rb
+END
+linkpoint.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/39906/mor/gui/branches/x5/lib/linkpoint.rb
+END

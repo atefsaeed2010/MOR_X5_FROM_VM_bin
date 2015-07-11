@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/40844/mor/gui/branches/x5/selenium/sqls/calls/re_9301
+END
+aggregate_call.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/calls/re_9301/aggregate_call.sql
+END
+update_active_call.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/calls/re_9301/update_active_call.sql
+END
+create_user_active_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/40844/mor/gui/branches/x5/selenium/sqls/calls/re_9301/create_user_active_calls.sql
+END
+create_user_call.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/calls/re_9301/create_user_call.sql
+END
+drop_active_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/40775/mor/gui/branches/x5/selenium/sqls/calls/re_9301/drop_active_calls.sql
+END

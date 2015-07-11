@@ -1,0 +1,9 @@
+# enable payment permissions, because it was moved to payments addon and many tests are broken
+# ----
+# create permission group
+permissions/reseller/create.sql
+# enable payment gateways permission
+permissions/reseller/payment_gateways_write.sql
+# assign permission to reseller
+user/reseller_3/assign_permissions.sql
+# bundle loaded

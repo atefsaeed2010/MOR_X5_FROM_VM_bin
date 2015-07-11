@@ -1,0 +1,7 @@
+# ----
+# reseller settings
+#invoices ->> "Number length" = 5
+settings/reseller/invoices_number_length_5.sql
+# invoices -> "Show calls in detailed invoice"
+settings/reseller/invoices_show_calls_in_detailed
+# bundle loaded

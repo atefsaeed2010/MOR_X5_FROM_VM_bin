@@ -1,0 +1,1 @@
+UPDATE `users` SET `sms_service_active` = 1, `sms_lcr_id` = 1, `sms_tariff_id` = 5 WHERE `users`.`id` = 5;

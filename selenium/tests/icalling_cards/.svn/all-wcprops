@@ -1,0 +1,227 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/52056/mor/gui/branches/x5/selenium/tests/icalling_cards
+END
+cc_card_balance_currencies.case
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/41372/mor/gui/branches/x5/selenium/tests/icalling_cards/cc_card_balance_currencies.case
+END
+ccpanel.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/52056/mor/gui/branches/x5/selenium/tests/icalling_cards/ccpanel.case
+END
+calling_cards3.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/47750/mor/gui/branches/x5/selenium/tests/icalling_cards/calling_cards3.case
+END
+cc_search.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/41372/mor/gui/branches/x5/selenium/tests/icalling_cards/cc_search.case
+END
+cc_rspro_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/icalling_cards/cc_rspro_calls.sql
+END
+cc_batch_managment.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/41372/mor/gui/branches/x5/selenium/tests/icalling_cards/cc_batch_managment.case
+END
+cc_import.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/41372/mor/gui/branches/x5/selenium/tests/icalling_cards/cc_import.case
+END
+calling_cards_import.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/41335/mor/gui/branches/x5/selenium/tests/icalling_cards/calling_cards_import.case
+END
+ccg_unique_pinless.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/icalling_cards/ccg_unique_pinless.case
+END
+cc_calls_stats.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/52056/mor/gui/branches/x5/selenium/tests/icalling_cards/cc_calls_stats.case
+END
+ccg_default_currencies.case
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/43551/mor/gui/branches/x5/selenium/tests/icalling_cards/ccg_default_currencies.case
+END
+cc_setup_fee.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/icalling_cards/cc_setup_fee.case
+END
+cc_pin_length.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/41372/mor/gui/branches/x5/selenium/tests/icalling_cards/cc_pin_length.case
+END
+calling_cards_accountant_permissions.case
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/!svn/ver/42357/mor/gui/branches/x5/selenium/tests/icalling_cards/calling_cards_accountant_permissions.case
+END
+cc_rspro_distributor.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/51791/mor/gui/branches/x5/selenium/tests/icalling_cards/cc_rspro_distributor.case
+END
+card_list.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/52056/mor/gui/branches/x5/selenium/tests/icalling_cards/card_list.case
+END
+ccdp_tell_time_and_rate.case
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/49995/mor/gui/branches/x5/selenium/tests/icalling_cards/ccdp_tell_time_and_rate.case
+END
+cc_re_distributor.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/51791/mor/gui/branches/x5/selenium/tests/icalling_cards/cc_re_distributor.case
+END
+cc_settings.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/51816/mor/gui/branches/x5/selenium/tests/icalling_cards/cc_settings.case
+END
+card_payment.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/42781/mor/gui/branches/x5/selenium/tests/icalling_cards/card_payment.case
+END
+calling_cards2.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/52056/mor/gui/branches/x5/selenium/tests/icalling_cards/calling_cards2.case
+END
+calling_card_aggregate.case
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/icalling_cards/calling_card_aggregate.case
+END
+cards_data.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/icalling_cards/cards_data.sql
+END
+cardgroups.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/icalling_cards/cardgroups.case
+END
+card_edit.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/icalling_cards/card_edit.case
+END
+cc_card_name.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/52056/mor/gui/branches/x5/selenium/tests/icalling_cards/cc_card_name.case
+END
+cc_distributor.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/52056/mor/gui/branches/x5/selenium/tests/icalling_cards/cc_distributor.case
+END
+cc_tips.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/icalling_cards/cc_tips.case
+END
+calling_cards.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/52056/mor/gui/branches/x5/selenium/tests/icalling_cards/calling_cards.case
+END
+cardgroup_check_balance.case
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/icalling_cards/cardgroup_check_balance.case
+END
+cc_dial_plan.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/41372/mor/gui/branches/x5/selenium/tests/icalling_cards/cc_dial_plan.case
+END
+minimal_balance.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/icalling_cards/minimal_balance.case
+END
+calling_card_aggregate_re.case
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/icalling_cards/calling_card_aggregate_re.case
+END
+calls_for_cardgroup.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/icalling_cards/calls_for_cardgroup.sql
+END
+cc_import2.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/41372/mor/gui/branches/x5/selenium/tests/icalling_cards/cc_import2.case
+END
+calling_cards_import2.case
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/icalling_cards/calling_cards_import2.case
+END
+card_group_stats.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/52056/mor/gui/branches/x5/selenium/tests/icalling_cards/card_group_stats.case
+END

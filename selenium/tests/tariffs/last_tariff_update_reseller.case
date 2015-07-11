@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/tariff/wholesale_12302/create</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<!--tusti langai kolkas nieko ner , nes nera jokiu pamkeitimu-->
+<tr>
+	<td>assertText</td>
+	<td>id=last_update_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=last_update_12302</td>
+	<td></td>
+</tr>
+<!--retail ivedam rate-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_rates_list/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=rate1</td>
+	<td>0.1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=th &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Rates updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<!--atsirado įrašas nes ivedem rate-->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>id=last_update_3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_3</td>
+	<td>data1</td>
+</tr>
+<!--ghost rate-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_rates_list/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=gch1</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=th &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_3</td>
+	<td>data2</td>
+</tr>
+<!--patikrinam ar data pasikeite-->
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data1']==storedVars['data2']</td>
+	<td>false</td>
+</tr>
+<!--ar pasikeicia kai pakeiciam round by-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_rates_list/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=round1</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=th &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Rates updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_3</td>
+	<td>data3</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data2']==storedVars['data3']</td>
+	<td>false</td>
+</tr>
+<!--ar pasikeicia data jei updatinam rate-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_rates_list/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=rate1</td>
+	<td>0.40</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=th &gt; input[name=&quot;commit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Rates updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_3</td>
+	<td>data4</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data3']==storedVars['data4']</td>
+	<td>false</td>
+</tr>
+<!--ar pasikeicia data jei istrinam rate-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_rates_list/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Rate successfully deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_3</td>
+	<td>data5</td>
+</tr>
+<!--pasikeite-->
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data4']==storedVars['data5']</td>
+	<td>false</td>
+</tr>
+<!--ar pasikeis data jei pakeisim tariffo pavadinima-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/edit/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=tariff_name</td>
+	<td>Test Tariff + 0.1000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Tariff successfully updated</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_3</td>
+	<td>data6</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data5']==storedVars['data6']</td>
+	<td>false</td>
+</tr>
+<!--ar pasikeis data jei pakeisim tariffo currency-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/edit/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=tariff[currency]</td>
+	<td>label=EUR</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Tariff successfully updated</td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_3</td>
+	<td>data7</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data6']==storedVars['data7']</td>
+	<td>false</td>
+</tr>
+<!---------------------------------------------------------->
+<!--wholesale-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rate_new/12302?st=A</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=rate_12</td>
+	<td>0.45</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Rates updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<!--irasius reiksme atsiranda data-->
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>id=last_update_12302</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_12302</td>
+	<td>data8</td>
+</tr>
+<!--ar reguoja i quick add-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12302</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Quick add new Rate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=prefix</td>
+	<td>3706</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=price</td>
+	<td>0.75</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='commit'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Rate was added</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_12302</td>
+	<td>data9</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data8']==storedVars['data9']</td>
+	<td>false</td>
+</tr>
+<!--ar reguoja i Add new Rate-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rate_new_by_direction/12302?dir_id=6&amp;st=A</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=dest_51</td>
+	<td>0.25</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Rates updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_12302</td>
+	<td>data10</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data9']==storedVars['data10']</td>
+	<td>false</td>
+</tr>
+<!--ar reguoja i tarifo trinima-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rates_list/12302</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#destroy_img_506 &gt; img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Rate successfully deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_12302</td>
+	<td>data11</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data10']==storedVars['data11']</td>
+	<td>false</td>
+</tr>
+<!--ar reguoja i ghost percent-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/ghost_percent_edit/12302?rate_id=253</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=rate_ghost_min_perc</td>
+	<td>87</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Rate updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_12302</td>
+	<td>data12</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data10']==storedVars['data12']</td>
+	<td>false</td>
+</tr>
+<!--ar reguoja i pavadinimo pakeitim-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/edit/12302</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=tariff_name</td>
+	<td>Test Tariff for Users111</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Tariff successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_12302</td>
+	<td>data13</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data12']==storedVars['data13']</td>
+	<td>false</td>
+</tr>
+<!--ar reguoja i currency pakeitimus-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/edit/12302</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=tariff[currency]</td>
+	<td>label=EUR</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_12302</td>
+	<td>data14</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data13']==storedVars['data14']</td>
+	<td>false</td>
+</tr>
+<!--ar reguoja i delete all rates-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=#delete_all_rates_12302 &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>All rates deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_12302</td>
+	<td>data15</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data14']==storedVars['data15']</td>
+	<td>false</td>
+</tr>
+<!--ar reguoja i rates split-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_arates_full/3?dg=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Split to Work Days and Free Days</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Rate details split</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_3</td>
+	<td>data16</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data7']==storedVars['data16']</td>
+	<td>false</td>
+</tr>
+<!--ar reguoja i combine-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_arates_full/3?dg=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Combine to Work Days and Free Days')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Rate details combined</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_3</td>
+	<td>data17</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data17']==storedVars['data16']</td>
+	<td>false</td>
+</tr>
+<!--ar reguoj i-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_arates_full/3?dg=1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_hour</td>
+	<td>label=08</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=input[type=&quot;image&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Rate details updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/list</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>id=last_update_3</td>
+	<td>data18</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data17']==storedVars['data18']</td>
+	<td>false</td>
+</tr>
+<tr>
+	<td>assertEval</td>
+	<td> storedVars['data18']==storedVars['data17']</td>
+	<td>false</td>
+</tbody></table>
+</body>
+</html>

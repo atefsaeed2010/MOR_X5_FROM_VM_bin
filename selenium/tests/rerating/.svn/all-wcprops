@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/52281/mor/gui/branches/x5/selenium/tests/rerating
+END
+cdr_import_by_cli2.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/49692/mor/gui/branches/x5/selenium/tests/rerating/cdr_import_by_cli2.case
+END
+common_use_prov_rerating.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/49711/mor/gui/branches/x5/selenium/tests/rerating/common_use_prov_rerating.case
+END
+rerating_user_billsec.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/51881/mor/gui/branches/x5/selenium/tests/rerating/rerating_user_billsec.case
+END
+calls_with_prefix_afg.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/rerating/calls_with_prefix_afg.sql
+END
+cdr.case
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/51838/mor/gui/branches/x5/selenium/tests/rerating/cdr.case
+END
+reseller_only_rerating.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/52169/mor/gui/branches/x5/selenium/tests/rerating/reseller_only_rerating.case
+END
+rerating_with_effective_from.case
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/51755/mor/gui/branches/x5/selenium/tests/rerating/rerating_with_effective_from.case
+END
+rerating.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/52179/mor/gui/branches/x5/selenium/tests/rerating/rerating.case
+END
+cdr_import_by_cli.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/49692/mor/gui/branches/x5/selenium/tests/rerating/cdr_import_by_cli.case
+END
+cdr_import_by_cli_with_currencies_rspro.case
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/!svn/ver/50985/mor/gui/branches/x5/selenium/tests/rerating/cdr_import_by_cli_with_currencies_rspro.case
+END
+cdr_rerating2.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/52281/mor/gui/branches/x5/selenium/tests/rerating/cdr_rerating2.case
+END
+cdr_rerating.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/rerating/cdr_rerating.sql
+END
+rerating_with_ghost_time.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/51892/mor/gui/branches/x5/selenium/tests/rerating/rerating_with_ghost_time.case
+END
+cdr_import_by_cli_multiple_prov_rspro.case
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/49700/mor/gui/branches/x5/selenium/tests/rerating/cdr_import_by_cli_multiple_prov_rspro.case
+END
+cdr_import_by_cli_basics_rspro.case
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/50985/mor/gui/branches/x5/selenium/tests/rerating/cdr_import_by_cli_basics_rspro.case
+END
+rerating2.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/51869/mor/gui/branches/x5/selenium/tests/rerating/rerating2.case
+END
+cdr_rerating.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/51869/mor/gui/branches/x5/selenium/tests/rerating/cdr_rerating.case
+END

@@ -1,0 +1,30 @@
+<%= form_tag :action => 'sms_settings_update' do %>
+    <br/>
+    <br/>
+    <table class="simple">
+      <tr>
+        <td><b><%= _('Email_Pop3_Server') %>:</b></td>
+        <td><%= text_field_tag('email_pop3_server', Confline.get_value("SMS_Email_Pop3_Server"), "class" => "input", :size => "35", :maxlength => "50") %></td>
+      </tr>
+      <tr>
+        <td><b><%= _('Email_Login') %>:</b></td>
+        <td><%= text_field_tag('email_login', Confline.get_value("SMS_Email_Login"), "class" => "input", :size => "35", :maxlength => "50") %></td>
+      </tr>
+      <tr>
+        <td><b><%= _('Email_Password') %>:</b></td>
+        <td><%= text_field_tag('email_password', Confline.get_value("SMS_Email_Password"), "class" => "input", :size => "35", :maxlength => "50") %></td>
+      </tr>
+      <tr>
+        <td><b><%= _('Send_SMS_from_Front_page') %>:</b></td>
+        <td><%= check_box_tag 'send_sms_from_front_page', "1", Confline.get_value("Send_SMS_from_Front_page", session[:user_id]).to_i == 1 %> </td>
+      </tr>
+      <tr>
+        <td valign="top"><b><%= _('Frontpage_Text_for_SMS') %>:</b></td>
+        <td><%= text_area_tag('frontpage_sms_text', h(Confline.get_value2("Frontpage_SMS_Text", session[:user_id])), "class" => "input", :cols => "32", :rows => "4") %></td>
+      </tr>
+    </table>
+    <%= hidden_field_tag('indirect', 1) %>
+    <br/>
+    <br/>
+    <%= submit_tag _('Save_changes'), :disable_with => _('Processing..') %>
+<% end %>

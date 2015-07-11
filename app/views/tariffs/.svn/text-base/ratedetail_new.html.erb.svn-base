@@ -1,0 +1,5 @@
+<%= form_tag(:action => 'ratedetail_create', :id => @rate.id) do %>
+    <%= render 'ratedetail_form', etedit: @etedit, ratedetail: @ratedetail %>
+    <%= submit_tag _('Create'), :disable_with => _('Processing..') %>
+<% end %>
+

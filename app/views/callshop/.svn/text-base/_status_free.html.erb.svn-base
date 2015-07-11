@@ -1,0 +1,28 @@
+<tr id="booth-<%= user.id %>" class="booth free booth-<%= user.id %>">
+  <td class="status">
+    <span></span>
+  </td>
+  <td class="num">
+    <%= index + 1 %>
+  </td>
+  <td class="created_at">-</td>
+  <td class="duration">-</td>
+  <td class="user_rate">-</td>
+  <td class="country">-</td>
+  <td class="number">-</td>
+  <td class="balance">
+    <span id="balance_<% user.id %>" class="balance-value">-</span>
+  </td>
+  <td class="comment">-</td>
+  <td class="session last" style="white-space: nowrap;">
+    <% if callshop.simple_session? %>
+      <%= b_view_colums %>
+      <a class="reset-session" href=""><%= b_refresh %></a>
+      <a class="quick-end-session" href=""><%= b_refresh_print %>
+    <% else %>
+      <div class="btn">
+        <a class="start-session" href=""><%= _('Start') %></a>
+      </div>
+    <% end %>
+  </td>
+</tr>

@@ -1,0 +1,16 @@
+<tr>
+  <td width="150px"><%= _('main_email') %>:</td>
+  <td><%= text_field_tag('main_email', params[:main_email].present? ? params[:main_email].to_s : (user.main_email ? user.main_email : ''), "class" => "input", :maxlength => "50") %></td>
+</tr>
+<tr>
+  <td><%= _('noc_email') %>:</td>
+  <td><%= text_field_tag('noc_email', params[:noc_email].present? ? params[:noc_email].to_s : (user.noc_email ? user.noc_email : ''), "class" => "input", :maxlength => "50") %></td>
+</tr>
+<tr>
+  <td><%= _('billing_email') %>:</td>
+  <td><%= text_field_tag('billing_email', params[:billing_email].present? ? params[:billing_email].to_s : (user.billing_email ? user.billing_email : ''), "class" => "input", :maxlength => "50") %></td>
+</tr>
+<tr>
+  <td><%= _('rates_email') %>:</td>
+  <td><%= text_field_tag('rates_email', params[:rates_email].present? ? params[:rates_email].to_s : (user.rates_email ? user.rates_email : ''), "class" => "input", :maxlength => "50") %></td>
+</tr>

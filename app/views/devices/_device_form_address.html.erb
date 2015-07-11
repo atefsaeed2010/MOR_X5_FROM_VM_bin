@@ -1,0 +1,34 @@
+<% if Confline.get_value("Show_advanced_Device_settings", session[:user_id]).to_i == 1 %>
+    <tr>
+      <td colspan="2" height="20"></td>
+    </tr>
+    <tr>
+      <td colspan="2" class="bottom_border">
+        <b><%= _('Allowed_addresses') %></b>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" height="10"></td>
+    </tr>
+
+    <tr>
+      <td>
+        <div class="simple"><%= _('IP') %></div>
+      </td>
+      <td>
+        <div class="simple"><%= _('Mask') %></div>
+      </td>
+    </tr>
+    <tr>
+      <td>  <%= text_field_tag 'ip_first', ip_first, "class" => "input" %>  </td>
+      <td>  <%= text_field_tag 'mask_first', mask_first, "class" => "input" %>  </td>
+    </tr>
+    <tr>
+      <td>  <%= text_field_tag 'ip_second', ip_second, "class" => "input" %>  </td>
+      <td>  <%= text_field_tag 'mask_second', mask_second, "class" => "input" %>  </td>
+    </tr>
+    <tr>
+      <td>  <%= text_field_tag 'ip_third', ip_third, "class" => "input" %>  </td>
+      <td>  <%= text_field_tag 'mask_third', mask_third, "class" => "input" %>  </td>
+    </tr>
+<% end %>

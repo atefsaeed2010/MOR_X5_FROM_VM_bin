@@ -1,0 +1,41 @@
+<table width="100%">
+  <tr>
+    <td align="left"><%= link_to b_add + _('Pbx_pool_add'), :action => 'pbx_pool_new' %></td>
+  </tr>
+</table>
+
+<br/>
+
+<% if @total_pages > 1 %>
+    <%= page_select_header(@options[:page], @total_pages, nil, @options) %>
+<% end %>
+
+<% if @pbx_pools_size.to_i > 0 %>
+<table class="maintable" width="100%">
+  <tr>
+    <th align="left" width="30px"><%= sortable_list_header("id", _('ID'), @options) %></th>
+    <th align="left" width="25%"><%= sortable_list_header("name", _('Name'), @options) %></th>
+    <!--atkomentuoti, kai bus sukurtas numbers pridėjimas ir ištrinti eilutę žemiau šitos-->
+    <!--<th align="center"><%= sortable_list_header("numbers", _('Numbers'), @options) %></th>-->
+    <th align="center"><%= _('Numbers') %></th>
+    <th align="center"><%= _('Users') %></th>
+    <th align="left" width="40%"><%= sortable_list_header("comment", _('Comment'), @options) %></th>
+    <th colspan=2></th>
+  </tr>
+  <% @pbx_pools.each_with_index do |pbx_pool, i| %>
+      <tr class="row<%= (i % 2 + 1).to_s %>">
+        <td id="id_<%= pbx_pool.id %>" align="left"><%= pbx_pool.id.to_i %></td>
+        <td id="name_<%= pbx_pool.id %>" align="left"><%= pbx_pool.name.to_s %></td>
+        <td id="numbers_<%= pbx_pool.id %>" align="center" width="150"><%= b_details + " ()" %></td>
+        <td id="users_<%= pbx_pool.id %>" align="center" width="150"><%= link_to b_user + " (#{pbx_pool.user_count.to_i})", {:action => 'pbx_pool_users', :id => pbx_pool.id} %></td>        <td id="comment_<%= pbx_pool.id %>" align="left"><%= pbx_pool.comment.to_s %></td>
+        <td align="center" width="30px" id="edit_<%= pbx_pool.id %>"><%= link_to b_edit, {:action => 'pbx_pool_edit', :id => pbx_pool.id} %></td>
+        <td align="center" width="30px" id="destroy_<%= pbx_pool.id %>"><%= link_to b_delete, {:action => 'pbx_pool_destroy', :id => pbx_pool.id}, {:method => :post, :confirm => _('Are_you_sure')} %></td>
+      </tr>
+  <% end %>
+</table>
+<% end %>
+
+<% if @total_pages > 1 %>
+    </br>
+    <%= page_select_header(@options[:page], @total_pages, nil, @options) %>
+<% end %>

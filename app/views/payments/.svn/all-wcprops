@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/51946/mor/gui/branches/x5/app/views/payments
+END
+linkpoint.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/42551/mor/gui/branches/x5/app/views/payments/linkpoint.html.erb
+END
+ouroboros_accept.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/42360/mor/gui/branches/x5/app/views/payments/ouroboros_accept.html.erb
+END
+manual_payment.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/51946/mor/gui/branches/x5/app/views/payments/manual_payment.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/48594/mor/gui/branches/x5/app/views/payments/list.html.erb
+END
+_payment.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/42360/mor/gui/branches/x5/app/views/payments/_payment.html.erb
+END
+webmoney_success.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/41942/mor/gui/branches/x5/app/views/payments/webmoney_success.html.erb
+END
+linkpoint_ipn.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/app/views/payments/linkpoint_ipn.html.erb
+END
+manual_payment_status.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/app/views/payments/manual_payment_status.html.erb
+END
+_payment_description.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/41971/mor/gui/branches/x5/app/views/payments/_payment_description.html.erb
+END
+webmoney_fail.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/app/views/payments/webmoney_fail.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/39906/mor/gui/branches/x5/app/views/payments/show.html.erb
+END
+linkpoint_pay.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/42551/mor/gui/branches/x5/app/views/payments/linkpoint_pay.html.erb
+END
+webmoney_result.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/app/views/payments/webmoney_result.html.erb
+END
+cyberplat_result.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/app/views/payments/cyberplat_result.html.erb
+END
+webmoney.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/42551/mor/gui/branches/x5/app/views/payments/webmoney.html.erb
+END
+cyberplat.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/42551/mor/gui/branches/x5/app/views/payments/cyberplat.html.erb
+END
+paypal.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/42551/mor/gui/branches/x5/app/views/payments/paypal.html.erb
+END
+change_description.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/42152/mor/gui/branches/x5/app/views/payments/change_description.html.erb
+END
+ouroboros.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/42551/mor/gui/branches/x5/app/views/payments/ouroboros.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/42152/mor/gui/branches/x5/app/views/payments/new.html.erb
+END
+cyberplat_pay.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/app/views/payments/cyberplat_pay.html.erb
+END
+webmoney_pay.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/42551/mor/gui/branches/x5/app/views/payments/webmoney_pay.html.erb
+END
+paypal_pay.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/42551/mor/gui/branches/x5/app/views/payments/paypal_pay.html.erb
+END
+_page_select_header_payments.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/42360/mor/gui/branches/x5/app/views/payments/_page_select_header_payments.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/app/views/payments/_form.html.erb
+END
+ouroboros_pay.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/42551/mor/gui/branches/x5/app/views/payments/ouroboros_pay.html.erb
+END
+personal_payments.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/45880/mor/gui/branches/x5/app/views/payments/personal_payments.html.erb
+END

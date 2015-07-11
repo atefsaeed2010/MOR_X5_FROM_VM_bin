@@ -1,0 +1,1550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//a[contains(text(),'Alert Groups')]</td>
+	<td>Alert Groups</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//a[contains(text(),'Alert Groups')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=img[alt=&quot;Groups&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title</td>
+	<td>Alert Groups</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(@href, 'http://wiki.kolmisoft.com/index.php/Alert_Groups')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=new_group[name]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_group_email_schedule_id</td>
+	<td>No schedules available</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=new_group_max_emails_per_month</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_group_sms_schedule_id</td>
+	<td>No schedules available</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=new_group[max_sms_per_month]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=new_group[comment]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Group was not created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * At least one schedule must be selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * Group name must be provided</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_group_max_emails_per_month</td>
+	<td>dfhgdfhgshdfh</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_group_max_sms_per_month</td>
+	<td>dfhdfgdfgdfg</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * Max emails per month must be numerical</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * Max SMS per month must be numerical</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_group_name</td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_group_max_emails_per_month</td>
+	<td>-50</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_group_max_sms_per_month</td>
+	<td>2.5</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Group was not created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * At least one schedule must be selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=new_group_name</td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=new_group_max_emails_per_month</td>
+	<td>-50</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=new_group_max_sms_per_month</td>
+	<td>2.5</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/schedules</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_schedule_name</td>
+	<td>schedule</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Schedule successfully created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_group_email_schedule_id</td>
+	<td>Select schedule schedule</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_group_sms_schedule_id</td>
+	<td>Select schedule schedule</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_group_name</td>
+	<td>9863@_)$&amp;#)%)^</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=new_group_email_schedule_id</td>
+	<td>label=schedule</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=new_group_sms_schedule_id</td>
+	<td>label=schedule</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_group_max_emails_per_month</td>
+	<td>9999999</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_group_max_sms_per_month</td>
+	<td>9999999</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Group successfully created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Groups&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title</td>
+	<td>Alert Groups</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=id_1</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Check&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_1</td>
+	<td>9863@_)$&amp;#)%)^</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Vcard&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=(0)</td>
+	<td>(0)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=email_schedule_1</td>
+	<td>schedule</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=max_emails_month_1</td>
+	<td>9999999</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=emails_this_month_1</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=sms_schedule_1</td>
+	<td>schedule</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=max_sms_per_month_1</td>
+	<td>9999999</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=sms_this_month_1</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=comment_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Edit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<!--kopija-->
+<tr>
+	<td>type</td>
+	<td>id=new_group_name</td>
+	<td>9863@_)$&amp;#)%)^</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=new_group_email_schedule_id</td>
+	<td>label=schedule</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_group_max_emails_per_month</td>
+	<td>9999999</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=new_group_sms_schedule_id</td>
+	<td>label=schedule</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_group_max_sms_per_month</td>
+	<td>9999999</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Group successfully created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//img[@alt='Delete'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Group successfully deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>id=id_2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_group_name</td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=new_group_email_schedule_id</td>
+	<td>label=schedule</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_group_max_emails_per_month</td>
+	<td>-2.5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_group_max_sms_per_month</td>
+	<td>-2.98</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=max_emails_month_3</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=max_sms_per_month_3</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=email_schedule_3</td>
+	<td>schedule</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=sms_schedule_3</td>
+	<td>No schedule selected</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_group_name</td>
+	<td>name</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=new_group_sms_schedule_id</td>
+	<td>label=schedule</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_group_max_sms_per_month</td>
+	<td>99999999999999</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_group_max_emails_per_month</td>
+	<td>99999999999999</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Group successfully created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=max_emails_month_4</td>
+	<td>4294967295</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=max_sms_per_month_4</td>
+	<td>4294967295</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=email_schedule_4</td>
+	<td>No schedule selected</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=sms_schedule_4</td>
+	<td>schedule</td>
+</tr>
+<!--edit-->
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Edit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(@href, 'http://wiki.kolmisoft.com/index.php/Alert_Groups')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=img[alt=&quot;Edit&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title</td>
+	<td>Alert group edit: 9863@_)$&amp;#)%)^</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Group: 9863@_)$&amp;#)%)^ </td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=group_status</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=group_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=group_email_schedule_id</td>
+	<td>label=Select schedule</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=group_max_emails_per_month</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=group_sms_schedule_id</td>
+	<td>label=Select schedule</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=group_max_sms_per_month</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Group was not updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * At least one schedule must be selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * Group name must be provided</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Group: 9863@_)$&amp;#)%)^ </td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=group_status</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=group_name</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=group_email_schedule_id</td>
+	<td>Select schedule</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=group_max_emails_per_month</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=emails_this_month_1</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=group_sms_schedule_id</td>
+	<td>Select schedule</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=group_max_sms_per_month</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=sms_this_month_1</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=group_comment</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=group_max_emails_per_month</td>
+	<td>dfgdsgsg</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=group_max_sms_per_month</td>
+	<td>sdgsfgdfg</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Group was not updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * At least one schedule must be selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * Group name must be provided</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * Max emails per month must be numerical</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * Max SMS per month must be numerical</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=group_max_sms_per_month</td>
+	<td>-2.3</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=group_max_emails_per_month</td>
+	<td>-98,545</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=group_name</td>
+	<td>test group</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Group: 9863@_)$&amp;#)%)^ </td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Group was not updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * At least one schedule must be selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * Max emails per month must be numerical</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=group_max_emails_per_month</td>
+	<td>-98.545</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=group_email_schedule_id</td>
+	<td>label=schedule</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Group successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>css=img[alt=&quot;Cross&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=name_1</td>
+	<td>test group</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=email_schedule_1</td>
+	<td>schedule</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=max_emails_month_1</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=emails_this_month_1</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=sms_schedule_1</td>
+	<td>No schedule selected</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=max_sms_per_month_1</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=sms_this_month_1</td>
+	<td>0</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=comment_1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/group_edit/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=group_max_emails_per_month</td>
+	<td>999999</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=group_max_sms_per_month</td>
+	<td>999999</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=group_comment</td>
+	<td>comment test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Group successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=max_emails_month_3</td>
+	<td>999999</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=max_sms_per_month_3</td>
+	<td>999999</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=comment_3</td>
+	<td>comment test</td>
+</tr>
+<!--Turi neleisti tiesioginiu linku pridėti group contact-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/group_contact_add</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<!--contacts list-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Vcard&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title</td>
+	<td>Add new Contact</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Vcard&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>//a[contains(@href, 'http://wiki.kolmisoft.com/index.php/Alert_Contacts')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=edit_link_1</td>
+	<td>exact:Group: test group</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;User&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_group_contact_alert_contact_id</td>
+	<td>No contacts available</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>name=commit</td>
+	<td>Save New group contact</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Contact was not added</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * Alert Contact must be selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=edit_link_1</td>
+	<td>exact:Group: test group</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title</td>
+	<td>Add new Contact</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/contacts</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_contact_name</td>
+	<td>test contact </td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_contact_email</td>
+	<td>good@email.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_contact_max_emails_per_hour</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_contact_max_emails_per_day</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_contact_phone_number</td>
+	<td>865625636</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_contact_max_sms_per_hour</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_contact_max_sms_per_day</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=new_contact_comment</td>
+	<td>comment</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Contact successfully created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/group_contacts/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_group_contact_alert_contact_id</td>
+	<td>Select contact test contact</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Contact was not added</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * Alert Contact must be selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=new_group_contact_alert_contact_id</td>
+	<td>label=test contact</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Contact successfully assigned</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=test contact(good@email.com)</td>
+	<td>test contact(good@email.com)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_group_contact_alert_contact_id</td>
+	<td>No contacts available</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Contact was not added</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * Alert Contact must be selected</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Contact successfully deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_group_contact_alert_contact_id</td>
+	<td>Select contact test contact</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>test contact(good@email.com)</td>
+	<td></td>
+</tr>
+<!--Turi neleisti trinti priskirto kontakto-->
+<tr>
+	<td>select</td>
+	<td>id=new_group_contact_alert_contact_id</td>
+	<td>label=test contact</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Contact successfully assigned</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=test contact(good@email.com)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=page_title</td>
+	<td>Alerts Contact edit</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/contacts</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Contact was not deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* Alert Contact is used in Alert Groups</td>
+	<td></td>
+</tr>
+<!--Turi neleisti trinti priskirto schedule-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/schedules</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Schedule was not deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * Alert Schedule is used in Alert Groups</td>
+	<td></td>
+</tr>
+<!--Turi neleisti trinti priskirto group-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_alert_groups_id</td>
+	<td>label=test group</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=alert_action_alert_email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_less</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_more</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Group was not deleted</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td> * Group is assigned to Alert</td>
+	<td></td>
+</tr>
+<!--Negalima ištrinti kontakto, kuris priklauso grupei-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/contacts</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>* Alert Contact is used in Alert Groups</td>
+	<td></td>
+</tr>
+<!--atskyrus grupę nuo alerto, ją galima ištrinti, net jei ji turi kontaktų-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_alert_groups_id</td>
+	<td>label=None</td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=alert_action_alert_email</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=contacts_1</td>
+	<td>(1)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert Group successfully deleted</td>
+</tr>
+<!--ištrintai grupei priklausęs kontaktas išlieka ir jį galima ištrinti-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/contacts</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=_name_1</td>
+	<td>test contact</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Contact successfully deleted</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>test contact</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/group_destroy/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/group_contacts/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/group_destroy/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<!--Turi neleisti tiesioginiu linku pridėti group contact-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/group_contact_add</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/group_contacts/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementNotPresent</td>
+	<td>link=test contact (good@email.com)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/group_destroy/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<!--Turi neleisti tiesioginiu linku pridėti group contact-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/group_contact_add</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/group_contacts/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/group_destroy/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<!--Turi neleisti tiesioginiu linku pridėti group contact-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/group_contact_add</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>accountant</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>accountant1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/groups</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/group_contacts/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/group_destroy/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+<!--Turi neleisti tiesioginiu linku pridėti group contact-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/group_contact_add</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Access Denied</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

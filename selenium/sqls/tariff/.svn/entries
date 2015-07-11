@@ -1,0 +1,144 @@
+10
+
+dir
+52326
+http://svn.kolmisoft.com/mor/gui/branches/x5/selenium/sqls/tariff
+http://svn.kolmisoft.com
+
+
+
+2014-09-02T12:48:50.185166Z
+51712
+tomas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19941b1f-7a74-413c-ab52-0de3e92e9a87
+
+provider_12003
+dir
+
+provider_12301
+dir
+
+provider_12303
+dir
+
+provider_12304
+dir
+
+sms_tariff_9
+dir
+
+sms_user_12004
+dir
+
+delete_all_rates.sql
+file
+
+
+
+
+2014-09-19T10:44:31.259090Z
+c83e4e1a3392c1d2812706c61e041401
+2014-06-11T10:18:41.213583Z
+48549
+aisteb
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+70
+
+sms_12301
+dir
+
+retail_3
+dir
+
+sms_provider_12004
+dir
+
+retail_4
+dir
+
+wholesale_2
+dir
+
+make_provider_tariffs_user_wholesale.sql
+file
+
+
+
+
+2014-09-19T10:44:31.259090Z
+0bc32aeb09e6b2797c24a2b038f2747e
+2014-08-07T09:08:20.358538Z
+50721
+ieva
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+510
+
+reseller_12305
+dir
+
+wholesale_12302
+dir
+
+provider_1
+dir
+
+provider_12001
+dir
+
+provider_12002
+dir
+

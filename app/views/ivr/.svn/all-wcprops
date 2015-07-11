@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/!svn/ver/43440/mor/gui/branches/x5/app/views/ivr
+END
+add_ivr_action.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/42965/mor/gui/branches/x5/app/views/ivr/add_ivr_action.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ivr/index.html.erb
+END
+_redirect_home.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ivr/_redirect_home.html.erb
+END
+ivr_extlines.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ivr/ivr_extlines.html.erb
+END
+update_block_timeout_response.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ivr/update_block_timeout_response.erb
+END
+action_params.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ivr/action_params.html.erb
+END
+_block_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/42776/mor/gui/branches/x5/app/views/ivr/_block_list.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/43440/mor/gui/branches/x5/app/views/ivr/edit.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/42776/mor/gui/branches/x5/app/views/ivr/new.html.erb
+END
+_ivr_extension_selector.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/42776/mor/gui/branches/x5/app/views/ivr/_ivr_extension_selector.html.erb
+END
+update_data1.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ivr/update_data1.html.erb
+END
+_ivr_action_selector.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/42776/mor/gui/branches/x5/app/views/ivr/_ivr_action_selector.html.erb
+END
+_ivr.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/42776/mor/gui/branches/x5/app/views/ivr/_ivr.html.erb
+END
+settings.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ivr/settings.html.erb
+END
+update_block_timeout_digits.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/app/views/ivr/update_block_timeout_digits.erb
+END
+add_block.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/43440/mor/gui/branches/x5/app/views/ivr/add_block.html.erb
+END
+add_ivr_extension.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/42152/mor/gui/branches/x5/app/views/ivr/add_ivr_extension.html.erb
+END
+_ivr_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/43440/mor/gui/branches/x5/app/views/ivr/_ivr_edit.html.erb
+END
+_all_blocks.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/42776/mor/gui/branches/x5/app/views/ivr/_all_blocks.html.erb
+END

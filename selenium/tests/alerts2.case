@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=alert_count_period</td>
+	<td>1 h</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_count_period</td>
+	<td>label=10 h</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_more</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_check_type</td>
+	<td>User Provider Device Destination Destination group</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_check_data1</td>
+	<td>All Postpaid Prepaid System Admin Test User #1 Test Reseller Test Accountant</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=alert_notify_to_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertChecked</td>
+	<td>id=alert_notify_to_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=alert_count_period</td>
+	<td>10 h</td>
+</tr>
+<!--Clear after priklausomybė nuo clear if-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_less</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_less</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_more</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=alert_disable_clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=alert_disable_clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_after</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_if_less</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_less</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_more</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_after</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_check_data1</td>
+	<td>All Postpaid Prepaid System Admin Test User #1 Test Reseller Test Accountant</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_if_less</td>
+	<td>5.0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_if_more</td>
+	<td>6.0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_after</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_less</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_less</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_more</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_after</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_check_data1</td>
+	<td>All Postpaid Prepaid System Admin Test User #1 Test Reseller Test Accountant</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_if_more</td>
+	<td>5.0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_if_less</td>
+	<td>2.0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_after</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_less</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_less</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_more</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=alert_disable_clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=alert_disable_clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_after</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_if_less</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_less</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_more</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_after</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_if_more</td>
+	<td>5.0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_if_less</td>
+	<td>0.0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_after</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_if_less</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_less</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_more</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_less</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_more</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_after</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_if_more</td>
+	<td>5.0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_if_less</td>
+	<td>2.0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_after</td>
+	<td>7</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=alert_disable_clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/3</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_disable_clear</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=alert_clear_if_less</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<!--alerts user to nitify-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Notify to User:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_notify_to_user</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=alert_notify_to_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_more</td>
+	<td>10</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=alert_disable_clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=alert_disable_clear</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_after</td>
+	<td>6</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_if_less</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>id=alert_clear_after</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_less</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_after</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_check_data1</td>
+	<td>All Postpaid Prepaid System Admin Test User #1 Test Reseller Test Accountant</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully created</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_notify_to_user</td>
+	<td>on</td>
+</tr>
+<!--patikrinimas ar issisaugo kai redaguojama -->
+<tr>
+	<td>uncheck</td>
+	<td>id=alert_notify_to_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Alert successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/4</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_notify_to_user</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Notify to User:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Notify to User:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_notify_to_user</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=alert_notify_to_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Provider</td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>Notify to User:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_less</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_after</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/5</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>Notify to User:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_notify_to_user</td>
+	<td>off</td>
+</tr>
+<!--sukuriamas allertas kai objektas dddestinatio group-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Notify to User:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_notify_to_user</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Destination group</td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>Notify to User:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_less</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_after</td>
+	<td>22</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_more</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/6</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>Notify to User:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_notify_to_user</td>
+	<td>off</td>
+</tr>
+<!--sukuriamas allertas kai objektas Device -->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Notify to User:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_notify_to_user</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Device</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=device_user</td>
+	<td>label=Test User #1 (2)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Alert was not created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=device_user</td>
+	<td>label=Not used</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Alert was not created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=device_user</td>
+	<td>label=System Admin (0)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Alert was not created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=device_user</td>
+	<td>label=Test Reseller (3)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Alert was not created</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=device_user</td>
+	<td>label=Test User #1 (2)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=users_device</td>
+	<td>label=IAX2/101</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_less</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_after</td>
+	<td>22</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_more</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/7</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Notify to User:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_notify_to_user</td>
+	<td>off</td>
+</tr>
+<!--alerts user to nitify turi atsirasti tik useriui-->
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Provider</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_notify_to_user</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>Notify to User:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Device</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_notify_to_user</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Notify to User:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Destination</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_notify_to_user</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>Notify to User:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Destination group</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_notify_to_user</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>waitForTextNotPresent</td>
+	<td>Notify to User:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=User</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_notify_to_user</td>
+	<td>off</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Notify to User:</td>
+	<td></td>
+</tr>
+<!--visi dropdownai turi turėti All pasirinkimą-->
+<tr>
+	<td>assertText</td>
+	<td>id=alert_check_data1</td>
+	<td>All Postpaid Prepaid System Admin Test User #1 Test Reseller Test Accountant</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=alert_check_data1</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Provider</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=alert_check_data2</td>
+	<td>All Test Provider/1</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=alert_check_data2</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Device</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=device_user</td>
+	<td>All Not used System Admin (0) Test User #1 (2) Test Reseller (3) Test Accountant (4)</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=device_user</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Destination group</td>
+</tr>
+<tr>
+	<td>assertSelectedLabel</td>
+	<td>id=alert_check_data4</td>
+	<td>All</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_check_type</td>
+	<td>label=Device</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=device_user</td>
+	<td>label=Test User #1 (2)</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=users_device</td>
+	<td>label=IAX2/1002</td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=alert_notify_to_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_alert_if_less</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_if_more</td>
+	<td>11</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=alert_clear_after</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=alert_action_clear_change_lcr_id</td>
+	<td>label=Restore Original</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/alerts/alert_edit/8</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_alert_if_less</td>
+	<td>9.0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_if_more</td>
+	<td>11.0</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_clear_after</td>
+	<td>1</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=alert_notify_to_user</td>
+	<td>on</td>
+</tr>
+<tr>
+	<td>assertChecked</td>
+	<td>id=alert_notify_to_user</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

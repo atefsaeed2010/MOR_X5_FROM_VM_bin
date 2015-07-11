@@ -1,0 +1,7 @@
+#  disable api GET and XML
+# ----
+# disable GET
+settings/api/disallow_get.sql
+# enable xml
+settings/api/enable_xml.sql
+# bundle loaded

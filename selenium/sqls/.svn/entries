@@ -1,0 +1,109 @@
+10
+
+dir
+52326
+http://svn.kolmisoft.com/mor/gui/branches/x5/selenium/sqls
+http://svn.kolmisoft.com
+
+
+
+2014-09-16T10:54:40.120287Z
+52319
+ieva
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+19941b1f-7a74-413c-ab52-0de3e92e9a87
+
+test
+dir
+
+lcr
+dir
+
+number_pool
+dir
+
+services
+dir
+
+terminator
+dir
+
+queue
+dir
+
+dialplan
+dir
+
+calling_cards
+dir
+
+autodialer
+dir
+
+provider
+dir
+
+calls
+dir
+
+for_crashes
+dir
+
+device
+dir
+
+did
+dir
+
+payments
+dir
+
+settings
+dir
+
+sms
+dir
+
+callshop
+dir
+
+server
+dir
+
+cli
+dir
+
+addons
+dir
+
+card
+dir
+
+aggregates
+dir
+
+permissions
+dir
+
+tariff
+dir
+
+voucher
+dir
+
+user
+dir
+

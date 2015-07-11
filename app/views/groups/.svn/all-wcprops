@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/!svn/ver/51484/mor/gui/branches/x5/app/views/groups
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/42971/mor/gui/branches/x5/app/views/groups/edit.html.erb
+END
+group_member_devices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/app/views/groups/group_member_devices.html.erb
+END
+manager_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/groups/manager_list.html.erb
+END
+member_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/43794/mor/gui/branches/x5/app/views/groups/member_stats.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/42971/mor/gui/branches/x5/app/views/groups/new.html.erb
+END
+members.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/41942/mor/gui/branches/x5/app/views/groups/members.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/39906/mor/gui/branches/x5/app/views/groups/list.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/39906/mor/gui/branches/x5/app/views/groups/show.html.erb
+END
+callshop_management.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/51484/mor/gui/branches/x5/app/views/groups/callshop_management.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/49699/mor/gui/branches/x5/app/views/groups/_form.html.erb
+END
+manager_members.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/40161/mor/gui/branches/x5/app/views/groups/manager_members.html.erb
+END

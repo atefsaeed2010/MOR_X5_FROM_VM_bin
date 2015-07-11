@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/44829/mor/gui/branches/x5/selenium/sqls/did/did_2
+END
+assign_to_device_2.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/44814/mor/gui/branches/x5/selenium/sqls/did/did_2/assign_to_device_2.sql
+END
+assign_to_device_4.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/40237/mor/gui/branches/x5/selenium/sqls/did/did_2/assign_to_device_4.sql
+END
+terminate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/did/did_2/terminate.sql
+END
+make_free.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/44829/mor/gui/branches/x5/selenium/sqls/did/did_2/make_free.sql
+END

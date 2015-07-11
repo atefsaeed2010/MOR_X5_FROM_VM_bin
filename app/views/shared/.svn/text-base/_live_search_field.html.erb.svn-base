@@ -1,0 +1,111 @@
+<% name_downcase = object_name.to_s.downcase %>
+<% s_object =  "s_#{name_downcase}" %>
+<% object_list = "#{name_downcase}_list" %>
+<% left_margin ||= 2 %>
+<input onKeyPress="return noEnter(event)" title="<%= object_name.to_s %> live search" type="text" size="20" id="<%= s_object %>" name="<%= s_object %>" autocomplete="off" value="<%=raw object.to_s %>" class="<%= style[:class].to_s rescue '' %>" />
+<table id="<%= object_list %>" style='margin-left:<%= left_margin %>px;margin-top:0px;position:absolute;width:130px;border-width: 1px;border-image: initial;-webkit-box-shadow: rgba(0, 0, 0, 0.398438) 0px 2px 4px;box-shadow: rgba(0, 0, 0, 0.398438) 0px 2px 4px;background-clip: initial;background-color: rgb(255, 255, 255);background-position: initial initial;background-repeat: initial initial;z-index:99;' >
+</table>
+
+<%= hidden_field_tag "#{s_object}_id", object_id %>
+<% number_of_optional_fields = action_url[:options][:show_optionals].try(:size) if action_url[:options].present? %>
+
+<script type='text/javascript'>
+    index_of_first_element = parseInt('<%= number_of_optional_fields %>');
+        Event.observe($("<%= s_object %>"), 'click', function(){
+            if ($("<%= s_object %>").value == "") {
+                $("<%= object_list %>").innerHTML = "";
+                <%= raw remote_function(:update => object_list,:url => action_url, :with => "'empty_click=true'") %>
+            }
+            Event.observe($("<%= object_list %>"), 'mouseover', function(){
+                var el = document.getElementById("<%= object_list %>").getElementsByTagName('td');
+                for(var i=0;i<el.length;i++){
+                    el[i].onclick=function(){
+                        if (this.id != -2) {
+                            document.getElementById("<%= s_object %>").value = this.innerHTML
+                            document.getElementById("<%= s_object %>_id").value = this.id
+                        } else {
+                            document.getElementById("<%= s_object %>").value = '';
+                            document.getElementById("<%= s_object %>_id").value = '-2';
+                        }
+                        <%= raw remote_function(:update => object_list,:url => action_url, :with => "'livesearch='") %>
+                        fireEvent($("<%= s_object %>"));
+                    }
+                    el[i].onmouseover=function(){
+                        this.style.backgroundColor="#BBBBBB";
+                    }
+                    el[i].onmouseout=function(){
+                        this.style.backgroundColor="rgb(255, 255, 255)";
+                        fireEvent($("<%= s_object %>"));
+                    }
+                }
+            });
+        });
+        Event.observe($("<%= s_object %>"), 'keyup', function(){
+            var url = "<%= Web_Dir + '/' + action_url[:controller].to_s + '/' + action_url[:action].to_s + '?' + {options: action_url[:options]}.to_param  %>";
+            url = unescape(url);
+            $("<%= object_list %>").innerHTML = "";
+
+        var params = encodeURIComponent($('<%= s_object %>').value);
+        new Ajax.Updater("<%= object_list %>", url, {
+            evalScripts:true,
+            onComplete:function(request){
+                Element.hide('spinner2');
+                var el = $("<%= object_list %>").getElementsByTagName('td');
+                if ($("<%= s_object %>").value == '') {
+                  $("<%= s_object %>_id").value = '-2';
+                }
+
+                $("<%= s_object %>_id").value = '-2';
+                for(var i = 0; i < el.length; i++){
+                  if(el[i].innerHTML.toLowerCase() == $("<%= s_object %>").value.toLowerCase()){
+                    $("<%= s_object %>_id").value = el[i].id;
+                    break;
+                  }
+                }
+                fireEvent($("<%= s_object %>"));
+
+                if(el[el.length -1].innerHTML == 'No value found'){
+                  document.getElementById("<%= s_object %>_id").value = -2;
+                }
+            },
+            onLoading:function(request){
+                Element.show('spinner2');
+            },
+            parameters: 'livesearch=' + params + view_params()
+        })
+
+      });
+
+    function view_params(){
+        // seting view values if exist
+        var send_view_values = unescape("<%= action_url[:send_view_values].to_param  %>");
+
+        var params_array = send_view_values.split(/&/);
+
+        var array = [];
+        for(var i=0;i<params_array.length;i++){
+            var element = params_array[i].split(/=/);
+            array[i] = element[0] + '=' + eval(element[1]);
+        }
+        var view_params = '';
+        if(array.length > 0){
+            view_params = '&' + array.join('&');
+        }
+        return view_params;
+    }
+
+    function fireEvent(element){
+        var evt = document.createEvent("HTMLEvents");
+        evt.initEvent("change", false, true);
+        element.dispatchEvent(evt);
+    }
+
+    function noEnter(e){
+        var key;
+        // firefox vs. ie
+        (window.event) ? key = window.event.keyCode : key = e.which;
+        if(key == 13)
+          return false
+        else return true;
+    }
+</script>

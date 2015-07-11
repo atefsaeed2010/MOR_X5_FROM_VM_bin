@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/44152/mor/gui/branches/x5/app/views/cardgroups
+END
+search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/43423/mor/gui/branches/x5/app/views/cardgroups/search.html.erb
+END
+user_list.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/41864/mor/gui/branches/x5/app/views/cardgroups/user_list.erb
+END
+_aggregate_call_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/41899/mor/gui/branches/x5/app/views/cardgroups/_aggregate_call_list.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/44152/mor/gui/branches/x5/app/views/cardgroups/list.html.erb
+END
+_search_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/41899/mor/gui/branches/x5/app/views/cardgroups/_search_header.html.erb
+END
+gmp_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/cardgroups/gmp_list.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/41340/mor/gui/branches/x5/app/views/cardgroups/show.html.erb
+END
+_page_select_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/41899/mor/gui/branches/x5/app/views/cardgroups/_page_select_header.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/42152/mor/gui/branches/x5/app/views/cardgroups/edit.html.erb
+END
+aggregate.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/42152/mor/gui/branches/x5/app/views/cardgroups/aggregate.html.erb
+END
+cardgroups_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/app/views/cardgroups/cardgroups_stats.html.erb
+END
+gmp_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/cardgroups/gmp_edit.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/42152/mor/gui/branches/x5/app/views/cardgroups/new.html.erb
+END
+loss_calls.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/39906/mor/gui/branches/x5/app/views/cardgroups/loss_calls.html.erb
+END
+user_search.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/42152/mor/gui/branches/x5/app/views/cardgroups/user_search.erb
+END
+_page_select_header_agg.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/41899/mor/gui/branches/x5/app/views/cardgroups/_page_select_header_agg.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/41715/mor/gui/branches/x5/app/views/cardgroups/_form.html.erb
+END

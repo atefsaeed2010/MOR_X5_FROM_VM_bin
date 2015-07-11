@@ -1,0 +1,1 @@
+DELETE FROM `devices` WHERE id='2004';

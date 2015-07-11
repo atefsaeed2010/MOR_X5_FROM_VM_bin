@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/46566/mor/gui/branches/x5/app/views/smsautodialer
+END
+import_numbers_from_file.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/39906/mor/gui/branches/x5/app/views/smsautodialer/import_numbers_from_file.html.erb
+END
+campaign_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/42152/mor/gui/branches/x5/app/views/smsautodialer/campaign_new.html.erb
+END
+campaign_statistics.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/app/views/smsautodialer/campaign_statistics.html.erb
+END
+view_campaign_actions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/39906/mor/gui/branches/x5/app/views/smsautodialer/view_campaign_actions.html.erb
+END
+campaign_numbers.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/app/views/smsautodialer/campaign_numbers.html.erb
+END
+bad_numbers_from_csv.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/app/views/smsautodialer/bad_numbers_from_csv.erb
+END
+play_rec.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/app/views/smsautodialer/play_rec.html.erb
+END
+campaign_actions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/app/views/smsautodialer/campaign_actions.html.erb
+END
+user_campaigns.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/43516/mor/gui/branches/x5/app/views/smsautodialer/user_campaigns.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/41899/mor/gui/branches/x5/app/views/smsautodialer/_form.html.erb
+END
+_page_select_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/41899/mor/gui/branches/x5/app/views/smsautodialer/_page_select_header.html.erb
+END
+action_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/41942/mor/gui/branches/x5/app/views/smsautodialer/action_edit.html.erb
+END
+campaigns.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/46566/mor/gui/branches/x5/app/views/smsautodialer/campaigns.html.erb
+END
+campaign_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/42152/mor/gui/branches/x5/app/views/smsautodialer/campaign_edit.html.erb
+END

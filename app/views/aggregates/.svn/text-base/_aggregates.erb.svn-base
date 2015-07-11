@@ -1,0 +1,173 @@
+<!-- vizualization of aggregates table -->
+<% unless total_records.zero? %>
+ <% if total_pages > 1 %>
+      <%= page_select_header(options[:page], total_pages, nil, options) %>
+  <% end %>
+
+  <table class="maintable" width="100%">
+    <% h_rows = 2 %>
+    <tr>
+      <th id="direction" align="left" rowspan="<%= h_rows %>" nowrap> <%= ordered_list_header('direction', 'direction', 'Destination', options) %> </th>
+          <% if options[:country].to_s != -1 and options[:prefix].present? %>
+            <th id="prefix" align="left" rowspan="<%= h_rows %>" nowrap> <%= ordered_list_header('prefix', 'prefix', _('Prefix'), options) %> </th>
+          <% end %>
+      <% if originator or terminator %>
+        <th id="customer" align="center" colspan="<%= (originator ? 1 : 0) + (terminator ? 1 : 0) %>" style="white-space:nowrap;">
+          <%= _('Customer') %>
+        </th>
+      <% end %>
+
+      <% if (options[:price_orig_show] == 1) or (options[:price_term_show] == 1) %>
+        <th id="billed" align="center" colspan="<%= (options[:price_orig_show] == 1 ? 2 : 0) + (options[:price_term_show]) %>" style="white-space:nowrap;"><%= _("Billed") %></th>
+      <% end %>
+
+      <% if (options[:billed_time_orig_show] == 1) or (options[:billed_time_term_show] == 1) %>
+        <th id="billed_duration" align="center" colspan="<%= options[:billed_time_orig_show] + options[:billed_time_term_show] %>" style="white-space:nowrap;">
+          <%= _('Billed_Duration') %>
+        </th>
+      <% end %>
+
+      <% if options[:duration_show] == 1 %>
+      <th id="duration" align="center" rowspan="<%= h_rows %>" style="white-space:nowrap;"> <%= ordered_list_header('duration', 'duration', 'Duration', options) %> </th>
+      <% end %>
+      <% if options[:calls_answered_show] == 1 %>
+      <th id="answered_calls" align="right" rowspan="<%= h_rows %>" style="white-space:nowrap;"> <%= ordered_list_header('answered_calls', 'answered_calls', 'Answered_calls', options) %> </th>
+      <% end %>
+      <% if options[:calls_total_show] == 1 %>
+      <th id="total_calls" align="right" rowspan="<%= h_rows %>" style="white-space:nowrap;"> <%= ordered_list_header('total_calls', 'total_calls', 'Total_calls', options) %> </th>
+      <% end %>
+      <% if options[:asr_show] == 1 %>
+      <th id="asr" align="right" rowspan="<%= h_rows %>" style="white-space:nowrap;"> <%= ordered_list_header('asr', 'asr', 'ASR', options) %>
+        %
+      </th>
+      <% end %>
+      <% if options[:acd_show] == 1 %>
+      <th id="acd" align="center" rowspan="<%= h_rows %>" style="white-space:nowrap;"> <%= ordered_list_header('acd', 'acd', 'ACD', options) %></th>
+      <% end %>
+    </tr>
+    <% if h_rows == 2 %>
+        <tr>
+          <% if originator %>
+              <th id="customer_orig" align="left" style="white-space:nowrap;"> <%= ordered_list_header('originator', 'originator', 'Originator', options) %> </th>
+          <% end %>
+          <% if terminator %>
+              <th id="customer_term" align="left" style="white-space:nowrap;"> <%= ordered_list_header('terminator', 'terminator', 'Terminator', options) %> </th>
+          <% end %>
+          <% if options[:price_orig_show].to_i == 1 %>
+              <th id="billed_orig" align="right" style="white-space:nowrap;"> <%= ordered_list_header('billed_orig', 'billed_orig', 'Originator', options) %> </th>
+              <th id="user_billed_with_tax" align="right"><%= ordered_list_header('billed_orig_with_tax', 'billed_orig_with_tax', 'Originator_Price_with_Vat', options) %></th>
+          <% end %>
+          <% if options[:price_term_show].to_i == 1 %>
+              <th id="billed_term" align="right" style="white-space:nowrap;"> <%= ordered_list_header('billed_term', 'billed_term', 'Terminator', options) %> </th>
+          <% end %>
+          <% if options[:billed_time_orig_show].to_i == 1 %>
+              <th id="billsec_orig" align="center" style="white-space:nowrap;"> <%= ordered_list_header('billsec_orig', 'billsec_orig', 'Originator', options) %> </th>
+          <% end %>
+          <% if options[:billed_time_term_show].to_i == 1 %>
+              <th id="billsec_term" align="center" style="white-space:nowrap;"> <%= ordered_list_header('billsec_term', 'billsec_term', 'Terminator', options) %> </th>
+          <% end %>
+        </tr>
+    <% end %>
+    <% aggregates.each_with_index do |aggregate, index| %>
+        <tr class="row<%= (index % 2 + 1).to_s %>">
+          <td align="left" id="dir_name_<%= index %>"> <%= aggregate.direction %> </td>
+            <% if options[:country].to_s != -1 and options[:prefix].present? %>
+            <td align="left" id="prefix_<%= index %>"><%= aggregate.prefix.to_s %>
+            <% end %>
+          </td>
+          <% if originator %>
+              <td align="left" id="customer_orig_<%= index %>"><%= link_to aggregate.read_attribute(:nice_user), {:controller => 'users', :action => 'edit', :id => aggregate.user_id} %></td>
+          <% end %>
+          <% if terminator %>
+              <td align="left" id="customer_term_<%= index %>"><%= aggregate.name %></td>
+          <% end %>
+          <% if options[:price_orig_show].to_i == 1 %>
+              <td align="right" id="price_orig_<%= index %>"><%= nice_number(aggregate.user_billed) %> <%= current_user.currency.name %></td>
+              <td align="right" id="user_billed_with_tax<%= index %>"><%= nice_number(aggregate.user_billed_with_tax) %> <%= current_user.currency.name %></td>
+          <% end %>
+          <% if options[:price_term_show].to_i == 1 %>
+              <td align="right" id="price_term_<%= index %>"><%= nice_number(aggregate.terminator_billed) %> <%= current_user.currency.name %></td>
+          <% end %>
+
+          <% if options[:billed_time_orig_show].to_i == 1 %>
+              <td align="center" id="billed_time_orig_<%= index %>"><%= nice_time(aggregate.user_billed_billsec) %></td>
+          <% end %>
+          <% if options[:billed_time_term_show].to_i == 1 %>
+              <td align="center" id="billed_time_term_<%= index %>"><%= nice_time(aggregate.terminator_billed_billsec) %></td>
+          <% end %>
+
+          <% if options[:duration_show] == 1 %>
+            <td align="center" id="duration_<%= index %>"><%= nice_time(aggregate.billsec) %></td>
+          <% end %>
+          <% if options[:calls_answered_show] == 1 %>
+            <td align="right" id="answered_calls_<%= index %>"><%= aggregate.answered_calls.to_i %></td>
+          <% end %>
+          <% if options[:calls_total_show] == 1 %>
+            <td align="right" id="total_calls_<%= index %>"><%= aggregate.total_calls %></td>
+          <% end %>
+          <% if options[:asr_show] == 1 %>
+            <% asr_style = '' %>
+            <% asr_style = "style=background-color:#FFFFDD" if (10..20).include?(aggregate.asr.to_f * 100) %>
+            <% asr_style = "style=background-color:#FFDDCC" if (0..10).include?(aggregate.asr.to_f * 100) %>
+            <td align="right" id="asr_<%= index %>" <%= asr_style if aggregate.answered_calls.to_i > 0 %>><%= nice_number(aggregate.asr * 100) if aggregate.answered_calls.to_i > 0 %>
+
+            </td>
+          <% end %>
+          <% if options[:acd_show] == 1 %>
+            <% acd_nice = nice_time(aggregate.acd) %>
+            <% acd_style = '' %>
+            <% acd_style = "style=background-color:#FFFFDD" if aggregate.acd.present? && (120..180).include?(aggregate.acd.round) %>
+            <% acd_style = "style=background-color:#FFDDCC" if aggregate.acd.present? && (0...120).include?(aggregate.acd.round) %>
+            <td align="center" id="acd_<%= index %>" <%= acd_style if aggregate.answered_calls.to_i > 0 %>><%= acd_nice if aggregate.answered_calls.to_i > 0 %></td>
+          <% end %>
+        </tr>
+    <% end %>
+    <tr>
+      <th><%= _("Total") %>:</th>
+      <% if options[:prefix].present? %>
+          <th align="center"></th>
+      <% end %>
+      <% if originator %>
+          <th id="total_customer_orig" align="center"></th>
+      <% end %>
+      <% if terminator %>
+          <th id="total_customer_term" align="center"></th>
+      <% end %>
+
+      <% if options[:price_orig_show].to_i == 1 %>
+          <th id="total_billed_orig" align="right"><%= nice_number(options[:total_user_billed]) %> <%= current_user.currency.name %></th>
+          <th id="total_orig_amount_with_vat" align="right"><%= nice_number(options[:total_user_billed_with_tax]) %> <%= current_user.currency.name %></th>
+      <% end %>
+      <% if options[:price_term_show].to_i == 1 %>
+          <th id="total_billed_term" align="right"><%= nice_number(options[:total_terminator_billed]) %> <%= current_user.currency.name %></th>
+      <% end %>
+
+      <% if options[:billed_time_orig_show].to_i == 1 %>
+          <th id="total_billsec_orig" align="center"><%= nice_time(options[:total_user_billed_billsec]) %></th>
+      <% end %>
+      <% if options[:billed_time_term_show].to_i == 1 %>
+          <th id="total_billsec_term" align="center"><%= nice_time(options[:total_terminator_billed_billsec]) %></th>
+      <% end %>
+
+      <% if options[:duration_show] == 1 %>
+        <th id="total_duration" align="center"><%= nice_time(options[:total_billsec]) %></th>
+      <% end %>
+      <% if options[:calls_answered_show] == 1 %>
+        <th id="total_answ_calls" align="right"><%= options[:total_answered_calls] %></th>
+      <% end %>
+      <% if options[:calls_total_show] == 1 %>
+        <th id="total_total_calls" align="right"><%= options[:total_calls] %></th>
+      <% end %>
+      <% if options[:asr_show] == 1 %>
+        <th id="total_ast" align="right"><%= nice_number(options[:total_asr].to_f * 100) %></th>
+      <% end %>
+      <% if options[:acd_show] == 1 %>
+        <th id="total_acd" align="center"><%= nice_time(options[:total_acd]) %></th>
+      <% end %>
+    </tr>
+  </table>
+  <br/>
+  <% if total_pages > 1 %>
+      <%= page_select_header(options[:page], total_pages, nil, options) %>
+  <% end %>
+<% end %>

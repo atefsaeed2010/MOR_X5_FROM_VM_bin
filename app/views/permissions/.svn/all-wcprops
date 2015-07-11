@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/44789/mor/gui/branches/x5/app/views/permissions
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/44789/mor/gui/branches/x5/app/views/permissions/edit.html.erb
+END
+list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/39906/mor/gui/branches/x5/app/views/permissions/list.html.erb
+END
+accountant.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/41942/mor/gui/branches/x5/app/views/permissions/accountant.erb
+END

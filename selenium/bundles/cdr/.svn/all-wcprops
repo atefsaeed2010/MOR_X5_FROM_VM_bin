@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/!svn/ver/48795/mor/gui/branches/x5/selenium/bundles/cdr
+END
+for_import_by_cli_with_prov_rspro.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/48749/mor/gui/branches/x5/selenium/bundles/cdr/for_import_by_cli_with_prov_rspro.bundle
+END
+for_import_by_cli_common_use_provs.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/48795/mor/gui/branches/x5/selenium/bundles/cdr/for_import_by_cli_common_use_provs.bundle
+END
+for_import_by_cli.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/48550/mor/gui/branches/x5/selenium/bundles/cdr/for_import_by_cli.bundle
+END
+for_import_by_cli_with_prov.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/48747/mor/gui/branches/x5/selenium/bundles/cdr/for_import_by_cli_with_prov.bundle
+END
+for_import_by_cli_rspro.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/48550/mor/gui/branches/x5/selenium/bundles/cdr/for_import_by_cli_rspro.bundle
+END

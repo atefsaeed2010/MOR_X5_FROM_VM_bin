@@ -1,0 +1,2 @@
+<% all = params[:dont_show_all] ? [] : [[_('All'), 'all']] %>
+<%= select_tag("s_device", options_for_select(all + @devices.map { |dev| [nice_device(dev, {:image => false}), dev.id.to_s] })) %>

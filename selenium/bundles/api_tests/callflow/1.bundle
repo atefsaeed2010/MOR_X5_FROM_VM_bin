@@ -1,0 +1,21 @@
+# enable pbx permission for pbx_functions.case
+# ----
+#  disable hash
+# ----
+# for admin
+settings/api/disable_hash_0.sql
+# for reseller
+settings/api/disable_hash_3.sql
+# create permission group
+permissions/accountant/create.sql
+# enable manage devices
+permissions/accountant/manage_devices_write.sql
+# assign permission to acc
+user/accountant_4/assign_permissions.sql
+# create permission group
+permissions/reseller/create.sql
+# enable pbx permission
+permissions/reseller/pbx_write.sql
+# assign permission to reseller
+user/reseller_3/assign_permissions.sql
+# bundle loaded

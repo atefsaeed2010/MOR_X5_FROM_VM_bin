@@ -1,0 +1,1 @@
+INSERT INTO `conflines` (name, value) VALUES ('Show_device_and_cid_in_last_calls', '1');

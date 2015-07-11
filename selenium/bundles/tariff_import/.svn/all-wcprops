@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/50142/mor/gui/branches/x5/selenium/bundles/tariff_import
+END
+for_import_with_fee.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/42080/mor/gui/branches/x5/selenium/bundles/tariff_import/for_import_with_fee.bundle
+END
+for_import_with_effective_from_date.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/!svn/ver/50142/mor/gui/branches/x5/selenium/bundles/tariff_import/for_import_with_effective_from_date.bundle
+END
+rates_for_delete_old_rates.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/46370/mor/gui/branches/x5/selenium/bundles/tariff_import/rates_for_delete_old_rates.bundle
+END

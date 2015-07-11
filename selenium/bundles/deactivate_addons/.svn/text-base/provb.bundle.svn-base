@@ -1,0 +1,5 @@
+# turn off addon for test providers/providers_billing.case
+# ----
+# turn off calling cards addon
+/settings/addons/provb_deactivate.sql
+# bundle loaded

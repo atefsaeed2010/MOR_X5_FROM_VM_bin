@@ -1,0 +1,16 @@
+# enable api in admin + secret key
+settings/api/enable_0.sql
+# GET 
+settings/api/allow_get.sql
+# enable api in reseller + secret key
+settings/api/enable_3.sql
+# load some random dids
+did/dids_list/dids_free.sql
+# create some providers
+provider/iax2_3305/create.sql
+provider/sip_3006/create.sql
+# create some dialplans
+dialplan/cc_18001/create.sql
+dialplan/auth_by_pin_18002/create.sql
+dialplan/auth_by_pin_18303/create.sql
+# bundle loaded

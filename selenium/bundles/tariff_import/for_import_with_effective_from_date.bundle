@@ -1,0 +1,32 @@
+# bundle to create tariffs and rates for effective rates import
+# set 1 item per page
+/settings/visual/one_item_per_page.sql
+# make rspro
+/user/reseller_3/make_rspro.sql
+# create provider tariff 12001 for admin
+/tariff/provider_12001/create_tariff.sql
+# create provider tariff 12002 for admin
+/tariff/provider_12002/create_tariff.sql
+# create provider tariff 12003 for admin
+/tariff/provider_12003/create_tariff.sql
+# create provider tariff 12301 for reseller
+/tariff/provider_12301/create.sql
+# create provider tariff 12303 for reseller
+/tariff/provider_12303/create_tariff.sql
+# create provider tariff 12304 for reseller
+/tariff/provider_12304/create_tariff.sql
+# add afghanistan rates for provider tariff 12001
+/tariff/provider_12001/create_rates_for_afghanistan.sql
+# add lithuania rates for provider tariff 12001
+/tariff/provider_12001/create_rates_for_lithuania.sql
+# add us rates for provider tariff 12001
+/tariff/provider_12001/create_rates_for_us.sql
+# add afghanistan rates with effective form dates for provider tariff 12001
+/tariff/provider_12001/create_rates_with_effective_from_date_for_afghanistan.sql
+# add lithuania rates with effective form dates for provider tariff 12001
+/tariff/provider_12001/create_rates_with_effective_from_date_for_lithuania.sql
+# add us rates with effective form dates for provider tariff 12001
+/tariff/provider_12001/create_rates_with_effective_from_date_for_us.sql
+# add various rates (aslo with effective form dates) for provider tariff 12303
+/tariff/provider_12303/create_rates.sql
+# bundle loaded

@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/!svn/ver/52139/mor/gui/branches/x5/selenium/sqls/settings/tax
+END
+set_tax1_10.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/52139/mor/gui/branches/x5/selenium/sqls/settings/tax/set_tax1_10.sql
+END
+set_tax2_10.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/52139/mor/gui/branches/x5/selenium/sqls/settings/tax/set_tax2_10.sql
+END
+set_tax3_20.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/52139/mor/gui/branches/x5/selenium/sqls/settings/tax/set_tax3_20.sql
+END
+various_taxes.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/49229/mor/gui/branches/x5/selenium/sqls/settings/tax/various_taxes.sql
+END
+apply_to_calling_cards.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/52053/mor/gui/branches/x5/selenium/sqls/settings/tax/apply_to_calling_cards.sql
+END
+set_tax1_50.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/49096/mor/gui/branches/x5/selenium/sqls/settings/tax/set_tax1_50.sql
+END
+set_tax4_30.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/52139/mor/gui/branches/x5/selenium/sqls/settings/tax/set_tax4_30.sql
+END
+total_tax_name.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/52139/mor/gui/branches/x5/selenium/sqls/settings/tax/total_tax_name.sql
+END
+check_tax2_active.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/52139/mor/gui/branches/x5/selenium/sqls/settings/tax/check_tax2_active.sql
+END
+check_tax3_active.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/52139/mor/gui/branches/x5/selenium/sqls/settings/tax/check_tax3_active.sql
+END
+check_tax4_active.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/52139/mor/gui/branches/x5/selenium/sqls/settings/tax/check_tax4_active.sql
+END
+update_tax_id.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/49245/mor/gui/branches/x5/selenium/sqls/settings/tax/update_tax_id.sql
+END
+invoices_reseller.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/49308/mor/gui/branches/x5/selenium/sqls/settings/tax/invoices_reseller.sql
+END
+tax_1_name.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/52139/mor/gui/branches/x5/selenium/sqls/settings/tax/tax_1_name.sql
+END
+tax_2_name.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/52139/mor/gui/branches/x5/selenium/sqls/settings/tax/tax_2_name.sql
+END
+tax_3_name.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/52139/mor/gui/branches/x5/selenium/sqls/settings/tax/tax_3_name.sql
+END
+tax_4_name.sql
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/52139/mor/gui/branches/x5/selenium/sqls/settings/tax/tax_4_name.sql
+END

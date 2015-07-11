@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/!svn/ver/42152/mor/gui/branches/x5/app/views/number_pools
+END
+pool_edit.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/42152/mor/gui/branches/x5/app/views/number_pools/pool_edit.erb
+END
+bad_numbers.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/number_pools/bad_numbers.erb
+END
+_form.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/40677/mor/gui/branches/x5/app/views/number_pools/_form.erb
+END
+number_import.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/39906/mor/gui/branches/x5/app/views/number_pools/number_import.erb
+END
+pool_new.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/!svn/ver/42152/mor/gui/branches/x5/app/views/number_pools/pool_new.erb
+END
+number_list.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/number_pools/number_list.erb
+END
+pool_list.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/app/views/number_pools/pool_list.erb
+END

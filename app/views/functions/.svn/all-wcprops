@@ -1,0 +1,329 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/52172/mor/gui/branches/x5/app/views/functions
+END
+calling_cards_settings.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/50116/mor/gui/branches/x5/app/views/functions/calling_cards_settings.html.erb
+END
+_settings_functionality.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/50098/mor/gui/branches/x5/app/views/functions/_settings_functionality.html.erb
+END
+_settings_various.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/50656/mor/gui/branches/x5/app/views/functions/_settings_various.html.erb
+END
+integrity_check.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/43998/mor/gui/branches/x5/app/views/functions/integrity_check.html.erb
+END
+import_user_data_clis.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/import_user_data_clis.html.erb
+END
+callback_settings.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/49286/mor/gui/branches/x5/app/views/functions/callback_settings.html.erb
+END
+reseller_settings_payments.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/44044/mor/gui/branches/x5/app/views/functions/reseller_settings_payments.html.erb
+END
+call_tracing_user.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/44152/mor/gui/branches/x5/app/views/functions/call_tracing_user.html.erb
+END
+settings_payments.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/44044/mor/gui/branches/x5/app/views/functions/settings_payments.html.erb
+END
+background_tasks.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/42273/mor/gui/branches/x5/app/views/functions/background_tasks.erb
+END
+translations.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39927/mor/gui/branches/x5/app/views/functions/translations.html.erb
+END
+call_tracing.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/51676/mor/gui/branches/x5/app/views/functions/call_tracing.html.erb
+END
+sms_settings.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/sms_settings.html.erb
+END
+_settings_server_load.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/_settings_server_load.html.erb
+END
+call_tracing_ajax.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/51415/mor/gui/branches/x5/app/views/functions/call_tracing_ajax.html.erb
+END
+moh_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/48771/mor/gui/branches/x5/app/views/functions/moh_new.html.erb
+END
+_settings_privacy.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/40161/mor/gui/branches/x5/app/views/functions/_settings_privacy.html.erb
+END
+check_separator.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/check_separator.html.erb
+END
+generate_hash.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/42706/mor/gui/branches/x5/app/views/functions/generate_hash.html.erb
+END
+_settings_invoices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/50109/mor/gui/branches/x5/app/views/functions/_settings_invoices.html.erb
+END
+settings.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/50539/mor/gui/branches/x5/app/views/functions/settings.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/48771/mor/gui/branches/x5/app/views/functions/_form.html.erb
+END
+import_user_data_dids.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/import_user_data_dids.html.erb
+END
+mohs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/mohs.html.erb
+END
+role_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/role_new.html.erb
+END
+permissions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/44152/mor/gui/branches/x5/app/views/functions/permissions.html.erb
+END
+call_to.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/call_to.html.erb
+END
+recordings_settings.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/recordings_settings.html.erb
+END
+get_not_translated.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/get_not_translated.html.erb
+END
+pbx_functions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/44152/mor/gui/branches/x5/app/views/functions/pbx_functions.html.erb
+END
+ccl_settings.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/ccl_settings.html.erb
+END
+import_user_data_users.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/52172/mor/gui/branches/x5/app/views/functions/import_user_data_users.html.erb
+END
+_settings_visual.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/50100/mor/gui/branches/x5/app/views/functions/_settings_visual.html.erb
+END
+test_file_upload.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/42274/mor/gui/branches/x5/app/views/functions/test_file_upload.html.erb
+END
+test_text.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/test_text.html.erb
+END
+right_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/right_new.html.erb
+END
+tax_active.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/tax_active.html.erb
+END
+moh_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/48771/mor/gui/branches/x5/app/views/functions/moh_edit.html.erb
+END
+settings_addons.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/settings_addons.html.erb
+END
+_settings_emails.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/44044/mor/gui/branches/x5/app/views/functions/_settings_emails.html.erb
+END
+_settings_registration.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/49383/mor/gui/branches/x5/app/views/functions/_settings_registration.html.erb
+END
+_reseller_settings_invoices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/44146/mor/gui/branches/x5/app/views/functions/_reseller_settings_invoices.html.erb
+END
+login_as.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/login_as.html.erb
+END
+skype.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/skype.html.erb
+END
+callback.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/callback.html.erb
+END
+reseller_settings.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/50100/mor/gui/branches/x5/app/views/functions/reseller_settings.html.erb
+END
+import_user_data.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/51484/mor/gui/branches/x5/app/views/functions/import_user_data.html.erb
+END
+callback_from_url.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/callback_from_url.html.erb
+END
+call_tracing_device.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/50870/mor/gui/branches/x5/app/views/functions/call_tracing_device.html.erb
+END
+settings_vm.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/40161/mor/gui/branches/x5/app/views/functions/settings_vm.html.erb
+END
+import_user_data_devices.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/import_user_data_devices.html.erb
+END
+pbx_function_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/51998/mor/gui/branches/x5/app/views/functions/pbx_function_edit.html.erb
+END
+spy_channel.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/spy_channel.html.erb
+END
+action_finder.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/app/views/functions/action_finder.html.erb
+END

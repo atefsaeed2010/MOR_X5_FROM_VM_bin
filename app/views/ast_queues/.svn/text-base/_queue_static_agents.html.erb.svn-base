@@ -1,0 +1,135 @@
+<tr>
+  <td height="20"></td>
+</tr>
+<tr>
+  <td colspan="2" class="bottom_border">
+    <b><%= _('Static_agents') %></b>
+  </td>
+</tr>
+<tr>
+  <td colspan="2" height="10"></td>
+</tr>
+<tr>
+<td id="sortable_table"  valign="top">
+  <%= raw priority_table(static_agents, queue, "queue") %>
+</td>
+</tr>
+<tr>
+<td>
+  <table class="simple">
+    <tr>
+      <td colspan="3">
+        <%= link_to_function(b_add + _('Add_new_static_agent'), "$j('.add_new_static_agent').toggle()") %>
+      </td>
+    </tr>
+    <tr class="add_new_static_agent" style="display:none; margin-top:2px;padding-left:4px;" nowrap>
+      <td width="10px">
+        <%= _('User') %>:
+      </td>
+      <td>
+        <%= render 'shared/live_search_field', object: '', object_id: '-2', object_name: 'user_agent', action_url: {controller: :ast_queues, action: :get_static_agents_map, options: {queue_id: params[:id]} } %>
+      </td>
+      <td>
+    </tr>
+    <tr class="add_new_static_agent" style="display:none; margin-top:2px;padding-left:4px;" nowrap>
+      <td><%= _('Device') %>:</td>
+      <td id="device_span_agent_cell">
+        <span id="device_span_agent"></span>
+        <%= _('Penalty') %>:
+        <%= text_field 'queue_agent', 'penalty', "class" => "input", :size => 5 %>
+        <span id="submit_new_agent"><%= b_add %></span>
+      </td>
+      <td id="static_agent_not_selected_info" style="display: none">
+          <%= b_exclamation + _('Please_select_User') %>
+      </td>
+    </tr>
+
+    <script type="text/javascript">
+        new Form.Element.EventObserver('s_user_agent', function(element, value) {
+            new Ajax.Updater(
+                'device_span_agent',
+                '<%= Web_Dir %>/ast_queues/agent_get_user_devices?queue_id=' + <%= queue.id %>,
+                {
+                    asynchronous:false,
+                    evalScripts:true,
+                    onComplete:function(request){
+                        Element.hide('spinner');
+                    },
+                    onLoading:function(request){
+                        Element.show('spinner');
+                    },
+                    parameters:'user_id=' + encodeURIComponent($('s_user_agent_id').value)
+                }
+            )
+        })
+    </script>
+  </table>
+</td>
+</tr>
+
+<% content_for :scripts do %>
+    <script type="text/javascript">
+
+        function Edit_agents(agent_id, penalty){
+            var x;
+            var input_value=prompt("<%= _('Enter_another_penalty') %>",penalty);
+            if (input_value!=null) {
+                $("agent_penalty_" + agent_id).innerHTML = "<%= _('Penalty') + ': ' %>" + input_value;
+                httpGet("<%= Web_Dir %>/ast_queues/edit_queue_agent?agent_id="+ agent_id + "&penalty=" + input_value);
+            }
+        }
+
+        function Delete_agents(agent_id){
+            if (confirm('<%= _('are_you_sure')%>')){
+                new Ajax.Updater('sortable_table', '<%=Web_Dir %>/ast_queues/delete_queue_agent?agent_id=' + agent_id, {method: 'post', asynchronous: false, onComplete:function(request){
+                    Element.hide('spinner');
+                }, onLoading:function(request){Element.show('spinner');}});
+            }
+        }
+
+        $j('#submit_new_agent').click(function (e) {
+            e.preventDefault();
+            if($("s_user_agent_id").value !== '-2'){
+                var url = '<%=Web_Dir %>/ast_queues/create_queue_agent?queue_id=' + <%= queue.id %> + '&agent_name=' + $('device_agent').options[$('device_agent').selectedIndex].text + '&device_id=' + $('device_agent').options[$('device_agent').selectedIndex].value + '&penalty=' + $('queue_agent_penalty').value
+                new Ajax.Updater('sortable_table', url, {
+                    method: 'post',
+                    asynchronous: false,
+                    onComplete:function(request){
+
+                        Element.hide('spinner');
+                    },
+                    onLoading:function(request){
+                        Element.show('spinner');
+                    }
+                });
+                // cleaning s_user_agent field
+                $j('.add_new_static_agent').toggle();
+                $('s_user_agent_id').value = -2;
+                $('s_user_agent').value = '';
+                var evt = document.createEvent("HTMLEvents");
+                evt.initEvent("change", false, true);
+                $('s_user_agent').dispatchEvent(evt);
+                $('queue_agent_penalty').value = "";
+            }
+        })
+
+        $j(document).ready(function(){
+            showExclamationText();
+            $('s_user_agent').observe('change', showExclamationText);
+        });
+
+        function showExclamationText(){
+            var device_span_agent = $('device_span_agent_cell');
+            var static_agent_not_selected_info = $('static_agent_not_selected_info');
+
+            if($("s_user_agent_id").value === '-2'){
+                device_span_agent.hide();
+                static_agent_not_selected_info.show();
+            } else {
+                static_agent_not_selected_info.hide();
+                device_span_agent.show();
+            }
+        }
+    </script>
+
+<% end %>

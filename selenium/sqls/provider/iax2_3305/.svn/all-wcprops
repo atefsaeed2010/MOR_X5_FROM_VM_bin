@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/49377/mor/gui/branches/x5/selenium/sqls/provider/iax2_3305
+END
+create.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/sqls/provider/iax2_3305/create.sql
+END
+assign_tariff_12303.sql
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/48748/mor/gui/branches/x5/selenium/sqls/provider/iax2_3305/assign_tariff_12303.sql
+END
+add_to_server4302.sql
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/49377/mor/gui/branches/x5/selenium/sqls/provider/iax2_3305/add_to_server4302.sql
+END
+assign_to_user5.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/41599/mor/gui/branches/x5/selenium/sqls/provider/iax2_3305/assign_to_user5.sql
+END

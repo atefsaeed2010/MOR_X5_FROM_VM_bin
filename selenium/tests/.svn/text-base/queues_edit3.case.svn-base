@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>queues_edit3</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">queues_edit3</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>billing/test/load_bundle_sql?path=queues_edit/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/edit/7001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=leave_empty_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>xpath=(//input[@id='leave_empty_'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>xpath=(//input[@id='leave_empty_'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>xpath=(//input[@id='join_empty_'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>xpath=(//input[@id='join_empty_'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>uncheck</td>
+	<td>id=join_empty_</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Queue successfully updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/edit/7001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotChecked</td>
+	<td>xpath=(//input[@id='leave_empty_'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotChecked</td>
+	<td>xpath=(//input[@id='leave_empty_'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotChecked</td>
+	<td>xpath=(//input[@id='join_empty_'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotChecked</td>
+	<td>xpath=(//input[@id='join_empty_'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotChecked</td>
+	<td>id=join_empty_</td>
+	<td></td>
+</tr>
+<!--buvo problema su agentais, kad kai yra 2 useriai, dropdowne keiciant userius nebesikeicia devaisai-->
+<!--isikeliama daugiau paprastu useriu-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/tests/sql/main</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/edit/7001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Static Agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_user_agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#static_agent_not_selected_info &gt; img[alt=&quot;Exclamation&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=static_agent_not_selected_info</td>
+	<td>Please select User</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=device_agent</td>
+	<td>IAX2/101 FAX/102 IAX2/1002</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='9'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test Wholesale User</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=device_agent</td>
+	<td>SIP/1007 IAX2/1017</td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Please select User</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>css=#static_agent_not_selected_info &gt; img[alt=&quot;Exclamation&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_agent_penalty</td>
+	<td>9</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#submit_new_agent &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Add new Static Agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='9'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test Wholesale User</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=device_agent</td>
+	<td>IAX2/1017</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>assertEditable</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=device_agent</td>
+	<td>IAX2/101 FAX/102 IAX2/1002</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='8'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test Retail User</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=device_agent</td>
+	<td>SIP/1008 IAX2/1009</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=img[alt=&quot;Delete&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertConfirmation</td>
+	<td>Are you sure?</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='9'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test Wholesale User</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=device_agent</td>
+	<td>SIP/1007 IAX2/1017</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=device_agent</td>
+	<td>IAX2/101 FAX/102 IAX2/1002</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='8'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test Retail User</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=device_agent</td>
+	<td>SIP/1008 IAX2/1009</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#submit_new_agent &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_user_agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='8'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test Retail User</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=device_agent</td>
+	<td>IAX2/1009</td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=#submit_new_agent &gt; img[alt=&quot;Add&quot;]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>refreshAndWait</td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>id=s_user_agent</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=device_agent</td>
+	<td>IAX2/101 FAX/102 IAX2/1002</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='9'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test Wholesale User</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=device_agent</td>
+	<td>SIP/1007 IAX2/1017</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_agent_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user_agent</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>10000</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>id=device_agent</td>
+	<td>IAX2/101 FAX/102 IAX2/1002</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/edit/7001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[extension]</td>
+	<td>1008</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Queue was not updated<br /> * Extension is in use</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_name</td>
+	<td>Name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_extension</td>
+	<td>1008</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Queue was not created<br /> * Extension is in use</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_name</td>
+	<td>Name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_extension</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Queue was not created<br /> * Extension is in use</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_name</td>
+	<td>Name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=queue_extension</td>
+	<td>1234</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Queue successfully created</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[extension]</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Queue was not updated<br /> * Extension is in use</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_failover_action_device</td>
+	<td></td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_id').value='-2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=queue[extension]</td>
+	<td>12365</td>
+</tr>
+<tr>
+	<td>assertNotEditable</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=queue_failover_action_hangup</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/ast_queues/edit/7001</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Please select User</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertNotVisible</td>
+	<td>css=img[alt=&quot;Exclamation&quot;]</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/51946/mor/gui/branches/x5/selenium/tests/services
+END
+services_daily.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/51946/mor/gui/branches/x5/selenium/tests/services/services_daily.case
+END
+use_subscriptions2.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/51577/mor/gui/branches/x5/selenium/tests/services/use_subscriptions2.case
+END
+expired_subscriptions.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/42047/mor/gui/branches/x5/selenium/tests/services/expired_subscriptions.case
+END
+reseller_user_services.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/51405/mor/gui/branches/x5/selenium/tests/services/reseller_user_services.case
+END
+subscriptions_block_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/47826/mor/gui/branches/x5/selenium/tests/services/subscriptions_block_user.case
+END
+subscriptions_with_tz.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/45771/mor/gui/branches/x5/selenium/tests/services/subscriptions_with_tz.case
+END
+reseller_user_services2.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/47403/mor/gui/branches/x5/selenium/tests/services/reseller_user_services2.case
+END
+service_sorting_and_pagination.case
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/!svn/ver/45755/mor/gui/branches/x5/selenium/tests/services/service_sorting_and_pagination.case
+END
+flatrate.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/51579/mor/gui/branches/x5/selenium/tests/services/flatrate.case
+END
+service_selfcost.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/41217/mor/gui/branches/x5/selenium/tests/services/service_selfcost.case
+END
+use_subscriptions.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/51576/mor/gui/branches/x5/selenium/tests/services/use_subscriptions.case
+END
+flatrate_user_subscription.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/43369/mor/gui/branches/x5/selenium/tests/services/flatrate_user_subscription.case
+END
+service_selfcost2.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/42047/mor/gui/branches/x5/selenium/tests/services/service_selfcost2.case
+END
+user_search_by_subscriptions.case
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/43946/mor/gui/branches/x5/selenium/tests/services/user_search_by_subscriptions.case
+END

@@ -1,0 +1,19 @@
+<table width="100%" class="maintable">
+  <tr>
+    <th><%= _('User') %></th>
+    <th><%= nice_list_order('owner', _('Owner'), @options) %></th>
+    <th></th>
+  </tr>
+  <% if @default_users_postpaid_and_loss_calls and @default_users_postpaid_and_loss_calls.size.to_i > 0 %>
+      <% @default_users_postpaid_and_loss_calls.each_with_index { |user, i| %>
+          <% user.blocked.to_i == 0 ? text_class="n" : text_class="n_disabled" -%>
+          <tr class="row<%= (i % 2 + 1).to_s %>">
+            <td id="default_user_link_<%= user.id %>" align="left" class="<%= text_class %>" > <%= _('Default_user') %></td>
+            <td id='owner_link_<%= user.id %>' align='left' class='<%= text_class %>'> <%= user.id.zero? ? '' : link_nice_user(user) %></td>
+            <td id="edit_<%= user.id %>" align="center" class="<%= text_class %>">
+              <% if admin? and user.id.zero? %>  <%= link_to b_edit, :action => :default_user, :id => user.id %>
+              <% end %></td>
+          </tr>
+      <% } %>
+  <% end %>
+</table>

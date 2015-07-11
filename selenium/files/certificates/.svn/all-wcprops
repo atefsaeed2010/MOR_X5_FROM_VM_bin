@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/certificates
+END
+private_key.pem
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/certificates/private_key.pem
+END
+private_certificate.cer
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/files/certificates/private_certificate.cer
+END

@@ -1,0 +1,663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>New Test</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=tariff_import/for_import_with_effective_from_date</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td># bundle loaded</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/ratedetail_edit/120028</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ratedetail_rate</td>
+	<td>0.33333</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Rate detail successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/stats/prefix_finder</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search</td>
+	<td>370</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>search</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>results</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Lithuania FIX Lithuania proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0	</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Destination group : Lithuania</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Rates:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>provider_tariff_for_admin_1:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='results']/div[@style='color: #BFBFBF;']</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.2 (USD) Effective from: 2023-01-01 15:15:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='results']/div[2]</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.2695 (USD) Effective from: 2013-01-01 00:00:00</td>
+</tr>
+<!--šita data apačioje nėra aktyvi, tad jos spalva papilkinta-->
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='results']/div[3][@style='color: #BFBFBF;']</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.33333 (USD)</td>
+</tr>
+<!--Retail ir wholesale neturi datų, dėl to nerodo-->
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='results']/div[4]</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.0 (USD)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='results']/div[5]</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.0 (USD)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>search</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>rate_search</td>
+	<td>370</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>rate_search</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>FIX Lithuania proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0	</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Rates:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>provider_tariff_for_admin_1 (prefix: 370):</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='link_to_rate_120090'][@style='color: #BFBFBF;']</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.2 (USD) Effective from: 2023-01-01 15:15:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=link_to_rate_120118</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.2695 (USD) Effective from: 2013-01-01 00:00:00</td>
+</tr>
+<!--šita data apačioje nėra aktyvi, tad jos spalva papilkinta-->
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='link_to_rate_120028'][@style='color: #BFBFBF;']</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.33333 (USD)</td>
+</tr>
+<!--Retail ir wholesale neturi datų, dėl to nerodo-->
+<tr>
+	<td>assertText</td>
+	<td>id=link_to_rate_140</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.0 (USD)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=link_to_rate_391</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.0 (USD)</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/ratedetail_edit/123028</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ratedetail_rate</td>
+	<td>0.12129</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Rate detail successfully updated</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/stats/search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=search</td>
+	<td>370</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>search</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Lithuania FIX Lithuania proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0	</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Destination group : Lithuania</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>prov_tariff_rs_2: </td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='results']/div[@style='color: #BFBFBF;']</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.001 (USD) Effective from: 2023-01-01 11:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='results']/div[2]</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.2695 (USD) Effective from: 2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='results']/div[3][@style='color: #BFBFBF;']</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.12129 (USD)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>search</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=rate_search</td>
+	<td>370</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>rate_search</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>FIX Lithuania proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0	</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>prov_tariff_rs_2 (prefix: 370):</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='link_to_rate_123163'][@style='color: #BFBFBF;']</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.001 (USD) Effective from: 2023-01-01 11:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=link_to_rate_123116</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.2695 (USD) Effective from: 2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='link_to_rate_123028'][@style='color: #BFBFBF;']</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.12129 (USD)</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_delta_sql/sqls/tariff/make_provider_tariffs_user_wholesale</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/stats/prefix_finder</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search</td>
+	<td>370</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>search</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>results</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Lithuania FIX Lithuania proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0	</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Destination group : Lithuania</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Rates:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>provider_tariff_for_admin_1:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='results']/div[@style='color: #BFBFBF;']</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.2 (USD) Effective from: 2023-01-01 15:15:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='results']/div[3]</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.2695 (USD) Effective from: 2013-01-01 00:00:00</td>
+</tr>
+<!--šita data apačioje nėra aktyvi, tad jos spalva papilkinta-->
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='results']/div[4][@style='color: #BFBFBF;']</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.33333 (USD)</td>
+</tr>
+<!--Retail ir provider neturi datų, dėl to nerodo-->
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='results']/div[5]</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.0 (USD)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=#results &gt; div</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.0 (USD)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>search</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>rate_search</td>
+	<td>370</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>rate_search</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>FIX Lithuania proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0	</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Rates:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>provider_tariff_for_admin_1 (prefix: 370):</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='link_to_rate_120090'][@style='color: #BFBFBF;']</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.2 (USD) Effective from: 2023-01-01 15:15:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=link_to_rate_120118</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.2695 (USD) Effective from: 2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='link_to_rate_120028'][@style='color: #BFBFBF;']</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.33333 (USD)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=link_to_rate_140</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.0 (USD)</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=link_to_rate_391</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.0 (USD)</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>reseller</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>reseller1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/stats/search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search</td>
+	<td>370</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>search</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>results</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>Lithuania FIX Lithuania proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0	</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Destination group : Lithuania</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Rates:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>prov_tariff_rs_2:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='results']/div[@style='color: #BFBFBF;']</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.001 (USD) Effective from: 2023-01-01 11:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='results']/div[2]</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.2695 (USD) Effective from: 2013-01-01 00:00:00</td>
+</tr>
+<!--šita data apačioje nėra aktyvi, tad jos spalva papilkinta-->
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='results']/div[3][@style='color: #BFBFBF;']</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.12129 (USD)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>search</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>rate_search</td>
+	<td>370</td>
+</tr>
+<tr>
+	<td>keyUp</td>
+	<td>rate_search</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>waitForTextPresent</td>
+	<td>FIX Lithuania proper</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0	</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Rates:</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>prov_tariff_rs_2 (prefix: 370):</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@id='link_to_rate_123163'][@style='color: #BFBFBF;']</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.001 (USD) Effective from: 2023-01-01 11:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=link_to_rate_123116</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.2695 (USD) Effective from: 2013-01-01 00:00:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='link_to_rate_123028'][@style='color: #BFBFBF;']</td>
+	<td>exact:00:00:00 - 23:59:59 =&gt; 0.12129 (USD)</td>
+</tr>
+</tbody></table>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<%= render 'page_select_header', page: @page,
+                                 total_pages: @total_pages,
+                                 page_select_header_id: @page_select_header_id,
+                                 search_username: @search_username,
+                                 search_fname: @search_fname,
+                                 search_lname: @search_lname,
+                                 search_agrnumber: @search_agrnumber,
+                                 search_sub: @search_sub,
+                                 search_account_number: @search_account_number if @total_pages > 1 %>
+<%= "<br>".html_safe if @total_pages > 1 %>
+
+<table class="maintable" width="100%">
+  <tr>
+    <th align="left"><%= sortable_list_header('username', _('User'), @options) %></th>
+    <th align="left"><%= sortable_list_header('name',_('Name'), @options) %></th>
+    <th align="left"><%= sortable_list_header('type',_('Type'), @options) %></th>
+    <th align="center"><%= sortable_list_header('status',_('Status'), @options) %></th>
+    <th align="center"><%= sortable_list_header('run_time',_('Run_time'), @options) %></th>
+    <th align="center"><%= _('Numbers') %></th>
+    <th align="right"><%= _('Dialed') %></th>
+    <th align="right"><%= _('Completed') %></th>
+    <th align="right"><%= _('Profit') %></th>
+    <th align="center"><%= _('Actions') %></th>
+
+  </tr>
+
+  <%
+     @total_numbers = 0
+     @total_dialed = 0
+     @total_completed = 0
+     @total_profit = 0
+  %>
+
+  <% i = 0 %>
+
+      <% @campaigns.each do |camp| %>
+          <tr class="row<%= (i % 2 + 1).to_s %>" height='20px'>
+            <td align="left" id='username_<%= camp.id %>'><%= link_nice_user(camp.user) %></td>
+            <td align="left" id='name<%= camp.id %>'><%= camp.name %></td>
+            <td align="left" id='type<%= camp.id %>'><%= camp.campaign_type %></td>
+
+            <td align="center" nowrap>
+              <% if camp.status == "enabled" %>
+                  <div class="bold_green" id='status_<%= camp.id %>'><%= _('Active') %>            </div>
+              <% else %>
+                  <div class="bold_red" id='status_<%= camp.id %>'><%= _('Stopped') %>             </div>
+              <% end %>
+            </td>
+
+            <td align="center" id='runtime_<%= camp.id %>'><%= nice_time2 camp.start_time %> - <%= nice_time2 camp.stop_time %></td>
+
+            <% numbers = camp.sms_adnumbers
+               @total_numbers += numbers.size
+            %>
+            <td align="center" id='campaign_numbers_<%= camp.id %>'><%= numbers.size.to_s %></td>
+
+            <%
+               executed_numbers = camp.executed_numbers_count
+               @total_dialed += executed_numbers.to_i
+            %>
+            <td align="right" id='executed_numbers_<%= camp.id %>'><%= executed_numbers.to_s %></td>
+
+            <%
+               completed_numbers = camp.completed_numbers_count
+               @total_completed += completed_numbers.to_i
+            %>
+            <td align="right" id='completed_numbers_<%= camp.id %>'><%= completed_numbers %></td>
+
+            <%
+               profit = camp.profit
+               @total_profit += profit.to_f
+            %>
+            <td align="right" id='profit_<%= camp.id %>'><%= nice_number profit %></td>
+            <td align="center" id='actions_<%=camp.id %>'><%= link_to(b_actions, {:action => 'view_campaign_actions', :id => camp.id}, {:id => "link_actions_#{camp.id}"} ) if camp.sms_adactions.size > 0 %> <%= camp.sms_adactions.size %></td>
+
+          </tr>
+          <% i += 1 %>
+      <% end %>
+
+
+  <tr>
+    <th align="left" colspan=5>  <%= _('Total') %>:</th>
+    <th align="center" id='total_numbers'>  <%= @total_numbers %>  </th>
+    <th align="right" id='total_dialed'>  <%= @total_dialed %> </th>
+    <th align="right" id='total_completed'>  <%= @total_completed %> </th>
+    <th align="right" id='total_profit'>  <%= nice_number @total_profit %> </th>
+    <th align="left"></th>
+
+  </tr>
+
+
+</table>
+<br/>
+<%= render 'page_select_header',page: @page,
+                                total_pages: @total_pages,
+                                page_select_header_id: @page_select_header_id,
+                                search_username: @search_username,
+                                search_fname: @search_fname,
+                                search_lname: @search_lname,
+                                search_agrnumber: @search_agrnumber,
+                                search_sub: @search_sub,
+                                search_account_number: @search_account_number if @total_pages > 1 %>

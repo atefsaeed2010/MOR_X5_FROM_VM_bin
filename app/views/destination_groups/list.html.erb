@@ -1,0 +1,45 @@
+<% if admin? %>
+    <%= link_to_function(b_edit + _('Bulk_management'), "Element.toggle('search_details')") %>
+    <br/>
+    <div id="search_details" style='display:none;'>
+      <br/>
+      <%= render 'bulk_form', saved: @saved %>
+    </div>
+    <br/>
+<% end %>
+
+<%= render 'letter_select_header', st: @st, letter_select_header_id: @letter_select_header_id%>
+<br/>
+<table width="100%" class="maintable">
+  <tr>
+    <th id="name" align="left"><%= _('Name') %></th>
+    <th id="type" align="left"><%= _('Type') %></th>
+    <th id="destinations" align="center"><%= _('Destinations') %></th>
+    <th id="stats"></th>
+    <th id="edit"></th>
+    <th id="delete"></th>
+  </tr>
+
+  <% i = 0 %>
+  <% for dg in @destinationgroups %>
+      <tr class="row<%= (i % 2 + 1).to_s %>">
+
+        <td id="name_<%=dg.id %>"><%= draw_flag_by_code dg.flag %> <%= h dg.name %></td>
+        <td id="type_<%=dg.id %>"><%= h dg.desttype %></td>
+
+        <td id="destinations_<%=dg.id %>" align="center"><%= link_to b_view + _('View'), :action => 'destinations', :id => dg.id %>
+          (<%= dg.destinations.size %>)
+        </td>
+        <td id="stats_<%=dg.id %>" align="center"><%= link_to b_chart_bar, :action => 'stats', :id => dg.id %></td>
+        <td id="edit_<%=dg.id %>" align="center"><%= link_to b_edit, :action => 'edit', :id => dg.id %></td>
+        <td id="delete_<%=dg.id %>" align="center"><%= link_to b_delete, {:action => 'destroy', :id => dg.id}, :confirm => _('Are_you_sure'), :method => :post, :id => "destroy_img"+ dg.id.to_s %></td>
+      </tr>
+
+      <% i += 1 %>
+  <% end %>
+</table>
+<br/>
+<%= render 'letter_select_header', st: @st, letter_select_header_id: @letter_select_header_id%>
+<br/>
+
+<%= link_to b_add + _('New_destination_group'), :action => 'new' %>

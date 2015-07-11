@@ -1,0 +1,1 @@
+UPDATE `acc_group_rights` SET `value` = 1 WHERE acc_right_id= 18;

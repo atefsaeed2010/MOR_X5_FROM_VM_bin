@@ -1,0 +1,21 @@
+<div class="nb"><%= link_to b_user + "#{_('Group')}: #{@group_name}", { action: 'group_edit', id: @group.id }, { method: 'post', id: "edit_link_#{@group.id}" } %> </div>
+<br/>
+<table class='maintable'>
+  <tr>
+    <th align='left'><%= _('Contact') %></th>
+    <th align='center'></th>
+  </tr>
+  <% @group_contacts.each_with_index do |group_contact, i| %>
+  <tr>
+    <td align='left'><%= link_to group_contact.name + "(#{group_contact.email})", { action: 'contact_edit', id: group_contact.alert_contact_id } %></td>
+    <td align='center'><%= link_to b_delete, {action: 'group_contact_destroy', id: group_contact.id, group_id: group_contact.alert_group_id}, {confirm: _('Are_you_sure'), method: 'post', id: 'delete_link_#{group_contact.id}'} %></td>
+  </tr>
+  <% end %>
+  <%= form_for :new_group_contact, url: { action: 'group_contact_add' } do |f| %>
+  <tr>
+    <td align='left'><%= f.collection_select :alert_contact_id, @selectable_contacts, :id, :name, {include_blank: (@selectable_contacts.size == 0 ? _('no_contacts_available') : _('select_contact'))} %></td>
+    <td align='center'><%= f.submit type: 'image', src: Web_Dir+'/images/icons/add.png', :title => _('Add') %></td>
+    <%= f.text_field :alert_group_id, {hidden: true, :value => params[:id]}%>
+  </tr>
+  <% end %>
+</table>

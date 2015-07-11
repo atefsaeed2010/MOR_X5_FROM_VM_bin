@@ -1,0 +1,23 @@
+<%= link_to b_add + _('Add_new'), :action => 'moh_new' %>
+<br /> <br />
+<table width="100%" class="maintable">
+  <tr>
+    <th align="left"><%= _('Name') %></th>
+    <th align="left"><%= _('Description') %></th>
+    <th align="center"><%= _('Voice_name') %></th>
+    <th align="center"><%= _('Random') %></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% @mohs.each do |moh| %>
+  <tr>
+    <td id="name_<%= moh.id %>"><%= moh.moh_name.to_s %></td>
+    <td id="description_<%= moh.id %>"><%= moh.comment.to_s %></td>
+    <td id="ivr_voice_id_<%= moh.id %>"><%= moh.ivr_name.to_s %></td>
+    <td id="random_<%= moh.id %>"><%= moh.random.to_s %></td>
+    <td id="edit_<%= moh.id %>" align="center"><%= link_to b_edit, {:action => 'moh_edit', :id => moh.id}, {:id => "edit_link_#{moh.id}"} %></td>
+    <td id="delete_<%= moh.id %>" align="center"><%= link_to b_delete, {:action => 'moh_destroy', :id => moh.id}, {:confirm => _('Are_you_sure'), :method => :post, :id => "delete_link_#{moh.id}"} %></td>
+  </tr>
+<% end %>
+</table>
+<br /> <br />

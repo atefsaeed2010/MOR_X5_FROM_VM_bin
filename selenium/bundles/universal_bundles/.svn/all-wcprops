@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/52139/mor/gui/branches/x5/selenium/bundles/universal_bundles
+END
+email_settings.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/46945/mor/gui/branches/x5/selenium/bundles/universal_bundles/email_settings.bundle
+END
+active_calls_settings.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/49869/mor/gui/branches/x5/selenium/bundles/universal_bundles/active_calls_settings.bundle
+END
+csv_separator_and_decimal.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/50617/mor/gui/branches/x5/selenium/bundles/universal_bundles/csv_separator_and_decimal.bundle
+END
+tax_settings.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/52139/mor/gui/branches/x5/selenium/bundles/universal_bundles/tax_settings.bundle
+END
+enable_allowed_addresses_option_no.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/!svn/ver/49848/mor/gui/branches/x5/selenium/bundles/universal_bundles/enable_allowed_addresses_option_no.bundle
+END
+functionality_csv_settings.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/!svn/ver/50611/mor/gui/branches/x5/selenium/bundles/universal_bundles/functionality_csv_settings.bundle
+END
+visual_settings.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/45221/mor/gui/branches/x5/selenium/bundles/universal_bundles/visual_settings.bundle
+END
+csv_separator_and_decimal_and_file_size.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/!svn/ver/50617/mor/gui/branches/x5/selenium/bundles/universal_bundles/csv_separator_and_decimal_and_file_size.bundle
+END
+email_settings2.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/49579/mor/gui/branches/x5/selenium/bundles/universal_bundles/email_settings2.bundle
+END
+email_settings3.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/49579/mor/gui/branches/x5/selenium/bundles/universal_bundles/email_settings3.bundle
+END
+active_calls_settings2.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/49869/mor/gui/branches/x5/selenium/bundles/universal_bundles/active_calls_settings2.bundle
+END
+csv_decimal_and_separator_settings.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/!svn/ver/50636/mor/gui/branches/x5/selenium/bundles/universal_bundles/csv_decimal_and_separator_settings.bundle
+END
+rates_settings.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/50680/mor/gui/branches/x5/selenium/bundles/universal_bundles/rates_settings.bundle
+END
+enable_allowed_addresses_option_yes.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/!svn/ver/49848/mor/gui/branches/x5/selenium/bundles/universal_bundles/enable_allowed_addresses_option_yes.bundle
+END
+make_rspro.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/40846/mor/gui/branches/x5/selenium/bundles/universal_bundles/make_rspro.bundle
+END
+visual_settings2.bundle
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/50611/mor/gui/branches/x5/selenium/bundles/universal_bundles/visual_settings2.bundle
+END

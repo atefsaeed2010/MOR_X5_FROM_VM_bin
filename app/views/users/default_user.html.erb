@@ -1,0 +1,16 @@
+<%= form_tag(:action => 'default_user_update') do %>
+    <%= render 'form', user: @user, username_length: @username_length, password_length: @password_length,
+    count_rs: @count_rs, count_rspro: @count_rspro, groups: @groups, groups_resellers: @groups_resellers,
+    tariffs: @tariffs, lcrs: @lcrs, create_own_providers: @create_own_providers,
+    responsible_accountants: @responsible_accountants, countries: @countries, blacklists_on: @blacklists_on,
+    total_recordings_size: @total_recordings_size, bl_global_threshold: @bl_global_threshold,
+    total_recordings_size: @total_recordings_size, selected_user_users_number: @selected_user_users_number,
+    pbx_pools: @pbx_pools, allow_edit: @allow_edit, bl_global_setting: @bl_global_setting, i: @i, default_user_form: true,
+    warning_email: @warning_email, default_country_id: @default_country_id,
+    disallow_email_editing: @disallow_email_editing, bl_global_threshold_2: @bl_global_threshold_2,
+    bl_global_threshold_3: @bl_global_threshold_3, bl_default_lcr: @bl_default_lcr,
+    bl_default_lcr_2: @bl_default_lcr_2, bl_default_lcr_3: @bl_default_lcr_3
+ %>
+    <%= submit_tag _('Change'), :disable_with => _('Processing..') %>
+<% end %>
+<br>

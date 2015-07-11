@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/47003/mor/gui/branches/x5/selenium/sqls/settings/conflines
+END
+set_zero_for_hide_active_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/43820/mor/gui/branches/x5/selenium/sqls/settings/conflines/set_zero_for_hide_active_calls.sql
+END
+hide_default_currency_page.sql
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/44981/mor/gui/branches/x5/selenium/sqls/settings/conflines/hide_default_currency_page.sql
+END
+unhide_default_currency_page.sql
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/44981/mor/gui/branches/x5/selenium/sqls/settings/conflines/unhide_default_currency_page.sql
+END
+show_device_and_cid_in_last_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/!svn/ver/46779/mor/gui/branches/x5/selenium/sqls/settings/conflines/show_device_and_cid_in_last_calls.sql
+END
+active_calls_show_server_enabled.sql
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/46993/mor/gui/branches/x5/selenium/sqls/settings/conflines/active_calls_show_server_enabled.sql
+END
+show_active_calls_for_users_enabled.sql
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/!svn/ver/47003/mor/gui/branches/x5/selenium/sqls/settings/conflines/show_active_calls_for_users_enabled.sql
+END
+set_infinity_for_hide_active_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/!svn/ver/43896/mor/gui/branches/x5/selenium/sqls/settings/conflines/set_infinity_for_hide_active_calls.sql
+END

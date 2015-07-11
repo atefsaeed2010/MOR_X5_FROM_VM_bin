@@ -1,0 +1,5 @@
+# create random free dids to assign to queue (testing the amount)
+# ----
+# creating dids
+/did/dids_list/dids_free.sql
+# bundle loaded

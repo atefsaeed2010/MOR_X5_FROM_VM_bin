@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/52254/mor/gui/branches/x5/selenium/tests/callshop
+END
+callshop.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/52229/mor/gui/branches/x5/selenium/tests/callshop/callshop.case
+END
+callshop_block_topup.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/callshop/callshop_block_topup.case
+END
+callshop_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/callshop/callshop_calls.sql
+END
+callshop_calls_postpaid.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/callshop/callshop_calls_postpaid.sql
+END
+callshop_simplified_for_reseller.case
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/50979/mor/gui/branches/x5/selenium/tests/callshop/callshop_simplified_for_reseller.case
+END
+callshop_block_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/callshop/callshop_block_user.case
+END
+callshop_calls_with_tax.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/callshop/callshop_calls_with_tax.sql
+END
+callshop_users_with_tax.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/49713/mor/gui/branches/x5/selenium/tests/callshop/callshop_users_with_tax.sql
+END
+callshop_only_user_as_manager.case
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/callshop/callshop_only_user_as_manager.case
+END
+callshop_call_without_rate.sql
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/callshop/callshop_call_without_rate.sql
+END
+callshop_postpaid_invoice.case
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/52254/mor/gui/branches/x5/selenium/tests/callshop/callshop_postpaid_invoice.case
+END
+callshop_prepaid_invoice.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/52254/mor/gui/branches/x5/selenium/tests/callshop/callshop_prepaid_invoice.case
+END
+call_shop2.case
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/49825/mor/gui/branches/x5/selenium/tests/callshop/call_shop2.case
+END
+callshop_invoice_with_tax.case
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/49713/mor/gui/branches/x5/selenium/tests/callshop/callshop_invoice_with_tax.case
+END
+call_shop_simplified_sesion.case
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/50937/mor/gui/branches/x5/selenium/tests/callshop/call_shop_simplified_sesion.case
+END
+callshop.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/callshop/callshop.sql
+END
+callshop_invoice_pagination.case
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/52254/mor/gui/branches/x5/selenium/tests/callshop/callshop_invoice_pagination.case
+END
+update_cs_invoices.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/callshop/update_cs_invoices.sql
+END
+callshop_call_without_rate_with_answer.sql
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/callshop/callshop_call_without_rate_with_answer.sql
+END
+callshop_partly_paid.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/44797/mor/gui/branches/x5/selenium/tests/callshop/callshop_partly_paid.case
+END
+callshop_call_without_rate.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/callshop/callshop_call_without_rate.case
+END
+cs_show_rates.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/51027/mor/gui/branches/x5/selenium/tests/callshop/cs_show_rates.case
+END

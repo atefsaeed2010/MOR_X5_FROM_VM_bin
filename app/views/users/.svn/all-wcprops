@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/!svn/ver/52071/mor/gui/branches/x5/app/views/users
+END
+_personal_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/52071/mor/gui/branches/x5/app/views/users/_personal_form.html.erb
+END
+_address_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/44320/mor/gui/branches/x5/app/views/users/_address_form.html.erb
+END
+custom_rates.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/app/views/users/custom_rates.html.erb
+END
+list.erb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/!svn/ver/50654/mor/gui/branches/x5/app/views/users/list.erb
+END
+default_user_errors_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/41984/mor/gui/branches/x5/app/views/users/default_user_errors_list.html.erb
+END
+users_postpaid_and_allowed_loss_calls.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/41942/mor/gui/branches/x5/app/views/users/users_postpaid_and_allowed_loss_calls.html.erb
+END
+user_acustrates.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/41942/mor/gui/branches/x5/app/views/users/user_acustrates.html.erb
+END
+users_weak_passwords.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/app/views/users/users_weak_passwords.html.erb
+END
+_tax_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/42177/mor/gui/branches/x5/app/views/users/_tax_form.html.erb
+END
+_company_emails_form.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/43662/mor/gui/branches/x5/app/views/users/_company_emails_form.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/39906/mor/gui/branches/x5/app/views/users/show.html.erb
+END
+device_group_edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/44321/mor/gui/branches/x5/app/views/users/device_group_edit.html.erb
+END
+default_user.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/50109/mor/gui/branches/x5/app/views/users/default_user.html.erb
+END
+device_group_new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/44321/mor/gui/branches/x5/app/views/users/device_group_new.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/50109/mor/gui/branches/x5/app/views/users/edit.html.erb
+END
+personal_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/44789/mor/gui/branches/x5/app/views/users/personal_details.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/50109/mor/gui/branches/x5/app/views/users/new.html.erb
+END
+hidden.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/!svn/ver/50109/mor/gui/branches/x5/app/views/users/hidden.html.erb
+END
+device_groups.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/39906/mor/gui/branches/x5/app/views/users/device_groups.html.erb
+END
+reseller_users.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/41942/mor/gui/branches/x5/app/views/users/reseller_users.html.erb
+END
+user_acustrates_full.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/43485/mor/gui/branches/x5/app/views/users/user_acustrates_full.html.erb
+END
+_user_invoices_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/50109/mor/gui/branches/x5/app/views/users/_user_invoices_form.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/51926/mor/gui/branches/x5/app/views/users/_form.html.erb
+END

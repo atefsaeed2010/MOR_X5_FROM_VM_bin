@@ -1,0 +1,1 @@
+delete from devices where id=9;

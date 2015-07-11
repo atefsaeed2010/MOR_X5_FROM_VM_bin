@@ -1,0 +1,6 @@
+# create simple queue for queues_edit3.case (may be used in other queues tests)
+# ----
+# Create simple queue
+/queue/queue_7001/create.sql
+#
+# bundle loaded 

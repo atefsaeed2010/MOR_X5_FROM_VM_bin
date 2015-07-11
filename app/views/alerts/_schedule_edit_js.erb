@@ -1,0 +1,57 @@
+<script type="text/javascript">
+  function drop_period(id, day) {
+      var period = document.getElementById('periods_'+id+'_'+day);
+      period.parentNode.removeChild(period);
+      var req	 = new XMLHttpRequest();
+      req.onreadystatechange = process;
+      req.open("GET", '<%= Web_Dir %>/alerts/drop_period/'+id, true);
+      req.send();
+
+      function process()
+      {
+        if (req.readyState == 4) {
+          var resp = req.responseText;
+
+        }
+      }
+
+  }
+
+  function add_period(day) {
+    var column	= document.getElementById(day+'_list');
+
+    var start_hour	= document.getElementById(day+'_new_start_hour');
+    var start_min	= document.getElementById(day+'_new_start_minute');
+    var end_hour	= document.getElementById(day+'_new_end_hour');
+    var end_min		= document.getElementById(day+'_new_end_minute');
+
+    if (start_hour.value && start_min.value && end_hour.value && end_min.value ) {
+      if ((start_hour.value > end_hour.value) || (start_hour.value == end_hour.value && start_min.value >= end_min.value)) {
+        alert('<%= _('start_time_higher_than_end') %>');
+      }
+      else
+      {
+        var req = new XMLHttpRequest();
+        req.onreadystatechange = process;
+        req.open("GET", '<%= Web_Dir %>/alerts/new_schedule?day_type='+day+'&start_hour='+start_hour.value+'&start_min='+start_min.value+'&end_hour='+end_hour.value+'&end_min='+end_min.value, true);
+        req.send();
+      }
+    }
+    else
+    {
+      alert('<%= _('period_must_be_provided') %>');
+    }
+
+    function process()
+    {
+      if (req.readyState == 4) {
+        var resp = req.responseText;
+        column.innerHTML = column.innerHTML + resp;
+        start_hour.selectedIndex = 0;
+        start_min.selectedIndex = 0;
+        end_hour.selectedIndex = 0;
+        end_min.selectedIndex = 0;
+      }
+    }
+  }
+</script>

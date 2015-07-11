@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/51963/mor/gui/branches/x5/selenium/tests/action_log
+END
+action_log_first_date.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/action_log/action_log_first_date.sql
+END
+action_log_group.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/46917/mor/gui/branches/x5/selenium/tests/action_log/action_log_group.case
+END
+warning_balance_actions.case
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/50330/mor/gui/branches/x5/selenium/tests/action_log/warning_balance_actions.case
+END
+action_log.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/51963/mor/gui/branches/x5/selenium/tests/action_log/action_log.case
+END

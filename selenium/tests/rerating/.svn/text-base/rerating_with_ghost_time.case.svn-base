@@ -1,0 +1,1677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="" />
+<title>rerating_with_ghost_time</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">rerating_with_ghost_time</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/locations/location_rules/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name</td>
+	<td>cut 123#</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>cut</td>
+	<td>123#</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>add</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>add_location_rule</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Rule added</td>
+</tr>
+<!--TEST CDR RERATING-->
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rate_new/1?st=U&amp;page=13</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>9263</td>
+	<td>5</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/rate_new/2?st=U&amp;page=13</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>9263</td>
+	<td>8</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/cdr/rerating</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_year</td>
+	<td>label=2009</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_month</td>
+	<td>label=January</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_day</td>
+	<td>label=1</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_hour</td>
+	<td>label=00</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_minute</td>
+	<td>label=00</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_year</td>
+	<td>label=2009</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_month</td>
+	<td>label=October</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_day</td>
+	<td>label=28</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_hour</td>
+	<td>label=06</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_minute</td>
+	<td>label=41</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>200</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=test_tariff_id</td>
+	<td>label=Test Tariff + 0.1 (Retail)</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_time_value</td>
+	<td>exact:00:00:01</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_billsec</td>
+	<td>00:00:01</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_billsec</td>
+	<td>00:01:30</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//td[4]</td>
+	<td>exact:00:01:29</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_pp</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_up</td>
+	<td>3.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_up</td>
+	<td>12.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_up</td>
+	<td>9.0000</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/locations/location_rules/1</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name</td>
+	<td>cut 123#</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>cut</td>
+	<td>123#</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>add</td>
+	<td>123</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>add_location_rule</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Rule was not created<br /> * Rule must be unique</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/cdr/rerating</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_year</td>
+	<td>label=2010</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_month</td>
+	<td>label=June</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_year</td>
+	<td>label=2010</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_month</td>
+	<td>label=June</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>12</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=test_tariff_id</td>
+	<td>label=tariff (Retail)</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=old_billsec</td>
+	<td>exact:00:00:01</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_billsec</td>
+	<td>exact:00:00:34</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[2]/td[4]</td>
+	<td>exact:00:00:33</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_pp</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_up</td>
+	<td>3.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_up</td>
+	<td>4.5333</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_up</td>
+	<td>1.5333</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/locations/location_rule_edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>tariff</td>
+	<td>label=Test Tariff + 0.1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Rule updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_rates_list/4?st=U</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>rate448</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>rate449</td>
+	<td>20</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@name='commit' and @value='Update']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Rates updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/cdr/rerating</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_year</td>
+	<td>label=2010</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_month</td>
+	<td>label=June</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_year</td>
+	<td>label=2010</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_month</td>
+	<td>label=June</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>88</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=test_tariff_id</td>
+	<td>label=Test Tariff for Users (Wholesale)</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=old_billsec</td>
+	<td>exact:00:00:34</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_billsec</td>
+	<td>exact:00:00:57</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[2]/td[4]</td>
+	<td>exact:00:00:23</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_pp</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_up</td>
+	<td>4.5333</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_up</td>
+	<td>19.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_up</td>
+	<td>14.4667</td>
+</tr>
+<!--all users-->
+<tr>
+	<td>open</td>
+	<td>/billing/cdr/rerating</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_year</td>
+	<td>label=2010</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_month</td>
+	<td>label=June</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_year</td>
+	<td>label=2010</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_month</td>
+	<td>label=June</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=test_tariff_id</td>
+	<td>label=tariff (Retail)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>33</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=all_users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=old_billsec</td>
+	<td>exact:00:00:57</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_billsec</td>
+	<td>exact:00:00:40</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[2]/td[4]</td>
+	<td>exact:-00:00:17</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_pp</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_up</td>
+	<td>19.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_up</td>
+	<td>13.3333</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_up</td>
+	<td>-5.6667</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/locations/location_rule_edit/2</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>tariff</td>
+	<td>label=Test Tariff + 0.1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Rule updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/tariffs/user_rates_list/4?st=U</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>rate448</td>
+	<td>40</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>rate449</td>
+	<td>40</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@name='commit' and @value='Update']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Rates updated</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/cdr/rerating</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_year</td>
+	<td>label=2010</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_month</td>
+	<td>label=June</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_year</td>
+	<td>label=2010</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_month</td>
+	<td>label=June</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=all_users</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0	</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>150</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=test_tariff_id</td>
+	<td>label=Test Tariff for Users (Wholesale)</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_pp</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=old_up</td>
+	<td>13.3333</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_up</td>
+	<td>50.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=diff_up</td>
+	<td>36.6667</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=old_billsec</td>
+	<td>exact:00:00:40</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_billsec</td>
+	<td>exact:00:01:15</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[2]/td[4]</td>
+	<td>exact:00:00:35</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/cdr/rerating</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_year</td>
+	<td>label=2010</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_month</td>
+	<td>label=June</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_year</td>
+	<td>label=2010</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_month</td>
+	<td>label=June</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=test_tariff_id</td>
+	<td>label=Test Tariff for Users (Wholesale)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>100</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>15000</td>
+</tr>
+<!--test-->
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='commit'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_pp</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=old_up</td>
+	<td>50.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_up</td>
+	<td>40.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=diff_up</td>
+	<td>-10.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=old_billsec</td>
+	<td>exact:00:01:15</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_billsec</td>
+	<td>exact:00:01:00</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[2]/td[4]</td>
+	<td>-00:00:15</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/make_select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=table</td>
+	<td>label=calls</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id</td>
+	<td>28</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=search_devices_all</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_billsec_value</td>
+	<td>75</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billsec_value</td>
+	<td>30</td>
+</tr>
+<!--real-->
+<tr>
+	<td>open</td>
+	<td>/billing/cdr/rerating</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_year</td>
+	<td>label=2010</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_from_month</td>
+	<td>label=June</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_year</td>
+	<td>label=2010</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>date_till_month</td>
+	<td>label=June</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=test_tariff_id</td>
+	<td>label=Test Tariff for Users (Wholesale)</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>50</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_pp</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_res</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=old_up</td>
+	<td>50.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_up</td>
+	<td>30.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=old_billsec</td>
+	<td>exact:00:01:15</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_billsec</td>
+	<td>exact:00:00:45</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/test/make_select</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=table</td>
+	<td>label=calls</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=id</td>
+	<td>28</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=search_devices_all</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_billsec_value</td>
+	<td>45</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=billsec_value</td>
+	<td>30</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/functions/settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>check</td>
+	<td>id=inv_user_billsec</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>user_admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>user_admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/stats/last_calls_stats</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_year</td>
+	<td>label=2009</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=duration_28</td>
+	<td>exact:00:00:45</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/callc/logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_username</td>
+	<td>admin</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>login_psw</td>
+	<td>admin1</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextPresent</td>
+	<td>Successfully logged in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/cdr/rerating</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>-150</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0	</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Ghost Time value must be between -100 and 200</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/billing/cdr/rerating</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>201</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0	</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Ghost Time value must be between -100 and 200</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>abcde</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Ghost Time must be numerical</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>;'][\</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Ghost Time must be numerical</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>ти́л</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Ghost Time must be numerical</td>
+</tr>
+<!--fast rerating with ghost time-->
+<tr>
+	<td>open</td>
+	<td>/billing/cdr/rerating</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_month</td>
+	<td>label=March</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_year</td>
+	<td>label=2010</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_month</td>
+	<td>label=February</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>dfdsg</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='commit'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Ghost Time must be numerical</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>-150</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='commit'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Ghost Time value must be between -100 and 200</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>300</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@name='commit'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=notice</td>
+	<td>Ghost Time value must be between -100 and 200</td>
+</tr>
+<!--su tašku-->
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>15000</td>
+</tr>
+<!--su tašku-->
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>95.65</td>
+</tr>
+<!--<tr> 	<td>clickAndWait</td> 	<td>xpath=(//input[@name='commit'])[2]</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=status</td> 	<td>Background Task for Rerating successfully created</td> </tr>-->
+<!--<tr> 	<td>open</td> 	<td>/billing/test/launch_script</td> 	<td></td> </tr> <tr> 	<td>type</td> 	<td>id=command</td> 	<td>/usr/local/mor/m2_background_tasks</td> </tr> <tr> 	<td>setTimeout</td> 	<td>95000</td> 	<td></td> </tr> <tr> 	<td>clickAndWait</td> 	<td>name=commit</td> 	<td></td> </tr> <tr> 	<td>assertTextPresent</td> 	<td>STATUS:0</td> 	<td></td> </tr> <tr> 	<td>open</td> 	<td>/billing/functions/background_tasks</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=status_2</td> 	<td>DONE</td> </tr> <tr> 	<td>assertText</td> 	<td>id=percent_2</td> 	<td>100.0</td> </tr> <tr> 	<td>open</td> 	<td>/billing/test/make_select</td> 	<td></td> </tr> <tr> 	<td>select</td> 	<td>id=table</td> 	<td>label=calls</td> </tr> <tr> 	<td>type</td> 	<td>id=id</td> 	<td>28</td> </tr> <tr> 	<td>clickAndWait</td> 	<td>id=search_devices_all</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=billsec_value</td> 	<td>30</td> </tr>-->
+<!--is naujo paima billsec ir prie jo prideda 200%-->
+<!--<tr> 	<td>assertText</td> 	<td>id=user_billsec_value</td> 	<td>59</td> </tr>-->
+<!--su kableliu-->
+<!--<tr> 	<td>open</td> 	<td>/billing/cdr/rerating</td> 	<td></td> </tr> <tr> 	<td>select</td> 	<td>name=user</td> 	<td>label=Test User #1</td> </tr> <tr> 	<td>type</td> 	<td>id=ghost_time</td> 	<td>15,65</td> </tr> <tr> 	<td>clickAndWait</td> 	<td>xpath=(//input[@name='commit'])[2]</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=status</td> 	<td>Background Task for Rerating successfully created</td> </tr> <tr> 	<td>open</td> 	<td>/billing/test/launch_script</td> 	<td></td> </tr> <tr> 	<td>type</td> 	<td>id=command</td> 	<td>/usr/src/mor/scripts/m2_background_tasks</td> </tr> <tr> 	<td>setTimeout</td> 	<td>95000</td> 	<td></td> </tr> <tr> 	<td>clickAndWait</td> 	<td>name=commit</td> 	<td></td> </tr> <tr> 	<td>assertTextPresent</td> 	<td>STATUS:0</td> 	<td></td> </tr> <tr> 	<td>open</td> 	<td>/billing/functions/background_tasks</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=status_3</td> 	<td>DONE</td> </tr> <tr> 	<td>assertText</td> 	<td>id=percent_3</td> 	<td>100.0</td> </tr> <tr> 	<td>open</td> 	<td>/billing/test/make_select</td> 	<td></td> </tr> <tr> 	<td>select</td> 	<td>id=table</td> 	<td>label=calls</td> </tr> <tr> 	<td>type</td> 	<td>id=id</td> 	<td>28</td> </tr> <tr> 	<td>clickAndWait</td> 	<td>id=search_devices_all</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=billsec_value</td> 	<td>30</td> </tr>-->
+<!--is naujo paima billsec ir prie jo prideda 200%-->
+<!--<tr> 	<td>open</td> 	<td>/billing/cdr/rerating</td> 	<td></td> </tr>-->
+<!--<tr> 	<td>select</td> 	<td>id=date_from_year</td> 	<td>label=2010</td> </tr> <tr> 	<td>select</td> 	<td>name=user</td> 	<td>label=Test User #1</td> </tr>-->
+<!--turi teisingai konvertuoti i reikiama separatoriu-->
+<tr>
+	<td>open</td>
+	<td>/billing/test/load_bundle_sql/?path=universal_bundles/visual_settings</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTextNotPresent</td>
+	<td>Not Found</td>
+	<td></td>
+</tr>
+<!--<tr> 	<td>open</td> 	<td>/billing/cdr/rerating</td> 	<td></td> </tr> <tr> 	<td>select</td> 	<td>id=date_from_year</td> 	<td>label=2010</td> </tr> <tr> 	<td>select</td> 	<td>id=date_from_month</td> 	<td>label=March</td> </tr> <tr> 	<td>select</td> 	<td>name=user</td> 	<td>label=Test User #1</td> </tr> <tr> 	<td>type</td> 	<td>id=ghost_time</td> 	<td>15.65</td> </tr> <tr> 	<td>clickAndWait</td> 	<td>xpath=(//input[@name='commit'])[2]</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=status</td> 	<td>Background Task for Rerating successfully created</td> </tr> <tr> 	<td>open</td> 	<td>/billing/test/launch_script</td> 	<td></td> </tr> <tr> 	<td>type</td> 	<td>id=command</td> 	<td>/usr/src/mor/scripts/m2_background_tasks</td> </tr> <tr> 	<td>setTimeout</td> 	<td>95000</td> 	<td></td> </tr> <tr> 	<td>clickAndWait</td> 	<td>name=commit</td> 	<td></td> </tr> <tr> 	<td>assertTextPresent</td> 	<td>STATUS:0</td> 	<td></td> </tr> <tr> 	<td>open</td> 	<td>/billing/functions/background_tasks</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=status_4</td> 	<td>DONE</td> </tr> <tr> 	<td>assertText</td> 	<td>id=percent_4</td> 	<td>100.0</td> </tr> <tr> 	<td>open</td> 	<td>/billing/test/make_select</td> 	<td></td> </tr> <tr> 	<td>select</td> 	<td>id=table</td> 	<td>label=calls</td> </tr> <tr> 	<td>type</td> 	<td>id=id</td> 	<td>28</td> </tr> <tr> 	<td>clickAndWait</td> 	<td>id=search_devices_all</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=billsec_value</td> 	<td>30</td> </tr>-->
+<!--is naujo paima billsec ir prie jo prideda 200%-->
+<!--<tr> 	<td>assertText</td> 	<td>id=user_billsec_value</td> 	<td>35</td> </tr>-->
+<tr>
+	<td>open</td>
+	<td>/billing/cdr/rerating</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_year</td>
+	<td>label=2010</td>
+</tr>
+<!--GUI su kableliu, kada defaultinis separator - kablelis-->
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>120,698954</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_time_value</td>
+	<td>exact:00:00:45</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_price</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=reseller_price_value</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_price_value</td>
+	<td>30.0000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Rerating completed</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=old_billsec</td>
+	<td>exact:00:00:45</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_billsec</td>
+	<td>exact:00:01:06</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=old_up</td>
+	<td>30.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_up</td>
+	<td>44.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_pp</td>
+	<td>0.0000</td>
+</tr>
+<!--GUI su tašku, kada defaultinis separator - kablelis-->
+<tr>
+	<td>open</td>
+	<td>/billing/cdr/rerating</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=date_from_year</td>
+	<td>label=2010</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=ghost_time</td>
+	<td>130.698954</td>
+</tr>
+<tr>
+	<td>runScript</td>
+	<td>javascript{this.browserbot.getCurrentWindow().document.getElementById('s_user_id').value='2'}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=s_user</td>
+	<td>Test User #1</td>
+</tr>
+<tr>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().Ajax.activeRequestCount == 0</td>
+	<td>15000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=total_time_value</td>
+	<td>exact:00:01:06</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=provider_price</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=user_price_value</td>
+	<td>44.0000</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=commit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=status</td>
+	<td>Rerating completed</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=old_billsec</td>
+	<td>exact:00:01:06</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_billsec</td>
+	<td>exact:00:01:10</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//tr[2]/td[4]</td>
+	<td>exact:00:00:04</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>old_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>new_pp</td>
+	<td>1.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>diff_pp</td>
+	<td>0.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=old_up</td>
+	<td>44.0000</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>id=new_up</td>
+	<td>46.6667</td>
+</tr>
+<!--patikrinimas, kad provaiderio billsec nepasikeičia su ghost time-->
+<!--<tr> 	<td>open</td> 	<td>/billing/test/load_delta_sql/tests/sql/good_calls</td> 	<td></td> </tr> <tr> 	<td>open</td> 	<td>/billing/calls/call_info/69</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=provider_rate</td> 	<td>0,1200000</td> </tr> <tr> 	<td>assertText</td> 	<td>id=provider_billsec</td> 	<td>183</td> </tr> <tr> 	<td>assertText</td> 	<td>id=provider_price</td> 	<td>0,3660000</td> </tr> <tr> 	<td>open</td> 	<td>/billing/cdr/rerating</td> 	<td></td> </tr> <tr> 	<td>select</td> 	<td>id=date_from_year</td> 	<td>label=2012</td> </tr> <tr> 	<td>select</td> 	<td>id=date_from_month</td> 	<td>label=November</td> </tr> <tr> 	<td>select</td> 	<td>id=date_from_day</td> 	<td>label=30</td> </tr> <tr> 	<td>select</td> 	<td>id=date_from_hour</td> 	<td>label=19</td> </tr> <tr> 	<td>select</td> 	<td>id=date_from_minute</td> 	<td>label=07</td> </tr> <tr> 	<td>select</td> 	<td>id=date_till_year</td> 	<td>label=2012</td> </tr> <tr> 	<td>select</td> 	<td>id=date_till_month</td> 	<td>label=November</td> </tr> <tr> 	<td>select</td> 	<td>id=date_till_day</td> 	<td>label=30</td> </tr> <tr> 	<td>select</td> 	<td>id=date_till_hour</td> 	<td>label=19</td> </tr> <tr> 	<td>select</td> 	<td>id=date_till_minute</td> 	<td>label=08</td> </tr> <tr> 	<td>select</td> 	<td>name=user</td> 	<td>label=Test User #1</td> </tr> <tr> 	<td>type</td> 	<td>id=ghost_time</td> 	<td>200</td> </tr> <tr> 	<td>clickAndWait</td> 	<td>name=commit</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=provider_price</td> 	<td>0,3660000</td> </tr> <tr> 	<td>clickAndWait</td> 	<td>name=commit</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=status</td> 	<td>Rerating completed</td> </tr> <tr> 	<td>assertText</td> 	<td>id=old_pp</td> 	<td>0,3660000</td> </tr> <tr> 	<td>assertText</td> 	<td>id=new_pp</td> 	<td>0,3660000</td> </tr> <tr> 	<td>assertText</td> 	<td>id=diff_pp</td> 	<td>0,0000000</td> </tr> <tr> 	<td>open</td> 	<td>/billing/calls/call_info/69</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=provider_rate</td> 	<td>0,1200000</td> </tr> <tr> 	<td>assertText</td> 	<td>id=provider_billsec</td> 	<td>183</td> </tr> <tr> 	<td>assertText</td> 	<td>id=provider_price</td> 	<td>0,3660000</td> </tr>-->
+<!--turi nesikeisti ir per C-->
+<!--<tr> 	<td>open</td> 	<td>/billing/cdr/rerating</td> 	<td></td> </tr> <tr> 	<td>type</td> 	<td>id=ghost_time</td> 	<td>155</td> </tr> <tr> 	<td>clickAndWait</td> 	<td>xpath=(//input[@name='commit'])[2]</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=status</td> 	<td>Background Task for Rerating successfully created</td> </tr> <tr> 	<td>open</td> 	<td>/billing/test/launch_script</td> 	<td></td> </tr> <tr> 	<td>type</td> 	<td>id=command</td> 	<td>/usr/src/mor/scripts/m2_background_tasks</td> </tr> <tr> 	<td>setTimeout</td> 	<td>95000</td> 	<td></td> </tr> <tr> 	<td>clickAndWait</td> 	<td>name=commit</td> 	<td></td> </tr> <tr> 	<td>assertTextPresent</td> 	<td>STATUS:0</td> 	<td></td> </tr> <tr> 	<td>open</td> 	<td>/billing/functions/background_tasks?order_by=created_at&amp;order_desc=0&amp;page=4&amp;st=A</td> 	<td></td> </tr> <tr> 	<td>clickAndWait</td> 	<td>link=4</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=status_5</td> 	<td>DONE</td> </tr> <tr> 	<td>assertText</td> 	<td>id=percent_5</td> 	<td>100.0</td> </tr> <tr> 	<td>open</td> 	<td>/billing/calls/call_info/69</td> 	<td></td> </tr> <tr> 	<td>assertText</td> 	<td>id=provider_rate</td> 	<td>0,1200000</td> </tr> <tr> 	<td>assertText</td> 	<td>id=provider_billsec</td> 	<td>183</td> </tr> <tr> 	<td>assertText</td> 	<td>id=provider_price</td> 	<td>0,3660000</td> </tr>-->
+</tbody></table>
+</body>
+</html>

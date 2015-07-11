@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/!svn/ver/51589/mor/gui/branches/x5/selenium/tests/autodialer
+END
+autodialer_action_ivr.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/44025/mor/gui/branches/x5/selenium/tests/autodialer/autodialer_action_ivr.case
+END
+autodialer.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/46165/mor/gui/branches/x5/selenium/tests/autodialer/autodialer.case
+END
+autodialer_users.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/44577/mor/gui/branches/x5/selenium/tests/autodialer/autodialer_users.case
+END
+calls_now_for_campaign.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/autodialer/calls_now_for_campaign.sql
+END
+autodialer2.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/44514/mor/gui/branches/x5/selenium/tests/autodialer/autodialer2.case
+END
+campaign_stats.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/48407/mor/gui/branches/x5/selenium/tests/autodialer/campaign_stats.case
+END
+campaign_activation.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/51589/mor/gui/branches/x5/selenium/tests/autodialer/campaign_activation.case
+END
+autodialer_voices.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/42242/mor/gui/branches/x5/selenium/tests/autodialer/autodialer_voices.case
+END

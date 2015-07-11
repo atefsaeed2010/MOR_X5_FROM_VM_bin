@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/50092/mor/gui/branches/x5/app/views/did_rates
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/44309/mor/gui/branches/x5/app/views/did_rates/edit.html.erb
+END
+_search_periods.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/app/views/did_rates/_search_periods.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/50092/mor/gui/branches/x5/app/views/did_rates/index.html.erb
+END
+get_periods_for_search.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/42152/mor/gui/branches/x5/app/views/did_rates/get_periods_for_search.erb
+END
+_rate_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/41899/mor/gui/branches/x5/app/views/did_rates/_rate_details.html.erb
+END

@@ -1,0 +1,121 @@
+<%= javascript_include_tag 'swfobject' %>
+<b><%= _('Country') %></b>:
+<b><%= @country.name if @country %></b>
+<br/>
+
+<b><%= _('Provider') %></b>:
+<b><%= @provider.name if @provider %></b>
+<br/>
+<br/>
+
+<div align='left' class='nb'>
+  <%= form_tag action: :hangup_cause_codes_stats do %>
+      <%= hidden_field_tag 'search_on', 1 %>
+
+      <table>
+        <tr>
+          <td>
+            <%= _('From') %>:
+          </td>
+          <td>
+            <%= select_date(Time.mktime(session[:year_from], session[:month_from], session[:day_from]), end_year: (Date.today.year + 1), prefix: 'date_from') %>
+          </td>
+          <td>
+            <%= _('To') %>:
+          </td>
+          <td>
+            <%= select_date(Time.mktime(session[:year_till], session[:month_till], session[:day_till]), end_year: (Date.today.year + 1), prefix: 'date_till') %>
+          </td>
+          <td>
+            <%= _('Country') %>:
+          </td>
+          <td>
+            <select name='country_id'>
+              <option value=<%= '-1' %> <%= 'selected' if !@country %>> <%= _('All') %></option>
+              <% @countries.each do |country| %>
+                  <option value=<%= country.id %>
+                            <% if @country %>
+                                <%= 'selected' if country.id == @country.id %>
+                            <% end %>
+                  > <%= country.name %> </option>
+              <% end %>
+            </select>
+          </td>
+          <td>
+            <%= _('Provider') %>:
+          </td>
+          <td>
+            <select name='provider_id'>
+              <option value=<%= '-1' %> <%= 'selected' if !@provider %>> <%= _('All') %></option>
+              <% @providers.each do |provider| %>
+                  <option value=<%= provider.id %>
+                            <% if @provider %>
+                                <%= 'selected' if provider.id == @provider.id %>
+                            <% end %>
+                  > <%= provider.name %></option>
+              <% end %>
+            </select>
+          </td>
+          <td>
+            <%= _('User') %>:
+          </td>
+          <td>
+            <%= render('shared/live_search_field',
+                       object: params[:s_user].to_s,
+                       object_id: @user_id || -2,
+                       object_name: 'User',
+                       action_url: {controller: :users, action: :get_users_map, options: {show_admin: true}}
+                )
+            %>
+          </td>
+          <td>
+           <span id='user_devices'>
+             <% if !(-2..-1).include?(@user_id.to_i) %>
+                <% opt_map = @user.devices.map { |d| [nice_device_no_pic(d), d.id] } %>
+                <% opt_map = [[_('All'), 'all']] + opt_map -%>
+                <%= _('Devices') %>:
+                <%= select_tag('s_device', options_for_select(opt_map, @device_id.to_i)) %>
+             <% end %>
+           </span>
+          </td>
+          <td>
+            <%= submit_tag _('Change'), disable_with: _('Processing..') %>
+          </td>
+        </tr>
+      </table>
+      <script type='text/javascript'>
+          new Form.Element.EventObserver('s_user',
+                  function(element, value) {
+                      if ($('s_user_id').value >= 0){
+                        new Ajax.Updater('user_devices',
+                                '<%= Web_Dir %>/devices/ajax_get_user_devices',
+                                {
+                                    evalScripts: true,
+                                    onComplete: function(request){Element.hide('spinner');},
+                                    onLoading: function(request){Element.show('spinner');},
+                                    parameters: 'user_id=' + encodeURIComponent($('s_user_id').value) + '&default=<%= @device_id.to_i %>&all=true&fax=true&name=true'
+                                }
+                        );
+                      }
+                      if ($('s_user_id').value < 0) {
+                          document.getElementById('user_devices').style.display = 'none';
+
+                      } else {
+                          document.getElementById('user_devices').style.display = '';
+                      }
+                  }
+          )
+      </script>
+  <% end %>
+</div>
+
+<% unless @searching %>
+    <%= b_info + _('press_search_button_to_show_data') %>
+<% end %>
+<br/>
+<div id='table'>
+  <%= render 'hangup_stats', searching: @searching, calls: @calls, hangupcusecode_graph: @hangupcusecode_graph,
+             code: @code, :user => @user, user_id: @user_id, provider_id: @provider_id, device_id: @device_id,
+             calls_size: @calls_size, lv_Calls_graph: @Calls_graph, lv_hangupcusecode_graph: @hangupcusecode_graph
+  %>
+</div>

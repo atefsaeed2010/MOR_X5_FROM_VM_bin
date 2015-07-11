@@ -1,0 +1,5 @@
+<%= form_tag(:action => 'provider_create') do %>
+    <%= render 'provider_form', provider: @provider, api_string: @api_string, api_keywords: @api_keywords, tariffs: @tariffs %>
+    <%= submit_tag _('Create'), :disable_with => _('Processing..') %>
+<% end %>
+<br>

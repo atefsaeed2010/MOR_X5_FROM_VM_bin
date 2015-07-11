@@ -1,0 +1,4 @@
+INSERT INTO `users` (`id`,`accounting_number`, `address_id`, `agreement_date`, `agreement_number`, `billing_email`, `clientid`, `comment`, `credit`, `first_name`, `language`, `last_name`, `main_email`, `noc_email`, `password`, `rates_email`, `recording_hdd_quota`, `recordings_email`, `routing_threshold`, `routing_threshold_2`, `routing_threshold_3`, `tax_id`, `taxation_country`, `uniquehash`, `username`, `vat_number`) VALUES 
+(8, '', 6, '2014-05-16', '0000000004', '', '', '', 0.0, '', '', '', '', '', 'a265583dae644f0601186aeb256e779c77af4633', '', 104, '', 0, 0, 0, 4, 123, 'drp1dajz37', 'user_for_agg', '');
+INSERT INTO `devicegroups` (`added`, `address_id`, `name`, `primary`, `user_id`) VALUES ('2014-05-16 09:26:52', 6, 'primary', 1, 6);
+UPDATE `mor`.`aggregates` SET `reseller_id` = '8' WHERE `aggregates`.`id` =6 LIMIT 1 ;

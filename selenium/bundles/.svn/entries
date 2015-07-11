@@ -1,0 +1,197 @@
+10
+
+dir
+52326
+http://svn.kolmisoft.com/mor/gui/branches/x5/selenium/bundles
+http://svn.kolmisoft.com
+
+
+
+2014-09-16T07:26:53.769012Z
+52303
+ieva
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+19941b1f-7a74-413c-ab52-0de3e92e9a87
+
+invoices
+dir
+
+pbx_functions
+dir
+
+reseller_card_group
+dir
+
+devices
+dir
+
+services
+dir
+
+resellers_payment_option
+dir
+
+addons_activate
+dir
+
+accountant_permissions_invoices
+dir
+
+active_calls
+dir
+
+addons_limits
+dir
+
+autodialer
+dir
+
+quick_stats
+dir
+
+accountant_permissions
+dir
+
+api_tests
+dir
+
+reseller_pro_lcr
+dir
+
+vouchers
+dir
+
+asterisk_servers
+dir
+
+queues_edit2
+dir
+
+flatrate_user_subscriptions.bundle
+file
+
+
+
+
+2014-09-19T10:44:32.384090Z
+302581901e193ea571093835528bc4e9
+2013-11-05T12:55:00.099936Z
+41739
+ieva
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+506
+
+use_subscriptions2
+dir
+
+tariff_import
+dir
+
+resellers_payment_permission
+dir
+
+sms_addon
+dir
+
+reseller_user_services_own_prov
+dir
+
+resellers_provider
+dir
+
+rerating
+dir
+
+last_call_stats
+dir
+
+providers
+dir
+
+carrier_addon2
+dir
+
+reseller_user_services
+dir
+
+tariff_import_with_fee
+dir
+
+cc_distributor
+dir
+
+test
+dir
+
+accountant_permissions_monitorings
+dir
+
+universal_bundles
+dir
+
+calling_cards
+dir
+
+assign_prov_to_user
+dir
+
+accountant_permissions_dids
+dir
+
+payments
+dir
+
+provider_auth_unique
+dir
+
+deactivate_addons
+dir
+
+resellers_aggregate
+dir
+
+cdr
+dir
+
+re_dids_in_cc_details
+dir
+
+user_without_owner
+dir
+
+queues_edit
+dir
+

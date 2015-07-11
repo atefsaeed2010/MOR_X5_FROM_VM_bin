@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/52326/mor/gui/branches/x5/selenium
+END
+mor_trunk_testdb.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/51195/mor/gui/branches/x5/selenium/mor_trunk_testdb.sql
+END
+mor_0.8_testdb.sql
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/!svn/ver/39906/mor/gui/branches/x5/selenium/mor_0.8_testdb.sql
+END
+test_first
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/51139/mor/gui/branches/x5/selenium/test_first
+END
+suite_template.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/39906/mor/gui/branches/x5/selenium/suite_template.html
+END
+close.html
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/39906/mor/gui/branches/x5/selenium/close.html
+END
+basic.case
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/!svn/ver/39906/mor/gui/branches/x5/selenium/basic.case
+END

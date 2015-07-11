@@ -1,0 +1,7 @@
+# load some dids
+did/dids_list/dids_free.sql
+#reserve newly created did to user_reseller
+did/dids_list/reserve_6501.sql
+# assign reserved resellers did to device
+did/dids_list/assign_6501_to_device.sql
+# bundle loaded

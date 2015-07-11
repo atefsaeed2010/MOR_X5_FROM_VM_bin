@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/52306/mor/gui/branches/x5/selenium/tests/dialplan
+END
+tell_balance.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/52190/mor/gui/branches/x5/selenium/tests/dialplan/tell_balance.case
+END
+quick_forwards_dp.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/52193/mor/gui/branches/x5/selenium/tests/dialplan/quick_forwards_dp.case
+END
+dialplans.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/52181/mor/gui/branches/x5/selenium/tests/dialplan/dialplans.case
+END
+cc_dp_tell_balance_after_call.case
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/dialplan/cc_dp_tell_balance_after_call.case
+END
+resellers_device_id.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/52206/mor/gui/branches/x5/selenium/tests/dialplan/resellers_device_id.case
+END
+dialplans_edit.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/52306/mor/gui/branches/x5/selenium/tests/dialplan/dialplans_edit.case
+END
+cc_dp_in_auth_by_pin_dp.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/52203/mor/gui/branches/x5/selenium/tests/dialplan/cc_dp_in_auth_by_pin_dp.case
+END
+callback_dialplan.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/dialplan/callback_dialplan.sql
+END

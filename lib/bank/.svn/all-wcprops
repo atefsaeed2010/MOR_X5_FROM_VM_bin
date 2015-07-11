@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/!svn/ver/39906/mor/gui/branches/x5/lib/bank
+END
+variable_exchange_bank.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/39906/mor/gui/branches/x5/lib/bank/variable_exchange_bank.rb
+END
+._no_exchange_bank.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/!svn/ver/39906/mor/gui/branches/x5/lib/bank/._no_exchange_bank.rb
+END
+no_exchange_bank.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/!svn/ver/39906/mor/gui/branches/x5/lib/bank/no_exchange_bank.rb
+END

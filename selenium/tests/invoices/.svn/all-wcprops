@@ -1,0 +1,293 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/!svn/ver/52134/mor/gui/branches/x5/selenium/tests/invoices
+END
+change_hard_limit.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/43466/mor/gui/branches/x5/selenium/tests/invoices/change_hard_limit.sql
+END
+invoices_for_reseller.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/invoices/invoices_for_reseller.sql
+END
+price_rounding.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/51567/mor/gui/branches/x5/selenium/tests/invoices/price_rounding.case
+END
+caller_id_did_id_set_zero.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/invoices/caller_id_did_id_set_zero.sql
+END
+minimum_contract_billing.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/51560/mor/gui/branches/x5/selenium/tests/invoices/minimum_contract_billing.case
+END
+invoices_page_limit.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/49307/mor/gui/branches/x5/selenium/tests/invoices/invoices_page_limit.case
+END
+invoices_for_postpaid_users.case
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/51526/mor/gui/branches/x5/selenium/tests/invoices/invoices_for_postpaid_users.case
+END
+invoice_by_dids.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/invoices/invoice_by_dids.sql
+END
+invoices.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/51678/mor/gui/branches/x5/selenium/tests/invoices/invoices.case
+END
+check_recalculate_invoices.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/49102/mor/gui/branches/x5/selenium/tests/invoices/check_recalculate_invoices.case
+END
+invoice_delete_check_balance.case
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/43272/mor/gui/branches/x5/selenium/tests/invoices/invoice_delete_check_balance.case
+END
+delete_hard_limit.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/43466/mor/gui/branches/x5/selenium/tests/invoices/delete_hard_limit.sql
+END
+invoices_total.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/51526/mor/gui/branches/x5/selenium/tests/invoices/invoices_total.case
+END
+invoices_inveleven_numbers.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/51560/mor/gui/branches/x5/selenium/tests/invoices/invoices_inveleven_numbers.case
+END
+detailed_csv.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/51560/mor/gui/branches/x5/selenium/tests/invoices/detailed_csv.case
+END
+reseller_invoice.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/51567/mor/gui/branches/x5/selenium/tests/invoices/reseller_invoice.case
+END
+balance_line.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/49082/mor/gui/branches/x5/selenium/tests/invoices/balance_line.case
+END
+invoices_short_name.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/51567/mor/gui/branches/x5/selenium/tests/invoices/invoices_short_name.case
+END
+additional_invoice_options.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/51567/mor/gui/branches/x5/selenium/tests/invoices/additional_invoice_options.case
+END
+subscriptions_for_invoices.sql
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/40164/mor/gui/branches/x5/selenium/tests/invoices/subscriptions_for_invoices.sql
+END
+invoice_settings.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/46170/mor/gui/branches/x5/selenium/tests/invoices/invoice_settings.sql
+END
+invoice_recalculation.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/51560/mor/gui/branches/x5/selenium/tests/invoices/invoice_recalculation.case
+END
+invoice_start_end_time.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/invoices/invoice_start_end_time.sql
+END
+invoices3.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/52000/mor/gui/branches/x5/selenium/tests/invoices/invoices3.case
+END
+invoices_with_provider_device.case
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/51560/mor/gui/branches/x5/selenium/tests/invoices/invoices_with_provider_device.case
+END
+sent_invoices.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/49198/mor/gui/branches/x5/selenium/tests/invoices/sent_invoices.case
+END
+invoices_for_prepaid_users.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/51567/mor/gui/branches/x5/selenium/tests/invoices/invoices_for_prepaid_users.case
+END
+send_invoices_to_user.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/43294/mor/gui/branches/x5/selenium/tests/invoices/send_invoices_to_user.sql
+END
+invoices_reseller.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/51580/mor/gui/branches/x5/selenium/tests/invoices/invoices_reseller.case
+END
+send_invoice_to_re_user.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/43294/mor/gui/branches/x5/selenium/tests/invoices/send_invoice_to_re_user.sql
+END
+bad_email.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/52040/mor/gui/branches/x5/selenium/tests/invoices/bad_email.sql
+END
+invoices_double_rate.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/51845/mor/gui/branches/x5/selenium/tests/invoices/invoices_double_rate.case
+END
+calls_through_dids.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/44352/mor/gui/branches/x5/selenium/tests/invoices/calls_through_dids.sql
+END
+invoice_by_callerid.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/51567/mor/gui/branches/x5/selenium/tests/invoices/invoice_by_callerid.case
+END
+invoice_another_currency.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/51010/mor/gui/branches/x5/selenium/tests/invoices/invoice_another_currency.case
+END
+invoice_billsec_to_user_billsec.case
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/51170/mor/gui/branches/x5/selenium/tests/invoices/invoice_billsec_to_user_billsec.case
+END
+update_subscriptions_two.sql
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/invoices/update_subscriptions_two.sql
+END
+calls_for_invoices.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/50905/mor/gui/branches/x5/selenium/tests/invoices/calls_for_invoices.sql
+END
+invoice_with_incoming_calls.case
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/!svn/ver/51560/mor/gui/branches/x5/selenium/tests/invoices/invoice_with_incoming_calls.case
+END
+send_invoices_to_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/51567/mor/gui/branches/x5/selenium/tests/invoices/send_invoices_to_user.case
+END
+invoices_page_limit2.case
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/49259/mor/gui/branches/x5/selenium/tests/invoices/invoices_page_limit2.case
+END
+sms_for_invoices.sql
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/47676/mor/gui/branches/x5/selenium/tests/invoices/sms_for_invoices.sql
+END
+check_separator.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/49210/mor/gui/branches/x5/selenium/tests/invoices/check_separator.case
+END
+update_subscriptions.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/invoices/update_subscriptions.sql
+END
+invoices_zero_price.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/51526/mor/gui/branches/x5/selenium/tests/invoices/invoices_zero_price.case
+END
+invoices2.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/51560/mor/gui/branches/x5/selenium/tests/invoices/invoices2.case
+END
+long_calls.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/45221/mor/gui/branches/x5/selenium/tests/invoices/long_calls.sql
+END
+invoices4.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/52134/mor/gui/branches/x5/selenium/tests/invoices/invoices4.case
+END

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/!svn/ver/51787/mor/gui/branches/x5/selenium/tests/sms
+END
+mass_sms.case
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/!svn/ver/47682/mor/gui/branches/x5/selenium/tests/sms/mass_sms.case
+END
+sms_addon.case
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/!svn/ver/51787/mor/gui/branches/x5/selenium/tests/sms/sms_addon.case
+END
+sms_callback_balance.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/sms/sms_callback_balance.sql
+END
+sms_encoding.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/44770/mor/gui/branches/x5/selenium/tests/sms/sms_encoding.case
+END
+sms_addon2.case
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/48620/mor/gui/branches/x5/selenium/tests/sms/sms_addon2.case
+END
+sms_addon_basics.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/49231/mor/gui/branches/x5/selenium/tests/sms/sms_addon_basics.case
+END
+sms_provider.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/49247/mor/gui/branches/x5/selenium/tests/sms/sms_provider.case
+END
+sms_addon_re.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/47708/mor/gui/branches/x5/selenium/tests/sms/sms_addon_re.case
+END
+sms_clickatell_provider.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/49317/mor/gui/branches/x5/selenium/tests/sms/sms_clickatell_provider.case
+END

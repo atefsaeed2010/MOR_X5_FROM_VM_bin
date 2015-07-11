@@ -1,0 +1,7 @@
+# Acc group permissions for user and payment management set as Read
+# ----
+# User usage permission set as read
+/permissions/accountant/manage_users_read.sql
+# payments permission set as read
+/permissions/accountant/manage_payments_read.sql
+# bundle loaded

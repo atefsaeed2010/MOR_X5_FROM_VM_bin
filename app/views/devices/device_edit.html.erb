@@ -1,0 +1,45 @@
+<div class="nb"><%= b_user + _('User') %>: <%= link_nice_user(@user) %> <%= link_to(b_device, :action => "show_devices", :id => @device.user_id) if @user.try :is_user? %></div>
+<br/>
+
+<% if session[:usertype] == "admin" or session[:usertype] == "reseller" %>
+    <table width="100%" class="maintable">
+      <tr>
+        <th align="left" nowrap width="10%"><%= link_to b_rules + _('Rules'), :controller => :device_rules, :action => :list, :id => @device.id %></th>
+        <% if pbx_active? %>
+            <th align="left" nowrap width="10%"><%= link_to b_callflow + _('Callflow'), :action => "callflow", :id => @device.id %></th>
+        <% end %>
+        <th align="left" nowrap width="10%"><%= link_to b_did + _('DIDs'), :action => "device_dids", :id => @device.id %></th>
+        <th align="left" nowrap width="10%"><%= link_to b_cli + _('CLIs'), :action => "clis", :user_id => @device.user_id, :device_id => @device.id %></th>
+        <% if session[:usertype] == "admin" %>
+          <th align="left" nowrap width="15%"><%= link_to b_extlines + _('Extlines'), :action => "device_extlines", :id => @device.id %></th>
+        <% end %>
+        <th align="left" nowrap width="10%"><%= link_to b_view + _('Device_details'), :action => "device_all_details", :id => @device.id %></th>
+        <th width="100%"></th>
+      </tr>
+    </table>
+<% end %>
+
+<br/>
+
+<%= form_tag(:action => 'device_update', :id => @device.id) do %>
+    <%= render 'form', pdffaxemails: @pdffaxemails, device: @device, cid_name: @cid_name,
+               device_cids: @device_cids, cid_number: @cid_number, number_pools: @number_pools,
+               device_caller_id_number: @device_caller_id_number, device_dids_numbers: @device_dids_numbers,
+               servers: @servers, sip_proxy_server: @sip_proxy_server, qualify_time: @qualify_time,
+               device_trunk: @device_trunk, device_type: @device_type, sip_proxy_server: @sip_proxy_server,
+               new_device: @new_device, default: @default, devgroups: @devgroups, devicetypes: @devicetypes,
+               fax_enabled: @fax_enabled, extension: @extension, locations: @locations,
+               routing_algorithms: @routing_algorithms, routing_groups: @routing_groups, tariffs: @tariffs,
+               user: @user, fullname: @fullname, device_voicemail_box: @device_voicemail_box,
+               device_voicemail_box_email: @device_voicemail_box_email, device_voicemail_box_password: @device_voicemail_box_password,
+               device_enable_mwi: @device_enable_mwi, server_devices: @server_devices, ip_first: @ip_first, ip_second: @ip_second,
+               ip_third: @ip_third, mask_first: @mask_first, mask_second: @mask_second, mask_third: @mask_third, global_tell_balance: @global_tell_balance,
+               global_tell_time: @global_tell_time, video_codecs: @video_codecs, audio_codecs: @audio_codecs %>
+
+    <br/>
+    <% if @allow_edit -%>
+        <%= submit_tag _('update'), :disable_with => _('Processing..') %>
+    <% end -%>
+<% end %>
+<br/>
+<br/>

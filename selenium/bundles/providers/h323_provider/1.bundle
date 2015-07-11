@@ -1,0 +1,5 @@
+# Create number pool for caller id block testing
+# ----
+# create pool with numbers
+/number_pool/pool_and_numbers_15001/create.sql
+# bundle loaded

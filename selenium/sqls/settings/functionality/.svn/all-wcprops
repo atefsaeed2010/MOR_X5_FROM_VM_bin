@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/52319/mor/gui/branches/x5/selenium/sqls/settings/functionality
+END
+500_active_calls_interval.sql
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/49835/mor/gui/branches/x5/selenium/sqls/settings/functionality/500_active_calls_interval.sql
+END
+fax_device_enabled_check_0.sql
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/49886/mor/gui/branches/x5/selenium/sqls/settings/functionality/fax_device_enabled_check_0.sql
+END
+fax_device_enabled_uncheck_0.sql
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/49886/mor/gui/branches/x5/selenium/sqls/settings/functionality/fax_device_enabled_uncheck_0.sql
+END
+set_csv_decimal_dot.sql
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/50611/mor/gui/branches/x5/selenium/sqls/settings/functionality/set_csv_decimal_dot.sql
+END
+show_advanced_rates_for_user_insert.sql
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/!svn/ver/50680/mor/gui/branches/x5/selenium/sqls/settings/functionality/show_advanced_rates_for_user_insert.sql
+END
+active_calls_show_did_disable.sql
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/!svn/ver/52319/mor/gui/branches/x5/selenium/sqls/settings/functionality/active_calls_show_did_disable.sql
+END
+set_csv_decimal_semicolon.sql
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/!svn/ver/50611/mor/gui/branches/x5/selenium/sqls/settings/functionality/set_csv_decimal_semicolon.sql
+END
+set_csv_separator_dot.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/50611/mor/gui/branches/x5/selenium/sqls/settings/functionality/set_csv_separator_dot.sql
+END
+56_csv_file_size.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/49493/mor/gui/branches/x5/selenium/sqls/settings/functionality/56_csv_file_size.sql
+END
+set_csv_separator_semicolon.sql
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/!svn/ver/50611/mor/gui/branches/x5/selenium/sqls/settings/functionality/set_csv_separator_semicolon.sql
+END
+uncheck_show_zero_rates_in_LCR_tariff_export.sql
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/!svn/ver/49316/mor/gui/branches/x5/selenium/sqls/settings/functionality/uncheck_show_zero_rates_in_LCR_tariff_export.sql
+END
+show_zero_rates_in_LCR_tariff_export.sql
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/!svn/ver/49303/mor/gui/branches/x5/selenium/sqls/settings/functionality/show_zero_rates_in_LCR_tariff_export.sql
+END
+set_csv_decimal_comma.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/50611/mor/gui/branches/x5/selenium/sqls/settings/functionality/set_csv_decimal_comma.sql
+END
+set_csv_separator_comma.sql
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/!svn/ver/50611/mor/gui/branches/x5/selenium/sqls/settings/functionality/set_csv_separator_comma.sql
+END
+show_rates_for_users.sql
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/!svn/ver/50589/mor/gui/branches/x5/selenium/sqls/settings/functionality/show_rates_for_users.sql
+END
+show_advanced_rates_for_user.sql
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/!svn/ver/50589/mor/gui/branches/x5/selenium/sqls/settings/functionality/show_advanced_rates_for_user.sql
+END
+active_calls_show_did.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/!svn/ver/49869/mor/gui/branches/x5/selenium/sqls/settings/functionality/active_calls_show_did.sql
+END
+set_show_zero_rates_in_LCR_tariff_export.sql
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/!svn/ver/49493/mor/gui/branches/x5/selenium/sqls/settings/functionality/set_show_zero_rates_in_LCR_tariff_export.sql
+END
+show_active_calls_for_users_check.sql
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/!svn/ver/49869/mor/gui/branches/x5/selenium/sqls/settings/functionality/show_active_calls_for_users_check.sql
+END
+show_rates_without_tax.sql
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/50589/mor/gui/branches/x5/selenium/sqls/settings/functionality/show_rates_without_tax.sql
+END
+active_calls_show_server.sql
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/49869/mor/gui/branches/x5/selenium/sqls/settings/functionality/active_calls_show_server.sql
+END
+show_active_calls_for_users.sql
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/!svn/ver/49835/mor/gui/branches/x5/selenium/sqls/settings/functionality/show_active_calls_for_users.sql
+END
+delete_outdated_rates_after_25.sql
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/!svn/ver/50827/mor/gui/branches/x5/selenium/sqls/settings/functionality/delete_outdated_rates_after_25.sql
+END
+show_active_calls_for_users_uncheck.sql
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/!svn/ver/49869/mor/gui/branches/x5/selenium/sqls/settings/functionality/show_active_calls_for_users_uncheck.sql
+END

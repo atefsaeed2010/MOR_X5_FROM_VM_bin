@@ -1,0 +1,5 @@
+# turn off addon for test tests/settings_addons.case
+# ----
+# turn off calling cards addon
+/settings/addons/ast_18_activate.sql
+# bundle loaded

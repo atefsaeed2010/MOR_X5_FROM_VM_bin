@@ -1,0 +1,347 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/!svn/ver/52141/mor/gui/branches/x5/selenium/tests/device
+END
+manage_device.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/52027/mor/gui/branches/x5/selenium/tests/device/manage_device.case
+END
+device_validation.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/42242/mor/gui/branches/x5/selenium/tests/device/device_validation.case
+END
+sip_device.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/48490/mor/gui/branches/x5/selenium/tests/device/sip_device.case
+END
+device_hgc.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/device/device_hgc.case
+END
+fax_device.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/45467/mor/gui/branches/x5/selenium/tests/device/fax_device.sql
+END
+chanspy_device.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/51761/mor/gui/branches/x5/selenium/tests/device/chanspy_device.case
+END
+device_accountcode_null.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/42754/mor/gui/branches/x5/selenium/tests/device/device_accountcode_null.sql
+END
+devices_internal_server.sql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/device/devices_internal_server.sql
+END
+device_duplicate_username.case
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/!svn/ver/49882/mor/gui/branches/x5/selenium/tests/device/device_duplicate_username.case
+END
+forward_did_in_device.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/device/forward_did_in_device.case
+END
+recordings_in_rspro_device.case
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/!svn/ver/48487/mor/gui/branches/x5/selenium/tests/device/recordings_in_rspro_device.case
+END
+fax_device_reseller.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/49887/mor/gui/branches/x5/selenium/tests/device/fax_device_reseller.case
+END
+cli.sql
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/device/cli.sql
+END
+manage_device.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/device/manage_device.sql
+END
+devices_rules.case
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/!svn/ver/52141/mor/gui/branches/x5/selenium/tests/device/devices_rules.case
+END
+sip_device2.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/51922/mor/gui/branches/x5/selenium/tests/device/sip_device2.case
+END
+devices_info.case
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/device/devices_info.case
+END
+h323_device.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/51752/mor/gui/branches/x5/selenium/tests/device/h323_device.case
+END
+device_username.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/49671/mor/gui/branches/x5/selenium/tests/device/device_username.case
+END
+pin_for_device_rspro.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/device/pin_for_device_rspro.case
+END
+device_accountcode_null.case
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/device/device_accountcode_null.case
+END
+device_short_password.case
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/49782/mor/gui/branches/x5/selenium/tests/device/device_short_password.case
+END
+pin_for_device_re.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/device/pin_for_device_re.case
+END
+device_user_id_null.case
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/device/device_user_id_null.case
+END
+device_advanced_settings.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/50831/mor/gui/branches/x5/selenium/tests/device/device_advanced_settings.case
+END
+virtual_device.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/51901/mor/gui/branches/x5/selenium/tests/device/virtual_device.case
+END
+search_device_by_cli.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/43946/mor/gui/branches/x5/selenium/tests/device/search_device_by_cli.case
+END
+devices_search.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/44421/mor/gui/branches/x5/selenium/tests/device/devices_search.case
+END
+just_users_devices.case
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/device/just_users_devices.case
+END
+active_call_accountant.sql
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/device/active_call_accountant.sql
+END
+default_device_network_related.case
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/42754/mor/gui/branches/x5/selenium/tests/device/default_device_network_related.case
+END
+devices_list.case
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/50356/mor/gui/branches/x5/selenium/tests/device/devices_list.case
+END
+fromuser_coincides_with_name.case
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/!svn/ver/49334/mor/gui/branches/x5/selenium/tests/device/fromuser_coincides_with_name.case
+END
+h323_device2.case
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/52030/mor/gui/branches/x5/selenium/tests/device/h323_device2.case
+END
+devices.case
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/!svn/ver/46522/mor/gui/branches/x5/selenium/tests/device/devices.case
+END
+device_not_valid.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/device/device_not_valid.sql
+END
+device_accountcode_null2.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/42027/mor/gui/branches/x5/selenium/tests/device/device_accountcode_null2.case
+END
+iax2_device.case
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/!svn/ver/42629/mor/gui/branches/x5/selenium/tests/device/iax2_device.case
+END
+h323_port.case
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/!svn/ver/42242/mor/gui/branches/x5/selenium/tests/device/h323_port.case
+END
+anicli_for_device.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/device/anicli_for_device.case
+END
+device_password_for_user.case
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/!svn/ver/49624/mor/gui/branches/x5/selenium/tests/device/device_password_for_user.case
+END
+default_device2.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/device/default_device2.case
+END
+devices_port.case
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/44450/mor/gui/branches/x5/selenium/tests/device/devices_port.case
+END
+devices_ip_range.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/45514/mor/gui/branches/x5/selenium/tests/device/devices_ip_range.case
+END
+device_user_id_null.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/device/device_user_id_null.sql
+END
+dahdi_device.case
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/device/dahdi_device.case
+END
+default_device_re.case
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/!svn/ver/45145/mor/gui/branches/x5/selenium/tests/device/default_device_re.case
+END
+manage_device2.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/45511/mor/gui/branches/x5/selenium/tests/device/manage_device2.case
+END
+user_reseller_device.case
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/!svn/ver/52037/mor/gui/branches/x5/selenium/tests/device/user_reseller_device.case
+END
+fax_device.case
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/!svn/ver/49629/mor/gui/branches/x5/selenium/tests/device/fax_device.case
+END
+device_callerid.case
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/!svn/ver/51936/mor/gui/branches/x5/selenium/tests/device/device_callerid.case
+END
+providers_for_ip_authentication.sql
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/device/providers_for_ip_authentication.sql
+END
+devicegroups.case
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/!svn/ver/39906/mor/gui/branches/x5/selenium/tests/device/devicegroups.case
+END
+default_device_network_related_re.case
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/!svn/ver/42829/mor/gui/branches/x5/selenium/tests/device/default_device_network_related_re.case
+END
+manage_device_username_uniq.case
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/!svn/ver/49774/mor/gui/branches/x5/selenium/tests/device/manage_device_username_uniq.case
+END
+user_device_edit.case
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/!svn/ver/52037/mor/gui/branches/x5/selenium/tests/device/user_device_edit.case
+END
+default_device.case
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/!svn/ver/48597/mor/gui/branches/x5/selenium/tests/device/default_device.case
+END
